@@ -1,0 +1,9 @@
+«IMPORT org::csu::idl::idlmm»
+
+«DEFINE main FOR TranslationUnit»
+«REM»
+
+	TODO add content
+
+«ENDREM»
+«ENDDEFINE»

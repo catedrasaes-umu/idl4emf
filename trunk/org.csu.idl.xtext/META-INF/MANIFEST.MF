@@ -1,0 +1,34 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: org.csu.idl.xtext
+Bundle-Vendor: Cátedra SAES-UMU
+Bundle-Version: 1.0.0
+Bundle-SymbolicName: org.csu.idl.xtext; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.eclipse.xtext,
+ org.eclipse.xtext.generator;resolution:=optional,
+ org.apache.commons.logging;resolution:=optional,
+ org.eclipse.emf.codegen.ecore;resolution:=optional,
+ org.eclipse.emf.mwe.utils;resolution:=optional,
+ org.eclipse.emf.mwe2.launch;resolution:=optional,
+ com.ibm.icu;resolution:=optional,
+ org.eclipse.xtext.xtend;resolution:=optional,
+ org.csu.idl.idlmm;visibility:=reexport,
+ org.eclipse.xtext.util,
+ org.antlr.runtime,
+ org.eclipse.cdt.core
+Import-Package: org.apache.log4j,
+ org.eclipse.cdt.core,
+ org.eclipse.jface.text,
+ org.eclipse.text.edits
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Export-Package: org.csu.cpp.output,
+ org.csu.idl.preprocessor,
+ org.csu.idl.xtext,
+ org.csu.idl.xtext.loader,
+ org.csu.idl.xtext.parseTreeConstruction,
+ org.csu.idl.xtext.parser.antlr,
+ org.csu.idl.xtext.parser.antlr.internal,
+ org.csu.idl.xtext.services,
+ org.csu.idl.xtext.validation
+Bundle-ClassPath: lib/anarres-cpp.jar,.
