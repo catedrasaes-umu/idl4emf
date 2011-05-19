@@ -218,7 +218,7 @@ public class IDLScopingHelper {
 		if (econtainer instanceof EnumDef)
 		{
 			EObject econtainercontainer = econtainer.eContainer();
-			if (econtainercontainer instanceof Contained && econtainercontainer != cont)
+			if (econtainercontainer instanceof Contained && !equivalentContexts(econtainercontainer).contains(cont))
 				return relativeName((Contained) econtainercontainer, cont) + "::" + identifier;
 			else
 				return identifier;
