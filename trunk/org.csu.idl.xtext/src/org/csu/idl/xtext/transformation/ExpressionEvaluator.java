@@ -152,6 +152,11 @@ public class ExpressionEvaluator {
 			double f2 = Double.parseDouble(val2);
 			double res = Math.pow(f1, f2);
 			return Double.toString(res);
+		} else if (op.equals("/")) {
+			double f1 = Double.parseDouble(val1);
+			double f2 = Double.parseDouble(val2);
+			double res = f1 / f2;
+			return Double.toString(res);
 		} else if (op.equals("|")) {
 			boolean res = str2bool(val1) | str2bool(val2);
 			return bool2str(res);

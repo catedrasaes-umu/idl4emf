@@ -21,7 +21,7 @@ package org.csu.idl.xtext.transformation;
 import org.csu.idl.idlmm.TranslationUnit;
 
 public class AllTransformations {
-	public static void apply(TranslationUnit tu) throws ExpressionEvaluationException
+	public static void apply(TranslationUnit tu) throws Exception
 	{
 		ArrayExpander.expand(tu);
 		ExpressionEvaluator.evaluate(tu);

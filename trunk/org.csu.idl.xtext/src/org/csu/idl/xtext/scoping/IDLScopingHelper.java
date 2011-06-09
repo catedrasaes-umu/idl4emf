@@ -400,4 +400,8 @@ public class IDLScopingHelper {
 	public static void setCurrentLoader(IDLLoader loader) {
 		currentLoader = loader;
 	}
+	
+	public static IDLLoader getCurrentLoader() {
+		return currentLoader;
+	}
 }

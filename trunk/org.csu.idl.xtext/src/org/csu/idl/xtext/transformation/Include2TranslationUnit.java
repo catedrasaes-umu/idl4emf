@@ -22,36 +22,23 @@ import java.util.Iterator;
 
 import org.csu.idl.idlmm.Include;
 import org.csu.idl.idlmm.TranslationUnit;
+import org.csu.idl.xtext.scoping.IDLScopingHelper;
 import org.eclipse.emf.ecore.resource.*;
 
 public class Include2TranslationUnit {
 	
-	private Iterator<Resource> it;
-	private ResourceSet resourceSet;
-	
-	public static void convertInclude2TranslationUnit(TranslationUnit tu) {
-		Include2TranslationUnit i2t = new Include2TranslationUnit(tu.eResource().getResourceSet());
-		i2t.convert(i2t.getCurrentTranslationUnit());
+	public static void convertInclude2TranslationUnit(TranslationUnit tu) throws Exception {	
+		convert(tu);
 	}
 
-	protected Include2TranslationUnit(ResourceSet set) {
-		resourceSet = set;
-		it = resourceSet.getResources().iterator();
-	}
-	
-	protected void convert(TranslationUnit tu) {
+	protected static void convert(TranslationUnit tu) throws Exception {
 		
 		for (Include include: tu.getIncludes()) {
-			TranslationUnit current = getCurrentTranslationUnit();
+			TranslationUnit current = (TranslationUnit) IDLScopingHelper.getCurrentLoader().loadInclude(include).getContents().get(0);
 			include.setTranslationUnit(current);
 			
 			// Recursivo
 			convert(current);
 		}
 	}
-	
-	protected TranslationUnit getCurrentTranslationUnit() {
-		return (TranslationUnit) it.next().getContents().get(0);
-	}
-
 }
