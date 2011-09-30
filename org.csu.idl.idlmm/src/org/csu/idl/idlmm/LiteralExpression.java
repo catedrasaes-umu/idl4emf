@@ -14,7 +14,7 @@ package org.csu.idl.idlmm;
  *
  *
  * @see org.csu.idl.idlmm.IdlmmPackage#getLiteralExpression()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface LiteralExpression extends Expression {

@@ -82,16 +82,12 @@ public class IdlmmFactoryImpl extends EFactoryImpl implements IdlmmFactory {
 			case IdlmmPackage.STRUCT_DEF: return createStructDef();
 			case IdlmmPackage.TRANSLATION_UNIT: return createTranslationUnit();
 			case IdlmmPackage.INCLUDE: return createInclude();
-			case IdlmmPackage.EXPRESSION: return createExpression();
 			case IdlmmPackage.BINARY_EXPRESSION: return createBinaryExpression();
 			case IdlmmPackage.UNARY_EXPRESSION: return createUnaryExpression();
-			case IdlmmPackage.LITERAL_EXPRESSION: return createLiteralExpression();
 			case IdlmmPackage.CONSTANT_DEF_REF: return createConstantDefRef();
 			case IdlmmPackage.VALUE_EXPRESSION: return createValueExpression();
 			case IdlmmPackage.FORWARD_DEF: return createForwardDef();
 			case IdlmmPackage.ENUM_MEMBER: return createEnumMember();
-			case IdlmmPackage.CONSTANT: return createConstant();
-			case IdlmmPackage.NAMED_ELEMENT: return createNamedElement();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -354,16 +350,6 @@ public class IdlmmFactoryImpl extends EFactoryImpl implements IdlmmFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Expression createExpression() {
-		ExpressionImpl expression = new ExpressionImpl();
-		return expression;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public BinaryExpression createBinaryExpression() {
 		BinaryExpressionImpl binaryExpression = new BinaryExpressionImpl();
 		return binaryExpression;
@@ -377,16 +363,6 @@ public class IdlmmFactoryImpl extends EFactoryImpl implements IdlmmFactory {
 	public UnaryExpression createUnaryExpression() {
 		UnaryExpressionImpl unaryExpression = new UnaryExpressionImpl();
 		return unaryExpression;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public LiteralExpression createLiteralExpression() {
-		LiteralExpressionImpl literalExpression = new LiteralExpressionImpl();
-		return literalExpression;
 	}
 
 	/**
@@ -427,26 +403,6 @@ public class IdlmmFactoryImpl extends EFactoryImpl implements IdlmmFactory {
 	public EnumMember createEnumMember() {
 		EnumMemberImpl enumMember = new EnumMemberImpl();
 		return enumMember;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Constant createConstant() {
-		ConstantImpl constant = new ConstantImpl();
-		return constant;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NamedElement createNamedElement() {
-		NamedElementImpl namedElement = new NamedElementImpl();
-		return namedElement;
 	}
 
 	/**
