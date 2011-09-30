@@ -20,21 +20,21 @@ T25 : 'octet' ;
 T26 : 'any' ;
 T27 : 'Object' ;
 T28 : 'void' ;
-T29 : 'abstract' ;
-T30 : 'local' ;
-T31 : '>>' ;
-T32 : '<<' ;
-T33 : '+' ;
-T34 : '-' ;
-T35 : '*' ;
-T36 : '/' ;
-T37 : '%' ;
-T38 : '~' ;
-T39 : 'in' ;
-T40 : 'out' ;
-T41 : 'inout' ;
-T42 : '#include' ;
-T43 : ';' ;
+T29 : ';' ;
+T30 : 'abstract' ;
+T31 : 'local' ;
+T32 : '>>' ;
+T33 : '<<' ;
+T34 : '+' ;
+T35 : '-' ;
+T36 : '*' ;
+T37 : '/' ;
+T38 : '%' ;
+T39 : '~' ;
+T40 : 'in' ;
+T41 : 'out' ;
+T42 : 'inout' ;
+T43 : '#include' ;
 T44 : 'module' ;
 T45 : '{' ;
 T46 : '}' ;
@@ -72,40 +72,40 @@ T77 : '|' ;
 T78 : '^' ;
 T79 : '&' ;
 
-// $ANTLR src "../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g" 14009
+// $ANTLR src "../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g" 14050
 RULE_WIDE_STRING_LITERAL : 'L' RULE_STRING;
 
-// $ANTLR src "../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g" 14011
+// $ANTLR src "../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g" 14052
 RULE_FIXED_PT_LITERAL : (RULE_INT '.' RULE_INT (('e'|'E') ('+'|'-')? RULE_INT)?|'.' RULE_INT (('e'|'E') ('+'|'-')? RULE_INT)?|RULE_INT ('e'|'E') ('+'|'-')? RULE_INT);
 
-// $ANTLR src "../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g" 14013
+// $ANTLR src "../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g" 14054
 RULE_FLOATING_PT_LITERAL : (RULE_INT '.' RULE_INT ('d'|'D')|RULE_INT ('d'|'D')|'.' RULE_INT ('d'|'D'));
 
-// $ANTLR src "../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g" 14015
+// $ANTLR src "../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g" 14056
 RULE_BOOLEAN_LITERAL : ('TRUE'|'FALSE');
 
-// $ANTLR src "../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g" 14017
+// $ANTLR src "../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g" 14058
 RULE_HEX_LITERAL : '0' 'x' ('0'..'9'|'a'..'f'|'A'..'F')+;
 
-// $ANTLR src "../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g" 14019
+// $ANTLR src "../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g" 14060
 RULE_ID : ('a'..'z'|'A'..'Z'|'_'|'::') ('a'..'z'|'A'..'Z'|'_'|'0'..'9'|'::')*;
 
-// $ANTLR src "../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g" 14021
+// $ANTLR src "../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g" 14062
 RULE_STRING : '"' ('\\' ('b'|'t'|'n'|'f'|'r'|'"'|'\''|'\\')|~(('\\'|'"')))* '"';
 
-// $ANTLR src "../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g" 14023
+// $ANTLR src "../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g" 14064
 RULE_INT : ('0'..'9')+;
 
-// $ANTLR src "../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g" 14025
+// $ANTLR src "../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g" 14066
 RULE_ML_COMMENT : '/*' ( options {greedy=false;} : . )*'*/';
 
-// $ANTLR src "../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g" 14027
+// $ANTLR src "../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g" 14068
 RULE_SL_COMMENT : '//' ~(('\n'|'\r'))* ('\r'? '\n')?;
 
-// $ANTLR src "../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g" 14029
+// $ANTLR src "../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g" 14070
 RULE_WS : (' '|'\t'|'\r'|'\n')+;
 
-// $ANTLR src "../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g" 14031
+// $ANTLR src "../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g" 14072
 RULE_ANY_OTHER : .;
 
 

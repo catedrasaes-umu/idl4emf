@@ -388,10 +388,10 @@ rulemodule returns [EObject current=null]
     {
         createLeafNode(grammarAccess.getModuleAccess().getLeftCurlyBracketKeyword_2(), null); 
     }
-(
+((
 (
 		{ 
-	        currentNode=createCompositeNode(grammarAccess.getModuleAccess().getContainsDefinitionParserRuleCall_3_0(), currentNode); 
+	        currentNode=createCompositeNode(grammarAccess.getModuleAccess().getContainsDefinitionParserRuleCall_3_0_0(), currentNode); 
 	    }
 		lv_contains_3_0=ruledefinition		{
 	        if ($current==null) {
@@ -412,7 +412,12 @@ rulemodule returns [EObject current=null]
 	    }
 
 )
-)+	'}' 
+)
+    |	';' 
+    {
+        createLeafNode(grammarAccess.getModuleAccess().getSemicolonKeyword_3_1(), null); 
+    }
+)*	'}' 
     {
         createLeafNode(grammarAccess.getModuleAccess().getRightCurlyBracketKeyword_4(), null); 
     }
@@ -556,10 +561,10 @@ ruleinterface_decl returns [EObject current=null]
     {
         createLeafNode(grammarAccess.getInterface_declAccess().getLeftCurlyBracketKeyword_4(), null); 
     }
-(
+((
 (
 		{ 
-	        currentNode=createCompositeNode(grammarAccess.getInterface_declAccess().getContainsExportParserRuleCall_5_0(), currentNode); 
+	        currentNode=createCompositeNode(grammarAccess.getInterface_declAccess().getContainsExportParserRuleCall_5_0_0(), currentNode); 
 	    }
 		lv_contains_9_0=ruleexport		{
 	        if ($current==null) {
@@ -580,6 +585,11 @@ ruleinterface_decl returns [EObject current=null]
 	    }
 
 )
+)
+    |	';' 
+    {
+        createLeafNode(grammarAccess.getInterface_declAccess().getSemicolonKeyword_5_1(), null); 
+    }
 )*	'}' 
     {
         createLeafNode(grammarAccess.getInterface_declAccess().getRightCurlyBracketKeyword_6(), null); 
