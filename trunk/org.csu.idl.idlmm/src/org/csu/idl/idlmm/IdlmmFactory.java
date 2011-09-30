@@ -215,15 +215,6 @@ public interface IdlmmFactory extends EFactory {
 	Include createInclude();
 
 	/**
-	 * Returns a new object of class '<em>Expression</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Expression</em>'.
-	 * @generated
-	 */
-	Expression createExpression();
-
-	/**
 	 * Returns a new object of class '<em>Binary Expression</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -240,15 +231,6 @@ public interface IdlmmFactory extends EFactory {
 	 * @generated
 	 */
 	UnaryExpression createUnaryExpression();
-
-	/**
-	 * Returns a new object of class '<em>Literal Expression</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Literal Expression</em>'.
-	 * @generated
-	 */
-	LiteralExpression createLiteralExpression();
 
 	/**
 	 * Returns a new object of class '<em>Constant Def Ref</em>'.
@@ -285,24 +267,6 @@ public interface IdlmmFactory extends EFactory {
 	 * @generated
 	 */
 	EnumMember createEnumMember();
-
-	/**
-	 * Returns a new object of class '<em>Constant</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Constant</em>'.
-	 * @generated
-	 */
-	Constant createConstant();
-
-	/**
-	 * Returns a new object of class '<em>Named Element</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Named Element</em>'.
-	 * @generated
-	 */
-	NamedElement createNamedElement();
 
 	/**
 	 * Returns the package supported by this factory.

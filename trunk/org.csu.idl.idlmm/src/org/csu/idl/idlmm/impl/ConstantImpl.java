@@ -22,7 +22,7 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  *
  * @generated
  */
-public class ConstantImpl extends ContainedImpl implements Constant {
+public abstract class ConstantImpl extends ContainedImpl implements Constant {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

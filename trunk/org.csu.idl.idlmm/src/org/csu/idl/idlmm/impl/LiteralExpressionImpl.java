@@ -20,7 +20,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class LiteralExpressionImpl extends ExpressionImpl implements LiteralExpression {
+public abstract class LiteralExpressionImpl extends ExpressionImpl implements LiteralExpression {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
