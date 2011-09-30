@@ -72,40 +72,40 @@ T77 : 'any' ;
 T78 : 'Object' ;
 T79 : 'void' ;
 
-// $ANTLR src "../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g" 6013
+// $ANTLR src "../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g" 6023
 RULE_WIDE_STRING_LITERAL : 'L' RULE_STRING;
 
-// $ANTLR src "../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g" 6015
+// $ANTLR src "../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g" 6025
 RULE_FIXED_PT_LITERAL : (RULE_INT '.' RULE_INT (('e'|'E') ('+'|'-')? RULE_INT)?|'.' RULE_INT (('e'|'E') ('+'|'-')? RULE_INT)?|RULE_INT ('e'|'E') ('+'|'-')? RULE_INT);
 
-// $ANTLR src "../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g" 6017
+// $ANTLR src "../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g" 6027
 RULE_FLOATING_PT_LITERAL : (RULE_INT '.' RULE_INT ('d'|'D')|RULE_INT ('d'|'D')|'.' RULE_INT ('d'|'D'));
 
-// $ANTLR src "../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g" 6019
+// $ANTLR src "../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g" 6029
 RULE_BOOLEAN_LITERAL : ('TRUE'|'FALSE');
 
-// $ANTLR src "../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g" 6021
+// $ANTLR src "../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g" 6031
 RULE_HEX_LITERAL : '0' 'x' ('0'..'9'|'a'..'f'|'A'..'F')+;
 
-// $ANTLR src "../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g" 6023
+// $ANTLR src "../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g" 6033
 RULE_ID : ('a'..'z'|'A'..'Z'|'_'|'::') ('a'..'z'|'A'..'Z'|'_'|'0'..'9'|'::')*;
 
-// $ANTLR src "../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g" 6025
+// $ANTLR src "../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g" 6035
 RULE_STRING : '"' ('\\' ('b'|'t'|'n'|'f'|'r'|'"'|'\''|'\\')|~(('\\'|'"')))* '"';
 
-// $ANTLR src "../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g" 6027
+// $ANTLR src "../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g" 6037
 RULE_INT : ('0'..'9')+;
 
-// $ANTLR src "../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g" 6029
+// $ANTLR src "../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g" 6039
 RULE_ML_COMMENT : '/*' ( options {greedy=false;} : . )*'*/';
 
-// $ANTLR src "../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g" 6031
+// $ANTLR src "../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g" 6041
 RULE_SL_COMMENT : '//' ~(('\n'|'\r'))* ('\r'? '\n')?;
 
-// $ANTLR src "../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g" 6033
+// $ANTLR src "../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g" 6043
 RULE_WS : (' '|'\t'|'\r'|'\n')+;
 
-// $ANTLR src "../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g" 6035
+// $ANTLR src "../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g" 6045
 RULE_ANY_OTHER : .;
 
 

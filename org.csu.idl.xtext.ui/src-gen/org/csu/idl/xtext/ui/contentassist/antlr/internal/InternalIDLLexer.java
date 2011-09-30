@@ -347,11 +347,10 @@ public class InternalIDLLexer extends Lexer {
     public final void mT29() throws RecognitionException {
         try {
             int _type = T29;
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:23:5: ( 'abstract' )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:23:7: 'abstract'
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:23:5: ( ';' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:23:7: ';'
             {
-            match("abstract"); 
-
+            match(';'); 
 
             }
 
@@ -366,10 +365,10 @@ public class InternalIDLLexer extends Lexer {
     public final void mT30() throws RecognitionException {
         try {
             int _type = T30;
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:24:5: ( 'local' )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:24:7: 'local'
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:24:5: ( 'abstract' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:24:7: 'abstract'
             {
-            match("local"); 
+            match("abstract"); 
 
 
             }
@@ -385,10 +384,10 @@ public class InternalIDLLexer extends Lexer {
     public final void mT31() throws RecognitionException {
         try {
             int _type = T31;
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:25:5: ( '>>' )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:25:7: '>>'
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:25:5: ( 'local' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:25:7: 'local'
             {
-            match(">>"); 
+            match("local"); 
 
 
             }
@@ -404,10 +403,10 @@ public class InternalIDLLexer extends Lexer {
     public final void mT32() throws RecognitionException {
         try {
             int _type = T32;
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:26:5: ( '<<' )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:26:7: '<<'
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:26:5: ( '>>' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:26:7: '>>'
             {
-            match("<<"); 
+            match(">>"); 
 
 
             }
@@ -423,10 +422,11 @@ public class InternalIDLLexer extends Lexer {
     public final void mT33() throws RecognitionException {
         try {
             int _type = T33;
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:27:5: ( '+' )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:27:7: '+'
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:27:5: ( '<<' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:27:7: '<<'
             {
-            match('+'); 
+            match("<<"); 
+
 
             }
 
@@ -441,10 +441,10 @@ public class InternalIDLLexer extends Lexer {
     public final void mT34() throws RecognitionException {
         try {
             int _type = T34;
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:28:5: ( '-' )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:28:7: '-'
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:28:5: ( '+' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:28:7: '+'
             {
-            match('-'); 
+            match('+'); 
 
             }
 
@@ -459,10 +459,10 @@ public class InternalIDLLexer extends Lexer {
     public final void mT35() throws RecognitionException {
         try {
             int _type = T35;
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:29:5: ( '*' )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:29:7: '*'
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:29:5: ( '-' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:29:7: '-'
             {
-            match('*'); 
+            match('-'); 
 
             }
 
@@ -477,10 +477,10 @@ public class InternalIDLLexer extends Lexer {
     public final void mT36() throws RecognitionException {
         try {
             int _type = T36;
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:30:5: ( '/' )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:30:7: '/'
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:30:5: ( '*' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:30:7: '*'
             {
-            match('/'); 
+            match('*'); 
 
             }
 
@@ -495,10 +495,10 @@ public class InternalIDLLexer extends Lexer {
     public final void mT37() throws RecognitionException {
         try {
             int _type = T37;
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:31:5: ( '%' )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:31:7: '%'
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:31:5: ( '/' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:31:7: '/'
             {
-            match('%'); 
+            match('/'); 
 
             }
 
@@ -513,10 +513,10 @@ public class InternalIDLLexer extends Lexer {
     public final void mT38() throws RecognitionException {
         try {
             int _type = T38;
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:32:5: ( '~' )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:32:7: '~'
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:32:5: ( '%' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:32:7: '%'
             {
-            match('~'); 
+            match('%'); 
 
             }
 
@@ -531,11 +531,10 @@ public class InternalIDLLexer extends Lexer {
     public final void mT39() throws RecognitionException {
         try {
             int _type = T39;
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:33:5: ( 'in' )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:33:7: 'in'
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:33:5: ( '~' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:33:7: '~'
             {
-            match("in"); 
-
+            match('~'); 
 
             }
 
@@ -550,10 +549,10 @@ public class InternalIDLLexer extends Lexer {
     public final void mT40() throws RecognitionException {
         try {
             int _type = T40;
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:34:5: ( 'out' )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:34:7: 'out'
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:34:5: ( 'in' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:34:7: 'in'
             {
-            match("out"); 
+            match("in"); 
 
 
             }
@@ -569,10 +568,10 @@ public class InternalIDLLexer extends Lexer {
     public final void mT41() throws RecognitionException {
         try {
             int _type = T41;
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:35:5: ( 'inout' )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:35:7: 'inout'
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:35:5: ( 'out' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:35:7: 'out'
             {
-            match("inout"); 
+            match("out"); 
 
 
             }
@@ -588,10 +587,10 @@ public class InternalIDLLexer extends Lexer {
     public final void mT42() throws RecognitionException {
         try {
             int _type = T42;
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:36:5: ( '#include' )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:36:7: '#include'
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:36:5: ( 'inout' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:36:7: 'inout'
             {
-            match("#include"); 
+            match("inout"); 
 
 
             }
@@ -607,10 +606,11 @@ public class InternalIDLLexer extends Lexer {
     public final void mT43() throws RecognitionException {
         try {
             int _type = T43;
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:37:5: ( ';' )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:37:7: ';'
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:37:5: ( '#include' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:37:7: '#include'
             {
-            match(';'); 
+            match("#include"); 
+
 
             }
 
@@ -1295,8 +1295,8 @@ public class InternalIDLLexer extends Lexer {
     public final void mRULE_WIDE_STRING_LITERAL() throws RecognitionException {
         try {
             int _type = RULE_WIDE_STRING_LITERAL;
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14009:26: ( 'L' RULE_STRING )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14009:28: 'L' RULE_STRING
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14050:26: ( 'L' RULE_STRING )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14050:28: 'L' RULE_STRING
             {
             match('L'); 
             mRULE_STRING(); 
@@ -1314,20 +1314,20 @@ public class InternalIDLLexer extends Lexer {
     public final void mRULE_FIXED_PT_LITERAL() throws RecognitionException {
         try {
             int _type = RULE_FIXED_PT_LITERAL;
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14011:23: ( ( RULE_INT '.' RULE_INT ( ( 'e' | 'E' ) ( '+' | '-' )? RULE_INT )? | '.' RULE_INT ( ( 'e' | 'E' ) ( '+' | '-' )? RULE_INT )? | RULE_INT ( 'e' | 'E' ) ( '+' | '-' )? RULE_INT ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14011:25: ( RULE_INT '.' RULE_INT ( ( 'e' | 'E' ) ( '+' | '-' )? RULE_INT )? | '.' RULE_INT ( ( 'e' | 'E' ) ( '+' | '-' )? RULE_INT )? | RULE_INT ( 'e' | 'E' ) ( '+' | '-' )? RULE_INT )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14052:23: ( ( RULE_INT '.' RULE_INT ( ( 'e' | 'E' ) ( '+' | '-' )? RULE_INT )? | '.' RULE_INT ( ( 'e' | 'E' ) ( '+' | '-' )? RULE_INT )? | RULE_INT ( 'e' | 'E' ) ( '+' | '-' )? RULE_INT ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14052:25: ( RULE_INT '.' RULE_INT ( ( 'e' | 'E' ) ( '+' | '-' )? RULE_INT )? | '.' RULE_INT ( ( 'e' | 'E' ) ( '+' | '-' )? RULE_INT )? | RULE_INT ( 'e' | 'E' ) ( '+' | '-' )? RULE_INT )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14011:25: ( RULE_INT '.' RULE_INT ( ( 'e' | 'E' ) ( '+' | '-' )? RULE_INT )? | '.' RULE_INT ( ( 'e' | 'E' ) ( '+' | '-' )? RULE_INT )? | RULE_INT ( 'e' | 'E' ) ( '+' | '-' )? RULE_INT )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14052:25: ( RULE_INT '.' RULE_INT ( ( 'e' | 'E' ) ( '+' | '-' )? RULE_INT )? | '.' RULE_INT ( ( 'e' | 'E' ) ( '+' | '-' )? RULE_INT )? | RULE_INT ( 'e' | 'E' ) ( '+' | '-' )? RULE_INT )
             int alt6=3;
             alt6 = dfa6.predict(input);
             switch (alt6) {
                 case 1 :
-                    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14011:26: RULE_INT '.' RULE_INT ( ( 'e' | 'E' ) ( '+' | '-' )? RULE_INT )?
+                    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14052:26: RULE_INT '.' RULE_INT ( ( 'e' | 'E' ) ( '+' | '-' )? RULE_INT )?
                     {
                     mRULE_INT(); 
                     match('.'); 
                     mRULE_INT(); 
-                    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14011:48: ( ( 'e' | 'E' ) ( '+' | '-' )? RULE_INT )?
+                    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14052:48: ( ( 'e' | 'E' ) ( '+' | '-' )? RULE_INT )?
                     int alt2=2;
                     int LA2_0 = input.LA(1);
 
@@ -1336,7 +1336,7 @@ public class InternalIDLLexer extends Lexer {
                     }
                     switch (alt2) {
                         case 1 :
-                            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14011:49: ( 'e' | 'E' ) ( '+' | '-' )? RULE_INT
+                            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14052:49: ( 'e' | 'E' ) ( '+' | '-' )? RULE_INT
                             {
                             if ( input.LA(1)=='E'||input.LA(1)=='e' ) {
                                 input.consume();
@@ -1348,7 +1348,7 @@ public class InternalIDLLexer extends Lexer {
                                 recover(mse);    throw mse;
                             }
 
-                            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14011:59: ( '+' | '-' )?
+                            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14052:59: ( '+' | '-' )?
                             int alt1=2;
                             int LA1_0 = input.LA(1);
 
@@ -1386,11 +1386,11 @@ public class InternalIDLLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14011:81: '.' RULE_INT ( ( 'e' | 'E' ) ( '+' | '-' )? RULE_INT )?
+                    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14052:81: '.' RULE_INT ( ( 'e' | 'E' ) ( '+' | '-' )? RULE_INT )?
                     {
                     match('.'); 
                     mRULE_INT(); 
-                    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14011:94: ( ( 'e' | 'E' ) ( '+' | '-' )? RULE_INT )?
+                    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14052:94: ( ( 'e' | 'E' ) ( '+' | '-' )? RULE_INT )?
                     int alt4=2;
                     int LA4_0 = input.LA(1);
 
@@ -1399,7 +1399,7 @@ public class InternalIDLLexer extends Lexer {
                     }
                     switch (alt4) {
                         case 1 :
-                            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14011:95: ( 'e' | 'E' ) ( '+' | '-' )? RULE_INT
+                            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14052:95: ( 'e' | 'E' ) ( '+' | '-' )? RULE_INT
                             {
                             if ( input.LA(1)=='E'||input.LA(1)=='e' ) {
                                 input.consume();
@@ -1411,7 +1411,7 @@ public class InternalIDLLexer extends Lexer {
                                 recover(mse);    throw mse;
                             }
 
-                            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14011:105: ( '+' | '-' )?
+                            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14052:105: ( '+' | '-' )?
                             int alt3=2;
                             int LA3_0 = input.LA(1);
 
@@ -1449,7 +1449,7 @@ public class InternalIDLLexer extends Lexer {
                     }
                     break;
                 case 3 :
-                    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14011:127: RULE_INT ( 'e' | 'E' ) ( '+' | '-' )? RULE_INT
+                    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14052:127: RULE_INT ( 'e' | 'E' ) ( '+' | '-' )? RULE_INT
                     {
                     mRULE_INT(); 
                     if ( input.LA(1)=='E'||input.LA(1)=='e' ) {
@@ -1462,7 +1462,7 @@ public class InternalIDLLexer extends Lexer {
                         recover(mse);    throw mse;
                     }
 
-                    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14011:146: ( '+' | '-' )?
+                    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14052:146: ( '+' | '-' )?
                     int alt5=2;
                     int LA5_0 = input.LA(1);
 
@@ -1510,15 +1510,15 @@ public class InternalIDLLexer extends Lexer {
     public final void mRULE_FLOATING_PT_LITERAL() throws RecognitionException {
         try {
             int _type = RULE_FLOATING_PT_LITERAL;
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14013:26: ( ( RULE_INT '.' RULE_INT ( 'd' | 'D' ) | RULE_INT ( 'd' | 'D' ) | '.' RULE_INT ( 'd' | 'D' ) ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14013:28: ( RULE_INT '.' RULE_INT ( 'd' | 'D' ) | RULE_INT ( 'd' | 'D' ) | '.' RULE_INT ( 'd' | 'D' ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14054:26: ( ( RULE_INT '.' RULE_INT ( 'd' | 'D' ) | RULE_INT ( 'd' | 'D' ) | '.' RULE_INT ( 'd' | 'D' ) ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14054:28: ( RULE_INT '.' RULE_INT ( 'd' | 'D' ) | RULE_INT ( 'd' | 'D' ) | '.' RULE_INT ( 'd' | 'D' ) )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14013:28: ( RULE_INT '.' RULE_INT ( 'd' | 'D' ) | RULE_INT ( 'd' | 'D' ) | '.' RULE_INT ( 'd' | 'D' ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14054:28: ( RULE_INT '.' RULE_INT ( 'd' | 'D' ) | RULE_INT ( 'd' | 'D' ) | '.' RULE_INT ( 'd' | 'D' ) )
             int alt7=3;
             alt7 = dfa7.predict(input);
             switch (alt7) {
                 case 1 :
-                    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14013:29: RULE_INT '.' RULE_INT ( 'd' | 'D' )
+                    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14054:29: RULE_INT '.' RULE_INT ( 'd' | 'D' )
                     {
                     mRULE_INT(); 
                     match('.'); 
@@ -1537,7 +1537,7 @@ public class InternalIDLLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14013:61: RULE_INT ( 'd' | 'D' )
+                    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14054:61: RULE_INT ( 'd' | 'D' )
                     {
                     mRULE_INT(); 
                     if ( input.LA(1)=='D'||input.LA(1)=='d' ) {
@@ -1554,7 +1554,7 @@ public class InternalIDLLexer extends Lexer {
                     }
                     break;
                 case 3 :
-                    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14013:80: '.' RULE_INT ( 'd' | 'D' )
+                    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14054:80: '.' RULE_INT ( 'd' | 'D' )
                     {
                     match('.'); 
                     mRULE_INT(); 
@@ -1588,10 +1588,10 @@ public class InternalIDLLexer extends Lexer {
     public final void mRULE_BOOLEAN_LITERAL() throws RecognitionException {
         try {
             int _type = RULE_BOOLEAN_LITERAL;
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14015:22: ( ( 'TRUE' | 'FALSE' ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14015:24: ( 'TRUE' | 'FALSE' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14056:22: ( ( 'TRUE' | 'FALSE' ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14056:24: ( 'TRUE' | 'FALSE' )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14015:24: ( 'TRUE' | 'FALSE' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14056:24: ( 'TRUE' | 'FALSE' )
             int alt8=2;
             int LA8_0 = input.LA(1);
 
@@ -1603,13 +1603,13 @@ public class InternalIDLLexer extends Lexer {
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("14015:24: ( 'TRUE' | 'FALSE' )", 8, 0, input);
+                    new NoViableAltException("14056:24: ( 'TRUE' | 'FALSE' )", 8, 0, input);
 
                 throw nvae;
             }
             switch (alt8) {
                 case 1 :
-                    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14015:25: 'TRUE'
+                    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14056:25: 'TRUE'
                     {
                     match("TRUE"); 
 
@@ -1617,7 +1617,7 @@ public class InternalIDLLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14015:32: 'FALSE'
+                    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14056:32: 'FALSE'
                     {
                     match("FALSE"); 
 
@@ -1641,12 +1641,12 @@ public class InternalIDLLexer extends Lexer {
     public final void mRULE_HEX_LITERAL() throws RecognitionException {
         try {
             int _type = RULE_HEX_LITERAL;
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14017:18: ( '0' 'x' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )+ )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14017:20: '0' 'x' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )+
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14058:18: ( '0' 'x' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )+ )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14058:20: '0' 'x' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )+
             {
             match('0'); 
             match('x'); 
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14017:28: ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )+
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14058:28: ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )+
             int cnt9=0;
             loop9:
             do {
@@ -1699,10 +1699,10 @@ public class InternalIDLLexer extends Lexer {
     public final void mRULE_ID() throws RecognitionException {
         try {
             int _type = RULE_ID;
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14019:9: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '::' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' | '::' )* )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14019:11: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '::' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' | '::' )*
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14060:9: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '::' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' | '::' )* )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14060:11: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '::' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' | '::' )*
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14019:11: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '::' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14060:11: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '::' )
             int alt10=4;
             switch ( input.LA(1) ) {
             case 'a':
@@ -1777,35 +1777,35 @@ public class InternalIDLLexer extends Lexer {
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("14019:11: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '::' )", 10, 0, input);
+                    new NoViableAltException("14060:11: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '::' )", 10, 0, input);
 
                 throw nvae;
             }
 
             switch (alt10) {
                 case 1 :
-                    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14019:12: 'a' .. 'z'
+                    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14060:12: 'a' .. 'z'
                     {
                     matchRange('a','z'); 
 
                     }
                     break;
                 case 2 :
-                    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14019:21: 'A' .. 'Z'
+                    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14060:21: 'A' .. 'Z'
                     {
                     matchRange('A','Z'); 
 
                     }
                     break;
                 case 3 :
-                    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14019:30: '_'
+                    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14060:30: '_'
                     {
                     match('_'); 
 
                     }
                     break;
                 case 4 :
-                    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14019:34: '::'
+                    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14060:34: '::'
                     {
                     match("::"); 
 
@@ -1815,7 +1815,7 @@ public class InternalIDLLexer extends Lexer {
 
             }
 
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14019:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' | '::' )*
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14060:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' | '::' )*
             loop11:
             do {
                 int alt11=6;
@@ -1909,35 +1909,35 @@ public class InternalIDLLexer extends Lexer {
 
                 switch (alt11) {
             	case 1 :
-            	    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14019:41: 'a' .. 'z'
+            	    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14060:41: 'a' .. 'z'
             	    {
             	    matchRange('a','z'); 
 
             	    }
             	    break;
             	case 2 :
-            	    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14019:50: 'A' .. 'Z'
+            	    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14060:50: 'A' .. 'Z'
             	    {
             	    matchRange('A','Z'); 
 
             	    }
             	    break;
             	case 3 :
-            	    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14019:59: '_'
+            	    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14060:59: '_'
             	    {
             	    match('_'); 
 
             	    }
             	    break;
             	case 4 :
-            	    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14019:63: '0' .. '9'
+            	    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14060:63: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
             	    }
             	    break;
             	case 5 :
-            	    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14019:72: '::'
+            	    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14060:72: '::'
             	    {
             	    match("::"); 
 
@@ -1964,11 +1964,11 @@ public class InternalIDLLexer extends Lexer {
     public final void mRULE_STRING() throws RecognitionException {
         try {
             int _type = RULE_STRING;
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14021:13: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14021:15: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14062:13: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14062:15: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
             {
             match('\"'); 
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14021:19: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14062:19: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
             loop12:
             do {
                 int alt12=3;
@@ -1984,7 +1984,7 @@ public class InternalIDLLexer extends Lexer {
 
                 switch (alt12) {
             	case 1 :
-            	    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14021:20: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' )
+            	    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14062:20: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' )
             	    {
             	    match('\\'); 
             	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||input.LA(1)=='t' ) {
@@ -2001,7 +2001,7 @@ public class InternalIDLLexer extends Lexer {
             	    }
             	    break;
             	case 2 :
-            	    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14021:61: ~ ( ( '\\\\' | '\"' ) )
+            	    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14062:61: ~ ( ( '\\\\' | '\"' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFE') ) {
             	        input.consume();
@@ -2037,10 +2037,10 @@ public class InternalIDLLexer extends Lexer {
     public final void mRULE_INT() throws RecognitionException {
         try {
             int _type = RULE_INT;
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14023:10: ( ( '0' .. '9' )+ )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14023:12: ( '0' .. '9' )+
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14064:10: ( ( '0' .. '9' )+ )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14064:12: ( '0' .. '9' )+
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14023:12: ( '0' .. '9' )+
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14064:12: ( '0' .. '9' )+
             int cnt13=0;
             loop13:
             do {
@@ -2054,7 +2054,7 @@ public class InternalIDLLexer extends Lexer {
 
                 switch (alt13) {
             	case 1 :
-            	    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14023:13: '0' .. '9'
+            	    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14064:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -2084,12 +2084,12 @@ public class InternalIDLLexer extends Lexer {
     public final void mRULE_ML_COMMENT() throws RecognitionException {
         try {
             int _type = RULE_ML_COMMENT;
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14025:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14025:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14066:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14066:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14025:24: ( options {greedy=false; } : . )*
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14066:24: ( options {greedy=false; } : . )*
             loop14:
             do {
                 int alt14=2;
@@ -2114,7 +2114,7 @@ public class InternalIDLLexer extends Lexer {
 
                 switch (alt14) {
             	case 1 :
-            	    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14025:52: .
+            	    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14066:52: .
             	    {
             	    matchAny(); 
 
@@ -2142,12 +2142,12 @@ public class InternalIDLLexer extends Lexer {
     public final void mRULE_SL_COMMENT() throws RecognitionException {
         try {
             int _type = RULE_SL_COMMENT;
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14027:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14027:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14068:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14068:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14027:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14068:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop15:
             do {
                 int alt15=2;
@@ -2160,7 +2160,7 @@ public class InternalIDLLexer extends Lexer {
 
                 switch (alt15) {
             	case 1 :
-            	    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14027:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14068:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFE') ) {
             	        input.consume();
@@ -2181,7 +2181,7 @@ public class InternalIDLLexer extends Lexer {
                 }
             } while (true);
 
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14027:40: ( ( '\\r' )? '\\n' )?
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14068:40: ( ( '\\r' )? '\\n' )?
             int alt17=2;
             int LA17_0 = input.LA(1);
 
@@ -2190,9 +2190,9 @@ public class InternalIDLLexer extends Lexer {
             }
             switch (alt17) {
                 case 1 :
-                    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14027:41: ( '\\r' )? '\\n'
+                    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14068:41: ( '\\r' )? '\\n'
                     {
-                    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14027:41: ( '\\r' )?
+                    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14068:41: ( '\\r' )?
                     int alt16=2;
                     int LA16_0 = input.LA(1);
 
@@ -2201,7 +2201,7 @@ public class InternalIDLLexer extends Lexer {
                     }
                     switch (alt16) {
                         case 1 :
-                            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14027:41: '\\r'
+                            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14068:41: '\\r'
                             {
                             match('\r'); 
 
@@ -2231,10 +2231,10 @@ public class InternalIDLLexer extends Lexer {
     public final void mRULE_WS() throws RecognitionException {
         try {
             int _type = RULE_WS;
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14029:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14029:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14070:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14070:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14029:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14070:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt18=0;
             loop18:
             do {
@@ -2287,8 +2287,8 @@ public class InternalIDLLexer extends Lexer {
     public final void mRULE_ANY_OTHER() throws RecognitionException {
         try {
             int _type = RULE_ANY_OTHER;
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14031:16: ( . )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14031:18: .
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14072:16: ( . )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14072:18: .
             {
             matchAny(); 
 
@@ -2897,7 +2897,7 @@ public class InternalIDLLexer extends Lexer {
             this.transition = DFA6_transition;
         }
         public String getDescription() {
-            return "14011:25: ( RULE_INT '.' RULE_INT ( ( 'e' | 'E' ) ( '+' | '-' )? RULE_INT )? | '.' RULE_INT ( ( 'e' | 'E' ) ( '+' | '-' )? RULE_INT )? | RULE_INT ( 'e' | 'E' ) ( '+' | '-' )? RULE_INT )";
+            return "14052:25: ( RULE_INT '.' RULE_INT ( ( 'e' | 'E' ) ( '+' | '-' )? RULE_INT )? | '.' RULE_INT ( ( 'e' | 'E' ) ( '+' | '-' )? RULE_INT )? | RULE_INT ( 'e' | 'E' ) ( '+' | '-' )? RULE_INT )";
         }
     }
     static final String DFA7_eotS =
@@ -2950,22 +2950,22 @@ public class InternalIDLLexer extends Lexer {
             this.transition = DFA7_transition;
         }
         public String getDescription() {
-            return "14013:28: ( RULE_INT '.' RULE_INT ( 'd' | 'D' ) | RULE_INT ( 'd' | 'D' ) | '.' RULE_INT ( 'd' | 'D' ) )";
+            return "14054:28: ( RULE_INT '.' RULE_INT ( 'd' | 'D' ) | RULE_INT ( 'd' | 'D' ) | '.' RULE_INT ( 'd' | 'D' ) )";
         }
     }
     static final String DFA19_eotS =
-        "\1\uffff\13\70\1\117\1\121\3\uffff\1\127\2\uffff\1\70\1\65\1\uffff"+
-        "\1\70\2\uffff\1\140\3\uffff\5\70\2\uffff\1\70\4\uffff\1\70\1\164"+
-        "\1\65\2\70\1\164\3\uffff\1\65\2\uffff\2\70\1\uffff\25\70\14\uffff"+
-        "\1\u0099\2\uffff\1\70\6\uffff\7\70\2\uffff\1\70\10\uffff\1\164\2"+
-        "\uffff\1\167\2\70\2\uffff\21\70\1\u00ba\2\70\1\u00bd\6\70\1\uffff"+
-        "\12\70\1\167\14\70\1\u00da\3\70\1\u00de\1\u00df\3\70\1\uffff\2\70"+
-        "\1\uffff\3\70\1\u00e8\6\70\1\u00ef\5\70\1\u00f5\1\70\1\u00f7\1\u00f8"+
-        "\7\70\1\u0100\1\uffff\1\u0101\1\u0102\1\70\2\uffff\1\70\1\u0105"+
-        "\1\70\1\u0107\4\70\1\uffff\1\70\1\u010d\4\70\1\uffff\3\70\1\u0115"+
-        "\1\70\1\uffff\1\u00f5\2\uffff\1\70\1\u0118\1\u0119\1\u011a\1\u011b"+
-        "\2\70\3\uffff\2\70\1\uffff\1\70\1\uffff\1\u0121\2\70\1\u0124\1\70"+
-        "\1\uffff\1\u0126\1\u0127\3\70\1\u012b\1\70\1\uffff\1\70\1\u012e"+
+        "\1\uffff\13\70\1\uffff\1\120\1\122\3\uffff\1\130\2\uffff\1\70\1"+
+        "\65\1\70\2\uffff\1\140\3\uffff\5\70\2\uffff\1\70\4\uffff\1\70\1"+
+        "\164\1\65\2\70\1\164\3\uffff\1\65\2\uffff\2\70\1\uffff\25\70\15"+
+        "\uffff\1\u0099\1\uffff\1\70\6\uffff\7\70\2\uffff\1\70\10\uffff\1"+
+        "\164\2\uffff\1\167\2\70\2\uffff\21\70\1\u00ba\2\70\1\u00bd\6\70"+
+        "\1\uffff\12\70\1\167\14\70\1\u00da\3\70\1\u00de\1\u00df\3\70\1\uffff"+
+        "\2\70\1\uffff\3\70\1\u00e8\6\70\1\u00ef\5\70\1\u00f5\1\70\1\u00f7"+
+        "\1\u00f8\7\70\1\u0100\1\uffff\1\u0101\1\u0102\1\70\2\uffff\1\70"+
+        "\1\u0105\1\70\1\u0107\4\70\1\uffff\1\70\1\u010d\4\70\1\uffff\3\70"+
+        "\1\u0115\1\70\1\uffff\1\u00f5\2\uffff\1\70\1\u0118\1\u0119\1\u011a"+
+        "\1\u011b\2\70\3\uffff\2\70\1\uffff\1\70\1\uffff\1\u0121\2\70\1\u0124"+
+        "\1\70\1\uffff\1\u0126\1\u0127\3\70\1\u012b\1\70\1\uffff\1\70\1\u012e"+
         "\4\uffff\2\70\1\u0131\1\u0132\1\u0133\1\uffff\2\70\1\uffff\1\70"+
         "\2\uffff\3\70\1\uffff\1\u013a\1\70\1\uffff\1\70\1\u013d\3\uffff"+
         "\1\u013e\2\70\1\u0141\2\70\1\uffff\1\u0144\1\u0145\2\uffff\1\u0146"+
@@ -2973,13 +2973,13 @@ public class InternalIDLLexer extends Lexer {
     static final String DFA19_eofS =
         "\u014a\uffff";
     static final String DFA19_minS =
-        "\1\0\1\151\2\145\1\157\1\141\1\143\1\157\1\143\2\142\1\157\1\76"+
-        "\1\74\3\uffff\1\52\2\uffff\1\156\1\151\1\uffff\1\157\2\uffff\1\72"+
-        "\3\uffff\1\141\1\145\1\156\1\141\1\171\2\uffff\1\156\4\uffff\1\42"+
+        "\1\0\1\151\2\145\1\157\1\141\1\143\1\157\1\143\2\142\1\157\1\uffff"+
+        "\1\76\1\74\3\uffff\1\52\2\uffff\1\156\1\151\1\157\2\uffff\1\72\3"+
+        "\uffff\1\141\1\145\1\156\1\141\1\171\2\uffff\1\156\4\uffff\1\42"+
         "\1\56\1\60\1\122\1\101\1\56\3\uffff\1\0\2\uffff\1\157\1\170\1\uffff"+
         "\1\146\1\165\1\151\1\162\1\161\1\157\1\143\1\156\1\163\1\141\1\164"+
-        "\1\150\1\157\2\164\1\145\1\171\1\163\1\164\1\152\1\151\14\uffff"+
-        "\1\60\2\uffff\1\144\6\uffff\1\151\1\141\1\164\1\165\1\143\1\164"+
+        "\1\150\1\157\2\164\1\145\1\171\1\163\1\164\1\152\1\151\15\uffff"+
+        "\1\60\1\uffff\1\144\6\uffff\1\151\1\141\1\164\1\165\1\143\1\164"+
         "\1\160\2\uffff\1\151\7\uffff\1\60\1\56\2\uffff\1\60\1\125\1\114"+
         "\2\uffff\1\141\1\145\1\141\1\142\1\164\1\151\1\162\1\165\1\162\1"+
         "\147\1\141\1\163\1\145\2\162\1\141\1\154\1\60\1\145\1\167\1\60\1"+
@@ -3000,12 +3000,12 @@ public class InternalIDLLexer extends Lexer {
         "\60\1\uffff\2\60\6\uffff";
     static final String DFA19_maxS =
         "\1\ufffe\1\154\1\157\1\167\2\157\1\163\1\157\1\165\1\164\1\142\1"+
-        "\157\1\76\1\74\3\uffff\1\57\2\uffff\1\156\1\151\1\uffff\1\157\2"+
+        "\157\1\uffff\1\76\1\74\3\uffff\1\57\2\uffff\1\156\1\151\1\157\2"+
         "\uffff\1\72\3\uffff\2\145\1\170\1\141\1\171\2\uffff\1\156\4\uffff"+
         "\1\42\1\170\1\71\1\122\1\101\1\145\3\uffff\1\ufffe\2\uffff\1\157"+
         "\1\170\1\uffff\1\146\1\165\1\151\1\162\1\164\1\157\2\156\1\163\1"+
         "\141\1\164\1\150\1\157\2\164\1\145\1\171\1\163\1\164\1\152\1\151"+
-        "\14\uffff\1\172\2\uffff\1\144\6\uffff\1\151\1\141\1\164\1\165\1"+
+        "\15\uffff\1\172\1\uffff\1\144\6\uffff\1\151\1\141\1\164\1\165\1"+
         "\143\1\164\1\160\2\uffff\1\163\7\uffff\1\71\1\145\2\uffff\1\144"+
         "\1\125\1\114\2\uffff\1\141\1\145\1\141\1\142\1\164\1\165\1\162\1"+
         "\165\1\162\1\147\1\141\1\164\1\145\2\162\1\141\1\154\1\172\1\145"+
@@ -3025,28 +3025,28 @@ public class InternalIDLLexer extends Lexer {
         "\1\172\1\144\1\uffff\1\163\1\172\3\uffff\1\172\2\145\1\172\1\163"+
         "\1\156\1\uffff\2\172\2\uffff\2\172\1\uffff\2\172\6\uffff";
     static final String DFA19_acceptS =
-        "\16\uffff\1\22\1\23\1\24\1\uffff\1\26\1\27\2\uffff\1\34\1\uffff"+
+        "\14\uffff\1\16\2\uffff\1\23\1\24\1\25\1\uffff\1\27\1\30\3\uffff"+
         "\1\36\1\37\1\uffff\1\42\1\43\1\44\5\uffff\1\55\1\56\1\uffff\1\66"+
         "\1\76\1\77\1\100\6\uffff\3\106\1\uffff\1\113\1\114\2\uffff\1\106"+
-        "\25\uffff\1\20\1\71\1\21\1\70\1\22\1\23\1\24\1\111\1\112\1\25\1"+
-        "\26\1\27\1\uffff\1\33\1\34\1\uffff\1\36\1\37\1\41\1\42\1\43\1\44"+
+        "\25\uffff\1\16\1\21\1\71\1\22\1\70\1\23\1\24\1\25\1\111\1\112\1"+
+        "\26\1\27\1\30\1\uffff\1\34\1\uffff\1\36\1\37\1\41\1\42\1\43\1\44"+
         "\7\uffff\1\55\1\56\1\uffff\1\66\1\76\1\77\1\100\1\101\1\105\1\110"+
-        "\2\uffff\1\102\1\103\3\uffff\1\107\1\113\33\uffff\1\30\40\uffff"+
-        "\1\31\2\uffff\1\13\34\uffff\1\4\3\uffff\1\62\1\5\10\uffff\1\15\6"+
-        "\uffff\1\64\5\uffff\1\104\1\uffff\1\1\1\72\7\uffff\1\3\1\17\1\65"+
-        "\2\uffff\1\6\1\uffff\1\12\5\uffff\1\32\7\uffff\1\60\2\uffff\1\2"+
+        "\2\uffff\1\102\1\103\3\uffff\1\107\1\113\33\uffff\1\31\40\uffff"+
+        "\1\32\2\uffff\1\13\34\uffff\1\4\3\uffff\1\62\1\5\10\uffff\1\15\6"+
+        "\uffff\1\64\5\uffff\1\104\1\uffff\1\1\1\72\7\uffff\1\3\1\20\1\65"+
+        "\2\uffff\1\6\1\uffff\1\12\5\uffff\1\33\7\uffff\1\60\2\uffff\1\2"+
         "\1\61\1\7\1\57\5\uffff\1\74\2\uffff\1\14\1\uffff\1\35\1\45\3\uffff"+
         "\1\53\2\uffff\1\63\2\uffff\1\46\1\10\1\11\6\uffff\1\54\2\uffff\1"+
-        "\67\1\16\2\uffff\1\75\2\uffff\1\73\1\51\1\47\1\40\1\50\1\52";
+        "\67\1\17\2\uffff\1\75\2\uffff\1\73\1\51\1\47\1\40\1\50\1\52";
     static final String DFA19_specialS =
         "\u014a\uffff}>";
     static final String[] DFA19_transitionS = {
-            "\11\65\2\64\2\65\1\64\22\65\1\64\1\65\1\63\1\25\1\65\1\22\1"+
-            "\51\1\65\1\34\1\35\1\20\1\16\1\33\1\17\1\54\1\21\1\53\11\57"+
-            "\1\32\1\26\1\15\1\46\1\14\2\65\5\61\1\56\5\61\1\52\2\61\1\12"+
+            "\11\65\2\64\2\65\1\64\22\65\1\64\1\65\1\63\1\26\1\65\1\23\1"+
+            "\51\1\65\1\34\1\35\1\21\1\17\1\33\1\20\1\54\1\22\1\53\11\57"+
+            "\1\32\1\14\1\16\1\46\1\15\2\65\5\61\1\56\5\61\1\52\2\61\1\12"+
             "\4\61\1\55\6\61\1\43\1\65\1\44\1\50\1\62\1\65\1\11\1\7\1\5\1"+
-            "\2\1\40\1\1\1\37\1\60\1\24\2\60\1\4\1\27\1\41\1\10\2\60\1\36"+
-            "\1\3\1\42\1\45\1\13\1\6\3\60\1\30\1\47\1\31\1\23\uff80\65",
+            "\2\1\40\1\1\1\37\1\60\1\25\2\60\1\4\1\27\1\41\1\10\2\60\1\36"+
+            "\1\3\1\42\1\45\1\13\1\6\3\60\1\30\1\47\1\31\1\24\uff80\65",
             "\1\67\2\uffff\1\66",
             "\1\71\11\uffff\1\72",
             "\1\75\2\uffff\1\76\13\uffff\1\74\2\uffff\1\73",
@@ -3058,17 +3058,17 @@ public class InternalIDLLexer extends Lexer {
             "\1\112\13\uffff\1\111\5\uffff\1\113",
             "\1\114",
             "\1\115",
-            "\1\116",
-            "\1\120",
+            "",
+            "\1\117",
+            "\1\121",
             "",
             "",
             "",
-            "\1\125\4\uffff\1\126",
+            "\1\126\4\uffff\1\127",
             "",
             "",
-            "\1\132",
             "\1\133",
-            "",
+            "\1\134",
             "\1\135",
             "",
             "",
@@ -3138,9 +3138,9 @@ public class InternalIDLLexer extends Lexer {
             "",
             "",
             "",
+            "",
             "\13\70\6\uffff\32\70\4\uffff\1\70\1\uffff\16\70\1\u0098\4\70"+
             "\1\u0097\6\70",
-            "",
             "",
             "\1\u009a",
             "",

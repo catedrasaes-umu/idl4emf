@@ -45,13 +45,13 @@ definition returns IDL::Contained
 	;
 
 module returns IDL::ModuleDef
-	:	'module' identifier=ID '{' (contains+=definition)+ '}'
+	:	'module' identifier=ID '{' ( (contains+=definition) | ';' )* '}'
 	;
 
 interface_decl returns IDL::InterfaceDef
 	:	( isAbstract?='abstract' | isCustom?='local' )? 'interface' identifier=ID
 		( ':' derivesFrom+=[IDL::InterfaceDef]
-		( ',' derivesFrom+=[IDL::InterfaceDef] )* )? '{' (contains += export)* '}'
+		( ',' derivesFrom+=[IDL::InterfaceDef] )* )? '{' ( (contains += export) | ';' )* '}'
 	;
 
 interface_fwd returns IDL::ForwardDef

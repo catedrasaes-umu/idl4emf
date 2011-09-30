@@ -38,7 +38,9 @@ public class IDLParser extends AbstractContentAssistParser {
 				private static final long serialVersionUID = 1L;
 				{
 					put(grammarAccess.getDefinitionAccess().getAlternatives(), "rule__Definition__Alternatives");
+					put(grammarAccess.getModuleAccess().getAlternatives_3(), "rule__Module__Alternatives_3");
 					put(grammarAccess.getInterface_declAccess().getAlternatives_0(), "rule__Interface_decl__Alternatives_0");
+					put(grammarAccess.getInterface_declAccess().getAlternatives_5(), "rule__Interface_decl__Alternatives_5");
 					put(grammarAccess.getInterface_fwdAccess().getAlternatives_0(), "rule__Interface_fwd__Alternatives_0");
 					put(grammarAccess.getExportAccess().getAlternatives(), "rule__Export__Alternatives");
 					put(grammarAccess.getOp_declAccess().getAlternatives_1(), "rule__Op_decl__Alternatives_1");
@@ -176,13 +178,13 @@ public class IDLParser extends AbstractContentAssistParser {
 					put(grammarAccess.getSpecificationAccess().getContainsAssignment_2(), "rule__Specification__ContainsAssignment_2");
 					put(grammarAccess.getInclude_declAccess().getImportURIAssignment_1(), "rule__Include_decl__ImportURIAssignment_1");
 					put(grammarAccess.getModuleAccess().getIdentifierAssignment_1(), "rule__Module__IdentifierAssignment_1");
-					put(grammarAccess.getModuleAccess().getContainsAssignment_3(), "rule__Module__ContainsAssignment_3");
+					put(grammarAccess.getModuleAccess().getContainsAssignment_3_0(), "rule__Module__ContainsAssignment_3_0");
 					put(grammarAccess.getInterface_declAccess().getIsAbstractAssignment_0_0(), "rule__Interface_decl__IsAbstractAssignment_0_0");
 					put(grammarAccess.getInterface_declAccess().getIsCustomAssignment_0_1(), "rule__Interface_decl__IsCustomAssignment_0_1");
 					put(grammarAccess.getInterface_declAccess().getIdentifierAssignment_2(), "rule__Interface_decl__IdentifierAssignment_2");
 					put(grammarAccess.getInterface_declAccess().getDerivesFromAssignment_3_1(), "rule__Interface_decl__DerivesFromAssignment_3_1");
 					put(grammarAccess.getInterface_declAccess().getDerivesFromAssignment_3_2_1(), "rule__Interface_decl__DerivesFromAssignment_3_2_1");
-					put(grammarAccess.getInterface_declAccess().getContainsAssignment_5(), "rule__Interface_decl__ContainsAssignment_5");
+					put(grammarAccess.getInterface_declAccess().getContainsAssignment_5_0(), "rule__Interface_decl__ContainsAssignment_5_0");
 					put(grammarAccess.getInterface_fwdAccess().getIdentifierAssignment_2(), "rule__Interface_fwd__IdentifierAssignment_2");
 					put(grammarAccess.getOp_declAccess().getIsOnewayAssignment_0(), "rule__Op_decl__IsOnewayAssignment_0");
 					put(grammarAccess.getOp_declAccess().getContainedTypeAssignment_1_0(), "rule__Op_decl__ContainedTypeAssignment_1_0");

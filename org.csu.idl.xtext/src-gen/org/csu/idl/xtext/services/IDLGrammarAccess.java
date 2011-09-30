@@ -170,15 +170,17 @@ public class IDLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cIdentifierAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cIdentifierIDTerminalRuleCall_1_0 = (RuleCall)cIdentifierAssignment_1.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cContainsAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cContainsDefinitionParserRuleCall_3_0 = (RuleCall)cContainsAssignment_3.eContents().get(0);
+		private final Alternatives cAlternatives_3 = (Alternatives)cGroup.eContents().get(3);
+		private final Assignment cContainsAssignment_3_0 = (Assignment)cAlternatives_3.eContents().get(0);
+		private final RuleCall cContainsDefinitionParserRuleCall_3_0_0 = (RuleCall)cContainsAssignment_3_0.eContents().get(0);
+		private final Keyword cSemicolonKeyword_3_1 = (Keyword)cAlternatives_3.eContents().get(1);
 		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
 		//module returns IDL::ModuleDef:
-		//	"module" identifier=ID "{" contains+=definition+ "}";
+		//	"module" identifier=ID "{" (contains+=definition | ";")* "}";
 		public ParserRule getRule() { return rule; }
 
-		//"module" identifier=ID "{" contains+=definition+ "}"
+		//"module" identifier=ID "{" (contains+=definition | ";")* "}"
 		public Group getGroup() { return cGroup; }
 
 		//"module"
@@ -193,11 +195,17 @@ public class IDLGrammarAccess extends AbstractGrammarElementFinder {
 		//"{"
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//contains+=definition+
-		public Assignment getContainsAssignment_3() { return cContainsAssignment_3; }
+		//(contains+=definition | ";")*
+		public Alternatives getAlternatives_3() { return cAlternatives_3; }
+
+		//contains+=definition
+		public Assignment getContainsAssignment_3_0() { return cContainsAssignment_3_0; }
 
 		//definition
-		public RuleCall getContainsDefinitionParserRuleCall_3_0() { return cContainsDefinitionParserRuleCall_3_0; }
+		public RuleCall getContainsDefinitionParserRuleCall_3_0_0() { return cContainsDefinitionParserRuleCall_3_0_0; }
+
+		//";"
+		public Keyword getSemicolonKeyword_3_1() { return cSemicolonKeyword_3_1; }
 
 		//"}"
 		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
@@ -225,17 +233,19 @@ public class IDLGrammarAccess extends AbstractGrammarElementFinder {
 		private final CrossReference cDerivesFromInterfaceDefCrossReference_3_2_1_0 = (CrossReference)cDerivesFromAssignment_3_2_1.eContents().get(0);
 		private final RuleCall cDerivesFromInterfaceDefIDTerminalRuleCall_3_2_1_0_1 = (RuleCall)cDerivesFromInterfaceDefCrossReference_3_2_1_0.eContents().get(1);
 		private final Keyword cLeftCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final Assignment cContainsAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cContainsExportParserRuleCall_5_0 = (RuleCall)cContainsAssignment_5.eContents().get(0);
+		private final Alternatives cAlternatives_5 = (Alternatives)cGroup.eContents().get(5);
+		private final Assignment cContainsAssignment_5_0 = (Assignment)cAlternatives_5.eContents().get(0);
+		private final RuleCall cContainsExportParserRuleCall_5_0_0 = (RuleCall)cContainsAssignment_5_0.eContents().get(0);
+		private final Keyword cSemicolonKeyword_5_1 = (Keyword)cAlternatives_5.eContents().get(1);
 		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//interface_decl returns IDL::InterfaceDef:
 		//	(isAbstract?="abstract" | isCustom?="local")? "interface" identifier=ID (":" derivesFrom+=[IDL::InterfaceDef] (","
-		//	derivesFrom+=[IDL::InterfaceDef])*)? "{" contains+=export* "}";
+		//	derivesFrom+=[IDL::InterfaceDef])*)? "{" (contains+=export | ";")* "}";
 		public ParserRule getRule() { return rule; }
 
 		//(isAbstract?="abstract" | isCustom?="local")? "interface" identifier=ID (":" derivesFrom+=[IDL::InterfaceDef] (","
-		//derivesFrom+=[IDL::InterfaceDef])*)? "{" contains+=export* "}"
+		//derivesFrom+=[IDL::InterfaceDef])*)? "{" (contains+=export | ";")* "}"
 		public Group getGroup() { return cGroup; }
 
 		//(isAbstract?="abstract" | isCustom?="local")?
@@ -295,11 +305,17 @@ public class IDLGrammarAccess extends AbstractGrammarElementFinder {
 		//"{"
 		public Keyword getLeftCurlyBracketKeyword_4() { return cLeftCurlyBracketKeyword_4; }
 
-		//contains+=export*
-		public Assignment getContainsAssignment_5() { return cContainsAssignment_5; }
+		//(contains+=export | ";")*
+		public Alternatives getAlternatives_5() { return cAlternatives_5; }
+
+		//contains+=export
+		public Assignment getContainsAssignment_5_0() { return cContainsAssignment_5_0; }
 
 		//export
-		public RuleCall getContainsExportParserRuleCall_5_0() { return cContainsExportParserRuleCall_5_0; }
+		public RuleCall getContainsExportParserRuleCall_5_0_0() { return cContainsExportParserRuleCall_5_0_0; }
+
+		//";"
+		public Keyword getSemicolonKeyword_5_1() { return cSemicolonKeyword_5_1; }
 
 		//"}"
 		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
@@ -3435,7 +3451,7 @@ public class IDLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//module returns IDL::ModuleDef:
-	//	"module" identifier=ID "{" contains+=definition+ "}";
+	//	"module" identifier=ID "{" (contains+=definition | ";")* "}";
 	public ModuleElements getModuleAccess() {
 		return (pModule != null) ? pModule : (pModule = new ModuleElements());
 	}
@@ -3446,7 +3462,7 @@ public class IDLGrammarAccess extends AbstractGrammarElementFinder {
 
 	//interface_decl returns IDL::InterfaceDef:
 	//	(isAbstract?="abstract" | isCustom?="local")? "interface" identifier=ID (":" derivesFrom+=[IDL::InterfaceDef] (","
-	//	derivesFrom+=[IDL::InterfaceDef])*)? "{" contains+=export* "}";
+	//	derivesFrom+=[IDL::InterfaceDef])*)? "{" (contains+=export | ";")* "}";
 	public Interface_declElements getInterface_declAccess() {
 		return (pInterface_decl != null) ? pInterface_decl : (pInterface_decl = new Interface_declElements());
 	}

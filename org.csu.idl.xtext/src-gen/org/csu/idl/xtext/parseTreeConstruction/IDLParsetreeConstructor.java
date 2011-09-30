@@ -927,11 +927,11 @@ protected class Definition_SemicolonKeyword_5_1 extends KeywordToken  {
 /************ begin Rule module ****************
  *
  * module returns IDL::ModuleDef:
- * 	"module" identifier=ID "{" contains+=definition+ "}";
+ * 	"module" identifier=ID "{" (contains+=definition | ";")* "}";
  *
  **/
 
-// "module" identifier=ID "{" contains+=definition+ "}"
+// "module" identifier=ID "{" (contains+=definition | ";")* "}"
 protected class Module_Group extends GroupToken {
 	
 	public Module_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -1037,16 +1037,38 @@ protected class Module_LeftCurlyBracketKeyword_2 extends KeywordToken  {
 
 }
 
-// contains+=definition+
-protected class Module_ContainsAssignment_3 extends AssignmentToken  {
+// (contains+=definition | ";")*
+protected class Module_Alternatives_3 extends AlternativesToken {
+
+	public Module_Alternatives_3(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
+	}
 	
-	public Module_ContainsAssignment_3(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+	@Override
+	public Alternatives getGrammarElement() {
+		return grammarAccess.getModuleAccess().getAlternatives_3();
+	}
+
+    @Override
+	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
+		switch(index) {
+			case 0: return new Module_ContainsAssignment_3_0(lastRuleCallOrigin, this, 0, inst);
+			default: return null;
+		}	
+	}
+
+}
+
+// contains+=definition
+protected class Module_ContainsAssignment_3_0 extends AssignmentToken  {
+	
+	public Module_ContainsAssignment_3_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
 	public Assignment getGrammarElement() {
-		return grammarAccess.getModuleAccess().getContainsAssignment_3();
+		return grammarAccess.getModuleAccess().getContainsAssignment_3_0();
 	}
 
     @Override
@@ -1065,7 +1087,7 @@ protected class Module_ContainsAssignment_3 extends AssignmentToken  {
 			IEObjectConsumer param = createEObjectConsumer((EObject)value);
 			if(param.isInstanceOf(grammarAccess.getDefinitionRule().getType().getClassifier())) {
 				type = AssignmentType.PARSER_RULE_CALL;
-				element = grammarAccess.getModuleAccess().getContainsDefinitionParserRuleCall_3_0(); 
+				element = grammarAccess.getModuleAccess().getContainsDefinitionParserRuleCall_3_0_0(); 
 				consumed = obj;
 				return param;
 			}
@@ -1077,12 +1099,13 @@ protected class Module_ContainsAssignment_3 extends AssignmentToken  {
 	public AbstractToken createFollowerAfterReturn(AbstractToken next,	int actIndex, int index, IEObjectConsumer inst) {
 		if(value == inst.getEObject() && !inst.isConsumed()) return null;
 		switch(index) {
-			case 0: return new Module_ContainsAssignment_3(lastRuleCallOrigin, next, actIndex, consumed);
+			case 0: return new Module_Alternatives_3(lastRuleCallOrigin, next, actIndex, consumed);
 			case 1: return new Module_LeftCurlyBracketKeyword_2(lastRuleCallOrigin, next, actIndex, consumed);
 			default: return null;
 		}	
 	}	
 }
+
 
 // "}"
 protected class Module_RightCurlyBracketKeyword_4 extends KeywordToken  {
@@ -1099,7 +1122,8 @@ protected class Module_RightCurlyBracketKeyword_4 extends KeywordToken  {
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new Module_ContainsAssignment_3(lastRuleCallOrigin, this, 0, inst);
+			case 0: return new Module_Alternatives_3(lastRuleCallOrigin, this, 0, inst);
+			case 1: return new Module_LeftCurlyBracketKeyword_2(lastRuleCallOrigin, this, 1, inst);
 			default: return null;
 		}	
 	}
@@ -1114,12 +1138,12 @@ protected class Module_RightCurlyBracketKeyword_4 extends KeywordToken  {
  *
  * interface_decl returns IDL::InterfaceDef:
  * 	(isAbstract?="abstract" | isCustom?="local")? "interface" identifier=ID (":" derivesFrom+=[IDL::InterfaceDef] (","
- * 	derivesFrom+=[IDL::InterfaceDef])*)? "{" contains+=export* "}";
+ * 	derivesFrom+=[IDL::InterfaceDef])*)? "{" (contains+=export | ";")* "}";
  *
  **/
 
 // (isAbstract?="abstract" | isCustom?="local")? "interface" identifier=ID (":" derivesFrom+=[IDL::InterfaceDef] (","
-// derivesFrom+=[IDL::InterfaceDef])*)? "{" contains+=export* "}"
+// derivesFrom+=[IDL::InterfaceDef])*)? "{" (contains+=export | ";")* "}"
 protected class Interface_decl_Group extends GroupToken {
 	
 	public Interface_decl_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -1483,16 +1507,38 @@ protected class Interface_decl_LeftCurlyBracketKeyword_4 extends KeywordToken  {
 
 }
 
-// contains+=export*
-protected class Interface_decl_ContainsAssignment_5 extends AssignmentToken  {
+// (contains+=export | ";")*
+protected class Interface_decl_Alternatives_5 extends AlternativesToken {
+
+	public Interface_decl_Alternatives_5(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
+	}
 	
-	public Interface_decl_ContainsAssignment_5(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+	@Override
+	public Alternatives getGrammarElement() {
+		return grammarAccess.getInterface_declAccess().getAlternatives_5();
+	}
+
+    @Override
+	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
+		switch(index) {
+			case 0: return new Interface_decl_ContainsAssignment_5_0(lastRuleCallOrigin, this, 0, inst);
+			default: return null;
+		}	
+	}
+
+}
+
+// contains+=export
+protected class Interface_decl_ContainsAssignment_5_0 extends AssignmentToken  {
+	
+	public Interface_decl_ContainsAssignment_5_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
 	public Assignment getGrammarElement() {
-		return grammarAccess.getInterface_declAccess().getContainsAssignment_5();
+		return grammarAccess.getInterface_declAccess().getContainsAssignment_5_0();
 	}
 
     @Override
@@ -1505,13 +1551,13 @@ protected class Interface_decl_ContainsAssignment_5 extends AssignmentToken  {
 
     @Override	
 	public IEObjectConsumer tryConsume() {
-		if((value = eObjectConsumer.getConsumable("contains",false)) == null) return null;
+		if((value = eObjectConsumer.getConsumable("contains",true)) == null) return null;
 		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("contains");
 		if(value instanceof EObject) { // org::eclipse::xtext::impl::RuleCallImpl
 			IEObjectConsumer param = createEObjectConsumer((EObject)value);
 			if(param.isInstanceOf(grammarAccess.getExportRule().getType().getClassifier())) {
 				type = AssignmentType.PARSER_RULE_CALL;
-				element = grammarAccess.getInterface_declAccess().getContainsExportParserRuleCall_5_0(); 
+				element = grammarAccess.getInterface_declAccess().getContainsExportParserRuleCall_5_0_0(); 
 				consumed = obj;
 				return param;
 			}
@@ -1523,12 +1569,13 @@ protected class Interface_decl_ContainsAssignment_5 extends AssignmentToken  {
 	public AbstractToken createFollowerAfterReturn(AbstractToken next,	int actIndex, int index, IEObjectConsumer inst) {
 		if(value == inst.getEObject() && !inst.isConsumed()) return null;
 		switch(index) {
-			case 0: return new Interface_decl_ContainsAssignment_5(lastRuleCallOrigin, next, actIndex, consumed);
+			case 0: return new Interface_decl_Alternatives_5(lastRuleCallOrigin, next, actIndex, consumed);
 			case 1: return new Interface_decl_LeftCurlyBracketKeyword_4(lastRuleCallOrigin, next, actIndex, consumed);
 			default: return null;
 		}	
 	}	
 }
+
 
 // "}"
 protected class Interface_decl_RightCurlyBracketKeyword_6 extends KeywordToken  {
@@ -1545,7 +1592,7 @@ protected class Interface_decl_RightCurlyBracketKeyword_6 extends KeywordToken  
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new Interface_decl_ContainsAssignment_5(lastRuleCallOrigin, this, 0, inst);
+			case 0: return new Interface_decl_Alternatives_5(lastRuleCallOrigin, this, 0, inst);
 			case 1: return new Interface_decl_LeftCurlyBracketKeyword_4(lastRuleCallOrigin, this, 1, inst);
 			default: return null;
 		}	
