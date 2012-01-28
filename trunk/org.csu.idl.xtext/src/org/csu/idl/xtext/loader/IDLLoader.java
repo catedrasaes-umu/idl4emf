@@ -60,7 +60,7 @@ public class IDLLoader {
 
 	public IDLLoader() {
 		// http://wiki.eclipse.org/Xtext/FAQ
-		new org.eclipse.emf.mwe.utils.StandaloneSetup().setPlatformUri("../");
+		new org.eclipse.emf.mwe.utils.StandaloneSetup().setPlatformUri(".");
 		injector = new IDLStandaloneSetup().createInjectorAndDoEMFRegistration();
 		resourceSet = injector.getInstance(XtextResourceSet.class);
 
