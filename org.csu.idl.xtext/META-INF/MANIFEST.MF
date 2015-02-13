@@ -16,7 +16,10 @@ Require-Bundle: org.eclipse.xtext,
  org.csu.idl.idlmm;visibility:=reexport,
  org.eclipse.xtext.util,
  org.antlr.runtime,
- org.eclipse.cdt.core
+ org.eclipse.cdt.core,
+ org.eclipse.xtext.xbase.lib,
+ org.eclipse.xtext.common.types,
+ org.objectweb.asm;bundle-version="[5.0.1,6.0.0)";resolution:=optional
 Import-Package: org.apache.log4j,
  org.eclipse.cdt.core,
  org.eclipse.jface.text,
@@ -25,10 +28,13 @@ Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Export-Package: org.csu.cpp.output,
  org.csu.idl.preprocessor,
  org.csu.idl.xtext,
+ org.csu.idl.xtext.formatting,
+ org.csu.idl.xtext.generator,
  org.csu.idl.xtext.loader,
- org.csu.idl.xtext.parseTreeConstruction,
  org.csu.idl.xtext.parser.antlr,
  org.csu.idl.xtext.parser.antlr.internal,
+ org.csu.idl.xtext.scoping,
+ org.csu.idl.xtext.serializer,
  org.csu.idl.xtext.services,
  org.csu.idl.xtext.validation
 Bundle-ClassPath: lib/anarres-cpp.jar,.

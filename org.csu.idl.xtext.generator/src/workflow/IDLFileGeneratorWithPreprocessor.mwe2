@@ -18,8 +18,8 @@
 
 module workflow.IDLFileGeneratorWithPreprocessor
 
-var idlFile = "src/model/Cosnaming.idl"
 var fileEncoding = "UTF-8"
+var idlFile = "src/model/Cosnaming.idl"
 
 // Parameters
 var targetDir = "src-gen"
@@ -34,13 +34,13 @@ Workflow {
 	}
 	
 	component = org.eclipse.xpand2.Generator {
+		fileEncoding = fileEncoding
 		expand = "templates::Main::main FOREACH model"
 		metaModel = org.eclipse.xtend.type.impl.java.JavaBeansMetaModel {}
 		outlet = {
 			path = targetDir
-			postprocessor = org.eclipse.xpand.support.cdt.CppBeautifier {}
+			postprocessor = org.csu.cpp.output.CppBeautifier {}
 		}
-		fileEncoding = fileEncoding
 
 		// Regiones protegidas
 		prSrcPaths = "${targetDir}"

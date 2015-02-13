@@ -37,7 +37,7 @@ import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.xtext.validation.Check;
  
 
-public class IDLJavaValidator extends AbstractIDLJavaValidator {
+public class IDLValidator extends AbstractIDLValidator {
 
 //	@Check
 //	public void checkGreetingStartsWithCapital(Greeting greeting) {
@@ -89,13 +89,13 @@ public class IDLJavaValidator extends AbstractIDLJavaValidator {
     private void undefinedReference(EObject obj, EObject value, EReference ref)
     {   
     	System.err.println("Undefined reference in " + obj.eClass().getName() + " " + context(obj));
-        error("Undefined reference in " + obj.eClass().getName() + " " + context(obj), obj, ref.getFeatureID());
+        error("Undefined reference in " + obj.eClass().getName() + " " + context(obj), obj, ref);
     }
     
     private void undefinedReference(EObject obj, EObject value, EReference ref, int position)
     {   	
     	System.err.println("Undefined reference in " + obj.eClass().getName() + " " + context(obj) + " in element " + position);
-        error("Undefined reference in " + obj.eClass().getName() + " " + context(obj) + " in element " + position, obj, ref.getFeatureID());
+        error("Undefined reference in " + obj.eClass().getName() + " " + context(obj) + " in element " + position, obj, ref);
     }
     
     private String context(EObject obj)

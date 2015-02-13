@@ -3,10 +3,11 @@ package org.csu.idl.xtext.scoping;
 import org.csu.idl.idlmm.Contained;
 import org.csu.idl.idlmm.Container;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.xtext.naming.QualifiedName;
 
 import com.google.common.base.Function;
 
-public class IDLAttributeResolver implements Function<EObject, String> {
+public class IDLAttributeResolver implements Function<EObject, QualifiedName> {
 	
 	private Container container;
 
@@ -19,7 +20,7 @@ public class IDLAttributeResolver implements Function<EObject, String> {
 	}
 	
 	@Override
-	public String apply(EObject from) {
+	public QualifiedName apply(EObject from) {
 		return IDLScopingHelper.relativeName((Contained) from, container);
 	}
 
