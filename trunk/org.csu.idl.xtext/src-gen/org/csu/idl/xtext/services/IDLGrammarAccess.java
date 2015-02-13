@@ -1730,7 +1730,8 @@ public class IDLGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cLabelConst_expParserRuleCall_0_0_0_1_0 = (RuleCall)cLabelAssignment_0_0_0_1.eContents().get(0);
 		private final Keyword cColonKeyword_0_0_0_2 = (Keyword)cGroup_0_0_0.eContents().get(2);
 		private final Group cGroup_0_0_1 = (Group)cAlternatives_0_0.eContents().get(1);
-		private final Keyword cDefaultKeyword_0_0_1_0 = (Keyword)cGroup_0_0_1.eContents().get(0);
+		private final Assignment cIsDefaultAssignment_0_0_1_0 = (Assignment)cGroup_0_0_1.eContents().get(0);
+		private final Keyword cIsDefaultDefaultKeyword_0_0_1_0_0 = (Keyword)cIsDefaultAssignment_0_0_1_0.eContents().get(0);
 		private final Keyword cColonKeyword_0_0_1_1 = (Keyword)cGroup_0_0_1.eContents().get(1);
 		private final Assignment cContainedTypeAssignment_0_1 = (Assignment)cGroup_0.eContents().get(1);
 		private final RuleCall cContainedTypeArray_type_specParserRuleCall_0_1_0 = (RuleCall)cContainedTypeAssignment_0_1.eContents().get(0);
@@ -1743,7 +1744,8 @@ public class IDLGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cLabelConst_expParserRuleCall_1_0_0_1_0 = (RuleCall)cLabelAssignment_1_0_0_1.eContents().get(0);
 		private final Keyword cColonKeyword_1_0_0_2 = (Keyword)cGroup_1_0_0.eContents().get(2);
 		private final Group cGroup_1_0_1 = (Group)cAlternatives_1_0.eContents().get(1);
-		private final Keyword cDefaultKeyword_1_0_1_0 = (Keyword)cGroup_1_0_1.eContents().get(0);
+		private final Assignment cIsDefaultAssignment_1_0_1_0 = (Assignment)cGroup_1_0_1.eContents().get(0);
+		private final Keyword cIsDefaultDefaultKeyword_1_0_1_0_0 = (Keyword)cIsDefaultAssignment_1_0_1_0.eContents().get(0);
 		private final Keyword cColonKeyword_1_0_1_1 = (Keyword)cGroup_1_0_1.eContents().get(1);
 		private final Alternatives cAlternatives_1_1 = (Alternatives)cGroup_1.eContents().get(1);
 		private final Assignment cContainedTypeAssignment_1_1_0 = (Assignment)cAlternatives_1_1.eContents().get(0);
@@ -1756,20 +1758,20 @@ public class IDLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cSemicolonKeyword_1_3 = (Keyword)cGroup_1.eContents().get(3);
 		
 		//case_stmt returns IDL::UnionField:
-		//	("case" label+=const_exp ":" | / *label+=* / "default" ":")+ containedType=array_type_spec / *identifier= id_array* / ";"
-		//	| ("case" label+=const_exp ":" | / *label+=* / "default" ":")+ (containedType=simple_type_spec |
+		//	("case" label+=const_exp ":" | isDefault?="default" ":")+ containedType=array_type_spec / *identifier= id_array* / ";" |
+		//	("case" label+=const_exp ":" | isDefault?="default" ":")+ (containedType=simple_type_spec |
 		//	sharedType=[IDL::TypedefDef]) identifier=ID ";";
 		public ParserRule getRule() { return rule; }
 
-		//("case" label+=const_exp ":" | / *label+=* / "default" ":")+ containedType=array_type_spec / *identifier= id_array* / ";" |
-		//("case" label+=const_exp ":" | / *label+=* / "default" ":")+ (containedType=simple_type_spec |
+		//("case" label+=const_exp ":" | isDefault?="default" ":")+ containedType=array_type_spec / *identifier= id_array* / ";" |
+		//("case" label+=const_exp ":" | isDefault?="default" ":")+ (containedType=simple_type_spec |
 		//sharedType=[IDL::TypedefDef]) identifier=ID ";"
 		public Alternatives getAlternatives() { return cAlternatives; }
 
-		//("case" label+=const_exp ":" | / *label+=* / "default" ":")+ containedType=array_type_spec / *identifier= id_array* / ";"
+		//("case" label+=const_exp ":" | isDefault?="default" ":")+ containedType=array_type_spec / *identifier= id_array* / ";"
 		public Group getGroup_0() { return cGroup_0; }
 
-		//("case" label+=const_exp ":" | / *label+=* / "default" ":")+
+		//("case" label+=const_exp ":" | isDefault?="default" ":")+
 		public Alternatives getAlternatives_0_0() { return cAlternatives_0_0; }
 
 		//"case" label+=const_exp ":"
@@ -1787,11 +1789,14 @@ public class IDLGrammarAccess extends AbstractGrammarElementFinder {
 		//":"
 		public Keyword getColonKeyword_0_0_0_2() { return cColonKeyword_0_0_0_2; }
 
-		/// *label+=* / "default" ":"
+		//isDefault?="default" ":"
 		public Group getGroup_0_0_1() { return cGroup_0_0_1; }
 
-		/// *label+=* / "default"
-		public Keyword getDefaultKeyword_0_0_1_0() { return cDefaultKeyword_0_0_1_0; }
+		//isDefault?="default"
+		public Assignment getIsDefaultAssignment_0_0_1_0() { return cIsDefaultAssignment_0_0_1_0; }
+
+		//"default"
+		public Keyword getIsDefaultDefaultKeyword_0_0_1_0_0() { return cIsDefaultDefaultKeyword_0_0_1_0_0; }
 
 		//":"
 		public Keyword getColonKeyword_0_0_1_1() { return cColonKeyword_0_0_1_1; }
@@ -1805,11 +1810,11 @@ public class IDLGrammarAccess extends AbstractGrammarElementFinder {
 		/// *identifier= id_array* / ";"
 		public Keyword getSemicolonKeyword_0_2() { return cSemicolonKeyword_0_2; }
 
-		//("case" label+=const_exp ":" | / *label+=* / "default" ":")+ (containedType=simple_type_spec |
+		//("case" label+=const_exp ":" | isDefault?="default" ":")+ (containedType=simple_type_spec |
 		//sharedType=[IDL::TypedefDef]) identifier=ID ";"
 		public Group getGroup_1() { return cGroup_1; }
 
-		//("case" label+=const_exp ":" | / *label+=* / "default" ":")+
+		//("case" label+=const_exp ":" | isDefault?="default" ":")+
 		public Alternatives getAlternatives_1_0() { return cAlternatives_1_0; }
 
 		//"case" label+=const_exp ":"
@@ -1827,11 +1832,14 @@ public class IDLGrammarAccess extends AbstractGrammarElementFinder {
 		//":"
 		public Keyword getColonKeyword_1_0_0_2() { return cColonKeyword_1_0_0_2; }
 
-		/// *label+=* / "default" ":"
+		//isDefault?="default" ":"
 		public Group getGroup_1_0_1() { return cGroup_1_0_1; }
 
-		/// *label+=* / "default"
-		public Keyword getDefaultKeyword_1_0_1_0() { return cDefaultKeyword_1_0_1_0; }
+		//isDefault?="default"
+		public Assignment getIsDefaultAssignment_1_0_1_0() { return cIsDefaultAssignment_1_0_1_0; }
+
+		//"default"
+		public Keyword getIsDefaultDefaultKeyword_1_0_1_0_0() { return cIsDefaultDefaultKeyword_1_0_1_0_0; }
 
 		//":"
 		public Keyword getColonKeyword_1_0_1_1() { return cColonKeyword_1_0_1_1; }
@@ -3785,8 +3793,8 @@ public class IDLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//case_stmt returns IDL::UnionField:
-	//	("case" label+=const_exp ":" | / *label+=* / "default" ":")+ containedType=array_type_spec / *identifier= id_array* / ";"
-	//	| ("case" label+=const_exp ":" | / *label+=* / "default" ":")+ (containedType=simple_type_spec |
+	//	("case" label+=const_exp ":" | isDefault?="default" ":")+ containedType=array_type_spec / *identifier= id_array* / ";" |
+	//	("case" label+=const_exp ":" | isDefault?="default" ":")+ (containedType=simple_type_spec |
 	//	sharedType=[IDL::TypedefDef]) identifier=ID ";";
 	public Case_stmtElements getCase_stmtAccess() {
 		return pCase_stmt;

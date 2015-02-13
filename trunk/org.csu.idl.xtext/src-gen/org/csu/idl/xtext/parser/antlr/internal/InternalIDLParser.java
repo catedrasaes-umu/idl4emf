@@ -25,83 +25,83 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
         "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_HEX_LITERAL", "RULE_WIDE_STRING_LITERAL", "RULE_FIXED_PT_LITERAL", "RULE_FLOATING_PT_LITERAL", "RULE_BOOLEAN_LITERAL", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'#include'", "';'", "'module'", "'{'", "'}'", "'abstract'", "'local'", "'interface'", "':'", "','", "'oneway'", "'('", "')'", "'raises'", "'context'", "'readonly'", "'attribute'", "'getraises'", "'setraises'", "'exception'", "'native'", "'typedef'", "'['", "']'", "'struct'", "'union'", "'switch'", "'case'", "'default'", "'enum'", "'const'", "'='", "'sequence'", "'<'", "'>'", "'string'", "'wstring'", "'fixed'", "'long'", "'double'", "'unsigned'", "'short'", "'|'", "'^'", "'&'", "'>>'", "'<<'", "'+'", "'-'", "'*'", "'/'", "'%'", "'~'", "'in'", "'out'", "'inout'", "'float'", "'char'", "'wchar'", "'boolean'", "'octet'", "'any'", "'Object'", "'void'"
     };
-    public static final int T__50=50;
-    public static final int RULE_HEX_LITERAL=7;
-    public static final int T__19=19;
-    public static final int T__59=59;
-    public static final int T__16=16;
-    public static final int T__17=17;
-    public static final int T__18=18;
+    public static final int T__68=68;
+    public static final int T__69=69;
+    public static final int RULE_ID=5;
+    public static final int T__66=66;
+    public static final int T__67=67;
+    public static final int RULE_BOOLEAN_LITERAL=11;
+    public static final int T__64=64;
+    public static final int T__29=29;
+    public static final int T__65=65;
+    public static final int T__28=28;
+    public static final int T__62=62;
+    public static final int T__27=27;
+    public static final int T__63=63;
+    public static final int T__26=26;
+    public static final int RULE_WIDE_STRING_LITERAL=8;
+    public static final int T__25=25;
+    public static final int T__24=24;
+    public static final int T__23=23;
+    public static final int T__22=22;
+    public static final int RULE_ANY_OTHER=15;
+    public static final int T__21=21;
+    public static final int T__20=20;
+    public static final int T__61=61;
+    public static final int T__60=60;
+    public static final int EOF=-1;
     public static final int T__55=55;
     public static final int T__56=56;
+    public static final int T__19=19;
     public static final int T__57=57;
     public static final int T__58=58;
+    public static final int RULE_FLOATING_PT_LITERAL=10;
+    public static final int T__16=16;
     public static final int T__51=51;
     public static final int T__52=52;
+    public static final int T__18=18;
     public static final int T__53=53;
+    public static final int T__17=17;
     public static final int T__54=54;
-    public static final int T__60=60;
-    public static final int T__61=61;
-    public static final int RULE_ID=5;
-    public static final int RULE_BOOLEAN_LITERAL=11;
-    public static final int T__26=26;
-    public static final int T__27=27;
-    public static final int T__28=28;
+    public static final int T__59=59;
+    public static final int RULE_HEX_LITERAL=7;
     public static final int RULE_INT=6;
-    public static final int T__29=29;
-    public static final int T__22=22;
-    public static final int T__66=66;
-    public static final int RULE_ML_COMMENT=12;
-    public static final int T__23=23;
-    public static final int T__67=67;
-    public static final int T__24=24;
-    public static final int T__68=68;
-    public static final int T__25=25;
-    public static final int T__69=69;
-    public static final int T__62=62;
-    public static final int T__63=63;
-    public static final int T__20=20;
-    public static final int T__64=64;
-    public static final int T__21=21;
-    public static final int T__65=65;
-    public static final int T__70=70;
-    public static final int T__71=71;
-    public static final int T__72=72;
-    public static final int RULE_STRING=4;
-    public static final int RULE_SL_COMMENT=13;
-    public static final int T__37=37;
-    public static final int RULE_FLOATING_PT_LITERAL=10;
-    public static final int T__38=38;
-    public static final int T__39=39;
-    public static final int T__33=33;
-    public static final int T__77=77;
-    public static final int T__34=34;
-    public static final int T__78=78;
-    public static final int T__35=35;
-    public static final int T__79=79;
-    public static final int T__36=36;
-    public static final int T__73=73;
+    public static final int T__50=50;
+    public static final int T__42=42;
     public static final int RULE_FIXED_PT_LITERAL=9;
-    public static final int EOF=-1;
-    public static final int T__30=30;
-    public static final int T__74=74;
-    public static final int T__31=31;
-    public static final int T__75=75;
-    public static final int T__32=32;
-    public static final int T__76=76;
-    public static final int RULE_WIDE_STRING_LITERAL=8;
-    public static final int RULE_WS=14;
-    public static final int RULE_ANY_OTHER=15;
-    public static final int T__48=48;
-    public static final int T__49=49;
-    public static final int T__44=44;
-    public static final int T__45=45;
-    public static final int T__46=46;
-    public static final int T__47=47;
+    public static final int T__43=43;
     public static final int T__40=40;
     public static final int T__41=41;
-    public static final int T__42=42;
-    public static final int T__43=43;
+    public static final int T__46=46;
+    public static final int T__47=47;
+    public static final int T__44=44;
+    public static final int T__45=45;
+    public static final int T__48=48;
+    public static final int T__49=49;
+    public static final int RULE_SL_COMMENT=13;
+    public static final int RULE_ML_COMMENT=12;
+    public static final int T__30=30;
+    public static final int T__31=31;
+    public static final int RULE_STRING=4;
+    public static final int T__32=32;
+    public static final int T__71=71;
+    public static final int T__33=33;
+    public static final int T__72=72;
+    public static final int T__34=34;
+    public static final int T__35=35;
+    public static final int T__70=70;
+    public static final int T__36=36;
+    public static final int T__37=37;
+    public static final int T__38=38;
+    public static final int T__39=39;
+    public static final int RULE_WS=14;
+    public static final int T__76=76;
+    public static final int T__75=75;
+    public static final int T__74=74;
+    public static final int T__73=73;
+    public static final int T__79=79;
+    public static final int T__78=78;
+    public static final int T__77=77;
 
     // delegates
     // delegators
@@ -7313,18 +7313,18 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulecase_stmt"
-    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2607:1: rulecase_stmt returns [EObject current=null] : ( ( ( (otherlv_0= 'case' ( (lv_label_1_0= ruleconst_exp ) ) otherlv_2= ':' ) | (otherlv_3= 'default' otherlv_4= ':' ) )+ ( (lv_containedType_5_0= rulearray_type_spec ) ) otherlv_6= ';' ) | ( ( (otherlv_7= 'case' ( (lv_label_8_0= ruleconst_exp ) ) otherlv_9= ':' ) | (otherlv_10= 'default' otherlv_11= ':' ) )+ ( ( (lv_containedType_12_0= rulesimple_type_spec ) ) | ( (otherlv_13= RULE_ID ) ) ) ( (lv_identifier_14_0= RULE_ID ) ) otherlv_15= ';' ) ) ;
+    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2607:1: rulecase_stmt returns [EObject current=null] : ( ( ( (otherlv_0= 'case' ( (lv_label_1_0= ruleconst_exp ) ) otherlv_2= ':' ) | ( ( (lv_isDefault_3_0= 'default' ) ) otherlv_4= ':' ) )+ ( (lv_containedType_5_0= rulearray_type_spec ) ) otherlv_6= ';' ) | ( ( (otherlv_7= 'case' ( (lv_label_8_0= ruleconst_exp ) ) otherlv_9= ':' ) | ( ( (lv_isDefault_10_0= 'default' ) ) otherlv_11= ':' ) )+ ( ( (lv_containedType_12_0= rulesimple_type_spec ) ) | ( (otherlv_13= RULE_ID ) ) ) ( (lv_identifier_14_0= RULE_ID ) ) otherlv_15= ';' ) ) ;
     public final EObject rulecase_stmt() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
         Token otherlv_2=null;
-        Token otherlv_3=null;
+        Token lv_isDefault_3_0=null;
         Token otherlv_4=null;
         Token otherlv_6=null;
         Token otherlv_7=null;
         Token otherlv_9=null;
-        Token otherlv_10=null;
+        Token lv_isDefault_10_0=null;
         Token otherlv_11=null;
         Token otherlv_13=null;
         Token lv_identifier_14_0=null;
@@ -7341,10 +7341,10 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2610:28: ( ( ( ( (otherlv_0= 'case' ( (lv_label_1_0= ruleconst_exp ) ) otherlv_2= ':' ) | (otherlv_3= 'default' otherlv_4= ':' ) )+ ( (lv_containedType_5_0= rulearray_type_spec ) ) otherlv_6= ';' ) | ( ( (otherlv_7= 'case' ( (lv_label_8_0= ruleconst_exp ) ) otherlv_9= ':' ) | (otherlv_10= 'default' otherlv_11= ':' ) )+ ( ( (lv_containedType_12_0= rulesimple_type_spec ) ) | ( (otherlv_13= RULE_ID ) ) ) ( (lv_identifier_14_0= RULE_ID ) ) otherlv_15= ';' ) ) )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2611:1: ( ( ( (otherlv_0= 'case' ( (lv_label_1_0= ruleconst_exp ) ) otherlv_2= ':' ) | (otherlv_3= 'default' otherlv_4= ':' ) )+ ( (lv_containedType_5_0= rulearray_type_spec ) ) otherlv_6= ';' ) | ( ( (otherlv_7= 'case' ( (lv_label_8_0= ruleconst_exp ) ) otherlv_9= ':' ) | (otherlv_10= 'default' otherlv_11= ':' ) )+ ( ( (lv_containedType_12_0= rulesimple_type_spec ) ) | ( (otherlv_13= RULE_ID ) ) ) ( (lv_identifier_14_0= RULE_ID ) ) otherlv_15= ';' ) )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2610:28: ( ( ( ( (otherlv_0= 'case' ( (lv_label_1_0= ruleconst_exp ) ) otherlv_2= ':' ) | ( ( (lv_isDefault_3_0= 'default' ) ) otherlv_4= ':' ) )+ ( (lv_containedType_5_0= rulearray_type_spec ) ) otherlv_6= ';' ) | ( ( (otherlv_7= 'case' ( (lv_label_8_0= ruleconst_exp ) ) otherlv_9= ':' ) | ( ( (lv_isDefault_10_0= 'default' ) ) otherlv_11= ':' ) )+ ( ( (lv_containedType_12_0= rulesimple_type_spec ) ) | ( (otherlv_13= RULE_ID ) ) ) ( (lv_identifier_14_0= RULE_ID ) ) otherlv_15= ';' ) ) )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2611:1: ( ( ( (otherlv_0= 'case' ( (lv_label_1_0= ruleconst_exp ) ) otherlv_2= ':' ) | ( ( (lv_isDefault_3_0= 'default' ) ) otherlv_4= ':' ) )+ ( (lv_containedType_5_0= rulearray_type_spec ) ) otherlv_6= ';' ) | ( ( (otherlv_7= 'case' ( (lv_label_8_0= ruleconst_exp ) ) otherlv_9= ':' ) | ( ( (lv_isDefault_10_0= 'default' ) ) otherlv_11= ':' ) )+ ( ( (lv_containedType_12_0= rulesimple_type_spec ) ) | ( (otherlv_13= RULE_ID ) ) ) ( (lv_identifier_14_0= RULE_ID ) ) otherlv_15= ';' ) )
             {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2611:1: ( ( ( (otherlv_0= 'case' ( (lv_label_1_0= ruleconst_exp ) ) otherlv_2= ':' ) | (otherlv_3= 'default' otherlv_4= ':' ) )+ ( (lv_containedType_5_0= rulearray_type_spec ) ) otherlv_6= ';' ) | ( ( (otherlv_7= 'case' ( (lv_label_8_0= ruleconst_exp ) ) otherlv_9= ':' ) | (otherlv_10= 'default' otherlv_11= ':' ) )+ ( ( (lv_containedType_12_0= rulesimple_type_spec ) ) | ( (otherlv_13= RULE_ID ) ) ) ( (lv_identifier_14_0= RULE_ID ) ) otherlv_15= ';' ) )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2611:1: ( ( ( (otherlv_0= 'case' ( (lv_label_1_0= ruleconst_exp ) ) otherlv_2= ':' ) | ( ( (lv_isDefault_3_0= 'default' ) ) otherlv_4= ':' ) )+ ( (lv_containedType_5_0= rulearray_type_spec ) ) otherlv_6= ';' ) | ( ( (otherlv_7= 'case' ( (lv_label_8_0= ruleconst_exp ) ) otherlv_9= ':' ) | ( ( (lv_isDefault_10_0= 'default' ) ) otherlv_11= ':' ) )+ ( ( (lv_containedType_12_0= rulesimple_type_spec ) ) | ( (otherlv_13= RULE_ID ) ) ) ( (lv_identifier_14_0= RULE_ID ) ) otherlv_15= ';' ) )
             int alt51=2;
             int LA51_0 = input.LA(1);
 
@@ -7391,12 +7391,12 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
             }
             switch (alt51) {
                 case 1 :
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2611:2: ( ( (otherlv_0= 'case' ( (lv_label_1_0= ruleconst_exp ) ) otherlv_2= ':' ) | (otherlv_3= 'default' otherlv_4= ':' ) )+ ( (lv_containedType_5_0= rulearray_type_spec ) ) otherlv_6= ';' )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2611:2: ( ( (otherlv_0= 'case' ( (lv_label_1_0= ruleconst_exp ) ) otherlv_2= ':' ) | ( ( (lv_isDefault_3_0= 'default' ) ) otherlv_4= ':' ) )+ ( (lv_containedType_5_0= rulearray_type_spec ) ) otherlv_6= ';' )
                     {
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2611:2: ( ( (otherlv_0= 'case' ( (lv_label_1_0= ruleconst_exp ) ) otherlv_2= ':' ) | (otherlv_3= 'default' otherlv_4= ':' ) )+ ( (lv_containedType_5_0= rulearray_type_spec ) ) otherlv_6= ';' )
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2611:3: ( (otherlv_0= 'case' ( (lv_label_1_0= ruleconst_exp ) ) otherlv_2= ':' ) | (otherlv_3= 'default' otherlv_4= ':' ) )+ ( (lv_containedType_5_0= rulearray_type_spec ) ) otherlv_6= ';'
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2611:2: ( ( (otherlv_0= 'case' ( (lv_label_1_0= ruleconst_exp ) ) otherlv_2= ':' ) | ( ( (lv_isDefault_3_0= 'default' ) ) otherlv_4= ':' ) )+ ( (lv_containedType_5_0= rulearray_type_spec ) ) otherlv_6= ';' )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2611:3: ( (otherlv_0= 'case' ( (lv_label_1_0= ruleconst_exp ) ) otherlv_2= ':' ) | ( ( (lv_isDefault_3_0= 'default' ) ) otherlv_4= ':' ) )+ ( (lv_containedType_5_0= rulearray_type_spec ) ) otherlv_6= ';'
                     {
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2611:3: ( (otherlv_0= 'case' ( (lv_label_1_0= ruleconst_exp ) ) otherlv_2= ':' ) | (otherlv_3= 'default' otherlv_4= ':' ) )+
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2611:3: ( (otherlv_0= 'case' ( (lv_label_1_0= ruleconst_exp ) ) otherlv_2= ':' ) | ( ( (lv_isDefault_3_0= 'default' ) ) otherlv_4= ':' ) )+
                     int cnt48=0;
                     loop48:
                     do {
@@ -7472,18 +7472,38 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2638:6: (otherlv_3= 'default' otherlv_4= ':' )
+                    	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2638:6: ( ( (lv_isDefault_3_0= 'default' ) ) otherlv_4= ':' )
                     	    {
-                    	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2638:6: (otherlv_3= 'default' otherlv_4= ':' )
-                    	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2638:8: otherlv_3= 'default' otherlv_4= ':'
+                    	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2638:6: ( ( (lv_isDefault_3_0= 'default' ) ) otherlv_4= ':' )
+                    	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2638:7: ( (lv_isDefault_3_0= 'default' ) ) otherlv_4= ':'
                     	    {
-                    	    otherlv_3=(Token)match(input,44,FollowSets000.FOLLOW_44_in_rulecase_stmt5647); if (state.failed) return current;
+                    	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2638:7: ( (lv_isDefault_3_0= 'default' ) )
+                    	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2639:1: (lv_isDefault_3_0= 'default' )
+                    	    {
+                    	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2639:1: (lv_isDefault_3_0= 'default' )
+                    	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2640:3: lv_isDefault_3_0= 'default'
+                    	    {
+                    	    lv_isDefault_3_0=(Token)match(input,44,FollowSets000.FOLLOW_44_in_rulecase_stmt5653); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
-                    	          	newLeafNode(otherlv_3, grammarAccess.getCase_stmtAccess().getDefaultKeyword_0_0_1_0());
+                    	              newLeafNode(lv_isDefault_3_0, grammarAccess.getCase_stmtAccess().getIsDefaultDefaultKeyword_0_0_1_0_0());
                     	          
                     	    }
-                    	    otherlv_4=(Token)match(input,24,FollowSets000.FOLLOW_24_in_rulecase_stmt5659); if (state.failed) return current;
+                    	    if ( state.backtracking==0 ) {
+
+                    	      	        if (current==null) {
+                    	      	            current = createModelElement(grammarAccess.getCase_stmtRule());
+                    	      	        }
+                    	             		setWithLastConsumed(current, "isDefault", true, "default");
+                    	      	    
+                    	    }
+
+                    	    }
+
+
+                    	    }
+
+                    	    otherlv_4=(Token)match(input,24,FollowSets000.FOLLOW_24_in_rulecase_stmt5678); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	          	newLeafNode(otherlv_4, grammarAccess.getCase_stmtAccess().getColonKeyword_0_0_1_1());
@@ -7506,18 +7526,18 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
                         cnt48++;
                     } while (true);
 
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2646:4: ( (lv_containedType_5_0= rulearray_type_spec ) )
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2647:1: (lv_containedType_5_0= rulearray_type_spec )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2657:4: ( (lv_containedType_5_0= rulearray_type_spec ) )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2658:1: (lv_containedType_5_0= rulearray_type_spec )
                     {
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2647:1: (lv_containedType_5_0= rulearray_type_spec )
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2648:3: lv_containedType_5_0= rulearray_type_spec
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2658:1: (lv_containedType_5_0= rulearray_type_spec )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2659:3: lv_containedType_5_0= rulearray_type_spec
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getCase_stmtAccess().getContainedTypeArray_type_specParserRuleCall_0_1_0()); 
                       	    
                     }
-                    pushFollow(FollowSets000.FOLLOW_rulearray_type_spec_in_rulecase_stmt5683);
+                    pushFollow(FollowSets000.FOLLOW_rulearray_type_spec_in_rulecase_stmt5702);
                     lv_containedType_5_0=rulearray_type_spec();
 
                     state._fsp--;
@@ -7541,7 +7561,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_6=(Token)match(input,17,FollowSets000.FOLLOW_17_in_rulecase_stmt5695); if (state.failed) return current;
+                    otherlv_6=(Token)match(input,17,FollowSets000.FOLLOW_17_in_rulecase_stmt5714); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_6, grammarAccess.getCase_stmtAccess().getSemicolonKeyword_0_2());
@@ -7554,12 +7574,12 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2669:6: ( ( (otherlv_7= 'case' ( (lv_label_8_0= ruleconst_exp ) ) otherlv_9= ':' ) | (otherlv_10= 'default' otherlv_11= ':' ) )+ ( ( (lv_containedType_12_0= rulesimple_type_spec ) ) | ( (otherlv_13= RULE_ID ) ) ) ( (lv_identifier_14_0= RULE_ID ) ) otherlv_15= ';' )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2680:6: ( ( (otherlv_7= 'case' ( (lv_label_8_0= ruleconst_exp ) ) otherlv_9= ':' ) | ( ( (lv_isDefault_10_0= 'default' ) ) otherlv_11= ':' ) )+ ( ( (lv_containedType_12_0= rulesimple_type_spec ) ) | ( (otherlv_13= RULE_ID ) ) ) ( (lv_identifier_14_0= RULE_ID ) ) otherlv_15= ';' )
                     {
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2669:6: ( ( (otherlv_7= 'case' ( (lv_label_8_0= ruleconst_exp ) ) otherlv_9= ':' ) | (otherlv_10= 'default' otherlv_11= ':' ) )+ ( ( (lv_containedType_12_0= rulesimple_type_spec ) ) | ( (otherlv_13= RULE_ID ) ) ) ( (lv_identifier_14_0= RULE_ID ) ) otherlv_15= ';' )
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2669:7: ( (otherlv_7= 'case' ( (lv_label_8_0= ruleconst_exp ) ) otherlv_9= ':' ) | (otherlv_10= 'default' otherlv_11= ':' ) )+ ( ( (lv_containedType_12_0= rulesimple_type_spec ) ) | ( (otherlv_13= RULE_ID ) ) ) ( (lv_identifier_14_0= RULE_ID ) ) otherlv_15= ';'
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2680:6: ( ( (otherlv_7= 'case' ( (lv_label_8_0= ruleconst_exp ) ) otherlv_9= ':' ) | ( ( (lv_isDefault_10_0= 'default' ) ) otherlv_11= ':' ) )+ ( ( (lv_containedType_12_0= rulesimple_type_spec ) ) | ( (otherlv_13= RULE_ID ) ) ) ( (lv_identifier_14_0= RULE_ID ) ) otherlv_15= ';' )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2680:7: ( (otherlv_7= 'case' ( (lv_label_8_0= ruleconst_exp ) ) otherlv_9= ':' ) | ( ( (lv_isDefault_10_0= 'default' ) ) otherlv_11= ':' ) )+ ( ( (lv_containedType_12_0= rulesimple_type_spec ) ) | ( (otherlv_13= RULE_ID ) ) ) ( (lv_identifier_14_0= RULE_ID ) ) otherlv_15= ';'
                     {
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2669:7: ( (otherlv_7= 'case' ( (lv_label_8_0= ruleconst_exp ) ) otherlv_9= ':' ) | (otherlv_10= 'default' otherlv_11= ':' ) )+
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2680:7: ( (otherlv_7= 'case' ( (lv_label_8_0= ruleconst_exp ) ) otherlv_9= ':' ) | ( ( (lv_isDefault_10_0= 'default' ) ) otherlv_11= ':' ) )+
                     int cnt49=0;
                     loop49:
                     do {
@@ -7576,29 +7596,29 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
                         switch (alt49) {
                     	case 1 :
-                    	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2669:8: (otherlv_7= 'case' ( (lv_label_8_0= ruleconst_exp ) ) otherlv_9= ':' )
+                    	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2680:8: (otherlv_7= 'case' ( (lv_label_8_0= ruleconst_exp ) ) otherlv_9= ':' )
                     	    {
-                    	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2669:8: (otherlv_7= 'case' ( (lv_label_8_0= ruleconst_exp ) ) otherlv_9= ':' )
-                    	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2669:10: otherlv_7= 'case' ( (lv_label_8_0= ruleconst_exp ) ) otherlv_9= ':'
+                    	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2680:8: (otherlv_7= 'case' ( (lv_label_8_0= ruleconst_exp ) ) otherlv_9= ':' )
+                    	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2680:10: otherlv_7= 'case' ( (lv_label_8_0= ruleconst_exp ) ) otherlv_9= ':'
                     	    {
-                    	    otherlv_7=(Token)match(input,43,FollowSets000.FOLLOW_43_in_rulecase_stmt5717); if (state.failed) return current;
+                    	    otherlv_7=(Token)match(input,43,FollowSets000.FOLLOW_43_in_rulecase_stmt5736); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	          	newLeafNode(otherlv_7, grammarAccess.getCase_stmtAccess().getCaseKeyword_1_0_0_0());
                     	          
                     	    }
-                    	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2673:1: ( (lv_label_8_0= ruleconst_exp ) )
-                    	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2674:1: (lv_label_8_0= ruleconst_exp )
+                    	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2684:1: ( (lv_label_8_0= ruleconst_exp ) )
+                    	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2685:1: (lv_label_8_0= ruleconst_exp )
                     	    {
-                    	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2674:1: (lv_label_8_0= ruleconst_exp )
-                    	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2675:3: lv_label_8_0= ruleconst_exp
+                    	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2685:1: (lv_label_8_0= ruleconst_exp )
+                    	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2686:3: lv_label_8_0= ruleconst_exp
                     	    {
                     	    if ( state.backtracking==0 ) {
                     	       
                     	      	        newCompositeNode(grammarAccess.getCase_stmtAccess().getLabelConst_expParserRuleCall_1_0_0_1_0()); 
                     	      	    
                     	    }
-                    	    pushFollow(FollowSets000.FOLLOW_ruleconst_exp_in_rulecase_stmt5738);
+                    	    pushFollow(FollowSets000.FOLLOW_ruleconst_exp_in_rulecase_stmt5757);
                     	    lv_label_8_0=ruleconst_exp();
 
                     	    state._fsp--;
@@ -7622,7 +7642,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
                     	    }
 
-                    	    otherlv_9=(Token)match(input,24,FollowSets000.FOLLOW_24_in_rulecase_stmt5750); if (state.failed) return current;
+                    	    otherlv_9=(Token)match(input,24,FollowSets000.FOLLOW_24_in_rulecase_stmt5769); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	          	newLeafNode(otherlv_9, grammarAccess.getCase_stmtAccess().getColonKeyword_1_0_0_2());
@@ -7635,18 +7655,38 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2696:6: (otherlv_10= 'default' otherlv_11= ':' )
+                    	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2707:6: ( ( (lv_isDefault_10_0= 'default' ) ) otherlv_11= ':' )
                     	    {
-                    	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2696:6: (otherlv_10= 'default' otherlv_11= ':' )
-                    	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2696:8: otherlv_10= 'default' otherlv_11= ':'
+                    	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2707:6: ( ( (lv_isDefault_10_0= 'default' ) ) otherlv_11= ':' )
+                    	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2707:7: ( (lv_isDefault_10_0= 'default' ) ) otherlv_11= ':'
                     	    {
-                    	    otherlv_10=(Token)match(input,44,FollowSets000.FOLLOW_44_in_rulecase_stmt5770); if (state.failed) return current;
+                    	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2707:7: ( (lv_isDefault_10_0= 'default' ) )
+                    	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2708:1: (lv_isDefault_10_0= 'default' )
+                    	    {
+                    	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2708:1: (lv_isDefault_10_0= 'default' )
+                    	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2709:3: lv_isDefault_10_0= 'default'
+                    	    {
+                    	    lv_isDefault_10_0=(Token)match(input,44,FollowSets000.FOLLOW_44_in_rulecase_stmt5795); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
-                    	          	newLeafNode(otherlv_10, grammarAccess.getCase_stmtAccess().getDefaultKeyword_1_0_1_0());
+                    	              newLeafNode(lv_isDefault_10_0, grammarAccess.getCase_stmtAccess().getIsDefaultDefaultKeyword_1_0_1_0_0());
                     	          
                     	    }
-                    	    otherlv_11=(Token)match(input,24,FollowSets000.FOLLOW_24_in_rulecase_stmt5782); if (state.failed) return current;
+                    	    if ( state.backtracking==0 ) {
+
+                    	      	        if (current==null) {
+                    	      	            current = createModelElement(grammarAccess.getCase_stmtRule());
+                    	      	        }
+                    	             		setWithLastConsumed(current, "isDefault", true, "default");
+                    	      	    
+                    	    }
+
+                    	    }
+
+
+                    	    }
+
+                    	    otherlv_11=(Token)match(input,24,FollowSets000.FOLLOW_24_in_rulecase_stmt5820); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	          	newLeafNode(otherlv_11, grammarAccess.getCase_stmtAccess().getColonKeyword_1_0_1_1());
@@ -7669,7 +7709,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
                         cnt49++;
                     } while (true);
 
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2704:4: ( ( (lv_containedType_12_0= rulesimple_type_spec ) ) | ( (otherlv_13= RULE_ID ) ) )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2726:4: ( ( (lv_containedType_12_0= rulesimple_type_spec ) ) | ( (otherlv_13= RULE_ID ) ) )
                     int alt50=2;
                     int LA50_0 = input.LA(1);
 
@@ -7688,20 +7728,20 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
                     }
                     switch (alt50) {
                         case 1 :
-                            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2704:5: ( (lv_containedType_12_0= rulesimple_type_spec ) )
+                            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2726:5: ( (lv_containedType_12_0= rulesimple_type_spec ) )
                             {
-                            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2704:5: ( (lv_containedType_12_0= rulesimple_type_spec ) )
-                            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2705:1: (lv_containedType_12_0= rulesimple_type_spec )
+                            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2726:5: ( (lv_containedType_12_0= rulesimple_type_spec ) )
+                            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2727:1: (lv_containedType_12_0= rulesimple_type_spec )
                             {
-                            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2705:1: (lv_containedType_12_0= rulesimple_type_spec )
-                            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2706:3: lv_containedType_12_0= rulesimple_type_spec
+                            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2727:1: (lv_containedType_12_0= rulesimple_type_spec )
+                            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2728:3: lv_containedType_12_0= rulesimple_type_spec
                             {
                             if ( state.backtracking==0 ) {
                                
                               	        newCompositeNode(grammarAccess.getCase_stmtAccess().getContainedTypeSimple_type_specParserRuleCall_1_1_0_0()); 
                               	    
                             }
-                            pushFollow(FollowSets000.FOLLOW_rulesimple_type_spec_in_rulecase_stmt5807);
+                            pushFollow(FollowSets000.FOLLOW_rulesimple_type_spec_in_rulecase_stmt5845);
                             lv_containedType_12_0=rulesimple_type_spec();
 
                             state._fsp--;
@@ -7729,13 +7769,13 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 2 :
-                            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2723:6: ( (otherlv_13= RULE_ID ) )
+                            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2745:6: ( (otherlv_13= RULE_ID ) )
                             {
-                            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2723:6: ( (otherlv_13= RULE_ID ) )
-                            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2724:1: (otherlv_13= RULE_ID )
+                            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2745:6: ( (otherlv_13= RULE_ID ) )
+                            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2746:1: (otherlv_13= RULE_ID )
                             {
-                            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2724:1: (otherlv_13= RULE_ID )
-                            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2725:3: otherlv_13= RULE_ID
+                            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2746:1: (otherlv_13= RULE_ID )
+                            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2747:3: otherlv_13= RULE_ID
                             {
                             if ( state.backtracking==0 ) {
                                
@@ -7749,7 +7789,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
                               	        }
                                       
                             }
-                            otherlv_13=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rulecase_stmt5837); if (state.failed) return current;
+                            otherlv_13=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rulecase_stmt5875); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                               		newLeafNode(otherlv_13, grammarAccess.getCase_stmtAccess().getSharedTypeTypedefDefCrossReference_1_1_1_0()); 
@@ -7767,13 +7807,13 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2739:3: ( (lv_identifier_14_0= RULE_ID ) )
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2740:1: (lv_identifier_14_0= RULE_ID )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2761:3: ( (lv_identifier_14_0= RULE_ID ) )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2762:1: (lv_identifier_14_0= RULE_ID )
                     {
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2740:1: (lv_identifier_14_0= RULE_ID )
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2741:3: lv_identifier_14_0= RULE_ID
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2762:1: (lv_identifier_14_0= RULE_ID )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2763:3: lv_identifier_14_0= RULE_ID
                     {
-                    lv_identifier_14_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rulecase_stmt5855); if (state.failed) return current;
+                    lv_identifier_14_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rulecase_stmt5893); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       			newLeafNode(lv_identifier_14_0, grammarAccess.getCase_stmtAccess().getIdentifierIDTerminalRuleCall_1_2_0()); 
@@ -7797,7 +7837,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_15=(Token)match(input,17,FollowSets000.FOLLOW_17_in_rulecase_stmt5872); if (state.failed) return current;
+                    otherlv_15=(Token)match(input,17,FollowSets000.FOLLOW_17_in_rulecase_stmt5910); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_15, grammarAccess.getCase_stmtAccess().getSemicolonKeyword_1_3());
@@ -7832,7 +7872,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleenum_type"
-    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2769:1: entryRuleenum_type returns [EObject current=null] : iv_ruleenum_type= ruleenum_type EOF ;
+    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2791:1: entryRuleenum_type returns [EObject current=null] : iv_ruleenum_type= ruleenum_type EOF ;
     public final EObject entryRuleenum_type() throws RecognitionException {
         EObject current = null;
 
@@ -7840,13 +7880,13 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2770:2: (iv_ruleenum_type= ruleenum_type EOF )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2771:2: iv_ruleenum_type= ruleenum_type EOF
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2792:2: (iv_ruleenum_type= ruleenum_type EOF )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2793:2: iv_ruleenum_type= ruleenum_type EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getEnum_typeRule()); 
             }
-            pushFollow(FollowSets000.FOLLOW_ruleenum_type_in_entryRuleenum_type5909);
+            pushFollow(FollowSets000.FOLLOW_ruleenum_type_in_entryRuleenum_type5947);
             iv_ruleenum_type=ruleenum_type();
 
             state._fsp--;
@@ -7854,7 +7894,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleenum_type; 
             }
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleenum_type5919); if (state.failed) return current;
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleenum_type5957); if (state.failed) return current;
 
             }
 
@@ -7872,7 +7912,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleenum_type"
-    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2778:1: ruleenum_type returns [EObject current=null] : (otherlv_0= 'enum' ( (lv_identifier_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_members_3_0= ruleenum_member ) ) (otherlv_4= ',' ( (lv_members_5_0= ruleenum_member ) ) )* otherlv_6= '}' ) ;
+    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2800:1: ruleenum_type returns [EObject current=null] : (otherlv_0= 'enum' ( (lv_identifier_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_members_3_0= ruleenum_member ) ) (otherlv_4= ',' ( (lv_members_5_0= ruleenum_member ) ) )* otherlv_6= '}' ) ;
     public final EObject ruleenum_type() throws RecognitionException {
         EObject current = null;
 
@@ -7889,25 +7929,25 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2781:28: ( (otherlv_0= 'enum' ( (lv_identifier_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_members_3_0= ruleenum_member ) ) (otherlv_4= ',' ( (lv_members_5_0= ruleenum_member ) ) )* otherlv_6= '}' ) )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2782:1: (otherlv_0= 'enum' ( (lv_identifier_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_members_3_0= ruleenum_member ) ) (otherlv_4= ',' ( (lv_members_5_0= ruleenum_member ) ) )* otherlv_6= '}' )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2803:28: ( (otherlv_0= 'enum' ( (lv_identifier_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_members_3_0= ruleenum_member ) ) (otherlv_4= ',' ( (lv_members_5_0= ruleenum_member ) ) )* otherlv_6= '}' ) )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2804:1: (otherlv_0= 'enum' ( (lv_identifier_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_members_3_0= ruleenum_member ) ) (otherlv_4= ',' ( (lv_members_5_0= ruleenum_member ) ) )* otherlv_6= '}' )
             {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2782:1: (otherlv_0= 'enum' ( (lv_identifier_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_members_3_0= ruleenum_member ) ) (otherlv_4= ',' ( (lv_members_5_0= ruleenum_member ) ) )* otherlv_6= '}' )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2782:3: otherlv_0= 'enum' ( (lv_identifier_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_members_3_0= ruleenum_member ) ) (otherlv_4= ',' ( (lv_members_5_0= ruleenum_member ) ) )* otherlv_6= '}'
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2804:1: (otherlv_0= 'enum' ( (lv_identifier_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_members_3_0= ruleenum_member ) ) (otherlv_4= ',' ( (lv_members_5_0= ruleenum_member ) ) )* otherlv_6= '}' )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2804:3: otherlv_0= 'enum' ( (lv_identifier_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_members_3_0= ruleenum_member ) ) (otherlv_4= ',' ( (lv_members_5_0= ruleenum_member ) ) )* otherlv_6= '}'
             {
-            otherlv_0=(Token)match(input,45,FollowSets000.FOLLOW_45_in_ruleenum_type5956); if (state.failed) return current;
+            otherlv_0=(Token)match(input,45,FollowSets000.FOLLOW_45_in_ruleenum_type5994); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_0, grammarAccess.getEnum_typeAccess().getEnumKeyword_0());
                   
             }
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2786:1: ( (lv_identifier_1_0= RULE_ID ) )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2787:1: (lv_identifier_1_0= RULE_ID )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2808:1: ( (lv_identifier_1_0= RULE_ID ) )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2809:1: (lv_identifier_1_0= RULE_ID )
             {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2787:1: (lv_identifier_1_0= RULE_ID )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2788:3: lv_identifier_1_0= RULE_ID
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2809:1: (lv_identifier_1_0= RULE_ID )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2810:3: lv_identifier_1_0= RULE_ID
             {
-            lv_identifier_1_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleenum_type5973); if (state.failed) return current;
+            lv_identifier_1_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleenum_type6011); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(lv_identifier_1_0, grammarAccess.getEnum_typeAccess().getIdentifierIDTerminalRuleCall_1_0()); 
@@ -7931,24 +7971,24 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,19,FollowSets000.FOLLOW_19_in_ruleenum_type5990); if (state.failed) return current;
+            otherlv_2=(Token)match(input,19,FollowSets000.FOLLOW_19_in_ruleenum_type6028); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_2, grammarAccess.getEnum_typeAccess().getLeftCurlyBracketKeyword_2());
                   
             }
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2808:1: ( (lv_members_3_0= ruleenum_member ) )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2809:1: (lv_members_3_0= ruleenum_member )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2830:1: ( (lv_members_3_0= ruleenum_member ) )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2831:1: (lv_members_3_0= ruleenum_member )
             {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2809:1: (lv_members_3_0= ruleenum_member )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2810:3: lv_members_3_0= ruleenum_member
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2831:1: (lv_members_3_0= ruleenum_member )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2832:3: lv_members_3_0= ruleenum_member
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getEnum_typeAccess().getMembersEnum_memberParserRuleCall_3_0()); 
               	    
             }
-            pushFollow(FollowSets000.FOLLOW_ruleenum_member_in_ruleenum_type6011);
+            pushFollow(FollowSets000.FOLLOW_ruleenum_member_in_ruleenum_type6049);
             lv_members_3_0=ruleenum_member();
 
             state._fsp--;
@@ -7972,7 +8012,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2826:2: (otherlv_4= ',' ( (lv_members_5_0= ruleenum_member ) ) )*
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2848:2: (otherlv_4= ',' ( (lv_members_5_0= ruleenum_member ) ) )*
             loop52:
             do {
                 int alt52=2;
@@ -7985,26 +8025,26 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
                 switch (alt52) {
             	case 1 :
-            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2826:4: otherlv_4= ',' ( (lv_members_5_0= ruleenum_member ) )
+            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2848:4: otherlv_4= ',' ( (lv_members_5_0= ruleenum_member ) )
             	    {
-            	    otherlv_4=(Token)match(input,25,FollowSets000.FOLLOW_25_in_ruleenum_type6024); if (state.failed) return current;
+            	    otherlv_4=(Token)match(input,25,FollowSets000.FOLLOW_25_in_ruleenum_type6062); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	          	newLeafNode(otherlv_4, grammarAccess.getEnum_typeAccess().getCommaKeyword_4_0());
             	          
             	    }
-            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2830:1: ( (lv_members_5_0= ruleenum_member ) )
-            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2831:1: (lv_members_5_0= ruleenum_member )
+            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2852:1: ( (lv_members_5_0= ruleenum_member ) )
+            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2853:1: (lv_members_5_0= ruleenum_member )
             	    {
-            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2831:1: (lv_members_5_0= ruleenum_member )
-            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2832:3: lv_members_5_0= ruleenum_member
+            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2853:1: (lv_members_5_0= ruleenum_member )
+            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2854:3: lv_members_5_0= ruleenum_member
             	    {
             	    if ( state.backtracking==0 ) {
             	       
             	      	        newCompositeNode(grammarAccess.getEnum_typeAccess().getMembersEnum_memberParserRuleCall_4_1_0()); 
             	      	    
             	    }
-            	    pushFollow(FollowSets000.FOLLOW_ruleenum_member_in_ruleenum_type6045);
+            	    pushFollow(FollowSets000.FOLLOW_ruleenum_member_in_ruleenum_type6083);
             	    lv_members_5_0=ruleenum_member();
 
             	    state._fsp--;
@@ -8037,7 +8077,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            otherlv_6=(Token)match(input,20,FollowSets000.FOLLOW_20_in_ruleenum_type6059); if (state.failed) return current;
+            otherlv_6=(Token)match(input,20,FollowSets000.FOLLOW_20_in_ruleenum_type6097); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_6, grammarAccess.getEnum_typeAccess().getRightCurlyBracketKeyword_5());
@@ -8066,7 +8106,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleenum_member"
-    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2860:1: entryRuleenum_member returns [EObject current=null] : iv_ruleenum_member= ruleenum_member EOF ;
+    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2882:1: entryRuleenum_member returns [EObject current=null] : iv_ruleenum_member= ruleenum_member EOF ;
     public final EObject entryRuleenum_member() throws RecognitionException {
         EObject current = null;
 
@@ -8074,13 +8114,13 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2861:2: (iv_ruleenum_member= ruleenum_member EOF )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2862:2: iv_ruleenum_member= ruleenum_member EOF
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2883:2: (iv_ruleenum_member= ruleenum_member EOF )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2884:2: iv_ruleenum_member= ruleenum_member EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getEnum_memberRule()); 
             }
-            pushFollow(FollowSets000.FOLLOW_ruleenum_member_in_entryRuleenum_member6095);
+            pushFollow(FollowSets000.FOLLOW_ruleenum_member_in_entryRuleenum_member6133);
             iv_ruleenum_member=ruleenum_member();
 
             state._fsp--;
@@ -8088,7 +8128,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleenum_member; 
             }
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleenum_member6105); if (state.failed) return current;
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleenum_member6143); if (state.failed) return current;
 
             }
 
@@ -8106,7 +8146,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleenum_member"
-    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2869:1: ruleenum_member returns [EObject current=null] : ( (lv_identifier_0_0= RULE_ID ) ) ;
+    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2891:1: ruleenum_member returns [EObject current=null] : ( (lv_identifier_0_0= RULE_ID ) ) ;
     public final EObject ruleenum_member() throws RecognitionException {
         EObject current = null;
 
@@ -8115,16 +8155,16 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2872:28: ( ( (lv_identifier_0_0= RULE_ID ) ) )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2873:1: ( (lv_identifier_0_0= RULE_ID ) )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2894:28: ( ( (lv_identifier_0_0= RULE_ID ) ) )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2895:1: ( (lv_identifier_0_0= RULE_ID ) )
             {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2873:1: ( (lv_identifier_0_0= RULE_ID ) )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2874:1: (lv_identifier_0_0= RULE_ID )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2895:1: ( (lv_identifier_0_0= RULE_ID ) )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2896:1: (lv_identifier_0_0= RULE_ID )
             {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2874:1: (lv_identifier_0_0= RULE_ID )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2875:3: lv_identifier_0_0= RULE_ID
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2896:1: (lv_identifier_0_0= RULE_ID )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2897:3: lv_identifier_0_0= RULE_ID
             {
-            lv_identifier_0_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleenum_member6146); if (state.failed) return current;
+            lv_identifier_0_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleenum_member6184); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(lv_identifier_0_0, grammarAccess.getEnum_memberAccess().getIdentifierIDTerminalRuleCall_0()); 
@@ -8168,7 +8208,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleconstr_forward_decl"
-    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2899:1: entryRuleconstr_forward_decl returns [String current=null] : iv_ruleconstr_forward_decl= ruleconstr_forward_decl EOF ;
+    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2921:1: entryRuleconstr_forward_decl returns [String current=null] : iv_ruleconstr_forward_decl= ruleconstr_forward_decl EOF ;
     public final String entryRuleconstr_forward_decl() throws RecognitionException {
         String current = null;
 
@@ -8176,13 +8216,13 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2900:2: (iv_ruleconstr_forward_decl= ruleconstr_forward_decl EOF )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2901:2: iv_ruleconstr_forward_decl= ruleconstr_forward_decl EOF
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2922:2: (iv_ruleconstr_forward_decl= ruleconstr_forward_decl EOF )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2923:2: iv_ruleconstr_forward_decl= ruleconstr_forward_decl EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getConstr_forward_declRule()); 
             }
-            pushFollow(FollowSets000.FOLLOW_ruleconstr_forward_decl_in_entryRuleconstr_forward_decl6187);
+            pushFollow(FollowSets000.FOLLOW_ruleconstr_forward_decl_in_entryRuleconstr_forward_decl6225);
             iv_ruleconstr_forward_decl=ruleconstr_forward_decl();
 
             state._fsp--;
@@ -8190,7 +8230,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleconstr_forward_decl.getText(); 
             }
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleconstr_forward_decl6198); if (state.failed) return current;
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleconstr_forward_decl6236); if (state.failed) return current;
 
             }
 
@@ -8208,7 +8248,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleconstr_forward_decl"
-    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2908:1: ruleconstr_forward_decl returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (kw= 'struct' this_ID_1= RULE_ID ) | (kw= 'union' this_ID_3= RULE_ID ) ) ;
+    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2930:1: ruleconstr_forward_decl returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (kw= 'struct' this_ID_1= RULE_ID ) | (kw= 'union' this_ID_3= RULE_ID ) ) ;
     public final AntlrDatatypeRuleToken ruleconstr_forward_decl() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -8219,10 +8259,10 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2911:28: ( ( (kw= 'struct' this_ID_1= RULE_ID ) | (kw= 'union' this_ID_3= RULE_ID ) ) )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2912:1: ( (kw= 'struct' this_ID_1= RULE_ID ) | (kw= 'union' this_ID_3= RULE_ID ) )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2933:28: ( ( (kw= 'struct' this_ID_1= RULE_ID ) | (kw= 'union' this_ID_3= RULE_ID ) ) )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2934:1: ( (kw= 'struct' this_ID_1= RULE_ID ) | (kw= 'union' this_ID_3= RULE_ID ) )
             {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2912:1: ( (kw= 'struct' this_ID_1= RULE_ID ) | (kw= 'union' this_ID_3= RULE_ID ) )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2934:1: ( (kw= 'struct' this_ID_1= RULE_ID ) | (kw= 'union' this_ID_3= RULE_ID ) )
             int alt53=2;
             int LA53_0 = input.LA(1);
 
@@ -8241,19 +8281,19 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
             }
             switch (alt53) {
                 case 1 :
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2912:2: (kw= 'struct' this_ID_1= RULE_ID )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2934:2: (kw= 'struct' this_ID_1= RULE_ID )
                     {
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2912:2: (kw= 'struct' this_ID_1= RULE_ID )
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2913:2: kw= 'struct' this_ID_1= RULE_ID
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2934:2: (kw= 'struct' this_ID_1= RULE_ID )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2935:2: kw= 'struct' this_ID_1= RULE_ID
                     {
-                    kw=(Token)match(input,40,FollowSets000.FOLLOW_40_in_ruleconstr_forward_decl6237); if (state.failed) return current;
+                    kw=(Token)match(input,40,FollowSets000.FOLLOW_40_in_ruleconstr_forward_decl6275); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
                               newLeafNode(kw, grammarAccess.getConstr_forward_declAccess().getStructKeyword_0_0()); 
                           
                     }
-                    this_ID_1=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleconstr_forward_decl6252); if (state.failed) return current;
+                    this_ID_1=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleconstr_forward_decl6290); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       		current.merge(this_ID_1);
@@ -8271,19 +8311,19 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2926:6: (kw= 'union' this_ID_3= RULE_ID )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2948:6: (kw= 'union' this_ID_3= RULE_ID )
                     {
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2926:6: (kw= 'union' this_ID_3= RULE_ID )
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2927:2: kw= 'union' this_ID_3= RULE_ID
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2948:6: (kw= 'union' this_ID_3= RULE_ID )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2949:2: kw= 'union' this_ID_3= RULE_ID
                     {
-                    kw=(Token)match(input,41,FollowSets000.FOLLOW_41_in_ruleconstr_forward_decl6278); if (state.failed) return current;
+                    kw=(Token)match(input,41,FollowSets000.FOLLOW_41_in_ruleconstr_forward_decl6316); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
                               newLeafNode(kw, grammarAccess.getConstr_forward_declAccess().getUnionKeyword_1_0()); 
                           
                     }
-                    this_ID_3=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleconstr_forward_decl6293); if (state.failed) return current;
+                    this_ID_3=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleconstr_forward_decl6331); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       		current.merge(this_ID_3);
@@ -8323,7 +8363,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleconst_decl"
-    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2947:1: entryRuleconst_decl returns [EObject current=null] : iv_ruleconst_decl= ruleconst_decl EOF ;
+    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2969:1: entryRuleconst_decl returns [EObject current=null] : iv_ruleconst_decl= ruleconst_decl EOF ;
     public final EObject entryRuleconst_decl() throws RecognitionException {
         EObject current = null;
 
@@ -8331,13 +8371,13 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2948:2: (iv_ruleconst_decl= ruleconst_decl EOF )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2949:2: iv_ruleconst_decl= ruleconst_decl EOF
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2970:2: (iv_ruleconst_decl= ruleconst_decl EOF )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2971:2: iv_ruleconst_decl= ruleconst_decl EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getConst_declRule()); 
             }
-            pushFollow(FollowSets000.FOLLOW_ruleconst_decl_in_entryRuleconst_decl6339);
+            pushFollow(FollowSets000.FOLLOW_ruleconst_decl_in_entryRuleconst_decl6377);
             iv_ruleconst_decl=ruleconst_decl();
 
             state._fsp--;
@@ -8345,7 +8385,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleconst_decl; 
             }
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleconst_decl6349); if (state.failed) return current;
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleconst_decl6387); if (state.failed) return current;
 
             }
 
@@ -8363,7 +8403,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleconst_decl"
-    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2956:1: ruleconst_decl returns [EObject current=null] : (otherlv_0= 'const' ( ( (lv_containedType_1_0= ruleconst_type ) ) | ( (otherlv_2= RULE_ID ) ) ) ( (lv_identifier_3_0= RULE_ID ) ) otherlv_4= '=' ( (lv_constValue_5_0= ruleconst_exp ) ) ) ;
+    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2978:1: ruleconst_decl returns [EObject current=null] : (otherlv_0= 'const' ( ( (lv_containedType_1_0= ruleconst_type ) ) | ( (otherlv_2= RULE_ID ) ) ) ( (lv_identifier_3_0= RULE_ID ) ) otherlv_4= '=' ( (lv_constValue_5_0= ruleconst_exp ) ) ) ;
     public final EObject ruleconst_decl() throws RecognitionException {
         EObject current = null;
 
@@ -8379,19 +8419,19 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2959:28: ( (otherlv_0= 'const' ( ( (lv_containedType_1_0= ruleconst_type ) ) | ( (otherlv_2= RULE_ID ) ) ) ( (lv_identifier_3_0= RULE_ID ) ) otherlv_4= '=' ( (lv_constValue_5_0= ruleconst_exp ) ) ) )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2960:1: (otherlv_0= 'const' ( ( (lv_containedType_1_0= ruleconst_type ) ) | ( (otherlv_2= RULE_ID ) ) ) ( (lv_identifier_3_0= RULE_ID ) ) otherlv_4= '=' ( (lv_constValue_5_0= ruleconst_exp ) ) )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2981:28: ( (otherlv_0= 'const' ( ( (lv_containedType_1_0= ruleconst_type ) ) | ( (otherlv_2= RULE_ID ) ) ) ( (lv_identifier_3_0= RULE_ID ) ) otherlv_4= '=' ( (lv_constValue_5_0= ruleconst_exp ) ) ) )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2982:1: (otherlv_0= 'const' ( ( (lv_containedType_1_0= ruleconst_type ) ) | ( (otherlv_2= RULE_ID ) ) ) ( (lv_identifier_3_0= RULE_ID ) ) otherlv_4= '=' ( (lv_constValue_5_0= ruleconst_exp ) ) )
             {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2960:1: (otherlv_0= 'const' ( ( (lv_containedType_1_0= ruleconst_type ) ) | ( (otherlv_2= RULE_ID ) ) ) ( (lv_identifier_3_0= RULE_ID ) ) otherlv_4= '=' ( (lv_constValue_5_0= ruleconst_exp ) ) )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2960:3: otherlv_0= 'const' ( ( (lv_containedType_1_0= ruleconst_type ) ) | ( (otherlv_2= RULE_ID ) ) ) ( (lv_identifier_3_0= RULE_ID ) ) otherlv_4= '=' ( (lv_constValue_5_0= ruleconst_exp ) )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2982:1: (otherlv_0= 'const' ( ( (lv_containedType_1_0= ruleconst_type ) ) | ( (otherlv_2= RULE_ID ) ) ) ( (lv_identifier_3_0= RULE_ID ) ) otherlv_4= '=' ( (lv_constValue_5_0= ruleconst_exp ) ) )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2982:3: otherlv_0= 'const' ( ( (lv_containedType_1_0= ruleconst_type ) ) | ( (otherlv_2= RULE_ID ) ) ) ( (lv_identifier_3_0= RULE_ID ) ) otherlv_4= '=' ( (lv_constValue_5_0= ruleconst_exp ) )
             {
-            otherlv_0=(Token)match(input,46,FollowSets000.FOLLOW_46_in_ruleconst_decl6386); if (state.failed) return current;
+            otherlv_0=(Token)match(input,46,FollowSets000.FOLLOW_46_in_ruleconst_decl6424); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_0, grammarAccess.getConst_declAccess().getConstKeyword_0());
                   
             }
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2964:1: ( ( (lv_containedType_1_0= ruleconst_type ) ) | ( (otherlv_2= RULE_ID ) ) )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2986:1: ( ( (lv_containedType_1_0= ruleconst_type ) ) | ( (otherlv_2= RULE_ID ) ) )
             int alt54=2;
             int LA54_0 = input.LA(1);
 
@@ -8410,20 +8450,20 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
             }
             switch (alt54) {
                 case 1 :
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2964:2: ( (lv_containedType_1_0= ruleconst_type ) )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2986:2: ( (lv_containedType_1_0= ruleconst_type ) )
                     {
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2964:2: ( (lv_containedType_1_0= ruleconst_type ) )
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2965:1: (lv_containedType_1_0= ruleconst_type )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2986:2: ( (lv_containedType_1_0= ruleconst_type ) )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2987:1: (lv_containedType_1_0= ruleconst_type )
                     {
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2965:1: (lv_containedType_1_0= ruleconst_type )
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2966:3: lv_containedType_1_0= ruleconst_type
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2987:1: (lv_containedType_1_0= ruleconst_type )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2988:3: lv_containedType_1_0= ruleconst_type
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getConst_declAccess().getContainedTypeConst_typeParserRuleCall_1_0_0()); 
                       	    
                     }
-                    pushFollow(FollowSets000.FOLLOW_ruleconst_type_in_ruleconst_decl6408);
+                    pushFollow(FollowSets000.FOLLOW_ruleconst_type_in_ruleconst_decl6446);
                     lv_containedType_1_0=ruleconst_type();
 
                     state._fsp--;
@@ -8451,13 +8491,13 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2983:6: ( (otherlv_2= RULE_ID ) )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3005:6: ( (otherlv_2= RULE_ID ) )
                     {
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2983:6: ( (otherlv_2= RULE_ID ) )
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2984:1: (otherlv_2= RULE_ID )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3005:6: ( (otherlv_2= RULE_ID ) )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3006:1: (otherlv_2= RULE_ID )
                     {
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2984:1: (otherlv_2= RULE_ID )
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2985:3: otherlv_2= RULE_ID
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3006:1: (otherlv_2= RULE_ID )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3007:3: otherlv_2= RULE_ID
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -8471,7 +8511,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
                       	        }
                               
                     }
-                    otherlv_2=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleconst_decl6438); if (state.failed) return current;
+                    otherlv_2=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleconst_decl6476); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       		newLeafNode(otherlv_2, grammarAccess.getConst_declAccess().getSharedTypeAliasDefCrossReference_1_1_0()); 
@@ -8489,13 +8529,13 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2999:3: ( (lv_identifier_3_0= RULE_ID ) )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3000:1: (lv_identifier_3_0= RULE_ID )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3021:3: ( (lv_identifier_3_0= RULE_ID ) )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3022:1: (lv_identifier_3_0= RULE_ID )
             {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3000:1: (lv_identifier_3_0= RULE_ID )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3001:3: lv_identifier_3_0= RULE_ID
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3022:1: (lv_identifier_3_0= RULE_ID )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3023:3: lv_identifier_3_0= RULE_ID
             {
-            lv_identifier_3_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleconst_decl6456); if (state.failed) return current;
+            lv_identifier_3_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleconst_decl6494); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(lv_identifier_3_0, grammarAccess.getConst_declAccess().getIdentifierIDTerminalRuleCall_2_0()); 
@@ -8519,24 +8559,24 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_4=(Token)match(input,47,FollowSets000.FOLLOW_47_in_ruleconst_decl6473); if (state.failed) return current;
+            otherlv_4=(Token)match(input,47,FollowSets000.FOLLOW_47_in_ruleconst_decl6511); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_4, grammarAccess.getConst_declAccess().getEqualsSignKeyword_3());
                   
             }
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3021:1: ( (lv_constValue_5_0= ruleconst_exp ) )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3022:1: (lv_constValue_5_0= ruleconst_exp )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3043:1: ( (lv_constValue_5_0= ruleconst_exp ) )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3044:1: (lv_constValue_5_0= ruleconst_exp )
             {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3022:1: (lv_constValue_5_0= ruleconst_exp )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3023:3: lv_constValue_5_0= ruleconst_exp
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3044:1: (lv_constValue_5_0= ruleconst_exp )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3045:3: lv_constValue_5_0= ruleconst_exp
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getConst_declAccess().getConstValueConst_expParserRuleCall_4_0()); 
               	    
             }
-            pushFollow(FollowSets000.FOLLOW_ruleconst_exp_in_ruleconst_decl6494);
+            pushFollow(FollowSets000.FOLLOW_ruleconst_exp_in_ruleconst_decl6532);
             lv_constValue_5_0=ruleconst_exp();
 
             state._fsp--;
@@ -8583,7 +8623,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleconst_type"
-    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3047:1: entryRuleconst_type returns [EObject current=null] : iv_ruleconst_type= ruleconst_type EOF ;
+    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3069:1: entryRuleconst_type returns [EObject current=null] : iv_ruleconst_type= ruleconst_type EOF ;
     public final EObject entryRuleconst_type() throws RecognitionException {
         EObject current = null;
 
@@ -8591,13 +8631,13 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3048:2: (iv_ruleconst_type= ruleconst_type EOF )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3049:2: iv_ruleconst_type= ruleconst_type EOF
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3070:2: (iv_ruleconst_type= ruleconst_type EOF )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3071:2: iv_ruleconst_type= ruleconst_type EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getConst_typeRule()); 
             }
-            pushFollow(FollowSets000.FOLLOW_ruleconst_type_in_entryRuleconst_type6530);
+            pushFollow(FollowSets000.FOLLOW_ruleconst_type_in_entryRuleconst_type6568);
             iv_ruleconst_type=ruleconst_type();
 
             state._fsp--;
@@ -8605,7 +8645,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleconst_type; 
             }
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleconst_type6540); if (state.failed) return current;
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleconst_type6578); if (state.failed) return current;
 
             }
 
@@ -8623,7 +8663,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleconst_type"
-    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3056:1: ruleconst_type returns [EObject current=null] : (this_primitive_def_0= ruleprimitive_def | this_stringdef_type_1= rulestringdef_type | this_wide_stringdef_type_2= rulewide_stringdef_type | this_fixed_pt_const_type_3= rulefixed_pt_const_type ) ;
+    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3078:1: ruleconst_type returns [EObject current=null] : (this_primitive_def_0= ruleprimitive_def | this_stringdef_type_1= rulestringdef_type | this_wide_stringdef_type_2= rulewide_stringdef_type | this_fixed_pt_const_type_3= rulefixed_pt_const_type ) ;
     public final EObject ruleconst_type() throws RecognitionException {
         EObject current = null;
 
@@ -8639,10 +8679,10 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3059:28: ( (this_primitive_def_0= ruleprimitive_def | this_stringdef_type_1= rulestringdef_type | this_wide_stringdef_type_2= rulewide_stringdef_type | this_fixed_pt_const_type_3= rulefixed_pt_const_type ) )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3060:1: (this_primitive_def_0= ruleprimitive_def | this_stringdef_type_1= rulestringdef_type | this_wide_stringdef_type_2= rulewide_stringdef_type | this_fixed_pt_const_type_3= rulefixed_pt_const_type )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3081:28: ( (this_primitive_def_0= ruleprimitive_def | this_stringdef_type_1= rulestringdef_type | this_wide_stringdef_type_2= rulewide_stringdef_type | this_fixed_pt_const_type_3= rulefixed_pt_const_type ) )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3082:1: (this_primitive_def_0= ruleprimitive_def | this_stringdef_type_1= rulestringdef_type | this_wide_stringdef_type_2= rulewide_stringdef_type | this_fixed_pt_const_type_3= rulefixed_pt_const_type )
             {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3060:1: (this_primitive_def_0= ruleprimitive_def | this_stringdef_type_1= rulestringdef_type | this_wide_stringdef_type_2= rulewide_stringdef_type | this_fixed_pt_const_type_3= rulefixed_pt_const_type )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3082:1: (this_primitive_def_0= ruleprimitive_def | this_stringdef_type_1= rulestringdef_type | this_wide_stringdef_type_2= rulewide_stringdef_type | this_fixed_pt_const_type_3= rulefixed_pt_const_type )
             int alt55=4;
             switch ( input.LA(1) ) {
             case 54:
@@ -8712,7 +8752,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
             switch (alt55) {
                 case 1 :
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3061:2: this_primitive_def_0= ruleprimitive_def
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3083:2: this_primitive_def_0= ruleprimitive_def
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -8724,7 +8764,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
                               newCompositeNode(grammarAccess.getConst_typeAccess().getPrimitive_defParserRuleCall_0()); 
                           
                     }
-                    pushFollow(FollowSets000.FOLLOW_ruleprimitive_def_in_ruleconst_type6590);
+                    pushFollow(FollowSets000.FOLLOW_ruleprimitive_def_in_ruleconst_type6628);
                     this_primitive_def_0=ruleprimitive_def();
 
                     state._fsp--;
@@ -8739,7 +8779,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3074:2: this_stringdef_type_1= rulestringdef_type
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3096:2: this_stringdef_type_1= rulestringdef_type
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -8751,7 +8791,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
                               newCompositeNode(grammarAccess.getConst_typeAccess().getStringdef_typeParserRuleCall_1()); 
                           
                     }
-                    pushFollow(FollowSets000.FOLLOW_rulestringdef_type_in_ruleconst_type6620);
+                    pushFollow(FollowSets000.FOLLOW_rulestringdef_type_in_ruleconst_type6658);
                     this_stringdef_type_1=rulestringdef_type();
 
                     state._fsp--;
@@ -8766,7 +8806,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3087:2: this_wide_stringdef_type_2= rulewide_stringdef_type
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3109:2: this_wide_stringdef_type_2= rulewide_stringdef_type
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -8778,7 +8818,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
                               newCompositeNode(grammarAccess.getConst_typeAccess().getWide_stringdef_typeParserRuleCall_2()); 
                           
                     }
-                    pushFollow(FollowSets000.FOLLOW_rulewide_stringdef_type_in_ruleconst_type6650);
+                    pushFollow(FollowSets000.FOLLOW_rulewide_stringdef_type_in_ruleconst_type6688);
                     this_wide_stringdef_type_2=rulewide_stringdef_type();
 
                     state._fsp--;
@@ -8793,7 +8833,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3100:2: this_fixed_pt_const_type_3= rulefixed_pt_const_type
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3122:2: this_fixed_pt_const_type_3= rulefixed_pt_const_type
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -8805,7 +8845,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
                               newCompositeNode(grammarAccess.getConst_typeAccess().getFixed_pt_const_typeParserRuleCall_3()); 
                           
                     }
-                    pushFollow(FollowSets000.FOLLOW_rulefixed_pt_const_type_in_ruleconst_type6680);
+                    pushFollow(FollowSets000.FOLLOW_rulefixed_pt_const_type_in_ruleconst_type6718);
                     this_fixed_pt_const_type_3=rulefixed_pt_const_type();
 
                     state._fsp--;
@@ -8842,7 +8882,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleprimitive_def"
-    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3119:1: entryRuleprimitive_def returns [EObject current=null] : iv_ruleprimitive_def= ruleprimitive_def EOF ;
+    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3141:1: entryRuleprimitive_def returns [EObject current=null] : iv_ruleprimitive_def= ruleprimitive_def EOF ;
     public final EObject entryRuleprimitive_def() throws RecognitionException {
         EObject current = null;
 
@@ -8850,13 +8890,13 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3120:2: (iv_ruleprimitive_def= ruleprimitive_def EOF )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3121:2: iv_ruleprimitive_def= ruleprimitive_def EOF
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3142:2: (iv_ruleprimitive_def= ruleprimitive_def EOF )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3143:2: iv_ruleprimitive_def= ruleprimitive_def EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getPrimitive_defRule()); 
             }
-            pushFollow(FollowSets000.FOLLOW_ruleprimitive_def_in_entryRuleprimitive_def6715);
+            pushFollow(FollowSets000.FOLLOW_ruleprimitive_def_in_entryRuleprimitive_def6753);
             iv_ruleprimitive_def=ruleprimitive_def();
 
             state._fsp--;
@@ -8864,7 +8904,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleprimitive_def; 
             }
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleprimitive_def6725); if (state.failed) return current;
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleprimitive_def6763); if (state.failed) return current;
 
             }
 
@@ -8882,7 +8922,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleprimitive_def"
-    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3128:1: ruleprimitive_def returns [EObject current=null] : (this_integer_type_0= ruleinteger_type | this_floating_pt_type_1= rulefloating_pt_type | this_charstr_type_2= rulecharstr_type | this_other_type_3= ruleother_type ) ;
+    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3150:1: ruleprimitive_def returns [EObject current=null] : (this_integer_type_0= ruleinteger_type | this_floating_pt_type_1= rulefloating_pt_type | this_charstr_type_2= rulecharstr_type | this_other_type_3= ruleother_type ) ;
     public final EObject ruleprimitive_def() throws RecognitionException {
         EObject current = null;
 
@@ -8898,10 +8938,10 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3131:28: ( (this_integer_type_0= ruleinteger_type | this_floating_pt_type_1= rulefloating_pt_type | this_charstr_type_2= rulecharstr_type | this_other_type_3= ruleother_type ) )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3132:1: (this_integer_type_0= ruleinteger_type | this_floating_pt_type_1= rulefloating_pt_type | this_charstr_type_2= rulecharstr_type | this_other_type_3= ruleother_type )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3153:28: ( (this_integer_type_0= ruleinteger_type | this_floating_pt_type_1= rulefloating_pt_type | this_charstr_type_2= rulecharstr_type | this_other_type_3= ruleother_type ) )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3154:1: (this_integer_type_0= ruleinteger_type | this_floating_pt_type_1= rulefloating_pt_type | this_charstr_type_2= rulecharstr_type | this_other_type_3= ruleother_type )
             {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3132:1: (this_integer_type_0= ruleinteger_type | this_floating_pt_type_1= rulefloating_pt_type | this_charstr_type_2= rulecharstr_type | this_other_type_3= ruleother_type )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3154:1: (this_integer_type_0= ruleinteger_type | this_floating_pt_type_1= rulefloating_pt_type | this_charstr_type_2= rulecharstr_type | this_other_type_3= ruleother_type )
             int alt56=4;
             switch ( input.LA(1) ) {
             case 56:
@@ -8960,7 +9000,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
             switch (alt56) {
                 case 1 :
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3133:2: this_integer_type_0= ruleinteger_type
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3155:2: this_integer_type_0= ruleinteger_type
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -8972,7 +9012,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
                               newCompositeNode(grammarAccess.getPrimitive_defAccess().getInteger_typeParserRuleCall_0()); 
                           
                     }
-                    pushFollow(FollowSets000.FOLLOW_ruleinteger_type_in_ruleprimitive_def6775);
+                    pushFollow(FollowSets000.FOLLOW_ruleinteger_type_in_ruleprimitive_def6813);
                     this_integer_type_0=ruleinteger_type();
 
                     state._fsp--;
@@ -8987,7 +9027,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3146:2: this_floating_pt_type_1= rulefloating_pt_type
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3168:2: this_floating_pt_type_1= rulefloating_pt_type
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -8999,7 +9039,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
                               newCompositeNode(grammarAccess.getPrimitive_defAccess().getFloating_pt_typeParserRuleCall_1()); 
                           
                     }
-                    pushFollow(FollowSets000.FOLLOW_rulefloating_pt_type_in_ruleprimitive_def6805);
+                    pushFollow(FollowSets000.FOLLOW_rulefloating_pt_type_in_ruleprimitive_def6843);
                     this_floating_pt_type_1=rulefloating_pt_type();
 
                     state._fsp--;
@@ -9014,7 +9054,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3159:2: this_charstr_type_2= rulecharstr_type
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3181:2: this_charstr_type_2= rulecharstr_type
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -9026,7 +9066,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
                               newCompositeNode(grammarAccess.getPrimitive_defAccess().getCharstr_typeParserRuleCall_2()); 
                           
                     }
-                    pushFollow(FollowSets000.FOLLOW_rulecharstr_type_in_ruleprimitive_def6835);
+                    pushFollow(FollowSets000.FOLLOW_rulecharstr_type_in_ruleprimitive_def6873);
                     this_charstr_type_2=rulecharstr_type();
 
                     state._fsp--;
@@ -9041,7 +9081,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3172:2: this_other_type_3= ruleother_type
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3194:2: this_other_type_3= ruleother_type
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -9053,7 +9093,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
                               newCompositeNode(grammarAccess.getPrimitive_defAccess().getOther_typeParserRuleCall_3()); 
                           
                     }
-                    pushFollow(FollowSets000.FOLLOW_ruleother_type_in_ruleprimitive_def6865);
+                    pushFollow(FollowSets000.FOLLOW_ruleother_type_in_ruleprimitive_def6903);
                     this_other_type_3=ruleother_type();
 
                     state._fsp--;
@@ -9090,7 +9130,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulesequence_type"
-    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3191:1: entryRulesequence_type returns [EObject current=null] : iv_rulesequence_type= rulesequence_type EOF ;
+    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3213:1: entryRulesequence_type returns [EObject current=null] : iv_rulesequence_type= rulesequence_type EOF ;
     public final EObject entryRulesequence_type() throws RecognitionException {
         EObject current = null;
 
@@ -9098,13 +9138,13 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3192:2: (iv_rulesequence_type= rulesequence_type EOF )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3193:2: iv_rulesequence_type= rulesequence_type EOF
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3214:2: (iv_rulesequence_type= rulesequence_type EOF )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3215:2: iv_rulesequence_type= rulesequence_type EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getSequence_typeRule()); 
             }
-            pushFollow(FollowSets000.FOLLOW_rulesequence_type_in_entryRulesequence_type6900);
+            pushFollow(FollowSets000.FOLLOW_rulesequence_type_in_entryRulesequence_type6938);
             iv_rulesequence_type=rulesequence_type();
 
             state._fsp--;
@@ -9112,7 +9152,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_rulesequence_type; 
             }
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRulesequence_type6910); if (state.failed) return current;
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRulesequence_type6948); if (state.failed) return current;
 
             }
 
@@ -9130,7 +9170,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulesequence_type"
-    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3200:1: rulesequence_type returns [EObject current=null] : (otherlv_0= 'sequence' otherlv_1= '<' ( ( (lv_containedType_2_0= rulesimple_type_spec ) ) | ( (otherlv_3= RULE_ID ) ) ) (otherlv_4= ',' ( (lv_bound_5_0= ruleconst_exp ) ) )? otherlv_6= '>' ) ;
+    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3222:1: rulesequence_type returns [EObject current=null] : (otherlv_0= 'sequence' otherlv_1= '<' ( ( (lv_containedType_2_0= rulesimple_type_spec ) ) | ( (otherlv_3= RULE_ID ) ) ) (otherlv_4= ',' ( (lv_bound_5_0= ruleconst_exp ) ) )? otherlv_6= '>' ) ;
     public final EObject rulesequence_type() throws RecognitionException {
         EObject current = null;
 
@@ -9147,25 +9187,25 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3203:28: ( (otherlv_0= 'sequence' otherlv_1= '<' ( ( (lv_containedType_2_0= rulesimple_type_spec ) ) | ( (otherlv_3= RULE_ID ) ) ) (otherlv_4= ',' ( (lv_bound_5_0= ruleconst_exp ) ) )? otherlv_6= '>' ) )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3204:1: (otherlv_0= 'sequence' otherlv_1= '<' ( ( (lv_containedType_2_0= rulesimple_type_spec ) ) | ( (otherlv_3= RULE_ID ) ) ) (otherlv_4= ',' ( (lv_bound_5_0= ruleconst_exp ) ) )? otherlv_6= '>' )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3225:28: ( (otherlv_0= 'sequence' otherlv_1= '<' ( ( (lv_containedType_2_0= rulesimple_type_spec ) ) | ( (otherlv_3= RULE_ID ) ) ) (otherlv_4= ',' ( (lv_bound_5_0= ruleconst_exp ) ) )? otherlv_6= '>' ) )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3226:1: (otherlv_0= 'sequence' otherlv_1= '<' ( ( (lv_containedType_2_0= rulesimple_type_spec ) ) | ( (otherlv_3= RULE_ID ) ) ) (otherlv_4= ',' ( (lv_bound_5_0= ruleconst_exp ) ) )? otherlv_6= '>' )
             {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3204:1: (otherlv_0= 'sequence' otherlv_1= '<' ( ( (lv_containedType_2_0= rulesimple_type_spec ) ) | ( (otherlv_3= RULE_ID ) ) ) (otherlv_4= ',' ( (lv_bound_5_0= ruleconst_exp ) ) )? otherlv_6= '>' )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3204:3: otherlv_0= 'sequence' otherlv_1= '<' ( ( (lv_containedType_2_0= rulesimple_type_spec ) ) | ( (otherlv_3= RULE_ID ) ) ) (otherlv_4= ',' ( (lv_bound_5_0= ruleconst_exp ) ) )? otherlv_6= '>'
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3226:1: (otherlv_0= 'sequence' otherlv_1= '<' ( ( (lv_containedType_2_0= rulesimple_type_spec ) ) | ( (otherlv_3= RULE_ID ) ) ) (otherlv_4= ',' ( (lv_bound_5_0= ruleconst_exp ) ) )? otherlv_6= '>' )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3226:3: otherlv_0= 'sequence' otherlv_1= '<' ( ( (lv_containedType_2_0= rulesimple_type_spec ) ) | ( (otherlv_3= RULE_ID ) ) ) (otherlv_4= ',' ( (lv_bound_5_0= ruleconst_exp ) ) )? otherlv_6= '>'
             {
-            otherlv_0=(Token)match(input,48,FollowSets000.FOLLOW_48_in_rulesequence_type6947); if (state.failed) return current;
+            otherlv_0=(Token)match(input,48,FollowSets000.FOLLOW_48_in_rulesequence_type6985); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_0, grammarAccess.getSequence_typeAccess().getSequenceKeyword_0());
                   
             }
-            otherlv_1=(Token)match(input,49,FollowSets000.FOLLOW_49_in_rulesequence_type6959); if (state.failed) return current;
+            otherlv_1=(Token)match(input,49,FollowSets000.FOLLOW_49_in_rulesequence_type6997); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_1, grammarAccess.getSequence_typeAccess().getLessThanSignKeyword_1());
                   
             }
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3212:1: ( ( (lv_containedType_2_0= rulesimple_type_spec ) ) | ( (otherlv_3= RULE_ID ) ) )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3234:1: ( ( (lv_containedType_2_0= rulesimple_type_spec ) ) | ( (otherlv_3= RULE_ID ) ) )
             int alt57=2;
             int LA57_0 = input.LA(1);
 
@@ -9184,20 +9224,20 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
             }
             switch (alt57) {
                 case 1 :
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3212:2: ( (lv_containedType_2_0= rulesimple_type_spec ) )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3234:2: ( (lv_containedType_2_0= rulesimple_type_spec ) )
                     {
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3212:2: ( (lv_containedType_2_0= rulesimple_type_spec ) )
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3213:1: (lv_containedType_2_0= rulesimple_type_spec )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3234:2: ( (lv_containedType_2_0= rulesimple_type_spec ) )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3235:1: (lv_containedType_2_0= rulesimple_type_spec )
                     {
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3213:1: (lv_containedType_2_0= rulesimple_type_spec )
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3214:3: lv_containedType_2_0= rulesimple_type_spec
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3235:1: (lv_containedType_2_0= rulesimple_type_spec )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3236:3: lv_containedType_2_0= rulesimple_type_spec
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getSequence_typeAccess().getContainedTypeSimple_type_specParserRuleCall_2_0_0()); 
                       	    
                     }
-                    pushFollow(FollowSets000.FOLLOW_rulesimple_type_spec_in_rulesequence_type6981);
+                    pushFollow(FollowSets000.FOLLOW_rulesimple_type_spec_in_rulesequence_type7019);
                     lv_containedType_2_0=rulesimple_type_spec();
 
                     state._fsp--;
@@ -9225,13 +9265,13 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3231:6: ( (otherlv_3= RULE_ID ) )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3253:6: ( (otherlv_3= RULE_ID ) )
                     {
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3231:6: ( (otherlv_3= RULE_ID ) )
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3232:1: (otherlv_3= RULE_ID )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3253:6: ( (otherlv_3= RULE_ID ) )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3254:1: (otherlv_3= RULE_ID )
                     {
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3232:1: (otherlv_3= RULE_ID )
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3233:3: otherlv_3= RULE_ID
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3254:1: (otherlv_3= RULE_ID )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3255:3: otherlv_3= RULE_ID
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -9245,7 +9285,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
                       	        }
                               
                     }
-                    otherlv_3=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rulesequence_type7011); if (state.failed) return current;
+                    otherlv_3=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rulesequence_type7049); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       		newLeafNode(otherlv_3, grammarAccess.getSequence_typeAccess().getSharedTypeTypedefDefCrossReference_2_1_0()); 
@@ -9263,7 +9303,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3247:3: (otherlv_4= ',' ( (lv_bound_5_0= ruleconst_exp ) ) )?
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3269:3: (otherlv_4= ',' ( (lv_bound_5_0= ruleconst_exp ) ) )?
             int alt58=2;
             int LA58_0 = input.LA(1);
 
@@ -9272,26 +9312,26 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
             }
             switch (alt58) {
                 case 1 :
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3247:5: otherlv_4= ',' ( (lv_bound_5_0= ruleconst_exp ) )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3269:5: otherlv_4= ',' ( (lv_bound_5_0= ruleconst_exp ) )
                     {
-                    otherlv_4=(Token)match(input,25,FollowSets000.FOLLOW_25_in_rulesequence_type7025); if (state.failed) return current;
+                    otherlv_4=(Token)match(input,25,FollowSets000.FOLLOW_25_in_rulesequence_type7063); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_4, grammarAccess.getSequence_typeAccess().getCommaKeyword_3_0());
                           
                     }
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3251:1: ( (lv_bound_5_0= ruleconst_exp ) )
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3252:1: (lv_bound_5_0= ruleconst_exp )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3273:1: ( (lv_bound_5_0= ruleconst_exp ) )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3274:1: (lv_bound_5_0= ruleconst_exp )
                     {
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3252:1: (lv_bound_5_0= ruleconst_exp )
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3253:3: lv_bound_5_0= ruleconst_exp
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3274:1: (lv_bound_5_0= ruleconst_exp )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3275:3: lv_bound_5_0= ruleconst_exp
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getSequence_typeAccess().getBoundConst_expParserRuleCall_3_1_0()); 
                       	    
                     }
-                    pushFollow(FollowSets000.FOLLOW_ruleconst_exp_in_rulesequence_type7046);
+                    pushFollow(FollowSets000.FOLLOW_ruleconst_exp_in_rulesequence_type7084);
                     lv_bound_5_0=ruleconst_exp();
 
                     state._fsp--;
@@ -9321,7 +9361,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_6=(Token)match(input,50,FollowSets000.FOLLOW_50_in_rulesequence_type7060); if (state.failed) return current;
+            otherlv_6=(Token)match(input,50,FollowSets000.FOLLOW_50_in_rulesequence_type7098); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_6, grammarAccess.getSequence_typeAccess().getGreaterThanSignKeyword_4());
@@ -9350,7 +9390,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulestringdef_type"
-    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3281:1: entryRulestringdef_type returns [EObject current=null] : iv_rulestringdef_type= rulestringdef_type EOF ;
+    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3303:1: entryRulestringdef_type returns [EObject current=null] : iv_rulestringdef_type= rulestringdef_type EOF ;
     public final EObject entryRulestringdef_type() throws RecognitionException {
         EObject current = null;
 
@@ -9358,13 +9398,13 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3282:2: (iv_rulestringdef_type= rulestringdef_type EOF )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3283:2: iv_rulestringdef_type= rulestringdef_type EOF
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3304:2: (iv_rulestringdef_type= rulestringdef_type EOF )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3305:2: iv_rulestringdef_type= rulestringdef_type EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getStringdef_typeRule()); 
             }
-            pushFollow(FollowSets000.FOLLOW_rulestringdef_type_in_entryRulestringdef_type7096);
+            pushFollow(FollowSets000.FOLLOW_rulestringdef_type_in_entryRulestringdef_type7134);
             iv_rulestringdef_type=rulestringdef_type();
 
             state._fsp--;
@@ -9372,7 +9412,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_rulestringdef_type; 
             }
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRulestringdef_type7106); if (state.failed) return current;
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRulestringdef_type7144); if (state.failed) return current;
 
             }
 
@@ -9390,7 +9430,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulestringdef_type"
-    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3290:1: rulestringdef_type returns [EObject current=null] : (otherlv_0= 'string' otherlv_1= '<' ( (lv_bound_2_0= ruleconst_exp ) ) otherlv_3= '>' ) ;
+    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3312:1: rulestringdef_type returns [EObject current=null] : (otherlv_0= 'string' otherlv_1= '<' ( (lv_bound_2_0= ruleconst_exp ) ) otherlv_3= '>' ) ;
     public final EObject rulestringdef_type() throws RecognitionException {
         EObject current = null;
 
@@ -9403,36 +9443,36 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3293:28: ( (otherlv_0= 'string' otherlv_1= '<' ( (lv_bound_2_0= ruleconst_exp ) ) otherlv_3= '>' ) )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3294:1: (otherlv_0= 'string' otherlv_1= '<' ( (lv_bound_2_0= ruleconst_exp ) ) otherlv_3= '>' )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3315:28: ( (otherlv_0= 'string' otherlv_1= '<' ( (lv_bound_2_0= ruleconst_exp ) ) otherlv_3= '>' ) )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3316:1: (otherlv_0= 'string' otherlv_1= '<' ( (lv_bound_2_0= ruleconst_exp ) ) otherlv_3= '>' )
             {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3294:1: (otherlv_0= 'string' otherlv_1= '<' ( (lv_bound_2_0= ruleconst_exp ) ) otherlv_3= '>' )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3294:3: otherlv_0= 'string' otherlv_1= '<' ( (lv_bound_2_0= ruleconst_exp ) ) otherlv_3= '>'
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3316:1: (otherlv_0= 'string' otherlv_1= '<' ( (lv_bound_2_0= ruleconst_exp ) ) otherlv_3= '>' )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3316:3: otherlv_0= 'string' otherlv_1= '<' ( (lv_bound_2_0= ruleconst_exp ) ) otherlv_3= '>'
             {
-            otherlv_0=(Token)match(input,51,FollowSets000.FOLLOW_51_in_rulestringdef_type7143); if (state.failed) return current;
+            otherlv_0=(Token)match(input,51,FollowSets000.FOLLOW_51_in_rulestringdef_type7181); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_0, grammarAccess.getStringdef_typeAccess().getStringKeyword_0());
                   
             }
-            otherlv_1=(Token)match(input,49,FollowSets000.FOLLOW_49_in_rulestringdef_type7155); if (state.failed) return current;
+            otherlv_1=(Token)match(input,49,FollowSets000.FOLLOW_49_in_rulestringdef_type7193); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_1, grammarAccess.getStringdef_typeAccess().getLessThanSignKeyword_1());
                   
             }
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3302:1: ( (lv_bound_2_0= ruleconst_exp ) )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3303:1: (lv_bound_2_0= ruleconst_exp )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3324:1: ( (lv_bound_2_0= ruleconst_exp ) )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3325:1: (lv_bound_2_0= ruleconst_exp )
             {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3303:1: (lv_bound_2_0= ruleconst_exp )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3304:3: lv_bound_2_0= ruleconst_exp
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3325:1: (lv_bound_2_0= ruleconst_exp )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3326:3: lv_bound_2_0= ruleconst_exp
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getStringdef_typeAccess().getBoundConst_expParserRuleCall_2_0()); 
               	    
             }
-            pushFollow(FollowSets000.FOLLOW_ruleconst_exp_in_rulestringdef_type7176);
+            pushFollow(FollowSets000.FOLLOW_ruleconst_exp_in_rulestringdef_type7214);
             lv_bound_2_0=ruleconst_exp();
 
             state._fsp--;
@@ -9456,7 +9496,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,50,FollowSets000.FOLLOW_50_in_rulestringdef_type7188); if (state.failed) return current;
+            otherlv_3=(Token)match(input,50,FollowSets000.FOLLOW_50_in_rulestringdef_type7226); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_3, grammarAccess.getStringdef_typeAccess().getGreaterThanSignKeyword_3());
@@ -9485,7 +9525,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulewide_stringdef_type"
-    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3332:1: entryRulewide_stringdef_type returns [EObject current=null] : iv_rulewide_stringdef_type= rulewide_stringdef_type EOF ;
+    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3354:1: entryRulewide_stringdef_type returns [EObject current=null] : iv_rulewide_stringdef_type= rulewide_stringdef_type EOF ;
     public final EObject entryRulewide_stringdef_type() throws RecognitionException {
         EObject current = null;
 
@@ -9493,13 +9533,13 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3333:2: (iv_rulewide_stringdef_type= rulewide_stringdef_type EOF )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3334:2: iv_rulewide_stringdef_type= rulewide_stringdef_type EOF
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3355:2: (iv_rulewide_stringdef_type= rulewide_stringdef_type EOF )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3356:2: iv_rulewide_stringdef_type= rulewide_stringdef_type EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getWide_stringdef_typeRule()); 
             }
-            pushFollow(FollowSets000.FOLLOW_rulewide_stringdef_type_in_entryRulewide_stringdef_type7224);
+            pushFollow(FollowSets000.FOLLOW_rulewide_stringdef_type_in_entryRulewide_stringdef_type7262);
             iv_rulewide_stringdef_type=rulewide_stringdef_type();
 
             state._fsp--;
@@ -9507,7 +9547,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_rulewide_stringdef_type; 
             }
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRulewide_stringdef_type7234); if (state.failed) return current;
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRulewide_stringdef_type7272); if (state.failed) return current;
 
             }
 
@@ -9525,7 +9565,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulewide_stringdef_type"
-    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3341:1: rulewide_stringdef_type returns [EObject current=null] : (otherlv_0= 'wstring' otherlv_1= '<' ( (lv_bound_2_0= ruleconst_exp ) ) otherlv_3= '>' ) ;
+    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3363:1: rulewide_stringdef_type returns [EObject current=null] : (otherlv_0= 'wstring' otherlv_1= '<' ( (lv_bound_2_0= ruleconst_exp ) ) otherlv_3= '>' ) ;
     public final EObject rulewide_stringdef_type() throws RecognitionException {
         EObject current = null;
 
@@ -9538,36 +9578,36 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3344:28: ( (otherlv_0= 'wstring' otherlv_1= '<' ( (lv_bound_2_0= ruleconst_exp ) ) otherlv_3= '>' ) )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3345:1: (otherlv_0= 'wstring' otherlv_1= '<' ( (lv_bound_2_0= ruleconst_exp ) ) otherlv_3= '>' )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3366:28: ( (otherlv_0= 'wstring' otherlv_1= '<' ( (lv_bound_2_0= ruleconst_exp ) ) otherlv_3= '>' ) )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3367:1: (otherlv_0= 'wstring' otherlv_1= '<' ( (lv_bound_2_0= ruleconst_exp ) ) otherlv_3= '>' )
             {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3345:1: (otherlv_0= 'wstring' otherlv_1= '<' ( (lv_bound_2_0= ruleconst_exp ) ) otherlv_3= '>' )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3345:3: otherlv_0= 'wstring' otherlv_1= '<' ( (lv_bound_2_0= ruleconst_exp ) ) otherlv_3= '>'
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3367:1: (otherlv_0= 'wstring' otherlv_1= '<' ( (lv_bound_2_0= ruleconst_exp ) ) otherlv_3= '>' )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3367:3: otherlv_0= 'wstring' otherlv_1= '<' ( (lv_bound_2_0= ruleconst_exp ) ) otherlv_3= '>'
             {
-            otherlv_0=(Token)match(input,52,FollowSets000.FOLLOW_52_in_rulewide_stringdef_type7271); if (state.failed) return current;
+            otherlv_0=(Token)match(input,52,FollowSets000.FOLLOW_52_in_rulewide_stringdef_type7309); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_0, grammarAccess.getWide_stringdef_typeAccess().getWstringKeyword_0());
                   
             }
-            otherlv_1=(Token)match(input,49,FollowSets000.FOLLOW_49_in_rulewide_stringdef_type7283); if (state.failed) return current;
+            otherlv_1=(Token)match(input,49,FollowSets000.FOLLOW_49_in_rulewide_stringdef_type7321); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_1, grammarAccess.getWide_stringdef_typeAccess().getLessThanSignKeyword_1());
                   
             }
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3353:1: ( (lv_bound_2_0= ruleconst_exp ) )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3354:1: (lv_bound_2_0= ruleconst_exp )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3375:1: ( (lv_bound_2_0= ruleconst_exp ) )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3376:1: (lv_bound_2_0= ruleconst_exp )
             {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3354:1: (lv_bound_2_0= ruleconst_exp )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3355:3: lv_bound_2_0= ruleconst_exp
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3376:1: (lv_bound_2_0= ruleconst_exp )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3377:3: lv_bound_2_0= ruleconst_exp
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getWide_stringdef_typeAccess().getBoundConst_expParserRuleCall_2_0()); 
               	    
             }
-            pushFollow(FollowSets000.FOLLOW_ruleconst_exp_in_rulewide_stringdef_type7304);
+            pushFollow(FollowSets000.FOLLOW_ruleconst_exp_in_rulewide_stringdef_type7342);
             lv_bound_2_0=ruleconst_exp();
 
             state._fsp--;
@@ -9591,7 +9631,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,50,FollowSets000.FOLLOW_50_in_rulewide_stringdef_type7316); if (state.failed) return current;
+            otherlv_3=(Token)match(input,50,FollowSets000.FOLLOW_50_in_rulewide_stringdef_type7354); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_3, grammarAccess.getWide_stringdef_typeAccess().getGreaterThanSignKeyword_3());
@@ -9620,7 +9660,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulefixed_pt_type"
-    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3383:1: entryRulefixed_pt_type returns [EObject current=null] : iv_rulefixed_pt_type= rulefixed_pt_type EOF ;
+    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3405:1: entryRulefixed_pt_type returns [EObject current=null] : iv_rulefixed_pt_type= rulefixed_pt_type EOF ;
     public final EObject entryRulefixed_pt_type() throws RecognitionException {
         EObject current = null;
 
@@ -9628,13 +9668,13 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3384:2: (iv_rulefixed_pt_type= rulefixed_pt_type EOF )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3385:2: iv_rulefixed_pt_type= rulefixed_pt_type EOF
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3406:2: (iv_rulefixed_pt_type= rulefixed_pt_type EOF )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3407:2: iv_rulefixed_pt_type= rulefixed_pt_type EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getFixed_pt_typeRule()); 
             }
-            pushFollow(FollowSets000.FOLLOW_rulefixed_pt_type_in_entryRulefixed_pt_type7352);
+            pushFollow(FollowSets000.FOLLOW_rulefixed_pt_type_in_entryRulefixed_pt_type7390);
             iv_rulefixed_pt_type=rulefixed_pt_type();
 
             state._fsp--;
@@ -9642,7 +9682,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_rulefixed_pt_type; 
             }
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRulefixed_pt_type7362); if (state.failed) return current;
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRulefixed_pt_type7400); if (state.failed) return current;
 
             }
 
@@ -9660,7 +9700,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulefixed_pt_type"
-    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3392:1: rulefixed_pt_type returns [EObject current=null] : (otherlv_0= 'fixed' otherlv_1= '<' ( (lv_digits_2_0= ruleconst_exp ) ) otherlv_3= ',' ( (lv_scale_4_0= ruleconst_exp ) ) otherlv_5= '>' ) ;
+    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3414:1: rulefixed_pt_type returns [EObject current=null] : (otherlv_0= 'fixed' otherlv_1= '<' ( (lv_digits_2_0= ruleconst_exp ) ) otherlv_3= ',' ( (lv_scale_4_0= ruleconst_exp ) ) otherlv_5= '>' ) ;
     public final EObject rulefixed_pt_type() throws RecognitionException {
         EObject current = null;
 
@@ -9676,36 +9716,36 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3395:28: ( (otherlv_0= 'fixed' otherlv_1= '<' ( (lv_digits_2_0= ruleconst_exp ) ) otherlv_3= ',' ( (lv_scale_4_0= ruleconst_exp ) ) otherlv_5= '>' ) )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3396:1: (otherlv_0= 'fixed' otherlv_1= '<' ( (lv_digits_2_0= ruleconst_exp ) ) otherlv_3= ',' ( (lv_scale_4_0= ruleconst_exp ) ) otherlv_5= '>' )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3417:28: ( (otherlv_0= 'fixed' otherlv_1= '<' ( (lv_digits_2_0= ruleconst_exp ) ) otherlv_3= ',' ( (lv_scale_4_0= ruleconst_exp ) ) otherlv_5= '>' ) )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3418:1: (otherlv_0= 'fixed' otherlv_1= '<' ( (lv_digits_2_0= ruleconst_exp ) ) otherlv_3= ',' ( (lv_scale_4_0= ruleconst_exp ) ) otherlv_5= '>' )
             {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3396:1: (otherlv_0= 'fixed' otherlv_1= '<' ( (lv_digits_2_0= ruleconst_exp ) ) otherlv_3= ',' ( (lv_scale_4_0= ruleconst_exp ) ) otherlv_5= '>' )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3396:3: otherlv_0= 'fixed' otherlv_1= '<' ( (lv_digits_2_0= ruleconst_exp ) ) otherlv_3= ',' ( (lv_scale_4_0= ruleconst_exp ) ) otherlv_5= '>'
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3418:1: (otherlv_0= 'fixed' otherlv_1= '<' ( (lv_digits_2_0= ruleconst_exp ) ) otherlv_3= ',' ( (lv_scale_4_0= ruleconst_exp ) ) otherlv_5= '>' )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3418:3: otherlv_0= 'fixed' otherlv_1= '<' ( (lv_digits_2_0= ruleconst_exp ) ) otherlv_3= ',' ( (lv_scale_4_0= ruleconst_exp ) ) otherlv_5= '>'
             {
-            otherlv_0=(Token)match(input,53,FollowSets000.FOLLOW_53_in_rulefixed_pt_type7399); if (state.failed) return current;
+            otherlv_0=(Token)match(input,53,FollowSets000.FOLLOW_53_in_rulefixed_pt_type7437); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_0, grammarAccess.getFixed_pt_typeAccess().getFixedKeyword_0());
                   
             }
-            otherlv_1=(Token)match(input,49,FollowSets000.FOLLOW_49_in_rulefixed_pt_type7411); if (state.failed) return current;
+            otherlv_1=(Token)match(input,49,FollowSets000.FOLLOW_49_in_rulefixed_pt_type7449); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_1, grammarAccess.getFixed_pt_typeAccess().getLessThanSignKeyword_1());
                   
             }
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3404:1: ( (lv_digits_2_0= ruleconst_exp ) )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3405:1: (lv_digits_2_0= ruleconst_exp )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3426:1: ( (lv_digits_2_0= ruleconst_exp ) )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3427:1: (lv_digits_2_0= ruleconst_exp )
             {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3405:1: (lv_digits_2_0= ruleconst_exp )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3406:3: lv_digits_2_0= ruleconst_exp
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3427:1: (lv_digits_2_0= ruleconst_exp )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3428:3: lv_digits_2_0= ruleconst_exp
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getFixed_pt_typeAccess().getDigitsConst_expParserRuleCall_2_0()); 
               	    
             }
-            pushFollow(FollowSets000.FOLLOW_ruleconst_exp_in_rulefixed_pt_type7432);
+            pushFollow(FollowSets000.FOLLOW_ruleconst_exp_in_rulefixed_pt_type7470);
             lv_digits_2_0=ruleconst_exp();
 
             state._fsp--;
@@ -9729,24 +9769,24 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,25,FollowSets000.FOLLOW_25_in_rulefixed_pt_type7444); if (state.failed) return current;
+            otherlv_3=(Token)match(input,25,FollowSets000.FOLLOW_25_in_rulefixed_pt_type7482); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_3, grammarAccess.getFixed_pt_typeAccess().getCommaKeyword_3());
                   
             }
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3426:1: ( (lv_scale_4_0= ruleconst_exp ) )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3427:1: (lv_scale_4_0= ruleconst_exp )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3448:1: ( (lv_scale_4_0= ruleconst_exp ) )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3449:1: (lv_scale_4_0= ruleconst_exp )
             {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3427:1: (lv_scale_4_0= ruleconst_exp )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3428:3: lv_scale_4_0= ruleconst_exp
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3449:1: (lv_scale_4_0= ruleconst_exp )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3450:3: lv_scale_4_0= ruleconst_exp
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getFixed_pt_typeAccess().getScaleConst_expParserRuleCall_4_0()); 
               	    
             }
-            pushFollow(FollowSets000.FOLLOW_ruleconst_exp_in_rulefixed_pt_type7465);
+            pushFollow(FollowSets000.FOLLOW_ruleconst_exp_in_rulefixed_pt_type7503);
             lv_scale_4_0=ruleconst_exp();
 
             state._fsp--;
@@ -9770,7 +9810,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,50,FollowSets000.FOLLOW_50_in_rulefixed_pt_type7477); if (state.failed) return current;
+            otherlv_5=(Token)match(input,50,FollowSets000.FOLLOW_50_in_rulefixed_pt_type7515); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_5, grammarAccess.getFixed_pt_typeAccess().getGreaterThanSignKeyword_5());
@@ -9799,7 +9839,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulefloating_pt_type"
-    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3456:1: entryRulefloating_pt_type returns [EObject current=null] : iv_rulefloating_pt_type= rulefloating_pt_type EOF ;
+    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3478:1: entryRulefloating_pt_type returns [EObject current=null] : iv_rulefloating_pt_type= rulefloating_pt_type EOF ;
     public final EObject entryRulefloating_pt_type() throws RecognitionException {
         EObject current = null;
 
@@ -9807,13 +9847,13 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3457:2: (iv_rulefloating_pt_type= rulefloating_pt_type EOF )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3458:2: iv_rulefloating_pt_type= rulefloating_pt_type EOF
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3479:2: (iv_rulefloating_pt_type= rulefloating_pt_type EOF )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3480:2: iv_rulefloating_pt_type= rulefloating_pt_type EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getFloating_pt_typeRule()); 
             }
-            pushFollow(FollowSets000.FOLLOW_rulefloating_pt_type_in_entryRulefloating_pt_type7513);
+            pushFollow(FollowSets000.FOLLOW_rulefloating_pt_type_in_entryRulefloating_pt_type7551);
             iv_rulefloating_pt_type=rulefloating_pt_type();
 
             state._fsp--;
@@ -9821,7 +9861,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_rulefloating_pt_type; 
             }
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRulefloating_pt_type7523); if (state.failed) return current;
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRulefloating_pt_type7561); if (state.failed) return current;
 
             }
 
@@ -9839,7 +9879,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulefloating_pt_type"
-    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3465:1: rulefloating_pt_type returns [EObject current=null] : ( ( (lv_kind_0_0= rulefloat_type ) ) | ( (lv_kind_1_0= ruledouble_type ) ) | ( (lv_kind_2_0= rulelongdouble_type ) ) ) ;
+    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3487:1: rulefloating_pt_type returns [EObject current=null] : ( ( (lv_kind_0_0= rulefloat_type ) ) | ( (lv_kind_1_0= ruledouble_type ) ) | ( (lv_kind_2_0= rulelongdouble_type ) ) ) ;
     public final EObject rulefloating_pt_type() throws RecognitionException {
         EObject current = null;
 
@@ -9853,10 +9893,10 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3468:28: ( ( ( (lv_kind_0_0= rulefloat_type ) ) | ( (lv_kind_1_0= ruledouble_type ) ) | ( (lv_kind_2_0= rulelongdouble_type ) ) ) )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3469:1: ( ( (lv_kind_0_0= rulefloat_type ) ) | ( (lv_kind_1_0= ruledouble_type ) ) | ( (lv_kind_2_0= rulelongdouble_type ) ) )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3490:28: ( ( ( (lv_kind_0_0= rulefloat_type ) ) | ( (lv_kind_1_0= ruledouble_type ) ) | ( (lv_kind_2_0= rulelongdouble_type ) ) ) )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3491:1: ( ( (lv_kind_0_0= rulefloat_type ) ) | ( (lv_kind_1_0= ruledouble_type ) ) | ( (lv_kind_2_0= rulelongdouble_type ) ) )
             {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3469:1: ( ( (lv_kind_0_0= rulefloat_type ) ) | ( (lv_kind_1_0= ruledouble_type ) ) | ( (lv_kind_2_0= rulelongdouble_type ) ) )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3491:1: ( ( (lv_kind_0_0= rulefloat_type ) ) | ( (lv_kind_1_0= ruledouble_type ) ) | ( (lv_kind_2_0= rulelongdouble_type ) ) )
             int alt59=3;
             switch ( input.LA(1) ) {
             case 72:
@@ -9884,20 +9924,20 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
             switch (alt59) {
                 case 1 :
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3469:2: ( (lv_kind_0_0= rulefloat_type ) )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3491:2: ( (lv_kind_0_0= rulefloat_type ) )
                     {
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3469:2: ( (lv_kind_0_0= rulefloat_type ) )
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3470:1: (lv_kind_0_0= rulefloat_type )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3491:2: ( (lv_kind_0_0= rulefloat_type ) )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3492:1: (lv_kind_0_0= rulefloat_type )
                     {
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3470:1: (lv_kind_0_0= rulefloat_type )
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3471:3: lv_kind_0_0= rulefloat_type
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3492:1: (lv_kind_0_0= rulefloat_type )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3493:3: lv_kind_0_0= rulefloat_type
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getFloating_pt_typeAccess().getKindFloat_typeEnumRuleCall_0_0()); 
                       	    
                     }
-                    pushFollow(FollowSets000.FOLLOW_rulefloat_type_in_rulefloating_pt_type7569);
+                    pushFollow(FollowSets000.FOLLOW_rulefloat_type_in_rulefloating_pt_type7607);
                     lv_kind_0_0=rulefloat_type();
 
                     state._fsp--;
@@ -9925,20 +9965,20 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3488:6: ( (lv_kind_1_0= ruledouble_type ) )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3510:6: ( (lv_kind_1_0= ruledouble_type ) )
                     {
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3488:6: ( (lv_kind_1_0= ruledouble_type ) )
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3489:1: (lv_kind_1_0= ruledouble_type )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3510:6: ( (lv_kind_1_0= ruledouble_type ) )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3511:1: (lv_kind_1_0= ruledouble_type )
                     {
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3489:1: (lv_kind_1_0= ruledouble_type )
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3490:3: lv_kind_1_0= ruledouble_type
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3511:1: (lv_kind_1_0= ruledouble_type )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3512:3: lv_kind_1_0= ruledouble_type
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getFloating_pt_typeAccess().getKindDouble_typeEnumRuleCall_1_0()); 
                       	    
                     }
-                    pushFollow(FollowSets000.FOLLOW_ruledouble_type_in_rulefloating_pt_type7596);
+                    pushFollow(FollowSets000.FOLLOW_ruledouble_type_in_rulefloating_pt_type7634);
                     lv_kind_1_0=ruledouble_type();
 
                     state._fsp--;
@@ -9966,20 +10006,20 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3507:6: ( (lv_kind_2_0= rulelongdouble_type ) )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3529:6: ( (lv_kind_2_0= rulelongdouble_type ) )
                     {
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3507:6: ( (lv_kind_2_0= rulelongdouble_type ) )
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3508:1: (lv_kind_2_0= rulelongdouble_type )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3529:6: ( (lv_kind_2_0= rulelongdouble_type ) )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3530:1: (lv_kind_2_0= rulelongdouble_type )
                     {
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3508:1: (lv_kind_2_0= rulelongdouble_type )
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3509:3: lv_kind_2_0= rulelongdouble_type
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3530:1: (lv_kind_2_0= rulelongdouble_type )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3531:3: lv_kind_2_0= rulelongdouble_type
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getFloating_pt_typeAccess().getKindLongdouble_typeParserRuleCall_2_0()); 
                       	    
                     }
-                    pushFollow(FollowSets000.FOLLOW_rulelongdouble_type_in_rulefloating_pt_type7623);
+                    pushFollow(FollowSets000.FOLLOW_rulelongdouble_type_in_rulefloating_pt_type7661);
                     lv_kind_2_0=rulelongdouble_type();
 
                     state._fsp--;
@@ -10029,7 +10069,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulelongdouble_type"
-    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3533:1: entryRulelongdouble_type returns [String current=null] : iv_rulelongdouble_type= rulelongdouble_type EOF ;
+    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3555:1: entryRulelongdouble_type returns [String current=null] : iv_rulelongdouble_type= rulelongdouble_type EOF ;
     public final String entryRulelongdouble_type() throws RecognitionException {
         String current = null;
 
@@ -10037,13 +10077,13 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3534:2: (iv_rulelongdouble_type= rulelongdouble_type EOF )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3535:2: iv_rulelongdouble_type= rulelongdouble_type EOF
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3556:2: (iv_rulelongdouble_type= rulelongdouble_type EOF )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3557:2: iv_rulelongdouble_type= rulelongdouble_type EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getLongdouble_typeRule()); 
             }
-            pushFollow(FollowSets000.FOLLOW_rulelongdouble_type_in_entryRulelongdouble_type7660);
+            pushFollow(FollowSets000.FOLLOW_rulelongdouble_type_in_entryRulelongdouble_type7698);
             iv_rulelongdouble_type=rulelongdouble_type();
 
             state._fsp--;
@@ -10051,7 +10091,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_rulelongdouble_type.getText(); 
             }
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRulelongdouble_type7671); if (state.failed) return current;
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRulelongdouble_type7709); if (state.failed) return current;
 
             }
 
@@ -10069,7 +10109,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulelongdouble_type"
-    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3542:1: rulelongdouble_type returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= 'long' kw= 'double' ) ;
+    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3564:1: rulelongdouble_type returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= 'long' kw= 'double' ) ;
     public final AntlrDatatypeRuleToken rulelongdouble_type() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -10078,20 +10118,20 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3545:28: ( (kw= 'long' kw= 'double' ) )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3546:1: (kw= 'long' kw= 'double' )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3567:28: ( (kw= 'long' kw= 'double' ) )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3568:1: (kw= 'long' kw= 'double' )
             {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3546:1: (kw= 'long' kw= 'double' )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3547:2: kw= 'long' kw= 'double'
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3568:1: (kw= 'long' kw= 'double' )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3569:2: kw= 'long' kw= 'double'
             {
-            kw=(Token)match(input,54,FollowSets000.FOLLOW_54_in_rulelongdouble_type7709); if (state.failed) return current;
+            kw=(Token)match(input,54,FollowSets000.FOLLOW_54_in_rulelongdouble_type7747); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                       current.merge(kw);
                       newLeafNode(kw, grammarAccess.getLongdouble_typeAccess().getLongKeyword_0()); 
                   
             }
-            kw=(Token)match(input,55,FollowSets000.FOLLOW_55_in_rulelongdouble_type7722); if (state.failed) return current;
+            kw=(Token)match(input,55,FollowSets000.FOLLOW_55_in_rulelongdouble_type7760); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                       current.merge(kw);
@@ -10121,7 +10161,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleinteger_type"
-    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3566:1: entryRuleinteger_type returns [EObject current=null] : iv_ruleinteger_type= ruleinteger_type EOF ;
+    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3588:1: entryRuleinteger_type returns [EObject current=null] : iv_ruleinteger_type= ruleinteger_type EOF ;
     public final EObject entryRuleinteger_type() throws RecognitionException {
         EObject current = null;
 
@@ -10129,13 +10169,13 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3567:2: (iv_ruleinteger_type= ruleinteger_type EOF )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3568:2: iv_ruleinteger_type= ruleinteger_type EOF
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3589:2: (iv_ruleinteger_type= ruleinteger_type EOF )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3590:2: iv_ruleinteger_type= ruleinteger_type EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getInteger_typeRule()); 
             }
-            pushFollow(FollowSets000.FOLLOW_ruleinteger_type_in_entryRuleinteger_type7762);
+            pushFollow(FollowSets000.FOLLOW_ruleinteger_type_in_entryRuleinteger_type7800);
             iv_ruleinteger_type=ruleinteger_type();
 
             state._fsp--;
@@ -10143,7 +10183,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleinteger_type; 
             }
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleinteger_type7772); if (state.failed) return current;
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleinteger_type7810); if (state.failed) return current;
 
             }
 
@@ -10161,7 +10201,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleinteger_type"
-    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3575:1: ruleinteger_type returns [EObject current=null] : ( ( (lv_kind_0_0= ruleshort_type ) ) | ( (lv_kind_1_0= rulelong_type ) ) | ( (lv_kind_2_0= rulelonglong_type ) ) | ( (lv_kind_3_0= ruleushort_type ) ) | ( (lv_kind_4_0= ruleulong_type ) ) | ( (lv_kind_5_0= ruleulonglong_type ) ) ) ;
+    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3597:1: ruleinteger_type returns [EObject current=null] : ( ( (lv_kind_0_0= ruleshort_type ) ) | ( (lv_kind_1_0= rulelong_type ) ) | ( (lv_kind_2_0= rulelonglong_type ) ) | ( (lv_kind_3_0= ruleushort_type ) ) | ( (lv_kind_4_0= ruleulong_type ) ) | ( (lv_kind_5_0= ruleulonglong_type ) ) ) ;
     public final EObject ruleinteger_type() throws RecognitionException {
         EObject current = null;
 
@@ -10181,28 +10221,28 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3578:28: ( ( ( (lv_kind_0_0= ruleshort_type ) ) | ( (lv_kind_1_0= rulelong_type ) ) | ( (lv_kind_2_0= rulelonglong_type ) ) | ( (lv_kind_3_0= ruleushort_type ) ) | ( (lv_kind_4_0= ruleulong_type ) ) | ( (lv_kind_5_0= ruleulonglong_type ) ) ) )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3579:1: ( ( (lv_kind_0_0= ruleshort_type ) ) | ( (lv_kind_1_0= rulelong_type ) ) | ( (lv_kind_2_0= rulelonglong_type ) ) | ( (lv_kind_3_0= ruleushort_type ) ) | ( (lv_kind_4_0= ruleulong_type ) ) | ( (lv_kind_5_0= ruleulonglong_type ) ) )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3600:28: ( ( ( (lv_kind_0_0= ruleshort_type ) ) | ( (lv_kind_1_0= rulelong_type ) ) | ( (lv_kind_2_0= rulelonglong_type ) ) | ( (lv_kind_3_0= ruleushort_type ) ) | ( (lv_kind_4_0= ruleulong_type ) ) | ( (lv_kind_5_0= ruleulonglong_type ) ) ) )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3601:1: ( ( (lv_kind_0_0= ruleshort_type ) ) | ( (lv_kind_1_0= rulelong_type ) ) | ( (lv_kind_2_0= rulelonglong_type ) ) | ( (lv_kind_3_0= ruleushort_type ) ) | ( (lv_kind_4_0= ruleulong_type ) ) | ( (lv_kind_5_0= ruleulonglong_type ) ) )
             {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3579:1: ( ( (lv_kind_0_0= ruleshort_type ) ) | ( (lv_kind_1_0= rulelong_type ) ) | ( (lv_kind_2_0= rulelonglong_type ) ) | ( (lv_kind_3_0= ruleushort_type ) ) | ( (lv_kind_4_0= ruleulong_type ) ) | ( (lv_kind_5_0= ruleulonglong_type ) ) )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3601:1: ( ( (lv_kind_0_0= ruleshort_type ) ) | ( (lv_kind_1_0= rulelong_type ) ) | ( (lv_kind_2_0= rulelonglong_type ) ) | ( (lv_kind_3_0= ruleushort_type ) ) | ( (lv_kind_4_0= ruleulong_type ) ) | ( (lv_kind_5_0= ruleulonglong_type ) ) )
             int alt60=6;
             alt60 = dfa60.predict(input);
             switch (alt60) {
                 case 1 :
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3579:2: ( (lv_kind_0_0= ruleshort_type ) )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3601:2: ( (lv_kind_0_0= ruleshort_type ) )
                     {
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3579:2: ( (lv_kind_0_0= ruleshort_type ) )
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3580:1: (lv_kind_0_0= ruleshort_type )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3601:2: ( (lv_kind_0_0= ruleshort_type ) )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3602:1: (lv_kind_0_0= ruleshort_type )
                     {
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3580:1: (lv_kind_0_0= ruleshort_type )
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3581:3: lv_kind_0_0= ruleshort_type
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3602:1: (lv_kind_0_0= ruleshort_type )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3603:3: lv_kind_0_0= ruleshort_type
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getInteger_typeAccess().getKindShort_typeEnumRuleCall_0_0()); 
                       	    
                     }
-                    pushFollow(FollowSets000.FOLLOW_ruleshort_type_in_ruleinteger_type7818);
+                    pushFollow(FollowSets000.FOLLOW_ruleshort_type_in_ruleinteger_type7856);
                     lv_kind_0_0=ruleshort_type();
 
                     state._fsp--;
@@ -10230,20 +10270,20 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3598:6: ( (lv_kind_1_0= rulelong_type ) )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3620:6: ( (lv_kind_1_0= rulelong_type ) )
                     {
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3598:6: ( (lv_kind_1_0= rulelong_type ) )
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3599:1: (lv_kind_1_0= rulelong_type )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3620:6: ( (lv_kind_1_0= rulelong_type ) )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3621:1: (lv_kind_1_0= rulelong_type )
                     {
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3599:1: (lv_kind_1_0= rulelong_type )
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3600:3: lv_kind_1_0= rulelong_type
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3621:1: (lv_kind_1_0= rulelong_type )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3622:3: lv_kind_1_0= rulelong_type
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getInteger_typeAccess().getKindLong_typeEnumRuleCall_1_0()); 
                       	    
                     }
-                    pushFollow(FollowSets000.FOLLOW_rulelong_type_in_ruleinteger_type7845);
+                    pushFollow(FollowSets000.FOLLOW_rulelong_type_in_ruleinteger_type7883);
                     lv_kind_1_0=rulelong_type();
 
                     state._fsp--;
@@ -10271,20 +10311,20 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3617:6: ( (lv_kind_2_0= rulelonglong_type ) )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3639:6: ( (lv_kind_2_0= rulelonglong_type ) )
                     {
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3617:6: ( (lv_kind_2_0= rulelonglong_type ) )
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3618:1: (lv_kind_2_0= rulelonglong_type )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3639:6: ( (lv_kind_2_0= rulelonglong_type ) )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3640:1: (lv_kind_2_0= rulelonglong_type )
                     {
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3618:1: (lv_kind_2_0= rulelonglong_type )
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3619:3: lv_kind_2_0= rulelonglong_type
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3640:1: (lv_kind_2_0= rulelonglong_type )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3641:3: lv_kind_2_0= rulelonglong_type
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getInteger_typeAccess().getKindLonglong_typeParserRuleCall_2_0()); 
                       	    
                     }
-                    pushFollow(FollowSets000.FOLLOW_rulelonglong_type_in_ruleinteger_type7872);
+                    pushFollow(FollowSets000.FOLLOW_rulelonglong_type_in_ruleinteger_type7910);
                     lv_kind_2_0=rulelonglong_type();
 
                     state._fsp--;
@@ -10312,20 +10352,20 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3636:6: ( (lv_kind_3_0= ruleushort_type ) )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3658:6: ( (lv_kind_3_0= ruleushort_type ) )
                     {
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3636:6: ( (lv_kind_3_0= ruleushort_type ) )
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3637:1: (lv_kind_3_0= ruleushort_type )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3658:6: ( (lv_kind_3_0= ruleushort_type ) )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3659:1: (lv_kind_3_0= ruleushort_type )
                     {
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3637:1: (lv_kind_3_0= ruleushort_type )
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3638:3: lv_kind_3_0= ruleushort_type
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3659:1: (lv_kind_3_0= ruleushort_type )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3660:3: lv_kind_3_0= ruleushort_type
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getInteger_typeAccess().getKindUshort_typeParserRuleCall_3_0()); 
                       	    
                     }
-                    pushFollow(FollowSets000.FOLLOW_ruleushort_type_in_ruleinteger_type7899);
+                    pushFollow(FollowSets000.FOLLOW_ruleushort_type_in_ruleinteger_type7937);
                     lv_kind_3_0=ruleushort_type();
 
                     state._fsp--;
@@ -10353,20 +10393,20 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3655:6: ( (lv_kind_4_0= ruleulong_type ) )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3677:6: ( (lv_kind_4_0= ruleulong_type ) )
                     {
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3655:6: ( (lv_kind_4_0= ruleulong_type ) )
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3656:1: (lv_kind_4_0= ruleulong_type )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3677:6: ( (lv_kind_4_0= ruleulong_type ) )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3678:1: (lv_kind_4_0= ruleulong_type )
                     {
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3656:1: (lv_kind_4_0= ruleulong_type )
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3657:3: lv_kind_4_0= ruleulong_type
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3678:1: (lv_kind_4_0= ruleulong_type )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3679:3: lv_kind_4_0= ruleulong_type
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getInteger_typeAccess().getKindUlong_typeParserRuleCall_4_0()); 
                       	    
                     }
-                    pushFollow(FollowSets000.FOLLOW_ruleulong_type_in_ruleinteger_type7926);
+                    pushFollow(FollowSets000.FOLLOW_ruleulong_type_in_ruleinteger_type7964);
                     lv_kind_4_0=ruleulong_type();
 
                     state._fsp--;
@@ -10394,20 +10434,20 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3674:6: ( (lv_kind_5_0= ruleulonglong_type ) )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3696:6: ( (lv_kind_5_0= ruleulonglong_type ) )
                     {
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3674:6: ( (lv_kind_5_0= ruleulonglong_type ) )
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3675:1: (lv_kind_5_0= ruleulonglong_type )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3696:6: ( (lv_kind_5_0= ruleulonglong_type ) )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3697:1: (lv_kind_5_0= ruleulonglong_type )
                     {
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3675:1: (lv_kind_5_0= ruleulonglong_type )
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3676:3: lv_kind_5_0= ruleulonglong_type
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3697:1: (lv_kind_5_0= ruleulonglong_type )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3698:3: lv_kind_5_0= ruleulonglong_type
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getInteger_typeAccess().getKindUlonglong_typeParserRuleCall_5_0()); 
                       	    
                     }
-                    pushFollow(FollowSets000.FOLLOW_ruleulonglong_type_in_ruleinteger_type7953);
+                    pushFollow(FollowSets000.FOLLOW_ruleulonglong_type_in_ruleinteger_type7991);
                     lv_kind_5_0=ruleulonglong_type();
 
                     state._fsp--;
@@ -10457,7 +10497,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulelonglong_type"
-    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3700:1: entryRulelonglong_type returns [String current=null] : iv_rulelonglong_type= rulelonglong_type EOF ;
+    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3722:1: entryRulelonglong_type returns [String current=null] : iv_rulelonglong_type= rulelonglong_type EOF ;
     public final String entryRulelonglong_type() throws RecognitionException {
         String current = null;
 
@@ -10465,13 +10505,13 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3701:2: (iv_rulelonglong_type= rulelonglong_type EOF )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3702:2: iv_rulelonglong_type= rulelonglong_type EOF
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3723:2: (iv_rulelonglong_type= rulelonglong_type EOF )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3724:2: iv_rulelonglong_type= rulelonglong_type EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getLonglong_typeRule()); 
             }
-            pushFollow(FollowSets000.FOLLOW_rulelonglong_type_in_entryRulelonglong_type7990);
+            pushFollow(FollowSets000.FOLLOW_rulelonglong_type_in_entryRulelonglong_type8028);
             iv_rulelonglong_type=rulelonglong_type();
 
             state._fsp--;
@@ -10479,7 +10519,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_rulelonglong_type.getText(); 
             }
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRulelonglong_type8001); if (state.failed) return current;
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRulelonglong_type8039); if (state.failed) return current;
 
             }
 
@@ -10497,7 +10537,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulelonglong_type"
-    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3709:1: rulelonglong_type returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= 'long' kw= 'long' ) ;
+    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3731:1: rulelonglong_type returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= 'long' kw= 'long' ) ;
     public final AntlrDatatypeRuleToken rulelonglong_type() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -10506,20 +10546,20 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3712:28: ( (kw= 'long' kw= 'long' ) )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3713:1: (kw= 'long' kw= 'long' )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3734:28: ( (kw= 'long' kw= 'long' ) )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3735:1: (kw= 'long' kw= 'long' )
             {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3713:1: (kw= 'long' kw= 'long' )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3714:2: kw= 'long' kw= 'long'
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3735:1: (kw= 'long' kw= 'long' )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3736:2: kw= 'long' kw= 'long'
             {
-            kw=(Token)match(input,54,FollowSets000.FOLLOW_54_in_rulelonglong_type8039); if (state.failed) return current;
+            kw=(Token)match(input,54,FollowSets000.FOLLOW_54_in_rulelonglong_type8077); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                       current.merge(kw);
                       newLeafNode(kw, grammarAccess.getLonglong_typeAccess().getLongKeyword_0()); 
                   
             }
-            kw=(Token)match(input,54,FollowSets000.FOLLOW_54_in_rulelonglong_type8052); if (state.failed) return current;
+            kw=(Token)match(input,54,FollowSets000.FOLLOW_54_in_rulelonglong_type8090); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                       current.merge(kw);
@@ -10549,7 +10589,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleushort_type"
-    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3733:1: entryRuleushort_type returns [String current=null] : iv_ruleushort_type= ruleushort_type EOF ;
+    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3755:1: entryRuleushort_type returns [String current=null] : iv_ruleushort_type= ruleushort_type EOF ;
     public final String entryRuleushort_type() throws RecognitionException {
         String current = null;
 
@@ -10557,13 +10597,13 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3734:2: (iv_ruleushort_type= ruleushort_type EOF )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3735:2: iv_ruleushort_type= ruleushort_type EOF
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3756:2: (iv_ruleushort_type= ruleushort_type EOF )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3757:2: iv_ruleushort_type= ruleushort_type EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getUshort_typeRule()); 
             }
-            pushFollow(FollowSets000.FOLLOW_ruleushort_type_in_entryRuleushort_type8093);
+            pushFollow(FollowSets000.FOLLOW_ruleushort_type_in_entryRuleushort_type8131);
             iv_ruleushort_type=ruleushort_type();
 
             state._fsp--;
@@ -10571,7 +10611,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleushort_type.getText(); 
             }
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleushort_type8104); if (state.failed) return current;
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleushort_type8142); if (state.failed) return current;
 
             }
 
@@ -10589,7 +10629,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleushort_type"
-    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3742:1: ruleushort_type returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= 'unsigned' kw= 'short' ) ;
+    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3764:1: ruleushort_type returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= 'unsigned' kw= 'short' ) ;
     public final AntlrDatatypeRuleToken ruleushort_type() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -10598,20 +10638,20 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3745:28: ( (kw= 'unsigned' kw= 'short' ) )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3746:1: (kw= 'unsigned' kw= 'short' )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3767:28: ( (kw= 'unsigned' kw= 'short' ) )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3768:1: (kw= 'unsigned' kw= 'short' )
             {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3746:1: (kw= 'unsigned' kw= 'short' )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3747:2: kw= 'unsigned' kw= 'short'
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3768:1: (kw= 'unsigned' kw= 'short' )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3769:2: kw= 'unsigned' kw= 'short'
             {
-            kw=(Token)match(input,56,FollowSets000.FOLLOW_56_in_ruleushort_type8142); if (state.failed) return current;
+            kw=(Token)match(input,56,FollowSets000.FOLLOW_56_in_ruleushort_type8180); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                       current.merge(kw);
                       newLeafNode(kw, grammarAccess.getUshort_typeAccess().getUnsignedKeyword_0()); 
                   
             }
-            kw=(Token)match(input,57,FollowSets000.FOLLOW_57_in_ruleushort_type8155); if (state.failed) return current;
+            kw=(Token)match(input,57,FollowSets000.FOLLOW_57_in_ruleushort_type8193); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                       current.merge(kw);
@@ -10641,7 +10681,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleulong_type"
-    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3766:1: entryRuleulong_type returns [String current=null] : iv_ruleulong_type= ruleulong_type EOF ;
+    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3788:1: entryRuleulong_type returns [String current=null] : iv_ruleulong_type= ruleulong_type EOF ;
     public final String entryRuleulong_type() throws RecognitionException {
         String current = null;
 
@@ -10649,13 +10689,13 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3767:2: (iv_ruleulong_type= ruleulong_type EOF )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3768:2: iv_ruleulong_type= ruleulong_type EOF
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3789:2: (iv_ruleulong_type= ruleulong_type EOF )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3790:2: iv_ruleulong_type= ruleulong_type EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getUlong_typeRule()); 
             }
-            pushFollow(FollowSets000.FOLLOW_ruleulong_type_in_entryRuleulong_type8196);
+            pushFollow(FollowSets000.FOLLOW_ruleulong_type_in_entryRuleulong_type8234);
             iv_ruleulong_type=ruleulong_type();
 
             state._fsp--;
@@ -10663,7 +10703,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleulong_type.getText(); 
             }
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleulong_type8207); if (state.failed) return current;
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleulong_type8245); if (state.failed) return current;
 
             }
 
@@ -10681,7 +10721,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleulong_type"
-    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3775:1: ruleulong_type returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= 'unsigned' kw= 'long' ) ;
+    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3797:1: ruleulong_type returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= 'unsigned' kw= 'long' ) ;
     public final AntlrDatatypeRuleToken ruleulong_type() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -10690,20 +10730,20 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3778:28: ( (kw= 'unsigned' kw= 'long' ) )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3779:1: (kw= 'unsigned' kw= 'long' )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3800:28: ( (kw= 'unsigned' kw= 'long' ) )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3801:1: (kw= 'unsigned' kw= 'long' )
             {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3779:1: (kw= 'unsigned' kw= 'long' )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3780:2: kw= 'unsigned' kw= 'long'
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3801:1: (kw= 'unsigned' kw= 'long' )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3802:2: kw= 'unsigned' kw= 'long'
             {
-            kw=(Token)match(input,56,FollowSets000.FOLLOW_56_in_ruleulong_type8245); if (state.failed) return current;
+            kw=(Token)match(input,56,FollowSets000.FOLLOW_56_in_ruleulong_type8283); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                       current.merge(kw);
                       newLeafNode(kw, grammarAccess.getUlong_typeAccess().getUnsignedKeyword_0()); 
                   
             }
-            kw=(Token)match(input,54,FollowSets000.FOLLOW_54_in_ruleulong_type8258); if (state.failed) return current;
+            kw=(Token)match(input,54,FollowSets000.FOLLOW_54_in_ruleulong_type8296); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                       current.merge(kw);
@@ -10733,7 +10773,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleulonglong_type"
-    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3799:1: entryRuleulonglong_type returns [String current=null] : iv_ruleulonglong_type= ruleulonglong_type EOF ;
+    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3821:1: entryRuleulonglong_type returns [String current=null] : iv_ruleulonglong_type= ruleulonglong_type EOF ;
     public final String entryRuleulonglong_type() throws RecognitionException {
         String current = null;
 
@@ -10741,13 +10781,13 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3800:2: (iv_ruleulonglong_type= ruleulonglong_type EOF )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3801:2: iv_ruleulonglong_type= ruleulonglong_type EOF
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3822:2: (iv_ruleulonglong_type= ruleulonglong_type EOF )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3823:2: iv_ruleulonglong_type= ruleulonglong_type EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getUlonglong_typeRule()); 
             }
-            pushFollow(FollowSets000.FOLLOW_ruleulonglong_type_in_entryRuleulonglong_type8299);
+            pushFollow(FollowSets000.FOLLOW_ruleulonglong_type_in_entryRuleulonglong_type8337);
             iv_ruleulonglong_type=ruleulonglong_type();
 
             state._fsp--;
@@ -10755,7 +10795,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleulonglong_type.getText(); 
             }
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleulonglong_type8310); if (state.failed) return current;
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleulonglong_type8348); if (state.failed) return current;
 
             }
 
@@ -10773,7 +10813,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleulonglong_type"
-    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3808:1: ruleulonglong_type returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= 'unsigned' kw= 'long' kw= 'long' ) ;
+    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3830:1: ruleulonglong_type returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= 'unsigned' kw= 'long' kw= 'long' ) ;
     public final AntlrDatatypeRuleToken ruleulonglong_type() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -10782,27 +10822,27 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3811:28: ( (kw= 'unsigned' kw= 'long' kw= 'long' ) )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3812:1: (kw= 'unsigned' kw= 'long' kw= 'long' )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3833:28: ( (kw= 'unsigned' kw= 'long' kw= 'long' ) )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3834:1: (kw= 'unsigned' kw= 'long' kw= 'long' )
             {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3812:1: (kw= 'unsigned' kw= 'long' kw= 'long' )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3813:2: kw= 'unsigned' kw= 'long' kw= 'long'
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3834:1: (kw= 'unsigned' kw= 'long' kw= 'long' )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3835:2: kw= 'unsigned' kw= 'long' kw= 'long'
             {
-            kw=(Token)match(input,56,FollowSets000.FOLLOW_56_in_ruleulonglong_type8348); if (state.failed) return current;
+            kw=(Token)match(input,56,FollowSets000.FOLLOW_56_in_ruleulonglong_type8386); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                       current.merge(kw);
                       newLeafNode(kw, grammarAccess.getUlonglong_typeAccess().getUnsignedKeyword_0()); 
                   
             }
-            kw=(Token)match(input,54,FollowSets000.FOLLOW_54_in_ruleulonglong_type8361); if (state.failed) return current;
+            kw=(Token)match(input,54,FollowSets000.FOLLOW_54_in_ruleulonglong_type8399); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                       current.merge(kw);
                       newLeafNode(kw, grammarAccess.getUlonglong_typeAccess().getLongKeyword_1()); 
                   
             }
-            kw=(Token)match(input,54,FollowSets000.FOLLOW_54_in_ruleulonglong_type8374); if (state.failed) return current;
+            kw=(Token)match(input,54,FollowSets000.FOLLOW_54_in_ruleulonglong_type8412); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                       current.merge(kw);
@@ -10832,7 +10872,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulecharstr_type"
-    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3838:1: entryRulecharstr_type returns [EObject current=null] : iv_rulecharstr_type= rulecharstr_type EOF ;
+    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3860:1: entryRulecharstr_type returns [EObject current=null] : iv_rulecharstr_type= rulecharstr_type EOF ;
     public final EObject entryRulecharstr_type() throws RecognitionException {
         EObject current = null;
 
@@ -10840,13 +10880,13 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3839:2: (iv_rulecharstr_type= rulecharstr_type EOF )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3840:2: iv_rulecharstr_type= rulecharstr_type EOF
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3861:2: (iv_rulecharstr_type= rulecharstr_type EOF )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3862:2: iv_rulecharstr_type= rulecharstr_type EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getCharstr_typeRule()); 
             }
-            pushFollow(FollowSets000.FOLLOW_rulecharstr_type_in_entryRulecharstr_type8414);
+            pushFollow(FollowSets000.FOLLOW_rulecharstr_type_in_entryRulecharstr_type8452);
             iv_rulecharstr_type=rulecharstr_type();
 
             state._fsp--;
@@ -10854,7 +10894,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_rulecharstr_type; 
             }
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRulecharstr_type8424); if (state.failed) return current;
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRulecharstr_type8462); if (state.failed) return current;
 
             }
 
@@ -10872,7 +10912,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulecharstr_type"
-    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3847:1: rulecharstr_type returns [EObject current=null] : ( ( (lv_kind_0_0= rulechar_type ) ) | ( (lv_kind_1_0= rulewide_char_type ) ) | ( (lv_kind_2_0= rulestring_type ) ) | ( (lv_kind_3_0= rulewide_string_type ) ) ) ;
+    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3869:1: rulecharstr_type returns [EObject current=null] : ( ( (lv_kind_0_0= rulechar_type ) ) | ( (lv_kind_1_0= rulewide_char_type ) ) | ( (lv_kind_2_0= rulestring_type ) ) | ( (lv_kind_3_0= rulewide_string_type ) ) ) ;
     public final EObject rulecharstr_type() throws RecognitionException {
         EObject current = null;
 
@@ -10888,10 +10928,10 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3850:28: ( ( ( (lv_kind_0_0= rulechar_type ) ) | ( (lv_kind_1_0= rulewide_char_type ) ) | ( (lv_kind_2_0= rulestring_type ) ) | ( (lv_kind_3_0= rulewide_string_type ) ) ) )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3851:1: ( ( (lv_kind_0_0= rulechar_type ) ) | ( (lv_kind_1_0= rulewide_char_type ) ) | ( (lv_kind_2_0= rulestring_type ) ) | ( (lv_kind_3_0= rulewide_string_type ) ) )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3872:28: ( ( ( (lv_kind_0_0= rulechar_type ) ) | ( (lv_kind_1_0= rulewide_char_type ) ) | ( (lv_kind_2_0= rulestring_type ) ) | ( (lv_kind_3_0= rulewide_string_type ) ) ) )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3873:1: ( ( (lv_kind_0_0= rulechar_type ) ) | ( (lv_kind_1_0= rulewide_char_type ) ) | ( (lv_kind_2_0= rulestring_type ) ) | ( (lv_kind_3_0= rulewide_string_type ) ) )
             {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3851:1: ( ( (lv_kind_0_0= rulechar_type ) ) | ( (lv_kind_1_0= rulewide_char_type ) ) | ( (lv_kind_2_0= rulestring_type ) ) | ( (lv_kind_3_0= rulewide_string_type ) ) )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3873:1: ( ( (lv_kind_0_0= rulechar_type ) ) | ( (lv_kind_1_0= rulewide_char_type ) ) | ( (lv_kind_2_0= rulestring_type ) ) | ( (lv_kind_3_0= rulewide_string_type ) ) )
             int alt61=4;
             switch ( input.LA(1) ) {
             case 73:
@@ -10924,20 +10964,20 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
             switch (alt61) {
                 case 1 :
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3851:2: ( (lv_kind_0_0= rulechar_type ) )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3873:2: ( (lv_kind_0_0= rulechar_type ) )
                     {
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3851:2: ( (lv_kind_0_0= rulechar_type ) )
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3852:1: (lv_kind_0_0= rulechar_type )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3873:2: ( (lv_kind_0_0= rulechar_type ) )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3874:1: (lv_kind_0_0= rulechar_type )
                     {
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3852:1: (lv_kind_0_0= rulechar_type )
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3853:3: lv_kind_0_0= rulechar_type
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3874:1: (lv_kind_0_0= rulechar_type )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3875:3: lv_kind_0_0= rulechar_type
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getCharstr_typeAccess().getKindChar_typeEnumRuleCall_0_0()); 
                       	    
                     }
-                    pushFollow(FollowSets000.FOLLOW_rulechar_type_in_rulecharstr_type8470);
+                    pushFollow(FollowSets000.FOLLOW_rulechar_type_in_rulecharstr_type8508);
                     lv_kind_0_0=rulechar_type();
 
                     state._fsp--;
@@ -10965,20 +11005,20 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3870:6: ( (lv_kind_1_0= rulewide_char_type ) )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3892:6: ( (lv_kind_1_0= rulewide_char_type ) )
                     {
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3870:6: ( (lv_kind_1_0= rulewide_char_type ) )
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3871:1: (lv_kind_1_0= rulewide_char_type )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3892:6: ( (lv_kind_1_0= rulewide_char_type ) )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3893:1: (lv_kind_1_0= rulewide_char_type )
                     {
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3871:1: (lv_kind_1_0= rulewide_char_type )
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3872:3: lv_kind_1_0= rulewide_char_type
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3893:1: (lv_kind_1_0= rulewide_char_type )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3894:3: lv_kind_1_0= rulewide_char_type
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getCharstr_typeAccess().getKindWide_char_typeEnumRuleCall_1_0()); 
                       	    
                     }
-                    pushFollow(FollowSets000.FOLLOW_rulewide_char_type_in_rulecharstr_type8497);
+                    pushFollow(FollowSets000.FOLLOW_rulewide_char_type_in_rulecharstr_type8535);
                     lv_kind_1_0=rulewide_char_type();
 
                     state._fsp--;
@@ -11006,20 +11046,20 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3889:6: ( (lv_kind_2_0= rulestring_type ) )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3911:6: ( (lv_kind_2_0= rulestring_type ) )
                     {
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3889:6: ( (lv_kind_2_0= rulestring_type ) )
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3890:1: (lv_kind_2_0= rulestring_type )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3911:6: ( (lv_kind_2_0= rulestring_type ) )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3912:1: (lv_kind_2_0= rulestring_type )
                     {
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3890:1: (lv_kind_2_0= rulestring_type )
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3891:3: lv_kind_2_0= rulestring_type
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3912:1: (lv_kind_2_0= rulestring_type )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3913:3: lv_kind_2_0= rulestring_type
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getCharstr_typeAccess().getKindString_typeEnumRuleCall_2_0()); 
                       	    
                     }
-                    pushFollow(FollowSets000.FOLLOW_rulestring_type_in_rulecharstr_type8524);
+                    pushFollow(FollowSets000.FOLLOW_rulestring_type_in_rulecharstr_type8562);
                     lv_kind_2_0=rulestring_type();
 
                     state._fsp--;
@@ -11047,20 +11087,20 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3908:6: ( (lv_kind_3_0= rulewide_string_type ) )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3930:6: ( (lv_kind_3_0= rulewide_string_type ) )
                     {
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3908:6: ( (lv_kind_3_0= rulewide_string_type ) )
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3909:1: (lv_kind_3_0= rulewide_string_type )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3930:6: ( (lv_kind_3_0= rulewide_string_type ) )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3931:1: (lv_kind_3_0= rulewide_string_type )
                     {
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3909:1: (lv_kind_3_0= rulewide_string_type )
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3910:3: lv_kind_3_0= rulewide_string_type
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3931:1: (lv_kind_3_0= rulewide_string_type )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3932:3: lv_kind_3_0= rulewide_string_type
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getCharstr_typeAccess().getKindWide_string_typeEnumRuleCall_3_0()); 
                       	    
                     }
-                    pushFollow(FollowSets000.FOLLOW_rulewide_string_type_in_rulecharstr_type8551);
+                    pushFollow(FollowSets000.FOLLOW_rulewide_string_type_in_rulecharstr_type8589);
                     lv_kind_3_0=rulewide_string_type();
 
                     state._fsp--;
@@ -11110,7 +11150,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleother_type"
-    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3934:1: entryRuleother_type returns [EObject current=null] : iv_ruleother_type= ruleother_type EOF ;
+    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3956:1: entryRuleother_type returns [EObject current=null] : iv_ruleother_type= ruleother_type EOF ;
     public final EObject entryRuleother_type() throws RecognitionException {
         EObject current = null;
 
@@ -11118,13 +11158,13 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3935:2: (iv_ruleother_type= ruleother_type EOF )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3936:2: iv_ruleother_type= ruleother_type EOF
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3957:2: (iv_ruleother_type= ruleother_type EOF )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3958:2: iv_ruleother_type= ruleother_type EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getOther_typeRule()); 
             }
-            pushFollow(FollowSets000.FOLLOW_ruleother_type_in_entryRuleother_type8587);
+            pushFollow(FollowSets000.FOLLOW_ruleother_type_in_entryRuleother_type8625);
             iv_ruleother_type=ruleother_type();
 
             state._fsp--;
@@ -11132,7 +11172,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleother_type; 
             }
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleother_type8597); if (state.failed) return current;
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleother_type8635); if (state.failed) return current;
 
             }
 
@@ -11150,7 +11190,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleother_type"
-    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3943:1: ruleother_type returns [EObject current=null] : ( ( (lv_kind_0_0= ruleboolean_type ) ) | ( (lv_kind_1_0= ruleoctet_type ) ) | ( (lv_kind_2_0= ruleany_type ) ) ) ;
+    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3965:1: ruleother_type returns [EObject current=null] : ( ( (lv_kind_0_0= ruleboolean_type ) ) | ( (lv_kind_1_0= ruleoctet_type ) ) | ( (lv_kind_2_0= ruleany_type ) ) ) ;
     public final EObject ruleother_type() throws RecognitionException {
         EObject current = null;
 
@@ -11164,10 +11204,10 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3946:28: ( ( ( (lv_kind_0_0= ruleboolean_type ) ) | ( (lv_kind_1_0= ruleoctet_type ) ) | ( (lv_kind_2_0= ruleany_type ) ) ) )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3947:1: ( ( (lv_kind_0_0= ruleboolean_type ) ) | ( (lv_kind_1_0= ruleoctet_type ) ) | ( (lv_kind_2_0= ruleany_type ) ) )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3968:28: ( ( ( (lv_kind_0_0= ruleboolean_type ) ) | ( (lv_kind_1_0= ruleoctet_type ) ) | ( (lv_kind_2_0= ruleany_type ) ) ) )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3969:1: ( ( (lv_kind_0_0= ruleboolean_type ) ) | ( (lv_kind_1_0= ruleoctet_type ) ) | ( (lv_kind_2_0= ruleany_type ) ) )
             {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3947:1: ( ( (lv_kind_0_0= ruleboolean_type ) ) | ( (lv_kind_1_0= ruleoctet_type ) ) | ( (lv_kind_2_0= ruleany_type ) ) )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3969:1: ( ( (lv_kind_0_0= ruleboolean_type ) ) | ( (lv_kind_1_0= ruleoctet_type ) ) | ( (lv_kind_2_0= ruleany_type ) ) )
             int alt62=3;
             switch ( input.LA(1) ) {
             case 75:
@@ -11195,20 +11235,20 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
             switch (alt62) {
                 case 1 :
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3947:2: ( (lv_kind_0_0= ruleboolean_type ) )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3969:2: ( (lv_kind_0_0= ruleboolean_type ) )
                     {
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3947:2: ( (lv_kind_0_0= ruleboolean_type ) )
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3948:1: (lv_kind_0_0= ruleboolean_type )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3969:2: ( (lv_kind_0_0= ruleboolean_type ) )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3970:1: (lv_kind_0_0= ruleboolean_type )
                     {
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3948:1: (lv_kind_0_0= ruleboolean_type )
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3949:3: lv_kind_0_0= ruleboolean_type
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3970:1: (lv_kind_0_0= ruleboolean_type )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3971:3: lv_kind_0_0= ruleboolean_type
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getOther_typeAccess().getKindBoolean_typeEnumRuleCall_0_0()); 
                       	    
                     }
-                    pushFollow(FollowSets000.FOLLOW_ruleboolean_type_in_ruleother_type8643);
+                    pushFollow(FollowSets000.FOLLOW_ruleboolean_type_in_ruleother_type8681);
                     lv_kind_0_0=ruleboolean_type();
 
                     state._fsp--;
@@ -11236,20 +11276,20 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3966:6: ( (lv_kind_1_0= ruleoctet_type ) )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3988:6: ( (lv_kind_1_0= ruleoctet_type ) )
                     {
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3966:6: ( (lv_kind_1_0= ruleoctet_type ) )
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3967:1: (lv_kind_1_0= ruleoctet_type )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3988:6: ( (lv_kind_1_0= ruleoctet_type ) )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3989:1: (lv_kind_1_0= ruleoctet_type )
                     {
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3967:1: (lv_kind_1_0= ruleoctet_type )
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3968:3: lv_kind_1_0= ruleoctet_type
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3989:1: (lv_kind_1_0= ruleoctet_type )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3990:3: lv_kind_1_0= ruleoctet_type
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getOther_typeAccess().getKindOctet_typeEnumRuleCall_1_0()); 
                       	    
                     }
-                    pushFollow(FollowSets000.FOLLOW_ruleoctet_type_in_ruleother_type8670);
+                    pushFollow(FollowSets000.FOLLOW_ruleoctet_type_in_ruleother_type8708);
                     lv_kind_1_0=ruleoctet_type();
 
                     state._fsp--;
@@ -11277,20 +11317,20 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3985:6: ( (lv_kind_2_0= ruleany_type ) )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4007:6: ( (lv_kind_2_0= ruleany_type ) )
                     {
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3985:6: ( (lv_kind_2_0= ruleany_type ) )
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3986:1: (lv_kind_2_0= ruleany_type )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4007:6: ( (lv_kind_2_0= ruleany_type ) )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4008:1: (lv_kind_2_0= ruleany_type )
                     {
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3986:1: (lv_kind_2_0= ruleany_type )
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:3987:3: lv_kind_2_0= ruleany_type
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4008:1: (lv_kind_2_0= ruleany_type )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4009:3: lv_kind_2_0= ruleany_type
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getOther_typeAccess().getKindAny_typeEnumRuleCall_2_0()); 
                       	    
                     }
-                    pushFollow(FollowSets000.FOLLOW_ruleany_type_in_ruleother_type8697);
+                    pushFollow(FollowSets000.FOLLOW_ruleany_type_in_ruleother_type8735);
                     lv_kind_2_0=ruleany_type();
 
                     state._fsp--;
@@ -11340,7 +11380,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulefixed_pt_const_type"
-    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4011:1: entryRulefixed_pt_const_type returns [EObject current=null] : iv_rulefixed_pt_const_type= rulefixed_pt_const_type EOF ;
+    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4033:1: entryRulefixed_pt_const_type returns [EObject current=null] : iv_rulefixed_pt_const_type= rulefixed_pt_const_type EOF ;
     public final EObject entryRulefixed_pt_const_type() throws RecognitionException {
         EObject current = null;
 
@@ -11348,13 +11388,13 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4012:2: (iv_rulefixed_pt_const_type= rulefixed_pt_const_type EOF )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4013:2: iv_rulefixed_pt_const_type= rulefixed_pt_const_type EOF
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4034:2: (iv_rulefixed_pt_const_type= rulefixed_pt_const_type EOF )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4035:2: iv_rulefixed_pt_const_type= rulefixed_pt_const_type EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getFixed_pt_const_typeRule()); 
             }
-            pushFollow(FollowSets000.FOLLOW_rulefixed_pt_const_type_in_entryRulefixed_pt_const_type8733);
+            pushFollow(FollowSets000.FOLLOW_rulefixed_pt_const_type_in_entryRulefixed_pt_const_type8771);
             iv_rulefixed_pt_const_type=rulefixed_pt_const_type();
 
             state._fsp--;
@@ -11362,7 +11402,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_rulefixed_pt_const_type; 
             }
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRulefixed_pt_const_type8743); if (state.failed) return current;
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRulefixed_pt_const_type8781); if (state.failed) return current;
 
             }
 
@@ -11380,7 +11420,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulefixed_pt_const_type"
-    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4020:1: rulefixed_pt_const_type returns [EObject current=null] : ( () otherlv_1= 'fixed' ) ;
+    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4042:1: rulefixed_pt_const_type returns [EObject current=null] : ( () otherlv_1= 'fixed' ) ;
     public final EObject rulefixed_pt_const_type() throws RecognitionException {
         EObject current = null;
 
@@ -11389,14 +11429,14 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4023:28: ( ( () otherlv_1= 'fixed' ) )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4024:1: ( () otherlv_1= 'fixed' )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4045:28: ( ( () otherlv_1= 'fixed' ) )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4046:1: ( () otherlv_1= 'fixed' )
             {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4024:1: ( () otherlv_1= 'fixed' )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4024:2: () otherlv_1= 'fixed'
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4046:1: ( () otherlv_1= 'fixed' )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4046:2: () otherlv_1= 'fixed'
             {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4024:2: ()
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4025:2: 
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4046:2: ()
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4047:2: 
             {
             if ( state.backtracking==0 ) {
                
@@ -11413,7 +11453,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,53,FollowSets000.FOLLOW_53_in_rulefixed_pt_const_type8792); if (state.failed) return current;
+            otherlv_1=(Token)match(input,53,FollowSets000.FOLLOW_53_in_rulefixed_pt_const_type8830); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_1, grammarAccess.getFixed_pt_const_typeAccess().getFixedKeyword_1());
@@ -11442,7 +11482,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleconst_exp"
-    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4045:1: entryRuleconst_exp returns [EObject current=null] : iv_ruleconst_exp= ruleconst_exp EOF ;
+    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4067:1: entryRuleconst_exp returns [EObject current=null] : iv_ruleconst_exp= ruleconst_exp EOF ;
     public final EObject entryRuleconst_exp() throws RecognitionException {
         EObject current = null;
 
@@ -11450,13 +11490,13 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4046:2: (iv_ruleconst_exp= ruleconst_exp EOF )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4047:2: iv_ruleconst_exp= ruleconst_exp EOF
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4068:2: (iv_ruleconst_exp= ruleconst_exp EOF )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4069:2: iv_ruleconst_exp= ruleconst_exp EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getConst_expRule()); 
             }
-            pushFollow(FollowSets000.FOLLOW_ruleconst_exp_in_entryRuleconst_exp8828);
+            pushFollow(FollowSets000.FOLLOW_ruleconst_exp_in_entryRuleconst_exp8866);
             iv_ruleconst_exp=ruleconst_exp();
 
             state._fsp--;
@@ -11464,7 +11504,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleconst_exp; 
             }
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleconst_exp8838); if (state.failed) return current;
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleconst_exp8876); if (state.failed) return current;
 
             }
 
@@ -11482,7 +11522,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleconst_exp"
-    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4054:1: ruleconst_exp returns [EObject current=null] : this_or_expr_0= ruleor_expr ;
+    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4076:1: ruleconst_exp returns [EObject current=null] : this_or_expr_0= ruleor_expr ;
     public final EObject ruleconst_exp() throws RecognitionException {
         EObject current = null;
 
@@ -11492,8 +11532,8 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4057:28: (this_or_expr_0= ruleor_expr )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4059:2: this_or_expr_0= ruleor_expr
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4079:28: (this_or_expr_0= ruleor_expr )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4081:2: this_or_expr_0= ruleor_expr
             {
             if ( state.backtracking==0 ) {
                
@@ -11505,7 +11545,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
                       newCompositeNode(grammarAccess.getConst_expAccess().getOr_exprParserRuleCall()); 
                   
             }
-            pushFollow(FollowSets000.FOLLOW_ruleor_expr_in_ruleconst_exp8887);
+            pushFollow(FollowSets000.FOLLOW_ruleor_expr_in_ruleconst_exp8925);
             this_or_expr_0=ruleor_expr();
 
             state._fsp--;
@@ -11536,7 +11576,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleor_expr"
-    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4078:1: entryRuleor_expr returns [EObject current=null] : iv_ruleor_expr= ruleor_expr EOF ;
+    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4100:1: entryRuleor_expr returns [EObject current=null] : iv_ruleor_expr= ruleor_expr EOF ;
     public final EObject entryRuleor_expr() throws RecognitionException {
         EObject current = null;
 
@@ -11544,13 +11584,13 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4079:2: (iv_ruleor_expr= ruleor_expr EOF )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4080:2: iv_ruleor_expr= ruleor_expr EOF
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4101:2: (iv_ruleor_expr= ruleor_expr EOF )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4102:2: iv_ruleor_expr= ruleor_expr EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getOr_exprRule()); 
             }
-            pushFollow(FollowSets000.FOLLOW_ruleor_expr_in_entryRuleor_expr8921);
+            pushFollow(FollowSets000.FOLLOW_ruleor_expr_in_entryRuleor_expr8959);
             iv_ruleor_expr=ruleor_expr();
 
             state._fsp--;
@@ -11558,7 +11598,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleor_expr; 
             }
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleor_expr8931); if (state.failed) return current;
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleor_expr8969); if (state.failed) return current;
 
             }
 
@@ -11576,7 +11616,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleor_expr"
-    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4087:1: ruleor_expr returns [EObject current=null] : (this_xor_expr_0= rulexor_expr ( () ( (lv_operator_2_0= '|' ) ) ( (lv_right_3_0= rulexor_expr ) ) )* ) ;
+    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4109:1: ruleor_expr returns [EObject current=null] : (this_xor_expr_0= rulexor_expr ( () ( (lv_operator_2_0= '|' ) ) ( (lv_right_3_0= rulexor_expr ) ) )* ) ;
     public final EObject ruleor_expr() throws RecognitionException {
         EObject current = null;
 
@@ -11589,11 +11629,11 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4090:28: ( (this_xor_expr_0= rulexor_expr ( () ( (lv_operator_2_0= '|' ) ) ( (lv_right_3_0= rulexor_expr ) ) )* ) )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4091:1: (this_xor_expr_0= rulexor_expr ( () ( (lv_operator_2_0= '|' ) ) ( (lv_right_3_0= rulexor_expr ) ) )* )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4112:28: ( (this_xor_expr_0= rulexor_expr ( () ( (lv_operator_2_0= '|' ) ) ( (lv_right_3_0= rulexor_expr ) ) )* ) )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4113:1: (this_xor_expr_0= rulexor_expr ( () ( (lv_operator_2_0= '|' ) ) ( (lv_right_3_0= rulexor_expr ) ) )* )
             {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4091:1: (this_xor_expr_0= rulexor_expr ( () ( (lv_operator_2_0= '|' ) ) ( (lv_right_3_0= rulexor_expr ) ) )* )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4092:2: this_xor_expr_0= rulexor_expr ( () ( (lv_operator_2_0= '|' ) ) ( (lv_right_3_0= rulexor_expr ) ) )*
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4113:1: (this_xor_expr_0= rulexor_expr ( () ( (lv_operator_2_0= '|' ) ) ( (lv_right_3_0= rulexor_expr ) ) )* )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4114:2: this_xor_expr_0= rulexor_expr ( () ( (lv_operator_2_0= '|' ) ) ( (lv_right_3_0= rulexor_expr ) ) )*
             {
             if ( state.backtracking==0 ) {
                
@@ -11605,7 +11645,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
                       newCompositeNode(grammarAccess.getOr_exprAccess().getXor_exprParserRuleCall_0()); 
                   
             }
-            pushFollow(FollowSets000.FOLLOW_rulexor_expr_in_ruleor_expr8981);
+            pushFollow(FollowSets000.FOLLOW_rulexor_expr_in_ruleor_expr9019);
             this_xor_expr_0=rulexor_expr();
 
             state._fsp--;
@@ -11616,7 +11656,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
                       afterParserOrEnumRuleCall();
                   
             }
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4103:1: ( () ( (lv_operator_2_0= '|' ) ) ( (lv_right_3_0= rulexor_expr ) ) )*
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4125:1: ( () ( (lv_operator_2_0= '|' ) ) ( (lv_right_3_0= rulexor_expr ) ) )*
             loop63:
             do {
                 int alt63=2;
@@ -11629,10 +11669,10 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
                 switch (alt63) {
             	case 1 :
-            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4103:2: () ( (lv_operator_2_0= '|' ) ) ( (lv_right_3_0= rulexor_expr ) )
+            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4125:2: () ( (lv_operator_2_0= '|' ) ) ( (lv_right_3_0= rulexor_expr ) )
             	    {
-            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4103:2: ()
-            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4104:2: 
+            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4125:2: ()
+            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4126:2: 
             	    {
             	    if ( state.backtracking==0 ) {
             	       
@@ -11649,13 +11689,13 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4112:2: ( (lv_operator_2_0= '|' ) )
-            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4113:1: (lv_operator_2_0= '|' )
+            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4134:2: ( (lv_operator_2_0= '|' ) )
+            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4135:1: (lv_operator_2_0= '|' )
             	    {
-            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4113:1: (lv_operator_2_0= '|' )
-            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4114:3: lv_operator_2_0= '|'
+            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4135:1: (lv_operator_2_0= '|' )
+            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4136:3: lv_operator_2_0= '|'
             	    {
-            	    lv_operator_2_0=(Token)match(input,58,FollowSets000.FOLLOW_58_in_ruleor_expr9011); if (state.failed) return current;
+            	    lv_operator_2_0=(Token)match(input,58,FollowSets000.FOLLOW_58_in_ruleor_expr9049); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	              newLeafNode(lv_operator_2_0, grammarAccess.getOr_exprAccess().getOperatorVerticalLineKeyword_1_1_0());
@@ -11675,18 +11715,18 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4127:2: ( (lv_right_3_0= rulexor_expr ) )
-            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4128:1: (lv_right_3_0= rulexor_expr )
+            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4149:2: ( (lv_right_3_0= rulexor_expr ) )
+            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4150:1: (lv_right_3_0= rulexor_expr )
             	    {
-            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4128:1: (lv_right_3_0= rulexor_expr )
-            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4129:3: lv_right_3_0= rulexor_expr
+            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4150:1: (lv_right_3_0= rulexor_expr )
+            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4151:3: lv_right_3_0= rulexor_expr
             	    {
             	    if ( state.backtracking==0 ) {
             	       
             	      	        newCompositeNode(grammarAccess.getOr_exprAccess().getRightXor_exprParserRuleCall_1_2_0()); 
             	      	    
             	    }
-            	    pushFollow(FollowSets000.FOLLOW_rulexor_expr_in_ruleor_expr9045);
+            	    pushFollow(FollowSets000.FOLLOW_rulexor_expr_in_ruleor_expr9083);
             	    lv_right_3_0=rulexor_expr();
 
             	    state._fsp--;
@@ -11742,7 +11782,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulexor_expr"
-    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4153:1: entryRulexor_expr returns [EObject current=null] : iv_rulexor_expr= rulexor_expr EOF ;
+    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4175:1: entryRulexor_expr returns [EObject current=null] : iv_rulexor_expr= rulexor_expr EOF ;
     public final EObject entryRulexor_expr() throws RecognitionException {
         EObject current = null;
 
@@ -11750,13 +11790,13 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4154:2: (iv_rulexor_expr= rulexor_expr EOF )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4155:2: iv_rulexor_expr= rulexor_expr EOF
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4176:2: (iv_rulexor_expr= rulexor_expr EOF )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4177:2: iv_rulexor_expr= rulexor_expr EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getXor_exprRule()); 
             }
-            pushFollow(FollowSets000.FOLLOW_rulexor_expr_in_entryRulexor_expr9083);
+            pushFollow(FollowSets000.FOLLOW_rulexor_expr_in_entryRulexor_expr9121);
             iv_rulexor_expr=rulexor_expr();
 
             state._fsp--;
@@ -11764,7 +11804,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_rulexor_expr; 
             }
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRulexor_expr9093); if (state.failed) return current;
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRulexor_expr9131); if (state.failed) return current;
 
             }
 
@@ -11782,7 +11822,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulexor_expr"
-    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4162:1: rulexor_expr returns [EObject current=null] : (this_and_expr_0= ruleand_expr ( () ( (lv_operator_2_0= '^' ) ) ( (lv_right_3_0= ruleand_expr ) ) )* ) ;
+    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4184:1: rulexor_expr returns [EObject current=null] : (this_and_expr_0= ruleand_expr ( () ( (lv_operator_2_0= '^' ) ) ( (lv_right_3_0= ruleand_expr ) ) )* ) ;
     public final EObject rulexor_expr() throws RecognitionException {
         EObject current = null;
 
@@ -11795,11 +11835,11 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4165:28: ( (this_and_expr_0= ruleand_expr ( () ( (lv_operator_2_0= '^' ) ) ( (lv_right_3_0= ruleand_expr ) ) )* ) )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4166:1: (this_and_expr_0= ruleand_expr ( () ( (lv_operator_2_0= '^' ) ) ( (lv_right_3_0= ruleand_expr ) ) )* )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4187:28: ( (this_and_expr_0= ruleand_expr ( () ( (lv_operator_2_0= '^' ) ) ( (lv_right_3_0= ruleand_expr ) ) )* ) )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4188:1: (this_and_expr_0= ruleand_expr ( () ( (lv_operator_2_0= '^' ) ) ( (lv_right_3_0= ruleand_expr ) ) )* )
             {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4166:1: (this_and_expr_0= ruleand_expr ( () ( (lv_operator_2_0= '^' ) ) ( (lv_right_3_0= ruleand_expr ) ) )* )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4167:2: this_and_expr_0= ruleand_expr ( () ( (lv_operator_2_0= '^' ) ) ( (lv_right_3_0= ruleand_expr ) ) )*
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4188:1: (this_and_expr_0= ruleand_expr ( () ( (lv_operator_2_0= '^' ) ) ( (lv_right_3_0= ruleand_expr ) ) )* )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4189:2: this_and_expr_0= ruleand_expr ( () ( (lv_operator_2_0= '^' ) ) ( (lv_right_3_0= ruleand_expr ) ) )*
             {
             if ( state.backtracking==0 ) {
                
@@ -11811,7 +11851,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
                       newCompositeNode(grammarAccess.getXor_exprAccess().getAnd_exprParserRuleCall_0()); 
                   
             }
-            pushFollow(FollowSets000.FOLLOW_ruleand_expr_in_rulexor_expr9143);
+            pushFollow(FollowSets000.FOLLOW_ruleand_expr_in_rulexor_expr9181);
             this_and_expr_0=ruleand_expr();
 
             state._fsp--;
@@ -11822,7 +11862,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
                       afterParserOrEnumRuleCall();
                   
             }
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4178:1: ( () ( (lv_operator_2_0= '^' ) ) ( (lv_right_3_0= ruleand_expr ) ) )*
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4200:1: ( () ( (lv_operator_2_0= '^' ) ) ( (lv_right_3_0= ruleand_expr ) ) )*
             loop64:
             do {
                 int alt64=2;
@@ -11835,10 +11875,10 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
                 switch (alt64) {
             	case 1 :
-            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4178:2: () ( (lv_operator_2_0= '^' ) ) ( (lv_right_3_0= ruleand_expr ) )
+            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4200:2: () ( (lv_operator_2_0= '^' ) ) ( (lv_right_3_0= ruleand_expr ) )
             	    {
-            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4178:2: ()
-            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4179:2: 
+            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4200:2: ()
+            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4201:2: 
             	    {
             	    if ( state.backtracking==0 ) {
             	       
@@ -11855,13 +11895,13 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4187:2: ( (lv_operator_2_0= '^' ) )
-            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4188:1: (lv_operator_2_0= '^' )
+            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4209:2: ( (lv_operator_2_0= '^' ) )
+            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4210:1: (lv_operator_2_0= '^' )
             	    {
-            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4188:1: (lv_operator_2_0= '^' )
-            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4189:3: lv_operator_2_0= '^'
+            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4210:1: (lv_operator_2_0= '^' )
+            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4211:3: lv_operator_2_0= '^'
             	    {
-            	    lv_operator_2_0=(Token)match(input,59,FollowSets000.FOLLOW_59_in_rulexor_expr9173); if (state.failed) return current;
+            	    lv_operator_2_0=(Token)match(input,59,FollowSets000.FOLLOW_59_in_rulexor_expr9211); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	              newLeafNode(lv_operator_2_0, grammarAccess.getXor_exprAccess().getOperatorCircumflexAccentKeyword_1_1_0());
@@ -11881,18 +11921,18 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4202:2: ( (lv_right_3_0= ruleand_expr ) )
-            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4203:1: (lv_right_3_0= ruleand_expr )
+            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4224:2: ( (lv_right_3_0= ruleand_expr ) )
+            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4225:1: (lv_right_3_0= ruleand_expr )
             	    {
-            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4203:1: (lv_right_3_0= ruleand_expr )
-            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4204:3: lv_right_3_0= ruleand_expr
+            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4225:1: (lv_right_3_0= ruleand_expr )
+            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4226:3: lv_right_3_0= ruleand_expr
             	    {
             	    if ( state.backtracking==0 ) {
             	       
             	      	        newCompositeNode(grammarAccess.getXor_exprAccess().getRightAnd_exprParserRuleCall_1_2_0()); 
             	      	    
             	    }
-            	    pushFollow(FollowSets000.FOLLOW_ruleand_expr_in_rulexor_expr9207);
+            	    pushFollow(FollowSets000.FOLLOW_ruleand_expr_in_rulexor_expr9245);
             	    lv_right_3_0=ruleand_expr();
 
             	    state._fsp--;
@@ -11948,7 +11988,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleand_expr"
-    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4228:1: entryRuleand_expr returns [EObject current=null] : iv_ruleand_expr= ruleand_expr EOF ;
+    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4250:1: entryRuleand_expr returns [EObject current=null] : iv_ruleand_expr= ruleand_expr EOF ;
     public final EObject entryRuleand_expr() throws RecognitionException {
         EObject current = null;
 
@@ -11956,13 +11996,13 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4229:2: (iv_ruleand_expr= ruleand_expr EOF )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4230:2: iv_ruleand_expr= ruleand_expr EOF
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4251:2: (iv_ruleand_expr= ruleand_expr EOF )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4252:2: iv_ruleand_expr= ruleand_expr EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getAnd_exprRule()); 
             }
-            pushFollow(FollowSets000.FOLLOW_ruleand_expr_in_entryRuleand_expr9245);
+            pushFollow(FollowSets000.FOLLOW_ruleand_expr_in_entryRuleand_expr9283);
             iv_ruleand_expr=ruleand_expr();
 
             state._fsp--;
@@ -11970,7 +12010,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleand_expr; 
             }
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleand_expr9255); if (state.failed) return current;
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleand_expr9293); if (state.failed) return current;
 
             }
 
@@ -11988,7 +12028,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleand_expr"
-    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4237:1: ruleand_expr returns [EObject current=null] : (this_shift_expr_0= ruleshift_expr ( () ( (lv_operator_2_0= '&' ) ) ( (lv_right_3_0= ruleshift_expr ) ) )* ) ;
+    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4259:1: ruleand_expr returns [EObject current=null] : (this_shift_expr_0= ruleshift_expr ( () ( (lv_operator_2_0= '&' ) ) ( (lv_right_3_0= ruleshift_expr ) ) )* ) ;
     public final EObject ruleand_expr() throws RecognitionException {
         EObject current = null;
 
@@ -12001,11 +12041,11 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4240:28: ( (this_shift_expr_0= ruleshift_expr ( () ( (lv_operator_2_0= '&' ) ) ( (lv_right_3_0= ruleshift_expr ) ) )* ) )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4241:1: (this_shift_expr_0= ruleshift_expr ( () ( (lv_operator_2_0= '&' ) ) ( (lv_right_3_0= ruleshift_expr ) ) )* )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4262:28: ( (this_shift_expr_0= ruleshift_expr ( () ( (lv_operator_2_0= '&' ) ) ( (lv_right_3_0= ruleshift_expr ) ) )* ) )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4263:1: (this_shift_expr_0= ruleshift_expr ( () ( (lv_operator_2_0= '&' ) ) ( (lv_right_3_0= ruleshift_expr ) ) )* )
             {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4241:1: (this_shift_expr_0= ruleshift_expr ( () ( (lv_operator_2_0= '&' ) ) ( (lv_right_3_0= ruleshift_expr ) ) )* )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4242:2: this_shift_expr_0= ruleshift_expr ( () ( (lv_operator_2_0= '&' ) ) ( (lv_right_3_0= ruleshift_expr ) ) )*
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4263:1: (this_shift_expr_0= ruleshift_expr ( () ( (lv_operator_2_0= '&' ) ) ( (lv_right_3_0= ruleshift_expr ) ) )* )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4264:2: this_shift_expr_0= ruleshift_expr ( () ( (lv_operator_2_0= '&' ) ) ( (lv_right_3_0= ruleshift_expr ) ) )*
             {
             if ( state.backtracking==0 ) {
                
@@ -12017,7 +12057,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
                       newCompositeNode(grammarAccess.getAnd_exprAccess().getShift_exprParserRuleCall_0()); 
                   
             }
-            pushFollow(FollowSets000.FOLLOW_ruleshift_expr_in_ruleand_expr9305);
+            pushFollow(FollowSets000.FOLLOW_ruleshift_expr_in_ruleand_expr9343);
             this_shift_expr_0=ruleshift_expr();
 
             state._fsp--;
@@ -12028,7 +12068,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
                       afterParserOrEnumRuleCall();
                   
             }
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4253:1: ( () ( (lv_operator_2_0= '&' ) ) ( (lv_right_3_0= ruleshift_expr ) ) )*
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4275:1: ( () ( (lv_operator_2_0= '&' ) ) ( (lv_right_3_0= ruleshift_expr ) ) )*
             loop65:
             do {
                 int alt65=2;
@@ -12041,10 +12081,10 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
                 switch (alt65) {
             	case 1 :
-            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4253:2: () ( (lv_operator_2_0= '&' ) ) ( (lv_right_3_0= ruleshift_expr ) )
+            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4275:2: () ( (lv_operator_2_0= '&' ) ) ( (lv_right_3_0= ruleshift_expr ) )
             	    {
-            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4253:2: ()
-            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4254:2: 
+            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4275:2: ()
+            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4276:2: 
             	    {
             	    if ( state.backtracking==0 ) {
             	       
@@ -12061,13 +12101,13 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4262:2: ( (lv_operator_2_0= '&' ) )
-            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4263:1: (lv_operator_2_0= '&' )
+            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4284:2: ( (lv_operator_2_0= '&' ) )
+            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4285:1: (lv_operator_2_0= '&' )
             	    {
-            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4263:1: (lv_operator_2_0= '&' )
-            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4264:3: lv_operator_2_0= '&'
+            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4285:1: (lv_operator_2_0= '&' )
+            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4286:3: lv_operator_2_0= '&'
             	    {
-            	    lv_operator_2_0=(Token)match(input,60,FollowSets000.FOLLOW_60_in_ruleand_expr9335); if (state.failed) return current;
+            	    lv_operator_2_0=(Token)match(input,60,FollowSets000.FOLLOW_60_in_ruleand_expr9373); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	              newLeafNode(lv_operator_2_0, grammarAccess.getAnd_exprAccess().getOperatorAmpersandKeyword_1_1_0());
@@ -12087,18 +12127,18 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4277:2: ( (lv_right_3_0= ruleshift_expr ) )
-            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4278:1: (lv_right_3_0= ruleshift_expr )
+            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4299:2: ( (lv_right_3_0= ruleshift_expr ) )
+            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4300:1: (lv_right_3_0= ruleshift_expr )
             	    {
-            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4278:1: (lv_right_3_0= ruleshift_expr )
-            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4279:3: lv_right_3_0= ruleshift_expr
+            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4300:1: (lv_right_3_0= ruleshift_expr )
+            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4301:3: lv_right_3_0= ruleshift_expr
             	    {
             	    if ( state.backtracking==0 ) {
             	       
             	      	        newCompositeNode(grammarAccess.getAnd_exprAccess().getRightShift_exprParserRuleCall_1_2_0()); 
             	      	    
             	    }
-            	    pushFollow(FollowSets000.FOLLOW_ruleshift_expr_in_ruleand_expr9369);
+            	    pushFollow(FollowSets000.FOLLOW_ruleshift_expr_in_ruleand_expr9407);
             	    lv_right_3_0=ruleshift_expr();
 
             	    state._fsp--;
@@ -12154,7 +12194,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleshift_expr"
-    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4303:1: entryRuleshift_expr returns [EObject current=null] : iv_ruleshift_expr= ruleshift_expr EOF ;
+    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4325:1: entryRuleshift_expr returns [EObject current=null] : iv_ruleshift_expr= ruleshift_expr EOF ;
     public final EObject entryRuleshift_expr() throws RecognitionException {
         EObject current = null;
 
@@ -12162,13 +12202,13 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4304:2: (iv_ruleshift_expr= ruleshift_expr EOF )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4305:2: iv_ruleshift_expr= ruleshift_expr EOF
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4326:2: (iv_ruleshift_expr= ruleshift_expr EOF )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4327:2: iv_ruleshift_expr= ruleshift_expr EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getShift_exprRule()); 
             }
-            pushFollow(FollowSets000.FOLLOW_ruleshift_expr_in_entryRuleshift_expr9407);
+            pushFollow(FollowSets000.FOLLOW_ruleshift_expr_in_entryRuleshift_expr9445);
             iv_ruleshift_expr=ruleshift_expr();
 
             state._fsp--;
@@ -12176,7 +12216,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleshift_expr; 
             }
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleshift_expr9417); if (state.failed) return current;
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleshift_expr9455); if (state.failed) return current;
 
             }
 
@@ -12194,7 +12234,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleshift_expr"
-    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4312:1: ruleshift_expr returns [EObject current=null] : (this_add_expr_0= ruleadd_expr ( () ( ( (lv_operator_2_1= '>>' | lv_operator_2_2= '<<' ) ) ) ( (lv_right_3_0= ruleadd_expr ) ) )* ) ;
+    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4334:1: ruleshift_expr returns [EObject current=null] : (this_add_expr_0= ruleadd_expr ( () ( ( (lv_operator_2_1= '>>' | lv_operator_2_2= '<<' ) ) ) ( (lv_right_3_0= ruleadd_expr ) ) )* ) ;
     public final EObject ruleshift_expr() throws RecognitionException {
         EObject current = null;
 
@@ -12208,11 +12248,11 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4315:28: ( (this_add_expr_0= ruleadd_expr ( () ( ( (lv_operator_2_1= '>>' | lv_operator_2_2= '<<' ) ) ) ( (lv_right_3_0= ruleadd_expr ) ) )* ) )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4316:1: (this_add_expr_0= ruleadd_expr ( () ( ( (lv_operator_2_1= '>>' | lv_operator_2_2= '<<' ) ) ) ( (lv_right_3_0= ruleadd_expr ) ) )* )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4337:28: ( (this_add_expr_0= ruleadd_expr ( () ( ( (lv_operator_2_1= '>>' | lv_operator_2_2= '<<' ) ) ) ( (lv_right_3_0= ruleadd_expr ) ) )* ) )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4338:1: (this_add_expr_0= ruleadd_expr ( () ( ( (lv_operator_2_1= '>>' | lv_operator_2_2= '<<' ) ) ) ( (lv_right_3_0= ruleadd_expr ) ) )* )
             {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4316:1: (this_add_expr_0= ruleadd_expr ( () ( ( (lv_operator_2_1= '>>' | lv_operator_2_2= '<<' ) ) ) ( (lv_right_3_0= ruleadd_expr ) ) )* )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4317:2: this_add_expr_0= ruleadd_expr ( () ( ( (lv_operator_2_1= '>>' | lv_operator_2_2= '<<' ) ) ) ( (lv_right_3_0= ruleadd_expr ) ) )*
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4338:1: (this_add_expr_0= ruleadd_expr ( () ( ( (lv_operator_2_1= '>>' | lv_operator_2_2= '<<' ) ) ) ( (lv_right_3_0= ruleadd_expr ) ) )* )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4339:2: this_add_expr_0= ruleadd_expr ( () ( ( (lv_operator_2_1= '>>' | lv_operator_2_2= '<<' ) ) ) ( (lv_right_3_0= ruleadd_expr ) ) )*
             {
             if ( state.backtracking==0 ) {
                
@@ -12224,7 +12264,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
                       newCompositeNode(grammarAccess.getShift_exprAccess().getAdd_exprParserRuleCall_0()); 
                   
             }
-            pushFollow(FollowSets000.FOLLOW_ruleadd_expr_in_ruleshift_expr9467);
+            pushFollow(FollowSets000.FOLLOW_ruleadd_expr_in_ruleshift_expr9505);
             this_add_expr_0=ruleadd_expr();
 
             state._fsp--;
@@ -12235,7 +12275,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
                       afterParserOrEnumRuleCall();
                   
             }
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4328:1: ( () ( ( (lv_operator_2_1= '>>' | lv_operator_2_2= '<<' ) ) ) ( (lv_right_3_0= ruleadd_expr ) ) )*
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4350:1: ( () ( ( (lv_operator_2_1= '>>' | lv_operator_2_2= '<<' ) ) ) ( (lv_right_3_0= ruleadd_expr ) ) )*
             loop67:
             do {
                 int alt67=2;
@@ -12248,10 +12288,10 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
                 switch (alt67) {
             	case 1 :
-            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4328:2: () ( ( (lv_operator_2_1= '>>' | lv_operator_2_2= '<<' ) ) ) ( (lv_right_3_0= ruleadd_expr ) )
+            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4350:2: () ( ( (lv_operator_2_1= '>>' | lv_operator_2_2= '<<' ) ) ) ( (lv_right_3_0= ruleadd_expr ) )
             	    {
-            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4328:2: ()
-            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4329:2: 
+            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4350:2: ()
+            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4351:2: 
             	    {
             	    if ( state.backtracking==0 ) {
             	       
@@ -12268,13 +12308,13 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4337:2: ( ( (lv_operator_2_1= '>>' | lv_operator_2_2= '<<' ) ) )
-            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4338:1: ( (lv_operator_2_1= '>>' | lv_operator_2_2= '<<' ) )
+            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4359:2: ( ( (lv_operator_2_1= '>>' | lv_operator_2_2= '<<' ) ) )
+            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4360:1: ( (lv_operator_2_1= '>>' | lv_operator_2_2= '<<' ) )
             	    {
-            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4338:1: ( (lv_operator_2_1= '>>' | lv_operator_2_2= '<<' ) )
-            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4339:1: (lv_operator_2_1= '>>' | lv_operator_2_2= '<<' )
+            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4360:1: ( (lv_operator_2_1= '>>' | lv_operator_2_2= '<<' ) )
+            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4361:1: (lv_operator_2_1= '>>' | lv_operator_2_2= '<<' )
             	    {
-            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4339:1: (lv_operator_2_1= '>>' | lv_operator_2_2= '<<' )
+            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4361:1: (lv_operator_2_1= '>>' | lv_operator_2_2= '<<' )
             	    int alt66=2;
             	    int LA66_0 = input.LA(1);
 
@@ -12293,9 +12333,9 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
             	    }
             	    switch (alt66) {
             	        case 1 :
-            	            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4340:3: lv_operator_2_1= '>>'
+            	            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4362:3: lv_operator_2_1= '>>'
             	            {
-            	            lv_operator_2_1=(Token)match(input,61,FollowSets000.FOLLOW_61_in_ruleshift_expr9499); if (state.failed) return current;
+            	            lv_operator_2_1=(Token)match(input,61,FollowSets000.FOLLOW_61_in_ruleshift_expr9537); if (state.failed) return current;
             	            if ( state.backtracking==0 ) {
 
             	                      newLeafNode(lv_operator_2_1, grammarAccess.getShift_exprAccess().getOperatorGreaterThanSignGreaterThanSignKeyword_1_1_0_0());
@@ -12313,9 +12353,9 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
             	            }
             	            break;
             	        case 2 :
-            	            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4352:8: lv_operator_2_2= '<<'
+            	            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4374:8: lv_operator_2_2= '<<'
             	            {
-            	            lv_operator_2_2=(Token)match(input,62,FollowSets000.FOLLOW_62_in_ruleshift_expr9528); if (state.failed) return current;
+            	            lv_operator_2_2=(Token)match(input,62,FollowSets000.FOLLOW_62_in_ruleshift_expr9566); if (state.failed) return current;
             	            if ( state.backtracking==0 ) {
 
             	                      newLeafNode(lv_operator_2_2, grammarAccess.getShift_exprAccess().getOperatorLessThanSignLessThanSignKeyword_1_1_0_1());
@@ -12341,18 +12381,18 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4367:2: ( (lv_right_3_0= ruleadd_expr ) )
-            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4368:1: (lv_right_3_0= ruleadd_expr )
+            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4389:2: ( (lv_right_3_0= ruleadd_expr ) )
+            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4390:1: (lv_right_3_0= ruleadd_expr )
             	    {
-            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4368:1: (lv_right_3_0= ruleadd_expr )
-            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4369:3: lv_right_3_0= ruleadd_expr
+            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4390:1: (lv_right_3_0= ruleadd_expr )
+            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4391:3: lv_right_3_0= ruleadd_expr
             	    {
             	    if ( state.backtracking==0 ) {
             	       
             	      	        newCompositeNode(grammarAccess.getShift_exprAccess().getRightAdd_exprParserRuleCall_1_2_0()); 
             	      	    
             	    }
-            	    pushFollow(FollowSets000.FOLLOW_ruleadd_expr_in_ruleshift_expr9565);
+            	    pushFollow(FollowSets000.FOLLOW_ruleadd_expr_in_ruleshift_expr9603);
             	    lv_right_3_0=ruleadd_expr();
 
             	    state._fsp--;
@@ -12408,7 +12448,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleadd_expr"
-    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4393:1: entryRuleadd_expr returns [EObject current=null] : iv_ruleadd_expr= ruleadd_expr EOF ;
+    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4415:1: entryRuleadd_expr returns [EObject current=null] : iv_ruleadd_expr= ruleadd_expr EOF ;
     public final EObject entryRuleadd_expr() throws RecognitionException {
         EObject current = null;
 
@@ -12416,13 +12456,13 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4394:2: (iv_ruleadd_expr= ruleadd_expr EOF )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4395:2: iv_ruleadd_expr= ruleadd_expr EOF
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4416:2: (iv_ruleadd_expr= ruleadd_expr EOF )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4417:2: iv_ruleadd_expr= ruleadd_expr EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getAdd_exprRule()); 
             }
-            pushFollow(FollowSets000.FOLLOW_ruleadd_expr_in_entryRuleadd_expr9603);
+            pushFollow(FollowSets000.FOLLOW_ruleadd_expr_in_entryRuleadd_expr9641);
             iv_ruleadd_expr=ruleadd_expr();
 
             state._fsp--;
@@ -12430,7 +12470,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleadd_expr; 
             }
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleadd_expr9613); if (state.failed) return current;
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleadd_expr9651); if (state.failed) return current;
 
             }
 
@@ -12448,7 +12488,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleadd_expr"
-    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4402:1: ruleadd_expr returns [EObject current=null] : (this_mult_expr_0= rulemult_expr ( () ( ( (lv_operator_2_1= '+' | lv_operator_2_2= '-' ) ) ) ( (lv_right_3_0= rulemult_expr ) ) )* ) ;
+    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4424:1: ruleadd_expr returns [EObject current=null] : (this_mult_expr_0= rulemult_expr ( () ( ( (lv_operator_2_1= '+' | lv_operator_2_2= '-' ) ) ) ( (lv_right_3_0= rulemult_expr ) ) )* ) ;
     public final EObject ruleadd_expr() throws RecognitionException {
         EObject current = null;
 
@@ -12462,11 +12502,11 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4405:28: ( (this_mult_expr_0= rulemult_expr ( () ( ( (lv_operator_2_1= '+' | lv_operator_2_2= '-' ) ) ) ( (lv_right_3_0= rulemult_expr ) ) )* ) )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4406:1: (this_mult_expr_0= rulemult_expr ( () ( ( (lv_operator_2_1= '+' | lv_operator_2_2= '-' ) ) ) ( (lv_right_3_0= rulemult_expr ) ) )* )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4427:28: ( (this_mult_expr_0= rulemult_expr ( () ( ( (lv_operator_2_1= '+' | lv_operator_2_2= '-' ) ) ) ( (lv_right_3_0= rulemult_expr ) ) )* ) )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4428:1: (this_mult_expr_0= rulemult_expr ( () ( ( (lv_operator_2_1= '+' | lv_operator_2_2= '-' ) ) ) ( (lv_right_3_0= rulemult_expr ) ) )* )
             {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4406:1: (this_mult_expr_0= rulemult_expr ( () ( ( (lv_operator_2_1= '+' | lv_operator_2_2= '-' ) ) ) ( (lv_right_3_0= rulemult_expr ) ) )* )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4407:2: this_mult_expr_0= rulemult_expr ( () ( ( (lv_operator_2_1= '+' | lv_operator_2_2= '-' ) ) ) ( (lv_right_3_0= rulemult_expr ) ) )*
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4428:1: (this_mult_expr_0= rulemult_expr ( () ( ( (lv_operator_2_1= '+' | lv_operator_2_2= '-' ) ) ) ( (lv_right_3_0= rulemult_expr ) ) )* )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4429:2: this_mult_expr_0= rulemult_expr ( () ( ( (lv_operator_2_1= '+' | lv_operator_2_2= '-' ) ) ) ( (lv_right_3_0= rulemult_expr ) ) )*
             {
             if ( state.backtracking==0 ) {
                
@@ -12478,7 +12518,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
                       newCompositeNode(grammarAccess.getAdd_exprAccess().getMult_exprParserRuleCall_0()); 
                   
             }
-            pushFollow(FollowSets000.FOLLOW_rulemult_expr_in_ruleadd_expr9663);
+            pushFollow(FollowSets000.FOLLOW_rulemult_expr_in_ruleadd_expr9701);
             this_mult_expr_0=rulemult_expr();
 
             state._fsp--;
@@ -12489,7 +12529,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
                       afterParserOrEnumRuleCall();
                   
             }
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4418:1: ( () ( ( (lv_operator_2_1= '+' | lv_operator_2_2= '-' ) ) ) ( (lv_right_3_0= rulemult_expr ) ) )*
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4440:1: ( () ( ( (lv_operator_2_1= '+' | lv_operator_2_2= '-' ) ) ) ( (lv_right_3_0= rulemult_expr ) ) )*
             loop69:
             do {
                 int alt69=2;
@@ -12502,10 +12542,10 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
                 switch (alt69) {
             	case 1 :
-            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4418:2: () ( ( (lv_operator_2_1= '+' | lv_operator_2_2= '-' ) ) ) ( (lv_right_3_0= rulemult_expr ) )
+            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4440:2: () ( ( (lv_operator_2_1= '+' | lv_operator_2_2= '-' ) ) ) ( (lv_right_3_0= rulemult_expr ) )
             	    {
-            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4418:2: ()
-            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4419:2: 
+            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4440:2: ()
+            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4441:2: 
             	    {
             	    if ( state.backtracking==0 ) {
             	       
@@ -12522,13 +12562,13 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4427:2: ( ( (lv_operator_2_1= '+' | lv_operator_2_2= '-' ) ) )
-            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4428:1: ( (lv_operator_2_1= '+' | lv_operator_2_2= '-' ) )
+            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4449:2: ( ( (lv_operator_2_1= '+' | lv_operator_2_2= '-' ) ) )
+            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4450:1: ( (lv_operator_2_1= '+' | lv_operator_2_2= '-' ) )
             	    {
-            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4428:1: ( (lv_operator_2_1= '+' | lv_operator_2_2= '-' ) )
-            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4429:1: (lv_operator_2_1= '+' | lv_operator_2_2= '-' )
+            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4450:1: ( (lv_operator_2_1= '+' | lv_operator_2_2= '-' ) )
+            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4451:1: (lv_operator_2_1= '+' | lv_operator_2_2= '-' )
             	    {
-            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4429:1: (lv_operator_2_1= '+' | lv_operator_2_2= '-' )
+            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4451:1: (lv_operator_2_1= '+' | lv_operator_2_2= '-' )
             	    int alt68=2;
             	    int LA68_0 = input.LA(1);
 
@@ -12547,9 +12587,9 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
             	    }
             	    switch (alt68) {
             	        case 1 :
-            	            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4430:3: lv_operator_2_1= '+'
+            	            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4452:3: lv_operator_2_1= '+'
             	            {
-            	            lv_operator_2_1=(Token)match(input,63,FollowSets000.FOLLOW_63_in_ruleadd_expr9695); if (state.failed) return current;
+            	            lv_operator_2_1=(Token)match(input,63,FollowSets000.FOLLOW_63_in_ruleadd_expr9733); if (state.failed) return current;
             	            if ( state.backtracking==0 ) {
 
             	                      newLeafNode(lv_operator_2_1, grammarAccess.getAdd_exprAccess().getOperatorPlusSignKeyword_1_1_0_0());
@@ -12567,9 +12607,9 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
             	            }
             	            break;
             	        case 2 :
-            	            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4442:8: lv_operator_2_2= '-'
+            	            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4464:8: lv_operator_2_2= '-'
             	            {
-            	            lv_operator_2_2=(Token)match(input,64,FollowSets000.FOLLOW_64_in_ruleadd_expr9724); if (state.failed) return current;
+            	            lv_operator_2_2=(Token)match(input,64,FollowSets000.FOLLOW_64_in_ruleadd_expr9762); if (state.failed) return current;
             	            if ( state.backtracking==0 ) {
 
             	                      newLeafNode(lv_operator_2_2, grammarAccess.getAdd_exprAccess().getOperatorHyphenMinusKeyword_1_1_0_1());
@@ -12595,18 +12635,18 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4457:2: ( (lv_right_3_0= rulemult_expr ) )
-            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4458:1: (lv_right_3_0= rulemult_expr )
+            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4479:2: ( (lv_right_3_0= rulemult_expr ) )
+            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4480:1: (lv_right_3_0= rulemult_expr )
             	    {
-            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4458:1: (lv_right_3_0= rulemult_expr )
-            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4459:3: lv_right_3_0= rulemult_expr
+            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4480:1: (lv_right_3_0= rulemult_expr )
+            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4481:3: lv_right_3_0= rulemult_expr
             	    {
             	    if ( state.backtracking==0 ) {
             	       
             	      	        newCompositeNode(grammarAccess.getAdd_exprAccess().getRightMult_exprParserRuleCall_1_2_0()); 
             	      	    
             	    }
-            	    pushFollow(FollowSets000.FOLLOW_rulemult_expr_in_ruleadd_expr9761);
+            	    pushFollow(FollowSets000.FOLLOW_rulemult_expr_in_ruleadd_expr9799);
             	    lv_right_3_0=rulemult_expr();
 
             	    state._fsp--;
@@ -12662,7 +12702,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulemult_expr"
-    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4483:1: entryRulemult_expr returns [EObject current=null] : iv_rulemult_expr= rulemult_expr EOF ;
+    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4505:1: entryRulemult_expr returns [EObject current=null] : iv_rulemult_expr= rulemult_expr EOF ;
     public final EObject entryRulemult_expr() throws RecognitionException {
         EObject current = null;
 
@@ -12670,13 +12710,13 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4484:2: (iv_rulemult_expr= rulemult_expr EOF )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4485:2: iv_rulemult_expr= rulemult_expr EOF
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4506:2: (iv_rulemult_expr= rulemult_expr EOF )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4507:2: iv_rulemult_expr= rulemult_expr EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getMult_exprRule()); 
             }
-            pushFollow(FollowSets000.FOLLOW_rulemult_expr_in_entryRulemult_expr9799);
+            pushFollow(FollowSets000.FOLLOW_rulemult_expr_in_entryRulemult_expr9837);
             iv_rulemult_expr=rulemult_expr();
 
             state._fsp--;
@@ -12684,7 +12724,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_rulemult_expr; 
             }
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRulemult_expr9809); if (state.failed) return current;
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRulemult_expr9847); if (state.failed) return current;
 
             }
 
@@ -12702,7 +12742,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulemult_expr"
-    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4492:1: rulemult_expr returns [EObject current=null] : (this_unary_expr_0= ruleunary_expr ( () ( ( (lv_operator_2_1= '*' | lv_operator_2_2= '/' | lv_operator_2_3= '%' ) ) ) ( (lv_right_3_0= ruleunary_expr ) ) )* ) ;
+    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4514:1: rulemult_expr returns [EObject current=null] : (this_unary_expr_0= ruleunary_expr ( () ( ( (lv_operator_2_1= '*' | lv_operator_2_2= '/' | lv_operator_2_3= '%' ) ) ) ( (lv_right_3_0= ruleunary_expr ) ) )* ) ;
     public final EObject rulemult_expr() throws RecognitionException {
         EObject current = null;
 
@@ -12717,11 +12757,11 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4495:28: ( (this_unary_expr_0= ruleunary_expr ( () ( ( (lv_operator_2_1= '*' | lv_operator_2_2= '/' | lv_operator_2_3= '%' ) ) ) ( (lv_right_3_0= ruleunary_expr ) ) )* ) )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4496:1: (this_unary_expr_0= ruleunary_expr ( () ( ( (lv_operator_2_1= '*' | lv_operator_2_2= '/' | lv_operator_2_3= '%' ) ) ) ( (lv_right_3_0= ruleunary_expr ) ) )* )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4517:28: ( (this_unary_expr_0= ruleunary_expr ( () ( ( (lv_operator_2_1= '*' | lv_operator_2_2= '/' | lv_operator_2_3= '%' ) ) ) ( (lv_right_3_0= ruleunary_expr ) ) )* ) )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4518:1: (this_unary_expr_0= ruleunary_expr ( () ( ( (lv_operator_2_1= '*' | lv_operator_2_2= '/' | lv_operator_2_3= '%' ) ) ) ( (lv_right_3_0= ruleunary_expr ) ) )* )
             {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4496:1: (this_unary_expr_0= ruleunary_expr ( () ( ( (lv_operator_2_1= '*' | lv_operator_2_2= '/' | lv_operator_2_3= '%' ) ) ) ( (lv_right_3_0= ruleunary_expr ) ) )* )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4497:2: this_unary_expr_0= ruleunary_expr ( () ( ( (lv_operator_2_1= '*' | lv_operator_2_2= '/' | lv_operator_2_3= '%' ) ) ) ( (lv_right_3_0= ruleunary_expr ) ) )*
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4518:1: (this_unary_expr_0= ruleunary_expr ( () ( ( (lv_operator_2_1= '*' | lv_operator_2_2= '/' | lv_operator_2_3= '%' ) ) ) ( (lv_right_3_0= ruleunary_expr ) ) )* )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4519:2: this_unary_expr_0= ruleunary_expr ( () ( ( (lv_operator_2_1= '*' | lv_operator_2_2= '/' | lv_operator_2_3= '%' ) ) ) ( (lv_right_3_0= ruleunary_expr ) ) )*
             {
             if ( state.backtracking==0 ) {
                
@@ -12733,7 +12773,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
                       newCompositeNode(grammarAccess.getMult_exprAccess().getUnary_exprParserRuleCall_0()); 
                   
             }
-            pushFollow(FollowSets000.FOLLOW_ruleunary_expr_in_rulemult_expr9859);
+            pushFollow(FollowSets000.FOLLOW_ruleunary_expr_in_rulemult_expr9897);
             this_unary_expr_0=ruleunary_expr();
 
             state._fsp--;
@@ -12744,7 +12784,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
                       afterParserOrEnumRuleCall();
                   
             }
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4508:1: ( () ( ( (lv_operator_2_1= '*' | lv_operator_2_2= '/' | lv_operator_2_3= '%' ) ) ) ( (lv_right_3_0= ruleunary_expr ) ) )*
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4530:1: ( () ( ( (lv_operator_2_1= '*' | lv_operator_2_2= '/' | lv_operator_2_3= '%' ) ) ) ( (lv_right_3_0= ruleunary_expr ) ) )*
             loop71:
             do {
                 int alt71=2;
@@ -12757,10 +12797,10 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
                 switch (alt71) {
             	case 1 :
-            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4508:2: () ( ( (lv_operator_2_1= '*' | lv_operator_2_2= '/' | lv_operator_2_3= '%' ) ) ) ( (lv_right_3_0= ruleunary_expr ) )
+            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4530:2: () ( ( (lv_operator_2_1= '*' | lv_operator_2_2= '/' | lv_operator_2_3= '%' ) ) ) ( (lv_right_3_0= ruleunary_expr ) )
             	    {
-            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4508:2: ()
-            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4509:2: 
+            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4530:2: ()
+            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4531:2: 
             	    {
             	    if ( state.backtracking==0 ) {
             	       
@@ -12777,13 +12817,13 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4517:2: ( ( (lv_operator_2_1= '*' | lv_operator_2_2= '/' | lv_operator_2_3= '%' ) ) )
-            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4518:1: ( (lv_operator_2_1= '*' | lv_operator_2_2= '/' | lv_operator_2_3= '%' ) )
+            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4539:2: ( ( (lv_operator_2_1= '*' | lv_operator_2_2= '/' | lv_operator_2_3= '%' ) ) )
+            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4540:1: ( (lv_operator_2_1= '*' | lv_operator_2_2= '/' | lv_operator_2_3= '%' ) )
             	    {
-            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4518:1: ( (lv_operator_2_1= '*' | lv_operator_2_2= '/' | lv_operator_2_3= '%' ) )
-            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4519:1: (lv_operator_2_1= '*' | lv_operator_2_2= '/' | lv_operator_2_3= '%' )
+            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4540:1: ( (lv_operator_2_1= '*' | lv_operator_2_2= '/' | lv_operator_2_3= '%' ) )
+            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4541:1: (lv_operator_2_1= '*' | lv_operator_2_2= '/' | lv_operator_2_3= '%' )
             	    {
-            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4519:1: (lv_operator_2_1= '*' | lv_operator_2_2= '/' | lv_operator_2_3= '%' )
+            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4541:1: (lv_operator_2_1= '*' | lv_operator_2_2= '/' | lv_operator_2_3= '%' )
             	    int alt70=3;
             	    switch ( input.LA(1) ) {
             	    case 65:
@@ -12811,9 +12851,9 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
             	    switch (alt70) {
             	        case 1 :
-            	            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4520:3: lv_operator_2_1= '*'
+            	            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4542:3: lv_operator_2_1= '*'
             	            {
-            	            lv_operator_2_1=(Token)match(input,65,FollowSets000.FOLLOW_65_in_rulemult_expr9891); if (state.failed) return current;
+            	            lv_operator_2_1=(Token)match(input,65,FollowSets000.FOLLOW_65_in_rulemult_expr9929); if (state.failed) return current;
             	            if ( state.backtracking==0 ) {
 
             	                      newLeafNode(lv_operator_2_1, grammarAccess.getMult_exprAccess().getOperatorAsteriskKeyword_1_1_0_0());
@@ -12831,9 +12871,9 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
             	            }
             	            break;
             	        case 2 :
-            	            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4532:8: lv_operator_2_2= '/'
+            	            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4554:8: lv_operator_2_2= '/'
             	            {
-            	            lv_operator_2_2=(Token)match(input,66,FollowSets000.FOLLOW_66_in_rulemult_expr9920); if (state.failed) return current;
+            	            lv_operator_2_2=(Token)match(input,66,FollowSets000.FOLLOW_66_in_rulemult_expr9958); if (state.failed) return current;
             	            if ( state.backtracking==0 ) {
 
             	                      newLeafNode(lv_operator_2_2, grammarAccess.getMult_exprAccess().getOperatorSolidusKeyword_1_1_0_1());
@@ -12851,9 +12891,9 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
             	            }
             	            break;
             	        case 3 :
-            	            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4544:8: lv_operator_2_3= '%'
+            	            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4566:8: lv_operator_2_3= '%'
             	            {
-            	            lv_operator_2_3=(Token)match(input,67,FollowSets000.FOLLOW_67_in_rulemult_expr9949); if (state.failed) return current;
+            	            lv_operator_2_3=(Token)match(input,67,FollowSets000.FOLLOW_67_in_rulemult_expr9987); if (state.failed) return current;
             	            if ( state.backtracking==0 ) {
 
             	                      newLeafNode(lv_operator_2_3, grammarAccess.getMult_exprAccess().getOperatorPercentSignKeyword_1_1_0_2());
@@ -12879,18 +12919,18 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4559:2: ( (lv_right_3_0= ruleunary_expr ) )
-            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4560:1: (lv_right_3_0= ruleunary_expr )
+            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4581:2: ( (lv_right_3_0= ruleunary_expr ) )
+            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4582:1: (lv_right_3_0= ruleunary_expr )
             	    {
-            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4560:1: (lv_right_3_0= ruleunary_expr )
-            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4561:3: lv_right_3_0= ruleunary_expr
+            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4582:1: (lv_right_3_0= ruleunary_expr )
+            	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4583:3: lv_right_3_0= ruleunary_expr
             	    {
             	    if ( state.backtracking==0 ) {
             	       
             	      	        newCompositeNode(grammarAccess.getMult_exprAccess().getRightUnary_exprParserRuleCall_1_2_0()); 
             	      	    
             	    }
-            	    pushFollow(FollowSets000.FOLLOW_ruleunary_expr_in_rulemult_expr9986);
+            	    pushFollow(FollowSets000.FOLLOW_ruleunary_expr_in_rulemult_expr10024);
             	    lv_right_3_0=ruleunary_expr();
 
             	    state._fsp--;
@@ -12946,7 +12986,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleunary_expr"
-    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4585:1: entryRuleunary_expr returns [EObject current=null] : iv_ruleunary_expr= ruleunary_expr EOF ;
+    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4607:1: entryRuleunary_expr returns [EObject current=null] : iv_ruleunary_expr= ruleunary_expr EOF ;
     public final EObject entryRuleunary_expr() throws RecognitionException {
         EObject current = null;
 
@@ -12954,13 +12994,13 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4586:2: (iv_ruleunary_expr= ruleunary_expr EOF )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4587:2: iv_ruleunary_expr= ruleunary_expr EOF
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4608:2: (iv_ruleunary_expr= ruleunary_expr EOF )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4609:2: iv_ruleunary_expr= ruleunary_expr EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getUnary_exprRule()); 
             }
-            pushFollow(FollowSets000.FOLLOW_ruleunary_expr_in_entryRuleunary_expr10024);
+            pushFollow(FollowSets000.FOLLOW_ruleunary_expr_in_entryRuleunary_expr10062);
             iv_ruleunary_expr=ruleunary_expr();
 
             state._fsp--;
@@ -12968,7 +13008,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleunary_expr; 
             }
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleunary_expr10034); if (state.failed) return current;
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleunary_expr10072); if (state.failed) return current;
 
             }
 
@@ -12986,7 +13026,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleunary_expr"
-    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4594:1: ruleunary_expr returns [EObject current=null] : ( ( () ( (lv_operator_1_0= ruleunary_operator ) ) ( (lv_expression_2_0= ruleprimary_expr ) ) ) | this_primary_expr_3= ruleprimary_expr ) ;
+    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4616:1: ruleunary_expr returns [EObject current=null] : ( ( () ( (lv_operator_1_0= ruleunary_operator ) ) ( (lv_expression_2_0= ruleprimary_expr ) ) ) | this_primary_expr_3= ruleprimary_expr ) ;
     public final EObject ruleunary_expr() throws RecognitionException {
         EObject current = null;
 
@@ -13000,10 +13040,10 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4597:28: ( ( ( () ( (lv_operator_1_0= ruleunary_operator ) ) ( (lv_expression_2_0= ruleprimary_expr ) ) ) | this_primary_expr_3= ruleprimary_expr ) )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4598:1: ( ( () ( (lv_operator_1_0= ruleunary_operator ) ) ( (lv_expression_2_0= ruleprimary_expr ) ) ) | this_primary_expr_3= ruleprimary_expr )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4619:28: ( ( ( () ( (lv_operator_1_0= ruleunary_operator ) ) ( (lv_expression_2_0= ruleprimary_expr ) ) ) | this_primary_expr_3= ruleprimary_expr ) )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4620:1: ( ( () ( (lv_operator_1_0= ruleunary_operator ) ) ( (lv_expression_2_0= ruleprimary_expr ) ) ) | this_primary_expr_3= ruleprimary_expr )
             {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4598:1: ( ( () ( (lv_operator_1_0= ruleunary_operator ) ) ( (lv_expression_2_0= ruleprimary_expr ) ) ) | this_primary_expr_3= ruleprimary_expr )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4620:1: ( ( () ( (lv_operator_1_0= ruleunary_operator ) ) ( (lv_expression_2_0= ruleprimary_expr ) ) ) | this_primary_expr_3= ruleprimary_expr )
             int alt72=2;
             int LA72_0 = input.LA(1);
 
@@ -13022,13 +13062,13 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
             }
             switch (alt72) {
                 case 1 :
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4598:2: ( () ( (lv_operator_1_0= ruleunary_operator ) ) ( (lv_expression_2_0= ruleprimary_expr ) ) )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4620:2: ( () ( (lv_operator_1_0= ruleunary_operator ) ) ( (lv_expression_2_0= ruleprimary_expr ) ) )
                     {
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4598:2: ( () ( (lv_operator_1_0= ruleunary_operator ) ) ( (lv_expression_2_0= ruleprimary_expr ) ) )
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4598:3: () ( (lv_operator_1_0= ruleunary_operator ) ) ( (lv_expression_2_0= ruleprimary_expr ) )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4620:2: ( () ( (lv_operator_1_0= ruleunary_operator ) ) ( (lv_expression_2_0= ruleprimary_expr ) ) )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4620:3: () ( (lv_operator_1_0= ruleunary_operator ) ) ( (lv_expression_2_0= ruleprimary_expr ) )
                     {
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4598:3: ()
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4599:2: 
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4620:3: ()
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4621:2: 
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -13045,18 +13085,18 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4607:2: ( (lv_operator_1_0= ruleunary_operator ) )
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4608:1: (lv_operator_1_0= ruleunary_operator )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4629:2: ( (lv_operator_1_0= ruleunary_operator ) )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4630:1: (lv_operator_1_0= ruleunary_operator )
                     {
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4608:1: (lv_operator_1_0= ruleunary_operator )
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4609:3: lv_operator_1_0= ruleunary_operator
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4630:1: (lv_operator_1_0= ruleunary_operator )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4631:3: lv_operator_1_0= ruleunary_operator
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getUnary_exprAccess().getOperatorUnary_operatorParserRuleCall_0_1_0()); 
                       	    
                     }
-                    pushFollow(FollowSets000.FOLLOW_ruleunary_operator_in_ruleunary_expr10093);
+                    pushFollow(FollowSets000.FOLLOW_ruleunary_operator_in_ruleunary_expr10131);
                     lv_operator_1_0=ruleunary_operator();
 
                     state._fsp--;
@@ -13080,18 +13120,18 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4625:2: ( (lv_expression_2_0= ruleprimary_expr ) )
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4626:1: (lv_expression_2_0= ruleprimary_expr )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4647:2: ( (lv_expression_2_0= ruleprimary_expr ) )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4648:1: (lv_expression_2_0= ruleprimary_expr )
                     {
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4626:1: (lv_expression_2_0= ruleprimary_expr )
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4627:3: lv_expression_2_0= ruleprimary_expr
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4648:1: (lv_expression_2_0= ruleprimary_expr )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4649:3: lv_expression_2_0= ruleprimary_expr
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getUnary_exprAccess().getExpressionPrimary_exprParserRuleCall_0_2_0()); 
                       	    
                     }
-                    pushFollow(FollowSets000.FOLLOW_ruleprimary_expr_in_ruleunary_expr10114);
+                    pushFollow(FollowSets000.FOLLOW_ruleprimary_expr_in_ruleunary_expr10152);
                     lv_expression_2_0=ruleprimary_expr();
 
                     state._fsp--;
@@ -13122,7 +13162,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4645:2: this_primary_expr_3= ruleprimary_expr
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4667:2: this_primary_expr_3= ruleprimary_expr
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -13134,7 +13174,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
                               newCompositeNode(grammarAccess.getUnary_exprAccess().getPrimary_exprParserRuleCall_1()); 
                           
                     }
-                    pushFollow(FollowSets000.FOLLOW_ruleprimary_expr_in_ruleunary_expr10146);
+                    pushFollow(FollowSets000.FOLLOW_ruleprimary_expr_in_ruleunary_expr10184);
                     this_primary_expr_3=ruleprimary_expr();
 
                     state._fsp--;
@@ -13171,7 +13211,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleunary_operator"
-    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4664:1: entryRuleunary_operator returns [String current=null] : iv_ruleunary_operator= ruleunary_operator EOF ;
+    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4686:1: entryRuleunary_operator returns [String current=null] : iv_ruleunary_operator= ruleunary_operator EOF ;
     public final String entryRuleunary_operator() throws RecognitionException {
         String current = null;
 
@@ -13179,13 +13219,13 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4665:2: (iv_ruleunary_operator= ruleunary_operator EOF )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4666:2: iv_ruleunary_operator= ruleunary_operator EOF
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4687:2: (iv_ruleunary_operator= ruleunary_operator EOF )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4688:2: iv_ruleunary_operator= ruleunary_operator EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getUnary_operatorRule()); 
             }
-            pushFollow(FollowSets000.FOLLOW_ruleunary_operator_in_entryRuleunary_operator10182);
+            pushFollow(FollowSets000.FOLLOW_ruleunary_operator_in_entryRuleunary_operator10220);
             iv_ruleunary_operator=ruleunary_operator();
 
             state._fsp--;
@@ -13193,7 +13233,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleunary_operator.getText(); 
             }
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleunary_operator10193); if (state.failed) return current;
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleunary_operator10231); if (state.failed) return current;
 
             }
 
@@ -13211,7 +13251,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleunary_operator"
-    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4673:1: ruleunary_operator returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= '-' | kw= '+' | kw= '~' ) ;
+    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4695:1: ruleunary_operator returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= '-' | kw= '+' | kw= '~' ) ;
     public final AntlrDatatypeRuleToken ruleunary_operator() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -13220,10 +13260,10 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4676:28: ( (kw= '-' | kw= '+' | kw= '~' ) )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4677:1: (kw= '-' | kw= '+' | kw= '~' )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4698:28: ( (kw= '-' | kw= '+' | kw= '~' ) )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4699:1: (kw= '-' | kw= '+' | kw= '~' )
             {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4677:1: (kw= '-' | kw= '+' | kw= '~' )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4699:1: (kw= '-' | kw= '+' | kw= '~' )
             int alt73=3;
             switch ( input.LA(1) ) {
             case 64:
@@ -13251,9 +13291,9 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
             switch (alt73) {
                 case 1 :
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4678:2: kw= '-'
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4700:2: kw= '-'
                     {
-                    kw=(Token)match(input,64,FollowSets000.FOLLOW_64_in_ruleunary_operator10231); if (state.failed) return current;
+                    kw=(Token)match(input,64,FollowSets000.FOLLOW_64_in_ruleunary_operator10269); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -13264,9 +13304,9 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4685:2: kw= '+'
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4707:2: kw= '+'
                     {
-                    kw=(Token)match(input,63,FollowSets000.FOLLOW_63_in_ruleunary_operator10250); if (state.failed) return current;
+                    kw=(Token)match(input,63,FollowSets000.FOLLOW_63_in_ruleunary_operator10288); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -13277,9 +13317,9 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4692:2: kw= '~'
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4714:2: kw= '~'
                     {
-                    kw=(Token)match(input,68,FollowSets000.FOLLOW_68_in_ruleunary_operator10269); if (state.failed) return current;
+                    kw=(Token)match(input,68,FollowSets000.FOLLOW_68_in_ruleunary_operator10307); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -13312,7 +13352,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleprimary_expr"
-    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4705:1: entryRuleprimary_expr returns [EObject current=null] : iv_ruleprimary_expr= ruleprimary_expr EOF ;
+    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4727:1: entryRuleprimary_expr returns [EObject current=null] : iv_ruleprimary_expr= ruleprimary_expr EOF ;
     public final EObject entryRuleprimary_expr() throws RecognitionException {
         EObject current = null;
 
@@ -13320,13 +13360,13 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4706:2: (iv_ruleprimary_expr= ruleprimary_expr EOF )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4707:2: iv_ruleprimary_expr= ruleprimary_expr EOF
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4728:2: (iv_ruleprimary_expr= ruleprimary_expr EOF )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4729:2: iv_ruleprimary_expr= ruleprimary_expr EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getPrimary_exprRule()); 
             }
-            pushFollow(FollowSets000.FOLLOW_ruleprimary_expr_in_entryRuleprimary_expr10309);
+            pushFollow(FollowSets000.FOLLOW_ruleprimary_expr_in_entryRuleprimary_expr10347);
             iv_ruleprimary_expr=ruleprimary_expr();
 
             state._fsp--;
@@ -13334,7 +13374,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleprimary_expr; 
             }
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleprimary_expr10319); if (state.failed) return current;
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleprimary_expr10357); if (state.failed) return current;
 
             }
 
@@ -13352,7 +13392,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleprimary_expr"
-    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4714:1: ruleprimary_expr returns [EObject current=null] : (this_constantDefRef_0= ruleconstantDefRef | this_valueExpression_1= rulevalueExpression | (otherlv_2= '(' this_const_exp_3= ruleconst_exp otherlv_4= ')' ) ) ;
+    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4736:1: ruleprimary_expr returns [EObject current=null] : (this_constantDefRef_0= ruleconstantDefRef | this_valueExpression_1= rulevalueExpression | (otherlv_2= '(' this_const_exp_3= ruleconst_exp otherlv_4= ')' ) ) ;
     public final EObject ruleprimary_expr() throws RecognitionException {
         EObject current = null;
 
@@ -13368,10 +13408,10 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4717:28: ( (this_constantDefRef_0= ruleconstantDefRef | this_valueExpression_1= rulevalueExpression | (otherlv_2= '(' this_const_exp_3= ruleconst_exp otherlv_4= ')' ) ) )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4718:1: (this_constantDefRef_0= ruleconstantDefRef | this_valueExpression_1= rulevalueExpression | (otherlv_2= '(' this_const_exp_3= ruleconst_exp otherlv_4= ')' ) )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4739:28: ( (this_constantDefRef_0= ruleconstantDefRef | this_valueExpression_1= rulevalueExpression | (otherlv_2= '(' this_const_exp_3= ruleconst_exp otherlv_4= ')' ) ) )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4740:1: (this_constantDefRef_0= ruleconstantDefRef | this_valueExpression_1= rulevalueExpression | (otherlv_2= '(' this_const_exp_3= ruleconst_exp otherlv_4= ')' ) )
             {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4718:1: (this_constantDefRef_0= ruleconstantDefRef | this_valueExpression_1= rulevalueExpression | (otherlv_2= '(' this_const_exp_3= ruleconst_exp otherlv_4= ')' ) )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4740:1: (this_constantDefRef_0= ruleconstantDefRef | this_valueExpression_1= rulevalueExpression | (otherlv_2= '(' this_const_exp_3= ruleconst_exp otherlv_4= ')' ) )
             int alt74=3;
             switch ( input.LA(1) ) {
             case RULE_ID:
@@ -13405,7 +13445,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
             switch (alt74) {
                 case 1 :
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4719:2: this_constantDefRef_0= ruleconstantDefRef
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4741:2: this_constantDefRef_0= ruleconstantDefRef
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -13417,7 +13457,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
                               newCompositeNode(grammarAccess.getPrimary_exprAccess().getConstantDefRefParserRuleCall_0()); 
                           
                     }
-                    pushFollow(FollowSets000.FOLLOW_ruleconstantDefRef_in_ruleprimary_expr10369);
+                    pushFollow(FollowSets000.FOLLOW_ruleconstantDefRef_in_ruleprimary_expr10407);
                     this_constantDefRef_0=ruleconstantDefRef();
 
                     state._fsp--;
@@ -13432,7 +13472,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4732:2: this_valueExpression_1= rulevalueExpression
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4754:2: this_valueExpression_1= rulevalueExpression
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -13444,7 +13484,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
                               newCompositeNode(grammarAccess.getPrimary_exprAccess().getValueExpressionParserRuleCall_1()); 
                           
                     }
-                    pushFollow(FollowSets000.FOLLOW_rulevalueExpression_in_ruleprimary_expr10399);
+                    pushFollow(FollowSets000.FOLLOW_rulevalueExpression_in_ruleprimary_expr10437);
                     this_valueExpression_1=rulevalueExpression();
 
                     state._fsp--;
@@ -13459,12 +13499,12 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4744:6: (otherlv_2= '(' this_const_exp_3= ruleconst_exp otherlv_4= ')' )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4766:6: (otherlv_2= '(' this_const_exp_3= ruleconst_exp otherlv_4= ')' )
                     {
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4744:6: (otherlv_2= '(' this_const_exp_3= ruleconst_exp otherlv_4= ')' )
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4744:8: otherlv_2= '(' this_const_exp_3= ruleconst_exp otherlv_4= ')'
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4766:6: (otherlv_2= '(' this_const_exp_3= ruleconst_exp otherlv_4= ')' )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4766:8: otherlv_2= '(' this_const_exp_3= ruleconst_exp otherlv_4= ')'
                     {
-                    otherlv_2=(Token)match(input,27,FollowSets000.FOLLOW_27_in_ruleprimary_expr10417); if (state.failed) return current;
+                    otherlv_2=(Token)match(input,27,FollowSets000.FOLLOW_27_in_ruleprimary_expr10455); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_2, grammarAccess.getPrimary_exprAccess().getLeftParenthesisKeyword_2_0());
@@ -13480,7 +13520,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
                               newCompositeNode(grammarAccess.getPrimary_exprAccess().getConst_expParserRuleCall_2_1()); 
                           
                     }
-                    pushFollow(FollowSets000.FOLLOW_ruleconst_exp_in_ruleprimary_expr10442);
+                    pushFollow(FollowSets000.FOLLOW_ruleconst_exp_in_ruleprimary_expr10480);
                     this_const_exp_3=ruleconst_exp();
 
                     state._fsp--;
@@ -13491,7 +13531,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
                               afterParserOrEnumRuleCall();
                           
                     }
-                    otherlv_4=(Token)match(input,28,FollowSets000.FOLLOW_28_in_ruleprimary_expr10453); if (state.failed) return current;
+                    otherlv_4=(Token)match(input,28,FollowSets000.FOLLOW_28_in_ruleprimary_expr10491); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_4, grammarAccess.getPrimary_exprAccess().getRightParenthesisKeyword_2_2());
@@ -13526,7 +13566,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleconstantDefRef"
-    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4772:1: entryRuleconstantDefRef returns [EObject current=null] : iv_ruleconstantDefRef= ruleconstantDefRef EOF ;
+    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4794:1: entryRuleconstantDefRef returns [EObject current=null] : iv_ruleconstantDefRef= ruleconstantDefRef EOF ;
     public final EObject entryRuleconstantDefRef() throws RecognitionException {
         EObject current = null;
 
@@ -13534,13 +13574,13 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4773:2: (iv_ruleconstantDefRef= ruleconstantDefRef EOF )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4774:2: iv_ruleconstantDefRef= ruleconstantDefRef EOF
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4795:2: (iv_ruleconstantDefRef= ruleconstantDefRef EOF )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4796:2: iv_ruleconstantDefRef= ruleconstantDefRef EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getConstantDefRefRule()); 
             }
-            pushFollow(FollowSets000.FOLLOW_ruleconstantDefRef_in_entryRuleconstantDefRef10490);
+            pushFollow(FollowSets000.FOLLOW_ruleconstantDefRef_in_entryRuleconstantDefRef10528);
             iv_ruleconstantDefRef=ruleconstantDefRef();
 
             state._fsp--;
@@ -13548,7 +13588,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleconstantDefRef; 
             }
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleconstantDefRef10500); if (state.failed) return current;
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleconstantDefRef10538); if (state.failed) return current;
 
             }
 
@@ -13566,7 +13606,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleconstantDefRef"
-    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4781:1: ruleconstantDefRef returns [EObject current=null] : ( (otherlv_0= RULE_ID ) ) ;
+    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4803:1: ruleconstantDefRef returns [EObject current=null] : ( (otherlv_0= RULE_ID ) ) ;
     public final EObject ruleconstantDefRef() throws RecognitionException {
         EObject current = null;
 
@@ -13575,14 +13615,14 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4784:28: ( ( (otherlv_0= RULE_ID ) ) )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4785:1: ( (otherlv_0= RULE_ID ) )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4806:28: ( ( (otherlv_0= RULE_ID ) ) )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4807:1: ( (otherlv_0= RULE_ID ) )
             {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4785:1: ( (otherlv_0= RULE_ID ) )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4786:1: (otherlv_0= RULE_ID )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4807:1: ( (otherlv_0= RULE_ID ) )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4808:1: (otherlv_0= RULE_ID )
             {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4786:1: (otherlv_0= RULE_ID )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4787:3: otherlv_0= RULE_ID
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4808:1: (otherlv_0= RULE_ID )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4809:3: otherlv_0= RULE_ID
             {
             if ( state.backtracking==0 ) {
                
@@ -13596,7 +13636,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
               	        }
                       
             }
-            otherlv_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleconstantDefRef10548); if (state.failed) return current;
+            otherlv_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleconstantDefRef10586); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               		newLeafNode(otherlv_0, grammarAccess.getConstantDefRefAccess().getConstantConstantCrossReference_0()); 
@@ -13628,7 +13668,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulevalueExpression"
-    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4809:1: entryRulevalueExpression returns [EObject current=null] : iv_rulevalueExpression= rulevalueExpression EOF ;
+    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4831:1: entryRulevalueExpression returns [EObject current=null] : iv_rulevalueExpression= rulevalueExpression EOF ;
     public final EObject entryRulevalueExpression() throws RecognitionException {
         EObject current = null;
 
@@ -13636,13 +13676,13 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4810:2: (iv_rulevalueExpression= rulevalueExpression EOF )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4811:2: iv_rulevalueExpression= rulevalueExpression EOF
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4832:2: (iv_rulevalueExpression= rulevalueExpression EOF )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4833:2: iv_rulevalueExpression= rulevalueExpression EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getValueExpressionRule()); 
             }
-            pushFollow(FollowSets000.FOLLOW_rulevalueExpression_in_entryRulevalueExpression10583);
+            pushFollow(FollowSets000.FOLLOW_rulevalueExpression_in_entryRulevalueExpression10621);
             iv_rulevalueExpression=rulevalueExpression();
 
             state._fsp--;
@@ -13650,7 +13690,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_rulevalueExpression; 
             }
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRulevalueExpression10593); if (state.failed) return current;
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRulevalueExpression10631); if (state.failed) return current;
 
             }
 
@@ -13668,7 +13708,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulevalueExpression"
-    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4818:1: rulevalueExpression returns [EObject current=null] : ( (lv_value_0_0= ruleliteral ) ) ;
+    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4840:1: rulevalueExpression returns [EObject current=null] : ( (lv_value_0_0= ruleliteral ) ) ;
     public final EObject rulevalueExpression() throws RecognitionException {
         EObject current = null;
 
@@ -13678,21 +13718,21 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4821:28: ( ( (lv_value_0_0= ruleliteral ) ) )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4822:1: ( (lv_value_0_0= ruleliteral ) )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4843:28: ( ( (lv_value_0_0= ruleliteral ) ) )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4844:1: ( (lv_value_0_0= ruleliteral ) )
             {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4822:1: ( (lv_value_0_0= ruleliteral ) )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4823:1: (lv_value_0_0= ruleliteral )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4844:1: ( (lv_value_0_0= ruleliteral ) )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4845:1: (lv_value_0_0= ruleliteral )
             {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4823:1: (lv_value_0_0= ruleliteral )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4824:3: lv_value_0_0= ruleliteral
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4845:1: (lv_value_0_0= ruleliteral )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4846:3: lv_value_0_0= ruleliteral
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getValueExpressionAccess().getValueLiteralParserRuleCall_0()); 
               	    
             }
-            pushFollow(FollowSets000.FOLLOW_ruleliteral_in_rulevalueExpression10638);
+            pushFollow(FollowSets000.FOLLOW_ruleliteral_in_rulevalueExpression10676);
             lv_value_0_0=ruleliteral();
 
             state._fsp--;
@@ -13736,7 +13776,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleliteral"
-    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4848:1: entryRuleliteral returns [String current=null] : iv_ruleliteral= ruleliteral EOF ;
+    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4870:1: entryRuleliteral returns [String current=null] : iv_ruleliteral= ruleliteral EOF ;
     public final String entryRuleliteral() throws RecognitionException {
         String current = null;
 
@@ -13744,13 +13784,13 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4849:2: (iv_ruleliteral= ruleliteral EOF )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4850:2: iv_ruleliteral= ruleliteral EOF
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4871:2: (iv_ruleliteral= ruleliteral EOF )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4872:2: iv_ruleliteral= ruleliteral EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getLiteralRule()); 
             }
-            pushFollow(FollowSets000.FOLLOW_ruleliteral_in_entryRuleliteral10674);
+            pushFollow(FollowSets000.FOLLOW_ruleliteral_in_entryRuleliteral10712);
             iv_ruleliteral=ruleliteral();
 
             state._fsp--;
@@ -13758,7 +13798,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleliteral.getText(); 
             }
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleliteral10685); if (state.failed) return current;
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleliteral10723); if (state.failed) return current;
 
             }
 
@@ -13776,7 +13816,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleliteral"
-    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4857:1: ruleliteral returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_INT_0= RULE_INT | this_STRING_1= RULE_STRING | this_HEX_LITERAL_2= RULE_HEX_LITERAL | this_WIDE_STRING_LITERAL_3= RULE_WIDE_STRING_LITERAL | this_FIXED_PT_LITERAL_4= RULE_FIXED_PT_LITERAL | this_FLOATING_PT_LITERAL_5= RULE_FLOATING_PT_LITERAL | this_BOOLEAN_LITERAL_6= RULE_BOOLEAN_LITERAL ) ;
+    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4879:1: ruleliteral returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_INT_0= RULE_INT | this_STRING_1= RULE_STRING | this_HEX_LITERAL_2= RULE_HEX_LITERAL | this_WIDE_STRING_LITERAL_3= RULE_WIDE_STRING_LITERAL | this_FIXED_PT_LITERAL_4= RULE_FIXED_PT_LITERAL | this_FLOATING_PT_LITERAL_5= RULE_FLOATING_PT_LITERAL | this_BOOLEAN_LITERAL_6= RULE_BOOLEAN_LITERAL ) ;
     public final AntlrDatatypeRuleToken ruleliteral() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -13791,10 +13831,10 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4860:28: ( (this_INT_0= RULE_INT | this_STRING_1= RULE_STRING | this_HEX_LITERAL_2= RULE_HEX_LITERAL | this_WIDE_STRING_LITERAL_3= RULE_WIDE_STRING_LITERAL | this_FIXED_PT_LITERAL_4= RULE_FIXED_PT_LITERAL | this_FLOATING_PT_LITERAL_5= RULE_FLOATING_PT_LITERAL | this_BOOLEAN_LITERAL_6= RULE_BOOLEAN_LITERAL ) )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4861:1: (this_INT_0= RULE_INT | this_STRING_1= RULE_STRING | this_HEX_LITERAL_2= RULE_HEX_LITERAL | this_WIDE_STRING_LITERAL_3= RULE_WIDE_STRING_LITERAL | this_FIXED_PT_LITERAL_4= RULE_FIXED_PT_LITERAL | this_FLOATING_PT_LITERAL_5= RULE_FLOATING_PT_LITERAL | this_BOOLEAN_LITERAL_6= RULE_BOOLEAN_LITERAL )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4882:28: ( (this_INT_0= RULE_INT | this_STRING_1= RULE_STRING | this_HEX_LITERAL_2= RULE_HEX_LITERAL | this_WIDE_STRING_LITERAL_3= RULE_WIDE_STRING_LITERAL | this_FIXED_PT_LITERAL_4= RULE_FIXED_PT_LITERAL | this_FLOATING_PT_LITERAL_5= RULE_FLOATING_PT_LITERAL | this_BOOLEAN_LITERAL_6= RULE_BOOLEAN_LITERAL ) )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4883:1: (this_INT_0= RULE_INT | this_STRING_1= RULE_STRING | this_HEX_LITERAL_2= RULE_HEX_LITERAL | this_WIDE_STRING_LITERAL_3= RULE_WIDE_STRING_LITERAL | this_FIXED_PT_LITERAL_4= RULE_FIXED_PT_LITERAL | this_FLOATING_PT_LITERAL_5= RULE_FLOATING_PT_LITERAL | this_BOOLEAN_LITERAL_6= RULE_BOOLEAN_LITERAL )
             {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4861:1: (this_INT_0= RULE_INT | this_STRING_1= RULE_STRING | this_HEX_LITERAL_2= RULE_HEX_LITERAL | this_WIDE_STRING_LITERAL_3= RULE_WIDE_STRING_LITERAL | this_FIXED_PT_LITERAL_4= RULE_FIXED_PT_LITERAL | this_FLOATING_PT_LITERAL_5= RULE_FLOATING_PT_LITERAL | this_BOOLEAN_LITERAL_6= RULE_BOOLEAN_LITERAL )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4883:1: (this_INT_0= RULE_INT | this_STRING_1= RULE_STRING | this_HEX_LITERAL_2= RULE_HEX_LITERAL | this_WIDE_STRING_LITERAL_3= RULE_WIDE_STRING_LITERAL | this_FIXED_PT_LITERAL_4= RULE_FIXED_PT_LITERAL | this_FLOATING_PT_LITERAL_5= RULE_FLOATING_PT_LITERAL | this_BOOLEAN_LITERAL_6= RULE_BOOLEAN_LITERAL )
             int alt75=7;
             switch ( input.LA(1) ) {
             case RULE_INT:
@@ -13842,9 +13882,9 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
             switch (alt75) {
                 case 1 :
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4861:6: this_INT_0= RULE_INT
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4883:6: this_INT_0= RULE_INT
                     {
-                    this_INT_0=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_RULE_INT_in_ruleliteral10725); if (state.failed) return current;
+                    this_INT_0=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_RULE_INT_in_ruleliteral10763); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       		current.merge(this_INT_0);
@@ -13859,9 +13899,9 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4869:10: this_STRING_1= RULE_STRING
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4891:10: this_STRING_1= RULE_STRING
                     {
-                    this_STRING_1=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_RULE_STRING_in_ruleliteral10751); if (state.failed) return current;
+                    this_STRING_1=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_RULE_STRING_in_ruleliteral10789); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       		current.merge(this_STRING_1);
@@ -13876,9 +13916,9 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4877:10: this_HEX_LITERAL_2= RULE_HEX_LITERAL
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4899:10: this_HEX_LITERAL_2= RULE_HEX_LITERAL
                     {
-                    this_HEX_LITERAL_2=(Token)match(input,RULE_HEX_LITERAL,FollowSets000.FOLLOW_RULE_HEX_LITERAL_in_ruleliteral10777); if (state.failed) return current;
+                    this_HEX_LITERAL_2=(Token)match(input,RULE_HEX_LITERAL,FollowSets000.FOLLOW_RULE_HEX_LITERAL_in_ruleliteral10815); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       		current.merge(this_HEX_LITERAL_2);
@@ -13893,9 +13933,9 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4885:10: this_WIDE_STRING_LITERAL_3= RULE_WIDE_STRING_LITERAL
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4907:10: this_WIDE_STRING_LITERAL_3= RULE_WIDE_STRING_LITERAL
                     {
-                    this_WIDE_STRING_LITERAL_3=(Token)match(input,RULE_WIDE_STRING_LITERAL,FollowSets000.FOLLOW_RULE_WIDE_STRING_LITERAL_in_ruleliteral10803); if (state.failed) return current;
+                    this_WIDE_STRING_LITERAL_3=(Token)match(input,RULE_WIDE_STRING_LITERAL,FollowSets000.FOLLOW_RULE_WIDE_STRING_LITERAL_in_ruleliteral10841); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       		current.merge(this_WIDE_STRING_LITERAL_3);
@@ -13910,9 +13950,9 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4893:10: this_FIXED_PT_LITERAL_4= RULE_FIXED_PT_LITERAL
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4915:10: this_FIXED_PT_LITERAL_4= RULE_FIXED_PT_LITERAL
                     {
-                    this_FIXED_PT_LITERAL_4=(Token)match(input,RULE_FIXED_PT_LITERAL,FollowSets000.FOLLOW_RULE_FIXED_PT_LITERAL_in_ruleliteral10829); if (state.failed) return current;
+                    this_FIXED_PT_LITERAL_4=(Token)match(input,RULE_FIXED_PT_LITERAL,FollowSets000.FOLLOW_RULE_FIXED_PT_LITERAL_in_ruleliteral10867); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       		current.merge(this_FIXED_PT_LITERAL_4);
@@ -13927,9 +13967,9 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4901:10: this_FLOATING_PT_LITERAL_5= RULE_FLOATING_PT_LITERAL
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4923:10: this_FLOATING_PT_LITERAL_5= RULE_FLOATING_PT_LITERAL
                     {
-                    this_FLOATING_PT_LITERAL_5=(Token)match(input,RULE_FLOATING_PT_LITERAL,FollowSets000.FOLLOW_RULE_FLOATING_PT_LITERAL_in_ruleliteral10855); if (state.failed) return current;
+                    this_FLOATING_PT_LITERAL_5=(Token)match(input,RULE_FLOATING_PT_LITERAL,FollowSets000.FOLLOW_RULE_FLOATING_PT_LITERAL_in_ruleliteral10893); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       		current.merge(this_FLOATING_PT_LITERAL_5);
@@ -13944,9 +13984,9 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 7 :
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4909:10: this_BOOLEAN_LITERAL_6= RULE_BOOLEAN_LITERAL
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4931:10: this_BOOLEAN_LITERAL_6= RULE_BOOLEAN_LITERAL
                     {
-                    this_BOOLEAN_LITERAL_6=(Token)match(input,RULE_BOOLEAN_LITERAL,FollowSets000.FOLLOW_RULE_BOOLEAN_LITERAL_in_ruleliteral10881); if (state.failed) return current;
+                    this_BOOLEAN_LITERAL_6=(Token)match(input,RULE_BOOLEAN_LITERAL,FollowSets000.FOLLOW_RULE_BOOLEAN_LITERAL_in_ruleliteral10919); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       		current.merge(this_BOOLEAN_LITERAL_6);
@@ -13983,7 +14023,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleparam_attribute"
-    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4924:1: ruleparam_attribute returns [Enumerator current=null] : ( (enumLiteral_0= 'in' ) | (enumLiteral_1= 'out' ) | (enumLiteral_2= 'inout' ) ) ;
+    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4946:1: ruleparam_attribute returns [Enumerator current=null] : ( (enumLiteral_0= 'in' ) | (enumLiteral_1= 'out' ) | (enumLiteral_2= 'inout' ) ) ;
     public final Enumerator ruleparam_attribute() throws RecognitionException {
         Enumerator current = null;
 
@@ -13993,10 +14033,10 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4926:28: ( ( (enumLiteral_0= 'in' ) | (enumLiteral_1= 'out' ) | (enumLiteral_2= 'inout' ) ) )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4927:1: ( (enumLiteral_0= 'in' ) | (enumLiteral_1= 'out' ) | (enumLiteral_2= 'inout' ) )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4948:28: ( ( (enumLiteral_0= 'in' ) | (enumLiteral_1= 'out' ) | (enumLiteral_2= 'inout' ) ) )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4949:1: ( (enumLiteral_0= 'in' ) | (enumLiteral_1= 'out' ) | (enumLiteral_2= 'inout' ) )
             {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4927:1: ( (enumLiteral_0= 'in' ) | (enumLiteral_1= 'out' ) | (enumLiteral_2= 'inout' ) )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4949:1: ( (enumLiteral_0= 'in' ) | (enumLiteral_1= 'out' ) | (enumLiteral_2= 'inout' ) )
             int alt76=3;
             switch ( input.LA(1) ) {
             case 69:
@@ -14024,12 +14064,12 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
             switch (alt76) {
                 case 1 :
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4927:2: (enumLiteral_0= 'in' )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4949:2: (enumLiteral_0= 'in' )
                     {
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4927:2: (enumLiteral_0= 'in' )
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4927:4: enumLiteral_0= 'in'
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4949:2: (enumLiteral_0= 'in' )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4949:4: enumLiteral_0= 'in'
                     {
-                    enumLiteral_0=(Token)match(input,69,FollowSets000.FOLLOW_69_in_ruleparam_attribute10940); if (state.failed) return current;
+                    enumLiteral_0=(Token)match(input,69,FollowSets000.FOLLOW_69_in_ruleparam_attribute10978); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getParam_attributeAccess().getPARAM_INEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
@@ -14043,12 +14083,12 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4933:6: (enumLiteral_1= 'out' )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4955:6: (enumLiteral_1= 'out' )
                     {
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4933:6: (enumLiteral_1= 'out' )
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4933:8: enumLiteral_1= 'out'
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4955:6: (enumLiteral_1= 'out' )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4955:8: enumLiteral_1= 'out'
                     {
-                    enumLiteral_1=(Token)match(input,70,FollowSets000.FOLLOW_70_in_ruleparam_attribute10957); if (state.failed) return current;
+                    enumLiteral_1=(Token)match(input,70,FollowSets000.FOLLOW_70_in_ruleparam_attribute10995); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getParam_attributeAccess().getPARAM_OUTEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
@@ -14062,12 +14102,12 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4939:6: (enumLiteral_2= 'inout' )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4961:6: (enumLiteral_2= 'inout' )
                     {
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4939:6: (enumLiteral_2= 'inout' )
-                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4939:8: enumLiteral_2= 'inout'
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4961:6: (enumLiteral_2= 'inout' )
+                    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4961:8: enumLiteral_2= 'inout'
                     {
-                    enumLiteral_2=(Token)match(input,71,FollowSets000.FOLLOW_71_in_ruleparam_attribute10974); if (state.failed) return current;
+                    enumLiteral_2=(Token)match(input,71,FollowSets000.FOLLOW_71_in_ruleparam_attribute11012); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getParam_attributeAccess().getPARAM_INOUTEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
@@ -14103,7 +14143,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulefloat_type"
-    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4949:1: rulefloat_type returns [Enumerator current=null] : (enumLiteral_0= 'float' ) ;
+    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4971:1: rulefloat_type returns [Enumerator current=null] : (enumLiteral_0= 'float' ) ;
     public final Enumerator rulefloat_type() throws RecognitionException {
         Enumerator current = null;
 
@@ -14111,13 +14151,13 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4951:28: ( (enumLiteral_0= 'float' ) )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4952:1: (enumLiteral_0= 'float' )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4973:28: ( (enumLiteral_0= 'float' ) )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4974:1: (enumLiteral_0= 'float' )
             {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4952:1: (enumLiteral_0= 'float' )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4952:3: enumLiteral_0= 'float'
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4974:1: (enumLiteral_0= 'float' )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4974:3: enumLiteral_0= 'float'
             {
-            enumLiteral_0=(Token)match(input,72,FollowSets000.FOLLOW_72_in_rulefloat_type11018); if (state.failed) return current;
+            enumLiteral_0=(Token)match(input,72,FollowSets000.FOLLOW_72_in_rulefloat_type11056); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                       current = grammarAccess.getFloat_typeAccess().getPK_FLOATEnumLiteralDeclaration().getEnumLiteral().getInstance();
@@ -14147,7 +14187,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruledouble_type"
-    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4962:1: ruledouble_type returns [Enumerator current=null] : (enumLiteral_0= 'double' ) ;
+    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4984:1: ruledouble_type returns [Enumerator current=null] : (enumLiteral_0= 'double' ) ;
     public final Enumerator ruledouble_type() throws RecognitionException {
         Enumerator current = null;
 
@@ -14155,13 +14195,13 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4964:28: ( (enumLiteral_0= 'double' ) )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4965:1: (enumLiteral_0= 'double' )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4986:28: ( (enumLiteral_0= 'double' ) )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4987:1: (enumLiteral_0= 'double' )
             {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4965:1: (enumLiteral_0= 'double' )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4965:3: enumLiteral_0= 'double'
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4987:1: (enumLiteral_0= 'double' )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4987:3: enumLiteral_0= 'double'
             {
-            enumLiteral_0=(Token)match(input,55,FollowSets000.FOLLOW_55_in_ruledouble_type11061); if (state.failed) return current;
+            enumLiteral_0=(Token)match(input,55,FollowSets000.FOLLOW_55_in_ruledouble_type11099); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                       current = grammarAccess.getDouble_typeAccess().getPK_DOUBLEEnumLiteralDeclaration().getEnumLiteral().getInstance();
@@ -14191,7 +14231,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleshort_type"
-    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4975:1: ruleshort_type returns [Enumerator current=null] : (enumLiteral_0= 'short' ) ;
+    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4997:1: ruleshort_type returns [Enumerator current=null] : (enumLiteral_0= 'short' ) ;
     public final Enumerator ruleshort_type() throws RecognitionException {
         Enumerator current = null;
 
@@ -14199,13 +14239,13 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4977:28: ( (enumLiteral_0= 'short' ) )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4978:1: (enumLiteral_0= 'short' )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4999:28: ( (enumLiteral_0= 'short' ) )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5000:1: (enumLiteral_0= 'short' )
             {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4978:1: (enumLiteral_0= 'short' )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4978:3: enumLiteral_0= 'short'
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5000:1: (enumLiteral_0= 'short' )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5000:3: enumLiteral_0= 'short'
             {
-            enumLiteral_0=(Token)match(input,57,FollowSets000.FOLLOW_57_in_ruleshort_type11104); if (state.failed) return current;
+            enumLiteral_0=(Token)match(input,57,FollowSets000.FOLLOW_57_in_ruleshort_type11142); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                       current = grammarAccess.getShort_typeAccess().getPK_SHORTEnumLiteralDeclaration().getEnumLiteral().getInstance();
@@ -14235,7 +14275,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulelong_type"
-    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4988:1: rulelong_type returns [Enumerator current=null] : (enumLiteral_0= 'long' ) ;
+    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5010:1: rulelong_type returns [Enumerator current=null] : (enumLiteral_0= 'long' ) ;
     public final Enumerator rulelong_type() throws RecognitionException {
         Enumerator current = null;
 
@@ -14243,13 +14283,13 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4990:28: ( (enumLiteral_0= 'long' ) )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4991:1: (enumLiteral_0= 'long' )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5012:28: ( (enumLiteral_0= 'long' ) )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5013:1: (enumLiteral_0= 'long' )
             {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4991:1: (enumLiteral_0= 'long' )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:4991:3: enumLiteral_0= 'long'
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5013:1: (enumLiteral_0= 'long' )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5013:3: enumLiteral_0= 'long'
             {
-            enumLiteral_0=(Token)match(input,54,FollowSets000.FOLLOW_54_in_rulelong_type11147); if (state.failed) return current;
+            enumLiteral_0=(Token)match(input,54,FollowSets000.FOLLOW_54_in_rulelong_type11185); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                       current = grammarAccess.getLong_typeAccess().getPK_LONGEnumLiteralDeclaration().getEnumLiteral().getInstance();
@@ -14279,7 +14319,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulechar_type"
-    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5001:1: rulechar_type returns [Enumerator current=null] : (enumLiteral_0= 'char' ) ;
+    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5023:1: rulechar_type returns [Enumerator current=null] : (enumLiteral_0= 'char' ) ;
     public final Enumerator rulechar_type() throws RecognitionException {
         Enumerator current = null;
 
@@ -14287,13 +14327,13 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5003:28: ( (enumLiteral_0= 'char' ) )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5004:1: (enumLiteral_0= 'char' )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5025:28: ( (enumLiteral_0= 'char' ) )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5026:1: (enumLiteral_0= 'char' )
             {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5004:1: (enumLiteral_0= 'char' )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5004:3: enumLiteral_0= 'char'
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5026:1: (enumLiteral_0= 'char' )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5026:3: enumLiteral_0= 'char'
             {
-            enumLiteral_0=(Token)match(input,73,FollowSets000.FOLLOW_73_in_rulechar_type11190); if (state.failed) return current;
+            enumLiteral_0=(Token)match(input,73,FollowSets000.FOLLOW_73_in_rulechar_type11228); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                       current = grammarAccess.getChar_typeAccess().getPK_CHAREnumLiteralDeclaration().getEnumLiteral().getInstance();
@@ -14323,7 +14363,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulewide_char_type"
-    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5014:1: rulewide_char_type returns [Enumerator current=null] : (enumLiteral_0= 'wchar' ) ;
+    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5036:1: rulewide_char_type returns [Enumerator current=null] : (enumLiteral_0= 'wchar' ) ;
     public final Enumerator rulewide_char_type() throws RecognitionException {
         Enumerator current = null;
 
@@ -14331,13 +14371,13 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5016:28: ( (enumLiteral_0= 'wchar' ) )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5017:1: (enumLiteral_0= 'wchar' )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5038:28: ( (enumLiteral_0= 'wchar' ) )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5039:1: (enumLiteral_0= 'wchar' )
             {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5017:1: (enumLiteral_0= 'wchar' )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5017:3: enumLiteral_0= 'wchar'
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5039:1: (enumLiteral_0= 'wchar' )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5039:3: enumLiteral_0= 'wchar'
             {
-            enumLiteral_0=(Token)match(input,74,FollowSets000.FOLLOW_74_in_rulewide_char_type11233); if (state.failed) return current;
+            enumLiteral_0=(Token)match(input,74,FollowSets000.FOLLOW_74_in_rulewide_char_type11271); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                       current = grammarAccess.getWide_char_typeAccess().getPK_WCHAREnumLiteralDeclaration().getEnumLiteral().getInstance();
@@ -14367,7 +14407,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulestring_type"
-    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5027:1: rulestring_type returns [Enumerator current=null] : (enumLiteral_0= 'string' ) ;
+    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5049:1: rulestring_type returns [Enumerator current=null] : (enumLiteral_0= 'string' ) ;
     public final Enumerator rulestring_type() throws RecognitionException {
         Enumerator current = null;
 
@@ -14375,13 +14415,13 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5029:28: ( (enumLiteral_0= 'string' ) )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5030:1: (enumLiteral_0= 'string' )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5051:28: ( (enumLiteral_0= 'string' ) )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5052:1: (enumLiteral_0= 'string' )
             {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5030:1: (enumLiteral_0= 'string' )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5030:3: enumLiteral_0= 'string'
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5052:1: (enumLiteral_0= 'string' )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5052:3: enumLiteral_0= 'string'
             {
-            enumLiteral_0=(Token)match(input,51,FollowSets000.FOLLOW_51_in_rulestring_type11276); if (state.failed) return current;
+            enumLiteral_0=(Token)match(input,51,FollowSets000.FOLLOW_51_in_rulestring_type11314); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                       current = grammarAccess.getString_typeAccess().getPK_STRINGEnumLiteralDeclaration().getEnumLiteral().getInstance();
@@ -14411,7 +14451,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulewide_string_type"
-    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5040:1: rulewide_string_type returns [Enumerator current=null] : (enumLiteral_0= 'wstring' ) ;
+    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5062:1: rulewide_string_type returns [Enumerator current=null] : (enumLiteral_0= 'wstring' ) ;
     public final Enumerator rulewide_string_type() throws RecognitionException {
         Enumerator current = null;
 
@@ -14419,13 +14459,13 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5042:28: ( (enumLiteral_0= 'wstring' ) )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5043:1: (enumLiteral_0= 'wstring' )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5064:28: ( (enumLiteral_0= 'wstring' ) )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5065:1: (enumLiteral_0= 'wstring' )
             {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5043:1: (enumLiteral_0= 'wstring' )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5043:3: enumLiteral_0= 'wstring'
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5065:1: (enumLiteral_0= 'wstring' )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5065:3: enumLiteral_0= 'wstring'
             {
-            enumLiteral_0=(Token)match(input,52,FollowSets000.FOLLOW_52_in_rulewide_string_type11319); if (state.failed) return current;
+            enumLiteral_0=(Token)match(input,52,FollowSets000.FOLLOW_52_in_rulewide_string_type11357); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                       current = grammarAccess.getWide_string_typeAccess().getPK_WSTRINGEnumLiteralDeclaration().getEnumLiteral().getInstance();
@@ -14455,7 +14495,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleboolean_type"
-    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5053:1: ruleboolean_type returns [Enumerator current=null] : (enumLiteral_0= 'boolean' ) ;
+    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5075:1: ruleboolean_type returns [Enumerator current=null] : (enumLiteral_0= 'boolean' ) ;
     public final Enumerator ruleboolean_type() throws RecognitionException {
         Enumerator current = null;
 
@@ -14463,13 +14503,13 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5055:28: ( (enumLiteral_0= 'boolean' ) )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5056:1: (enumLiteral_0= 'boolean' )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5077:28: ( (enumLiteral_0= 'boolean' ) )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5078:1: (enumLiteral_0= 'boolean' )
             {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5056:1: (enumLiteral_0= 'boolean' )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5056:3: enumLiteral_0= 'boolean'
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5078:1: (enumLiteral_0= 'boolean' )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5078:3: enumLiteral_0= 'boolean'
             {
-            enumLiteral_0=(Token)match(input,75,FollowSets000.FOLLOW_75_in_ruleboolean_type11362); if (state.failed) return current;
+            enumLiteral_0=(Token)match(input,75,FollowSets000.FOLLOW_75_in_ruleboolean_type11400); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                       current = grammarAccess.getBoolean_typeAccess().getPK_BOOLEANEnumLiteralDeclaration().getEnumLiteral().getInstance();
@@ -14499,7 +14539,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleoctet_type"
-    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5066:1: ruleoctet_type returns [Enumerator current=null] : (enumLiteral_0= 'octet' ) ;
+    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5088:1: ruleoctet_type returns [Enumerator current=null] : (enumLiteral_0= 'octet' ) ;
     public final Enumerator ruleoctet_type() throws RecognitionException {
         Enumerator current = null;
 
@@ -14507,13 +14547,13 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5068:28: ( (enumLiteral_0= 'octet' ) )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5069:1: (enumLiteral_0= 'octet' )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5090:28: ( (enumLiteral_0= 'octet' ) )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5091:1: (enumLiteral_0= 'octet' )
             {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5069:1: (enumLiteral_0= 'octet' )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5069:3: enumLiteral_0= 'octet'
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5091:1: (enumLiteral_0= 'octet' )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5091:3: enumLiteral_0= 'octet'
             {
-            enumLiteral_0=(Token)match(input,76,FollowSets000.FOLLOW_76_in_ruleoctet_type11405); if (state.failed) return current;
+            enumLiteral_0=(Token)match(input,76,FollowSets000.FOLLOW_76_in_ruleoctet_type11443); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                       current = grammarAccess.getOctet_typeAccess().getPK_OCTETEnumLiteralDeclaration().getEnumLiteral().getInstance();
@@ -14543,7 +14583,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleany_type"
-    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5079:1: ruleany_type returns [Enumerator current=null] : (enumLiteral_0= 'any' ) ;
+    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5101:1: ruleany_type returns [Enumerator current=null] : (enumLiteral_0= 'any' ) ;
     public final Enumerator ruleany_type() throws RecognitionException {
         Enumerator current = null;
 
@@ -14551,13 +14591,13 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5081:28: ( (enumLiteral_0= 'any' ) )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5082:1: (enumLiteral_0= 'any' )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5103:28: ( (enumLiteral_0= 'any' ) )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5104:1: (enumLiteral_0= 'any' )
             {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5082:1: (enumLiteral_0= 'any' )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5082:3: enumLiteral_0= 'any'
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5104:1: (enumLiteral_0= 'any' )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5104:3: enumLiteral_0= 'any'
             {
-            enumLiteral_0=(Token)match(input,77,FollowSets000.FOLLOW_77_in_ruleany_type11448); if (state.failed) return current;
+            enumLiteral_0=(Token)match(input,77,FollowSets000.FOLLOW_77_in_ruleany_type11486); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                       current = grammarAccess.getAny_typeAccess().getPK_ANYEnumLiteralDeclaration().getEnumLiteral().getInstance();
@@ -14587,7 +14627,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleobject_type"
-    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5092:1: ruleobject_type returns [Enumerator current=null] : (enumLiteral_0= 'Object' ) ;
+    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5114:1: ruleobject_type returns [Enumerator current=null] : (enumLiteral_0= 'Object' ) ;
     public final Enumerator ruleobject_type() throws RecognitionException {
         Enumerator current = null;
 
@@ -14595,13 +14635,13 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5094:28: ( (enumLiteral_0= 'Object' ) )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5095:1: (enumLiteral_0= 'Object' )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5116:28: ( (enumLiteral_0= 'Object' ) )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5117:1: (enumLiteral_0= 'Object' )
             {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5095:1: (enumLiteral_0= 'Object' )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5095:3: enumLiteral_0= 'Object'
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5117:1: (enumLiteral_0= 'Object' )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5117:3: enumLiteral_0= 'Object'
             {
-            enumLiteral_0=(Token)match(input,78,FollowSets000.FOLLOW_78_in_ruleobject_type11491); if (state.failed) return current;
+            enumLiteral_0=(Token)match(input,78,FollowSets000.FOLLOW_78_in_ruleobject_type11529); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                       current = grammarAccess.getObject_typeAccess().getPK_OBJREFEnumLiteralDeclaration().getEnumLiteral().getInstance();
@@ -14631,7 +14671,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulevoid_type"
-    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5105:1: rulevoid_type returns [Enumerator current=null] : (enumLiteral_0= 'void' ) ;
+    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5127:1: rulevoid_type returns [Enumerator current=null] : (enumLiteral_0= 'void' ) ;
     public final Enumerator rulevoid_type() throws RecognitionException {
         Enumerator current = null;
 
@@ -14639,13 +14679,13 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5107:28: ( (enumLiteral_0= 'void' ) )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5108:1: (enumLiteral_0= 'void' )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5129:28: ( (enumLiteral_0= 'void' ) )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5130:1: (enumLiteral_0= 'void' )
             {
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5108:1: (enumLiteral_0= 'void' )
-            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5108:3: enumLiteral_0= 'void'
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5130:1: (enumLiteral_0= 'void' )
+            // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:5130:3: enumLiteral_0= 'void'
             {
-            enumLiteral_0=(Token)match(input,79,FollowSets000.FOLLOW_79_in_rulevoid_type11534); if (state.failed) return current;
+            enumLiteral_0=(Token)match(input,79,FollowSets000.FOLLOW_79_in_rulevoid_type11572); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                       current = grammarAccess.getVoid_typeAccess().getPK_VOIDEnumLiteralDeclaration().getEnumLiteral().getInstance();
@@ -14820,7 +14860,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
     public final void synpred71_InternalIDL_fragment() throws RecognitionException {   
         Token otherlv_0=null;
         Token otherlv_2=null;
-        Token otherlv_3=null;
+        Token lv_isDefault_3_0=null;
         Token otherlv_4=null;
         Token otherlv_6=null;
         EObject lv_label_1_0 = null;
@@ -14828,13 +14868,13 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
         EObject lv_containedType_5_0 = null;
 
 
-        // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2611:2: ( ( ( (otherlv_0= 'case' ( (lv_label_1_0= ruleconst_exp ) ) otherlv_2= ':' ) | (otherlv_3= 'default' otherlv_4= ':' ) )+ ( (lv_containedType_5_0= rulearray_type_spec ) ) otherlv_6= ';' ) )
-        // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2611:2: ( ( (otherlv_0= 'case' ( (lv_label_1_0= ruleconst_exp ) ) otherlv_2= ':' ) | (otherlv_3= 'default' otherlv_4= ':' ) )+ ( (lv_containedType_5_0= rulearray_type_spec ) ) otherlv_6= ';' )
+        // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2611:2: ( ( ( (otherlv_0= 'case' ( (lv_label_1_0= ruleconst_exp ) ) otherlv_2= ':' ) | ( ( (lv_isDefault_3_0= 'default' ) ) otherlv_4= ':' ) )+ ( (lv_containedType_5_0= rulearray_type_spec ) ) otherlv_6= ';' ) )
+        // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2611:2: ( ( (otherlv_0= 'case' ( (lv_label_1_0= ruleconst_exp ) ) otherlv_2= ':' ) | ( ( (lv_isDefault_3_0= 'default' ) ) otherlv_4= ':' ) )+ ( (lv_containedType_5_0= rulearray_type_spec ) ) otherlv_6= ';' )
         {
-        // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2611:2: ( ( (otherlv_0= 'case' ( (lv_label_1_0= ruleconst_exp ) ) otherlv_2= ':' ) | (otherlv_3= 'default' otherlv_4= ':' ) )+ ( (lv_containedType_5_0= rulearray_type_spec ) ) otherlv_6= ';' )
-        // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2611:3: ( (otherlv_0= 'case' ( (lv_label_1_0= ruleconst_exp ) ) otherlv_2= ':' ) | (otherlv_3= 'default' otherlv_4= ':' ) )+ ( (lv_containedType_5_0= rulearray_type_spec ) ) otherlv_6= ';'
+        // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2611:2: ( ( (otherlv_0= 'case' ( (lv_label_1_0= ruleconst_exp ) ) otherlv_2= ':' ) | ( ( (lv_isDefault_3_0= 'default' ) ) otherlv_4= ':' ) )+ ( (lv_containedType_5_0= rulearray_type_spec ) ) otherlv_6= ';' )
+        // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2611:3: ( (otherlv_0= 'case' ( (lv_label_1_0= ruleconst_exp ) ) otherlv_2= ':' ) | ( ( (lv_isDefault_3_0= 'default' ) ) otherlv_4= ':' ) )+ ( (lv_containedType_5_0= rulearray_type_spec ) ) otherlv_6= ';'
         {
-        // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2611:3: ( (otherlv_0= 'case' ( (lv_label_1_0= ruleconst_exp ) ) otherlv_2= ':' ) | (otherlv_3= 'default' otherlv_4= ':' ) )+
+        // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2611:3: ( (otherlv_0= 'case' ( (lv_label_1_0= ruleconst_exp ) ) otherlv_2= ':' ) | ( ( (lv_isDefault_3_0= 'default' ) ) otherlv_4= ':' ) )+
         int cnt93=0;
         loop93:
         do {
@@ -14887,13 +14927,25 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
         	    }
         	    break;
         	case 2 :
-        	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2638:6: (otherlv_3= 'default' otherlv_4= ':' )
+        	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2638:6: ( ( (lv_isDefault_3_0= 'default' ) ) otherlv_4= ':' )
         	    {
-        	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2638:6: (otherlv_3= 'default' otherlv_4= ':' )
-        	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2638:8: otherlv_3= 'default' otherlv_4= ':'
+        	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2638:6: ( ( (lv_isDefault_3_0= 'default' ) ) otherlv_4= ':' )
+        	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2638:7: ( (lv_isDefault_3_0= 'default' ) ) otherlv_4= ':'
         	    {
-        	    otherlv_3=(Token)match(input,44,FollowSets000.FOLLOW_44_in_synpred71_InternalIDL5647); if (state.failed) return ;
-        	    otherlv_4=(Token)match(input,24,FollowSets000.FOLLOW_24_in_synpred71_InternalIDL5659); if (state.failed) return ;
+        	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2638:7: ( (lv_isDefault_3_0= 'default' ) )
+        	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2639:1: (lv_isDefault_3_0= 'default' )
+        	    {
+        	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2639:1: (lv_isDefault_3_0= 'default' )
+        	    // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2640:3: lv_isDefault_3_0= 'default'
+        	    {
+        	    lv_isDefault_3_0=(Token)match(input,44,FollowSets000.FOLLOW_44_in_synpred71_InternalIDL5653); if (state.failed) return ;
+
+        	    }
+
+
+        	    }
+
+        	    otherlv_4=(Token)match(input,24,FollowSets000.FOLLOW_24_in_synpred71_InternalIDL5678); if (state.failed) return ;
 
         	    }
 
@@ -14911,18 +14963,18 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
             cnt93++;
         } while (true);
 
-        // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2646:4: ( (lv_containedType_5_0= rulearray_type_spec ) )
-        // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2647:1: (lv_containedType_5_0= rulearray_type_spec )
+        // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2657:4: ( (lv_containedType_5_0= rulearray_type_spec ) )
+        // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2658:1: (lv_containedType_5_0= rulearray_type_spec )
         {
-        // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2647:1: (lv_containedType_5_0= rulearray_type_spec )
-        // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2648:3: lv_containedType_5_0= rulearray_type_spec
+        // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2658:1: (lv_containedType_5_0= rulearray_type_spec )
+        // ../org.csu.idl.xtext/src-gen/org/csu/idl/xtext/parser/antlr/internal/InternalIDL.g:2659:3: lv_containedType_5_0= rulearray_type_spec
         {
         if ( state.backtracking==0 ) {
            
           	        newCompositeNode(grammarAccess.getCase_stmtAccess().getContainedTypeArray_type_specParserRuleCall_0_1_0()); 
           	    
         }
-        pushFollow(FollowSets000.FOLLOW_rulearray_type_spec_in_synpred71_InternalIDL5683);
+        pushFollow(FollowSets000.FOLLOW_rulearray_type_spec_in_synpred71_InternalIDL5702);
         lv_containedType_5_0=rulearray_type_spec();
 
         state._fsp--;
@@ -14933,7 +14985,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
         }
 
-        otherlv_6=(Token)match(input,17,FollowSets000.FOLLOW_17_in_synpred71_InternalIDL5695); if (state.failed) return ;
+        otherlv_6=(Token)match(input,17,FollowSets000.FOLLOW_17_in_synpred71_InternalIDL5714); if (state.failed) return ;
 
         }
 
@@ -14944,6 +14996,20 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
 
     // Delegated rules
 
+    public final boolean synpred61_InternalIDL() {
+        state.backtracking++;
+        int start = input.mark();
+        try {
+            synpred61_InternalIDL_fragment(); // can never throw exception
+        } catch (RecognitionException re) {
+            System.err.println("impossible: "+re);
+        }
+        boolean success = !state.failed;
+        input.rewind(start);
+        state.backtracking--;
+        state.failed=false;
+        return success;
+    }
     public final boolean synpred71_InternalIDL() {
         state.backtracking++;
         int start = input.mark();
@@ -14963,20 +15029,6 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
         int start = input.mark();
         try {
             synpred51_InternalIDL_fragment(); // can never throw exception
-        } catch (RecognitionException re) {
-            System.err.println("impossible: "+re);
-        }
-        boolean success = !state.failed;
-        input.rewind(start);
-        state.backtracking--;
-        state.failed=false;
-        return success;
-    }
-    public final boolean synpred61_InternalIDL() {
-        state.backtracking++;
-        int start = input.mark();
-        try {
-            synpred61_InternalIDL_fragment(); // can never throw exception
         } catch (RecognitionException re) {
             System.err.println("impossible: "+re);
         }
@@ -15070,13 +15122,13 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
     static final String DFA25_eotS =
         "\31\uffff";
     static final String DFA25_eofS =
-        "\21\uffff\1\27\7\uffff";
+        "\21\uffff\1\26\7\uffff";
     static final String DFA25_minS =
         "\1\37\1\40\3\5\1\66\13\5\1\21\4\5\2\uffff\1\5";
     static final String DFA25_maxS =
-        "\1\37\1\40\1\116\1\5\1\67\1\71\13\5\1\35\3\5\1\66\2\uffff\1\5";
+        "\1\37\1\40\1\116\1\5\1\67\1\71\13\5\1\35\2\5\1\66\1\5\2\uffff\1\5";
     static final String DFA25_acceptS =
-        "\26\uffff\1\1\1\2\1\uffff";
+        "\26\uffff\1\2\1\1\1\uffff";
     static final String DFA25_specialS =
         "\31\uffff}>";
     static final String[] DFA25_transitionS = {
@@ -15084,8 +15136,8 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
             "\1\2",
             "\1\20\55\uffff\1\12\1\13\1\uffff\1\4\1\7\1\5\1\3\16\uffff\1\6\1\10\1\11\1\14\1\15\1\16\1\17",
             "\1\21",
-            "\1\21\60\uffff\1\22\1\23",
-            "\1\25\2\uffff\1\24",
+            "\1\21\60\uffff\1\23\1\22",
+            "\1\24\2\uffff\1\25",
             "\1\21",
             "\1\21",
             "\1\21",
@@ -15097,11 +15149,11 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
             "\1\21",
             "\1\21",
             "\1\21",
-            "\1\27\13\uffff\1\26",
-            "\1\21",
+            "\1\26\13\uffff\1\27",
             "\1\21",
             "\1\21",
             "\1\21\60\uffff\1\30",
+            "\1\21",
             "",
             "",
             "\1\21"
@@ -15594,19 +15646,19 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
     static final String DFA60_eotS =
         "\12\uffff";
     static final String DFA60_eofS =
-        "\2\uffff\1\5\3\uffff\1\11\3\uffff";
+        "\2\uffff\1\4\3\uffff\1\11\3\uffff";
     static final String DFA60_minS =
         "\1\66\1\uffff\1\5\1\66\2\uffff\1\5\3\uffff";
     static final String DFA60_maxS =
         "\1\71\1\uffff\1\66\1\71\2\uffff\1\66\3\uffff";
     static final String DFA60_acceptS =
-        "\1\uffff\1\1\2\uffff\1\3\1\2\1\uffff\1\4\1\6\1\5";
+        "\1\uffff\1\1\2\uffff\1\2\1\3\1\uffff\1\4\1\6\1\5";
     static final String DFA60_specialS =
         "\12\uffff}>";
     static final String[] DFA60_transitionS = {
             "\1\2\1\uffff\1\3\1\1",
             "",
-            "\1\5\23\uffff\1\5\2\uffff\1\5\25\uffff\1\5\3\uffff\1\4",
+            "\1\4\23\uffff\1\4\2\uffff\1\4\25\uffff\1\4\3\uffff\1\5",
             "\1\6\2\uffff\1\7",
             "",
             "",
@@ -15646,7 +15698,7 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
             this.transition = DFA60_transition;
         }
         public String getDescription() {
-            return "3579:1: ( ( (lv_kind_0_0= ruleshort_type ) ) | ( (lv_kind_1_0= rulelong_type ) ) | ( (lv_kind_2_0= rulelonglong_type ) ) | ( (lv_kind_3_0= ruleushort_type ) ) | ( (lv_kind_4_0= ruleulong_type ) ) | ( (lv_kind_5_0= ruleulonglong_type ) ) )";
+            return "3601:1: ( ( (lv_kind_0_0= ruleshort_type ) ) | ( (lv_kind_1_0= rulelong_type ) ) | ( (lv_kind_2_0= rulelonglong_type ) ) | ( (lv_kind_3_0= ruleushort_type ) ) | ( (lv_kind_4_0= ruleulong_type ) ) | ( (lv_kind_5_0= ruleulonglong_type ) ) )";
         }
     }
  
@@ -15887,219 +15939,219 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
         public static final BitSet FOLLOW_43_in_rulecase_stmt5594 = new BitSet(new long[]{0x8000000008000FF0L,0x0000000000000011L});
         public static final BitSet FOLLOW_ruleconst_exp_in_rulecase_stmt5615 = new BitSet(new long[]{0x0000000001000000L});
         public static final BitSet FOLLOW_24_in_rulecase_stmt5627 = new BitSet(new long[]{0x03F9180000000020L,0x0000000000007F00L});
-        public static final BitSet FOLLOW_44_in_rulecase_stmt5647 = new BitSet(new long[]{0x0000000001000000L});
-        public static final BitSet FOLLOW_24_in_rulecase_stmt5659 = new BitSet(new long[]{0x03F9180000000020L,0x0000000000007F00L});
-        public static final BitSet FOLLOW_rulearray_type_spec_in_rulecase_stmt5683 = new BitSet(new long[]{0x0000000000020000L});
-        public static final BitSet FOLLOW_17_in_rulecase_stmt5695 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_43_in_rulecase_stmt5717 = new BitSet(new long[]{0x8000000008000FF0L,0x0000000000000011L});
-        public static final BitSet FOLLOW_ruleconst_exp_in_rulecase_stmt5738 = new BitSet(new long[]{0x0000000001000000L});
-        public static final BitSet FOLLOW_24_in_rulecase_stmt5750 = new BitSet(new long[]{0x03F9180000000020L,0x0000000000007F00L});
-        public static final BitSet FOLLOW_44_in_rulecase_stmt5770 = new BitSet(new long[]{0x0000000001000000L});
-        public static final BitSet FOLLOW_24_in_rulecase_stmt5782 = new BitSet(new long[]{0x03F9180000000020L,0x0000000000007F00L});
-        public static final BitSet FOLLOW_rulesimple_type_spec_in_rulecase_stmt5807 = new BitSet(new long[]{0x0000000000000020L});
-        public static final BitSet FOLLOW_RULE_ID_in_rulecase_stmt5837 = new BitSet(new long[]{0x0000000000000020L});
-        public static final BitSet FOLLOW_RULE_ID_in_rulecase_stmt5855 = new BitSet(new long[]{0x0000000000020000L});
-        public static final BitSet FOLLOW_17_in_rulecase_stmt5872 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleenum_type_in_entryRuleenum_type5909 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleenum_type5919 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_45_in_ruleenum_type5956 = new BitSet(new long[]{0x0000000000000020L});
-        public static final BitSet FOLLOW_RULE_ID_in_ruleenum_type5973 = new BitSet(new long[]{0x0000000000080000L});
-        public static final BitSet FOLLOW_19_in_ruleenum_type5990 = new BitSet(new long[]{0x0000000000000020L});
-        public static final BitSet FOLLOW_ruleenum_member_in_ruleenum_type6011 = new BitSet(new long[]{0x0000000002100000L});
-        public static final BitSet FOLLOW_25_in_ruleenum_type6024 = new BitSet(new long[]{0x0000000000000020L});
-        public static final BitSet FOLLOW_ruleenum_member_in_ruleenum_type6045 = new BitSet(new long[]{0x0000000002100000L});
-        public static final BitSet FOLLOW_20_in_ruleenum_type6059 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleenum_member_in_entryRuleenum_member6095 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleenum_member6105 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_ruleenum_member6146 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleconstr_forward_decl_in_entryRuleconstr_forward_decl6187 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleconstr_forward_decl6198 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_40_in_ruleconstr_forward_decl6237 = new BitSet(new long[]{0x0000000000000020L});
-        public static final BitSet FOLLOW_RULE_ID_in_ruleconstr_forward_decl6252 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_41_in_ruleconstr_forward_decl6278 = new BitSet(new long[]{0x0000000000000020L});
-        public static final BitSet FOLLOW_RULE_ID_in_ruleconstr_forward_decl6293 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleconst_decl_in_entryRuleconst_decl6339 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleconst_decl6349 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_46_in_ruleconst_decl6386 = new BitSet(new long[]{0x03F8000000000020L,0x0000000000003F00L});
-        public static final BitSet FOLLOW_ruleconst_type_in_ruleconst_decl6408 = new BitSet(new long[]{0x0000000000000020L});
-        public static final BitSet FOLLOW_RULE_ID_in_ruleconst_decl6438 = new BitSet(new long[]{0x0000000000000020L});
-        public static final BitSet FOLLOW_RULE_ID_in_ruleconst_decl6456 = new BitSet(new long[]{0x0000800000000000L});
-        public static final BitSet FOLLOW_47_in_ruleconst_decl6473 = new BitSet(new long[]{0x8000000008000FF0L,0x0000000000000011L});
-        public static final BitSet FOLLOW_ruleconst_exp_in_ruleconst_decl6494 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleconst_type_in_entryRuleconst_type6530 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleconst_type6540 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleprimitive_def_in_ruleconst_type6590 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rulestringdef_type_in_ruleconst_type6620 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rulewide_stringdef_type_in_ruleconst_type6650 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rulefixed_pt_const_type_in_ruleconst_type6680 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleprimitive_def_in_entryRuleprimitive_def6715 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleprimitive_def6725 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleinteger_type_in_ruleprimitive_def6775 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rulefloating_pt_type_in_ruleprimitive_def6805 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rulecharstr_type_in_ruleprimitive_def6835 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleother_type_in_ruleprimitive_def6865 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rulesequence_type_in_entryRulesequence_type6900 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRulesequence_type6910 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_48_in_rulesequence_type6947 = new BitSet(new long[]{0x0002000000000000L});
-        public static final BitSet FOLLOW_49_in_rulesequence_type6959 = new BitSet(new long[]{0x03F9000000000020L,0x0000000000007F00L});
-        public static final BitSet FOLLOW_rulesimple_type_spec_in_rulesequence_type6981 = new BitSet(new long[]{0x0004000002000000L});
-        public static final BitSet FOLLOW_RULE_ID_in_rulesequence_type7011 = new BitSet(new long[]{0x0004000002000000L});
-        public static final BitSet FOLLOW_25_in_rulesequence_type7025 = new BitSet(new long[]{0x8000000008000FF0L,0x0000000000000011L});
-        public static final BitSet FOLLOW_ruleconst_exp_in_rulesequence_type7046 = new BitSet(new long[]{0x0004000000000000L});
-        public static final BitSet FOLLOW_50_in_rulesequence_type7060 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rulestringdef_type_in_entryRulestringdef_type7096 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRulestringdef_type7106 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_51_in_rulestringdef_type7143 = new BitSet(new long[]{0x0002000000000000L});
-        public static final BitSet FOLLOW_49_in_rulestringdef_type7155 = new BitSet(new long[]{0x8000000008000FF0L,0x0000000000000011L});
-        public static final BitSet FOLLOW_ruleconst_exp_in_rulestringdef_type7176 = new BitSet(new long[]{0x0004000000000000L});
-        public static final BitSet FOLLOW_50_in_rulestringdef_type7188 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rulewide_stringdef_type_in_entryRulewide_stringdef_type7224 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRulewide_stringdef_type7234 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_52_in_rulewide_stringdef_type7271 = new BitSet(new long[]{0x0002000000000000L});
-        public static final BitSet FOLLOW_49_in_rulewide_stringdef_type7283 = new BitSet(new long[]{0x8000000008000FF0L,0x0000000000000011L});
-        public static final BitSet FOLLOW_ruleconst_exp_in_rulewide_stringdef_type7304 = new BitSet(new long[]{0x0004000000000000L});
-        public static final BitSet FOLLOW_50_in_rulewide_stringdef_type7316 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rulefixed_pt_type_in_entryRulefixed_pt_type7352 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRulefixed_pt_type7362 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_53_in_rulefixed_pt_type7399 = new BitSet(new long[]{0x0002000000000000L});
-        public static final BitSet FOLLOW_49_in_rulefixed_pt_type7411 = new BitSet(new long[]{0x8000000008000FF0L,0x0000000000000011L});
-        public static final BitSet FOLLOW_ruleconst_exp_in_rulefixed_pt_type7432 = new BitSet(new long[]{0x0000000002000000L});
-        public static final BitSet FOLLOW_25_in_rulefixed_pt_type7444 = new BitSet(new long[]{0x8000000008000FF0L,0x0000000000000011L});
-        public static final BitSet FOLLOW_ruleconst_exp_in_rulefixed_pt_type7465 = new BitSet(new long[]{0x0004000000000000L});
-        public static final BitSet FOLLOW_50_in_rulefixed_pt_type7477 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rulefloating_pt_type_in_entryRulefloating_pt_type7513 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRulefloating_pt_type7523 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rulefloat_type_in_rulefloating_pt_type7569 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruledouble_type_in_rulefloating_pt_type7596 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rulelongdouble_type_in_rulefloating_pt_type7623 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rulelongdouble_type_in_entryRulelongdouble_type7660 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRulelongdouble_type7671 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_54_in_rulelongdouble_type7709 = new BitSet(new long[]{0x0080000000000000L});
-        public static final BitSet FOLLOW_55_in_rulelongdouble_type7722 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleinteger_type_in_entryRuleinteger_type7762 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleinteger_type7772 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleshort_type_in_ruleinteger_type7818 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rulelong_type_in_ruleinteger_type7845 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rulelonglong_type_in_ruleinteger_type7872 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleushort_type_in_ruleinteger_type7899 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleulong_type_in_ruleinteger_type7926 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleulonglong_type_in_ruleinteger_type7953 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rulelonglong_type_in_entryRulelonglong_type7990 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRulelonglong_type8001 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_54_in_rulelonglong_type8039 = new BitSet(new long[]{0x0040000000000000L});
-        public static final BitSet FOLLOW_54_in_rulelonglong_type8052 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleushort_type_in_entryRuleushort_type8093 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleushort_type8104 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_56_in_ruleushort_type8142 = new BitSet(new long[]{0x0200000000000000L});
-        public static final BitSet FOLLOW_57_in_ruleushort_type8155 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleulong_type_in_entryRuleulong_type8196 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleulong_type8207 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_56_in_ruleulong_type8245 = new BitSet(new long[]{0x0040000000000000L});
-        public static final BitSet FOLLOW_54_in_ruleulong_type8258 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleulonglong_type_in_entryRuleulonglong_type8299 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleulonglong_type8310 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_56_in_ruleulonglong_type8348 = new BitSet(new long[]{0x0040000000000000L});
-        public static final BitSet FOLLOW_54_in_ruleulonglong_type8361 = new BitSet(new long[]{0x0040000000000000L});
-        public static final BitSet FOLLOW_54_in_ruleulonglong_type8374 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rulecharstr_type_in_entryRulecharstr_type8414 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRulecharstr_type8424 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rulechar_type_in_rulecharstr_type8470 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rulewide_char_type_in_rulecharstr_type8497 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rulestring_type_in_rulecharstr_type8524 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rulewide_string_type_in_rulecharstr_type8551 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleother_type_in_entryRuleother_type8587 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleother_type8597 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleboolean_type_in_ruleother_type8643 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleoctet_type_in_ruleother_type8670 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleany_type_in_ruleother_type8697 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rulefixed_pt_const_type_in_entryRulefixed_pt_const_type8733 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRulefixed_pt_const_type8743 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_53_in_rulefixed_pt_const_type8792 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleconst_exp_in_entryRuleconst_exp8828 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleconst_exp8838 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleor_expr_in_ruleconst_exp8887 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleor_expr_in_entryRuleor_expr8921 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleor_expr8931 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rulexor_expr_in_ruleor_expr8981 = new BitSet(new long[]{0x0400000000000002L});
-        public static final BitSet FOLLOW_58_in_ruleor_expr9011 = new BitSet(new long[]{0x8000000008000FF0L,0x0000000000000011L});
-        public static final BitSet FOLLOW_rulexor_expr_in_ruleor_expr9045 = new BitSet(new long[]{0x0400000000000002L});
-        public static final BitSet FOLLOW_rulexor_expr_in_entryRulexor_expr9083 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRulexor_expr9093 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleand_expr_in_rulexor_expr9143 = new BitSet(new long[]{0x0800000000000002L});
-        public static final BitSet FOLLOW_59_in_rulexor_expr9173 = new BitSet(new long[]{0x8000000008000FF0L,0x0000000000000011L});
-        public static final BitSet FOLLOW_ruleand_expr_in_rulexor_expr9207 = new BitSet(new long[]{0x0800000000000002L});
-        public static final BitSet FOLLOW_ruleand_expr_in_entryRuleand_expr9245 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleand_expr9255 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleshift_expr_in_ruleand_expr9305 = new BitSet(new long[]{0x1000000000000002L});
-        public static final BitSet FOLLOW_60_in_ruleand_expr9335 = new BitSet(new long[]{0x8000000008000FF0L,0x0000000000000011L});
-        public static final BitSet FOLLOW_ruleshift_expr_in_ruleand_expr9369 = new BitSet(new long[]{0x1000000000000002L});
-        public static final BitSet FOLLOW_ruleshift_expr_in_entryRuleshift_expr9407 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleshift_expr9417 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleadd_expr_in_ruleshift_expr9467 = new BitSet(new long[]{0x6000000000000002L});
-        public static final BitSet FOLLOW_61_in_ruleshift_expr9499 = new BitSet(new long[]{0x8000000008000FF0L,0x0000000000000011L});
-        public static final BitSet FOLLOW_62_in_ruleshift_expr9528 = new BitSet(new long[]{0x8000000008000FF0L,0x0000000000000011L});
-        public static final BitSet FOLLOW_ruleadd_expr_in_ruleshift_expr9565 = new BitSet(new long[]{0x6000000000000002L});
-        public static final BitSet FOLLOW_ruleadd_expr_in_entryRuleadd_expr9603 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleadd_expr9613 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rulemult_expr_in_ruleadd_expr9663 = new BitSet(new long[]{0x8000000000000002L,0x0000000000000001L});
-        public static final BitSet FOLLOW_63_in_ruleadd_expr9695 = new BitSet(new long[]{0x8000000008000FF0L,0x0000000000000011L});
-        public static final BitSet FOLLOW_64_in_ruleadd_expr9724 = new BitSet(new long[]{0x8000000008000FF0L,0x0000000000000011L});
-        public static final BitSet FOLLOW_rulemult_expr_in_ruleadd_expr9761 = new BitSet(new long[]{0x8000000000000002L,0x0000000000000001L});
-        public static final BitSet FOLLOW_rulemult_expr_in_entryRulemult_expr9799 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRulemult_expr9809 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleunary_expr_in_rulemult_expr9859 = new BitSet(new long[]{0x0000000000000002L,0x000000000000000EL});
-        public static final BitSet FOLLOW_65_in_rulemult_expr9891 = new BitSet(new long[]{0x8000000008000FF0L,0x0000000000000011L});
-        public static final BitSet FOLLOW_66_in_rulemult_expr9920 = new BitSet(new long[]{0x8000000008000FF0L,0x0000000000000011L});
-        public static final BitSet FOLLOW_67_in_rulemult_expr9949 = new BitSet(new long[]{0x8000000008000FF0L,0x0000000000000011L});
-        public static final BitSet FOLLOW_ruleunary_expr_in_rulemult_expr9986 = new BitSet(new long[]{0x0000000000000002L,0x000000000000000EL});
-        public static final BitSet FOLLOW_ruleunary_expr_in_entryRuleunary_expr10024 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleunary_expr10034 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleunary_operator_in_ruleunary_expr10093 = new BitSet(new long[]{0x8000000008000FF0L,0x0000000000000011L});
-        public static final BitSet FOLLOW_ruleprimary_expr_in_ruleunary_expr10114 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleprimary_expr_in_ruleunary_expr10146 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleunary_operator_in_entryRuleunary_operator10182 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleunary_operator10193 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_64_in_ruleunary_operator10231 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_63_in_ruleunary_operator10250 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_68_in_ruleunary_operator10269 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleprimary_expr_in_entryRuleprimary_expr10309 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleprimary_expr10319 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleconstantDefRef_in_ruleprimary_expr10369 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rulevalueExpression_in_ruleprimary_expr10399 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_27_in_ruleprimary_expr10417 = new BitSet(new long[]{0x8000000008000FF0L,0x0000000000000011L});
-        public static final BitSet FOLLOW_ruleconst_exp_in_ruleprimary_expr10442 = new BitSet(new long[]{0x0000000010000000L});
-        public static final BitSet FOLLOW_28_in_ruleprimary_expr10453 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleconstantDefRef_in_entryRuleconstantDefRef10490 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleconstantDefRef10500 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_ruleconstantDefRef10548 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rulevalueExpression_in_entryRulevalueExpression10583 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRulevalueExpression10593 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleliteral_in_rulevalueExpression10638 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleliteral_in_entryRuleliteral10674 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleliteral10685 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_INT_in_ruleliteral10725 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_STRING_in_ruleliteral10751 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_HEX_LITERAL_in_ruleliteral10777 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_WIDE_STRING_LITERAL_in_ruleliteral10803 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_FIXED_PT_LITERAL_in_ruleliteral10829 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_FLOATING_PT_LITERAL_in_ruleliteral10855 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_BOOLEAN_LITERAL_in_ruleliteral10881 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_69_in_ruleparam_attribute10940 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_70_in_ruleparam_attribute10957 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_71_in_ruleparam_attribute10974 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_72_in_rulefloat_type11018 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_55_in_ruledouble_type11061 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_57_in_ruleshort_type11104 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_54_in_rulelong_type11147 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_73_in_rulechar_type11190 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_74_in_rulewide_char_type11233 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_51_in_rulestring_type11276 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_52_in_rulewide_string_type11319 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_75_in_ruleboolean_type11362 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_76_in_ruleoctet_type11405 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_77_in_ruleany_type11448 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_78_in_ruleobject_type11491 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_79_in_rulevoid_type11534 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_44_in_rulecase_stmt5653 = new BitSet(new long[]{0x0000000001000000L});
+        public static final BitSet FOLLOW_24_in_rulecase_stmt5678 = new BitSet(new long[]{0x03F9180000000020L,0x0000000000007F00L});
+        public static final BitSet FOLLOW_rulearray_type_spec_in_rulecase_stmt5702 = new BitSet(new long[]{0x0000000000020000L});
+        public static final BitSet FOLLOW_17_in_rulecase_stmt5714 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_43_in_rulecase_stmt5736 = new BitSet(new long[]{0x8000000008000FF0L,0x0000000000000011L});
+        public static final BitSet FOLLOW_ruleconst_exp_in_rulecase_stmt5757 = new BitSet(new long[]{0x0000000001000000L});
+        public static final BitSet FOLLOW_24_in_rulecase_stmt5769 = new BitSet(new long[]{0x03F9180000000020L,0x0000000000007F00L});
+        public static final BitSet FOLLOW_44_in_rulecase_stmt5795 = new BitSet(new long[]{0x0000000001000000L});
+        public static final BitSet FOLLOW_24_in_rulecase_stmt5820 = new BitSet(new long[]{0x03F9180000000020L,0x0000000000007F00L});
+        public static final BitSet FOLLOW_rulesimple_type_spec_in_rulecase_stmt5845 = new BitSet(new long[]{0x0000000000000020L});
+        public static final BitSet FOLLOW_RULE_ID_in_rulecase_stmt5875 = new BitSet(new long[]{0x0000000000000020L});
+        public static final BitSet FOLLOW_RULE_ID_in_rulecase_stmt5893 = new BitSet(new long[]{0x0000000000020000L});
+        public static final BitSet FOLLOW_17_in_rulecase_stmt5910 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleenum_type_in_entryRuleenum_type5947 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleenum_type5957 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_45_in_ruleenum_type5994 = new BitSet(new long[]{0x0000000000000020L});
+        public static final BitSet FOLLOW_RULE_ID_in_ruleenum_type6011 = new BitSet(new long[]{0x0000000000080000L});
+        public static final BitSet FOLLOW_19_in_ruleenum_type6028 = new BitSet(new long[]{0x0000000000000020L});
+        public static final BitSet FOLLOW_ruleenum_member_in_ruleenum_type6049 = new BitSet(new long[]{0x0000000002100000L});
+        public static final BitSet FOLLOW_25_in_ruleenum_type6062 = new BitSet(new long[]{0x0000000000000020L});
+        public static final BitSet FOLLOW_ruleenum_member_in_ruleenum_type6083 = new BitSet(new long[]{0x0000000002100000L});
+        public static final BitSet FOLLOW_20_in_ruleenum_type6097 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleenum_member_in_entryRuleenum_member6133 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleenum_member6143 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_ruleenum_member6184 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleconstr_forward_decl_in_entryRuleconstr_forward_decl6225 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleconstr_forward_decl6236 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_40_in_ruleconstr_forward_decl6275 = new BitSet(new long[]{0x0000000000000020L});
+        public static final BitSet FOLLOW_RULE_ID_in_ruleconstr_forward_decl6290 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_41_in_ruleconstr_forward_decl6316 = new BitSet(new long[]{0x0000000000000020L});
+        public static final BitSet FOLLOW_RULE_ID_in_ruleconstr_forward_decl6331 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleconst_decl_in_entryRuleconst_decl6377 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleconst_decl6387 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_46_in_ruleconst_decl6424 = new BitSet(new long[]{0x03F8000000000020L,0x0000000000003F00L});
+        public static final BitSet FOLLOW_ruleconst_type_in_ruleconst_decl6446 = new BitSet(new long[]{0x0000000000000020L});
+        public static final BitSet FOLLOW_RULE_ID_in_ruleconst_decl6476 = new BitSet(new long[]{0x0000000000000020L});
+        public static final BitSet FOLLOW_RULE_ID_in_ruleconst_decl6494 = new BitSet(new long[]{0x0000800000000000L});
+        public static final BitSet FOLLOW_47_in_ruleconst_decl6511 = new BitSet(new long[]{0x8000000008000FF0L,0x0000000000000011L});
+        public static final BitSet FOLLOW_ruleconst_exp_in_ruleconst_decl6532 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleconst_type_in_entryRuleconst_type6568 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleconst_type6578 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleprimitive_def_in_ruleconst_type6628 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rulestringdef_type_in_ruleconst_type6658 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rulewide_stringdef_type_in_ruleconst_type6688 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rulefixed_pt_const_type_in_ruleconst_type6718 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleprimitive_def_in_entryRuleprimitive_def6753 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleprimitive_def6763 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleinteger_type_in_ruleprimitive_def6813 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rulefloating_pt_type_in_ruleprimitive_def6843 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rulecharstr_type_in_ruleprimitive_def6873 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleother_type_in_ruleprimitive_def6903 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rulesequence_type_in_entryRulesequence_type6938 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRulesequence_type6948 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_48_in_rulesequence_type6985 = new BitSet(new long[]{0x0002000000000000L});
+        public static final BitSet FOLLOW_49_in_rulesequence_type6997 = new BitSet(new long[]{0x03F9000000000020L,0x0000000000007F00L});
+        public static final BitSet FOLLOW_rulesimple_type_spec_in_rulesequence_type7019 = new BitSet(new long[]{0x0004000002000000L});
+        public static final BitSet FOLLOW_RULE_ID_in_rulesequence_type7049 = new BitSet(new long[]{0x0004000002000000L});
+        public static final BitSet FOLLOW_25_in_rulesequence_type7063 = new BitSet(new long[]{0x8000000008000FF0L,0x0000000000000011L});
+        public static final BitSet FOLLOW_ruleconst_exp_in_rulesequence_type7084 = new BitSet(new long[]{0x0004000000000000L});
+        public static final BitSet FOLLOW_50_in_rulesequence_type7098 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rulestringdef_type_in_entryRulestringdef_type7134 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRulestringdef_type7144 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_51_in_rulestringdef_type7181 = new BitSet(new long[]{0x0002000000000000L});
+        public static final BitSet FOLLOW_49_in_rulestringdef_type7193 = new BitSet(new long[]{0x8000000008000FF0L,0x0000000000000011L});
+        public static final BitSet FOLLOW_ruleconst_exp_in_rulestringdef_type7214 = new BitSet(new long[]{0x0004000000000000L});
+        public static final BitSet FOLLOW_50_in_rulestringdef_type7226 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rulewide_stringdef_type_in_entryRulewide_stringdef_type7262 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRulewide_stringdef_type7272 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_52_in_rulewide_stringdef_type7309 = new BitSet(new long[]{0x0002000000000000L});
+        public static final BitSet FOLLOW_49_in_rulewide_stringdef_type7321 = new BitSet(new long[]{0x8000000008000FF0L,0x0000000000000011L});
+        public static final BitSet FOLLOW_ruleconst_exp_in_rulewide_stringdef_type7342 = new BitSet(new long[]{0x0004000000000000L});
+        public static final BitSet FOLLOW_50_in_rulewide_stringdef_type7354 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rulefixed_pt_type_in_entryRulefixed_pt_type7390 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRulefixed_pt_type7400 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_53_in_rulefixed_pt_type7437 = new BitSet(new long[]{0x0002000000000000L});
+        public static final BitSet FOLLOW_49_in_rulefixed_pt_type7449 = new BitSet(new long[]{0x8000000008000FF0L,0x0000000000000011L});
+        public static final BitSet FOLLOW_ruleconst_exp_in_rulefixed_pt_type7470 = new BitSet(new long[]{0x0000000002000000L});
+        public static final BitSet FOLLOW_25_in_rulefixed_pt_type7482 = new BitSet(new long[]{0x8000000008000FF0L,0x0000000000000011L});
+        public static final BitSet FOLLOW_ruleconst_exp_in_rulefixed_pt_type7503 = new BitSet(new long[]{0x0004000000000000L});
+        public static final BitSet FOLLOW_50_in_rulefixed_pt_type7515 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rulefloating_pt_type_in_entryRulefloating_pt_type7551 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRulefloating_pt_type7561 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rulefloat_type_in_rulefloating_pt_type7607 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruledouble_type_in_rulefloating_pt_type7634 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rulelongdouble_type_in_rulefloating_pt_type7661 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rulelongdouble_type_in_entryRulelongdouble_type7698 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRulelongdouble_type7709 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_54_in_rulelongdouble_type7747 = new BitSet(new long[]{0x0080000000000000L});
+        public static final BitSet FOLLOW_55_in_rulelongdouble_type7760 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleinteger_type_in_entryRuleinteger_type7800 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleinteger_type7810 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleshort_type_in_ruleinteger_type7856 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rulelong_type_in_ruleinteger_type7883 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rulelonglong_type_in_ruleinteger_type7910 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleushort_type_in_ruleinteger_type7937 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleulong_type_in_ruleinteger_type7964 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleulonglong_type_in_ruleinteger_type7991 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rulelonglong_type_in_entryRulelonglong_type8028 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRulelonglong_type8039 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_54_in_rulelonglong_type8077 = new BitSet(new long[]{0x0040000000000000L});
+        public static final BitSet FOLLOW_54_in_rulelonglong_type8090 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleushort_type_in_entryRuleushort_type8131 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleushort_type8142 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_56_in_ruleushort_type8180 = new BitSet(new long[]{0x0200000000000000L});
+        public static final BitSet FOLLOW_57_in_ruleushort_type8193 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleulong_type_in_entryRuleulong_type8234 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleulong_type8245 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_56_in_ruleulong_type8283 = new BitSet(new long[]{0x0040000000000000L});
+        public static final BitSet FOLLOW_54_in_ruleulong_type8296 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleulonglong_type_in_entryRuleulonglong_type8337 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleulonglong_type8348 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_56_in_ruleulonglong_type8386 = new BitSet(new long[]{0x0040000000000000L});
+        public static final BitSet FOLLOW_54_in_ruleulonglong_type8399 = new BitSet(new long[]{0x0040000000000000L});
+        public static final BitSet FOLLOW_54_in_ruleulonglong_type8412 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rulecharstr_type_in_entryRulecharstr_type8452 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRulecharstr_type8462 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rulechar_type_in_rulecharstr_type8508 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rulewide_char_type_in_rulecharstr_type8535 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rulestring_type_in_rulecharstr_type8562 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rulewide_string_type_in_rulecharstr_type8589 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleother_type_in_entryRuleother_type8625 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleother_type8635 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleboolean_type_in_ruleother_type8681 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleoctet_type_in_ruleother_type8708 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleany_type_in_ruleother_type8735 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rulefixed_pt_const_type_in_entryRulefixed_pt_const_type8771 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRulefixed_pt_const_type8781 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_53_in_rulefixed_pt_const_type8830 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleconst_exp_in_entryRuleconst_exp8866 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleconst_exp8876 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleor_expr_in_ruleconst_exp8925 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleor_expr_in_entryRuleor_expr8959 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleor_expr8969 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rulexor_expr_in_ruleor_expr9019 = new BitSet(new long[]{0x0400000000000002L});
+        public static final BitSet FOLLOW_58_in_ruleor_expr9049 = new BitSet(new long[]{0x8000000008000FF0L,0x0000000000000011L});
+        public static final BitSet FOLLOW_rulexor_expr_in_ruleor_expr9083 = new BitSet(new long[]{0x0400000000000002L});
+        public static final BitSet FOLLOW_rulexor_expr_in_entryRulexor_expr9121 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRulexor_expr9131 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleand_expr_in_rulexor_expr9181 = new BitSet(new long[]{0x0800000000000002L});
+        public static final BitSet FOLLOW_59_in_rulexor_expr9211 = new BitSet(new long[]{0x8000000008000FF0L,0x0000000000000011L});
+        public static final BitSet FOLLOW_ruleand_expr_in_rulexor_expr9245 = new BitSet(new long[]{0x0800000000000002L});
+        public static final BitSet FOLLOW_ruleand_expr_in_entryRuleand_expr9283 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleand_expr9293 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleshift_expr_in_ruleand_expr9343 = new BitSet(new long[]{0x1000000000000002L});
+        public static final BitSet FOLLOW_60_in_ruleand_expr9373 = new BitSet(new long[]{0x8000000008000FF0L,0x0000000000000011L});
+        public static final BitSet FOLLOW_ruleshift_expr_in_ruleand_expr9407 = new BitSet(new long[]{0x1000000000000002L});
+        public static final BitSet FOLLOW_ruleshift_expr_in_entryRuleshift_expr9445 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleshift_expr9455 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleadd_expr_in_ruleshift_expr9505 = new BitSet(new long[]{0x6000000000000002L});
+        public static final BitSet FOLLOW_61_in_ruleshift_expr9537 = new BitSet(new long[]{0x8000000008000FF0L,0x0000000000000011L});
+        public static final BitSet FOLLOW_62_in_ruleshift_expr9566 = new BitSet(new long[]{0x8000000008000FF0L,0x0000000000000011L});
+        public static final BitSet FOLLOW_ruleadd_expr_in_ruleshift_expr9603 = new BitSet(new long[]{0x6000000000000002L});
+        public static final BitSet FOLLOW_ruleadd_expr_in_entryRuleadd_expr9641 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleadd_expr9651 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rulemult_expr_in_ruleadd_expr9701 = new BitSet(new long[]{0x8000000000000002L,0x0000000000000001L});
+        public static final BitSet FOLLOW_63_in_ruleadd_expr9733 = new BitSet(new long[]{0x8000000008000FF0L,0x0000000000000011L});
+        public static final BitSet FOLLOW_64_in_ruleadd_expr9762 = new BitSet(new long[]{0x8000000008000FF0L,0x0000000000000011L});
+        public static final BitSet FOLLOW_rulemult_expr_in_ruleadd_expr9799 = new BitSet(new long[]{0x8000000000000002L,0x0000000000000001L});
+        public static final BitSet FOLLOW_rulemult_expr_in_entryRulemult_expr9837 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRulemult_expr9847 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleunary_expr_in_rulemult_expr9897 = new BitSet(new long[]{0x0000000000000002L,0x000000000000000EL});
+        public static final BitSet FOLLOW_65_in_rulemult_expr9929 = new BitSet(new long[]{0x8000000008000FF0L,0x0000000000000011L});
+        public static final BitSet FOLLOW_66_in_rulemult_expr9958 = new BitSet(new long[]{0x8000000008000FF0L,0x0000000000000011L});
+        public static final BitSet FOLLOW_67_in_rulemult_expr9987 = new BitSet(new long[]{0x8000000008000FF0L,0x0000000000000011L});
+        public static final BitSet FOLLOW_ruleunary_expr_in_rulemult_expr10024 = new BitSet(new long[]{0x0000000000000002L,0x000000000000000EL});
+        public static final BitSet FOLLOW_ruleunary_expr_in_entryRuleunary_expr10062 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleunary_expr10072 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleunary_operator_in_ruleunary_expr10131 = new BitSet(new long[]{0x8000000008000FF0L,0x0000000000000011L});
+        public static final BitSet FOLLOW_ruleprimary_expr_in_ruleunary_expr10152 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleprimary_expr_in_ruleunary_expr10184 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleunary_operator_in_entryRuleunary_operator10220 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleunary_operator10231 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_64_in_ruleunary_operator10269 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_63_in_ruleunary_operator10288 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_68_in_ruleunary_operator10307 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleprimary_expr_in_entryRuleprimary_expr10347 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleprimary_expr10357 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleconstantDefRef_in_ruleprimary_expr10407 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rulevalueExpression_in_ruleprimary_expr10437 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_27_in_ruleprimary_expr10455 = new BitSet(new long[]{0x8000000008000FF0L,0x0000000000000011L});
+        public static final BitSet FOLLOW_ruleconst_exp_in_ruleprimary_expr10480 = new BitSet(new long[]{0x0000000010000000L});
+        public static final BitSet FOLLOW_28_in_ruleprimary_expr10491 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleconstantDefRef_in_entryRuleconstantDefRef10528 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleconstantDefRef10538 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_ruleconstantDefRef10586 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rulevalueExpression_in_entryRulevalueExpression10621 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRulevalueExpression10631 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleliteral_in_rulevalueExpression10676 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleliteral_in_entryRuleliteral10712 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleliteral10723 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_INT_in_ruleliteral10763 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_STRING_in_ruleliteral10789 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_HEX_LITERAL_in_ruleliteral10815 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_WIDE_STRING_LITERAL_in_ruleliteral10841 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_FIXED_PT_LITERAL_in_ruleliteral10867 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_FLOATING_PT_LITERAL_in_ruleliteral10893 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_BOOLEAN_LITERAL_in_ruleliteral10919 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_69_in_ruleparam_attribute10978 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_70_in_ruleparam_attribute10995 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_71_in_ruleparam_attribute11012 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_72_in_rulefloat_type11056 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_55_in_ruledouble_type11099 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_57_in_ruleshort_type11142 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_54_in_rulelong_type11185 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_73_in_rulechar_type11228 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_74_in_rulewide_char_type11271 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_51_in_rulestring_type11314 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_52_in_rulewide_string_type11357 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_75_in_ruleboolean_type11400 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_76_in_ruleoctet_type11443 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_77_in_ruleany_type11486 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_78_in_ruleobject_type11529 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_79_in_rulevoid_type11572 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_37_in_synpred51_InternalIDL3867 = new BitSet(new long[]{0x03F9000000000020L,0x0000000000007F00L});
         public static final BitSet FOLLOW_rulearray_type_spec_in_synpred51_InternalIDL3888 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rulearray_type_spec_in_synpred61_InternalIDL4856 = new BitSet(new long[]{0x0000000000020000L});
@@ -16110,10 +16162,10 @@ public class InternalIDLParser extends AbstractInternalAntlrParser {
         public static final BitSet FOLLOW_43_in_synpred71_InternalIDL5594 = new BitSet(new long[]{0x8000000008000FF0L,0x0000000000000011L});
         public static final BitSet FOLLOW_ruleconst_exp_in_synpred71_InternalIDL5615 = new BitSet(new long[]{0x0000000001000000L});
         public static final BitSet FOLLOW_24_in_synpred71_InternalIDL5627 = new BitSet(new long[]{0x03F9180000000020L,0x0000000000007F00L});
-        public static final BitSet FOLLOW_44_in_synpred71_InternalIDL5647 = new BitSet(new long[]{0x0000000001000000L});
-        public static final BitSet FOLLOW_24_in_synpred71_InternalIDL5659 = new BitSet(new long[]{0x03F9180000000020L,0x0000000000007F00L});
-        public static final BitSet FOLLOW_rulearray_type_spec_in_synpred71_InternalIDL5683 = new BitSet(new long[]{0x0000000000020000L});
-        public static final BitSet FOLLOW_17_in_synpred71_InternalIDL5695 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_44_in_synpred71_InternalIDL5653 = new BitSet(new long[]{0x0000000001000000L});
+        public static final BitSet FOLLOW_24_in_synpred71_InternalIDL5678 = new BitSet(new long[]{0x03F9180000000020L,0x0000000000007F00L});
+        public static final BitSet FOLLOW_rulearray_type_spec_in_synpred71_InternalIDL5702 = new BitSet(new long[]{0x0000000000020000L});
+        public static final BitSet FOLLOW_17_in_synpred71_InternalIDL5714 = new BitSet(new long[]{0x0000000000000002L});
     }
 
 

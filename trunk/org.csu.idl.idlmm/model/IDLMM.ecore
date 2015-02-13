@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ecore:EPackage xmi:version="2.0"
-    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="idlmm"
-    nsURI="http://idlmm/1.0" nsPrefix="idlmm">
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="idlmm" nsURI="http://idlmm/1.0" nsPrefix="idlmm">
   <eClassifiers xsi:type="ecore:EClass" name="Container" abstract="true" eSuperTypes="#//Contained">
     <eStructuralFeatures xsi:type="ecore:EReference" name="contains" upperBound="-1"
         eType="#//Contained" containment="true" eOpposite="#//Contained/definedIn"/>
@@ -126,6 +124,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="identifier" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="label" upperBound="-1"
         eType="#//Expression" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isDefault" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="false"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TypedefDef" abstract="true" eSuperTypes="#//IDLType #//Contained"/>
   <eClassifiers xsi:type="ecore:EClass" name="UnionDef" eSuperTypes="#//TypedefDef">

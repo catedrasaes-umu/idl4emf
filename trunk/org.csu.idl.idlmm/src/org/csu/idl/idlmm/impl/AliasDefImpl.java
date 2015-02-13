@@ -274,7 +274,7 @@ public class AliasDefImpl extends TypedImpl implements AliasDef {
 	 */
 	public Container getDefinedIn() {
 		if (eContainerFeatureID() != IdlmmPackage.ALIAS_DEF__DEFINED_IN) return null;
-		return (Container)eContainer();
+		return (Container)eInternalContainer();
 	}
 
 	/**

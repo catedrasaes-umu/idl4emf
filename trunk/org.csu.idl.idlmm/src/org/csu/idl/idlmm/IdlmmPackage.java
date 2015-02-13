@@ -1415,13 +1415,22 @@ public interface IdlmmPackage extends EPackage {
 	int UNION_FIELD__LABEL = TYPED_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Is Default</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNION_FIELD__IS_DEFAULT = TYPED_FEATURE_COUNT + 2;
+
+	/**
 	 * The number of structural features of the '<em>Union Field</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UNION_FIELD_FEATURE_COUNT = TYPED_FEATURE_COUNT + 2;
+	int UNION_FIELD_FEATURE_COUNT = TYPED_FEATURE_COUNT + 3;
 
 	/**
 	 * The meta object id for the '{@link org.csu.idl.idlmm.impl.TypedefDefImpl <em>Typedef Def</em>}' class.
@@ -2879,6 +2888,17 @@ public interface IdlmmPackage extends EPackage {
 	EReference getUnionField_Label();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.csu.idl.idlmm.UnionField#isIsDefault <em>Is Default</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Is Default</em>'.
+	 * @see org.csu.idl.idlmm.UnionField#isIsDefault()
+	 * @see #getUnionField()
+	 * @generated
+	 */
+	EAttribute getUnionField_IsDefault();
+
+	/**
 	 * Returns the meta object for class '{@link org.csu.idl.idlmm.TypedefDef <em>Typedef Def</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3817,6 +3837,14 @@ public interface IdlmmPackage extends EPackage {
 		 * @generated
 		 */
 		EReference UNION_FIELD__LABEL = eINSTANCE.getUnionField_Label();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Default</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute UNION_FIELD__IS_DEFAULT = eINSTANCE.getUnionField_IsDefault();
 
 		/**
 		 * The meta object literal for the '{@link org.csu.idl.idlmm.impl.TypedefDefImpl <em>Typedef Def</em>}' class.

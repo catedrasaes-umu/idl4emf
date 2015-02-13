@@ -433,8 +433,8 @@ public abstract class AbstractIDLSemanticSequencer extends AbstractDelegatingSem
 	/**
 	 * Constraint:
 	 *     (
-	 *         (label+=const_exp* containedType=array_type_spec) | 
-	 *         (label+=const_exp* (containedType=simple_type_spec | sharedType=[TypedefDef|ID]) identifier=ID)
+	 *         ((label+=const_exp | isDefault?='default')+ containedType=array_type_spec) | 
+	 *         ((label+=const_exp | isDefault?='default')+ (containedType=simple_type_spec | sharedType=[TypedefDef|ID]) identifier=ID)
 	 *     )
 	 */
 	protected void sequence_case_stmt(EObject context, UnionField semanticObject) {

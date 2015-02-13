@@ -60,7 +60,7 @@ public class EnumMemberImpl extends ConstantImpl implements EnumMember {
 	 */
 	public EnumDef getEnum() {
 		if (eContainerFeatureID() != IdlmmPackage.ENUM_MEMBER__ENUM) return null;
-		return (EnumDef)eContainer();
+		return (EnumDef)eInternalContainer();
 	}
 
 	/**

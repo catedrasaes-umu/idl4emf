@@ -32,7 +32,7 @@ public class IdlmmFactoryImpl extends EFactoryImpl implements IdlmmFactory {
 	 */
 	public static IdlmmFactory init() {
 		try {
-			IdlmmFactory theIdlmmFactory = (IdlmmFactory)EPackage.Registry.INSTANCE.getEFactory("http://idlmm/1.0"); 
+			IdlmmFactory theIdlmmFactory = (IdlmmFactory)EPackage.Registry.INSTANCE.getEFactory(IdlmmPackage.eNS_URI);
 			if (theIdlmmFactory != null) {
 				return theIdlmmFactory;
 			}

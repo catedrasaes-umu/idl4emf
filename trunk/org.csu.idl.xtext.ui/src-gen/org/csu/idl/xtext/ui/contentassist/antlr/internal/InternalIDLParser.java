@@ -23,85 +23,85 @@ import java.util.HashMap;
 @SuppressWarnings("all")
 public class InternalIDLParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_INT", "RULE_STRING", "RULE_HEX_LITERAL", "RULE_WIDE_STRING_LITERAL", "RULE_FIXED_PT_LITERAL", "RULE_FLOATING_PT_LITERAL", "RULE_BOOLEAN_LITERAL", "RULE_ID", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'float'", "'double'", "'short'", "'long'", "'char'", "'wchar'", "'string'", "'wstring'", "'boolean'", "'octet'", "'any'", "'Object'", "'void'", "';'", "'abstract'", "'local'", "'>>'", "'<<'", "'+'", "'-'", "'*'", "'/'", "'%'", "'~'", "'in'", "'out'", "'inout'", "'#include'", "'module'", "'{'", "'}'", "'interface'", "':'", "','", "'('", "')'", "'raises'", "'context'", "'attribute'", "'getraises'", "'setraises'", "'exception'", "'native'", "'typedef'", "'['", "']'", "'struct'", "'union'", "'switch'", "'case'", "'default'", "'enum'", "'const'", "'='", "'sequence'", "'<'", "'>'", "'fixed'", "'unsigned'", "'oneway'", "'readonly'", "'|'", "'^'", "'&'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_INT", "RULE_STRING", "RULE_HEX_LITERAL", "RULE_WIDE_STRING_LITERAL", "RULE_FIXED_PT_LITERAL", "RULE_FLOATING_PT_LITERAL", "RULE_BOOLEAN_LITERAL", "RULE_ID", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'float'", "'double'", "'short'", "'long'", "'char'", "'wchar'", "'string'", "'wstring'", "'boolean'", "'octet'", "'any'", "'Object'", "'void'", "';'", "'abstract'", "'local'", "'>>'", "'<<'", "'+'", "'-'", "'*'", "'/'", "'%'", "'~'", "'in'", "'out'", "'inout'", "'#include'", "'module'", "'{'", "'}'", "'interface'", "':'", "','", "'('", "')'", "'raises'", "'context'", "'attribute'", "'getraises'", "'setraises'", "'exception'", "'native'", "'typedef'", "'['", "']'", "'struct'", "'union'", "'switch'", "'case'", "'enum'", "'const'", "'='", "'sequence'", "'<'", "'>'", "'fixed'", "'unsigned'", "'oneway'", "'readonly'", "'default'", "'|'", "'^'", "'&'"
     };
-    public static final int T__50=50;
-    public static final int RULE_HEX_LITERAL=6;
-    public static final int T__19=19;
-    public static final int T__59=59;
-    public static final int T__16=16;
-    public static final int T__17=17;
-    public static final int T__18=18;
+    public static final int T__68=68;
+    public static final int T__69=69;
+    public static final int RULE_ID=11;
+    public static final int T__66=66;
+    public static final int T__67=67;
+    public static final int RULE_BOOLEAN_LITERAL=10;
+    public static final int T__64=64;
+    public static final int T__29=29;
+    public static final int T__65=65;
+    public static final int T__28=28;
+    public static final int T__62=62;
+    public static final int T__27=27;
+    public static final int T__63=63;
+    public static final int T__26=26;
+    public static final int RULE_WIDE_STRING_LITERAL=7;
+    public static final int T__25=25;
+    public static final int T__24=24;
+    public static final int T__23=23;
+    public static final int T__22=22;
+    public static final int RULE_ANY_OTHER=15;
+    public static final int T__21=21;
+    public static final int T__20=20;
+    public static final int T__61=61;
+    public static final int T__60=60;
+    public static final int EOF=-1;
     public static final int T__55=55;
     public static final int T__56=56;
+    public static final int T__19=19;
     public static final int T__57=57;
     public static final int T__58=58;
+    public static final int RULE_FLOATING_PT_LITERAL=9;
+    public static final int T__16=16;
     public static final int T__51=51;
     public static final int T__52=52;
+    public static final int T__18=18;
     public static final int T__53=53;
+    public static final int T__17=17;
     public static final int T__54=54;
-    public static final int T__60=60;
-    public static final int T__61=61;
-    public static final int RULE_ID=11;
-    public static final int RULE_BOOLEAN_LITERAL=10;
-    public static final int T__26=26;
-    public static final int T__27=27;
-    public static final int T__28=28;
+    public static final int T__59=59;
+    public static final int RULE_HEX_LITERAL=6;
     public static final int RULE_INT=4;
-    public static final int T__29=29;
-    public static final int T__22=22;
-    public static final int T__66=66;
-    public static final int RULE_ML_COMMENT=12;
-    public static final int T__23=23;
-    public static final int T__67=67;
-    public static final int T__24=24;
-    public static final int T__68=68;
-    public static final int T__25=25;
-    public static final int T__69=69;
-    public static final int T__62=62;
-    public static final int T__63=63;
-    public static final int T__20=20;
-    public static final int T__64=64;
-    public static final int T__21=21;
-    public static final int T__65=65;
-    public static final int T__70=70;
-    public static final int T__71=71;
-    public static final int T__72=72;
-    public static final int RULE_STRING=5;
-    public static final int RULE_SL_COMMENT=13;
-    public static final int T__37=37;
-    public static final int RULE_FLOATING_PT_LITERAL=9;
-    public static final int T__38=38;
-    public static final int T__39=39;
-    public static final int T__33=33;
-    public static final int T__77=77;
-    public static final int T__34=34;
-    public static final int T__78=78;
-    public static final int T__35=35;
-    public static final int T__79=79;
-    public static final int T__36=36;
-    public static final int T__73=73;
+    public static final int T__50=50;
+    public static final int T__42=42;
     public static final int RULE_FIXED_PT_LITERAL=8;
-    public static final int EOF=-1;
-    public static final int T__30=30;
-    public static final int T__74=74;
-    public static final int T__31=31;
-    public static final int T__75=75;
-    public static final int T__32=32;
-    public static final int T__76=76;
-    public static final int RULE_WIDE_STRING_LITERAL=7;
-    public static final int RULE_WS=14;
-    public static final int RULE_ANY_OTHER=15;
-    public static final int T__48=48;
-    public static final int T__49=49;
-    public static final int T__44=44;
-    public static final int T__45=45;
-    public static final int T__46=46;
-    public static final int T__47=47;
+    public static final int T__43=43;
     public static final int T__40=40;
     public static final int T__41=41;
-    public static final int T__42=42;
-    public static final int T__43=43;
+    public static final int T__46=46;
+    public static final int T__47=47;
+    public static final int T__44=44;
+    public static final int T__45=45;
+    public static final int T__48=48;
+    public static final int T__49=49;
+    public static final int RULE_SL_COMMENT=13;
+    public static final int RULE_ML_COMMENT=12;
+    public static final int T__30=30;
+    public static final int T__31=31;
+    public static final int RULE_STRING=5;
+    public static final int T__32=32;
+    public static final int T__71=71;
+    public static final int T__33=33;
+    public static final int T__72=72;
+    public static final int T__34=34;
+    public static final int T__35=35;
+    public static final int T__70=70;
+    public static final int T__36=36;
+    public static final int T__37=37;
+    public static final int T__38=38;
+    public static final int T__39=39;
+    public static final int RULE_WS=14;
+    public static final int T__76=76;
+    public static final int T__75=75;
+    public static final int T__74=74;
+    public static final int T__73=73;
+    public static final int T__79=79;
+    public static final int T__78=78;
+    public static final int T__77=77;
 
     // delegates
     // delegators
@@ -5939,7 +5939,7 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
             int alt2=2;
             int LA2_0 = input.LA(1);
 
-            if ( ((LA2_0>=30 && LA2_0<=31)||LA2_0==44||LA2_0==47||(LA2_0>=57 && LA2_0<=59)||(LA2_0>=62 && LA2_0<=63)||(LA2_0>=67 && LA2_0<=68)) ) {
+            if ( ((LA2_0>=30 && LA2_0<=31)||LA2_0==44||LA2_0==47||(LA2_0>=57 && LA2_0<=59)||(LA2_0>=62 && LA2_0<=63)||(LA2_0>=66 && LA2_0<=67)) ) {
                 alt2=1;
             }
             else if ( (LA2_0==29) ) {
@@ -6129,7 +6129,7 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
             int alt4=2;
             int LA4_0 = input.LA(1);
 
-            if ( (LA4_0==RULE_ID||(LA4_0>=16 && LA4_0<=28)||LA4_0==54||(LA4_0>=57 && LA4_0<=59)||(LA4_0>=62 && LA4_0<=63)||(LA4_0>=67 && LA4_0<=68)||(LA4_0>=74 && LA4_0<=76)) ) {
+            if ( (LA4_0==RULE_ID||(LA4_0>=16 && LA4_0<=28)||LA4_0==54||(LA4_0>=57 && LA4_0<=59)||(LA4_0>=62 && LA4_0<=63)||(LA4_0>=66 && LA4_0<=67)||(LA4_0>=73 && LA4_0<=75)) ) {
                 alt4=1;
             }
             else if ( (LA4_0==29) ) {
@@ -6302,12 +6302,12 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
             case 59:
             case 62:
             case 63:
-            case 67:
+            case 66:
                 {
                 alt6=1;
                 }
                 break;
-            case 68:
+            case 67:
                 {
                 alt6=2;
                 }
@@ -6318,7 +6318,7 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
                 }
                 break;
             case 54:
-            case 76:
+            case 75:
                 {
                 alt6=4;
                 }
@@ -6337,8 +6337,8 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
             case 26:
             case 27:
             case 28:
+            case 73:
             case 74:
-            case 75:
                 {
                 alt6=5;
                 }
@@ -6525,7 +6525,7 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
             int alt7=2;
             int LA7_0 = input.LA(1);
 
-            if ( ((LA7_0>=16 && LA7_0<=28)||LA7_0==74) ) {
+            if ( ((LA7_0>=16 && LA7_0<=28)||LA7_0==73) ) {
                 alt7=1;
             }
             else if ( (LA7_0==RULE_ID) ) {
@@ -6625,7 +6625,7 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
             int alt8=2;
             int LA8_0 = input.LA(1);
 
-            if ( ((LA8_0>=16 && LA8_0<=27)||LA8_0==74) ) {
+            if ( ((LA8_0>=16 && LA8_0<=27)||LA8_0==73) ) {
                 alt8=1;
             }
             else if ( (LA8_0==28) ) {
@@ -6719,7 +6719,7 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
             int alt9=2;
             int LA9_0 = input.LA(1);
 
-            if ( ((LA9_0>=16 && LA9_0<=27)||LA9_0==74) ) {
+            if ( ((LA9_0>=16 && LA9_0<=27)||LA9_0==73) ) {
                 alt9=1;
             }
             else if ( (LA9_0==RULE_ID) ) {
@@ -6819,7 +6819,7 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
             int alt10=2;
             int LA10_0 = input.LA(1);
 
-            if ( (LA10_0==76) ) {
+            if ( (LA10_0==75) ) {
                 alt10=1;
             }
             else if ( (LA10_0==54) ) {
@@ -6993,7 +6993,7 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
             int alt12=2;
             int LA12_0 = input.LA(1);
 
-            if ( ((LA12_0>=16 && LA12_0<=27)||LA12_0==74) ) {
+            if ( ((LA12_0>=16 && LA12_0<=27)||LA12_0==73) ) {
                 alt12=1;
             }
             else if ( (LA12_0==RULE_ID) ) {
@@ -7093,7 +7093,7 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
             int alt13=2;
             int LA13_0 = input.LA(1);
 
-            if ( ((LA13_0>=16 && LA13_0<=27)||LA13_0==74) ) {
+            if ( ((LA13_0>=16 && LA13_0<=27)||LA13_0==73) ) {
                 alt13=1;
             }
             else if ( (LA13_0==RULE_ID) ) {
@@ -7279,7 +7279,7 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
             int alt15=2;
             int LA15_0 = input.LA(1);
 
-            if ( ((LA15_0>=16 && LA15_0<=27)||LA15_0==74) ) {
+            if ( ((LA15_0>=16 && LA15_0<=27)||LA15_0==73) ) {
                 alt15=1;
             }
             else if ( (LA15_0==RULE_ID) ) {
@@ -7479,7 +7479,7 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
             int alt17=2;
             int LA17_0 = input.LA(1);
 
-            if ( ((LA17_0>=16 && LA17_0<=27)||LA17_0==74) ) {
+            if ( ((LA17_0>=16 && LA17_0<=27)||LA17_0==73) ) {
                 alt17=1;
             }
             else if ( (LA17_0==RULE_ID) ) {
@@ -7862,7 +7862,7 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
             int alt20=2;
             int LA20_0 = input.LA(1);
 
-            if ( ((LA20_0>=16 && LA20_0<=27)||LA20_0==70||(LA20_0>=73 && LA20_0<=74)) ) {
+            if ( ((LA20_0>=16 && LA20_0<=27)||LA20_0==69||(LA20_0>=72 && LA20_0<=73)) ) {
                 alt20=1;
             }
             else if ( (LA20_0==RULE_ID) ) {
@@ -7962,7 +7962,7 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
             int alt21=2;
             int LA21_0 = input.LA(1);
 
-            if ( ((LA21_0>=16 && LA21_0<=27)||LA21_0==70||(LA21_0>=73 && LA21_0<=74)) ) {
+            if ( ((LA21_0>=16 && LA21_0<=27)||LA21_0==69||(LA21_0>=72 && LA21_0<=73)) ) {
                 alt21=1;
             }
             else if ( (LA21_0==RULE_ID) ) {
@@ -8071,7 +8071,7 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
             case 25:
             case 26:
             case 27:
-            case 74:
+            case 73:
                 {
                 alt22=1;
                 }
@@ -8080,11 +8080,11 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
                 {
                 int LA22_2 = input.LA(2);
 
-                if ( (LA22_2==EOF||LA22_2==RULE_ID||LA22_2==49||LA22_2==72) ) {
-                    alt22=1;
-                }
-                else if ( (LA22_2==71) ) {
+                if ( (LA22_2==70) ) {
                     alt22=2;
+                }
+                else if ( (LA22_2==EOF||LA22_2==RULE_ID||LA22_2==49||LA22_2==71) ) {
+                    alt22=1;
                 }
                 else {
                     if (state.backtracking>0) {state.failed=true; return ;}
@@ -8099,11 +8099,11 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
                 {
                 int LA22_3 = input.LA(2);
 
-                if ( (LA22_3==71) ) {
-                    alt22=2;
-                }
-                else if ( (LA22_3==EOF||LA22_3==RULE_ID||LA22_3==49||LA22_3==72) ) {
+                if ( (LA22_3==EOF||LA22_3==RULE_ID||LA22_3==49||LA22_3==71) ) {
                     alt22=1;
+                }
+                else if ( (LA22_3==70) ) {
+                    alt22=2;
                 }
                 else {
                     if (state.backtracking>0) {state.failed=true; return ;}
@@ -8114,8 +8114,8 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
                 }
                 }
                 break;
-            case 70:
-            case 73:
+            case 69:
+            case 72:
                 {
                 alt22=2;
                 }
@@ -8203,7 +8203,7 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
             int alt23=2;
             int LA23_0 = input.LA(1);
 
-            if ( ((LA23_0>=16 && LA23_0<=26)||LA23_0==74) ) {
+            if ( ((LA23_0>=16 && LA23_0<=26)||LA23_0==73) ) {
                 alt23=1;
             }
             else if ( (LA23_0==27) ) {
@@ -8296,7 +8296,7 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
             // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:2550:1: ( ( rulesequence_type ) | ( rulestringdef_type ) | ( rulewide_stringdef_type ) | ( rulefixed_pt_type ) )
             int alt24=4;
             switch ( input.LA(1) ) {
-            case 70:
+            case 69:
                 {
                 alt24=1;
                 }
@@ -8311,7 +8311,7 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
                 alt24=3;
                 }
                 break;
-            case 73:
+            case 72:
                 {
                 alt24=4;
                 }
@@ -8589,7 +8589,7 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
             int alt26=2;
             int LA26_0 = input.LA(1);
 
-            if ( ((LA26_0>=18 && LA26_0<=20)||LA26_0==24||LA26_0==67||LA26_0==74) ) {
+            if ( ((LA26_0>=18 && LA26_0<=20)||LA26_0==24||LA26_0==66||LA26_0==73) ) {
                 alt26=1;
             }
             else if ( (LA26_0==RULE_ID) ) {
@@ -8690,7 +8690,7 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
             switch ( input.LA(1) ) {
             case 18:
             case 19:
-            case 74:
+            case 73:
                 {
                 alt27=1;
                 }
@@ -8705,7 +8705,7 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
                 alt27=3;
                 }
                 break;
-            case 67:
+            case 66:
                 {
                 alt27=4;
                 }
@@ -8868,7 +8868,7 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
                     throw nvae;
                 }
             }
-            else if ( (LA28_0==66) ) {
+            else if ( (LA28_0==76) ) {
                 int LA28_2 = input.LA(2);
 
                 if ( (synpred45_InternalIDL()) ) {
@@ -8982,7 +8982,7 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
             if ( (LA29_0==65) ) {
                 alt29=1;
             }
-            else if ( (LA29_0==66) ) {
+            else if ( (LA29_0==76) ) {
                 alt29=2;
             }
             else {
@@ -9082,7 +9082,7 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
             if ( (LA30_0==65) ) {
                 alt30=1;
             }
-            else if ( (LA30_0==66) ) {
+            else if ( (LA30_0==76) ) {
                 alt30=2;
             }
             else {
@@ -9179,7 +9179,7 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
             int alt31=2;
             int LA31_0 = input.LA(1);
 
-            if ( ((LA31_0>=16 && LA31_0<=27)||LA31_0==70||(LA31_0>=73 && LA31_0<=74)) ) {
+            if ( ((LA31_0>=16 && LA31_0<=27)||LA31_0==69||(LA31_0>=72 && LA31_0<=73)) ) {
                 alt31=1;
             }
             else if ( (LA31_0==RULE_ID) ) {
@@ -9379,7 +9379,7 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
             int alt33=2;
             int LA33_0 = input.LA(1);
 
-            if ( ((LA33_0>=16 && LA33_0<=26)||(LA33_0>=73 && LA33_0<=74)) ) {
+            if ( ((LA33_0>=16 && LA33_0<=26)||(LA33_0>=72 && LA33_0<=73)) ) {
                 alt33=1;
             }
             else if ( (LA33_0==RULE_ID) ) {
@@ -9487,7 +9487,7 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
             case 24:
             case 25:
             case 26:
-            case 74:
+            case 73:
                 {
                 alt34=1;
                 }
@@ -9496,11 +9496,11 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
                 {
                 int LA34_2 = input.LA(2);
 
-                if ( (LA34_2==EOF||LA34_2==RULE_ID) ) {
-                    alt34=1;
-                }
-                else if ( (LA34_2==71) ) {
+                if ( (LA34_2==70) ) {
                     alt34=2;
+                }
+                else if ( (LA34_2==EOF||LA34_2==RULE_ID) ) {
+                    alt34=1;
                 }
                 else {
                     if (state.backtracking>0) {state.failed=true; return ;}
@@ -9515,7 +9515,7 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
                 {
                 int LA34_3 = input.LA(2);
 
-                if ( (LA34_3==71) ) {
+                if ( (LA34_3==70) ) {
                     alt34=3;
                 }
                 else if ( (LA34_3==EOF||LA34_3==RULE_ID) ) {
@@ -9530,7 +9530,7 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
                 }
                 }
                 break;
-            case 73:
+            case 72:
                 {
                 alt34=4;
                 }
@@ -9664,7 +9664,7 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
             int alt35=4;
             switch ( input.LA(1) ) {
             case 18:
-            case 74:
+            case 73:
                 {
                 alt35=1;
                 }
@@ -9673,11 +9673,11 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
                 {
                 int LA35_2 = input.LA(2);
 
-                if ( (LA35_2==EOF||LA35_2==RULE_ID||LA35_2==19||LA35_2==49||LA35_2==72) ) {
-                    alt35=1;
-                }
-                else if ( (LA35_2==17) ) {
+                if ( (LA35_2==17) ) {
                     alt35=2;
+                }
+                else if ( (LA35_2==EOF||LA35_2==RULE_ID||LA35_2==19||LA35_2==49||LA35_2==71) ) {
+                    alt35=1;
                 }
                 else {
                     if (state.backtracking>0) {state.failed=true; return ;}
@@ -9838,7 +9838,7 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
             int alt36=2;
             int LA36_0 = input.LA(1);
 
-            if ( ((LA36_0>=16 && LA36_0<=27)||LA36_0==70||(LA36_0>=73 && LA36_0<=74)) ) {
+            if ( ((LA36_0>=16 && LA36_0<=27)||LA36_0==69||(LA36_0>=72 && LA36_0<=73)) ) {
                 alt36=1;
             }
             else if ( (LA36_0==RULE_ID) ) {
@@ -11750,7 +11750,7 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
                 int alt50=2;
                 int LA50_0 = input.LA(1);
 
-                if ( ((LA50_0>=30 && LA50_0<=31)||LA50_0==44||LA50_0==47||(LA50_0>=57 && LA50_0<=59)||(LA50_0>=62 && LA50_0<=63)||(LA50_0>=67 && LA50_0<=68)) ) {
+                if ( ((LA50_0>=30 && LA50_0<=31)||LA50_0==44||LA50_0==47||(LA50_0>=57 && LA50_0<=59)||(LA50_0>=62 && LA50_0<=63)||(LA50_0>=66 && LA50_0<=67)) ) {
                     alt50=1;
                 }
 
@@ -13209,7 +13209,7 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
                 int alt51=2;
                 int LA51_0 = input.LA(1);
 
-                if ( ((LA51_0>=29 && LA51_0<=31)||LA51_0==44||LA51_0==47||(LA51_0>=57 && LA51_0<=59)||(LA51_0>=62 && LA51_0<=63)||(LA51_0>=67 && LA51_0<=68)) ) {
+                if ( ((LA51_0>=29 && LA51_0<=31)||LA51_0==44||LA51_0==47||(LA51_0>=57 && LA51_0<=59)||(LA51_0>=62 && LA51_0<=63)||(LA51_0>=66 && LA51_0<=67)) ) {
                     alt51=1;
                 }
 
@@ -13837,7 +13837,7 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
                 int alt54=2;
                 int LA54_0 = input.LA(1);
 
-                if ( (LA54_0==RULE_ID||(LA54_0>=16 && LA54_0<=29)||LA54_0==54||(LA54_0>=57 && LA54_0<=59)||(LA54_0>=62 && LA54_0<=63)||(LA54_0>=67 && LA54_0<=68)||(LA54_0>=74 && LA54_0<=76)) ) {
+                if ( (LA54_0==RULE_ID||(LA54_0>=16 && LA54_0<=29)||LA54_0==54||(LA54_0>=57 && LA54_0<=59)||(LA54_0>=62 && LA54_0<=63)||(LA54_0>=66 && LA54_0<=67)||(LA54_0>=73 && LA54_0<=75)) ) {
                     alt54=1;
                 }
 
@@ -15497,7 +15497,7 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
             int alt57=2;
             int LA57_0 = input.LA(1);
 
-            if ( (LA57_0==75) ) {
+            if ( (LA57_0==74) ) {
                 alt57=1;
             }
             switch (alt57) {
@@ -22182,7 +22182,7 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
                 int alt69=2;
                 int LA69_0 = input.LA(1);
 
-                if ( (LA69_0==RULE_ID||(LA69_0>=16 && LA69_0<=27)||LA69_0==62||LA69_0==70||(LA69_0>=73 && LA69_0<=74)) ) {
+                if ( (LA69_0==RULE_ID||(LA69_0>=16 && LA69_0<=27)||LA69_0==62||LA69_0==69||(LA69_0>=72 && LA69_0<=73)) ) {
                     alt69=1;
                 }
 
@@ -23755,7 +23755,7 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
                 int alt71=2;
                 int LA71_0 = input.LA(1);
 
-                if ( (LA71_0==RULE_ID||(LA71_0>=16 && LA71_0<=27)||LA71_0==62||LA71_0==70||(LA71_0>=73 && LA71_0<=74)) ) {
+                if ( (LA71_0==RULE_ID||(LA71_0>=16 && LA71_0<=27)||LA71_0==62||LA71_0==69||(LA71_0>=72 && LA71_0<=73)) ) {
                     alt71=1;
                 }
 
@@ -25457,7 +25457,7 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
                 int alt72=2;
                 int LA72_0 = input.LA(1);
 
-                if ( ((LA72_0>=65 && LA72_0<=66)) ) {
+                if ( (LA72_0==65||LA72_0==76) ) {
                     alt72=1;
                 }
 
@@ -25993,7 +25993,7 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
                 int alt73=2;
                 int LA73_0 = input.LA(1);
 
-                if ( ((LA73_0>=65 && LA73_0<=66)) ) {
+                if ( (LA73_0==65||LA73_0==76) ) {
                     alt73=1;
                 }
 
@@ -26487,24 +26487,34 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Case_stmt__Group_0_0_1__0__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8855:1: rule__Case_stmt__Group_0_0_1__0__Impl : ( 'default' ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8855:1: rule__Case_stmt__Group_0_0_1__0__Impl : ( ( rule__Case_stmt__IsDefaultAssignment_0_0_1_0 ) ) ;
     public final void rule__Case_stmt__Group_0_0_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8859:1: ( ( 'default' ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8860:1: ( 'default' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8859:1: ( ( ( rule__Case_stmt__IsDefaultAssignment_0_0_1_0 ) ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8860:1: ( ( rule__Case_stmt__IsDefaultAssignment_0_0_1_0 ) )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8860:1: ( 'default' )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8861:1: 'default'
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8860:1: ( ( rule__Case_stmt__IsDefaultAssignment_0_0_1_0 ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8861:1: ( rule__Case_stmt__IsDefaultAssignment_0_0_1_0 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getCase_stmtAccess().getDefaultKeyword_0_0_1_0()); 
+               before(grammarAccess.getCase_stmtAccess().getIsDefaultAssignment_0_0_1_0()); 
             }
-            match(input,66,FollowSets000.FOLLOW_66_in_rule__Case_stmt__Group_0_0_1__0__Impl18185); if (state.failed) return ;
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8862:1: ( rule__Case_stmt__IsDefaultAssignment_0_0_1_0 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8862:2: rule__Case_stmt__IsDefaultAssignment_0_0_1_0
+            {
+            pushFollow(FollowSets000.FOLLOW_rule__Case_stmt__IsDefaultAssignment_0_0_1_0_in_rule__Case_stmt__Group_0_0_1__0__Impl18184);
+            rule__Case_stmt__IsDefaultAssignment_0_0_1_0();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getCase_stmtAccess().getDefaultKeyword_0_0_1_0()); 
+               after(grammarAccess.getCase_stmtAccess().getIsDefaultAssignment_0_0_1_0()); 
             }
 
             }
@@ -26528,16 +26538,16 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Case_stmt__Group_0_0_1__1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8874:1: rule__Case_stmt__Group_0_0_1__1 : rule__Case_stmt__Group_0_0_1__1__Impl ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8872:1: rule__Case_stmt__Group_0_0_1__1 : rule__Case_stmt__Group_0_0_1__1__Impl ;
     public final void rule__Case_stmt__Group_0_0_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8878:1: ( rule__Case_stmt__Group_0_0_1__1__Impl )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8879:2: rule__Case_stmt__Group_0_0_1__1__Impl
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8876:1: ( rule__Case_stmt__Group_0_0_1__1__Impl )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8877:2: rule__Case_stmt__Group_0_0_1__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Case_stmt__Group_0_0_1__1__Impl_in_rule__Case_stmt__Group_0_0_1__118216);
+            pushFollow(FollowSets000.FOLLOW_rule__Case_stmt__Group_0_0_1__1__Impl_in_rule__Case_stmt__Group_0_0_1__118214);
             rule__Case_stmt__Group_0_0_1__1__Impl();
 
             state._fsp--;
@@ -26561,22 +26571,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Case_stmt__Group_0_0_1__1__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8885:1: rule__Case_stmt__Group_0_0_1__1__Impl : ( ':' ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8883:1: rule__Case_stmt__Group_0_0_1__1__Impl : ( ':' ) ;
     public final void rule__Case_stmt__Group_0_0_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8889:1: ( ( ':' ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8890:1: ( ':' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8887:1: ( ( ':' ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8888:1: ( ':' )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8890:1: ( ':' )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8891:1: ':'
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8888:1: ( ':' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8889:1: ':'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCase_stmtAccess().getColonKeyword_0_0_1_1()); 
             }
-            match(input,48,FollowSets000.FOLLOW_48_in_rule__Case_stmt__Group_0_0_1__1__Impl18244); if (state.failed) return ;
+            match(input,48,FollowSets000.FOLLOW_48_in_rule__Case_stmt__Group_0_0_1__1__Impl18242); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getCase_stmtAccess().getColonKeyword_0_0_1_1()); 
             }
@@ -26602,21 +26612,21 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Case_stmt__Group_1__0"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8908:1: rule__Case_stmt__Group_1__0 : rule__Case_stmt__Group_1__0__Impl rule__Case_stmt__Group_1__1 ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8906:1: rule__Case_stmt__Group_1__0 : rule__Case_stmt__Group_1__0__Impl rule__Case_stmt__Group_1__1 ;
     public final void rule__Case_stmt__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8912:1: ( rule__Case_stmt__Group_1__0__Impl rule__Case_stmt__Group_1__1 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8913:2: rule__Case_stmt__Group_1__0__Impl rule__Case_stmt__Group_1__1
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8910:1: ( rule__Case_stmt__Group_1__0__Impl rule__Case_stmt__Group_1__1 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8911:2: rule__Case_stmt__Group_1__0__Impl rule__Case_stmt__Group_1__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Case_stmt__Group_1__0__Impl_in_rule__Case_stmt__Group_1__018279);
+            pushFollow(FollowSets000.FOLLOW_rule__Case_stmt__Group_1__0__Impl_in_rule__Case_stmt__Group_1__018277);
             rule__Case_stmt__Group_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__Case_stmt__Group_1__1_in_rule__Case_stmt__Group_1__018282);
+            pushFollow(FollowSets000.FOLLOW_rule__Case_stmt__Group_1__1_in_rule__Case_stmt__Group_1__018280);
             rule__Case_stmt__Group_1__1();
 
             state._fsp--;
@@ -26640,28 +26650,28 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Case_stmt__Group_1__0__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8920:1: rule__Case_stmt__Group_1__0__Impl : ( ( ( rule__Case_stmt__Alternatives_1_0 ) ) ( ( rule__Case_stmt__Alternatives_1_0 )* ) ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8918:1: rule__Case_stmt__Group_1__0__Impl : ( ( ( rule__Case_stmt__Alternatives_1_0 ) ) ( ( rule__Case_stmt__Alternatives_1_0 )* ) ) ;
     public final void rule__Case_stmt__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8924:1: ( ( ( ( rule__Case_stmt__Alternatives_1_0 ) ) ( ( rule__Case_stmt__Alternatives_1_0 )* ) ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8925:1: ( ( ( rule__Case_stmt__Alternatives_1_0 ) ) ( ( rule__Case_stmt__Alternatives_1_0 )* ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8922:1: ( ( ( ( rule__Case_stmt__Alternatives_1_0 ) ) ( ( rule__Case_stmt__Alternatives_1_0 )* ) ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8923:1: ( ( ( rule__Case_stmt__Alternatives_1_0 ) ) ( ( rule__Case_stmt__Alternatives_1_0 )* ) )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8925:1: ( ( ( rule__Case_stmt__Alternatives_1_0 ) ) ( ( rule__Case_stmt__Alternatives_1_0 )* ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8926:1: ( ( rule__Case_stmt__Alternatives_1_0 ) ) ( ( rule__Case_stmt__Alternatives_1_0 )* )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8923:1: ( ( ( rule__Case_stmt__Alternatives_1_0 ) ) ( ( rule__Case_stmt__Alternatives_1_0 )* ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8924:1: ( ( rule__Case_stmt__Alternatives_1_0 ) ) ( ( rule__Case_stmt__Alternatives_1_0 )* )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8926:1: ( ( rule__Case_stmt__Alternatives_1_0 ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8927:1: ( rule__Case_stmt__Alternatives_1_0 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8924:1: ( ( rule__Case_stmt__Alternatives_1_0 ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8925:1: ( rule__Case_stmt__Alternatives_1_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCase_stmtAccess().getAlternatives_1_0()); 
             }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8928:1: ( rule__Case_stmt__Alternatives_1_0 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8928:2: rule__Case_stmt__Alternatives_1_0
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8926:1: ( rule__Case_stmt__Alternatives_1_0 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8926:2: rule__Case_stmt__Alternatives_1_0
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Case_stmt__Alternatives_1_0_in_rule__Case_stmt__Group_1__0__Impl18311);
+            pushFollow(FollowSets000.FOLLOW_rule__Case_stmt__Alternatives_1_0_in_rule__Case_stmt__Group_1__0__Impl18309);
             rule__Case_stmt__Alternatives_1_0();
 
             state._fsp--;
@@ -26675,28 +26685,28 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
             }
 
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8931:1: ( ( rule__Case_stmt__Alternatives_1_0 )* )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8932:1: ( rule__Case_stmt__Alternatives_1_0 )*
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8929:1: ( ( rule__Case_stmt__Alternatives_1_0 )* )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8930:1: ( rule__Case_stmt__Alternatives_1_0 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCase_stmtAccess().getAlternatives_1_0()); 
             }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8933:1: ( rule__Case_stmt__Alternatives_1_0 )*
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8931:1: ( rule__Case_stmt__Alternatives_1_0 )*
             loop74:
             do {
                 int alt74=2;
                 int LA74_0 = input.LA(1);
 
-                if ( ((LA74_0>=65 && LA74_0<=66)) ) {
+                if ( (LA74_0==65||LA74_0==76) ) {
                     alt74=1;
                 }
 
 
                 switch (alt74) {
             	case 1 :
-            	    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8933:2: rule__Case_stmt__Alternatives_1_0
+            	    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8931:2: rule__Case_stmt__Alternatives_1_0
             	    {
-            	    pushFollow(FollowSets000.FOLLOW_rule__Case_stmt__Alternatives_1_0_in_rule__Case_stmt__Group_1__0__Impl18323);
+            	    pushFollow(FollowSets000.FOLLOW_rule__Case_stmt__Alternatives_1_0_in_rule__Case_stmt__Group_1__0__Impl18321);
             	    rule__Case_stmt__Alternatives_1_0();
 
             	    state._fsp--;
@@ -26738,21 +26748,21 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Case_stmt__Group_1__1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8944:1: rule__Case_stmt__Group_1__1 : rule__Case_stmt__Group_1__1__Impl rule__Case_stmt__Group_1__2 ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8942:1: rule__Case_stmt__Group_1__1 : rule__Case_stmt__Group_1__1__Impl rule__Case_stmt__Group_1__2 ;
     public final void rule__Case_stmt__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8948:1: ( rule__Case_stmt__Group_1__1__Impl rule__Case_stmt__Group_1__2 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8949:2: rule__Case_stmt__Group_1__1__Impl rule__Case_stmt__Group_1__2
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8946:1: ( rule__Case_stmt__Group_1__1__Impl rule__Case_stmt__Group_1__2 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8947:2: rule__Case_stmt__Group_1__1__Impl rule__Case_stmt__Group_1__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Case_stmt__Group_1__1__Impl_in_rule__Case_stmt__Group_1__118356);
+            pushFollow(FollowSets000.FOLLOW_rule__Case_stmt__Group_1__1__Impl_in_rule__Case_stmt__Group_1__118354);
             rule__Case_stmt__Group_1__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__Case_stmt__Group_1__2_in_rule__Case_stmt__Group_1__118359);
+            pushFollow(FollowSets000.FOLLOW_rule__Case_stmt__Group_1__2_in_rule__Case_stmt__Group_1__118357);
             rule__Case_stmt__Group_1__2();
 
             state._fsp--;
@@ -26776,25 +26786,25 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Case_stmt__Group_1__1__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8956:1: rule__Case_stmt__Group_1__1__Impl : ( ( rule__Case_stmt__Alternatives_1_1 ) ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8954:1: rule__Case_stmt__Group_1__1__Impl : ( ( rule__Case_stmt__Alternatives_1_1 ) ) ;
     public final void rule__Case_stmt__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8960:1: ( ( ( rule__Case_stmt__Alternatives_1_1 ) ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8961:1: ( ( rule__Case_stmt__Alternatives_1_1 ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8958:1: ( ( ( rule__Case_stmt__Alternatives_1_1 ) ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8959:1: ( ( rule__Case_stmt__Alternatives_1_1 ) )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8961:1: ( ( rule__Case_stmt__Alternatives_1_1 ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8962:1: ( rule__Case_stmt__Alternatives_1_1 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8959:1: ( ( rule__Case_stmt__Alternatives_1_1 ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8960:1: ( rule__Case_stmt__Alternatives_1_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCase_stmtAccess().getAlternatives_1_1()); 
             }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8963:1: ( rule__Case_stmt__Alternatives_1_1 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8963:2: rule__Case_stmt__Alternatives_1_1
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8961:1: ( rule__Case_stmt__Alternatives_1_1 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8961:2: rule__Case_stmt__Alternatives_1_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Case_stmt__Alternatives_1_1_in_rule__Case_stmt__Group_1__1__Impl18386);
+            pushFollow(FollowSets000.FOLLOW_rule__Case_stmt__Alternatives_1_1_in_rule__Case_stmt__Group_1__1__Impl18384);
             rule__Case_stmt__Alternatives_1_1();
 
             state._fsp--;
@@ -26827,21 +26837,21 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Case_stmt__Group_1__2"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8973:1: rule__Case_stmt__Group_1__2 : rule__Case_stmt__Group_1__2__Impl rule__Case_stmt__Group_1__3 ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8971:1: rule__Case_stmt__Group_1__2 : rule__Case_stmt__Group_1__2__Impl rule__Case_stmt__Group_1__3 ;
     public final void rule__Case_stmt__Group_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8977:1: ( rule__Case_stmt__Group_1__2__Impl rule__Case_stmt__Group_1__3 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8978:2: rule__Case_stmt__Group_1__2__Impl rule__Case_stmt__Group_1__3
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8975:1: ( rule__Case_stmt__Group_1__2__Impl rule__Case_stmt__Group_1__3 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8976:2: rule__Case_stmt__Group_1__2__Impl rule__Case_stmt__Group_1__3
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Case_stmt__Group_1__2__Impl_in_rule__Case_stmt__Group_1__218416);
+            pushFollow(FollowSets000.FOLLOW_rule__Case_stmt__Group_1__2__Impl_in_rule__Case_stmt__Group_1__218414);
             rule__Case_stmt__Group_1__2__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__Case_stmt__Group_1__3_in_rule__Case_stmt__Group_1__218419);
+            pushFollow(FollowSets000.FOLLOW_rule__Case_stmt__Group_1__3_in_rule__Case_stmt__Group_1__218417);
             rule__Case_stmt__Group_1__3();
 
             state._fsp--;
@@ -26865,25 +26875,25 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Case_stmt__Group_1__2__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8985:1: rule__Case_stmt__Group_1__2__Impl : ( ( rule__Case_stmt__IdentifierAssignment_1_2 ) ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8983:1: rule__Case_stmt__Group_1__2__Impl : ( ( rule__Case_stmt__IdentifierAssignment_1_2 ) ) ;
     public final void rule__Case_stmt__Group_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8989:1: ( ( ( rule__Case_stmt__IdentifierAssignment_1_2 ) ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8990:1: ( ( rule__Case_stmt__IdentifierAssignment_1_2 ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8987:1: ( ( ( rule__Case_stmt__IdentifierAssignment_1_2 ) ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8988:1: ( ( rule__Case_stmt__IdentifierAssignment_1_2 ) )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8990:1: ( ( rule__Case_stmt__IdentifierAssignment_1_2 ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8991:1: ( rule__Case_stmt__IdentifierAssignment_1_2 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8988:1: ( ( rule__Case_stmt__IdentifierAssignment_1_2 ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8989:1: ( rule__Case_stmt__IdentifierAssignment_1_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCase_stmtAccess().getIdentifierAssignment_1_2()); 
             }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8992:1: ( rule__Case_stmt__IdentifierAssignment_1_2 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8992:2: rule__Case_stmt__IdentifierAssignment_1_2
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8990:1: ( rule__Case_stmt__IdentifierAssignment_1_2 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:8990:2: rule__Case_stmt__IdentifierAssignment_1_2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Case_stmt__IdentifierAssignment_1_2_in_rule__Case_stmt__Group_1__2__Impl18446);
+            pushFollow(FollowSets000.FOLLOW_rule__Case_stmt__IdentifierAssignment_1_2_in_rule__Case_stmt__Group_1__2__Impl18444);
             rule__Case_stmt__IdentifierAssignment_1_2();
 
             state._fsp--;
@@ -26916,16 +26926,16 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Case_stmt__Group_1__3"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9002:1: rule__Case_stmt__Group_1__3 : rule__Case_stmt__Group_1__3__Impl ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9000:1: rule__Case_stmt__Group_1__3 : rule__Case_stmt__Group_1__3__Impl ;
     public final void rule__Case_stmt__Group_1__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9006:1: ( rule__Case_stmt__Group_1__3__Impl )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9007:2: rule__Case_stmt__Group_1__3__Impl
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9004:1: ( rule__Case_stmt__Group_1__3__Impl )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9005:2: rule__Case_stmt__Group_1__3__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Case_stmt__Group_1__3__Impl_in_rule__Case_stmt__Group_1__318476);
+            pushFollow(FollowSets000.FOLLOW_rule__Case_stmt__Group_1__3__Impl_in_rule__Case_stmt__Group_1__318474);
             rule__Case_stmt__Group_1__3__Impl();
 
             state._fsp--;
@@ -26949,22 +26959,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Case_stmt__Group_1__3__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9013:1: rule__Case_stmt__Group_1__3__Impl : ( ';' ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9011:1: rule__Case_stmt__Group_1__3__Impl : ( ';' ) ;
     public final void rule__Case_stmt__Group_1__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9017:1: ( ( ';' ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9018:1: ( ';' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9015:1: ( ( ';' ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9016:1: ( ';' )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9018:1: ( ';' )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9019:1: ';'
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9016:1: ( ';' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9017:1: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCase_stmtAccess().getSemicolonKeyword_1_3()); 
             }
-            match(input,29,FollowSets000.FOLLOW_29_in_rule__Case_stmt__Group_1__3__Impl18504); if (state.failed) return ;
+            match(input,29,FollowSets000.FOLLOW_29_in_rule__Case_stmt__Group_1__3__Impl18502); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getCase_stmtAccess().getSemicolonKeyword_1_3()); 
             }
@@ -26990,21 +27000,21 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Case_stmt__Group_1_0_0__0"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9040:1: rule__Case_stmt__Group_1_0_0__0 : rule__Case_stmt__Group_1_0_0__0__Impl rule__Case_stmt__Group_1_0_0__1 ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9038:1: rule__Case_stmt__Group_1_0_0__0 : rule__Case_stmt__Group_1_0_0__0__Impl rule__Case_stmt__Group_1_0_0__1 ;
     public final void rule__Case_stmt__Group_1_0_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9044:1: ( rule__Case_stmt__Group_1_0_0__0__Impl rule__Case_stmt__Group_1_0_0__1 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9045:2: rule__Case_stmt__Group_1_0_0__0__Impl rule__Case_stmt__Group_1_0_0__1
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9042:1: ( rule__Case_stmt__Group_1_0_0__0__Impl rule__Case_stmt__Group_1_0_0__1 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9043:2: rule__Case_stmt__Group_1_0_0__0__Impl rule__Case_stmt__Group_1_0_0__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Case_stmt__Group_1_0_0__0__Impl_in_rule__Case_stmt__Group_1_0_0__018543);
+            pushFollow(FollowSets000.FOLLOW_rule__Case_stmt__Group_1_0_0__0__Impl_in_rule__Case_stmt__Group_1_0_0__018541);
             rule__Case_stmt__Group_1_0_0__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__Case_stmt__Group_1_0_0__1_in_rule__Case_stmt__Group_1_0_0__018546);
+            pushFollow(FollowSets000.FOLLOW_rule__Case_stmt__Group_1_0_0__1_in_rule__Case_stmt__Group_1_0_0__018544);
             rule__Case_stmt__Group_1_0_0__1();
 
             state._fsp--;
@@ -27028,22 +27038,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Case_stmt__Group_1_0_0__0__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9052:1: rule__Case_stmt__Group_1_0_0__0__Impl : ( 'case' ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9050:1: rule__Case_stmt__Group_1_0_0__0__Impl : ( 'case' ) ;
     public final void rule__Case_stmt__Group_1_0_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9056:1: ( ( 'case' ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9057:1: ( 'case' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9054:1: ( ( 'case' ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9055:1: ( 'case' )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9057:1: ( 'case' )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9058:1: 'case'
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9055:1: ( 'case' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9056:1: 'case'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCase_stmtAccess().getCaseKeyword_1_0_0_0()); 
             }
-            match(input,65,FollowSets000.FOLLOW_65_in_rule__Case_stmt__Group_1_0_0__0__Impl18574); if (state.failed) return ;
+            match(input,65,FollowSets000.FOLLOW_65_in_rule__Case_stmt__Group_1_0_0__0__Impl18572); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getCase_stmtAccess().getCaseKeyword_1_0_0_0()); 
             }
@@ -27069,21 +27079,21 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Case_stmt__Group_1_0_0__1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9071:1: rule__Case_stmt__Group_1_0_0__1 : rule__Case_stmt__Group_1_0_0__1__Impl rule__Case_stmt__Group_1_0_0__2 ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9069:1: rule__Case_stmt__Group_1_0_0__1 : rule__Case_stmt__Group_1_0_0__1__Impl rule__Case_stmt__Group_1_0_0__2 ;
     public final void rule__Case_stmt__Group_1_0_0__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9075:1: ( rule__Case_stmt__Group_1_0_0__1__Impl rule__Case_stmt__Group_1_0_0__2 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9076:2: rule__Case_stmt__Group_1_0_0__1__Impl rule__Case_stmt__Group_1_0_0__2
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9073:1: ( rule__Case_stmt__Group_1_0_0__1__Impl rule__Case_stmt__Group_1_0_0__2 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9074:2: rule__Case_stmt__Group_1_0_0__1__Impl rule__Case_stmt__Group_1_0_0__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Case_stmt__Group_1_0_0__1__Impl_in_rule__Case_stmt__Group_1_0_0__118605);
+            pushFollow(FollowSets000.FOLLOW_rule__Case_stmt__Group_1_0_0__1__Impl_in_rule__Case_stmt__Group_1_0_0__118603);
             rule__Case_stmt__Group_1_0_0__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__Case_stmt__Group_1_0_0__2_in_rule__Case_stmt__Group_1_0_0__118608);
+            pushFollow(FollowSets000.FOLLOW_rule__Case_stmt__Group_1_0_0__2_in_rule__Case_stmt__Group_1_0_0__118606);
             rule__Case_stmt__Group_1_0_0__2();
 
             state._fsp--;
@@ -27107,25 +27117,25 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Case_stmt__Group_1_0_0__1__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9083:1: rule__Case_stmt__Group_1_0_0__1__Impl : ( ( rule__Case_stmt__LabelAssignment_1_0_0_1 ) ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9081:1: rule__Case_stmt__Group_1_0_0__1__Impl : ( ( rule__Case_stmt__LabelAssignment_1_0_0_1 ) ) ;
     public final void rule__Case_stmt__Group_1_0_0__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9087:1: ( ( ( rule__Case_stmt__LabelAssignment_1_0_0_1 ) ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9088:1: ( ( rule__Case_stmt__LabelAssignment_1_0_0_1 ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9085:1: ( ( ( rule__Case_stmt__LabelAssignment_1_0_0_1 ) ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9086:1: ( ( rule__Case_stmt__LabelAssignment_1_0_0_1 ) )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9088:1: ( ( rule__Case_stmt__LabelAssignment_1_0_0_1 ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9089:1: ( rule__Case_stmt__LabelAssignment_1_0_0_1 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9086:1: ( ( rule__Case_stmt__LabelAssignment_1_0_0_1 ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9087:1: ( rule__Case_stmt__LabelAssignment_1_0_0_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCase_stmtAccess().getLabelAssignment_1_0_0_1()); 
             }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9090:1: ( rule__Case_stmt__LabelAssignment_1_0_0_1 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9090:2: rule__Case_stmt__LabelAssignment_1_0_0_1
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9088:1: ( rule__Case_stmt__LabelAssignment_1_0_0_1 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9088:2: rule__Case_stmt__LabelAssignment_1_0_0_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Case_stmt__LabelAssignment_1_0_0_1_in_rule__Case_stmt__Group_1_0_0__1__Impl18635);
+            pushFollow(FollowSets000.FOLLOW_rule__Case_stmt__LabelAssignment_1_0_0_1_in_rule__Case_stmt__Group_1_0_0__1__Impl18633);
             rule__Case_stmt__LabelAssignment_1_0_0_1();
 
             state._fsp--;
@@ -27158,16 +27168,16 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Case_stmt__Group_1_0_0__2"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9100:1: rule__Case_stmt__Group_1_0_0__2 : rule__Case_stmt__Group_1_0_0__2__Impl ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9098:1: rule__Case_stmt__Group_1_0_0__2 : rule__Case_stmt__Group_1_0_0__2__Impl ;
     public final void rule__Case_stmt__Group_1_0_0__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9104:1: ( rule__Case_stmt__Group_1_0_0__2__Impl )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9105:2: rule__Case_stmt__Group_1_0_0__2__Impl
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9102:1: ( rule__Case_stmt__Group_1_0_0__2__Impl )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9103:2: rule__Case_stmt__Group_1_0_0__2__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Case_stmt__Group_1_0_0__2__Impl_in_rule__Case_stmt__Group_1_0_0__218665);
+            pushFollow(FollowSets000.FOLLOW_rule__Case_stmt__Group_1_0_0__2__Impl_in_rule__Case_stmt__Group_1_0_0__218663);
             rule__Case_stmt__Group_1_0_0__2__Impl();
 
             state._fsp--;
@@ -27191,22 +27201,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Case_stmt__Group_1_0_0__2__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9111:1: rule__Case_stmt__Group_1_0_0__2__Impl : ( ':' ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9109:1: rule__Case_stmt__Group_1_0_0__2__Impl : ( ':' ) ;
     public final void rule__Case_stmt__Group_1_0_0__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9115:1: ( ( ':' ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9116:1: ( ':' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9113:1: ( ( ':' ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9114:1: ( ':' )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9116:1: ( ':' )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9117:1: ':'
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9114:1: ( ':' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9115:1: ':'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCase_stmtAccess().getColonKeyword_1_0_0_2()); 
             }
-            match(input,48,FollowSets000.FOLLOW_48_in_rule__Case_stmt__Group_1_0_0__2__Impl18693); if (state.failed) return ;
+            match(input,48,FollowSets000.FOLLOW_48_in_rule__Case_stmt__Group_1_0_0__2__Impl18691); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getCase_stmtAccess().getColonKeyword_1_0_0_2()); 
             }
@@ -27232,21 +27242,21 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Case_stmt__Group_1_0_1__0"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9136:1: rule__Case_stmt__Group_1_0_1__0 : rule__Case_stmt__Group_1_0_1__0__Impl rule__Case_stmt__Group_1_0_1__1 ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9134:1: rule__Case_stmt__Group_1_0_1__0 : rule__Case_stmt__Group_1_0_1__0__Impl rule__Case_stmt__Group_1_0_1__1 ;
     public final void rule__Case_stmt__Group_1_0_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9140:1: ( rule__Case_stmt__Group_1_0_1__0__Impl rule__Case_stmt__Group_1_0_1__1 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9141:2: rule__Case_stmt__Group_1_0_1__0__Impl rule__Case_stmt__Group_1_0_1__1
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9138:1: ( rule__Case_stmt__Group_1_0_1__0__Impl rule__Case_stmt__Group_1_0_1__1 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9139:2: rule__Case_stmt__Group_1_0_1__0__Impl rule__Case_stmt__Group_1_0_1__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Case_stmt__Group_1_0_1__0__Impl_in_rule__Case_stmt__Group_1_0_1__018730);
+            pushFollow(FollowSets000.FOLLOW_rule__Case_stmt__Group_1_0_1__0__Impl_in_rule__Case_stmt__Group_1_0_1__018728);
             rule__Case_stmt__Group_1_0_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__Case_stmt__Group_1_0_1__1_in_rule__Case_stmt__Group_1_0_1__018733);
+            pushFollow(FollowSets000.FOLLOW_rule__Case_stmt__Group_1_0_1__1_in_rule__Case_stmt__Group_1_0_1__018731);
             rule__Case_stmt__Group_1_0_1__1();
 
             state._fsp--;
@@ -27270,24 +27280,34 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Case_stmt__Group_1_0_1__0__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9148:1: rule__Case_stmt__Group_1_0_1__0__Impl : ( 'default' ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9146:1: rule__Case_stmt__Group_1_0_1__0__Impl : ( ( rule__Case_stmt__IsDefaultAssignment_1_0_1_0 ) ) ;
     public final void rule__Case_stmt__Group_1_0_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9152:1: ( ( 'default' ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9153:1: ( 'default' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9150:1: ( ( ( rule__Case_stmt__IsDefaultAssignment_1_0_1_0 ) ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9151:1: ( ( rule__Case_stmt__IsDefaultAssignment_1_0_1_0 ) )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9153:1: ( 'default' )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9154:1: 'default'
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9151:1: ( ( rule__Case_stmt__IsDefaultAssignment_1_0_1_0 ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9152:1: ( rule__Case_stmt__IsDefaultAssignment_1_0_1_0 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getCase_stmtAccess().getDefaultKeyword_1_0_1_0()); 
+               before(grammarAccess.getCase_stmtAccess().getIsDefaultAssignment_1_0_1_0()); 
             }
-            match(input,66,FollowSets000.FOLLOW_66_in_rule__Case_stmt__Group_1_0_1__0__Impl18761); if (state.failed) return ;
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9153:1: ( rule__Case_stmt__IsDefaultAssignment_1_0_1_0 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9153:2: rule__Case_stmt__IsDefaultAssignment_1_0_1_0
+            {
+            pushFollow(FollowSets000.FOLLOW_rule__Case_stmt__IsDefaultAssignment_1_0_1_0_in_rule__Case_stmt__Group_1_0_1__0__Impl18758);
+            rule__Case_stmt__IsDefaultAssignment_1_0_1_0();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getCase_stmtAccess().getDefaultKeyword_1_0_1_0()); 
+               after(grammarAccess.getCase_stmtAccess().getIsDefaultAssignment_1_0_1_0()); 
             }
 
             }
@@ -27311,16 +27331,16 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Case_stmt__Group_1_0_1__1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9167:1: rule__Case_stmt__Group_1_0_1__1 : rule__Case_stmt__Group_1_0_1__1__Impl ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9163:1: rule__Case_stmt__Group_1_0_1__1 : rule__Case_stmt__Group_1_0_1__1__Impl ;
     public final void rule__Case_stmt__Group_1_0_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9171:1: ( rule__Case_stmt__Group_1_0_1__1__Impl )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9172:2: rule__Case_stmt__Group_1_0_1__1__Impl
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9167:1: ( rule__Case_stmt__Group_1_0_1__1__Impl )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9168:2: rule__Case_stmt__Group_1_0_1__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Case_stmt__Group_1_0_1__1__Impl_in_rule__Case_stmt__Group_1_0_1__118792);
+            pushFollow(FollowSets000.FOLLOW_rule__Case_stmt__Group_1_0_1__1__Impl_in_rule__Case_stmt__Group_1_0_1__118788);
             rule__Case_stmt__Group_1_0_1__1__Impl();
 
             state._fsp--;
@@ -27344,22 +27364,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Case_stmt__Group_1_0_1__1__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9178:1: rule__Case_stmt__Group_1_0_1__1__Impl : ( ':' ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9174:1: rule__Case_stmt__Group_1_0_1__1__Impl : ( ':' ) ;
     public final void rule__Case_stmt__Group_1_0_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9182:1: ( ( ':' ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9183:1: ( ':' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9178:1: ( ( ':' ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9179:1: ( ':' )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9183:1: ( ':' )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9184:1: ':'
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9179:1: ( ':' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9180:1: ':'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCase_stmtAccess().getColonKeyword_1_0_1_1()); 
             }
-            match(input,48,FollowSets000.FOLLOW_48_in_rule__Case_stmt__Group_1_0_1__1__Impl18820); if (state.failed) return ;
+            match(input,48,FollowSets000.FOLLOW_48_in_rule__Case_stmt__Group_1_0_1__1__Impl18816); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getCase_stmtAccess().getColonKeyword_1_0_1_1()); 
             }
@@ -27385,21 +27405,21 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Enum_type__Group__0"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9201:1: rule__Enum_type__Group__0 : rule__Enum_type__Group__0__Impl rule__Enum_type__Group__1 ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9197:1: rule__Enum_type__Group__0 : rule__Enum_type__Group__0__Impl rule__Enum_type__Group__1 ;
     public final void rule__Enum_type__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9205:1: ( rule__Enum_type__Group__0__Impl rule__Enum_type__Group__1 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9206:2: rule__Enum_type__Group__0__Impl rule__Enum_type__Group__1
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9201:1: ( rule__Enum_type__Group__0__Impl rule__Enum_type__Group__1 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9202:2: rule__Enum_type__Group__0__Impl rule__Enum_type__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Enum_type__Group__0__Impl_in_rule__Enum_type__Group__018855);
+            pushFollow(FollowSets000.FOLLOW_rule__Enum_type__Group__0__Impl_in_rule__Enum_type__Group__018851);
             rule__Enum_type__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__Enum_type__Group__1_in_rule__Enum_type__Group__018858);
+            pushFollow(FollowSets000.FOLLOW_rule__Enum_type__Group__1_in_rule__Enum_type__Group__018854);
             rule__Enum_type__Group__1();
 
             state._fsp--;
@@ -27423,22 +27443,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Enum_type__Group__0__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9213:1: rule__Enum_type__Group__0__Impl : ( 'enum' ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9209:1: rule__Enum_type__Group__0__Impl : ( 'enum' ) ;
     public final void rule__Enum_type__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9217:1: ( ( 'enum' ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9218:1: ( 'enum' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9213:1: ( ( 'enum' ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9214:1: ( 'enum' )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9218:1: ( 'enum' )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9219:1: 'enum'
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9214:1: ( 'enum' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9215:1: 'enum'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getEnum_typeAccess().getEnumKeyword_0()); 
             }
-            match(input,67,FollowSets000.FOLLOW_67_in_rule__Enum_type__Group__0__Impl18886); if (state.failed) return ;
+            match(input,66,FollowSets000.FOLLOW_66_in_rule__Enum_type__Group__0__Impl18882); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getEnum_typeAccess().getEnumKeyword_0()); 
             }
@@ -27464,21 +27484,21 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Enum_type__Group__1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9232:1: rule__Enum_type__Group__1 : rule__Enum_type__Group__1__Impl rule__Enum_type__Group__2 ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9228:1: rule__Enum_type__Group__1 : rule__Enum_type__Group__1__Impl rule__Enum_type__Group__2 ;
     public final void rule__Enum_type__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9236:1: ( rule__Enum_type__Group__1__Impl rule__Enum_type__Group__2 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9237:2: rule__Enum_type__Group__1__Impl rule__Enum_type__Group__2
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9232:1: ( rule__Enum_type__Group__1__Impl rule__Enum_type__Group__2 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9233:2: rule__Enum_type__Group__1__Impl rule__Enum_type__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Enum_type__Group__1__Impl_in_rule__Enum_type__Group__118917);
+            pushFollow(FollowSets000.FOLLOW_rule__Enum_type__Group__1__Impl_in_rule__Enum_type__Group__118913);
             rule__Enum_type__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__Enum_type__Group__2_in_rule__Enum_type__Group__118920);
+            pushFollow(FollowSets000.FOLLOW_rule__Enum_type__Group__2_in_rule__Enum_type__Group__118916);
             rule__Enum_type__Group__2();
 
             state._fsp--;
@@ -27502,25 +27522,25 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Enum_type__Group__1__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9244:1: rule__Enum_type__Group__1__Impl : ( ( rule__Enum_type__IdentifierAssignment_1 ) ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9240:1: rule__Enum_type__Group__1__Impl : ( ( rule__Enum_type__IdentifierAssignment_1 ) ) ;
     public final void rule__Enum_type__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9248:1: ( ( ( rule__Enum_type__IdentifierAssignment_1 ) ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9249:1: ( ( rule__Enum_type__IdentifierAssignment_1 ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9244:1: ( ( ( rule__Enum_type__IdentifierAssignment_1 ) ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9245:1: ( ( rule__Enum_type__IdentifierAssignment_1 ) )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9249:1: ( ( rule__Enum_type__IdentifierAssignment_1 ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9250:1: ( rule__Enum_type__IdentifierAssignment_1 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9245:1: ( ( rule__Enum_type__IdentifierAssignment_1 ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9246:1: ( rule__Enum_type__IdentifierAssignment_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getEnum_typeAccess().getIdentifierAssignment_1()); 
             }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9251:1: ( rule__Enum_type__IdentifierAssignment_1 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9251:2: rule__Enum_type__IdentifierAssignment_1
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9247:1: ( rule__Enum_type__IdentifierAssignment_1 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9247:2: rule__Enum_type__IdentifierAssignment_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Enum_type__IdentifierAssignment_1_in_rule__Enum_type__Group__1__Impl18947);
+            pushFollow(FollowSets000.FOLLOW_rule__Enum_type__IdentifierAssignment_1_in_rule__Enum_type__Group__1__Impl18943);
             rule__Enum_type__IdentifierAssignment_1();
 
             state._fsp--;
@@ -27553,21 +27573,21 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Enum_type__Group__2"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9261:1: rule__Enum_type__Group__2 : rule__Enum_type__Group__2__Impl rule__Enum_type__Group__3 ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9257:1: rule__Enum_type__Group__2 : rule__Enum_type__Group__2__Impl rule__Enum_type__Group__3 ;
     public final void rule__Enum_type__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9265:1: ( rule__Enum_type__Group__2__Impl rule__Enum_type__Group__3 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9266:2: rule__Enum_type__Group__2__Impl rule__Enum_type__Group__3
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9261:1: ( rule__Enum_type__Group__2__Impl rule__Enum_type__Group__3 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9262:2: rule__Enum_type__Group__2__Impl rule__Enum_type__Group__3
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Enum_type__Group__2__Impl_in_rule__Enum_type__Group__218977);
+            pushFollow(FollowSets000.FOLLOW_rule__Enum_type__Group__2__Impl_in_rule__Enum_type__Group__218973);
             rule__Enum_type__Group__2__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__Enum_type__Group__3_in_rule__Enum_type__Group__218980);
+            pushFollow(FollowSets000.FOLLOW_rule__Enum_type__Group__3_in_rule__Enum_type__Group__218976);
             rule__Enum_type__Group__3();
 
             state._fsp--;
@@ -27591,22 +27611,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Enum_type__Group__2__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9273:1: rule__Enum_type__Group__2__Impl : ( '{' ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9269:1: rule__Enum_type__Group__2__Impl : ( '{' ) ;
     public final void rule__Enum_type__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9277:1: ( ( '{' ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9278:1: ( '{' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9273:1: ( ( '{' ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9274:1: ( '{' )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9278:1: ( '{' )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9279:1: '{'
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9274:1: ( '{' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9275:1: '{'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getEnum_typeAccess().getLeftCurlyBracketKeyword_2()); 
             }
-            match(input,45,FollowSets000.FOLLOW_45_in_rule__Enum_type__Group__2__Impl19008); if (state.failed) return ;
+            match(input,45,FollowSets000.FOLLOW_45_in_rule__Enum_type__Group__2__Impl19004); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getEnum_typeAccess().getLeftCurlyBracketKeyword_2()); 
             }
@@ -27632,21 +27652,21 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Enum_type__Group__3"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9292:1: rule__Enum_type__Group__3 : rule__Enum_type__Group__3__Impl rule__Enum_type__Group__4 ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9288:1: rule__Enum_type__Group__3 : rule__Enum_type__Group__3__Impl rule__Enum_type__Group__4 ;
     public final void rule__Enum_type__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9296:1: ( rule__Enum_type__Group__3__Impl rule__Enum_type__Group__4 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9297:2: rule__Enum_type__Group__3__Impl rule__Enum_type__Group__4
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9292:1: ( rule__Enum_type__Group__3__Impl rule__Enum_type__Group__4 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9293:2: rule__Enum_type__Group__3__Impl rule__Enum_type__Group__4
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Enum_type__Group__3__Impl_in_rule__Enum_type__Group__319039);
+            pushFollow(FollowSets000.FOLLOW_rule__Enum_type__Group__3__Impl_in_rule__Enum_type__Group__319035);
             rule__Enum_type__Group__3__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__Enum_type__Group__4_in_rule__Enum_type__Group__319042);
+            pushFollow(FollowSets000.FOLLOW_rule__Enum_type__Group__4_in_rule__Enum_type__Group__319038);
             rule__Enum_type__Group__4();
 
             state._fsp--;
@@ -27670,25 +27690,25 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Enum_type__Group__3__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9304:1: rule__Enum_type__Group__3__Impl : ( ( rule__Enum_type__MembersAssignment_3 ) ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9300:1: rule__Enum_type__Group__3__Impl : ( ( rule__Enum_type__MembersAssignment_3 ) ) ;
     public final void rule__Enum_type__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9308:1: ( ( ( rule__Enum_type__MembersAssignment_3 ) ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9309:1: ( ( rule__Enum_type__MembersAssignment_3 ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9304:1: ( ( ( rule__Enum_type__MembersAssignment_3 ) ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9305:1: ( ( rule__Enum_type__MembersAssignment_3 ) )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9309:1: ( ( rule__Enum_type__MembersAssignment_3 ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9310:1: ( rule__Enum_type__MembersAssignment_3 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9305:1: ( ( rule__Enum_type__MembersAssignment_3 ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9306:1: ( rule__Enum_type__MembersAssignment_3 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getEnum_typeAccess().getMembersAssignment_3()); 
             }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9311:1: ( rule__Enum_type__MembersAssignment_3 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9311:2: rule__Enum_type__MembersAssignment_3
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9307:1: ( rule__Enum_type__MembersAssignment_3 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9307:2: rule__Enum_type__MembersAssignment_3
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Enum_type__MembersAssignment_3_in_rule__Enum_type__Group__3__Impl19069);
+            pushFollow(FollowSets000.FOLLOW_rule__Enum_type__MembersAssignment_3_in_rule__Enum_type__Group__3__Impl19065);
             rule__Enum_type__MembersAssignment_3();
 
             state._fsp--;
@@ -27721,21 +27741,21 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Enum_type__Group__4"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9321:1: rule__Enum_type__Group__4 : rule__Enum_type__Group__4__Impl rule__Enum_type__Group__5 ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9317:1: rule__Enum_type__Group__4 : rule__Enum_type__Group__4__Impl rule__Enum_type__Group__5 ;
     public final void rule__Enum_type__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9325:1: ( rule__Enum_type__Group__4__Impl rule__Enum_type__Group__5 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9326:2: rule__Enum_type__Group__4__Impl rule__Enum_type__Group__5
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9321:1: ( rule__Enum_type__Group__4__Impl rule__Enum_type__Group__5 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9322:2: rule__Enum_type__Group__4__Impl rule__Enum_type__Group__5
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Enum_type__Group__4__Impl_in_rule__Enum_type__Group__419099);
+            pushFollow(FollowSets000.FOLLOW_rule__Enum_type__Group__4__Impl_in_rule__Enum_type__Group__419095);
             rule__Enum_type__Group__4__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__Enum_type__Group__5_in_rule__Enum_type__Group__419102);
+            pushFollow(FollowSets000.FOLLOW_rule__Enum_type__Group__5_in_rule__Enum_type__Group__419098);
             rule__Enum_type__Group__5();
 
             state._fsp--;
@@ -27759,22 +27779,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Enum_type__Group__4__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9333:1: rule__Enum_type__Group__4__Impl : ( ( rule__Enum_type__Group_4__0 )* ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9329:1: rule__Enum_type__Group__4__Impl : ( ( rule__Enum_type__Group_4__0 )* ) ;
     public final void rule__Enum_type__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9337:1: ( ( ( rule__Enum_type__Group_4__0 )* ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9338:1: ( ( rule__Enum_type__Group_4__0 )* )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9333:1: ( ( ( rule__Enum_type__Group_4__0 )* ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9334:1: ( ( rule__Enum_type__Group_4__0 )* )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9338:1: ( ( rule__Enum_type__Group_4__0 )* )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9339:1: ( rule__Enum_type__Group_4__0 )*
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9334:1: ( ( rule__Enum_type__Group_4__0 )* )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9335:1: ( rule__Enum_type__Group_4__0 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getEnum_typeAccess().getGroup_4()); 
             }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9340:1: ( rule__Enum_type__Group_4__0 )*
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9336:1: ( rule__Enum_type__Group_4__0 )*
             loop75:
             do {
                 int alt75=2;
@@ -27787,9 +27807,9 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
                 switch (alt75) {
             	case 1 :
-            	    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9340:2: rule__Enum_type__Group_4__0
+            	    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9336:2: rule__Enum_type__Group_4__0
             	    {
-            	    pushFollow(FollowSets000.FOLLOW_rule__Enum_type__Group_4__0_in_rule__Enum_type__Group__4__Impl19129);
+            	    pushFollow(FollowSets000.FOLLOW_rule__Enum_type__Group_4__0_in_rule__Enum_type__Group__4__Impl19125);
             	    rule__Enum_type__Group_4__0();
 
             	    state._fsp--;
@@ -27828,16 +27848,16 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Enum_type__Group__5"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9350:1: rule__Enum_type__Group__5 : rule__Enum_type__Group__5__Impl ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9346:1: rule__Enum_type__Group__5 : rule__Enum_type__Group__5__Impl ;
     public final void rule__Enum_type__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9354:1: ( rule__Enum_type__Group__5__Impl )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9355:2: rule__Enum_type__Group__5__Impl
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9350:1: ( rule__Enum_type__Group__5__Impl )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9351:2: rule__Enum_type__Group__5__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Enum_type__Group__5__Impl_in_rule__Enum_type__Group__519160);
+            pushFollow(FollowSets000.FOLLOW_rule__Enum_type__Group__5__Impl_in_rule__Enum_type__Group__519156);
             rule__Enum_type__Group__5__Impl();
 
             state._fsp--;
@@ -27861,22 +27881,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Enum_type__Group__5__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9361:1: rule__Enum_type__Group__5__Impl : ( '}' ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9357:1: rule__Enum_type__Group__5__Impl : ( '}' ) ;
     public final void rule__Enum_type__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9365:1: ( ( '}' ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9366:1: ( '}' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9361:1: ( ( '}' ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9362:1: ( '}' )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9366:1: ( '}' )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9367:1: '}'
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9362:1: ( '}' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9363:1: '}'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getEnum_typeAccess().getRightCurlyBracketKeyword_5()); 
             }
-            match(input,46,FollowSets000.FOLLOW_46_in_rule__Enum_type__Group__5__Impl19188); if (state.failed) return ;
+            match(input,46,FollowSets000.FOLLOW_46_in_rule__Enum_type__Group__5__Impl19184); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getEnum_typeAccess().getRightCurlyBracketKeyword_5()); 
             }
@@ -27902,21 +27922,21 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Enum_type__Group_4__0"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9392:1: rule__Enum_type__Group_4__0 : rule__Enum_type__Group_4__0__Impl rule__Enum_type__Group_4__1 ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9388:1: rule__Enum_type__Group_4__0 : rule__Enum_type__Group_4__0__Impl rule__Enum_type__Group_4__1 ;
     public final void rule__Enum_type__Group_4__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9396:1: ( rule__Enum_type__Group_4__0__Impl rule__Enum_type__Group_4__1 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9397:2: rule__Enum_type__Group_4__0__Impl rule__Enum_type__Group_4__1
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9392:1: ( rule__Enum_type__Group_4__0__Impl rule__Enum_type__Group_4__1 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9393:2: rule__Enum_type__Group_4__0__Impl rule__Enum_type__Group_4__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Enum_type__Group_4__0__Impl_in_rule__Enum_type__Group_4__019231);
+            pushFollow(FollowSets000.FOLLOW_rule__Enum_type__Group_4__0__Impl_in_rule__Enum_type__Group_4__019227);
             rule__Enum_type__Group_4__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__Enum_type__Group_4__1_in_rule__Enum_type__Group_4__019234);
+            pushFollow(FollowSets000.FOLLOW_rule__Enum_type__Group_4__1_in_rule__Enum_type__Group_4__019230);
             rule__Enum_type__Group_4__1();
 
             state._fsp--;
@@ -27940,22 +27960,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Enum_type__Group_4__0__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9404:1: rule__Enum_type__Group_4__0__Impl : ( ',' ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9400:1: rule__Enum_type__Group_4__0__Impl : ( ',' ) ;
     public final void rule__Enum_type__Group_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9408:1: ( ( ',' ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9409:1: ( ',' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9404:1: ( ( ',' ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9405:1: ( ',' )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9409:1: ( ',' )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9410:1: ','
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9405:1: ( ',' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9406:1: ','
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getEnum_typeAccess().getCommaKeyword_4_0()); 
             }
-            match(input,49,FollowSets000.FOLLOW_49_in_rule__Enum_type__Group_4__0__Impl19262); if (state.failed) return ;
+            match(input,49,FollowSets000.FOLLOW_49_in_rule__Enum_type__Group_4__0__Impl19258); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getEnum_typeAccess().getCommaKeyword_4_0()); 
             }
@@ -27981,16 +28001,16 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Enum_type__Group_4__1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9423:1: rule__Enum_type__Group_4__1 : rule__Enum_type__Group_4__1__Impl ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9419:1: rule__Enum_type__Group_4__1 : rule__Enum_type__Group_4__1__Impl ;
     public final void rule__Enum_type__Group_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9427:1: ( rule__Enum_type__Group_4__1__Impl )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9428:2: rule__Enum_type__Group_4__1__Impl
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9423:1: ( rule__Enum_type__Group_4__1__Impl )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9424:2: rule__Enum_type__Group_4__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Enum_type__Group_4__1__Impl_in_rule__Enum_type__Group_4__119293);
+            pushFollow(FollowSets000.FOLLOW_rule__Enum_type__Group_4__1__Impl_in_rule__Enum_type__Group_4__119289);
             rule__Enum_type__Group_4__1__Impl();
 
             state._fsp--;
@@ -28014,25 +28034,25 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Enum_type__Group_4__1__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9434:1: rule__Enum_type__Group_4__1__Impl : ( ( rule__Enum_type__MembersAssignment_4_1 ) ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9430:1: rule__Enum_type__Group_4__1__Impl : ( ( rule__Enum_type__MembersAssignment_4_1 ) ) ;
     public final void rule__Enum_type__Group_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9438:1: ( ( ( rule__Enum_type__MembersAssignment_4_1 ) ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9439:1: ( ( rule__Enum_type__MembersAssignment_4_1 ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9434:1: ( ( ( rule__Enum_type__MembersAssignment_4_1 ) ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9435:1: ( ( rule__Enum_type__MembersAssignment_4_1 ) )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9439:1: ( ( rule__Enum_type__MembersAssignment_4_1 ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9440:1: ( rule__Enum_type__MembersAssignment_4_1 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9435:1: ( ( rule__Enum_type__MembersAssignment_4_1 ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9436:1: ( rule__Enum_type__MembersAssignment_4_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getEnum_typeAccess().getMembersAssignment_4_1()); 
             }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9441:1: ( rule__Enum_type__MembersAssignment_4_1 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9441:2: rule__Enum_type__MembersAssignment_4_1
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9437:1: ( rule__Enum_type__MembersAssignment_4_1 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9437:2: rule__Enum_type__MembersAssignment_4_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Enum_type__MembersAssignment_4_1_in_rule__Enum_type__Group_4__1__Impl19320);
+            pushFollow(FollowSets000.FOLLOW_rule__Enum_type__MembersAssignment_4_1_in_rule__Enum_type__Group_4__1__Impl19316);
             rule__Enum_type__MembersAssignment_4_1();
 
             state._fsp--;
@@ -28065,21 +28085,21 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Constr_forward_decl__Group_0__0"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9455:1: rule__Constr_forward_decl__Group_0__0 : rule__Constr_forward_decl__Group_0__0__Impl rule__Constr_forward_decl__Group_0__1 ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9451:1: rule__Constr_forward_decl__Group_0__0 : rule__Constr_forward_decl__Group_0__0__Impl rule__Constr_forward_decl__Group_0__1 ;
     public final void rule__Constr_forward_decl__Group_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9459:1: ( rule__Constr_forward_decl__Group_0__0__Impl rule__Constr_forward_decl__Group_0__1 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9460:2: rule__Constr_forward_decl__Group_0__0__Impl rule__Constr_forward_decl__Group_0__1
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9455:1: ( rule__Constr_forward_decl__Group_0__0__Impl rule__Constr_forward_decl__Group_0__1 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9456:2: rule__Constr_forward_decl__Group_0__0__Impl rule__Constr_forward_decl__Group_0__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Constr_forward_decl__Group_0__0__Impl_in_rule__Constr_forward_decl__Group_0__019354);
+            pushFollow(FollowSets000.FOLLOW_rule__Constr_forward_decl__Group_0__0__Impl_in_rule__Constr_forward_decl__Group_0__019350);
             rule__Constr_forward_decl__Group_0__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__Constr_forward_decl__Group_0__1_in_rule__Constr_forward_decl__Group_0__019357);
+            pushFollow(FollowSets000.FOLLOW_rule__Constr_forward_decl__Group_0__1_in_rule__Constr_forward_decl__Group_0__019353);
             rule__Constr_forward_decl__Group_0__1();
 
             state._fsp--;
@@ -28103,22 +28123,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Constr_forward_decl__Group_0__0__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9467:1: rule__Constr_forward_decl__Group_0__0__Impl : ( 'struct' ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9463:1: rule__Constr_forward_decl__Group_0__0__Impl : ( 'struct' ) ;
     public final void rule__Constr_forward_decl__Group_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9471:1: ( ( 'struct' ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9472:1: ( 'struct' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9467:1: ( ( 'struct' ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9468:1: ( 'struct' )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9472:1: ( 'struct' )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9473:1: 'struct'
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9468:1: ( 'struct' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9469:1: 'struct'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getConstr_forward_declAccess().getStructKeyword_0_0()); 
             }
-            match(input,62,FollowSets000.FOLLOW_62_in_rule__Constr_forward_decl__Group_0__0__Impl19385); if (state.failed) return ;
+            match(input,62,FollowSets000.FOLLOW_62_in_rule__Constr_forward_decl__Group_0__0__Impl19381); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getConstr_forward_declAccess().getStructKeyword_0_0()); 
             }
@@ -28144,16 +28164,16 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Constr_forward_decl__Group_0__1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9486:1: rule__Constr_forward_decl__Group_0__1 : rule__Constr_forward_decl__Group_0__1__Impl ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9482:1: rule__Constr_forward_decl__Group_0__1 : rule__Constr_forward_decl__Group_0__1__Impl ;
     public final void rule__Constr_forward_decl__Group_0__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9490:1: ( rule__Constr_forward_decl__Group_0__1__Impl )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9491:2: rule__Constr_forward_decl__Group_0__1__Impl
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9486:1: ( rule__Constr_forward_decl__Group_0__1__Impl )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9487:2: rule__Constr_forward_decl__Group_0__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Constr_forward_decl__Group_0__1__Impl_in_rule__Constr_forward_decl__Group_0__119416);
+            pushFollow(FollowSets000.FOLLOW_rule__Constr_forward_decl__Group_0__1__Impl_in_rule__Constr_forward_decl__Group_0__119412);
             rule__Constr_forward_decl__Group_0__1__Impl();
 
             state._fsp--;
@@ -28177,22 +28197,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Constr_forward_decl__Group_0__1__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9497:1: rule__Constr_forward_decl__Group_0__1__Impl : ( RULE_ID ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9493:1: rule__Constr_forward_decl__Group_0__1__Impl : ( RULE_ID ) ;
     public final void rule__Constr_forward_decl__Group_0__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9501:1: ( ( RULE_ID ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9502:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9497:1: ( ( RULE_ID ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9498:1: ( RULE_ID )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9502:1: ( RULE_ID )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9503:1: RULE_ID
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9498:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9499:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getConstr_forward_declAccess().getIDTerminalRuleCall_0_1()); 
             }
-            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__Constr_forward_decl__Group_0__1__Impl19443); if (state.failed) return ;
+            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__Constr_forward_decl__Group_0__1__Impl19439); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getConstr_forward_declAccess().getIDTerminalRuleCall_0_1()); 
             }
@@ -28218,21 +28238,21 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Constr_forward_decl__Group_1__0"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9518:1: rule__Constr_forward_decl__Group_1__0 : rule__Constr_forward_decl__Group_1__0__Impl rule__Constr_forward_decl__Group_1__1 ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9514:1: rule__Constr_forward_decl__Group_1__0 : rule__Constr_forward_decl__Group_1__0__Impl rule__Constr_forward_decl__Group_1__1 ;
     public final void rule__Constr_forward_decl__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9522:1: ( rule__Constr_forward_decl__Group_1__0__Impl rule__Constr_forward_decl__Group_1__1 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9523:2: rule__Constr_forward_decl__Group_1__0__Impl rule__Constr_forward_decl__Group_1__1
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9518:1: ( rule__Constr_forward_decl__Group_1__0__Impl rule__Constr_forward_decl__Group_1__1 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9519:2: rule__Constr_forward_decl__Group_1__0__Impl rule__Constr_forward_decl__Group_1__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Constr_forward_decl__Group_1__0__Impl_in_rule__Constr_forward_decl__Group_1__019476);
+            pushFollow(FollowSets000.FOLLOW_rule__Constr_forward_decl__Group_1__0__Impl_in_rule__Constr_forward_decl__Group_1__019472);
             rule__Constr_forward_decl__Group_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__Constr_forward_decl__Group_1__1_in_rule__Constr_forward_decl__Group_1__019479);
+            pushFollow(FollowSets000.FOLLOW_rule__Constr_forward_decl__Group_1__1_in_rule__Constr_forward_decl__Group_1__019475);
             rule__Constr_forward_decl__Group_1__1();
 
             state._fsp--;
@@ -28256,22 +28276,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Constr_forward_decl__Group_1__0__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9530:1: rule__Constr_forward_decl__Group_1__0__Impl : ( 'union' ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9526:1: rule__Constr_forward_decl__Group_1__0__Impl : ( 'union' ) ;
     public final void rule__Constr_forward_decl__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9534:1: ( ( 'union' ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9535:1: ( 'union' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9530:1: ( ( 'union' ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9531:1: ( 'union' )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9535:1: ( 'union' )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9536:1: 'union'
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9531:1: ( 'union' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9532:1: 'union'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getConstr_forward_declAccess().getUnionKeyword_1_0()); 
             }
-            match(input,63,FollowSets000.FOLLOW_63_in_rule__Constr_forward_decl__Group_1__0__Impl19507); if (state.failed) return ;
+            match(input,63,FollowSets000.FOLLOW_63_in_rule__Constr_forward_decl__Group_1__0__Impl19503); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getConstr_forward_declAccess().getUnionKeyword_1_0()); 
             }
@@ -28297,16 +28317,16 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Constr_forward_decl__Group_1__1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9549:1: rule__Constr_forward_decl__Group_1__1 : rule__Constr_forward_decl__Group_1__1__Impl ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9545:1: rule__Constr_forward_decl__Group_1__1 : rule__Constr_forward_decl__Group_1__1__Impl ;
     public final void rule__Constr_forward_decl__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9553:1: ( rule__Constr_forward_decl__Group_1__1__Impl )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9554:2: rule__Constr_forward_decl__Group_1__1__Impl
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9549:1: ( rule__Constr_forward_decl__Group_1__1__Impl )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9550:2: rule__Constr_forward_decl__Group_1__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Constr_forward_decl__Group_1__1__Impl_in_rule__Constr_forward_decl__Group_1__119538);
+            pushFollow(FollowSets000.FOLLOW_rule__Constr_forward_decl__Group_1__1__Impl_in_rule__Constr_forward_decl__Group_1__119534);
             rule__Constr_forward_decl__Group_1__1__Impl();
 
             state._fsp--;
@@ -28330,22 +28350,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Constr_forward_decl__Group_1__1__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9560:1: rule__Constr_forward_decl__Group_1__1__Impl : ( RULE_ID ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9556:1: rule__Constr_forward_decl__Group_1__1__Impl : ( RULE_ID ) ;
     public final void rule__Constr_forward_decl__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9564:1: ( ( RULE_ID ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9565:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9560:1: ( ( RULE_ID ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9561:1: ( RULE_ID )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9565:1: ( RULE_ID )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9566:1: RULE_ID
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9561:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9562:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getConstr_forward_declAccess().getIDTerminalRuleCall_1_1()); 
             }
-            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__Constr_forward_decl__Group_1__1__Impl19565); if (state.failed) return ;
+            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__Constr_forward_decl__Group_1__1__Impl19561); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getConstr_forward_declAccess().getIDTerminalRuleCall_1_1()); 
             }
@@ -28371,21 +28391,21 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Const_decl__Group__0"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9581:1: rule__Const_decl__Group__0 : rule__Const_decl__Group__0__Impl rule__Const_decl__Group__1 ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9577:1: rule__Const_decl__Group__0 : rule__Const_decl__Group__0__Impl rule__Const_decl__Group__1 ;
     public final void rule__Const_decl__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9585:1: ( rule__Const_decl__Group__0__Impl rule__Const_decl__Group__1 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9586:2: rule__Const_decl__Group__0__Impl rule__Const_decl__Group__1
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9581:1: ( rule__Const_decl__Group__0__Impl rule__Const_decl__Group__1 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9582:2: rule__Const_decl__Group__0__Impl rule__Const_decl__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Const_decl__Group__0__Impl_in_rule__Const_decl__Group__019598);
+            pushFollow(FollowSets000.FOLLOW_rule__Const_decl__Group__0__Impl_in_rule__Const_decl__Group__019594);
             rule__Const_decl__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__Const_decl__Group__1_in_rule__Const_decl__Group__019601);
+            pushFollow(FollowSets000.FOLLOW_rule__Const_decl__Group__1_in_rule__Const_decl__Group__019597);
             rule__Const_decl__Group__1();
 
             state._fsp--;
@@ -28409,22 +28429,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Const_decl__Group__0__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9593:1: rule__Const_decl__Group__0__Impl : ( 'const' ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9589:1: rule__Const_decl__Group__0__Impl : ( 'const' ) ;
     public final void rule__Const_decl__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9597:1: ( ( 'const' ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9598:1: ( 'const' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9593:1: ( ( 'const' ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9594:1: ( 'const' )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9598:1: ( 'const' )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9599:1: 'const'
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9594:1: ( 'const' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9595:1: 'const'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getConst_declAccess().getConstKeyword_0()); 
             }
-            match(input,68,FollowSets000.FOLLOW_68_in_rule__Const_decl__Group__0__Impl19629); if (state.failed) return ;
+            match(input,67,FollowSets000.FOLLOW_67_in_rule__Const_decl__Group__0__Impl19625); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getConst_declAccess().getConstKeyword_0()); 
             }
@@ -28450,21 +28470,21 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Const_decl__Group__1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9612:1: rule__Const_decl__Group__1 : rule__Const_decl__Group__1__Impl rule__Const_decl__Group__2 ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9608:1: rule__Const_decl__Group__1 : rule__Const_decl__Group__1__Impl rule__Const_decl__Group__2 ;
     public final void rule__Const_decl__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9616:1: ( rule__Const_decl__Group__1__Impl rule__Const_decl__Group__2 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9617:2: rule__Const_decl__Group__1__Impl rule__Const_decl__Group__2
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9612:1: ( rule__Const_decl__Group__1__Impl rule__Const_decl__Group__2 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9613:2: rule__Const_decl__Group__1__Impl rule__Const_decl__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Const_decl__Group__1__Impl_in_rule__Const_decl__Group__119660);
+            pushFollow(FollowSets000.FOLLOW_rule__Const_decl__Group__1__Impl_in_rule__Const_decl__Group__119656);
             rule__Const_decl__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__Const_decl__Group__2_in_rule__Const_decl__Group__119663);
+            pushFollow(FollowSets000.FOLLOW_rule__Const_decl__Group__2_in_rule__Const_decl__Group__119659);
             rule__Const_decl__Group__2();
 
             state._fsp--;
@@ -28488,25 +28508,25 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Const_decl__Group__1__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9624:1: rule__Const_decl__Group__1__Impl : ( ( rule__Const_decl__Alternatives_1 ) ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9620:1: rule__Const_decl__Group__1__Impl : ( ( rule__Const_decl__Alternatives_1 ) ) ;
     public final void rule__Const_decl__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9628:1: ( ( ( rule__Const_decl__Alternatives_1 ) ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9629:1: ( ( rule__Const_decl__Alternatives_1 ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9624:1: ( ( ( rule__Const_decl__Alternatives_1 ) ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9625:1: ( ( rule__Const_decl__Alternatives_1 ) )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9629:1: ( ( rule__Const_decl__Alternatives_1 ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9630:1: ( rule__Const_decl__Alternatives_1 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9625:1: ( ( rule__Const_decl__Alternatives_1 ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9626:1: ( rule__Const_decl__Alternatives_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getConst_declAccess().getAlternatives_1()); 
             }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9631:1: ( rule__Const_decl__Alternatives_1 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9631:2: rule__Const_decl__Alternatives_1
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9627:1: ( rule__Const_decl__Alternatives_1 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9627:2: rule__Const_decl__Alternatives_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Const_decl__Alternatives_1_in_rule__Const_decl__Group__1__Impl19690);
+            pushFollow(FollowSets000.FOLLOW_rule__Const_decl__Alternatives_1_in_rule__Const_decl__Group__1__Impl19686);
             rule__Const_decl__Alternatives_1();
 
             state._fsp--;
@@ -28539,21 +28559,21 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Const_decl__Group__2"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9641:1: rule__Const_decl__Group__2 : rule__Const_decl__Group__2__Impl rule__Const_decl__Group__3 ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9637:1: rule__Const_decl__Group__2 : rule__Const_decl__Group__2__Impl rule__Const_decl__Group__3 ;
     public final void rule__Const_decl__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9645:1: ( rule__Const_decl__Group__2__Impl rule__Const_decl__Group__3 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9646:2: rule__Const_decl__Group__2__Impl rule__Const_decl__Group__3
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9641:1: ( rule__Const_decl__Group__2__Impl rule__Const_decl__Group__3 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9642:2: rule__Const_decl__Group__2__Impl rule__Const_decl__Group__3
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Const_decl__Group__2__Impl_in_rule__Const_decl__Group__219720);
+            pushFollow(FollowSets000.FOLLOW_rule__Const_decl__Group__2__Impl_in_rule__Const_decl__Group__219716);
             rule__Const_decl__Group__2__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__Const_decl__Group__3_in_rule__Const_decl__Group__219723);
+            pushFollow(FollowSets000.FOLLOW_rule__Const_decl__Group__3_in_rule__Const_decl__Group__219719);
             rule__Const_decl__Group__3();
 
             state._fsp--;
@@ -28577,25 +28597,25 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Const_decl__Group__2__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9653:1: rule__Const_decl__Group__2__Impl : ( ( rule__Const_decl__IdentifierAssignment_2 ) ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9649:1: rule__Const_decl__Group__2__Impl : ( ( rule__Const_decl__IdentifierAssignment_2 ) ) ;
     public final void rule__Const_decl__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9657:1: ( ( ( rule__Const_decl__IdentifierAssignment_2 ) ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9658:1: ( ( rule__Const_decl__IdentifierAssignment_2 ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9653:1: ( ( ( rule__Const_decl__IdentifierAssignment_2 ) ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9654:1: ( ( rule__Const_decl__IdentifierAssignment_2 ) )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9658:1: ( ( rule__Const_decl__IdentifierAssignment_2 ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9659:1: ( rule__Const_decl__IdentifierAssignment_2 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9654:1: ( ( rule__Const_decl__IdentifierAssignment_2 ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9655:1: ( rule__Const_decl__IdentifierAssignment_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getConst_declAccess().getIdentifierAssignment_2()); 
             }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9660:1: ( rule__Const_decl__IdentifierAssignment_2 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9660:2: rule__Const_decl__IdentifierAssignment_2
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9656:1: ( rule__Const_decl__IdentifierAssignment_2 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9656:2: rule__Const_decl__IdentifierAssignment_2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Const_decl__IdentifierAssignment_2_in_rule__Const_decl__Group__2__Impl19750);
+            pushFollow(FollowSets000.FOLLOW_rule__Const_decl__IdentifierAssignment_2_in_rule__Const_decl__Group__2__Impl19746);
             rule__Const_decl__IdentifierAssignment_2();
 
             state._fsp--;
@@ -28628,21 +28648,21 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Const_decl__Group__3"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9670:1: rule__Const_decl__Group__3 : rule__Const_decl__Group__3__Impl rule__Const_decl__Group__4 ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9666:1: rule__Const_decl__Group__3 : rule__Const_decl__Group__3__Impl rule__Const_decl__Group__4 ;
     public final void rule__Const_decl__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9674:1: ( rule__Const_decl__Group__3__Impl rule__Const_decl__Group__4 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9675:2: rule__Const_decl__Group__3__Impl rule__Const_decl__Group__4
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9670:1: ( rule__Const_decl__Group__3__Impl rule__Const_decl__Group__4 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9671:2: rule__Const_decl__Group__3__Impl rule__Const_decl__Group__4
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Const_decl__Group__3__Impl_in_rule__Const_decl__Group__319780);
+            pushFollow(FollowSets000.FOLLOW_rule__Const_decl__Group__3__Impl_in_rule__Const_decl__Group__319776);
             rule__Const_decl__Group__3__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__Const_decl__Group__4_in_rule__Const_decl__Group__319783);
+            pushFollow(FollowSets000.FOLLOW_rule__Const_decl__Group__4_in_rule__Const_decl__Group__319779);
             rule__Const_decl__Group__4();
 
             state._fsp--;
@@ -28666,22 +28686,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Const_decl__Group__3__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9682:1: rule__Const_decl__Group__3__Impl : ( '=' ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9678:1: rule__Const_decl__Group__3__Impl : ( '=' ) ;
     public final void rule__Const_decl__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9686:1: ( ( '=' ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9687:1: ( '=' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9682:1: ( ( '=' ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9683:1: ( '=' )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9687:1: ( '=' )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9688:1: '='
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9683:1: ( '=' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9684:1: '='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getConst_declAccess().getEqualsSignKeyword_3()); 
             }
-            match(input,69,FollowSets000.FOLLOW_69_in_rule__Const_decl__Group__3__Impl19811); if (state.failed) return ;
+            match(input,68,FollowSets000.FOLLOW_68_in_rule__Const_decl__Group__3__Impl19807); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getConst_declAccess().getEqualsSignKeyword_3()); 
             }
@@ -28707,16 +28727,16 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Const_decl__Group__4"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9701:1: rule__Const_decl__Group__4 : rule__Const_decl__Group__4__Impl ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9697:1: rule__Const_decl__Group__4 : rule__Const_decl__Group__4__Impl ;
     public final void rule__Const_decl__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9705:1: ( rule__Const_decl__Group__4__Impl )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9706:2: rule__Const_decl__Group__4__Impl
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9701:1: ( rule__Const_decl__Group__4__Impl )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9702:2: rule__Const_decl__Group__4__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Const_decl__Group__4__Impl_in_rule__Const_decl__Group__419842);
+            pushFollow(FollowSets000.FOLLOW_rule__Const_decl__Group__4__Impl_in_rule__Const_decl__Group__419838);
             rule__Const_decl__Group__4__Impl();
 
             state._fsp--;
@@ -28740,25 +28760,25 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Const_decl__Group__4__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9712:1: rule__Const_decl__Group__4__Impl : ( ( rule__Const_decl__ConstValueAssignment_4 ) ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9708:1: rule__Const_decl__Group__4__Impl : ( ( rule__Const_decl__ConstValueAssignment_4 ) ) ;
     public final void rule__Const_decl__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9716:1: ( ( ( rule__Const_decl__ConstValueAssignment_4 ) ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9717:1: ( ( rule__Const_decl__ConstValueAssignment_4 ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9712:1: ( ( ( rule__Const_decl__ConstValueAssignment_4 ) ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9713:1: ( ( rule__Const_decl__ConstValueAssignment_4 ) )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9717:1: ( ( rule__Const_decl__ConstValueAssignment_4 ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9718:1: ( rule__Const_decl__ConstValueAssignment_4 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9713:1: ( ( rule__Const_decl__ConstValueAssignment_4 ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9714:1: ( rule__Const_decl__ConstValueAssignment_4 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getConst_declAccess().getConstValueAssignment_4()); 
             }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9719:1: ( rule__Const_decl__ConstValueAssignment_4 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9719:2: rule__Const_decl__ConstValueAssignment_4
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9715:1: ( rule__Const_decl__ConstValueAssignment_4 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9715:2: rule__Const_decl__ConstValueAssignment_4
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Const_decl__ConstValueAssignment_4_in_rule__Const_decl__Group__4__Impl19869);
+            pushFollow(FollowSets000.FOLLOW_rule__Const_decl__ConstValueAssignment_4_in_rule__Const_decl__Group__4__Impl19865);
             rule__Const_decl__ConstValueAssignment_4();
 
             state._fsp--;
@@ -28791,21 +28811,21 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Sequence_type__Group__0"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9739:1: rule__Sequence_type__Group__0 : rule__Sequence_type__Group__0__Impl rule__Sequence_type__Group__1 ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9735:1: rule__Sequence_type__Group__0 : rule__Sequence_type__Group__0__Impl rule__Sequence_type__Group__1 ;
     public final void rule__Sequence_type__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9743:1: ( rule__Sequence_type__Group__0__Impl rule__Sequence_type__Group__1 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9744:2: rule__Sequence_type__Group__0__Impl rule__Sequence_type__Group__1
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9739:1: ( rule__Sequence_type__Group__0__Impl rule__Sequence_type__Group__1 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9740:2: rule__Sequence_type__Group__0__Impl rule__Sequence_type__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Sequence_type__Group__0__Impl_in_rule__Sequence_type__Group__019909);
+            pushFollow(FollowSets000.FOLLOW_rule__Sequence_type__Group__0__Impl_in_rule__Sequence_type__Group__019905);
             rule__Sequence_type__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__Sequence_type__Group__1_in_rule__Sequence_type__Group__019912);
+            pushFollow(FollowSets000.FOLLOW_rule__Sequence_type__Group__1_in_rule__Sequence_type__Group__019908);
             rule__Sequence_type__Group__1();
 
             state._fsp--;
@@ -28829,22 +28849,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Sequence_type__Group__0__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9751:1: rule__Sequence_type__Group__0__Impl : ( 'sequence' ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9747:1: rule__Sequence_type__Group__0__Impl : ( 'sequence' ) ;
     public final void rule__Sequence_type__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9755:1: ( ( 'sequence' ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9756:1: ( 'sequence' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9751:1: ( ( 'sequence' ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9752:1: ( 'sequence' )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9756:1: ( 'sequence' )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9757:1: 'sequence'
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9752:1: ( 'sequence' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9753:1: 'sequence'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSequence_typeAccess().getSequenceKeyword_0()); 
             }
-            match(input,70,FollowSets000.FOLLOW_70_in_rule__Sequence_type__Group__0__Impl19940); if (state.failed) return ;
+            match(input,69,FollowSets000.FOLLOW_69_in_rule__Sequence_type__Group__0__Impl19936); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getSequence_typeAccess().getSequenceKeyword_0()); 
             }
@@ -28870,21 +28890,21 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Sequence_type__Group__1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9770:1: rule__Sequence_type__Group__1 : rule__Sequence_type__Group__1__Impl rule__Sequence_type__Group__2 ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9766:1: rule__Sequence_type__Group__1 : rule__Sequence_type__Group__1__Impl rule__Sequence_type__Group__2 ;
     public final void rule__Sequence_type__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9774:1: ( rule__Sequence_type__Group__1__Impl rule__Sequence_type__Group__2 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9775:2: rule__Sequence_type__Group__1__Impl rule__Sequence_type__Group__2
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9770:1: ( rule__Sequence_type__Group__1__Impl rule__Sequence_type__Group__2 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9771:2: rule__Sequence_type__Group__1__Impl rule__Sequence_type__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Sequence_type__Group__1__Impl_in_rule__Sequence_type__Group__119971);
+            pushFollow(FollowSets000.FOLLOW_rule__Sequence_type__Group__1__Impl_in_rule__Sequence_type__Group__119967);
             rule__Sequence_type__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__Sequence_type__Group__2_in_rule__Sequence_type__Group__119974);
+            pushFollow(FollowSets000.FOLLOW_rule__Sequence_type__Group__2_in_rule__Sequence_type__Group__119970);
             rule__Sequence_type__Group__2();
 
             state._fsp--;
@@ -28908,22 +28928,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Sequence_type__Group__1__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9782:1: rule__Sequence_type__Group__1__Impl : ( '<' ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9778:1: rule__Sequence_type__Group__1__Impl : ( '<' ) ;
     public final void rule__Sequence_type__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9786:1: ( ( '<' ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9787:1: ( '<' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9782:1: ( ( '<' ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9783:1: ( '<' )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9787:1: ( '<' )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9788:1: '<'
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9783:1: ( '<' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9784:1: '<'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSequence_typeAccess().getLessThanSignKeyword_1()); 
             }
-            match(input,71,FollowSets000.FOLLOW_71_in_rule__Sequence_type__Group__1__Impl20002); if (state.failed) return ;
+            match(input,70,FollowSets000.FOLLOW_70_in_rule__Sequence_type__Group__1__Impl19998); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getSequence_typeAccess().getLessThanSignKeyword_1()); 
             }
@@ -28949,21 +28969,21 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Sequence_type__Group__2"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9801:1: rule__Sequence_type__Group__2 : rule__Sequence_type__Group__2__Impl rule__Sequence_type__Group__3 ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9797:1: rule__Sequence_type__Group__2 : rule__Sequence_type__Group__2__Impl rule__Sequence_type__Group__3 ;
     public final void rule__Sequence_type__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9805:1: ( rule__Sequence_type__Group__2__Impl rule__Sequence_type__Group__3 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9806:2: rule__Sequence_type__Group__2__Impl rule__Sequence_type__Group__3
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9801:1: ( rule__Sequence_type__Group__2__Impl rule__Sequence_type__Group__3 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9802:2: rule__Sequence_type__Group__2__Impl rule__Sequence_type__Group__3
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Sequence_type__Group__2__Impl_in_rule__Sequence_type__Group__220033);
+            pushFollow(FollowSets000.FOLLOW_rule__Sequence_type__Group__2__Impl_in_rule__Sequence_type__Group__220029);
             rule__Sequence_type__Group__2__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__Sequence_type__Group__3_in_rule__Sequence_type__Group__220036);
+            pushFollow(FollowSets000.FOLLOW_rule__Sequence_type__Group__3_in_rule__Sequence_type__Group__220032);
             rule__Sequence_type__Group__3();
 
             state._fsp--;
@@ -28987,25 +29007,25 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Sequence_type__Group__2__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9813:1: rule__Sequence_type__Group__2__Impl : ( ( rule__Sequence_type__Alternatives_2 ) ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9809:1: rule__Sequence_type__Group__2__Impl : ( ( rule__Sequence_type__Alternatives_2 ) ) ;
     public final void rule__Sequence_type__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9817:1: ( ( ( rule__Sequence_type__Alternatives_2 ) ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9818:1: ( ( rule__Sequence_type__Alternatives_2 ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9813:1: ( ( ( rule__Sequence_type__Alternatives_2 ) ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9814:1: ( ( rule__Sequence_type__Alternatives_2 ) )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9818:1: ( ( rule__Sequence_type__Alternatives_2 ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9819:1: ( rule__Sequence_type__Alternatives_2 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9814:1: ( ( rule__Sequence_type__Alternatives_2 ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9815:1: ( rule__Sequence_type__Alternatives_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSequence_typeAccess().getAlternatives_2()); 
             }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9820:1: ( rule__Sequence_type__Alternatives_2 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9820:2: rule__Sequence_type__Alternatives_2
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9816:1: ( rule__Sequence_type__Alternatives_2 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9816:2: rule__Sequence_type__Alternatives_2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Sequence_type__Alternatives_2_in_rule__Sequence_type__Group__2__Impl20063);
+            pushFollow(FollowSets000.FOLLOW_rule__Sequence_type__Alternatives_2_in_rule__Sequence_type__Group__2__Impl20059);
             rule__Sequence_type__Alternatives_2();
 
             state._fsp--;
@@ -29038,21 +29058,21 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Sequence_type__Group__3"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9830:1: rule__Sequence_type__Group__3 : rule__Sequence_type__Group__3__Impl rule__Sequence_type__Group__4 ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9826:1: rule__Sequence_type__Group__3 : rule__Sequence_type__Group__3__Impl rule__Sequence_type__Group__4 ;
     public final void rule__Sequence_type__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9834:1: ( rule__Sequence_type__Group__3__Impl rule__Sequence_type__Group__4 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9835:2: rule__Sequence_type__Group__3__Impl rule__Sequence_type__Group__4
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9830:1: ( rule__Sequence_type__Group__3__Impl rule__Sequence_type__Group__4 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9831:2: rule__Sequence_type__Group__3__Impl rule__Sequence_type__Group__4
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Sequence_type__Group__3__Impl_in_rule__Sequence_type__Group__320093);
+            pushFollow(FollowSets000.FOLLOW_rule__Sequence_type__Group__3__Impl_in_rule__Sequence_type__Group__320089);
             rule__Sequence_type__Group__3__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__Sequence_type__Group__4_in_rule__Sequence_type__Group__320096);
+            pushFollow(FollowSets000.FOLLOW_rule__Sequence_type__Group__4_in_rule__Sequence_type__Group__320092);
             rule__Sequence_type__Group__4();
 
             state._fsp--;
@@ -29076,22 +29096,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Sequence_type__Group__3__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9842:1: rule__Sequence_type__Group__3__Impl : ( ( rule__Sequence_type__Group_3__0 )? ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9838:1: rule__Sequence_type__Group__3__Impl : ( ( rule__Sequence_type__Group_3__0 )? ) ;
     public final void rule__Sequence_type__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9846:1: ( ( ( rule__Sequence_type__Group_3__0 )? ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9847:1: ( ( rule__Sequence_type__Group_3__0 )? )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9842:1: ( ( ( rule__Sequence_type__Group_3__0 )? ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9843:1: ( ( rule__Sequence_type__Group_3__0 )? )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9847:1: ( ( rule__Sequence_type__Group_3__0 )? )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9848:1: ( rule__Sequence_type__Group_3__0 )?
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9843:1: ( ( rule__Sequence_type__Group_3__0 )? )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9844:1: ( rule__Sequence_type__Group_3__0 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSequence_typeAccess().getGroup_3()); 
             }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9849:1: ( rule__Sequence_type__Group_3__0 )?
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9845:1: ( rule__Sequence_type__Group_3__0 )?
             int alt76=2;
             int LA76_0 = input.LA(1);
 
@@ -29100,9 +29120,9 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
             }
             switch (alt76) {
                 case 1 :
-                    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9849:2: rule__Sequence_type__Group_3__0
+                    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9845:2: rule__Sequence_type__Group_3__0
                     {
-                    pushFollow(FollowSets000.FOLLOW_rule__Sequence_type__Group_3__0_in_rule__Sequence_type__Group__3__Impl20123);
+                    pushFollow(FollowSets000.FOLLOW_rule__Sequence_type__Group_3__0_in_rule__Sequence_type__Group__3__Impl20119);
                     rule__Sequence_type__Group_3__0();
 
                     state._fsp--;
@@ -29138,16 +29158,16 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Sequence_type__Group__4"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9859:1: rule__Sequence_type__Group__4 : rule__Sequence_type__Group__4__Impl ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9855:1: rule__Sequence_type__Group__4 : rule__Sequence_type__Group__4__Impl ;
     public final void rule__Sequence_type__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9863:1: ( rule__Sequence_type__Group__4__Impl )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9864:2: rule__Sequence_type__Group__4__Impl
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9859:1: ( rule__Sequence_type__Group__4__Impl )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9860:2: rule__Sequence_type__Group__4__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Sequence_type__Group__4__Impl_in_rule__Sequence_type__Group__420154);
+            pushFollow(FollowSets000.FOLLOW_rule__Sequence_type__Group__4__Impl_in_rule__Sequence_type__Group__420150);
             rule__Sequence_type__Group__4__Impl();
 
             state._fsp--;
@@ -29171,22 +29191,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Sequence_type__Group__4__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9870:1: rule__Sequence_type__Group__4__Impl : ( '>' ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9866:1: rule__Sequence_type__Group__4__Impl : ( '>' ) ;
     public final void rule__Sequence_type__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9874:1: ( ( '>' ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9875:1: ( '>' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9870:1: ( ( '>' ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9871:1: ( '>' )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9875:1: ( '>' )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9876:1: '>'
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9871:1: ( '>' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9872:1: '>'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSequence_typeAccess().getGreaterThanSignKeyword_4()); 
             }
-            match(input,72,FollowSets000.FOLLOW_72_in_rule__Sequence_type__Group__4__Impl20182); if (state.failed) return ;
+            match(input,71,FollowSets000.FOLLOW_71_in_rule__Sequence_type__Group__4__Impl20178); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getSequence_typeAccess().getGreaterThanSignKeyword_4()); 
             }
@@ -29212,21 +29232,21 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Sequence_type__Group_3__0"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9899:1: rule__Sequence_type__Group_3__0 : rule__Sequence_type__Group_3__0__Impl rule__Sequence_type__Group_3__1 ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9895:1: rule__Sequence_type__Group_3__0 : rule__Sequence_type__Group_3__0__Impl rule__Sequence_type__Group_3__1 ;
     public final void rule__Sequence_type__Group_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9903:1: ( rule__Sequence_type__Group_3__0__Impl rule__Sequence_type__Group_3__1 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9904:2: rule__Sequence_type__Group_3__0__Impl rule__Sequence_type__Group_3__1
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9899:1: ( rule__Sequence_type__Group_3__0__Impl rule__Sequence_type__Group_3__1 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9900:2: rule__Sequence_type__Group_3__0__Impl rule__Sequence_type__Group_3__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Sequence_type__Group_3__0__Impl_in_rule__Sequence_type__Group_3__020223);
+            pushFollow(FollowSets000.FOLLOW_rule__Sequence_type__Group_3__0__Impl_in_rule__Sequence_type__Group_3__020219);
             rule__Sequence_type__Group_3__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__Sequence_type__Group_3__1_in_rule__Sequence_type__Group_3__020226);
+            pushFollow(FollowSets000.FOLLOW_rule__Sequence_type__Group_3__1_in_rule__Sequence_type__Group_3__020222);
             rule__Sequence_type__Group_3__1();
 
             state._fsp--;
@@ -29250,22 +29270,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Sequence_type__Group_3__0__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9911:1: rule__Sequence_type__Group_3__0__Impl : ( ',' ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9907:1: rule__Sequence_type__Group_3__0__Impl : ( ',' ) ;
     public final void rule__Sequence_type__Group_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9915:1: ( ( ',' ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9916:1: ( ',' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9911:1: ( ( ',' ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9912:1: ( ',' )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9916:1: ( ',' )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9917:1: ','
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9912:1: ( ',' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9913:1: ','
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSequence_typeAccess().getCommaKeyword_3_0()); 
             }
-            match(input,49,FollowSets000.FOLLOW_49_in_rule__Sequence_type__Group_3__0__Impl20254); if (state.failed) return ;
+            match(input,49,FollowSets000.FOLLOW_49_in_rule__Sequence_type__Group_3__0__Impl20250); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getSequence_typeAccess().getCommaKeyword_3_0()); 
             }
@@ -29291,16 +29311,16 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Sequence_type__Group_3__1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9930:1: rule__Sequence_type__Group_3__1 : rule__Sequence_type__Group_3__1__Impl ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9926:1: rule__Sequence_type__Group_3__1 : rule__Sequence_type__Group_3__1__Impl ;
     public final void rule__Sequence_type__Group_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9934:1: ( rule__Sequence_type__Group_3__1__Impl )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9935:2: rule__Sequence_type__Group_3__1__Impl
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9930:1: ( rule__Sequence_type__Group_3__1__Impl )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9931:2: rule__Sequence_type__Group_3__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Sequence_type__Group_3__1__Impl_in_rule__Sequence_type__Group_3__120285);
+            pushFollow(FollowSets000.FOLLOW_rule__Sequence_type__Group_3__1__Impl_in_rule__Sequence_type__Group_3__120281);
             rule__Sequence_type__Group_3__1__Impl();
 
             state._fsp--;
@@ -29324,25 +29344,25 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Sequence_type__Group_3__1__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9941:1: rule__Sequence_type__Group_3__1__Impl : ( ( rule__Sequence_type__BoundAssignment_3_1 ) ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9937:1: rule__Sequence_type__Group_3__1__Impl : ( ( rule__Sequence_type__BoundAssignment_3_1 ) ) ;
     public final void rule__Sequence_type__Group_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9945:1: ( ( ( rule__Sequence_type__BoundAssignment_3_1 ) ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9946:1: ( ( rule__Sequence_type__BoundAssignment_3_1 ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9941:1: ( ( ( rule__Sequence_type__BoundAssignment_3_1 ) ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9942:1: ( ( rule__Sequence_type__BoundAssignment_3_1 ) )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9946:1: ( ( rule__Sequence_type__BoundAssignment_3_1 ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9947:1: ( rule__Sequence_type__BoundAssignment_3_1 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9942:1: ( ( rule__Sequence_type__BoundAssignment_3_1 ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9943:1: ( rule__Sequence_type__BoundAssignment_3_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSequence_typeAccess().getBoundAssignment_3_1()); 
             }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9948:1: ( rule__Sequence_type__BoundAssignment_3_1 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9948:2: rule__Sequence_type__BoundAssignment_3_1
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9944:1: ( rule__Sequence_type__BoundAssignment_3_1 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9944:2: rule__Sequence_type__BoundAssignment_3_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Sequence_type__BoundAssignment_3_1_in_rule__Sequence_type__Group_3__1__Impl20312);
+            pushFollow(FollowSets000.FOLLOW_rule__Sequence_type__BoundAssignment_3_1_in_rule__Sequence_type__Group_3__1__Impl20308);
             rule__Sequence_type__BoundAssignment_3_1();
 
             state._fsp--;
@@ -29375,21 +29395,21 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Stringdef_type__Group__0"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9962:1: rule__Stringdef_type__Group__0 : rule__Stringdef_type__Group__0__Impl rule__Stringdef_type__Group__1 ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9958:1: rule__Stringdef_type__Group__0 : rule__Stringdef_type__Group__0__Impl rule__Stringdef_type__Group__1 ;
     public final void rule__Stringdef_type__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9966:1: ( rule__Stringdef_type__Group__0__Impl rule__Stringdef_type__Group__1 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9967:2: rule__Stringdef_type__Group__0__Impl rule__Stringdef_type__Group__1
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9962:1: ( rule__Stringdef_type__Group__0__Impl rule__Stringdef_type__Group__1 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9963:2: rule__Stringdef_type__Group__0__Impl rule__Stringdef_type__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Stringdef_type__Group__0__Impl_in_rule__Stringdef_type__Group__020346);
+            pushFollow(FollowSets000.FOLLOW_rule__Stringdef_type__Group__0__Impl_in_rule__Stringdef_type__Group__020342);
             rule__Stringdef_type__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__Stringdef_type__Group__1_in_rule__Stringdef_type__Group__020349);
+            pushFollow(FollowSets000.FOLLOW_rule__Stringdef_type__Group__1_in_rule__Stringdef_type__Group__020345);
             rule__Stringdef_type__Group__1();
 
             state._fsp--;
@@ -29413,22 +29433,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Stringdef_type__Group__0__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9974:1: rule__Stringdef_type__Group__0__Impl : ( 'string' ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9970:1: rule__Stringdef_type__Group__0__Impl : ( 'string' ) ;
     public final void rule__Stringdef_type__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9978:1: ( ( 'string' ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9979:1: ( 'string' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9974:1: ( ( 'string' ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9975:1: ( 'string' )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9979:1: ( 'string' )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9980:1: 'string'
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9975:1: ( 'string' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9976:1: 'string'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getStringdef_typeAccess().getStringKeyword_0()); 
             }
-            match(input,22,FollowSets000.FOLLOW_22_in_rule__Stringdef_type__Group__0__Impl20377); if (state.failed) return ;
+            match(input,22,FollowSets000.FOLLOW_22_in_rule__Stringdef_type__Group__0__Impl20373); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getStringdef_typeAccess().getStringKeyword_0()); 
             }
@@ -29454,21 +29474,21 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Stringdef_type__Group__1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9993:1: rule__Stringdef_type__Group__1 : rule__Stringdef_type__Group__1__Impl rule__Stringdef_type__Group__2 ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9989:1: rule__Stringdef_type__Group__1 : rule__Stringdef_type__Group__1__Impl rule__Stringdef_type__Group__2 ;
     public final void rule__Stringdef_type__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9997:1: ( rule__Stringdef_type__Group__1__Impl rule__Stringdef_type__Group__2 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9998:2: rule__Stringdef_type__Group__1__Impl rule__Stringdef_type__Group__2
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9993:1: ( rule__Stringdef_type__Group__1__Impl rule__Stringdef_type__Group__2 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:9994:2: rule__Stringdef_type__Group__1__Impl rule__Stringdef_type__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Stringdef_type__Group__1__Impl_in_rule__Stringdef_type__Group__120408);
+            pushFollow(FollowSets000.FOLLOW_rule__Stringdef_type__Group__1__Impl_in_rule__Stringdef_type__Group__120404);
             rule__Stringdef_type__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__Stringdef_type__Group__2_in_rule__Stringdef_type__Group__120411);
+            pushFollow(FollowSets000.FOLLOW_rule__Stringdef_type__Group__2_in_rule__Stringdef_type__Group__120407);
             rule__Stringdef_type__Group__2();
 
             state._fsp--;
@@ -29492,22 +29512,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Stringdef_type__Group__1__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10005:1: rule__Stringdef_type__Group__1__Impl : ( '<' ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10001:1: rule__Stringdef_type__Group__1__Impl : ( '<' ) ;
     public final void rule__Stringdef_type__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10009:1: ( ( '<' ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10010:1: ( '<' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10005:1: ( ( '<' ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10006:1: ( '<' )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10010:1: ( '<' )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10011:1: '<'
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10006:1: ( '<' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10007:1: '<'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getStringdef_typeAccess().getLessThanSignKeyword_1()); 
             }
-            match(input,71,FollowSets000.FOLLOW_71_in_rule__Stringdef_type__Group__1__Impl20439); if (state.failed) return ;
+            match(input,70,FollowSets000.FOLLOW_70_in_rule__Stringdef_type__Group__1__Impl20435); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getStringdef_typeAccess().getLessThanSignKeyword_1()); 
             }
@@ -29533,21 +29553,21 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Stringdef_type__Group__2"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10024:1: rule__Stringdef_type__Group__2 : rule__Stringdef_type__Group__2__Impl rule__Stringdef_type__Group__3 ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10020:1: rule__Stringdef_type__Group__2 : rule__Stringdef_type__Group__2__Impl rule__Stringdef_type__Group__3 ;
     public final void rule__Stringdef_type__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10028:1: ( rule__Stringdef_type__Group__2__Impl rule__Stringdef_type__Group__3 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10029:2: rule__Stringdef_type__Group__2__Impl rule__Stringdef_type__Group__3
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10024:1: ( rule__Stringdef_type__Group__2__Impl rule__Stringdef_type__Group__3 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10025:2: rule__Stringdef_type__Group__2__Impl rule__Stringdef_type__Group__3
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Stringdef_type__Group__2__Impl_in_rule__Stringdef_type__Group__220470);
+            pushFollow(FollowSets000.FOLLOW_rule__Stringdef_type__Group__2__Impl_in_rule__Stringdef_type__Group__220466);
             rule__Stringdef_type__Group__2__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__Stringdef_type__Group__3_in_rule__Stringdef_type__Group__220473);
+            pushFollow(FollowSets000.FOLLOW_rule__Stringdef_type__Group__3_in_rule__Stringdef_type__Group__220469);
             rule__Stringdef_type__Group__3();
 
             state._fsp--;
@@ -29571,25 +29591,25 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Stringdef_type__Group__2__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10036:1: rule__Stringdef_type__Group__2__Impl : ( ( rule__Stringdef_type__BoundAssignment_2 ) ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10032:1: rule__Stringdef_type__Group__2__Impl : ( ( rule__Stringdef_type__BoundAssignment_2 ) ) ;
     public final void rule__Stringdef_type__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10040:1: ( ( ( rule__Stringdef_type__BoundAssignment_2 ) ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10041:1: ( ( rule__Stringdef_type__BoundAssignment_2 ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10036:1: ( ( ( rule__Stringdef_type__BoundAssignment_2 ) ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10037:1: ( ( rule__Stringdef_type__BoundAssignment_2 ) )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10041:1: ( ( rule__Stringdef_type__BoundAssignment_2 ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10042:1: ( rule__Stringdef_type__BoundAssignment_2 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10037:1: ( ( rule__Stringdef_type__BoundAssignment_2 ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10038:1: ( rule__Stringdef_type__BoundAssignment_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getStringdef_typeAccess().getBoundAssignment_2()); 
             }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10043:1: ( rule__Stringdef_type__BoundAssignment_2 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10043:2: rule__Stringdef_type__BoundAssignment_2
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10039:1: ( rule__Stringdef_type__BoundAssignment_2 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10039:2: rule__Stringdef_type__BoundAssignment_2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Stringdef_type__BoundAssignment_2_in_rule__Stringdef_type__Group__2__Impl20500);
+            pushFollow(FollowSets000.FOLLOW_rule__Stringdef_type__BoundAssignment_2_in_rule__Stringdef_type__Group__2__Impl20496);
             rule__Stringdef_type__BoundAssignment_2();
 
             state._fsp--;
@@ -29622,16 +29642,16 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Stringdef_type__Group__3"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10053:1: rule__Stringdef_type__Group__3 : rule__Stringdef_type__Group__3__Impl ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10049:1: rule__Stringdef_type__Group__3 : rule__Stringdef_type__Group__3__Impl ;
     public final void rule__Stringdef_type__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10057:1: ( rule__Stringdef_type__Group__3__Impl )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10058:2: rule__Stringdef_type__Group__3__Impl
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10053:1: ( rule__Stringdef_type__Group__3__Impl )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10054:2: rule__Stringdef_type__Group__3__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Stringdef_type__Group__3__Impl_in_rule__Stringdef_type__Group__320530);
+            pushFollow(FollowSets000.FOLLOW_rule__Stringdef_type__Group__3__Impl_in_rule__Stringdef_type__Group__320526);
             rule__Stringdef_type__Group__3__Impl();
 
             state._fsp--;
@@ -29655,22 +29675,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Stringdef_type__Group__3__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10064:1: rule__Stringdef_type__Group__3__Impl : ( '>' ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10060:1: rule__Stringdef_type__Group__3__Impl : ( '>' ) ;
     public final void rule__Stringdef_type__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10068:1: ( ( '>' ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10069:1: ( '>' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10064:1: ( ( '>' ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10065:1: ( '>' )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10069:1: ( '>' )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10070:1: '>'
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10065:1: ( '>' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10066:1: '>'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getStringdef_typeAccess().getGreaterThanSignKeyword_3()); 
             }
-            match(input,72,FollowSets000.FOLLOW_72_in_rule__Stringdef_type__Group__3__Impl20558); if (state.failed) return ;
+            match(input,71,FollowSets000.FOLLOW_71_in_rule__Stringdef_type__Group__3__Impl20554); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getStringdef_typeAccess().getGreaterThanSignKeyword_3()); 
             }
@@ -29696,21 +29716,21 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Wide_stringdef_type__Group__0"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10091:1: rule__Wide_stringdef_type__Group__0 : rule__Wide_stringdef_type__Group__0__Impl rule__Wide_stringdef_type__Group__1 ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10087:1: rule__Wide_stringdef_type__Group__0 : rule__Wide_stringdef_type__Group__0__Impl rule__Wide_stringdef_type__Group__1 ;
     public final void rule__Wide_stringdef_type__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10095:1: ( rule__Wide_stringdef_type__Group__0__Impl rule__Wide_stringdef_type__Group__1 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10096:2: rule__Wide_stringdef_type__Group__0__Impl rule__Wide_stringdef_type__Group__1
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10091:1: ( rule__Wide_stringdef_type__Group__0__Impl rule__Wide_stringdef_type__Group__1 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10092:2: rule__Wide_stringdef_type__Group__0__Impl rule__Wide_stringdef_type__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Wide_stringdef_type__Group__0__Impl_in_rule__Wide_stringdef_type__Group__020597);
+            pushFollow(FollowSets000.FOLLOW_rule__Wide_stringdef_type__Group__0__Impl_in_rule__Wide_stringdef_type__Group__020593);
             rule__Wide_stringdef_type__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__Wide_stringdef_type__Group__1_in_rule__Wide_stringdef_type__Group__020600);
+            pushFollow(FollowSets000.FOLLOW_rule__Wide_stringdef_type__Group__1_in_rule__Wide_stringdef_type__Group__020596);
             rule__Wide_stringdef_type__Group__1();
 
             state._fsp--;
@@ -29734,22 +29754,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Wide_stringdef_type__Group__0__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10103:1: rule__Wide_stringdef_type__Group__0__Impl : ( 'wstring' ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10099:1: rule__Wide_stringdef_type__Group__0__Impl : ( 'wstring' ) ;
     public final void rule__Wide_stringdef_type__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10107:1: ( ( 'wstring' ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10108:1: ( 'wstring' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10103:1: ( ( 'wstring' ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10104:1: ( 'wstring' )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10108:1: ( 'wstring' )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10109:1: 'wstring'
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10104:1: ( 'wstring' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10105:1: 'wstring'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getWide_stringdef_typeAccess().getWstringKeyword_0()); 
             }
-            match(input,23,FollowSets000.FOLLOW_23_in_rule__Wide_stringdef_type__Group__0__Impl20628); if (state.failed) return ;
+            match(input,23,FollowSets000.FOLLOW_23_in_rule__Wide_stringdef_type__Group__0__Impl20624); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getWide_stringdef_typeAccess().getWstringKeyword_0()); 
             }
@@ -29775,21 +29795,21 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Wide_stringdef_type__Group__1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10122:1: rule__Wide_stringdef_type__Group__1 : rule__Wide_stringdef_type__Group__1__Impl rule__Wide_stringdef_type__Group__2 ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10118:1: rule__Wide_stringdef_type__Group__1 : rule__Wide_stringdef_type__Group__1__Impl rule__Wide_stringdef_type__Group__2 ;
     public final void rule__Wide_stringdef_type__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10126:1: ( rule__Wide_stringdef_type__Group__1__Impl rule__Wide_stringdef_type__Group__2 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10127:2: rule__Wide_stringdef_type__Group__1__Impl rule__Wide_stringdef_type__Group__2
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10122:1: ( rule__Wide_stringdef_type__Group__1__Impl rule__Wide_stringdef_type__Group__2 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10123:2: rule__Wide_stringdef_type__Group__1__Impl rule__Wide_stringdef_type__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Wide_stringdef_type__Group__1__Impl_in_rule__Wide_stringdef_type__Group__120659);
+            pushFollow(FollowSets000.FOLLOW_rule__Wide_stringdef_type__Group__1__Impl_in_rule__Wide_stringdef_type__Group__120655);
             rule__Wide_stringdef_type__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__Wide_stringdef_type__Group__2_in_rule__Wide_stringdef_type__Group__120662);
+            pushFollow(FollowSets000.FOLLOW_rule__Wide_stringdef_type__Group__2_in_rule__Wide_stringdef_type__Group__120658);
             rule__Wide_stringdef_type__Group__2();
 
             state._fsp--;
@@ -29813,22 +29833,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Wide_stringdef_type__Group__1__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10134:1: rule__Wide_stringdef_type__Group__1__Impl : ( '<' ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10130:1: rule__Wide_stringdef_type__Group__1__Impl : ( '<' ) ;
     public final void rule__Wide_stringdef_type__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10138:1: ( ( '<' ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10139:1: ( '<' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10134:1: ( ( '<' ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10135:1: ( '<' )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10139:1: ( '<' )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10140:1: '<'
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10135:1: ( '<' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10136:1: '<'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getWide_stringdef_typeAccess().getLessThanSignKeyword_1()); 
             }
-            match(input,71,FollowSets000.FOLLOW_71_in_rule__Wide_stringdef_type__Group__1__Impl20690); if (state.failed) return ;
+            match(input,70,FollowSets000.FOLLOW_70_in_rule__Wide_stringdef_type__Group__1__Impl20686); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getWide_stringdef_typeAccess().getLessThanSignKeyword_1()); 
             }
@@ -29854,21 +29874,21 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Wide_stringdef_type__Group__2"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10153:1: rule__Wide_stringdef_type__Group__2 : rule__Wide_stringdef_type__Group__2__Impl rule__Wide_stringdef_type__Group__3 ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10149:1: rule__Wide_stringdef_type__Group__2 : rule__Wide_stringdef_type__Group__2__Impl rule__Wide_stringdef_type__Group__3 ;
     public final void rule__Wide_stringdef_type__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10157:1: ( rule__Wide_stringdef_type__Group__2__Impl rule__Wide_stringdef_type__Group__3 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10158:2: rule__Wide_stringdef_type__Group__2__Impl rule__Wide_stringdef_type__Group__3
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10153:1: ( rule__Wide_stringdef_type__Group__2__Impl rule__Wide_stringdef_type__Group__3 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10154:2: rule__Wide_stringdef_type__Group__2__Impl rule__Wide_stringdef_type__Group__3
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Wide_stringdef_type__Group__2__Impl_in_rule__Wide_stringdef_type__Group__220721);
+            pushFollow(FollowSets000.FOLLOW_rule__Wide_stringdef_type__Group__2__Impl_in_rule__Wide_stringdef_type__Group__220717);
             rule__Wide_stringdef_type__Group__2__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__Wide_stringdef_type__Group__3_in_rule__Wide_stringdef_type__Group__220724);
+            pushFollow(FollowSets000.FOLLOW_rule__Wide_stringdef_type__Group__3_in_rule__Wide_stringdef_type__Group__220720);
             rule__Wide_stringdef_type__Group__3();
 
             state._fsp--;
@@ -29892,25 +29912,25 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Wide_stringdef_type__Group__2__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10165:1: rule__Wide_stringdef_type__Group__2__Impl : ( ( rule__Wide_stringdef_type__BoundAssignment_2 ) ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10161:1: rule__Wide_stringdef_type__Group__2__Impl : ( ( rule__Wide_stringdef_type__BoundAssignment_2 ) ) ;
     public final void rule__Wide_stringdef_type__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10169:1: ( ( ( rule__Wide_stringdef_type__BoundAssignment_2 ) ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10170:1: ( ( rule__Wide_stringdef_type__BoundAssignment_2 ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10165:1: ( ( ( rule__Wide_stringdef_type__BoundAssignment_2 ) ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10166:1: ( ( rule__Wide_stringdef_type__BoundAssignment_2 ) )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10170:1: ( ( rule__Wide_stringdef_type__BoundAssignment_2 ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10171:1: ( rule__Wide_stringdef_type__BoundAssignment_2 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10166:1: ( ( rule__Wide_stringdef_type__BoundAssignment_2 ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10167:1: ( rule__Wide_stringdef_type__BoundAssignment_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getWide_stringdef_typeAccess().getBoundAssignment_2()); 
             }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10172:1: ( rule__Wide_stringdef_type__BoundAssignment_2 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10172:2: rule__Wide_stringdef_type__BoundAssignment_2
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10168:1: ( rule__Wide_stringdef_type__BoundAssignment_2 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10168:2: rule__Wide_stringdef_type__BoundAssignment_2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Wide_stringdef_type__BoundAssignment_2_in_rule__Wide_stringdef_type__Group__2__Impl20751);
+            pushFollow(FollowSets000.FOLLOW_rule__Wide_stringdef_type__BoundAssignment_2_in_rule__Wide_stringdef_type__Group__2__Impl20747);
             rule__Wide_stringdef_type__BoundAssignment_2();
 
             state._fsp--;
@@ -29943,16 +29963,16 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Wide_stringdef_type__Group__3"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10182:1: rule__Wide_stringdef_type__Group__3 : rule__Wide_stringdef_type__Group__3__Impl ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10178:1: rule__Wide_stringdef_type__Group__3 : rule__Wide_stringdef_type__Group__3__Impl ;
     public final void rule__Wide_stringdef_type__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10186:1: ( rule__Wide_stringdef_type__Group__3__Impl )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10187:2: rule__Wide_stringdef_type__Group__3__Impl
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10182:1: ( rule__Wide_stringdef_type__Group__3__Impl )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10183:2: rule__Wide_stringdef_type__Group__3__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Wide_stringdef_type__Group__3__Impl_in_rule__Wide_stringdef_type__Group__320781);
+            pushFollow(FollowSets000.FOLLOW_rule__Wide_stringdef_type__Group__3__Impl_in_rule__Wide_stringdef_type__Group__320777);
             rule__Wide_stringdef_type__Group__3__Impl();
 
             state._fsp--;
@@ -29976,22 +29996,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Wide_stringdef_type__Group__3__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10193:1: rule__Wide_stringdef_type__Group__3__Impl : ( '>' ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10189:1: rule__Wide_stringdef_type__Group__3__Impl : ( '>' ) ;
     public final void rule__Wide_stringdef_type__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10197:1: ( ( '>' ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10198:1: ( '>' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10193:1: ( ( '>' ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10194:1: ( '>' )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10198:1: ( '>' )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10199:1: '>'
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10194:1: ( '>' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10195:1: '>'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getWide_stringdef_typeAccess().getGreaterThanSignKeyword_3()); 
             }
-            match(input,72,FollowSets000.FOLLOW_72_in_rule__Wide_stringdef_type__Group__3__Impl20809); if (state.failed) return ;
+            match(input,71,FollowSets000.FOLLOW_71_in_rule__Wide_stringdef_type__Group__3__Impl20805); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getWide_stringdef_typeAccess().getGreaterThanSignKeyword_3()); 
             }
@@ -30017,21 +30037,21 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Fixed_pt_type__Group__0"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10220:1: rule__Fixed_pt_type__Group__0 : rule__Fixed_pt_type__Group__0__Impl rule__Fixed_pt_type__Group__1 ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10216:1: rule__Fixed_pt_type__Group__0 : rule__Fixed_pt_type__Group__0__Impl rule__Fixed_pt_type__Group__1 ;
     public final void rule__Fixed_pt_type__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10224:1: ( rule__Fixed_pt_type__Group__0__Impl rule__Fixed_pt_type__Group__1 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10225:2: rule__Fixed_pt_type__Group__0__Impl rule__Fixed_pt_type__Group__1
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10220:1: ( rule__Fixed_pt_type__Group__0__Impl rule__Fixed_pt_type__Group__1 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10221:2: rule__Fixed_pt_type__Group__0__Impl rule__Fixed_pt_type__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Fixed_pt_type__Group__0__Impl_in_rule__Fixed_pt_type__Group__020848);
+            pushFollow(FollowSets000.FOLLOW_rule__Fixed_pt_type__Group__0__Impl_in_rule__Fixed_pt_type__Group__020844);
             rule__Fixed_pt_type__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__Fixed_pt_type__Group__1_in_rule__Fixed_pt_type__Group__020851);
+            pushFollow(FollowSets000.FOLLOW_rule__Fixed_pt_type__Group__1_in_rule__Fixed_pt_type__Group__020847);
             rule__Fixed_pt_type__Group__1();
 
             state._fsp--;
@@ -30055,22 +30075,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Fixed_pt_type__Group__0__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10232:1: rule__Fixed_pt_type__Group__0__Impl : ( 'fixed' ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10228:1: rule__Fixed_pt_type__Group__0__Impl : ( 'fixed' ) ;
     public final void rule__Fixed_pt_type__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10236:1: ( ( 'fixed' ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10237:1: ( 'fixed' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10232:1: ( ( 'fixed' ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10233:1: ( 'fixed' )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10237:1: ( 'fixed' )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10238:1: 'fixed'
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10233:1: ( 'fixed' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10234:1: 'fixed'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFixed_pt_typeAccess().getFixedKeyword_0()); 
             }
-            match(input,73,FollowSets000.FOLLOW_73_in_rule__Fixed_pt_type__Group__0__Impl20879); if (state.failed) return ;
+            match(input,72,FollowSets000.FOLLOW_72_in_rule__Fixed_pt_type__Group__0__Impl20875); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getFixed_pt_typeAccess().getFixedKeyword_0()); 
             }
@@ -30096,21 +30116,21 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Fixed_pt_type__Group__1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10251:1: rule__Fixed_pt_type__Group__1 : rule__Fixed_pt_type__Group__1__Impl rule__Fixed_pt_type__Group__2 ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10247:1: rule__Fixed_pt_type__Group__1 : rule__Fixed_pt_type__Group__1__Impl rule__Fixed_pt_type__Group__2 ;
     public final void rule__Fixed_pt_type__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10255:1: ( rule__Fixed_pt_type__Group__1__Impl rule__Fixed_pt_type__Group__2 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10256:2: rule__Fixed_pt_type__Group__1__Impl rule__Fixed_pt_type__Group__2
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10251:1: ( rule__Fixed_pt_type__Group__1__Impl rule__Fixed_pt_type__Group__2 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10252:2: rule__Fixed_pt_type__Group__1__Impl rule__Fixed_pt_type__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Fixed_pt_type__Group__1__Impl_in_rule__Fixed_pt_type__Group__120910);
+            pushFollow(FollowSets000.FOLLOW_rule__Fixed_pt_type__Group__1__Impl_in_rule__Fixed_pt_type__Group__120906);
             rule__Fixed_pt_type__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__Fixed_pt_type__Group__2_in_rule__Fixed_pt_type__Group__120913);
+            pushFollow(FollowSets000.FOLLOW_rule__Fixed_pt_type__Group__2_in_rule__Fixed_pt_type__Group__120909);
             rule__Fixed_pt_type__Group__2();
 
             state._fsp--;
@@ -30134,22 +30154,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Fixed_pt_type__Group__1__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10263:1: rule__Fixed_pt_type__Group__1__Impl : ( '<' ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10259:1: rule__Fixed_pt_type__Group__1__Impl : ( '<' ) ;
     public final void rule__Fixed_pt_type__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10267:1: ( ( '<' ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10268:1: ( '<' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10263:1: ( ( '<' ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10264:1: ( '<' )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10268:1: ( '<' )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10269:1: '<'
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10264:1: ( '<' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10265:1: '<'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFixed_pt_typeAccess().getLessThanSignKeyword_1()); 
             }
-            match(input,71,FollowSets000.FOLLOW_71_in_rule__Fixed_pt_type__Group__1__Impl20941); if (state.failed) return ;
+            match(input,70,FollowSets000.FOLLOW_70_in_rule__Fixed_pt_type__Group__1__Impl20937); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getFixed_pt_typeAccess().getLessThanSignKeyword_1()); 
             }
@@ -30175,21 +30195,21 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Fixed_pt_type__Group__2"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10282:1: rule__Fixed_pt_type__Group__2 : rule__Fixed_pt_type__Group__2__Impl rule__Fixed_pt_type__Group__3 ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10278:1: rule__Fixed_pt_type__Group__2 : rule__Fixed_pt_type__Group__2__Impl rule__Fixed_pt_type__Group__3 ;
     public final void rule__Fixed_pt_type__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10286:1: ( rule__Fixed_pt_type__Group__2__Impl rule__Fixed_pt_type__Group__3 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10287:2: rule__Fixed_pt_type__Group__2__Impl rule__Fixed_pt_type__Group__3
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10282:1: ( rule__Fixed_pt_type__Group__2__Impl rule__Fixed_pt_type__Group__3 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10283:2: rule__Fixed_pt_type__Group__2__Impl rule__Fixed_pt_type__Group__3
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Fixed_pt_type__Group__2__Impl_in_rule__Fixed_pt_type__Group__220972);
+            pushFollow(FollowSets000.FOLLOW_rule__Fixed_pt_type__Group__2__Impl_in_rule__Fixed_pt_type__Group__220968);
             rule__Fixed_pt_type__Group__2__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__Fixed_pt_type__Group__3_in_rule__Fixed_pt_type__Group__220975);
+            pushFollow(FollowSets000.FOLLOW_rule__Fixed_pt_type__Group__3_in_rule__Fixed_pt_type__Group__220971);
             rule__Fixed_pt_type__Group__3();
 
             state._fsp--;
@@ -30213,25 +30233,25 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Fixed_pt_type__Group__2__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10294:1: rule__Fixed_pt_type__Group__2__Impl : ( ( rule__Fixed_pt_type__DigitsAssignment_2 ) ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10290:1: rule__Fixed_pt_type__Group__2__Impl : ( ( rule__Fixed_pt_type__DigitsAssignment_2 ) ) ;
     public final void rule__Fixed_pt_type__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10298:1: ( ( ( rule__Fixed_pt_type__DigitsAssignment_2 ) ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10299:1: ( ( rule__Fixed_pt_type__DigitsAssignment_2 ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10294:1: ( ( ( rule__Fixed_pt_type__DigitsAssignment_2 ) ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10295:1: ( ( rule__Fixed_pt_type__DigitsAssignment_2 ) )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10299:1: ( ( rule__Fixed_pt_type__DigitsAssignment_2 ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10300:1: ( rule__Fixed_pt_type__DigitsAssignment_2 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10295:1: ( ( rule__Fixed_pt_type__DigitsAssignment_2 ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10296:1: ( rule__Fixed_pt_type__DigitsAssignment_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFixed_pt_typeAccess().getDigitsAssignment_2()); 
             }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10301:1: ( rule__Fixed_pt_type__DigitsAssignment_2 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10301:2: rule__Fixed_pt_type__DigitsAssignment_2
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10297:1: ( rule__Fixed_pt_type__DigitsAssignment_2 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10297:2: rule__Fixed_pt_type__DigitsAssignment_2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Fixed_pt_type__DigitsAssignment_2_in_rule__Fixed_pt_type__Group__2__Impl21002);
+            pushFollow(FollowSets000.FOLLOW_rule__Fixed_pt_type__DigitsAssignment_2_in_rule__Fixed_pt_type__Group__2__Impl20998);
             rule__Fixed_pt_type__DigitsAssignment_2();
 
             state._fsp--;
@@ -30264,21 +30284,21 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Fixed_pt_type__Group__3"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10311:1: rule__Fixed_pt_type__Group__3 : rule__Fixed_pt_type__Group__3__Impl rule__Fixed_pt_type__Group__4 ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10307:1: rule__Fixed_pt_type__Group__3 : rule__Fixed_pt_type__Group__3__Impl rule__Fixed_pt_type__Group__4 ;
     public final void rule__Fixed_pt_type__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10315:1: ( rule__Fixed_pt_type__Group__3__Impl rule__Fixed_pt_type__Group__4 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10316:2: rule__Fixed_pt_type__Group__3__Impl rule__Fixed_pt_type__Group__4
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10311:1: ( rule__Fixed_pt_type__Group__3__Impl rule__Fixed_pt_type__Group__4 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10312:2: rule__Fixed_pt_type__Group__3__Impl rule__Fixed_pt_type__Group__4
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Fixed_pt_type__Group__3__Impl_in_rule__Fixed_pt_type__Group__321032);
+            pushFollow(FollowSets000.FOLLOW_rule__Fixed_pt_type__Group__3__Impl_in_rule__Fixed_pt_type__Group__321028);
             rule__Fixed_pt_type__Group__3__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__Fixed_pt_type__Group__4_in_rule__Fixed_pt_type__Group__321035);
+            pushFollow(FollowSets000.FOLLOW_rule__Fixed_pt_type__Group__4_in_rule__Fixed_pt_type__Group__321031);
             rule__Fixed_pt_type__Group__4();
 
             state._fsp--;
@@ -30302,22 +30322,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Fixed_pt_type__Group__3__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10323:1: rule__Fixed_pt_type__Group__3__Impl : ( ',' ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10319:1: rule__Fixed_pt_type__Group__3__Impl : ( ',' ) ;
     public final void rule__Fixed_pt_type__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10327:1: ( ( ',' ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10328:1: ( ',' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10323:1: ( ( ',' ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10324:1: ( ',' )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10328:1: ( ',' )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10329:1: ','
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10324:1: ( ',' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10325:1: ','
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFixed_pt_typeAccess().getCommaKeyword_3()); 
             }
-            match(input,49,FollowSets000.FOLLOW_49_in_rule__Fixed_pt_type__Group__3__Impl21063); if (state.failed) return ;
+            match(input,49,FollowSets000.FOLLOW_49_in_rule__Fixed_pt_type__Group__3__Impl21059); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getFixed_pt_typeAccess().getCommaKeyword_3()); 
             }
@@ -30343,21 +30363,21 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Fixed_pt_type__Group__4"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10342:1: rule__Fixed_pt_type__Group__4 : rule__Fixed_pt_type__Group__4__Impl rule__Fixed_pt_type__Group__5 ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10338:1: rule__Fixed_pt_type__Group__4 : rule__Fixed_pt_type__Group__4__Impl rule__Fixed_pt_type__Group__5 ;
     public final void rule__Fixed_pt_type__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10346:1: ( rule__Fixed_pt_type__Group__4__Impl rule__Fixed_pt_type__Group__5 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10347:2: rule__Fixed_pt_type__Group__4__Impl rule__Fixed_pt_type__Group__5
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10342:1: ( rule__Fixed_pt_type__Group__4__Impl rule__Fixed_pt_type__Group__5 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10343:2: rule__Fixed_pt_type__Group__4__Impl rule__Fixed_pt_type__Group__5
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Fixed_pt_type__Group__4__Impl_in_rule__Fixed_pt_type__Group__421094);
+            pushFollow(FollowSets000.FOLLOW_rule__Fixed_pt_type__Group__4__Impl_in_rule__Fixed_pt_type__Group__421090);
             rule__Fixed_pt_type__Group__4__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__Fixed_pt_type__Group__5_in_rule__Fixed_pt_type__Group__421097);
+            pushFollow(FollowSets000.FOLLOW_rule__Fixed_pt_type__Group__5_in_rule__Fixed_pt_type__Group__421093);
             rule__Fixed_pt_type__Group__5();
 
             state._fsp--;
@@ -30381,25 +30401,25 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Fixed_pt_type__Group__4__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10354:1: rule__Fixed_pt_type__Group__4__Impl : ( ( rule__Fixed_pt_type__ScaleAssignment_4 ) ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10350:1: rule__Fixed_pt_type__Group__4__Impl : ( ( rule__Fixed_pt_type__ScaleAssignment_4 ) ) ;
     public final void rule__Fixed_pt_type__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10358:1: ( ( ( rule__Fixed_pt_type__ScaleAssignment_4 ) ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10359:1: ( ( rule__Fixed_pt_type__ScaleAssignment_4 ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10354:1: ( ( ( rule__Fixed_pt_type__ScaleAssignment_4 ) ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10355:1: ( ( rule__Fixed_pt_type__ScaleAssignment_4 ) )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10359:1: ( ( rule__Fixed_pt_type__ScaleAssignment_4 ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10360:1: ( rule__Fixed_pt_type__ScaleAssignment_4 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10355:1: ( ( rule__Fixed_pt_type__ScaleAssignment_4 ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10356:1: ( rule__Fixed_pt_type__ScaleAssignment_4 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFixed_pt_typeAccess().getScaleAssignment_4()); 
             }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10361:1: ( rule__Fixed_pt_type__ScaleAssignment_4 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10361:2: rule__Fixed_pt_type__ScaleAssignment_4
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10357:1: ( rule__Fixed_pt_type__ScaleAssignment_4 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10357:2: rule__Fixed_pt_type__ScaleAssignment_4
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Fixed_pt_type__ScaleAssignment_4_in_rule__Fixed_pt_type__Group__4__Impl21124);
+            pushFollow(FollowSets000.FOLLOW_rule__Fixed_pt_type__ScaleAssignment_4_in_rule__Fixed_pt_type__Group__4__Impl21120);
             rule__Fixed_pt_type__ScaleAssignment_4();
 
             state._fsp--;
@@ -30432,16 +30452,16 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Fixed_pt_type__Group__5"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10371:1: rule__Fixed_pt_type__Group__5 : rule__Fixed_pt_type__Group__5__Impl ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10367:1: rule__Fixed_pt_type__Group__5 : rule__Fixed_pt_type__Group__5__Impl ;
     public final void rule__Fixed_pt_type__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10375:1: ( rule__Fixed_pt_type__Group__5__Impl )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10376:2: rule__Fixed_pt_type__Group__5__Impl
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10371:1: ( rule__Fixed_pt_type__Group__5__Impl )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10372:2: rule__Fixed_pt_type__Group__5__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Fixed_pt_type__Group__5__Impl_in_rule__Fixed_pt_type__Group__521154);
+            pushFollow(FollowSets000.FOLLOW_rule__Fixed_pt_type__Group__5__Impl_in_rule__Fixed_pt_type__Group__521150);
             rule__Fixed_pt_type__Group__5__Impl();
 
             state._fsp--;
@@ -30465,22 +30485,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Fixed_pt_type__Group__5__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10382:1: rule__Fixed_pt_type__Group__5__Impl : ( '>' ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10378:1: rule__Fixed_pt_type__Group__5__Impl : ( '>' ) ;
     public final void rule__Fixed_pt_type__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10386:1: ( ( '>' ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10387:1: ( '>' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10382:1: ( ( '>' ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10383:1: ( '>' )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10387:1: ( '>' )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10388:1: '>'
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10383:1: ( '>' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10384:1: '>'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFixed_pt_typeAccess().getGreaterThanSignKeyword_5()); 
             }
-            match(input,72,FollowSets000.FOLLOW_72_in_rule__Fixed_pt_type__Group__5__Impl21182); if (state.failed) return ;
+            match(input,71,FollowSets000.FOLLOW_71_in_rule__Fixed_pt_type__Group__5__Impl21178); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getFixed_pt_typeAccess().getGreaterThanSignKeyword_5()); 
             }
@@ -30506,21 +30526,21 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Longdouble_type__Group__0"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10413:1: rule__Longdouble_type__Group__0 : rule__Longdouble_type__Group__0__Impl rule__Longdouble_type__Group__1 ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10409:1: rule__Longdouble_type__Group__0 : rule__Longdouble_type__Group__0__Impl rule__Longdouble_type__Group__1 ;
     public final void rule__Longdouble_type__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10417:1: ( rule__Longdouble_type__Group__0__Impl rule__Longdouble_type__Group__1 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10418:2: rule__Longdouble_type__Group__0__Impl rule__Longdouble_type__Group__1
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10413:1: ( rule__Longdouble_type__Group__0__Impl rule__Longdouble_type__Group__1 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10414:2: rule__Longdouble_type__Group__0__Impl rule__Longdouble_type__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Longdouble_type__Group__0__Impl_in_rule__Longdouble_type__Group__021225);
+            pushFollow(FollowSets000.FOLLOW_rule__Longdouble_type__Group__0__Impl_in_rule__Longdouble_type__Group__021221);
             rule__Longdouble_type__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__Longdouble_type__Group__1_in_rule__Longdouble_type__Group__021228);
+            pushFollow(FollowSets000.FOLLOW_rule__Longdouble_type__Group__1_in_rule__Longdouble_type__Group__021224);
             rule__Longdouble_type__Group__1();
 
             state._fsp--;
@@ -30544,22 +30564,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Longdouble_type__Group__0__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10425:1: rule__Longdouble_type__Group__0__Impl : ( 'long' ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10421:1: rule__Longdouble_type__Group__0__Impl : ( 'long' ) ;
     public final void rule__Longdouble_type__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10429:1: ( ( 'long' ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10430:1: ( 'long' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10425:1: ( ( 'long' ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10426:1: ( 'long' )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10430:1: ( 'long' )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10431:1: 'long'
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10426:1: ( 'long' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10427:1: 'long'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLongdouble_typeAccess().getLongKeyword_0()); 
             }
-            match(input,19,FollowSets000.FOLLOW_19_in_rule__Longdouble_type__Group__0__Impl21256); if (state.failed) return ;
+            match(input,19,FollowSets000.FOLLOW_19_in_rule__Longdouble_type__Group__0__Impl21252); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getLongdouble_typeAccess().getLongKeyword_0()); 
             }
@@ -30585,16 +30605,16 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Longdouble_type__Group__1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10444:1: rule__Longdouble_type__Group__1 : rule__Longdouble_type__Group__1__Impl ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10440:1: rule__Longdouble_type__Group__1 : rule__Longdouble_type__Group__1__Impl ;
     public final void rule__Longdouble_type__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10448:1: ( rule__Longdouble_type__Group__1__Impl )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10449:2: rule__Longdouble_type__Group__1__Impl
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10444:1: ( rule__Longdouble_type__Group__1__Impl )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10445:2: rule__Longdouble_type__Group__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Longdouble_type__Group__1__Impl_in_rule__Longdouble_type__Group__121287);
+            pushFollow(FollowSets000.FOLLOW_rule__Longdouble_type__Group__1__Impl_in_rule__Longdouble_type__Group__121283);
             rule__Longdouble_type__Group__1__Impl();
 
             state._fsp--;
@@ -30618,22 +30638,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Longdouble_type__Group__1__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10455:1: rule__Longdouble_type__Group__1__Impl : ( 'double' ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10451:1: rule__Longdouble_type__Group__1__Impl : ( 'double' ) ;
     public final void rule__Longdouble_type__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10459:1: ( ( 'double' ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10460:1: ( 'double' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10455:1: ( ( 'double' ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10456:1: ( 'double' )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10460:1: ( 'double' )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10461:1: 'double'
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10456:1: ( 'double' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10457:1: 'double'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLongdouble_typeAccess().getDoubleKeyword_1()); 
             }
-            match(input,17,FollowSets000.FOLLOW_17_in_rule__Longdouble_type__Group__1__Impl21315); if (state.failed) return ;
+            match(input,17,FollowSets000.FOLLOW_17_in_rule__Longdouble_type__Group__1__Impl21311); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getLongdouble_typeAccess().getDoubleKeyword_1()); 
             }
@@ -30659,21 +30679,21 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Longlong_type__Group__0"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10478:1: rule__Longlong_type__Group__0 : rule__Longlong_type__Group__0__Impl rule__Longlong_type__Group__1 ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10474:1: rule__Longlong_type__Group__0 : rule__Longlong_type__Group__0__Impl rule__Longlong_type__Group__1 ;
     public final void rule__Longlong_type__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10482:1: ( rule__Longlong_type__Group__0__Impl rule__Longlong_type__Group__1 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10483:2: rule__Longlong_type__Group__0__Impl rule__Longlong_type__Group__1
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10478:1: ( rule__Longlong_type__Group__0__Impl rule__Longlong_type__Group__1 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10479:2: rule__Longlong_type__Group__0__Impl rule__Longlong_type__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Longlong_type__Group__0__Impl_in_rule__Longlong_type__Group__021350);
+            pushFollow(FollowSets000.FOLLOW_rule__Longlong_type__Group__0__Impl_in_rule__Longlong_type__Group__021346);
             rule__Longlong_type__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__Longlong_type__Group__1_in_rule__Longlong_type__Group__021353);
+            pushFollow(FollowSets000.FOLLOW_rule__Longlong_type__Group__1_in_rule__Longlong_type__Group__021349);
             rule__Longlong_type__Group__1();
 
             state._fsp--;
@@ -30697,22 +30717,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Longlong_type__Group__0__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10490:1: rule__Longlong_type__Group__0__Impl : ( 'long' ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10486:1: rule__Longlong_type__Group__0__Impl : ( 'long' ) ;
     public final void rule__Longlong_type__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10494:1: ( ( 'long' ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10495:1: ( 'long' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10490:1: ( ( 'long' ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10491:1: ( 'long' )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10495:1: ( 'long' )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10496:1: 'long'
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10491:1: ( 'long' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10492:1: 'long'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLonglong_typeAccess().getLongKeyword_0()); 
             }
-            match(input,19,FollowSets000.FOLLOW_19_in_rule__Longlong_type__Group__0__Impl21381); if (state.failed) return ;
+            match(input,19,FollowSets000.FOLLOW_19_in_rule__Longlong_type__Group__0__Impl21377); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getLonglong_typeAccess().getLongKeyword_0()); 
             }
@@ -30738,16 +30758,16 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Longlong_type__Group__1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10509:1: rule__Longlong_type__Group__1 : rule__Longlong_type__Group__1__Impl ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10505:1: rule__Longlong_type__Group__1 : rule__Longlong_type__Group__1__Impl ;
     public final void rule__Longlong_type__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10513:1: ( rule__Longlong_type__Group__1__Impl )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10514:2: rule__Longlong_type__Group__1__Impl
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10509:1: ( rule__Longlong_type__Group__1__Impl )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10510:2: rule__Longlong_type__Group__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Longlong_type__Group__1__Impl_in_rule__Longlong_type__Group__121412);
+            pushFollow(FollowSets000.FOLLOW_rule__Longlong_type__Group__1__Impl_in_rule__Longlong_type__Group__121408);
             rule__Longlong_type__Group__1__Impl();
 
             state._fsp--;
@@ -30771,22 +30791,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Longlong_type__Group__1__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10520:1: rule__Longlong_type__Group__1__Impl : ( 'long' ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10516:1: rule__Longlong_type__Group__1__Impl : ( 'long' ) ;
     public final void rule__Longlong_type__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10524:1: ( ( 'long' ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10525:1: ( 'long' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10520:1: ( ( 'long' ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10521:1: ( 'long' )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10525:1: ( 'long' )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10526:1: 'long'
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10521:1: ( 'long' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10522:1: 'long'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLonglong_typeAccess().getLongKeyword_1()); 
             }
-            match(input,19,FollowSets000.FOLLOW_19_in_rule__Longlong_type__Group__1__Impl21440); if (state.failed) return ;
+            match(input,19,FollowSets000.FOLLOW_19_in_rule__Longlong_type__Group__1__Impl21436); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getLonglong_typeAccess().getLongKeyword_1()); 
             }
@@ -30812,21 +30832,21 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Ushort_type__Group__0"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10543:1: rule__Ushort_type__Group__0 : rule__Ushort_type__Group__0__Impl rule__Ushort_type__Group__1 ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10539:1: rule__Ushort_type__Group__0 : rule__Ushort_type__Group__0__Impl rule__Ushort_type__Group__1 ;
     public final void rule__Ushort_type__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10547:1: ( rule__Ushort_type__Group__0__Impl rule__Ushort_type__Group__1 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10548:2: rule__Ushort_type__Group__0__Impl rule__Ushort_type__Group__1
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10543:1: ( rule__Ushort_type__Group__0__Impl rule__Ushort_type__Group__1 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10544:2: rule__Ushort_type__Group__0__Impl rule__Ushort_type__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Ushort_type__Group__0__Impl_in_rule__Ushort_type__Group__021475);
+            pushFollow(FollowSets000.FOLLOW_rule__Ushort_type__Group__0__Impl_in_rule__Ushort_type__Group__021471);
             rule__Ushort_type__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__Ushort_type__Group__1_in_rule__Ushort_type__Group__021478);
+            pushFollow(FollowSets000.FOLLOW_rule__Ushort_type__Group__1_in_rule__Ushort_type__Group__021474);
             rule__Ushort_type__Group__1();
 
             state._fsp--;
@@ -30850,22 +30870,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Ushort_type__Group__0__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10555:1: rule__Ushort_type__Group__0__Impl : ( 'unsigned' ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10551:1: rule__Ushort_type__Group__0__Impl : ( 'unsigned' ) ;
     public final void rule__Ushort_type__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10559:1: ( ( 'unsigned' ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10560:1: ( 'unsigned' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10555:1: ( ( 'unsigned' ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10556:1: ( 'unsigned' )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10560:1: ( 'unsigned' )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10561:1: 'unsigned'
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10556:1: ( 'unsigned' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10557:1: 'unsigned'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUshort_typeAccess().getUnsignedKeyword_0()); 
             }
-            match(input,74,FollowSets000.FOLLOW_74_in_rule__Ushort_type__Group__0__Impl21506); if (state.failed) return ;
+            match(input,73,FollowSets000.FOLLOW_73_in_rule__Ushort_type__Group__0__Impl21502); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getUshort_typeAccess().getUnsignedKeyword_0()); 
             }
@@ -30891,16 +30911,16 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Ushort_type__Group__1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10574:1: rule__Ushort_type__Group__1 : rule__Ushort_type__Group__1__Impl ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10570:1: rule__Ushort_type__Group__1 : rule__Ushort_type__Group__1__Impl ;
     public final void rule__Ushort_type__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10578:1: ( rule__Ushort_type__Group__1__Impl )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10579:2: rule__Ushort_type__Group__1__Impl
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10574:1: ( rule__Ushort_type__Group__1__Impl )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10575:2: rule__Ushort_type__Group__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Ushort_type__Group__1__Impl_in_rule__Ushort_type__Group__121537);
+            pushFollow(FollowSets000.FOLLOW_rule__Ushort_type__Group__1__Impl_in_rule__Ushort_type__Group__121533);
             rule__Ushort_type__Group__1__Impl();
 
             state._fsp--;
@@ -30924,22 +30944,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Ushort_type__Group__1__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10585:1: rule__Ushort_type__Group__1__Impl : ( 'short' ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10581:1: rule__Ushort_type__Group__1__Impl : ( 'short' ) ;
     public final void rule__Ushort_type__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10589:1: ( ( 'short' ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10590:1: ( 'short' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10585:1: ( ( 'short' ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10586:1: ( 'short' )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10590:1: ( 'short' )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10591:1: 'short'
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10586:1: ( 'short' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10587:1: 'short'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUshort_typeAccess().getShortKeyword_1()); 
             }
-            match(input,18,FollowSets000.FOLLOW_18_in_rule__Ushort_type__Group__1__Impl21565); if (state.failed) return ;
+            match(input,18,FollowSets000.FOLLOW_18_in_rule__Ushort_type__Group__1__Impl21561); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getUshort_typeAccess().getShortKeyword_1()); 
             }
@@ -30965,21 +30985,21 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Ulong_type__Group__0"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10608:1: rule__Ulong_type__Group__0 : rule__Ulong_type__Group__0__Impl rule__Ulong_type__Group__1 ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10604:1: rule__Ulong_type__Group__0 : rule__Ulong_type__Group__0__Impl rule__Ulong_type__Group__1 ;
     public final void rule__Ulong_type__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10612:1: ( rule__Ulong_type__Group__0__Impl rule__Ulong_type__Group__1 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10613:2: rule__Ulong_type__Group__0__Impl rule__Ulong_type__Group__1
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10608:1: ( rule__Ulong_type__Group__0__Impl rule__Ulong_type__Group__1 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10609:2: rule__Ulong_type__Group__0__Impl rule__Ulong_type__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Ulong_type__Group__0__Impl_in_rule__Ulong_type__Group__021600);
+            pushFollow(FollowSets000.FOLLOW_rule__Ulong_type__Group__0__Impl_in_rule__Ulong_type__Group__021596);
             rule__Ulong_type__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__Ulong_type__Group__1_in_rule__Ulong_type__Group__021603);
+            pushFollow(FollowSets000.FOLLOW_rule__Ulong_type__Group__1_in_rule__Ulong_type__Group__021599);
             rule__Ulong_type__Group__1();
 
             state._fsp--;
@@ -31003,22 +31023,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Ulong_type__Group__0__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10620:1: rule__Ulong_type__Group__0__Impl : ( 'unsigned' ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10616:1: rule__Ulong_type__Group__0__Impl : ( 'unsigned' ) ;
     public final void rule__Ulong_type__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10624:1: ( ( 'unsigned' ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10625:1: ( 'unsigned' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10620:1: ( ( 'unsigned' ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10621:1: ( 'unsigned' )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10625:1: ( 'unsigned' )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10626:1: 'unsigned'
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10621:1: ( 'unsigned' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10622:1: 'unsigned'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUlong_typeAccess().getUnsignedKeyword_0()); 
             }
-            match(input,74,FollowSets000.FOLLOW_74_in_rule__Ulong_type__Group__0__Impl21631); if (state.failed) return ;
+            match(input,73,FollowSets000.FOLLOW_73_in_rule__Ulong_type__Group__0__Impl21627); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getUlong_typeAccess().getUnsignedKeyword_0()); 
             }
@@ -31044,16 +31064,16 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Ulong_type__Group__1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10639:1: rule__Ulong_type__Group__1 : rule__Ulong_type__Group__1__Impl ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10635:1: rule__Ulong_type__Group__1 : rule__Ulong_type__Group__1__Impl ;
     public final void rule__Ulong_type__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10643:1: ( rule__Ulong_type__Group__1__Impl )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10644:2: rule__Ulong_type__Group__1__Impl
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10639:1: ( rule__Ulong_type__Group__1__Impl )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10640:2: rule__Ulong_type__Group__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Ulong_type__Group__1__Impl_in_rule__Ulong_type__Group__121662);
+            pushFollow(FollowSets000.FOLLOW_rule__Ulong_type__Group__1__Impl_in_rule__Ulong_type__Group__121658);
             rule__Ulong_type__Group__1__Impl();
 
             state._fsp--;
@@ -31077,22 +31097,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Ulong_type__Group__1__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10650:1: rule__Ulong_type__Group__1__Impl : ( 'long' ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10646:1: rule__Ulong_type__Group__1__Impl : ( 'long' ) ;
     public final void rule__Ulong_type__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10654:1: ( ( 'long' ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10655:1: ( 'long' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10650:1: ( ( 'long' ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10651:1: ( 'long' )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10655:1: ( 'long' )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10656:1: 'long'
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10651:1: ( 'long' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10652:1: 'long'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUlong_typeAccess().getLongKeyword_1()); 
             }
-            match(input,19,FollowSets000.FOLLOW_19_in_rule__Ulong_type__Group__1__Impl21690); if (state.failed) return ;
+            match(input,19,FollowSets000.FOLLOW_19_in_rule__Ulong_type__Group__1__Impl21686); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getUlong_typeAccess().getLongKeyword_1()); 
             }
@@ -31118,21 +31138,21 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Ulonglong_type__Group__0"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10673:1: rule__Ulonglong_type__Group__0 : rule__Ulonglong_type__Group__0__Impl rule__Ulonglong_type__Group__1 ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10669:1: rule__Ulonglong_type__Group__0 : rule__Ulonglong_type__Group__0__Impl rule__Ulonglong_type__Group__1 ;
     public final void rule__Ulonglong_type__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10677:1: ( rule__Ulonglong_type__Group__0__Impl rule__Ulonglong_type__Group__1 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10678:2: rule__Ulonglong_type__Group__0__Impl rule__Ulonglong_type__Group__1
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10673:1: ( rule__Ulonglong_type__Group__0__Impl rule__Ulonglong_type__Group__1 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10674:2: rule__Ulonglong_type__Group__0__Impl rule__Ulonglong_type__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Ulonglong_type__Group__0__Impl_in_rule__Ulonglong_type__Group__021725);
+            pushFollow(FollowSets000.FOLLOW_rule__Ulonglong_type__Group__0__Impl_in_rule__Ulonglong_type__Group__021721);
             rule__Ulonglong_type__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__Ulonglong_type__Group__1_in_rule__Ulonglong_type__Group__021728);
+            pushFollow(FollowSets000.FOLLOW_rule__Ulonglong_type__Group__1_in_rule__Ulonglong_type__Group__021724);
             rule__Ulonglong_type__Group__1();
 
             state._fsp--;
@@ -31156,22 +31176,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Ulonglong_type__Group__0__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10685:1: rule__Ulonglong_type__Group__0__Impl : ( 'unsigned' ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10681:1: rule__Ulonglong_type__Group__0__Impl : ( 'unsigned' ) ;
     public final void rule__Ulonglong_type__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10689:1: ( ( 'unsigned' ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10690:1: ( 'unsigned' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10685:1: ( ( 'unsigned' ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10686:1: ( 'unsigned' )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10690:1: ( 'unsigned' )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10691:1: 'unsigned'
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10686:1: ( 'unsigned' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10687:1: 'unsigned'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUlonglong_typeAccess().getUnsignedKeyword_0()); 
             }
-            match(input,74,FollowSets000.FOLLOW_74_in_rule__Ulonglong_type__Group__0__Impl21756); if (state.failed) return ;
+            match(input,73,FollowSets000.FOLLOW_73_in_rule__Ulonglong_type__Group__0__Impl21752); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getUlonglong_typeAccess().getUnsignedKeyword_0()); 
             }
@@ -31197,21 +31217,21 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Ulonglong_type__Group__1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10704:1: rule__Ulonglong_type__Group__1 : rule__Ulonglong_type__Group__1__Impl rule__Ulonglong_type__Group__2 ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10700:1: rule__Ulonglong_type__Group__1 : rule__Ulonglong_type__Group__1__Impl rule__Ulonglong_type__Group__2 ;
     public final void rule__Ulonglong_type__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10708:1: ( rule__Ulonglong_type__Group__1__Impl rule__Ulonglong_type__Group__2 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10709:2: rule__Ulonglong_type__Group__1__Impl rule__Ulonglong_type__Group__2
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10704:1: ( rule__Ulonglong_type__Group__1__Impl rule__Ulonglong_type__Group__2 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10705:2: rule__Ulonglong_type__Group__1__Impl rule__Ulonglong_type__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Ulonglong_type__Group__1__Impl_in_rule__Ulonglong_type__Group__121787);
+            pushFollow(FollowSets000.FOLLOW_rule__Ulonglong_type__Group__1__Impl_in_rule__Ulonglong_type__Group__121783);
             rule__Ulonglong_type__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__Ulonglong_type__Group__2_in_rule__Ulonglong_type__Group__121790);
+            pushFollow(FollowSets000.FOLLOW_rule__Ulonglong_type__Group__2_in_rule__Ulonglong_type__Group__121786);
             rule__Ulonglong_type__Group__2();
 
             state._fsp--;
@@ -31235,22 +31255,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Ulonglong_type__Group__1__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10716:1: rule__Ulonglong_type__Group__1__Impl : ( 'long' ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10712:1: rule__Ulonglong_type__Group__1__Impl : ( 'long' ) ;
     public final void rule__Ulonglong_type__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10720:1: ( ( 'long' ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10721:1: ( 'long' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10716:1: ( ( 'long' ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10717:1: ( 'long' )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10721:1: ( 'long' )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10722:1: 'long'
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10717:1: ( 'long' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10718:1: 'long'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUlonglong_typeAccess().getLongKeyword_1()); 
             }
-            match(input,19,FollowSets000.FOLLOW_19_in_rule__Ulonglong_type__Group__1__Impl21818); if (state.failed) return ;
+            match(input,19,FollowSets000.FOLLOW_19_in_rule__Ulonglong_type__Group__1__Impl21814); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getUlonglong_typeAccess().getLongKeyword_1()); 
             }
@@ -31276,16 +31296,16 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Ulonglong_type__Group__2"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10735:1: rule__Ulonglong_type__Group__2 : rule__Ulonglong_type__Group__2__Impl ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10731:1: rule__Ulonglong_type__Group__2 : rule__Ulonglong_type__Group__2__Impl ;
     public final void rule__Ulonglong_type__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10739:1: ( rule__Ulonglong_type__Group__2__Impl )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10740:2: rule__Ulonglong_type__Group__2__Impl
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10735:1: ( rule__Ulonglong_type__Group__2__Impl )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10736:2: rule__Ulonglong_type__Group__2__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Ulonglong_type__Group__2__Impl_in_rule__Ulonglong_type__Group__221849);
+            pushFollow(FollowSets000.FOLLOW_rule__Ulonglong_type__Group__2__Impl_in_rule__Ulonglong_type__Group__221845);
             rule__Ulonglong_type__Group__2__Impl();
 
             state._fsp--;
@@ -31309,22 +31329,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Ulonglong_type__Group__2__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10746:1: rule__Ulonglong_type__Group__2__Impl : ( 'long' ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10742:1: rule__Ulonglong_type__Group__2__Impl : ( 'long' ) ;
     public final void rule__Ulonglong_type__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10750:1: ( ( 'long' ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10751:1: ( 'long' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10746:1: ( ( 'long' ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10747:1: ( 'long' )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10751:1: ( 'long' )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10752:1: 'long'
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10747:1: ( 'long' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10748:1: 'long'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUlonglong_typeAccess().getLongKeyword_2()); 
             }
-            match(input,19,FollowSets000.FOLLOW_19_in_rule__Ulonglong_type__Group__2__Impl21877); if (state.failed) return ;
+            match(input,19,FollowSets000.FOLLOW_19_in_rule__Ulonglong_type__Group__2__Impl21873); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getUlonglong_typeAccess().getLongKeyword_2()); 
             }
@@ -31350,21 +31370,21 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Fixed_pt_const_type__Group__0"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10771:1: rule__Fixed_pt_const_type__Group__0 : rule__Fixed_pt_const_type__Group__0__Impl rule__Fixed_pt_const_type__Group__1 ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10767:1: rule__Fixed_pt_const_type__Group__0 : rule__Fixed_pt_const_type__Group__0__Impl rule__Fixed_pt_const_type__Group__1 ;
     public final void rule__Fixed_pt_const_type__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10775:1: ( rule__Fixed_pt_const_type__Group__0__Impl rule__Fixed_pt_const_type__Group__1 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10776:2: rule__Fixed_pt_const_type__Group__0__Impl rule__Fixed_pt_const_type__Group__1
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10771:1: ( rule__Fixed_pt_const_type__Group__0__Impl rule__Fixed_pt_const_type__Group__1 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10772:2: rule__Fixed_pt_const_type__Group__0__Impl rule__Fixed_pt_const_type__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Fixed_pt_const_type__Group__0__Impl_in_rule__Fixed_pt_const_type__Group__021914);
+            pushFollow(FollowSets000.FOLLOW_rule__Fixed_pt_const_type__Group__0__Impl_in_rule__Fixed_pt_const_type__Group__021910);
             rule__Fixed_pt_const_type__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__Fixed_pt_const_type__Group__1_in_rule__Fixed_pt_const_type__Group__021917);
+            pushFollow(FollowSets000.FOLLOW_rule__Fixed_pt_const_type__Group__1_in_rule__Fixed_pt_const_type__Group__021913);
             rule__Fixed_pt_const_type__Group__1();
 
             state._fsp--;
@@ -31388,23 +31408,23 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Fixed_pt_const_type__Group__0__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10783:1: rule__Fixed_pt_const_type__Group__0__Impl : ( () ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10779:1: rule__Fixed_pt_const_type__Group__0__Impl : ( () ) ;
     public final void rule__Fixed_pt_const_type__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10787:1: ( ( () ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10788:1: ( () )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10783:1: ( ( () ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10784:1: ( () )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10788:1: ( () )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10789:1: ()
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10784:1: ( () )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10785:1: ()
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFixed_pt_const_typeAccess().getFixedDefAction_0()); 
             }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10790:1: ()
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10792:1: 
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10786:1: ()
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10788:1: 
             {
             }
 
@@ -31429,16 +31449,16 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Fixed_pt_const_type__Group__1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10802:1: rule__Fixed_pt_const_type__Group__1 : rule__Fixed_pt_const_type__Group__1__Impl ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10798:1: rule__Fixed_pt_const_type__Group__1 : rule__Fixed_pt_const_type__Group__1__Impl ;
     public final void rule__Fixed_pt_const_type__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10806:1: ( rule__Fixed_pt_const_type__Group__1__Impl )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10807:2: rule__Fixed_pt_const_type__Group__1__Impl
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10802:1: ( rule__Fixed_pt_const_type__Group__1__Impl )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10803:2: rule__Fixed_pt_const_type__Group__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Fixed_pt_const_type__Group__1__Impl_in_rule__Fixed_pt_const_type__Group__121975);
+            pushFollow(FollowSets000.FOLLOW_rule__Fixed_pt_const_type__Group__1__Impl_in_rule__Fixed_pt_const_type__Group__121971);
             rule__Fixed_pt_const_type__Group__1__Impl();
 
             state._fsp--;
@@ -31462,22 +31482,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Fixed_pt_const_type__Group__1__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10813:1: rule__Fixed_pt_const_type__Group__1__Impl : ( 'fixed' ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10809:1: rule__Fixed_pt_const_type__Group__1__Impl : ( 'fixed' ) ;
     public final void rule__Fixed_pt_const_type__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10817:1: ( ( 'fixed' ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10818:1: ( 'fixed' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10813:1: ( ( 'fixed' ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10814:1: ( 'fixed' )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10818:1: ( 'fixed' )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10819:1: 'fixed'
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10814:1: ( 'fixed' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10815:1: 'fixed'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFixed_pt_const_typeAccess().getFixedKeyword_1()); 
             }
-            match(input,73,FollowSets000.FOLLOW_73_in_rule__Fixed_pt_const_type__Group__1__Impl22003); if (state.failed) return ;
+            match(input,72,FollowSets000.FOLLOW_72_in_rule__Fixed_pt_const_type__Group__1__Impl21999); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getFixed_pt_const_typeAccess().getFixedKeyword_1()); 
             }
@@ -31503,21 +31523,21 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Or_expr__Group__0"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10836:1: rule__Or_expr__Group__0 : rule__Or_expr__Group__0__Impl rule__Or_expr__Group__1 ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10832:1: rule__Or_expr__Group__0 : rule__Or_expr__Group__0__Impl rule__Or_expr__Group__1 ;
     public final void rule__Or_expr__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10840:1: ( rule__Or_expr__Group__0__Impl rule__Or_expr__Group__1 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10841:2: rule__Or_expr__Group__0__Impl rule__Or_expr__Group__1
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10836:1: ( rule__Or_expr__Group__0__Impl rule__Or_expr__Group__1 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10837:2: rule__Or_expr__Group__0__Impl rule__Or_expr__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Or_expr__Group__0__Impl_in_rule__Or_expr__Group__022038);
+            pushFollow(FollowSets000.FOLLOW_rule__Or_expr__Group__0__Impl_in_rule__Or_expr__Group__022034);
             rule__Or_expr__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__Or_expr__Group__1_in_rule__Or_expr__Group__022041);
+            pushFollow(FollowSets000.FOLLOW_rule__Or_expr__Group__1_in_rule__Or_expr__Group__022037);
             rule__Or_expr__Group__1();
 
             state._fsp--;
@@ -31541,22 +31561,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Or_expr__Group__0__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10848:1: rule__Or_expr__Group__0__Impl : ( rulexor_expr ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10844:1: rule__Or_expr__Group__0__Impl : ( rulexor_expr ) ;
     public final void rule__Or_expr__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10852:1: ( ( rulexor_expr ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10853:1: ( rulexor_expr )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10848:1: ( ( rulexor_expr ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10849:1: ( rulexor_expr )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10853:1: ( rulexor_expr )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10854:1: rulexor_expr
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10849:1: ( rulexor_expr )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10850:1: rulexor_expr
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getOr_exprAccess().getXor_exprParserRuleCall_0()); 
             }
-            pushFollow(FollowSets000.FOLLOW_rulexor_expr_in_rule__Or_expr__Group__0__Impl22068);
+            pushFollow(FollowSets000.FOLLOW_rulexor_expr_in_rule__Or_expr__Group__0__Impl22064);
             rulexor_expr();
 
             state._fsp--;
@@ -31586,16 +31606,16 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Or_expr__Group__1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10865:1: rule__Or_expr__Group__1 : rule__Or_expr__Group__1__Impl ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10861:1: rule__Or_expr__Group__1 : rule__Or_expr__Group__1__Impl ;
     public final void rule__Or_expr__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10869:1: ( rule__Or_expr__Group__1__Impl )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10870:2: rule__Or_expr__Group__1__Impl
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10865:1: ( rule__Or_expr__Group__1__Impl )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10866:2: rule__Or_expr__Group__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Or_expr__Group__1__Impl_in_rule__Or_expr__Group__122097);
+            pushFollow(FollowSets000.FOLLOW_rule__Or_expr__Group__1__Impl_in_rule__Or_expr__Group__122093);
             rule__Or_expr__Group__1__Impl();
 
             state._fsp--;
@@ -31619,22 +31639,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Or_expr__Group__1__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10876:1: rule__Or_expr__Group__1__Impl : ( ( rule__Or_expr__Group_1__0 )* ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10872:1: rule__Or_expr__Group__1__Impl : ( ( rule__Or_expr__Group_1__0 )* ) ;
     public final void rule__Or_expr__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10880:1: ( ( ( rule__Or_expr__Group_1__0 )* ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10881:1: ( ( rule__Or_expr__Group_1__0 )* )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10876:1: ( ( ( rule__Or_expr__Group_1__0 )* ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10877:1: ( ( rule__Or_expr__Group_1__0 )* )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10881:1: ( ( rule__Or_expr__Group_1__0 )* )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10882:1: ( rule__Or_expr__Group_1__0 )*
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10877:1: ( ( rule__Or_expr__Group_1__0 )* )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10878:1: ( rule__Or_expr__Group_1__0 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getOr_exprAccess().getGroup_1()); 
             }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10883:1: ( rule__Or_expr__Group_1__0 )*
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10879:1: ( rule__Or_expr__Group_1__0 )*
             loop77:
             do {
                 int alt77=2;
@@ -31647,9 +31667,9 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
                 switch (alt77) {
             	case 1 :
-            	    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10883:2: rule__Or_expr__Group_1__0
+            	    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10879:2: rule__Or_expr__Group_1__0
             	    {
-            	    pushFollow(FollowSets000.FOLLOW_rule__Or_expr__Group_1__0_in_rule__Or_expr__Group__1__Impl22124);
+            	    pushFollow(FollowSets000.FOLLOW_rule__Or_expr__Group_1__0_in_rule__Or_expr__Group__1__Impl22120);
             	    rule__Or_expr__Group_1__0();
 
             	    state._fsp--;
@@ -31688,21 +31708,21 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Or_expr__Group_1__0"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10897:1: rule__Or_expr__Group_1__0 : rule__Or_expr__Group_1__0__Impl rule__Or_expr__Group_1__1 ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10893:1: rule__Or_expr__Group_1__0 : rule__Or_expr__Group_1__0__Impl rule__Or_expr__Group_1__1 ;
     public final void rule__Or_expr__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10901:1: ( rule__Or_expr__Group_1__0__Impl rule__Or_expr__Group_1__1 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10902:2: rule__Or_expr__Group_1__0__Impl rule__Or_expr__Group_1__1
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10897:1: ( rule__Or_expr__Group_1__0__Impl rule__Or_expr__Group_1__1 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10898:2: rule__Or_expr__Group_1__0__Impl rule__Or_expr__Group_1__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Or_expr__Group_1__0__Impl_in_rule__Or_expr__Group_1__022159);
+            pushFollow(FollowSets000.FOLLOW_rule__Or_expr__Group_1__0__Impl_in_rule__Or_expr__Group_1__022155);
             rule__Or_expr__Group_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__Or_expr__Group_1__1_in_rule__Or_expr__Group_1__022162);
+            pushFollow(FollowSets000.FOLLOW_rule__Or_expr__Group_1__1_in_rule__Or_expr__Group_1__022158);
             rule__Or_expr__Group_1__1();
 
             state._fsp--;
@@ -31726,23 +31746,23 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Or_expr__Group_1__0__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10909:1: rule__Or_expr__Group_1__0__Impl : ( () ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10905:1: rule__Or_expr__Group_1__0__Impl : ( () ) ;
     public final void rule__Or_expr__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10913:1: ( ( () ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10914:1: ( () )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10909:1: ( ( () ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10910:1: ( () )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10914:1: ( () )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10915:1: ()
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10910:1: ( () )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10911:1: ()
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getOr_exprAccess().getBinaryExpressionLeftAction_1_0()); 
             }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10916:1: ()
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10918:1: 
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10912:1: ()
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10914:1: 
             {
             }
 
@@ -31767,21 +31787,21 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Or_expr__Group_1__1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10928:1: rule__Or_expr__Group_1__1 : rule__Or_expr__Group_1__1__Impl rule__Or_expr__Group_1__2 ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10924:1: rule__Or_expr__Group_1__1 : rule__Or_expr__Group_1__1__Impl rule__Or_expr__Group_1__2 ;
     public final void rule__Or_expr__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10932:1: ( rule__Or_expr__Group_1__1__Impl rule__Or_expr__Group_1__2 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10933:2: rule__Or_expr__Group_1__1__Impl rule__Or_expr__Group_1__2
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10928:1: ( rule__Or_expr__Group_1__1__Impl rule__Or_expr__Group_1__2 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10929:2: rule__Or_expr__Group_1__1__Impl rule__Or_expr__Group_1__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Or_expr__Group_1__1__Impl_in_rule__Or_expr__Group_1__122220);
+            pushFollow(FollowSets000.FOLLOW_rule__Or_expr__Group_1__1__Impl_in_rule__Or_expr__Group_1__122216);
             rule__Or_expr__Group_1__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__Or_expr__Group_1__2_in_rule__Or_expr__Group_1__122223);
+            pushFollow(FollowSets000.FOLLOW_rule__Or_expr__Group_1__2_in_rule__Or_expr__Group_1__122219);
             rule__Or_expr__Group_1__2();
 
             state._fsp--;
@@ -31805,25 +31825,25 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Or_expr__Group_1__1__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10940:1: rule__Or_expr__Group_1__1__Impl : ( ( rule__Or_expr__OperatorAssignment_1_1 ) ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10936:1: rule__Or_expr__Group_1__1__Impl : ( ( rule__Or_expr__OperatorAssignment_1_1 ) ) ;
     public final void rule__Or_expr__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10944:1: ( ( ( rule__Or_expr__OperatorAssignment_1_1 ) ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10945:1: ( ( rule__Or_expr__OperatorAssignment_1_1 ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10940:1: ( ( ( rule__Or_expr__OperatorAssignment_1_1 ) ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10941:1: ( ( rule__Or_expr__OperatorAssignment_1_1 ) )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10945:1: ( ( rule__Or_expr__OperatorAssignment_1_1 ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10946:1: ( rule__Or_expr__OperatorAssignment_1_1 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10941:1: ( ( rule__Or_expr__OperatorAssignment_1_1 ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10942:1: ( rule__Or_expr__OperatorAssignment_1_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getOr_exprAccess().getOperatorAssignment_1_1()); 
             }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10947:1: ( rule__Or_expr__OperatorAssignment_1_1 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10947:2: rule__Or_expr__OperatorAssignment_1_1
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10943:1: ( rule__Or_expr__OperatorAssignment_1_1 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10943:2: rule__Or_expr__OperatorAssignment_1_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Or_expr__OperatorAssignment_1_1_in_rule__Or_expr__Group_1__1__Impl22250);
+            pushFollow(FollowSets000.FOLLOW_rule__Or_expr__OperatorAssignment_1_1_in_rule__Or_expr__Group_1__1__Impl22246);
             rule__Or_expr__OperatorAssignment_1_1();
 
             state._fsp--;
@@ -31856,16 +31876,16 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Or_expr__Group_1__2"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10957:1: rule__Or_expr__Group_1__2 : rule__Or_expr__Group_1__2__Impl ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10953:1: rule__Or_expr__Group_1__2 : rule__Or_expr__Group_1__2__Impl ;
     public final void rule__Or_expr__Group_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10961:1: ( rule__Or_expr__Group_1__2__Impl )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10962:2: rule__Or_expr__Group_1__2__Impl
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10957:1: ( rule__Or_expr__Group_1__2__Impl )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10958:2: rule__Or_expr__Group_1__2__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Or_expr__Group_1__2__Impl_in_rule__Or_expr__Group_1__222280);
+            pushFollow(FollowSets000.FOLLOW_rule__Or_expr__Group_1__2__Impl_in_rule__Or_expr__Group_1__222276);
             rule__Or_expr__Group_1__2__Impl();
 
             state._fsp--;
@@ -31889,25 +31909,25 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Or_expr__Group_1__2__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10968:1: rule__Or_expr__Group_1__2__Impl : ( ( rule__Or_expr__RightAssignment_1_2 ) ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10964:1: rule__Or_expr__Group_1__2__Impl : ( ( rule__Or_expr__RightAssignment_1_2 ) ) ;
     public final void rule__Or_expr__Group_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10972:1: ( ( ( rule__Or_expr__RightAssignment_1_2 ) ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10973:1: ( ( rule__Or_expr__RightAssignment_1_2 ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10968:1: ( ( ( rule__Or_expr__RightAssignment_1_2 ) ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10969:1: ( ( rule__Or_expr__RightAssignment_1_2 ) )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10973:1: ( ( rule__Or_expr__RightAssignment_1_2 ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10974:1: ( rule__Or_expr__RightAssignment_1_2 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10969:1: ( ( rule__Or_expr__RightAssignment_1_2 ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10970:1: ( rule__Or_expr__RightAssignment_1_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getOr_exprAccess().getRightAssignment_1_2()); 
             }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10975:1: ( rule__Or_expr__RightAssignment_1_2 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10975:2: rule__Or_expr__RightAssignment_1_2
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10971:1: ( rule__Or_expr__RightAssignment_1_2 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10971:2: rule__Or_expr__RightAssignment_1_2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Or_expr__RightAssignment_1_2_in_rule__Or_expr__Group_1__2__Impl22307);
+            pushFollow(FollowSets000.FOLLOW_rule__Or_expr__RightAssignment_1_2_in_rule__Or_expr__Group_1__2__Impl22303);
             rule__Or_expr__RightAssignment_1_2();
 
             state._fsp--;
@@ -31940,21 +31960,21 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Xor_expr__Group__0"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10991:1: rule__Xor_expr__Group__0 : rule__Xor_expr__Group__0__Impl rule__Xor_expr__Group__1 ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10987:1: rule__Xor_expr__Group__0 : rule__Xor_expr__Group__0__Impl rule__Xor_expr__Group__1 ;
     public final void rule__Xor_expr__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10995:1: ( rule__Xor_expr__Group__0__Impl rule__Xor_expr__Group__1 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10996:2: rule__Xor_expr__Group__0__Impl rule__Xor_expr__Group__1
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10991:1: ( rule__Xor_expr__Group__0__Impl rule__Xor_expr__Group__1 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10992:2: rule__Xor_expr__Group__0__Impl rule__Xor_expr__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Xor_expr__Group__0__Impl_in_rule__Xor_expr__Group__022343);
+            pushFollow(FollowSets000.FOLLOW_rule__Xor_expr__Group__0__Impl_in_rule__Xor_expr__Group__022339);
             rule__Xor_expr__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__Xor_expr__Group__1_in_rule__Xor_expr__Group__022346);
+            pushFollow(FollowSets000.FOLLOW_rule__Xor_expr__Group__1_in_rule__Xor_expr__Group__022342);
             rule__Xor_expr__Group__1();
 
             state._fsp--;
@@ -31978,22 +31998,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Xor_expr__Group__0__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11003:1: rule__Xor_expr__Group__0__Impl : ( ruleand_expr ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:10999:1: rule__Xor_expr__Group__0__Impl : ( ruleand_expr ) ;
     public final void rule__Xor_expr__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11007:1: ( ( ruleand_expr ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11008:1: ( ruleand_expr )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11003:1: ( ( ruleand_expr ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11004:1: ( ruleand_expr )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11008:1: ( ruleand_expr )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11009:1: ruleand_expr
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11004:1: ( ruleand_expr )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11005:1: ruleand_expr
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getXor_exprAccess().getAnd_exprParserRuleCall_0()); 
             }
-            pushFollow(FollowSets000.FOLLOW_ruleand_expr_in_rule__Xor_expr__Group__0__Impl22373);
+            pushFollow(FollowSets000.FOLLOW_ruleand_expr_in_rule__Xor_expr__Group__0__Impl22369);
             ruleand_expr();
 
             state._fsp--;
@@ -32023,16 +32043,16 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Xor_expr__Group__1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11020:1: rule__Xor_expr__Group__1 : rule__Xor_expr__Group__1__Impl ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11016:1: rule__Xor_expr__Group__1 : rule__Xor_expr__Group__1__Impl ;
     public final void rule__Xor_expr__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11024:1: ( rule__Xor_expr__Group__1__Impl )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11025:2: rule__Xor_expr__Group__1__Impl
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11020:1: ( rule__Xor_expr__Group__1__Impl )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11021:2: rule__Xor_expr__Group__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Xor_expr__Group__1__Impl_in_rule__Xor_expr__Group__122402);
+            pushFollow(FollowSets000.FOLLOW_rule__Xor_expr__Group__1__Impl_in_rule__Xor_expr__Group__122398);
             rule__Xor_expr__Group__1__Impl();
 
             state._fsp--;
@@ -32056,22 +32076,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Xor_expr__Group__1__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11031:1: rule__Xor_expr__Group__1__Impl : ( ( rule__Xor_expr__Group_1__0 )* ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11027:1: rule__Xor_expr__Group__1__Impl : ( ( rule__Xor_expr__Group_1__0 )* ) ;
     public final void rule__Xor_expr__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11035:1: ( ( ( rule__Xor_expr__Group_1__0 )* ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11036:1: ( ( rule__Xor_expr__Group_1__0 )* )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11031:1: ( ( ( rule__Xor_expr__Group_1__0 )* ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11032:1: ( ( rule__Xor_expr__Group_1__0 )* )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11036:1: ( ( rule__Xor_expr__Group_1__0 )* )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11037:1: ( rule__Xor_expr__Group_1__0 )*
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11032:1: ( ( rule__Xor_expr__Group_1__0 )* )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11033:1: ( rule__Xor_expr__Group_1__0 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getXor_exprAccess().getGroup_1()); 
             }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11038:1: ( rule__Xor_expr__Group_1__0 )*
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11034:1: ( rule__Xor_expr__Group_1__0 )*
             loop78:
             do {
                 int alt78=2;
@@ -32084,9 +32104,9 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
                 switch (alt78) {
             	case 1 :
-            	    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11038:2: rule__Xor_expr__Group_1__0
+            	    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11034:2: rule__Xor_expr__Group_1__0
             	    {
-            	    pushFollow(FollowSets000.FOLLOW_rule__Xor_expr__Group_1__0_in_rule__Xor_expr__Group__1__Impl22429);
+            	    pushFollow(FollowSets000.FOLLOW_rule__Xor_expr__Group_1__0_in_rule__Xor_expr__Group__1__Impl22425);
             	    rule__Xor_expr__Group_1__0();
 
             	    state._fsp--;
@@ -32125,21 +32145,21 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Xor_expr__Group_1__0"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11052:1: rule__Xor_expr__Group_1__0 : rule__Xor_expr__Group_1__0__Impl rule__Xor_expr__Group_1__1 ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11048:1: rule__Xor_expr__Group_1__0 : rule__Xor_expr__Group_1__0__Impl rule__Xor_expr__Group_1__1 ;
     public final void rule__Xor_expr__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11056:1: ( rule__Xor_expr__Group_1__0__Impl rule__Xor_expr__Group_1__1 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11057:2: rule__Xor_expr__Group_1__0__Impl rule__Xor_expr__Group_1__1
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11052:1: ( rule__Xor_expr__Group_1__0__Impl rule__Xor_expr__Group_1__1 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11053:2: rule__Xor_expr__Group_1__0__Impl rule__Xor_expr__Group_1__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Xor_expr__Group_1__0__Impl_in_rule__Xor_expr__Group_1__022464);
+            pushFollow(FollowSets000.FOLLOW_rule__Xor_expr__Group_1__0__Impl_in_rule__Xor_expr__Group_1__022460);
             rule__Xor_expr__Group_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__Xor_expr__Group_1__1_in_rule__Xor_expr__Group_1__022467);
+            pushFollow(FollowSets000.FOLLOW_rule__Xor_expr__Group_1__1_in_rule__Xor_expr__Group_1__022463);
             rule__Xor_expr__Group_1__1();
 
             state._fsp--;
@@ -32163,23 +32183,23 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Xor_expr__Group_1__0__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11064:1: rule__Xor_expr__Group_1__0__Impl : ( () ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11060:1: rule__Xor_expr__Group_1__0__Impl : ( () ) ;
     public final void rule__Xor_expr__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11068:1: ( ( () ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11069:1: ( () )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11064:1: ( ( () ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11065:1: ( () )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11069:1: ( () )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11070:1: ()
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11065:1: ( () )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11066:1: ()
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getXor_exprAccess().getBinaryExpressionLeftAction_1_0()); 
             }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11071:1: ()
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11073:1: 
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11067:1: ()
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11069:1: 
             {
             }
 
@@ -32204,21 +32224,21 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Xor_expr__Group_1__1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11083:1: rule__Xor_expr__Group_1__1 : rule__Xor_expr__Group_1__1__Impl rule__Xor_expr__Group_1__2 ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11079:1: rule__Xor_expr__Group_1__1 : rule__Xor_expr__Group_1__1__Impl rule__Xor_expr__Group_1__2 ;
     public final void rule__Xor_expr__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11087:1: ( rule__Xor_expr__Group_1__1__Impl rule__Xor_expr__Group_1__2 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11088:2: rule__Xor_expr__Group_1__1__Impl rule__Xor_expr__Group_1__2
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11083:1: ( rule__Xor_expr__Group_1__1__Impl rule__Xor_expr__Group_1__2 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11084:2: rule__Xor_expr__Group_1__1__Impl rule__Xor_expr__Group_1__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Xor_expr__Group_1__1__Impl_in_rule__Xor_expr__Group_1__122525);
+            pushFollow(FollowSets000.FOLLOW_rule__Xor_expr__Group_1__1__Impl_in_rule__Xor_expr__Group_1__122521);
             rule__Xor_expr__Group_1__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__Xor_expr__Group_1__2_in_rule__Xor_expr__Group_1__122528);
+            pushFollow(FollowSets000.FOLLOW_rule__Xor_expr__Group_1__2_in_rule__Xor_expr__Group_1__122524);
             rule__Xor_expr__Group_1__2();
 
             state._fsp--;
@@ -32242,25 +32262,25 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Xor_expr__Group_1__1__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11095:1: rule__Xor_expr__Group_1__1__Impl : ( ( rule__Xor_expr__OperatorAssignment_1_1 ) ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11091:1: rule__Xor_expr__Group_1__1__Impl : ( ( rule__Xor_expr__OperatorAssignment_1_1 ) ) ;
     public final void rule__Xor_expr__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11099:1: ( ( ( rule__Xor_expr__OperatorAssignment_1_1 ) ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11100:1: ( ( rule__Xor_expr__OperatorAssignment_1_1 ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11095:1: ( ( ( rule__Xor_expr__OperatorAssignment_1_1 ) ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11096:1: ( ( rule__Xor_expr__OperatorAssignment_1_1 ) )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11100:1: ( ( rule__Xor_expr__OperatorAssignment_1_1 ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11101:1: ( rule__Xor_expr__OperatorAssignment_1_1 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11096:1: ( ( rule__Xor_expr__OperatorAssignment_1_1 ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11097:1: ( rule__Xor_expr__OperatorAssignment_1_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getXor_exprAccess().getOperatorAssignment_1_1()); 
             }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11102:1: ( rule__Xor_expr__OperatorAssignment_1_1 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11102:2: rule__Xor_expr__OperatorAssignment_1_1
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11098:1: ( rule__Xor_expr__OperatorAssignment_1_1 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11098:2: rule__Xor_expr__OperatorAssignment_1_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Xor_expr__OperatorAssignment_1_1_in_rule__Xor_expr__Group_1__1__Impl22555);
+            pushFollow(FollowSets000.FOLLOW_rule__Xor_expr__OperatorAssignment_1_1_in_rule__Xor_expr__Group_1__1__Impl22551);
             rule__Xor_expr__OperatorAssignment_1_1();
 
             state._fsp--;
@@ -32293,16 +32313,16 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Xor_expr__Group_1__2"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11112:1: rule__Xor_expr__Group_1__2 : rule__Xor_expr__Group_1__2__Impl ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11108:1: rule__Xor_expr__Group_1__2 : rule__Xor_expr__Group_1__2__Impl ;
     public final void rule__Xor_expr__Group_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11116:1: ( rule__Xor_expr__Group_1__2__Impl )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11117:2: rule__Xor_expr__Group_1__2__Impl
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11112:1: ( rule__Xor_expr__Group_1__2__Impl )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11113:2: rule__Xor_expr__Group_1__2__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Xor_expr__Group_1__2__Impl_in_rule__Xor_expr__Group_1__222585);
+            pushFollow(FollowSets000.FOLLOW_rule__Xor_expr__Group_1__2__Impl_in_rule__Xor_expr__Group_1__222581);
             rule__Xor_expr__Group_1__2__Impl();
 
             state._fsp--;
@@ -32326,25 +32346,25 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Xor_expr__Group_1__2__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11123:1: rule__Xor_expr__Group_1__2__Impl : ( ( rule__Xor_expr__RightAssignment_1_2 ) ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11119:1: rule__Xor_expr__Group_1__2__Impl : ( ( rule__Xor_expr__RightAssignment_1_2 ) ) ;
     public final void rule__Xor_expr__Group_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11127:1: ( ( ( rule__Xor_expr__RightAssignment_1_2 ) ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11128:1: ( ( rule__Xor_expr__RightAssignment_1_2 ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11123:1: ( ( ( rule__Xor_expr__RightAssignment_1_2 ) ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11124:1: ( ( rule__Xor_expr__RightAssignment_1_2 ) )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11128:1: ( ( rule__Xor_expr__RightAssignment_1_2 ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11129:1: ( rule__Xor_expr__RightAssignment_1_2 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11124:1: ( ( rule__Xor_expr__RightAssignment_1_2 ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11125:1: ( rule__Xor_expr__RightAssignment_1_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getXor_exprAccess().getRightAssignment_1_2()); 
             }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11130:1: ( rule__Xor_expr__RightAssignment_1_2 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11130:2: rule__Xor_expr__RightAssignment_1_2
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11126:1: ( rule__Xor_expr__RightAssignment_1_2 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11126:2: rule__Xor_expr__RightAssignment_1_2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Xor_expr__RightAssignment_1_2_in_rule__Xor_expr__Group_1__2__Impl22612);
+            pushFollow(FollowSets000.FOLLOW_rule__Xor_expr__RightAssignment_1_2_in_rule__Xor_expr__Group_1__2__Impl22608);
             rule__Xor_expr__RightAssignment_1_2();
 
             state._fsp--;
@@ -32377,21 +32397,21 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__And_expr__Group__0"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11146:1: rule__And_expr__Group__0 : rule__And_expr__Group__0__Impl rule__And_expr__Group__1 ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11142:1: rule__And_expr__Group__0 : rule__And_expr__Group__0__Impl rule__And_expr__Group__1 ;
     public final void rule__And_expr__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11150:1: ( rule__And_expr__Group__0__Impl rule__And_expr__Group__1 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11151:2: rule__And_expr__Group__0__Impl rule__And_expr__Group__1
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11146:1: ( rule__And_expr__Group__0__Impl rule__And_expr__Group__1 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11147:2: rule__And_expr__Group__0__Impl rule__And_expr__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__And_expr__Group__0__Impl_in_rule__And_expr__Group__022648);
+            pushFollow(FollowSets000.FOLLOW_rule__And_expr__Group__0__Impl_in_rule__And_expr__Group__022644);
             rule__And_expr__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__And_expr__Group__1_in_rule__And_expr__Group__022651);
+            pushFollow(FollowSets000.FOLLOW_rule__And_expr__Group__1_in_rule__And_expr__Group__022647);
             rule__And_expr__Group__1();
 
             state._fsp--;
@@ -32415,22 +32435,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__And_expr__Group__0__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11158:1: rule__And_expr__Group__0__Impl : ( ruleshift_expr ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11154:1: rule__And_expr__Group__0__Impl : ( ruleshift_expr ) ;
     public final void rule__And_expr__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11162:1: ( ( ruleshift_expr ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11163:1: ( ruleshift_expr )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11158:1: ( ( ruleshift_expr ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11159:1: ( ruleshift_expr )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11163:1: ( ruleshift_expr )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11164:1: ruleshift_expr
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11159:1: ( ruleshift_expr )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11160:1: ruleshift_expr
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAnd_exprAccess().getShift_exprParserRuleCall_0()); 
             }
-            pushFollow(FollowSets000.FOLLOW_ruleshift_expr_in_rule__And_expr__Group__0__Impl22678);
+            pushFollow(FollowSets000.FOLLOW_ruleshift_expr_in_rule__And_expr__Group__0__Impl22674);
             ruleshift_expr();
 
             state._fsp--;
@@ -32460,16 +32480,16 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__And_expr__Group__1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11175:1: rule__And_expr__Group__1 : rule__And_expr__Group__1__Impl ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11171:1: rule__And_expr__Group__1 : rule__And_expr__Group__1__Impl ;
     public final void rule__And_expr__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11179:1: ( rule__And_expr__Group__1__Impl )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11180:2: rule__And_expr__Group__1__Impl
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11175:1: ( rule__And_expr__Group__1__Impl )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11176:2: rule__And_expr__Group__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__And_expr__Group__1__Impl_in_rule__And_expr__Group__122707);
+            pushFollow(FollowSets000.FOLLOW_rule__And_expr__Group__1__Impl_in_rule__And_expr__Group__122703);
             rule__And_expr__Group__1__Impl();
 
             state._fsp--;
@@ -32493,22 +32513,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__And_expr__Group__1__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11186:1: rule__And_expr__Group__1__Impl : ( ( rule__And_expr__Group_1__0 )* ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11182:1: rule__And_expr__Group__1__Impl : ( ( rule__And_expr__Group_1__0 )* ) ;
     public final void rule__And_expr__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11190:1: ( ( ( rule__And_expr__Group_1__0 )* ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11191:1: ( ( rule__And_expr__Group_1__0 )* )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11186:1: ( ( ( rule__And_expr__Group_1__0 )* ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11187:1: ( ( rule__And_expr__Group_1__0 )* )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11191:1: ( ( rule__And_expr__Group_1__0 )* )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11192:1: ( rule__And_expr__Group_1__0 )*
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11187:1: ( ( rule__And_expr__Group_1__0 )* )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11188:1: ( rule__And_expr__Group_1__0 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAnd_exprAccess().getGroup_1()); 
             }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11193:1: ( rule__And_expr__Group_1__0 )*
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11189:1: ( rule__And_expr__Group_1__0 )*
             loop79:
             do {
                 int alt79=2;
@@ -32521,9 +32541,9 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
                 switch (alt79) {
             	case 1 :
-            	    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11193:2: rule__And_expr__Group_1__0
+            	    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11189:2: rule__And_expr__Group_1__0
             	    {
-            	    pushFollow(FollowSets000.FOLLOW_rule__And_expr__Group_1__0_in_rule__And_expr__Group__1__Impl22734);
+            	    pushFollow(FollowSets000.FOLLOW_rule__And_expr__Group_1__0_in_rule__And_expr__Group__1__Impl22730);
             	    rule__And_expr__Group_1__0();
 
             	    state._fsp--;
@@ -32562,21 +32582,21 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__And_expr__Group_1__0"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11207:1: rule__And_expr__Group_1__0 : rule__And_expr__Group_1__0__Impl rule__And_expr__Group_1__1 ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11203:1: rule__And_expr__Group_1__0 : rule__And_expr__Group_1__0__Impl rule__And_expr__Group_1__1 ;
     public final void rule__And_expr__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11211:1: ( rule__And_expr__Group_1__0__Impl rule__And_expr__Group_1__1 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11212:2: rule__And_expr__Group_1__0__Impl rule__And_expr__Group_1__1
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11207:1: ( rule__And_expr__Group_1__0__Impl rule__And_expr__Group_1__1 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11208:2: rule__And_expr__Group_1__0__Impl rule__And_expr__Group_1__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__And_expr__Group_1__0__Impl_in_rule__And_expr__Group_1__022769);
+            pushFollow(FollowSets000.FOLLOW_rule__And_expr__Group_1__0__Impl_in_rule__And_expr__Group_1__022765);
             rule__And_expr__Group_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__And_expr__Group_1__1_in_rule__And_expr__Group_1__022772);
+            pushFollow(FollowSets000.FOLLOW_rule__And_expr__Group_1__1_in_rule__And_expr__Group_1__022768);
             rule__And_expr__Group_1__1();
 
             state._fsp--;
@@ -32600,23 +32620,23 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__And_expr__Group_1__0__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11219:1: rule__And_expr__Group_1__0__Impl : ( () ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11215:1: rule__And_expr__Group_1__0__Impl : ( () ) ;
     public final void rule__And_expr__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11223:1: ( ( () ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11224:1: ( () )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11219:1: ( ( () ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11220:1: ( () )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11224:1: ( () )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11225:1: ()
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11220:1: ( () )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11221:1: ()
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAnd_exprAccess().getBinaryExpressionLeftAction_1_0()); 
             }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11226:1: ()
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11228:1: 
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11222:1: ()
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11224:1: 
             {
             }
 
@@ -32641,21 +32661,21 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__And_expr__Group_1__1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11238:1: rule__And_expr__Group_1__1 : rule__And_expr__Group_1__1__Impl rule__And_expr__Group_1__2 ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11234:1: rule__And_expr__Group_1__1 : rule__And_expr__Group_1__1__Impl rule__And_expr__Group_1__2 ;
     public final void rule__And_expr__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11242:1: ( rule__And_expr__Group_1__1__Impl rule__And_expr__Group_1__2 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11243:2: rule__And_expr__Group_1__1__Impl rule__And_expr__Group_1__2
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11238:1: ( rule__And_expr__Group_1__1__Impl rule__And_expr__Group_1__2 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11239:2: rule__And_expr__Group_1__1__Impl rule__And_expr__Group_1__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__And_expr__Group_1__1__Impl_in_rule__And_expr__Group_1__122830);
+            pushFollow(FollowSets000.FOLLOW_rule__And_expr__Group_1__1__Impl_in_rule__And_expr__Group_1__122826);
             rule__And_expr__Group_1__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__And_expr__Group_1__2_in_rule__And_expr__Group_1__122833);
+            pushFollow(FollowSets000.FOLLOW_rule__And_expr__Group_1__2_in_rule__And_expr__Group_1__122829);
             rule__And_expr__Group_1__2();
 
             state._fsp--;
@@ -32679,25 +32699,25 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__And_expr__Group_1__1__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11250:1: rule__And_expr__Group_1__1__Impl : ( ( rule__And_expr__OperatorAssignment_1_1 ) ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11246:1: rule__And_expr__Group_1__1__Impl : ( ( rule__And_expr__OperatorAssignment_1_1 ) ) ;
     public final void rule__And_expr__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11254:1: ( ( ( rule__And_expr__OperatorAssignment_1_1 ) ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11255:1: ( ( rule__And_expr__OperatorAssignment_1_1 ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11250:1: ( ( ( rule__And_expr__OperatorAssignment_1_1 ) ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11251:1: ( ( rule__And_expr__OperatorAssignment_1_1 ) )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11255:1: ( ( rule__And_expr__OperatorAssignment_1_1 ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11256:1: ( rule__And_expr__OperatorAssignment_1_1 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11251:1: ( ( rule__And_expr__OperatorAssignment_1_1 ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11252:1: ( rule__And_expr__OperatorAssignment_1_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAnd_exprAccess().getOperatorAssignment_1_1()); 
             }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11257:1: ( rule__And_expr__OperatorAssignment_1_1 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11257:2: rule__And_expr__OperatorAssignment_1_1
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11253:1: ( rule__And_expr__OperatorAssignment_1_1 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11253:2: rule__And_expr__OperatorAssignment_1_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__And_expr__OperatorAssignment_1_1_in_rule__And_expr__Group_1__1__Impl22860);
+            pushFollow(FollowSets000.FOLLOW_rule__And_expr__OperatorAssignment_1_1_in_rule__And_expr__Group_1__1__Impl22856);
             rule__And_expr__OperatorAssignment_1_1();
 
             state._fsp--;
@@ -32730,16 +32750,16 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__And_expr__Group_1__2"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11267:1: rule__And_expr__Group_1__2 : rule__And_expr__Group_1__2__Impl ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11263:1: rule__And_expr__Group_1__2 : rule__And_expr__Group_1__2__Impl ;
     public final void rule__And_expr__Group_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11271:1: ( rule__And_expr__Group_1__2__Impl )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11272:2: rule__And_expr__Group_1__2__Impl
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11267:1: ( rule__And_expr__Group_1__2__Impl )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11268:2: rule__And_expr__Group_1__2__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__And_expr__Group_1__2__Impl_in_rule__And_expr__Group_1__222890);
+            pushFollow(FollowSets000.FOLLOW_rule__And_expr__Group_1__2__Impl_in_rule__And_expr__Group_1__222886);
             rule__And_expr__Group_1__2__Impl();
 
             state._fsp--;
@@ -32763,25 +32783,25 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__And_expr__Group_1__2__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11278:1: rule__And_expr__Group_1__2__Impl : ( ( rule__And_expr__RightAssignment_1_2 ) ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11274:1: rule__And_expr__Group_1__2__Impl : ( ( rule__And_expr__RightAssignment_1_2 ) ) ;
     public final void rule__And_expr__Group_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11282:1: ( ( ( rule__And_expr__RightAssignment_1_2 ) ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11283:1: ( ( rule__And_expr__RightAssignment_1_2 ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11278:1: ( ( ( rule__And_expr__RightAssignment_1_2 ) ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11279:1: ( ( rule__And_expr__RightAssignment_1_2 ) )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11283:1: ( ( rule__And_expr__RightAssignment_1_2 ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11284:1: ( rule__And_expr__RightAssignment_1_2 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11279:1: ( ( rule__And_expr__RightAssignment_1_2 ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11280:1: ( rule__And_expr__RightAssignment_1_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAnd_exprAccess().getRightAssignment_1_2()); 
             }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11285:1: ( rule__And_expr__RightAssignment_1_2 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11285:2: rule__And_expr__RightAssignment_1_2
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11281:1: ( rule__And_expr__RightAssignment_1_2 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11281:2: rule__And_expr__RightAssignment_1_2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__And_expr__RightAssignment_1_2_in_rule__And_expr__Group_1__2__Impl22917);
+            pushFollow(FollowSets000.FOLLOW_rule__And_expr__RightAssignment_1_2_in_rule__And_expr__Group_1__2__Impl22913);
             rule__And_expr__RightAssignment_1_2();
 
             state._fsp--;
@@ -32814,21 +32834,21 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Shift_expr__Group__0"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11301:1: rule__Shift_expr__Group__0 : rule__Shift_expr__Group__0__Impl rule__Shift_expr__Group__1 ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11297:1: rule__Shift_expr__Group__0 : rule__Shift_expr__Group__0__Impl rule__Shift_expr__Group__1 ;
     public final void rule__Shift_expr__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11305:1: ( rule__Shift_expr__Group__0__Impl rule__Shift_expr__Group__1 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11306:2: rule__Shift_expr__Group__0__Impl rule__Shift_expr__Group__1
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11301:1: ( rule__Shift_expr__Group__0__Impl rule__Shift_expr__Group__1 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11302:2: rule__Shift_expr__Group__0__Impl rule__Shift_expr__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Shift_expr__Group__0__Impl_in_rule__Shift_expr__Group__022953);
+            pushFollow(FollowSets000.FOLLOW_rule__Shift_expr__Group__0__Impl_in_rule__Shift_expr__Group__022949);
             rule__Shift_expr__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets000.FOLLOW_rule__Shift_expr__Group__1_in_rule__Shift_expr__Group__022956);
+            pushFollow(FollowSets000.FOLLOW_rule__Shift_expr__Group__1_in_rule__Shift_expr__Group__022952);
             rule__Shift_expr__Group__1();
 
             state._fsp--;
@@ -32852,22 +32872,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Shift_expr__Group__0__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11313:1: rule__Shift_expr__Group__0__Impl : ( ruleadd_expr ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11309:1: rule__Shift_expr__Group__0__Impl : ( ruleadd_expr ) ;
     public final void rule__Shift_expr__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11317:1: ( ( ruleadd_expr ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11318:1: ( ruleadd_expr )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11313:1: ( ( ruleadd_expr ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11314:1: ( ruleadd_expr )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11318:1: ( ruleadd_expr )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11319:1: ruleadd_expr
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11314:1: ( ruleadd_expr )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11315:1: ruleadd_expr
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getShift_exprAccess().getAdd_exprParserRuleCall_0()); 
             }
-            pushFollow(FollowSets000.FOLLOW_ruleadd_expr_in_rule__Shift_expr__Group__0__Impl22983);
+            pushFollow(FollowSets000.FOLLOW_ruleadd_expr_in_rule__Shift_expr__Group__0__Impl22979);
             ruleadd_expr();
 
             state._fsp--;
@@ -32897,16 +32917,16 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Shift_expr__Group__1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11330:1: rule__Shift_expr__Group__1 : rule__Shift_expr__Group__1__Impl ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11326:1: rule__Shift_expr__Group__1 : rule__Shift_expr__Group__1__Impl ;
     public final void rule__Shift_expr__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11334:1: ( rule__Shift_expr__Group__1__Impl )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11335:2: rule__Shift_expr__Group__1__Impl
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11330:1: ( rule__Shift_expr__Group__1__Impl )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11331:2: rule__Shift_expr__Group__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Shift_expr__Group__1__Impl_in_rule__Shift_expr__Group__123012);
+            pushFollow(FollowSets000.FOLLOW_rule__Shift_expr__Group__1__Impl_in_rule__Shift_expr__Group__123008);
             rule__Shift_expr__Group__1__Impl();
 
             state._fsp--;
@@ -32930,22 +32950,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Shift_expr__Group__1__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11341:1: rule__Shift_expr__Group__1__Impl : ( ( rule__Shift_expr__Group_1__0 )* ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11337:1: rule__Shift_expr__Group__1__Impl : ( ( rule__Shift_expr__Group_1__0 )* ) ;
     public final void rule__Shift_expr__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11345:1: ( ( ( rule__Shift_expr__Group_1__0 )* ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11346:1: ( ( rule__Shift_expr__Group_1__0 )* )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11341:1: ( ( ( rule__Shift_expr__Group_1__0 )* ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11342:1: ( ( rule__Shift_expr__Group_1__0 )* )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11346:1: ( ( rule__Shift_expr__Group_1__0 )* )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11347:1: ( rule__Shift_expr__Group_1__0 )*
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11342:1: ( ( rule__Shift_expr__Group_1__0 )* )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11343:1: ( rule__Shift_expr__Group_1__0 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getShift_exprAccess().getGroup_1()); 
             }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11348:1: ( rule__Shift_expr__Group_1__0 )*
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11344:1: ( rule__Shift_expr__Group_1__0 )*
             loop80:
             do {
                 int alt80=2;
@@ -32958,9 +32978,9 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
                 switch (alt80) {
             	case 1 :
-            	    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11348:2: rule__Shift_expr__Group_1__0
+            	    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11344:2: rule__Shift_expr__Group_1__0
             	    {
-            	    pushFollow(FollowSets000.FOLLOW_rule__Shift_expr__Group_1__0_in_rule__Shift_expr__Group__1__Impl23039);
+            	    pushFollow(FollowSets000.FOLLOW_rule__Shift_expr__Group_1__0_in_rule__Shift_expr__Group__1__Impl23035);
             	    rule__Shift_expr__Group_1__0();
 
             	    state._fsp--;
@@ -32999,21 +33019,21 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Shift_expr__Group_1__0"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11362:1: rule__Shift_expr__Group_1__0 : rule__Shift_expr__Group_1__0__Impl rule__Shift_expr__Group_1__1 ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11358:1: rule__Shift_expr__Group_1__0 : rule__Shift_expr__Group_1__0__Impl rule__Shift_expr__Group_1__1 ;
     public final void rule__Shift_expr__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11366:1: ( rule__Shift_expr__Group_1__0__Impl rule__Shift_expr__Group_1__1 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11367:2: rule__Shift_expr__Group_1__0__Impl rule__Shift_expr__Group_1__1
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11362:1: ( rule__Shift_expr__Group_1__0__Impl rule__Shift_expr__Group_1__1 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11363:2: rule__Shift_expr__Group_1__0__Impl rule__Shift_expr__Group_1__1
             {
-            pushFollow(FollowSets001.FOLLOW_rule__Shift_expr__Group_1__0__Impl_in_rule__Shift_expr__Group_1__023074);
+            pushFollow(FollowSets001.FOLLOW_rule__Shift_expr__Group_1__0__Impl_in_rule__Shift_expr__Group_1__023070);
             rule__Shift_expr__Group_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets001.FOLLOW_rule__Shift_expr__Group_1__1_in_rule__Shift_expr__Group_1__023077);
+            pushFollow(FollowSets001.FOLLOW_rule__Shift_expr__Group_1__1_in_rule__Shift_expr__Group_1__023073);
             rule__Shift_expr__Group_1__1();
 
             state._fsp--;
@@ -33037,23 +33057,23 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Shift_expr__Group_1__0__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11374:1: rule__Shift_expr__Group_1__0__Impl : ( () ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11370:1: rule__Shift_expr__Group_1__0__Impl : ( () ) ;
     public final void rule__Shift_expr__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11378:1: ( ( () ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11379:1: ( () )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11374:1: ( ( () ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11375:1: ( () )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11379:1: ( () )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11380:1: ()
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11375:1: ( () )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11376:1: ()
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getShift_exprAccess().getBinaryExpressionLeftAction_1_0()); 
             }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11381:1: ()
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11383:1: 
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11377:1: ()
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11379:1: 
             {
             }
 
@@ -33078,21 +33098,21 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Shift_expr__Group_1__1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11393:1: rule__Shift_expr__Group_1__1 : rule__Shift_expr__Group_1__1__Impl rule__Shift_expr__Group_1__2 ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11389:1: rule__Shift_expr__Group_1__1 : rule__Shift_expr__Group_1__1__Impl rule__Shift_expr__Group_1__2 ;
     public final void rule__Shift_expr__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11397:1: ( rule__Shift_expr__Group_1__1__Impl rule__Shift_expr__Group_1__2 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11398:2: rule__Shift_expr__Group_1__1__Impl rule__Shift_expr__Group_1__2
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11393:1: ( rule__Shift_expr__Group_1__1__Impl rule__Shift_expr__Group_1__2 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11394:2: rule__Shift_expr__Group_1__1__Impl rule__Shift_expr__Group_1__2
             {
-            pushFollow(FollowSets001.FOLLOW_rule__Shift_expr__Group_1__1__Impl_in_rule__Shift_expr__Group_1__123135);
+            pushFollow(FollowSets001.FOLLOW_rule__Shift_expr__Group_1__1__Impl_in_rule__Shift_expr__Group_1__123131);
             rule__Shift_expr__Group_1__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets001.FOLLOW_rule__Shift_expr__Group_1__2_in_rule__Shift_expr__Group_1__123138);
+            pushFollow(FollowSets001.FOLLOW_rule__Shift_expr__Group_1__2_in_rule__Shift_expr__Group_1__123134);
             rule__Shift_expr__Group_1__2();
 
             state._fsp--;
@@ -33116,25 +33136,25 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Shift_expr__Group_1__1__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11405:1: rule__Shift_expr__Group_1__1__Impl : ( ( rule__Shift_expr__OperatorAssignment_1_1 ) ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11401:1: rule__Shift_expr__Group_1__1__Impl : ( ( rule__Shift_expr__OperatorAssignment_1_1 ) ) ;
     public final void rule__Shift_expr__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11409:1: ( ( ( rule__Shift_expr__OperatorAssignment_1_1 ) ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11410:1: ( ( rule__Shift_expr__OperatorAssignment_1_1 ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11405:1: ( ( ( rule__Shift_expr__OperatorAssignment_1_1 ) ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11406:1: ( ( rule__Shift_expr__OperatorAssignment_1_1 ) )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11410:1: ( ( rule__Shift_expr__OperatorAssignment_1_1 ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11411:1: ( rule__Shift_expr__OperatorAssignment_1_1 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11406:1: ( ( rule__Shift_expr__OperatorAssignment_1_1 ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11407:1: ( rule__Shift_expr__OperatorAssignment_1_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getShift_exprAccess().getOperatorAssignment_1_1()); 
             }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11412:1: ( rule__Shift_expr__OperatorAssignment_1_1 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11412:2: rule__Shift_expr__OperatorAssignment_1_1
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11408:1: ( rule__Shift_expr__OperatorAssignment_1_1 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11408:2: rule__Shift_expr__OperatorAssignment_1_1
             {
-            pushFollow(FollowSets001.FOLLOW_rule__Shift_expr__OperatorAssignment_1_1_in_rule__Shift_expr__Group_1__1__Impl23165);
+            pushFollow(FollowSets001.FOLLOW_rule__Shift_expr__OperatorAssignment_1_1_in_rule__Shift_expr__Group_1__1__Impl23161);
             rule__Shift_expr__OperatorAssignment_1_1();
 
             state._fsp--;
@@ -33167,16 +33187,16 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Shift_expr__Group_1__2"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11422:1: rule__Shift_expr__Group_1__2 : rule__Shift_expr__Group_1__2__Impl ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11418:1: rule__Shift_expr__Group_1__2 : rule__Shift_expr__Group_1__2__Impl ;
     public final void rule__Shift_expr__Group_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11426:1: ( rule__Shift_expr__Group_1__2__Impl )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11427:2: rule__Shift_expr__Group_1__2__Impl
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11422:1: ( rule__Shift_expr__Group_1__2__Impl )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11423:2: rule__Shift_expr__Group_1__2__Impl
             {
-            pushFollow(FollowSets001.FOLLOW_rule__Shift_expr__Group_1__2__Impl_in_rule__Shift_expr__Group_1__223195);
+            pushFollow(FollowSets001.FOLLOW_rule__Shift_expr__Group_1__2__Impl_in_rule__Shift_expr__Group_1__223191);
             rule__Shift_expr__Group_1__2__Impl();
 
             state._fsp--;
@@ -33200,25 +33220,25 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Shift_expr__Group_1__2__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11433:1: rule__Shift_expr__Group_1__2__Impl : ( ( rule__Shift_expr__RightAssignment_1_2 ) ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11429:1: rule__Shift_expr__Group_1__2__Impl : ( ( rule__Shift_expr__RightAssignment_1_2 ) ) ;
     public final void rule__Shift_expr__Group_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11437:1: ( ( ( rule__Shift_expr__RightAssignment_1_2 ) ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11438:1: ( ( rule__Shift_expr__RightAssignment_1_2 ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11433:1: ( ( ( rule__Shift_expr__RightAssignment_1_2 ) ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11434:1: ( ( rule__Shift_expr__RightAssignment_1_2 ) )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11438:1: ( ( rule__Shift_expr__RightAssignment_1_2 ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11439:1: ( rule__Shift_expr__RightAssignment_1_2 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11434:1: ( ( rule__Shift_expr__RightAssignment_1_2 ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11435:1: ( rule__Shift_expr__RightAssignment_1_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getShift_exprAccess().getRightAssignment_1_2()); 
             }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11440:1: ( rule__Shift_expr__RightAssignment_1_2 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11440:2: rule__Shift_expr__RightAssignment_1_2
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11436:1: ( rule__Shift_expr__RightAssignment_1_2 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11436:2: rule__Shift_expr__RightAssignment_1_2
             {
-            pushFollow(FollowSets001.FOLLOW_rule__Shift_expr__RightAssignment_1_2_in_rule__Shift_expr__Group_1__2__Impl23222);
+            pushFollow(FollowSets001.FOLLOW_rule__Shift_expr__RightAssignment_1_2_in_rule__Shift_expr__Group_1__2__Impl23218);
             rule__Shift_expr__RightAssignment_1_2();
 
             state._fsp--;
@@ -33251,21 +33271,21 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Add_expr__Group__0"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11456:1: rule__Add_expr__Group__0 : rule__Add_expr__Group__0__Impl rule__Add_expr__Group__1 ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11452:1: rule__Add_expr__Group__0 : rule__Add_expr__Group__0__Impl rule__Add_expr__Group__1 ;
     public final void rule__Add_expr__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11460:1: ( rule__Add_expr__Group__0__Impl rule__Add_expr__Group__1 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11461:2: rule__Add_expr__Group__0__Impl rule__Add_expr__Group__1
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11456:1: ( rule__Add_expr__Group__0__Impl rule__Add_expr__Group__1 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11457:2: rule__Add_expr__Group__0__Impl rule__Add_expr__Group__1
             {
-            pushFollow(FollowSets001.FOLLOW_rule__Add_expr__Group__0__Impl_in_rule__Add_expr__Group__023258);
+            pushFollow(FollowSets001.FOLLOW_rule__Add_expr__Group__0__Impl_in_rule__Add_expr__Group__023254);
             rule__Add_expr__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets001.FOLLOW_rule__Add_expr__Group__1_in_rule__Add_expr__Group__023261);
+            pushFollow(FollowSets001.FOLLOW_rule__Add_expr__Group__1_in_rule__Add_expr__Group__023257);
             rule__Add_expr__Group__1();
 
             state._fsp--;
@@ -33289,22 +33309,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Add_expr__Group__0__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11468:1: rule__Add_expr__Group__0__Impl : ( rulemult_expr ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11464:1: rule__Add_expr__Group__0__Impl : ( rulemult_expr ) ;
     public final void rule__Add_expr__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11472:1: ( ( rulemult_expr ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11473:1: ( rulemult_expr )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11468:1: ( ( rulemult_expr ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11469:1: ( rulemult_expr )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11473:1: ( rulemult_expr )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11474:1: rulemult_expr
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11469:1: ( rulemult_expr )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11470:1: rulemult_expr
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAdd_exprAccess().getMult_exprParserRuleCall_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_rulemult_expr_in_rule__Add_expr__Group__0__Impl23288);
+            pushFollow(FollowSets001.FOLLOW_rulemult_expr_in_rule__Add_expr__Group__0__Impl23284);
             rulemult_expr();
 
             state._fsp--;
@@ -33334,16 +33354,16 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Add_expr__Group__1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11485:1: rule__Add_expr__Group__1 : rule__Add_expr__Group__1__Impl ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11481:1: rule__Add_expr__Group__1 : rule__Add_expr__Group__1__Impl ;
     public final void rule__Add_expr__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11489:1: ( rule__Add_expr__Group__1__Impl )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11490:2: rule__Add_expr__Group__1__Impl
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11485:1: ( rule__Add_expr__Group__1__Impl )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11486:2: rule__Add_expr__Group__1__Impl
             {
-            pushFollow(FollowSets001.FOLLOW_rule__Add_expr__Group__1__Impl_in_rule__Add_expr__Group__123317);
+            pushFollow(FollowSets001.FOLLOW_rule__Add_expr__Group__1__Impl_in_rule__Add_expr__Group__123313);
             rule__Add_expr__Group__1__Impl();
 
             state._fsp--;
@@ -33367,22 +33387,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Add_expr__Group__1__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11496:1: rule__Add_expr__Group__1__Impl : ( ( rule__Add_expr__Group_1__0 )* ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11492:1: rule__Add_expr__Group__1__Impl : ( ( rule__Add_expr__Group_1__0 )* ) ;
     public final void rule__Add_expr__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11500:1: ( ( ( rule__Add_expr__Group_1__0 )* ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11501:1: ( ( rule__Add_expr__Group_1__0 )* )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11496:1: ( ( ( rule__Add_expr__Group_1__0 )* ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11497:1: ( ( rule__Add_expr__Group_1__0 )* )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11501:1: ( ( rule__Add_expr__Group_1__0 )* )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11502:1: ( rule__Add_expr__Group_1__0 )*
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11497:1: ( ( rule__Add_expr__Group_1__0 )* )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11498:1: ( rule__Add_expr__Group_1__0 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAdd_exprAccess().getGroup_1()); 
             }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11503:1: ( rule__Add_expr__Group_1__0 )*
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11499:1: ( rule__Add_expr__Group_1__0 )*
             loop81:
             do {
                 int alt81=2;
@@ -33395,9 +33415,9 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
                 switch (alt81) {
             	case 1 :
-            	    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11503:2: rule__Add_expr__Group_1__0
+            	    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11499:2: rule__Add_expr__Group_1__0
             	    {
-            	    pushFollow(FollowSets001.FOLLOW_rule__Add_expr__Group_1__0_in_rule__Add_expr__Group__1__Impl23344);
+            	    pushFollow(FollowSets001.FOLLOW_rule__Add_expr__Group_1__0_in_rule__Add_expr__Group__1__Impl23340);
             	    rule__Add_expr__Group_1__0();
 
             	    state._fsp--;
@@ -33436,21 +33456,21 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Add_expr__Group_1__0"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11517:1: rule__Add_expr__Group_1__0 : rule__Add_expr__Group_1__0__Impl rule__Add_expr__Group_1__1 ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11513:1: rule__Add_expr__Group_1__0 : rule__Add_expr__Group_1__0__Impl rule__Add_expr__Group_1__1 ;
     public final void rule__Add_expr__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11521:1: ( rule__Add_expr__Group_1__0__Impl rule__Add_expr__Group_1__1 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11522:2: rule__Add_expr__Group_1__0__Impl rule__Add_expr__Group_1__1
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11517:1: ( rule__Add_expr__Group_1__0__Impl rule__Add_expr__Group_1__1 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11518:2: rule__Add_expr__Group_1__0__Impl rule__Add_expr__Group_1__1
             {
-            pushFollow(FollowSets001.FOLLOW_rule__Add_expr__Group_1__0__Impl_in_rule__Add_expr__Group_1__023379);
+            pushFollow(FollowSets001.FOLLOW_rule__Add_expr__Group_1__0__Impl_in_rule__Add_expr__Group_1__023375);
             rule__Add_expr__Group_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets001.FOLLOW_rule__Add_expr__Group_1__1_in_rule__Add_expr__Group_1__023382);
+            pushFollow(FollowSets001.FOLLOW_rule__Add_expr__Group_1__1_in_rule__Add_expr__Group_1__023378);
             rule__Add_expr__Group_1__1();
 
             state._fsp--;
@@ -33474,23 +33494,23 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Add_expr__Group_1__0__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11529:1: rule__Add_expr__Group_1__0__Impl : ( () ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11525:1: rule__Add_expr__Group_1__0__Impl : ( () ) ;
     public final void rule__Add_expr__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11533:1: ( ( () ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11534:1: ( () )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11529:1: ( ( () ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11530:1: ( () )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11534:1: ( () )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11535:1: ()
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11530:1: ( () )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11531:1: ()
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAdd_exprAccess().getBinaryExpressionLeftAction_1_0()); 
             }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11536:1: ()
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11538:1: 
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11532:1: ()
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11534:1: 
             {
             }
 
@@ -33515,21 +33535,21 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Add_expr__Group_1__1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11548:1: rule__Add_expr__Group_1__1 : rule__Add_expr__Group_1__1__Impl rule__Add_expr__Group_1__2 ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11544:1: rule__Add_expr__Group_1__1 : rule__Add_expr__Group_1__1__Impl rule__Add_expr__Group_1__2 ;
     public final void rule__Add_expr__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11552:1: ( rule__Add_expr__Group_1__1__Impl rule__Add_expr__Group_1__2 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11553:2: rule__Add_expr__Group_1__1__Impl rule__Add_expr__Group_1__2
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11548:1: ( rule__Add_expr__Group_1__1__Impl rule__Add_expr__Group_1__2 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11549:2: rule__Add_expr__Group_1__1__Impl rule__Add_expr__Group_1__2
             {
-            pushFollow(FollowSets001.FOLLOW_rule__Add_expr__Group_1__1__Impl_in_rule__Add_expr__Group_1__123440);
+            pushFollow(FollowSets001.FOLLOW_rule__Add_expr__Group_1__1__Impl_in_rule__Add_expr__Group_1__123436);
             rule__Add_expr__Group_1__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets001.FOLLOW_rule__Add_expr__Group_1__2_in_rule__Add_expr__Group_1__123443);
+            pushFollow(FollowSets001.FOLLOW_rule__Add_expr__Group_1__2_in_rule__Add_expr__Group_1__123439);
             rule__Add_expr__Group_1__2();
 
             state._fsp--;
@@ -33553,25 +33573,25 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Add_expr__Group_1__1__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11560:1: rule__Add_expr__Group_1__1__Impl : ( ( rule__Add_expr__OperatorAssignment_1_1 ) ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11556:1: rule__Add_expr__Group_1__1__Impl : ( ( rule__Add_expr__OperatorAssignment_1_1 ) ) ;
     public final void rule__Add_expr__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11564:1: ( ( ( rule__Add_expr__OperatorAssignment_1_1 ) ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11565:1: ( ( rule__Add_expr__OperatorAssignment_1_1 ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11560:1: ( ( ( rule__Add_expr__OperatorAssignment_1_1 ) ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11561:1: ( ( rule__Add_expr__OperatorAssignment_1_1 ) )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11565:1: ( ( rule__Add_expr__OperatorAssignment_1_1 ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11566:1: ( rule__Add_expr__OperatorAssignment_1_1 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11561:1: ( ( rule__Add_expr__OperatorAssignment_1_1 ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11562:1: ( rule__Add_expr__OperatorAssignment_1_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAdd_exprAccess().getOperatorAssignment_1_1()); 
             }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11567:1: ( rule__Add_expr__OperatorAssignment_1_1 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11567:2: rule__Add_expr__OperatorAssignment_1_1
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11563:1: ( rule__Add_expr__OperatorAssignment_1_1 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11563:2: rule__Add_expr__OperatorAssignment_1_1
             {
-            pushFollow(FollowSets001.FOLLOW_rule__Add_expr__OperatorAssignment_1_1_in_rule__Add_expr__Group_1__1__Impl23470);
+            pushFollow(FollowSets001.FOLLOW_rule__Add_expr__OperatorAssignment_1_1_in_rule__Add_expr__Group_1__1__Impl23466);
             rule__Add_expr__OperatorAssignment_1_1();
 
             state._fsp--;
@@ -33604,16 +33624,16 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Add_expr__Group_1__2"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11577:1: rule__Add_expr__Group_1__2 : rule__Add_expr__Group_1__2__Impl ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11573:1: rule__Add_expr__Group_1__2 : rule__Add_expr__Group_1__2__Impl ;
     public final void rule__Add_expr__Group_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11581:1: ( rule__Add_expr__Group_1__2__Impl )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11582:2: rule__Add_expr__Group_1__2__Impl
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11577:1: ( rule__Add_expr__Group_1__2__Impl )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11578:2: rule__Add_expr__Group_1__2__Impl
             {
-            pushFollow(FollowSets001.FOLLOW_rule__Add_expr__Group_1__2__Impl_in_rule__Add_expr__Group_1__223500);
+            pushFollow(FollowSets001.FOLLOW_rule__Add_expr__Group_1__2__Impl_in_rule__Add_expr__Group_1__223496);
             rule__Add_expr__Group_1__2__Impl();
 
             state._fsp--;
@@ -33637,25 +33657,25 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Add_expr__Group_1__2__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11588:1: rule__Add_expr__Group_1__2__Impl : ( ( rule__Add_expr__RightAssignment_1_2 ) ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11584:1: rule__Add_expr__Group_1__2__Impl : ( ( rule__Add_expr__RightAssignment_1_2 ) ) ;
     public final void rule__Add_expr__Group_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11592:1: ( ( ( rule__Add_expr__RightAssignment_1_2 ) ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11593:1: ( ( rule__Add_expr__RightAssignment_1_2 ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11588:1: ( ( ( rule__Add_expr__RightAssignment_1_2 ) ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11589:1: ( ( rule__Add_expr__RightAssignment_1_2 ) )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11593:1: ( ( rule__Add_expr__RightAssignment_1_2 ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11594:1: ( rule__Add_expr__RightAssignment_1_2 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11589:1: ( ( rule__Add_expr__RightAssignment_1_2 ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11590:1: ( rule__Add_expr__RightAssignment_1_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAdd_exprAccess().getRightAssignment_1_2()); 
             }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11595:1: ( rule__Add_expr__RightAssignment_1_2 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11595:2: rule__Add_expr__RightAssignment_1_2
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11591:1: ( rule__Add_expr__RightAssignment_1_2 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11591:2: rule__Add_expr__RightAssignment_1_2
             {
-            pushFollow(FollowSets001.FOLLOW_rule__Add_expr__RightAssignment_1_2_in_rule__Add_expr__Group_1__2__Impl23527);
+            pushFollow(FollowSets001.FOLLOW_rule__Add_expr__RightAssignment_1_2_in_rule__Add_expr__Group_1__2__Impl23523);
             rule__Add_expr__RightAssignment_1_2();
 
             state._fsp--;
@@ -33688,21 +33708,21 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Mult_expr__Group__0"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11611:1: rule__Mult_expr__Group__0 : rule__Mult_expr__Group__0__Impl rule__Mult_expr__Group__1 ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11607:1: rule__Mult_expr__Group__0 : rule__Mult_expr__Group__0__Impl rule__Mult_expr__Group__1 ;
     public final void rule__Mult_expr__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11615:1: ( rule__Mult_expr__Group__0__Impl rule__Mult_expr__Group__1 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11616:2: rule__Mult_expr__Group__0__Impl rule__Mult_expr__Group__1
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11611:1: ( rule__Mult_expr__Group__0__Impl rule__Mult_expr__Group__1 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11612:2: rule__Mult_expr__Group__0__Impl rule__Mult_expr__Group__1
             {
-            pushFollow(FollowSets001.FOLLOW_rule__Mult_expr__Group__0__Impl_in_rule__Mult_expr__Group__023563);
+            pushFollow(FollowSets001.FOLLOW_rule__Mult_expr__Group__0__Impl_in_rule__Mult_expr__Group__023559);
             rule__Mult_expr__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets001.FOLLOW_rule__Mult_expr__Group__1_in_rule__Mult_expr__Group__023566);
+            pushFollow(FollowSets001.FOLLOW_rule__Mult_expr__Group__1_in_rule__Mult_expr__Group__023562);
             rule__Mult_expr__Group__1();
 
             state._fsp--;
@@ -33726,22 +33746,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Mult_expr__Group__0__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11623:1: rule__Mult_expr__Group__0__Impl : ( ruleunary_expr ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11619:1: rule__Mult_expr__Group__0__Impl : ( ruleunary_expr ) ;
     public final void rule__Mult_expr__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11627:1: ( ( ruleunary_expr ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11628:1: ( ruleunary_expr )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11623:1: ( ( ruleunary_expr ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11624:1: ( ruleunary_expr )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11628:1: ( ruleunary_expr )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11629:1: ruleunary_expr
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11624:1: ( ruleunary_expr )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11625:1: ruleunary_expr
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMult_exprAccess().getUnary_exprParserRuleCall_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleunary_expr_in_rule__Mult_expr__Group__0__Impl23593);
+            pushFollow(FollowSets001.FOLLOW_ruleunary_expr_in_rule__Mult_expr__Group__0__Impl23589);
             ruleunary_expr();
 
             state._fsp--;
@@ -33771,16 +33791,16 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Mult_expr__Group__1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11640:1: rule__Mult_expr__Group__1 : rule__Mult_expr__Group__1__Impl ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11636:1: rule__Mult_expr__Group__1 : rule__Mult_expr__Group__1__Impl ;
     public final void rule__Mult_expr__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11644:1: ( rule__Mult_expr__Group__1__Impl )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11645:2: rule__Mult_expr__Group__1__Impl
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11640:1: ( rule__Mult_expr__Group__1__Impl )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11641:2: rule__Mult_expr__Group__1__Impl
             {
-            pushFollow(FollowSets001.FOLLOW_rule__Mult_expr__Group__1__Impl_in_rule__Mult_expr__Group__123622);
+            pushFollow(FollowSets001.FOLLOW_rule__Mult_expr__Group__1__Impl_in_rule__Mult_expr__Group__123618);
             rule__Mult_expr__Group__1__Impl();
 
             state._fsp--;
@@ -33804,22 +33824,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Mult_expr__Group__1__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11651:1: rule__Mult_expr__Group__1__Impl : ( ( rule__Mult_expr__Group_1__0 )* ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11647:1: rule__Mult_expr__Group__1__Impl : ( ( rule__Mult_expr__Group_1__0 )* ) ;
     public final void rule__Mult_expr__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11655:1: ( ( ( rule__Mult_expr__Group_1__0 )* ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11656:1: ( ( rule__Mult_expr__Group_1__0 )* )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11651:1: ( ( ( rule__Mult_expr__Group_1__0 )* ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11652:1: ( ( rule__Mult_expr__Group_1__0 )* )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11656:1: ( ( rule__Mult_expr__Group_1__0 )* )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11657:1: ( rule__Mult_expr__Group_1__0 )*
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11652:1: ( ( rule__Mult_expr__Group_1__0 )* )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11653:1: ( rule__Mult_expr__Group_1__0 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMult_exprAccess().getGroup_1()); 
             }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11658:1: ( rule__Mult_expr__Group_1__0 )*
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11654:1: ( rule__Mult_expr__Group_1__0 )*
             loop82:
             do {
                 int alt82=2;
@@ -33832,9 +33852,9 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
                 switch (alt82) {
             	case 1 :
-            	    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11658:2: rule__Mult_expr__Group_1__0
+            	    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11654:2: rule__Mult_expr__Group_1__0
             	    {
-            	    pushFollow(FollowSets001.FOLLOW_rule__Mult_expr__Group_1__0_in_rule__Mult_expr__Group__1__Impl23649);
+            	    pushFollow(FollowSets001.FOLLOW_rule__Mult_expr__Group_1__0_in_rule__Mult_expr__Group__1__Impl23645);
             	    rule__Mult_expr__Group_1__0();
 
             	    state._fsp--;
@@ -33873,21 +33893,21 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Mult_expr__Group_1__0"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11672:1: rule__Mult_expr__Group_1__0 : rule__Mult_expr__Group_1__0__Impl rule__Mult_expr__Group_1__1 ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11668:1: rule__Mult_expr__Group_1__0 : rule__Mult_expr__Group_1__0__Impl rule__Mult_expr__Group_1__1 ;
     public final void rule__Mult_expr__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11676:1: ( rule__Mult_expr__Group_1__0__Impl rule__Mult_expr__Group_1__1 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11677:2: rule__Mult_expr__Group_1__0__Impl rule__Mult_expr__Group_1__1
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11672:1: ( rule__Mult_expr__Group_1__0__Impl rule__Mult_expr__Group_1__1 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11673:2: rule__Mult_expr__Group_1__0__Impl rule__Mult_expr__Group_1__1
             {
-            pushFollow(FollowSets001.FOLLOW_rule__Mult_expr__Group_1__0__Impl_in_rule__Mult_expr__Group_1__023684);
+            pushFollow(FollowSets001.FOLLOW_rule__Mult_expr__Group_1__0__Impl_in_rule__Mult_expr__Group_1__023680);
             rule__Mult_expr__Group_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets001.FOLLOW_rule__Mult_expr__Group_1__1_in_rule__Mult_expr__Group_1__023687);
+            pushFollow(FollowSets001.FOLLOW_rule__Mult_expr__Group_1__1_in_rule__Mult_expr__Group_1__023683);
             rule__Mult_expr__Group_1__1();
 
             state._fsp--;
@@ -33911,23 +33931,23 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Mult_expr__Group_1__0__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11684:1: rule__Mult_expr__Group_1__0__Impl : ( () ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11680:1: rule__Mult_expr__Group_1__0__Impl : ( () ) ;
     public final void rule__Mult_expr__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11688:1: ( ( () ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11689:1: ( () )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11684:1: ( ( () ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11685:1: ( () )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11689:1: ( () )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11690:1: ()
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11685:1: ( () )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11686:1: ()
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMult_exprAccess().getBinaryExpressionLeftAction_1_0()); 
             }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11691:1: ()
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11693:1: 
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11687:1: ()
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11689:1: 
             {
             }
 
@@ -33952,21 +33972,21 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Mult_expr__Group_1__1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11703:1: rule__Mult_expr__Group_1__1 : rule__Mult_expr__Group_1__1__Impl rule__Mult_expr__Group_1__2 ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11699:1: rule__Mult_expr__Group_1__1 : rule__Mult_expr__Group_1__1__Impl rule__Mult_expr__Group_1__2 ;
     public final void rule__Mult_expr__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11707:1: ( rule__Mult_expr__Group_1__1__Impl rule__Mult_expr__Group_1__2 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11708:2: rule__Mult_expr__Group_1__1__Impl rule__Mult_expr__Group_1__2
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11703:1: ( rule__Mult_expr__Group_1__1__Impl rule__Mult_expr__Group_1__2 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11704:2: rule__Mult_expr__Group_1__1__Impl rule__Mult_expr__Group_1__2
             {
-            pushFollow(FollowSets001.FOLLOW_rule__Mult_expr__Group_1__1__Impl_in_rule__Mult_expr__Group_1__123745);
+            pushFollow(FollowSets001.FOLLOW_rule__Mult_expr__Group_1__1__Impl_in_rule__Mult_expr__Group_1__123741);
             rule__Mult_expr__Group_1__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets001.FOLLOW_rule__Mult_expr__Group_1__2_in_rule__Mult_expr__Group_1__123748);
+            pushFollow(FollowSets001.FOLLOW_rule__Mult_expr__Group_1__2_in_rule__Mult_expr__Group_1__123744);
             rule__Mult_expr__Group_1__2();
 
             state._fsp--;
@@ -33990,25 +34010,25 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Mult_expr__Group_1__1__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11715:1: rule__Mult_expr__Group_1__1__Impl : ( ( rule__Mult_expr__OperatorAssignment_1_1 ) ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11711:1: rule__Mult_expr__Group_1__1__Impl : ( ( rule__Mult_expr__OperatorAssignment_1_1 ) ) ;
     public final void rule__Mult_expr__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11719:1: ( ( ( rule__Mult_expr__OperatorAssignment_1_1 ) ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11720:1: ( ( rule__Mult_expr__OperatorAssignment_1_1 ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11715:1: ( ( ( rule__Mult_expr__OperatorAssignment_1_1 ) ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11716:1: ( ( rule__Mult_expr__OperatorAssignment_1_1 ) )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11720:1: ( ( rule__Mult_expr__OperatorAssignment_1_1 ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11721:1: ( rule__Mult_expr__OperatorAssignment_1_1 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11716:1: ( ( rule__Mult_expr__OperatorAssignment_1_1 ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11717:1: ( rule__Mult_expr__OperatorAssignment_1_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMult_exprAccess().getOperatorAssignment_1_1()); 
             }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11722:1: ( rule__Mult_expr__OperatorAssignment_1_1 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11722:2: rule__Mult_expr__OperatorAssignment_1_1
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11718:1: ( rule__Mult_expr__OperatorAssignment_1_1 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11718:2: rule__Mult_expr__OperatorAssignment_1_1
             {
-            pushFollow(FollowSets001.FOLLOW_rule__Mult_expr__OperatorAssignment_1_1_in_rule__Mult_expr__Group_1__1__Impl23775);
+            pushFollow(FollowSets001.FOLLOW_rule__Mult_expr__OperatorAssignment_1_1_in_rule__Mult_expr__Group_1__1__Impl23771);
             rule__Mult_expr__OperatorAssignment_1_1();
 
             state._fsp--;
@@ -34041,16 +34061,16 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Mult_expr__Group_1__2"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11732:1: rule__Mult_expr__Group_1__2 : rule__Mult_expr__Group_1__2__Impl ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11728:1: rule__Mult_expr__Group_1__2 : rule__Mult_expr__Group_1__2__Impl ;
     public final void rule__Mult_expr__Group_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11736:1: ( rule__Mult_expr__Group_1__2__Impl )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11737:2: rule__Mult_expr__Group_1__2__Impl
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11732:1: ( rule__Mult_expr__Group_1__2__Impl )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11733:2: rule__Mult_expr__Group_1__2__Impl
             {
-            pushFollow(FollowSets001.FOLLOW_rule__Mult_expr__Group_1__2__Impl_in_rule__Mult_expr__Group_1__223805);
+            pushFollow(FollowSets001.FOLLOW_rule__Mult_expr__Group_1__2__Impl_in_rule__Mult_expr__Group_1__223801);
             rule__Mult_expr__Group_1__2__Impl();
 
             state._fsp--;
@@ -34074,25 +34094,25 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Mult_expr__Group_1__2__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11743:1: rule__Mult_expr__Group_1__2__Impl : ( ( rule__Mult_expr__RightAssignment_1_2 ) ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11739:1: rule__Mult_expr__Group_1__2__Impl : ( ( rule__Mult_expr__RightAssignment_1_2 ) ) ;
     public final void rule__Mult_expr__Group_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11747:1: ( ( ( rule__Mult_expr__RightAssignment_1_2 ) ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11748:1: ( ( rule__Mult_expr__RightAssignment_1_2 ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11743:1: ( ( ( rule__Mult_expr__RightAssignment_1_2 ) ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11744:1: ( ( rule__Mult_expr__RightAssignment_1_2 ) )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11748:1: ( ( rule__Mult_expr__RightAssignment_1_2 ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11749:1: ( rule__Mult_expr__RightAssignment_1_2 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11744:1: ( ( rule__Mult_expr__RightAssignment_1_2 ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11745:1: ( rule__Mult_expr__RightAssignment_1_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMult_exprAccess().getRightAssignment_1_2()); 
             }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11750:1: ( rule__Mult_expr__RightAssignment_1_2 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11750:2: rule__Mult_expr__RightAssignment_1_2
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11746:1: ( rule__Mult_expr__RightAssignment_1_2 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11746:2: rule__Mult_expr__RightAssignment_1_2
             {
-            pushFollow(FollowSets001.FOLLOW_rule__Mult_expr__RightAssignment_1_2_in_rule__Mult_expr__Group_1__2__Impl23832);
+            pushFollow(FollowSets001.FOLLOW_rule__Mult_expr__RightAssignment_1_2_in_rule__Mult_expr__Group_1__2__Impl23828);
             rule__Mult_expr__RightAssignment_1_2();
 
             state._fsp--;
@@ -34125,21 +34145,21 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Unary_expr__Group_0__0"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11766:1: rule__Unary_expr__Group_0__0 : rule__Unary_expr__Group_0__0__Impl rule__Unary_expr__Group_0__1 ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11762:1: rule__Unary_expr__Group_0__0 : rule__Unary_expr__Group_0__0__Impl rule__Unary_expr__Group_0__1 ;
     public final void rule__Unary_expr__Group_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11770:1: ( rule__Unary_expr__Group_0__0__Impl rule__Unary_expr__Group_0__1 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11771:2: rule__Unary_expr__Group_0__0__Impl rule__Unary_expr__Group_0__1
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11766:1: ( rule__Unary_expr__Group_0__0__Impl rule__Unary_expr__Group_0__1 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11767:2: rule__Unary_expr__Group_0__0__Impl rule__Unary_expr__Group_0__1
             {
-            pushFollow(FollowSets001.FOLLOW_rule__Unary_expr__Group_0__0__Impl_in_rule__Unary_expr__Group_0__023868);
+            pushFollow(FollowSets001.FOLLOW_rule__Unary_expr__Group_0__0__Impl_in_rule__Unary_expr__Group_0__023864);
             rule__Unary_expr__Group_0__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets001.FOLLOW_rule__Unary_expr__Group_0__1_in_rule__Unary_expr__Group_0__023871);
+            pushFollow(FollowSets001.FOLLOW_rule__Unary_expr__Group_0__1_in_rule__Unary_expr__Group_0__023867);
             rule__Unary_expr__Group_0__1();
 
             state._fsp--;
@@ -34163,23 +34183,23 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Unary_expr__Group_0__0__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11778:1: rule__Unary_expr__Group_0__0__Impl : ( () ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11774:1: rule__Unary_expr__Group_0__0__Impl : ( () ) ;
     public final void rule__Unary_expr__Group_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11782:1: ( ( () ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11783:1: ( () )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11778:1: ( ( () ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11779:1: ( () )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11783:1: ( () )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11784:1: ()
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11779:1: ( () )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11780:1: ()
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnary_exprAccess().getUnaryExpressionAction_0_0()); 
             }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11785:1: ()
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11787:1: 
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11781:1: ()
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11783:1: 
             {
             }
 
@@ -34204,21 +34224,21 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Unary_expr__Group_0__1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11797:1: rule__Unary_expr__Group_0__1 : rule__Unary_expr__Group_0__1__Impl rule__Unary_expr__Group_0__2 ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11793:1: rule__Unary_expr__Group_0__1 : rule__Unary_expr__Group_0__1__Impl rule__Unary_expr__Group_0__2 ;
     public final void rule__Unary_expr__Group_0__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11801:1: ( rule__Unary_expr__Group_0__1__Impl rule__Unary_expr__Group_0__2 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11802:2: rule__Unary_expr__Group_0__1__Impl rule__Unary_expr__Group_0__2
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11797:1: ( rule__Unary_expr__Group_0__1__Impl rule__Unary_expr__Group_0__2 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11798:2: rule__Unary_expr__Group_0__1__Impl rule__Unary_expr__Group_0__2
             {
-            pushFollow(FollowSets001.FOLLOW_rule__Unary_expr__Group_0__1__Impl_in_rule__Unary_expr__Group_0__123929);
+            pushFollow(FollowSets001.FOLLOW_rule__Unary_expr__Group_0__1__Impl_in_rule__Unary_expr__Group_0__123925);
             rule__Unary_expr__Group_0__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets001.FOLLOW_rule__Unary_expr__Group_0__2_in_rule__Unary_expr__Group_0__123932);
+            pushFollow(FollowSets001.FOLLOW_rule__Unary_expr__Group_0__2_in_rule__Unary_expr__Group_0__123928);
             rule__Unary_expr__Group_0__2();
 
             state._fsp--;
@@ -34242,25 +34262,25 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Unary_expr__Group_0__1__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11809:1: rule__Unary_expr__Group_0__1__Impl : ( ( rule__Unary_expr__OperatorAssignment_0_1 ) ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11805:1: rule__Unary_expr__Group_0__1__Impl : ( ( rule__Unary_expr__OperatorAssignment_0_1 ) ) ;
     public final void rule__Unary_expr__Group_0__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11813:1: ( ( ( rule__Unary_expr__OperatorAssignment_0_1 ) ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11814:1: ( ( rule__Unary_expr__OperatorAssignment_0_1 ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11809:1: ( ( ( rule__Unary_expr__OperatorAssignment_0_1 ) ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11810:1: ( ( rule__Unary_expr__OperatorAssignment_0_1 ) )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11814:1: ( ( rule__Unary_expr__OperatorAssignment_0_1 ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11815:1: ( rule__Unary_expr__OperatorAssignment_0_1 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11810:1: ( ( rule__Unary_expr__OperatorAssignment_0_1 ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11811:1: ( rule__Unary_expr__OperatorAssignment_0_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnary_exprAccess().getOperatorAssignment_0_1()); 
             }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11816:1: ( rule__Unary_expr__OperatorAssignment_0_1 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11816:2: rule__Unary_expr__OperatorAssignment_0_1
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11812:1: ( rule__Unary_expr__OperatorAssignment_0_1 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11812:2: rule__Unary_expr__OperatorAssignment_0_1
             {
-            pushFollow(FollowSets001.FOLLOW_rule__Unary_expr__OperatorAssignment_0_1_in_rule__Unary_expr__Group_0__1__Impl23959);
+            pushFollow(FollowSets001.FOLLOW_rule__Unary_expr__OperatorAssignment_0_1_in_rule__Unary_expr__Group_0__1__Impl23955);
             rule__Unary_expr__OperatorAssignment_0_1();
 
             state._fsp--;
@@ -34293,16 +34313,16 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Unary_expr__Group_0__2"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11826:1: rule__Unary_expr__Group_0__2 : rule__Unary_expr__Group_0__2__Impl ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11822:1: rule__Unary_expr__Group_0__2 : rule__Unary_expr__Group_0__2__Impl ;
     public final void rule__Unary_expr__Group_0__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11830:1: ( rule__Unary_expr__Group_0__2__Impl )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11831:2: rule__Unary_expr__Group_0__2__Impl
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11826:1: ( rule__Unary_expr__Group_0__2__Impl )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11827:2: rule__Unary_expr__Group_0__2__Impl
             {
-            pushFollow(FollowSets001.FOLLOW_rule__Unary_expr__Group_0__2__Impl_in_rule__Unary_expr__Group_0__223989);
+            pushFollow(FollowSets001.FOLLOW_rule__Unary_expr__Group_0__2__Impl_in_rule__Unary_expr__Group_0__223985);
             rule__Unary_expr__Group_0__2__Impl();
 
             state._fsp--;
@@ -34326,25 +34346,25 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Unary_expr__Group_0__2__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11837:1: rule__Unary_expr__Group_0__2__Impl : ( ( rule__Unary_expr__ExpressionAssignment_0_2 ) ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11833:1: rule__Unary_expr__Group_0__2__Impl : ( ( rule__Unary_expr__ExpressionAssignment_0_2 ) ) ;
     public final void rule__Unary_expr__Group_0__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11841:1: ( ( ( rule__Unary_expr__ExpressionAssignment_0_2 ) ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11842:1: ( ( rule__Unary_expr__ExpressionAssignment_0_2 ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11837:1: ( ( ( rule__Unary_expr__ExpressionAssignment_0_2 ) ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11838:1: ( ( rule__Unary_expr__ExpressionAssignment_0_2 ) )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11842:1: ( ( rule__Unary_expr__ExpressionAssignment_0_2 ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11843:1: ( rule__Unary_expr__ExpressionAssignment_0_2 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11838:1: ( ( rule__Unary_expr__ExpressionAssignment_0_2 ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11839:1: ( rule__Unary_expr__ExpressionAssignment_0_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnary_exprAccess().getExpressionAssignment_0_2()); 
             }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11844:1: ( rule__Unary_expr__ExpressionAssignment_0_2 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11844:2: rule__Unary_expr__ExpressionAssignment_0_2
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11840:1: ( rule__Unary_expr__ExpressionAssignment_0_2 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11840:2: rule__Unary_expr__ExpressionAssignment_0_2
             {
-            pushFollow(FollowSets001.FOLLOW_rule__Unary_expr__ExpressionAssignment_0_2_in_rule__Unary_expr__Group_0__2__Impl24016);
+            pushFollow(FollowSets001.FOLLOW_rule__Unary_expr__ExpressionAssignment_0_2_in_rule__Unary_expr__Group_0__2__Impl24012);
             rule__Unary_expr__ExpressionAssignment_0_2();
 
             state._fsp--;
@@ -34377,21 +34397,21 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Primary_expr__Group_2__0"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11860:1: rule__Primary_expr__Group_2__0 : rule__Primary_expr__Group_2__0__Impl rule__Primary_expr__Group_2__1 ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11856:1: rule__Primary_expr__Group_2__0 : rule__Primary_expr__Group_2__0__Impl rule__Primary_expr__Group_2__1 ;
     public final void rule__Primary_expr__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11864:1: ( rule__Primary_expr__Group_2__0__Impl rule__Primary_expr__Group_2__1 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11865:2: rule__Primary_expr__Group_2__0__Impl rule__Primary_expr__Group_2__1
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11860:1: ( rule__Primary_expr__Group_2__0__Impl rule__Primary_expr__Group_2__1 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11861:2: rule__Primary_expr__Group_2__0__Impl rule__Primary_expr__Group_2__1
             {
-            pushFollow(FollowSets001.FOLLOW_rule__Primary_expr__Group_2__0__Impl_in_rule__Primary_expr__Group_2__024052);
+            pushFollow(FollowSets001.FOLLOW_rule__Primary_expr__Group_2__0__Impl_in_rule__Primary_expr__Group_2__024048);
             rule__Primary_expr__Group_2__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets001.FOLLOW_rule__Primary_expr__Group_2__1_in_rule__Primary_expr__Group_2__024055);
+            pushFollow(FollowSets001.FOLLOW_rule__Primary_expr__Group_2__1_in_rule__Primary_expr__Group_2__024051);
             rule__Primary_expr__Group_2__1();
 
             state._fsp--;
@@ -34415,22 +34435,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Primary_expr__Group_2__0__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11872:1: rule__Primary_expr__Group_2__0__Impl : ( '(' ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11868:1: rule__Primary_expr__Group_2__0__Impl : ( '(' ) ;
     public final void rule__Primary_expr__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11876:1: ( ( '(' ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11877:1: ( '(' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11872:1: ( ( '(' ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11873:1: ( '(' )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11877:1: ( '(' )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11878:1: '('
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11873:1: ( '(' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11874:1: '('
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimary_exprAccess().getLeftParenthesisKeyword_2_0()); 
             }
-            match(input,50,FollowSets001.FOLLOW_50_in_rule__Primary_expr__Group_2__0__Impl24083); if (state.failed) return ;
+            match(input,50,FollowSets001.FOLLOW_50_in_rule__Primary_expr__Group_2__0__Impl24079); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getPrimary_exprAccess().getLeftParenthesisKeyword_2_0()); 
             }
@@ -34456,21 +34476,21 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Primary_expr__Group_2__1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11891:1: rule__Primary_expr__Group_2__1 : rule__Primary_expr__Group_2__1__Impl rule__Primary_expr__Group_2__2 ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11887:1: rule__Primary_expr__Group_2__1 : rule__Primary_expr__Group_2__1__Impl rule__Primary_expr__Group_2__2 ;
     public final void rule__Primary_expr__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11895:1: ( rule__Primary_expr__Group_2__1__Impl rule__Primary_expr__Group_2__2 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11896:2: rule__Primary_expr__Group_2__1__Impl rule__Primary_expr__Group_2__2
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11891:1: ( rule__Primary_expr__Group_2__1__Impl rule__Primary_expr__Group_2__2 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11892:2: rule__Primary_expr__Group_2__1__Impl rule__Primary_expr__Group_2__2
             {
-            pushFollow(FollowSets001.FOLLOW_rule__Primary_expr__Group_2__1__Impl_in_rule__Primary_expr__Group_2__124114);
+            pushFollow(FollowSets001.FOLLOW_rule__Primary_expr__Group_2__1__Impl_in_rule__Primary_expr__Group_2__124110);
             rule__Primary_expr__Group_2__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FollowSets001.FOLLOW_rule__Primary_expr__Group_2__2_in_rule__Primary_expr__Group_2__124117);
+            pushFollow(FollowSets001.FOLLOW_rule__Primary_expr__Group_2__2_in_rule__Primary_expr__Group_2__124113);
             rule__Primary_expr__Group_2__2();
 
             state._fsp--;
@@ -34494,22 +34514,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Primary_expr__Group_2__1__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11903:1: rule__Primary_expr__Group_2__1__Impl : ( ruleconst_exp ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11899:1: rule__Primary_expr__Group_2__1__Impl : ( ruleconst_exp ) ;
     public final void rule__Primary_expr__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11907:1: ( ( ruleconst_exp ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11908:1: ( ruleconst_exp )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11903:1: ( ( ruleconst_exp ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11904:1: ( ruleconst_exp )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11908:1: ( ruleconst_exp )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11909:1: ruleconst_exp
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11904:1: ( ruleconst_exp )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11905:1: ruleconst_exp
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimary_exprAccess().getConst_expParserRuleCall_2_1()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleconst_exp_in_rule__Primary_expr__Group_2__1__Impl24144);
+            pushFollow(FollowSets001.FOLLOW_ruleconst_exp_in_rule__Primary_expr__Group_2__1__Impl24140);
             ruleconst_exp();
 
             state._fsp--;
@@ -34539,16 +34559,16 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Primary_expr__Group_2__2"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11920:1: rule__Primary_expr__Group_2__2 : rule__Primary_expr__Group_2__2__Impl ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11916:1: rule__Primary_expr__Group_2__2 : rule__Primary_expr__Group_2__2__Impl ;
     public final void rule__Primary_expr__Group_2__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11924:1: ( rule__Primary_expr__Group_2__2__Impl )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11925:2: rule__Primary_expr__Group_2__2__Impl
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11920:1: ( rule__Primary_expr__Group_2__2__Impl )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11921:2: rule__Primary_expr__Group_2__2__Impl
             {
-            pushFollow(FollowSets001.FOLLOW_rule__Primary_expr__Group_2__2__Impl_in_rule__Primary_expr__Group_2__224173);
+            pushFollow(FollowSets001.FOLLOW_rule__Primary_expr__Group_2__2__Impl_in_rule__Primary_expr__Group_2__224169);
             rule__Primary_expr__Group_2__2__Impl();
 
             state._fsp--;
@@ -34572,22 +34592,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Primary_expr__Group_2__2__Impl"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11931:1: rule__Primary_expr__Group_2__2__Impl : ( ')' ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11927:1: rule__Primary_expr__Group_2__2__Impl : ( ')' ) ;
     public final void rule__Primary_expr__Group_2__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11935:1: ( ( ')' ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11936:1: ( ')' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11931:1: ( ( ')' ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11932:1: ( ')' )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11936:1: ( ')' )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11937:1: ')'
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11932:1: ( ')' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11933:1: ')'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimary_exprAccess().getRightParenthesisKeyword_2_2()); 
             }
-            match(input,51,FollowSets001.FOLLOW_51_in_rule__Primary_expr__Group_2__2__Impl24201); if (state.failed) return ;
+            match(input,51,FollowSets001.FOLLOW_51_in_rule__Primary_expr__Group_2__2__Impl24197); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getPrimary_exprAccess().getRightParenthesisKeyword_2_2()); 
             }
@@ -34613,22 +34633,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Specification__IncludesAssignment_1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11957:1: rule__Specification__IncludesAssignment_1 : ( ruleinclude_decl ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11953:1: rule__Specification__IncludesAssignment_1 : ( ruleinclude_decl ) ;
     public final void rule__Specification__IncludesAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11961:1: ( ( ruleinclude_decl ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11962:1: ( ruleinclude_decl )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11957:1: ( ( ruleinclude_decl ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11958:1: ( ruleinclude_decl )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11962:1: ( ruleinclude_decl )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11963:1: ruleinclude_decl
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11958:1: ( ruleinclude_decl )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11959:1: ruleinclude_decl
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSpecificationAccess().getIncludesInclude_declParserRuleCall_1_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleinclude_decl_in_rule__Specification__IncludesAssignment_124243);
+            pushFollow(FollowSets001.FOLLOW_ruleinclude_decl_in_rule__Specification__IncludesAssignment_124239);
             ruleinclude_decl();
 
             state._fsp--;
@@ -34658,22 +34678,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Specification__ContainsAssignment_2"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11972:1: rule__Specification__ContainsAssignment_2 : ( ruledefinition ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11968:1: rule__Specification__ContainsAssignment_2 : ( ruledefinition ) ;
     public final void rule__Specification__ContainsAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11976:1: ( ( ruledefinition ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11977:1: ( ruledefinition )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11972:1: ( ( ruledefinition ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11973:1: ( ruledefinition )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11977:1: ( ruledefinition )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11978:1: ruledefinition
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11973:1: ( ruledefinition )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11974:1: ruledefinition
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSpecificationAccess().getContainsDefinitionParserRuleCall_2_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruledefinition_in_rule__Specification__ContainsAssignment_224274);
+            pushFollow(FollowSets001.FOLLOW_ruledefinition_in_rule__Specification__ContainsAssignment_224270);
             ruledefinition();
 
             state._fsp--;
@@ -34703,22 +34723,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Include_decl__ImportURIAssignment_1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11987:1: rule__Include_decl__ImportURIAssignment_1 : ( RULE_STRING ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11983:1: rule__Include_decl__ImportURIAssignment_1 : ( RULE_STRING ) ;
     public final void rule__Include_decl__ImportURIAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11991:1: ( ( RULE_STRING ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11992:1: ( RULE_STRING )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11987:1: ( ( RULE_STRING ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11988:1: ( RULE_STRING )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11992:1: ( RULE_STRING )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11993:1: RULE_STRING
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11988:1: ( RULE_STRING )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11989:1: RULE_STRING
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getInclude_declAccess().getImportURISTRINGTerminalRuleCall_1_0()); 
             }
-            match(input,RULE_STRING,FollowSets001.FOLLOW_RULE_STRING_in_rule__Include_decl__ImportURIAssignment_124305); if (state.failed) return ;
+            match(input,RULE_STRING,FollowSets001.FOLLOW_RULE_STRING_in_rule__Include_decl__ImportURIAssignment_124301); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getInclude_declAccess().getImportURISTRINGTerminalRuleCall_1_0()); 
             }
@@ -34744,22 +34764,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Module__IdentifierAssignment_1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12002:1: rule__Module__IdentifierAssignment_1 : ( RULE_ID ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:11998:1: rule__Module__IdentifierAssignment_1 : ( RULE_ID ) ;
     public final void rule__Module__IdentifierAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12006:1: ( ( RULE_ID ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12007:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12002:1: ( ( RULE_ID ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12003:1: ( RULE_ID )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12007:1: ( RULE_ID )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12008:1: RULE_ID
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12003:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12004:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getModuleAccess().getIdentifierIDTerminalRuleCall_1_0()); 
             }
-            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Module__IdentifierAssignment_124336); if (state.failed) return ;
+            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Module__IdentifierAssignment_124332); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getModuleAccess().getIdentifierIDTerminalRuleCall_1_0()); 
             }
@@ -34785,22 +34805,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Module__ContainsAssignment_3_0"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12017:1: rule__Module__ContainsAssignment_3_0 : ( ruledefinition ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12013:1: rule__Module__ContainsAssignment_3_0 : ( ruledefinition ) ;
     public final void rule__Module__ContainsAssignment_3_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12021:1: ( ( ruledefinition ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12022:1: ( ruledefinition )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12017:1: ( ( ruledefinition ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12018:1: ( ruledefinition )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12022:1: ( ruledefinition )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12023:1: ruledefinition
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12018:1: ( ruledefinition )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12019:1: ruledefinition
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getModuleAccess().getContainsDefinitionParserRuleCall_3_0_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruledefinition_in_rule__Module__ContainsAssignment_3_024367);
+            pushFollow(FollowSets001.FOLLOW_ruledefinition_in_rule__Module__ContainsAssignment_3_024363);
             ruledefinition();
 
             state._fsp--;
@@ -34830,28 +34850,28 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Interface_decl__IsAbstractAssignment_0_0"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12032:1: rule__Interface_decl__IsAbstractAssignment_0_0 : ( ( 'abstract' ) ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12028:1: rule__Interface_decl__IsAbstractAssignment_0_0 : ( ( 'abstract' ) ) ;
     public final void rule__Interface_decl__IsAbstractAssignment_0_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12036:1: ( ( ( 'abstract' ) ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12037:1: ( ( 'abstract' ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12032:1: ( ( ( 'abstract' ) ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12033:1: ( ( 'abstract' ) )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12037:1: ( ( 'abstract' ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12038:1: ( 'abstract' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getInterface_declAccess().getIsAbstractAbstractKeyword_0_0_0()); 
-            }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12039:1: ( 'abstract' )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12040:1: 'abstract'
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12033:1: ( ( 'abstract' ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12034:1: ( 'abstract' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getInterface_declAccess().getIsAbstractAbstractKeyword_0_0_0()); 
             }
-            match(input,30,FollowSets001.FOLLOW_30_in_rule__Interface_decl__IsAbstractAssignment_0_024403); if (state.failed) return ;
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12035:1: ( 'abstract' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12036:1: 'abstract'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getInterface_declAccess().getIsAbstractAbstractKeyword_0_0_0()); 
+            }
+            match(input,30,FollowSets001.FOLLOW_30_in_rule__Interface_decl__IsAbstractAssignment_0_024399); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getInterface_declAccess().getIsAbstractAbstractKeyword_0_0_0()); 
             }
@@ -34883,28 +34903,28 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Interface_decl__IsCustomAssignment_0_1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12055:1: rule__Interface_decl__IsCustomAssignment_0_1 : ( ( 'local' ) ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12051:1: rule__Interface_decl__IsCustomAssignment_0_1 : ( ( 'local' ) ) ;
     public final void rule__Interface_decl__IsCustomAssignment_0_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12059:1: ( ( ( 'local' ) ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12060:1: ( ( 'local' ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12055:1: ( ( ( 'local' ) ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12056:1: ( ( 'local' ) )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12060:1: ( ( 'local' ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12061:1: ( 'local' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getInterface_declAccess().getIsCustomLocalKeyword_0_1_0()); 
-            }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12062:1: ( 'local' )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12063:1: 'local'
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12056:1: ( ( 'local' ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12057:1: ( 'local' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getInterface_declAccess().getIsCustomLocalKeyword_0_1_0()); 
             }
-            match(input,31,FollowSets001.FOLLOW_31_in_rule__Interface_decl__IsCustomAssignment_0_124447); if (state.failed) return ;
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12058:1: ( 'local' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12059:1: 'local'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getInterface_declAccess().getIsCustomLocalKeyword_0_1_0()); 
+            }
+            match(input,31,FollowSets001.FOLLOW_31_in_rule__Interface_decl__IsCustomAssignment_0_124443); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getInterface_declAccess().getIsCustomLocalKeyword_0_1_0()); 
             }
@@ -34936,22 +34956,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Interface_decl__IdentifierAssignment_2"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12078:1: rule__Interface_decl__IdentifierAssignment_2 : ( RULE_ID ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12074:1: rule__Interface_decl__IdentifierAssignment_2 : ( RULE_ID ) ;
     public final void rule__Interface_decl__IdentifierAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12082:1: ( ( RULE_ID ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12083:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12078:1: ( ( RULE_ID ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12079:1: ( RULE_ID )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12083:1: ( RULE_ID )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12084:1: RULE_ID
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12079:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12080:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getInterface_declAccess().getIdentifierIDTerminalRuleCall_2_0()); 
             }
-            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Interface_decl__IdentifierAssignment_224486); if (state.failed) return ;
+            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Interface_decl__IdentifierAssignment_224482); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getInterface_declAccess().getIdentifierIDTerminalRuleCall_2_0()); 
             }
@@ -34977,28 +34997,28 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Interface_decl__DerivesFromAssignment_3_1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12093:1: rule__Interface_decl__DerivesFromAssignment_3_1 : ( ( RULE_ID ) ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12089:1: rule__Interface_decl__DerivesFromAssignment_3_1 : ( ( RULE_ID ) ) ;
     public final void rule__Interface_decl__DerivesFromAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12097:1: ( ( ( RULE_ID ) ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12098:1: ( ( RULE_ID ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12093:1: ( ( ( RULE_ID ) ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12094:1: ( ( RULE_ID ) )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12098:1: ( ( RULE_ID ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12099:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12094:1: ( ( RULE_ID ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12095:1: ( RULE_ID )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getInterface_declAccess().getDerivesFromInterfaceDefCrossReference_3_1_0()); 
             }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12100:1: ( RULE_ID )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12101:1: RULE_ID
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12096:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12097:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getInterface_declAccess().getDerivesFromInterfaceDefIDTerminalRuleCall_3_1_0_1()); 
             }
-            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Interface_decl__DerivesFromAssignment_3_124521); if (state.failed) return ;
+            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Interface_decl__DerivesFromAssignment_3_124517); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getInterface_declAccess().getDerivesFromInterfaceDefIDTerminalRuleCall_3_1_0_1()); 
             }
@@ -35030,28 +35050,28 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Interface_decl__DerivesFromAssignment_3_2_1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12112:1: rule__Interface_decl__DerivesFromAssignment_3_2_1 : ( ( RULE_ID ) ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12108:1: rule__Interface_decl__DerivesFromAssignment_3_2_1 : ( ( RULE_ID ) ) ;
     public final void rule__Interface_decl__DerivesFromAssignment_3_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12116:1: ( ( ( RULE_ID ) ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12117:1: ( ( RULE_ID ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12112:1: ( ( ( RULE_ID ) ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12113:1: ( ( RULE_ID ) )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12117:1: ( ( RULE_ID ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12118:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12113:1: ( ( RULE_ID ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12114:1: ( RULE_ID )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getInterface_declAccess().getDerivesFromInterfaceDefCrossReference_3_2_1_0()); 
             }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12119:1: ( RULE_ID )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12120:1: RULE_ID
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12115:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12116:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getInterface_declAccess().getDerivesFromInterfaceDefIDTerminalRuleCall_3_2_1_0_1()); 
             }
-            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Interface_decl__DerivesFromAssignment_3_2_124560); if (state.failed) return ;
+            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Interface_decl__DerivesFromAssignment_3_2_124556); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getInterface_declAccess().getDerivesFromInterfaceDefIDTerminalRuleCall_3_2_1_0_1()); 
             }
@@ -35083,22 +35103,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Interface_decl__ContainsAssignment_5_0"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12131:1: rule__Interface_decl__ContainsAssignment_5_0 : ( ruleexport ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12127:1: rule__Interface_decl__ContainsAssignment_5_0 : ( ruleexport ) ;
     public final void rule__Interface_decl__ContainsAssignment_5_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12135:1: ( ( ruleexport ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12136:1: ( ruleexport )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12131:1: ( ( ruleexport ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12132:1: ( ruleexport )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12136:1: ( ruleexport )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12137:1: ruleexport
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12132:1: ( ruleexport )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12133:1: ruleexport
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getInterface_declAccess().getContainsExportParserRuleCall_5_0_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleexport_in_rule__Interface_decl__ContainsAssignment_5_024595);
+            pushFollow(FollowSets001.FOLLOW_ruleexport_in_rule__Interface_decl__ContainsAssignment_5_024591);
             ruleexport();
 
             state._fsp--;
@@ -35128,22 +35148,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Interface_fwd__IdentifierAssignment_2"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12146:1: rule__Interface_fwd__IdentifierAssignment_2 : ( RULE_ID ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12142:1: rule__Interface_fwd__IdentifierAssignment_2 : ( RULE_ID ) ;
     public final void rule__Interface_fwd__IdentifierAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12150:1: ( ( RULE_ID ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12151:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12146:1: ( ( RULE_ID ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12147:1: ( RULE_ID )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12151:1: ( RULE_ID )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12152:1: RULE_ID
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12147:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12148:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getInterface_fwdAccess().getIdentifierIDTerminalRuleCall_2_0()); 
             }
-            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Interface_fwd__IdentifierAssignment_224626); if (state.failed) return ;
+            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Interface_fwd__IdentifierAssignment_224622); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getInterface_fwdAccess().getIdentifierIDTerminalRuleCall_2_0()); 
             }
@@ -35169,28 +35189,28 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Op_decl__IsOnewayAssignment_0"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12161:1: rule__Op_decl__IsOnewayAssignment_0 : ( ( 'oneway' ) ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12157:1: rule__Op_decl__IsOnewayAssignment_0 : ( ( 'oneway' ) ) ;
     public final void rule__Op_decl__IsOnewayAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12165:1: ( ( ( 'oneway' ) ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12166:1: ( ( 'oneway' ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12161:1: ( ( ( 'oneway' ) ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12162:1: ( ( 'oneway' ) )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12166:1: ( ( 'oneway' ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12167:1: ( 'oneway' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getOp_declAccess().getIsOnewayOnewayKeyword_0_0()); 
-            }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12168:1: ( 'oneway' )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12169:1: 'oneway'
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12162:1: ( ( 'oneway' ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12163:1: ( 'oneway' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getOp_declAccess().getIsOnewayOnewayKeyword_0_0()); 
             }
-            match(input,75,FollowSets001.FOLLOW_75_in_rule__Op_decl__IsOnewayAssignment_024662); if (state.failed) return ;
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12164:1: ( 'oneway' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12165:1: 'oneway'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getOp_declAccess().getIsOnewayOnewayKeyword_0_0()); 
+            }
+            match(input,74,FollowSets001.FOLLOW_74_in_rule__Op_decl__IsOnewayAssignment_024658); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getOp_declAccess().getIsOnewayOnewayKeyword_0_0()); 
             }
@@ -35222,22 +35242,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Op_decl__ContainedTypeAssignment_1_0"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12184:1: rule__Op_decl__ContainedTypeAssignment_1_0 : ( ruleop_type_spec ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12180:1: rule__Op_decl__ContainedTypeAssignment_1_0 : ( ruleop_type_spec ) ;
     public final void rule__Op_decl__ContainedTypeAssignment_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12188:1: ( ( ruleop_type_spec ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12189:1: ( ruleop_type_spec )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12184:1: ( ( ruleop_type_spec ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12185:1: ( ruleop_type_spec )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12189:1: ( ruleop_type_spec )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12190:1: ruleop_type_spec
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12185:1: ( ruleop_type_spec )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12186:1: ruleop_type_spec
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getOp_declAccess().getContainedTypeOp_type_specParserRuleCall_1_0_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleop_type_spec_in_rule__Op_decl__ContainedTypeAssignment_1_024701);
+            pushFollow(FollowSets001.FOLLOW_ruleop_type_spec_in_rule__Op_decl__ContainedTypeAssignment_1_024697);
             ruleop_type_spec();
 
             state._fsp--;
@@ -35267,28 +35287,28 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Op_decl__SharedTypeAssignment_1_1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12199:1: rule__Op_decl__SharedTypeAssignment_1_1 : ( ( RULE_ID ) ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12195:1: rule__Op_decl__SharedTypeAssignment_1_1 : ( ( RULE_ID ) ) ;
     public final void rule__Op_decl__SharedTypeAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12203:1: ( ( ( RULE_ID ) ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12204:1: ( ( RULE_ID ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12199:1: ( ( ( RULE_ID ) ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12200:1: ( ( RULE_ID ) )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12204:1: ( ( RULE_ID ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12205:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12200:1: ( ( RULE_ID ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12201:1: ( RULE_ID )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getOp_declAccess().getSharedTypeTypedefDefCrossReference_1_1_0()); 
             }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12206:1: ( RULE_ID )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12207:1: RULE_ID
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12202:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12203:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getOp_declAccess().getSharedTypeTypedefDefIDTerminalRuleCall_1_1_0_1()); 
             }
-            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Op_decl__SharedTypeAssignment_1_124736); if (state.failed) return ;
+            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Op_decl__SharedTypeAssignment_1_124732); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getOp_declAccess().getSharedTypeTypedefDefIDTerminalRuleCall_1_1_0_1()); 
             }
@@ -35320,22 +35340,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Op_decl__IdentifierAssignment_2"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12218:1: rule__Op_decl__IdentifierAssignment_2 : ( RULE_ID ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12214:1: rule__Op_decl__IdentifierAssignment_2 : ( RULE_ID ) ;
     public final void rule__Op_decl__IdentifierAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12222:1: ( ( RULE_ID ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12223:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12218:1: ( ( RULE_ID ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12219:1: ( RULE_ID )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12223:1: ( RULE_ID )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12224:1: RULE_ID
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12219:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12220:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getOp_declAccess().getIdentifierIDTerminalRuleCall_2_0()); 
             }
-            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Op_decl__IdentifierAssignment_224771); if (state.failed) return ;
+            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Op_decl__IdentifierAssignment_224767); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getOp_declAccess().getIdentifierIDTerminalRuleCall_2_0()); 
             }
@@ -35361,22 +35381,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Op_decl__ParametersAssignment_4_0"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12233:1: rule__Op_decl__ParametersAssignment_4_0 : ( ruleparam_decl ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12229:1: rule__Op_decl__ParametersAssignment_4_0 : ( ruleparam_decl ) ;
     public final void rule__Op_decl__ParametersAssignment_4_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12237:1: ( ( ruleparam_decl ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12238:1: ( ruleparam_decl )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12233:1: ( ( ruleparam_decl ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12234:1: ( ruleparam_decl )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12238:1: ( ruleparam_decl )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12239:1: ruleparam_decl
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12234:1: ( ruleparam_decl )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12235:1: ruleparam_decl
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getOp_declAccess().getParametersParam_declParserRuleCall_4_0_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleparam_decl_in_rule__Op_decl__ParametersAssignment_4_024802);
+            pushFollow(FollowSets001.FOLLOW_ruleparam_decl_in_rule__Op_decl__ParametersAssignment_4_024798);
             ruleparam_decl();
 
             state._fsp--;
@@ -35406,22 +35426,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Op_decl__ParametersAssignment_4_1_1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12248:1: rule__Op_decl__ParametersAssignment_4_1_1 : ( ruleparam_decl ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12244:1: rule__Op_decl__ParametersAssignment_4_1_1 : ( ruleparam_decl ) ;
     public final void rule__Op_decl__ParametersAssignment_4_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12252:1: ( ( ruleparam_decl ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12253:1: ( ruleparam_decl )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12248:1: ( ( ruleparam_decl ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12249:1: ( ruleparam_decl )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12253:1: ( ruleparam_decl )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12254:1: ruleparam_decl
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12249:1: ( ruleparam_decl )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12250:1: ruleparam_decl
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getOp_declAccess().getParametersParam_declParserRuleCall_4_1_1_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleparam_decl_in_rule__Op_decl__ParametersAssignment_4_1_124833);
+            pushFollow(FollowSets001.FOLLOW_ruleparam_decl_in_rule__Op_decl__ParametersAssignment_4_1_124829);
             ruleparam_decl();
 
             state._fsp--;
@@ -35451,28 +35471,28 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Op_decl__CanRaiseAssignment_6_2"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12263:1: rule__Op_decl__CanRaiseAssignment_6_2 : ( ( RULE_ID ) ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12259:1: rule__Op_decl__CanRaiseAssignment_6_2 : ( ( RULE_ID ) ) ;
     public final void rule__Op_decl__CanRaiseAssignment_6_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12267:1: ( ( ( RULE_ID ) ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12268:1: ( ( RULE_ID ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12263:1: ( ( ( RULE_ID ) ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12264:1: ( ( RULE_ID ) )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12268:1: ( ( RULE_ID ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12269:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12264:1: ( ( RULE_ID ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12265:1: ( RULE_ID )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getOp_declAccess().getCanRaiseExceptionDefCrossReference_6_2_0()); 
             }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12270:1: ( RULE_ID )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12271:1: RULE_ID
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12266:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12267:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getOp_declAccess().getCanRaiseExceptionDefIDTerminalRuleCall_6_2_0_1()); 
             }
-            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Op_decl__CanRaiseAssignment_6_224868); if (state.failed) return ;
+            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Op_decl__CanRaiseAssignment_6_224864); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getOp_declAccess().getCanRaiseExceptionDefIDTerminalRuleCall_6_2_0_1()); 
             }
@@ -35504,28 +35524,28 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Op_decl__CanRaiseAssignment_6_3_1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12282:1: rule__Op_decl__CanRaiseAssignment_6_3_1 : ( ( RULE_ID ) ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12278:1: rule__Op_decl__CanRaiseAssignment_6_3_1 : ( ( RULE_ID ) ) ;
     public final void rule__Op_decl__CanRaiseAssignment_6_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12286:1: ( ( ( RULE_ID ) ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12287:1: ( ( RULE_ID ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12282:1: ( ( ( RULE_ID ) ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12283:1: ( ( RULE_ID ) )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12287:1: ( ( RULE_ID ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12288:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12283:1: ( ( RULE_ID ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12284:1: ( RULE_ID )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getOp_declAccess().getCanRaiseExceptionDefCrossReference_6_3_1_0()); 
             }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12289:1: ( RULE_ID )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12290:1: RULE_ID
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12285:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12286:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getOp_declAccess().getCanRaiseExceptionDefIDTerminalRuleCall_6_3_1_0_1()); 
             }
-            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Op_decl__CanRaiseAssignment_6_3_124907); if (state.failed) return ;
+            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Op_decl__CanRaiseAssignment_6_3_124903); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getOp_declAccess().getCanRaiseExceptionDefIDTerminalRuleCall_6_3_1_0_1()); 
             }
@@ -35557,22 +35577,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Op_decl__ContextsAssignment_7_2"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12301:1: rule__Op_decl__ContextsAssignment_7_2 : ( RULE_STRING ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12297:1: rule__Op_decl__ContextsAssignment_7_2 : ( RULE_STRING ) ;
     public final void rule__Op_decl__ContextsAssignment_7_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12305:1: ( ( RULE_STRING ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12306:1: ( RULE_STRING )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12301:1: ( ( RULE_STRING ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12302:1: ( RULE_STRING )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12306:1: ( RULE_STRING )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12307:1: RULE_STRING
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12302:1: ( RULE_STRING )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12303:1: RULE_STRING
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getOp_declAccess().getContextsSTRINGTerminalRuleCall_7_2_0()); 
             }
-            match(input,RULE_STRING,FollowSets001.FOLLOW_RULE_STRING_in_rule__Op_decl__ContextsAssignment_7_224942); if (state.failed) return ;
+            match(input,RULE_STRING,FollowSets001.FOLLOW_RULE_STRING_in_rule__Op_decl__ContextsAssignment_7_224938); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getOp_declAccess().getContextsSTRINGTerminalRuleCall_7_2_0()); 
             }
@@ -35598,22 +35618,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Op_decl__ContextsAssignment_7_3_1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12316:1: rule__Op_decl__ContextsAssignment_7_3_1 : ( RULE_STRING ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12312:1: rule__Op_decl__ContextsAssignment_7_3_1 : ( RULE_STRING ) ;
     public final void rule__Op_decl__ContextsAssignment_7_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12320:1: ( ( RULE_STRING ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12321:1: ( RULE_STRING )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12316:1: ( ( RULE_STRING ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12317:1: ( RULE_STRING )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12321:1: ( RULE_STRING )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12322:1: RULE_STRING
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12317:1: ( RULE_STRING )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12318:1: RULE_STRING
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getOp_declAccess().getContextsSTRINGTerminalRuleCall_7_3_1_0()); 
             }
-            match(input,RULE_STRING,FollowSets001.FOLLOW_RULE_STRING_in_rule__Op_decl__ContextsAssignment_7_3_124973); if (state.failed) return ;
+            match(input,RULE_STRING,FollowSets001.FOLLOW_RULE_STRING_in_rule__Op_decl__ContextsAssignment_7_3_124969); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getOp_declAccess().getContextsSTRINGTerminalRuleCall_7_3_1_0()); 
             }
@@ -35639,22 +35659,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Op_type_spec__KindAssignment_1_1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12331:1: rule__Op_type_spec__KindAssignment_1_1 : ( rulevoid_type ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12327:1: rule__Op_type_spec__KindAssignment_1_1 : ( rulevoid_type ) ;
     public final void rule__Op_type_spec__KindAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12335:1: ( ( rulevoid_type ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12336:1: ( rulevoid_type )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12331:1: ( ( rulevoid_type ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12332:1: ( rulevoid_type )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12336:1: ( rulevoid_type )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12337:1: rulevoid_type
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12332:1: ( rulevoid_type )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12333:1: rulevoid_type
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getOp_type_specAccess().getKindVoid_typeEnumRuleCall_1_1_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_rulevoid_type_in_rule__Op_type_spec__KindAssignment_1_125004);
+            pushFollow(FollowSets001.FOLLOW_rulevoid_type_in_rule__Op_type_spec__KindAssignment_1_125000);
             rulevoid_type();
 
             state._fsp--;
@@ -35684,22 +35704,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Param_decl__DirectionAssignment_0"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12346:1: rule__Param_decl__DirectionAssignment_0 : ( ruleparam_attribute ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12342:1: rule__Param_decl__DirectionAssignment_0 : ( ruleparam_attribute ) ;
     public final void rule__Param_decl__DirectionAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12350:1: ( ( ruleparam_attribute ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12351:1: ( ruleparam_attribute )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12346:1: ( ( ruleparam_attribute ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12347:1: ( ruleparam_attribute )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12351:1: ( ruleparam_attribute )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12352:1: ruleparam_attribute
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12347:1: ( ruleparam_attribute )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12348:1: ruleparam_attribute
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getParam_declAccess().getDirectionParam_attributeEnumRuleCall_0_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleparam_attribute_in_rule__Param_decl__DirectionAssignment_025035);
+            pushFollow(FollowSets001.FOLLOW_ruleparam_attribute_in_rule__Param_decl__DirectionAssignment_025031);
             ruleparam_attribute();
 
             state._fsp--;
@@ -35729,22 +35749,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Param_decl__ContainedTypeAssignment_1_0"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12361:1: rule__Param_decl__ContainedTypeAssignment_1_0 : ( rulebase_type_spec ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12357:1: rule__Param_decl__ContainedTypeAssignment_1_0 : ( rulebase_type_spec ) ;
     public final void rule__Param_decl__ContainedTypeAssignment_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12365:1: ( ( rulebase_type_spec ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12366:1: ( rulebase_type_spec )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12361:1: ( ( rulebase_type_spec ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12362:1: ( rulebase_type_spec )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12366:1: ( rulebase_type_spec )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12367:1: rulebase_type_spec
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12362:1: ( rulebase_type_spec )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12363:1: rulebase_type_spec
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getParam_declAccess().getContainedTypeBase_type_specParserRuleCall_1_0_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_rulebase_type_spec_in_rule__Param_decl__ContainedTypeAssignment_1_025066);
+            pushFollow(FollowSets001.FOLLOW_rulebase_type_spec_in_rule__Param_decl__ContainedTypeAssignment_1_025062);
             rulebase_type_spec();
 
             state._fsp--;
@@ -35774,28 +35794,28 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Param_decl__SharedTypeAssignment_1_1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12376:1: rule__Param_decl__SharedTypeAssignment_1_1 : ( ( RULE_ID ) ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12372:1: rule__Param_decl__SharedTypeAssignment_1_1 : ( ( RULE_ID ) ) ;
     public final void rule__Param_decl__SharedTypeAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12380:1: ( ( ( RULE_ID ) ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12381:1: ( ( RULE_ID ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12376:1: ( ( ( RULE_ID ) ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12377:1: ( ( RULE_ID ) )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12381:1: ( ( RULE_ID ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12382:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12377:1: ( ( RULE_ID ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12378:1: ( RULE_ID )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getParam_declAccess().getSharedTypeTypedefDefCrossReference_1_1_0()); 
             }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12383:1: ( RULE_ID )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12384:1: RULE_ID
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12379:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12380:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getParam_declAccess().getSharedTypeTypedefDefIDTerminalRuleCall_1_1_0_1()); 
             }
-            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Param_decl__SharedTypeAssignment_1_125101); if (state.failed) return ;
+            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Param_decl__SharedTypeAssignment_1_125097); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getParam_declAccess().getSharedTypeTypedefDefIDTerminalRuleCall_1_1_0_1()); 
             }
@@ -35827,22 +35847,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Param_decl__IdentifierAssignment_2"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12395:1: rule__Param_decl__IdentifierAssignment_2 : ( RULE_ID ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12391:1: rule__Param_decl__IdentifierAssignment_2 : ( RULE_ID ) ;
     public final void rule__Param_decl__IdentifierAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12399:1: ( ( RULE_ID ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12400:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12395:1: ( ( RULE_ID ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12396:1: ( RULE_ID )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12400:1: ( RULE_ID )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12401:1: RULE_ID
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12396:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12397:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getParam_declAccess().getIdentifierIDTerminalRuleCall_2_0()); 
             }
-            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Param_decl__IdentifierAssignment_225136); if (state.failed) return ;
+            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Param_decl__IdentifierAssignment_225132); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getParam_declAccess().getIdentifierIDTerminalRuleCall_2_0()); 
             }
@@ -35868,28 +35888,28 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Readonly_attr_spec__IsReadonlyAssignment_0_0"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12410:1: rule__Readonly_attr_spec__IsReadonlyAssignment_0_0 : ( ( 'readonly' ) ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12406:1: rule__Readonly_attr_spec__IsReadonlyAssignment_0_0 : ( ( 'readonly' ) ) ;
     public final void rule__Readonly_attr_spec__IsReadonlyAssignment_0_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12414:1: ( ( ( 'readonly' ) ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12415:1: ( ( 'readonly' ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12410:1: ( ( ( 'readonly' ) ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12411:1: ( ( 'readonly' ) )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12415:1: ( ( 'readonly' ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12416:1: ( 'readonly' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getReadonly_attr_specAccess().getIsReadonlyReadonlyKeyword_0_0_0()); 
-            }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12417:1: ( 'readonly' )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12418:1: 'readonly'
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12411:1: ( ( 'readonly' ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12412:1: ( 'readonly' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getReadonly_attr_specAccess().getIsReadonlyReadonlyKeyword_0_0_0()); 
             }
-            match(input,76,FollowSets001.FOLLOW_76_in_rule__Readonly_attr_spec__IsReadonlyAssignment_0_025172); if (state.failed) return ;
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12413:1: ( 'readonly' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12414:1: 'readonly'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getReadonly_attr_specAccess().getIsReadonlyReadonlyKeyword_0_0_0()); 
+            }
+            match(input,75,FollowSets001.FOLLOW_75_in_rule__Readonly_attr_spec__IsReadonlyAssignment_0_025168); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getReadonly_attr_specAccess().getIsReadonlyReadonlyKeyword_0_0_0()); 
             }
@@ -35921,22 +35941,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Readonly_attr_spec__ContainedTypeAssignment_0_2_0"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12433:1: rule__Readonly_attr_spec__ContainedTypeAssignment_0_2_0 : ( rulebase_type_spec ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12429:1: rule__Readonly_attr_spec__ContainedTypeAssignment_0_2_0 : ( rulebase_type_spec ) ;
     public final void rule__Readonly_attr_spec__ContainedTypeAssignment_0_2_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12437:1: ( ( rulebase_type_spec ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12438:1: ( rulebase_type_spec )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12433:1: ( ( rulebase_type_spec ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12434:1: ( rulebase_type_spec )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12438:1: ( rulebase_type_spec )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12439:1: rulebase_type_spec
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12434:1: ( rulebase_type_spec )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12435:1: rulebase_type_spec
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getReadonly_attr_specAccess().getContainedTypeBase_type_specParserRuleCall_0_2_0_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_rulebase_type_spec_in_rule__Readonly_attr_spec__ContainedTypeAssignment_0_2_025211);
+            pushFollow(FollowSets001.FOLLOW_rulebase_type_spec_in_rule__Readonly_attr_spec__ContainedTypeAssignment_0_2_025207);
             rulebase_type_spec();
 
             state._fsp--;
@@ -35966,28 +35986,28 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Readonly_attr_spec__SharedTypeAssignment_0_2_1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12448:1: rule__Readonly_attr_spec__SharedTypeAssignment_0_2_1 : ( ( RULE_ID ) ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12444:1: rule__Readonly_attr_spec__SharedTypeAssignment_0_2_1 : ( ( RULE_ID ) ) ;
     public final void rule__Readonly_attr_spec__SharedTypeAssignment_0_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12452:1: ( ( ( RULE_ID ) ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12453:1: ( ( RULE_ID ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12448:1: ( ( ( RULE_ID ) ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12449:1: ( ( RULE_ID ) )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12453:1: ( ( RULE_ID ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12454:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12449:1: ( ( RULE_ID ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12450:1: ( RULE_ID )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getReadonly_attr_specAccess().getSharedTypeTypedefDefCrossReference_0_2_1_0()); 
             }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12455:1: ( RULE_ID )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12456:1: RULE_ID
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12451:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12452:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getReadonly_attr_specAccess().getSharedTypeTypedefDefIDTerminalRuleCall_0_2_1_0_1()); 
             }
-            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Readonly_attr_spec__SharedTypeAssignment_0_2_125246); if (state.failed) return ;
+            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Readonly_attr_spec__SharedTypeAssignment_0_2_125242); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getReadonly_attr_specAccess().getSharedTypeTypedefDefIDTerminalRuleCall_0_2_1_0_1()); 
             }
@@ -36019,22 +36039,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Readonly_attr_spec__IdentifierAssignment_0_3"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12467:1: rule__Readonly_attr_spec__IdentifierAssignment_0_3 : ( RULE_ID ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12463:1: rule__Readonly_attr_spec__IdentifierAssignment_0_3 : ( RULE_ID ) ;
     public final void rule__Readonly_attr_spec__IdentifierAssignment_0_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12471:1: ( ( RULE_ID ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12472:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12467:1: ( ( RULE_ID ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12468:1: ( RULE_ID )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12472:1: ( RULE_ID )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12473:1: RULE_ID
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12468:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12469:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getReadonly_attr_specAccess().getIdentifierIDTerminalRuleCall_0_3_0()); 
             }
-            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Readonly_attr_spec__IdentifierAssignment_0_325281); if (state.failed) return ;
+            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Readonly_attr_spec__IdentifierAssignment_0_325277); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getReadonly_attr_specAccess().getIdentifierIDTerminalRuleCall_0_3_0()); 
             }
@@ -36060,28 +36080,28 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Readonly_attr_spec__GetRaisesAssignment_0_6"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12482:1: rule__Readonly_attr_spec__GetRaisesAssignment_0_6 : ( ( RULE_ID ) ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12478:1: rule__Readonly_attr_spec__GetRaisesAssignment_0_6 : ( ( RULE_ID ) ) ;
     public final void rule__Readonly_attr_spec__GetRaisesAssignment_0_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12486:1: ( ( ( RULE_ID ) ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12487:1: ( ( RULE_ID ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12482:1: ( ( ( RULE_ID ) ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12483:1: ( ( RULE_ID ) )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12487:1: ( ( RULE_ID ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12488:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12483:1: ( ( RULE_ID ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12484:1: ( RULE_ID )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getReadonly_attr_specAccess().getGetRaisesExceptionDefCrossReference_0_6_0()); 
             }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12489:1: ( RULE_ID )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12490:1: RULE_ID
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12485:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12486:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getReadonly_attr_specAccess().getGetRaisesExceptionDefIDTerminalRuleCall_0_6_0_1()); 
             }
-            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Readonly_attr_spec__GetRaisesAssignment_0_625316); if (state.failed) return ;
+            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Readonly_attr_spec__GetRaisesAssignment_0_625312); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getReadonly_attr_specAccess().getGetRaisesExceptionDefIDTerminalRuleCall_0_6_0_1()); 
             }
@@ -36113,28 +36133,28 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Readonly_attr_spec__GetRaisesAssignment_0_7_1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12501:1: rule__Readonly_attr_spec__GetRaisesAssignment_0_7_1 : ( ( RULE_ID ) ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12497:1: rule__Readonly_attr_spec__GetRaisesAssignment_0_7_1 : ( ( RULE_ID ) ) ;
     public final void rule__Readonly_attr_spec__GetRaisesAssignment_0_7_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12505:1: ( ( ( RULE_ID ) ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12506:1: ( ( RULE_ID ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12501:1: ( ( ( RULE_ID ) ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12502:1: ( ( RULE_ID ) )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12506:1: ( ( RULE_ID ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12507:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12502:1: ( ( RULE_ID ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12503:1: ( RULE_ID )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getReadonly_attr_specAccess().getGetRaisesExceptionDefCrossReference_0_7_1_0()); 
             }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12508:1: ( RULE_ID )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12509:1: RULE_ID
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12504:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12505:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getReadonly_attr_specAccess().getGetRaisesExceptionDefIDTerminalRuleCall_0_7_1_0_1()); 
             }
-            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Readonly_attr_spec__GetRaisesAssignment_0_7_125355); if (state.failed) return ;
+            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Readonly_attr_spec__GetRaisesAssignment_0_7_125351); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getReadonly_attr_specAccess().getGetRaisesExceptionDefIDTerminalRuleCall_0_7_1_0_1()); 
             }
@@ -36166,28 +36186,28 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Readonly_attr_spec__IsReadonlyAssignment_1_0"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12520:1: rule__Readonly_attr_spec__IsReadonlyAssignment_1_0 : ( ( 'readonly' ) ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12516:1: rule__Readonly_attr_spec__IsReadonlyAssignment_1_0 : ( ( 'readonly' ) ) ;
     public final void rule__Readonly_attr_spec__IsReadonlyAssignment_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12524:1: ( ( ( 'readonly' ) ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12525:1: ( ( 'readonly' ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12520:1: ( ( ( 'readonly' ) ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12521:1: ( ( 'readonly' ) )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12525:1: ( ( 'readonly' ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12526:1: ( 'readonly' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getReadonly_attr_specAccess().getIsReadonlyReadonlyKeyword_1_0_0()); 
-            }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12527:1: ( 'readonly' )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12528:1: 'readonly'
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12521:1: ( ( 'readonly' ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12522:1: ( 'readonly' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getReadonly_attr_specAccess().getIsReadonlyReadonlyKeyword_1_0_0()); 
             }
-            match(input,76,FollowSets001.FOLLOW_76_in_rule__Readonly_attr_spec__IsReadonlyAssignment_1_025395); if (state.failed) return ;
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12523:1: ( 'readonly' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12524:1: 'readonly'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getReadonly_attr_specAccess().getIsReadonlyReadonlyKeyword_1_0_0()); 
+            }
+            match(input,75,FollowSets001.FOLLOW_75_in_rule__Readonly_attr_spec__IsReadonlyAssignment_1_025391); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getReadonly_attr_specAccess().getIsReadonlyReadonlyKeyword_1_0_0()); 
             }
@@ -36219,22 +36239,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Readonly_attr_spec__ContainedTypeAssignment_1_2_0"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12543:1: rule__Readonly_attr_spec__ContainedTypeAssignment_1_2_0 : ( rulebase_type_spec ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12539:1: rule__Readonly_attr_spec__ContainedTypeAssignment_1_2_0 : ( rulebase_type_spec ) ;
     public final void rule__Readonly_attr_spec__ContainedTypeAssignment_1_2_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12547:1: ( ( rulebase_type_spec ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12548:1: ( rulebase_type_spec )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12543:1: ( ( rulebase_type_spec ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12544:1: ( rulebase_type_spec )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12548:1: ( rulebase_type_spec )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12549:1: rulebase_type_spec
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12544:1: ( rulebase_type_spec )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12545:1: rulebase_type_spec
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getReadonly_attr_specAccess().getContainedTypeBase_type_specParserRuleCall_1_2_0_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_rulebase_type_spec_in_rule__Readonly_attr_spec__ContainedTypeAssignment_1_2_025434);
+            pushFollow(FollowSets001.FOLLOW_rulebase_type_spec_in_rule__Readonly_attr_spec__ContainedTypeAssignment_1_2_025430);
             rulebase_type_spec();
 
             state._fsp--;
@@ -36264,28 +36284,28 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Readonly_attr_spec__SharedTypeAssignment_1_2_1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12558:1: rule__Readonly_attr_spec__SharedTypeAssignment_1_2_1 : ( ( RULE_ID ) ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12554:1: rule__Readonly_attr_spec__SharedTypeAssignment_1_2_1 : ( ( RULE_ID ) ) ;
     public final void rule__Readonly_attr_spec__SharedTypeAssignment_1_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12562:1: ( ( ( RULE_ID ) ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12563:1: ( ( RULE_ID ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12558:1: ( ( ( RULE_ID ) ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12559:1: ( ( RULE_ID ) )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12563:1: ( ( RULE_ID ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12564:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12559:1: ( ( RULE_ID ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12560:1: ( RULE_ID )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getReadonly_attr_specAccess().getSharedTypeTypedefDefCrossReference_1_2_1_0()); 
             }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12565:1: ( RULE_ID )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12566:1: RULE_ID
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12561:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12562:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getReadonly_attr_specAccess().getSharedTypeTypedefDefIDTerminalRuleCall_1_2_1_0_1()); 
             }
-            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Readonly_attr_spec__SharedTypeAssignment_1_2_125469); if (state.failed) return ;
+            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Readonly_attr_spec__SharedTypeAssignment_1_2_125465); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getReadonly_attr_specAccess().getSharedTypeTypedefDefIDTerminalRuleCall_1_2_1_0_1()); 
             }
@@ -36317,22 +36337,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Readonly_attr_spec__IdentifierAssignment_1_3"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12577:1: rule__Readonly_attr_spec__IdentifierAssignment_1_3 : ( RULE_ID ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12573:1: rule__Readonly_attr_spec__IdentifierAssignment_1_3 : ( RULE_ID ) ;
     public final void rule__Readonly_attr_spec__IdentifierAssignment_1_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12581:1: ( ( RULE_ID ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12582:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12577:1: ( ( RULE_ID ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12578:1: ( RULE_ID )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12582:1: ( RULE_ID )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12583:1: RULE_ID
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12578:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12579:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getReadonly_attr_specAccess().getIdentifierIDTerminalRuleCall_1_3_0()); 
             }
-            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Readonly_attr_spec__IdentifierAssignment_1_325504); if (state.failed) return ;
+            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Readonly_attr_spec__IdentifierAssignment_1_325500); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getReadonly_attr_specAccess().getIdentifierIDTerminalRuleCall_1_3_0()); 
             }
@@ -36358,22 +36378,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Attr_spec__ContainedTypeAssignment_0_1_0"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12592:1: rule__Attr_spec__ContainedTypeAssignment_0_1_0 : ( rulebase_type_spec ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12588:1: rule__Attr_spec__ContainedTypeAssignment_0_1_0 : ( rulebase_type_spec ) ;
     public final void rule__Attr_spec__ContainedTypeAssignment_0_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12596:1: ( ( rulebase_type_spec ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12597:1: ( rulebase_type_spec )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12592:1: ( ( rulebase_type_spec ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12593:1: ( rulebase_type_spec )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12597:1: ( rulebase_type_spec )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12598:1: rulebase_type_spec
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12593:1: ( rulebase_type_spec )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12594:1: rulebase_type_spec
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAttr_specAccess().getContainedTypeBase_type_specParserRuleCall_0_1_0_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_rulebase_type_spec_in_rule__Attr_spec__ContainedTypeAssignment_0_1_025535);
+            pushFollow(FollowSets001.FOLLOW_rulebase_type_spec_in_rule__Attr_spec__ContainedTypeAssignment_0_1_025531);
             rulebase_type_spec();
 
             state._fsp--;
@@ -36403,28 +36423,28 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Attr_spec__SharedTypeAssignment_0_1_1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12607:1: rule__Attr_spec__SharedTypeAssignment_0_1_1 : ( ( RULE_ID ) ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12603:1: rule__Attr_spec__SharedTypeAssignment_0_1_1 : ( ( RULE_ID ) ) ;
     public final void rule__Attr_spec__SharedTypeAssignment_0_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12611:1: ( ( ( RULE_ID ) ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12612:1: ( ( RULE_ID ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12607:1: ( ( ( RULE_ID ) ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12608:1: ( ( RULE_ID ) )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12612:1: ( ( RULE_ID ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12613:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12608:1: ( ( RULE_ID ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12609:1: ( RULE_ID )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAttr_specAccess().getSharedTypeTypedefDefCrossReference_0_1_1_0()); 
             }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12614:1: ( RULE_ID )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12615:1: RULE_ID
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12610:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12611:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAttr_specAccess().getSharedTypeTypedefDefIDTerminalRuleCall_0_1_1_0_1()); 
             }
-            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Attr_spec__SharedTypeAssignment_0_1_125570); if (state.failed) return ;
+            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Attr_spec__SharedTypeAssignment_0_1_125566); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getAttr_specAccess().getSharedTypeTypedefDefIDTerminalRuleCall_0_1_1_0_1()); 
             }
@@ -36456,22 +36476,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Attr_spec__IdentifierAssignment_0_2"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12626:1: rule__Attr_spec__IdentifierAssignment_0_2 : ( RULE_ID ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12622:1: rule__Attr_spec__IdentifierAssignment_0_2 : ( RULE_ID ) ;
     public final void rule__Attr_spec__IdentifierAssignment_0_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12630:1: ( ( RULE_ID ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12631:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12626:1: ( ( RULE_ID ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12627:1: ( RULE_ID )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12631:1: ( RULE_ID )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12632:1: RULE_ID
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12627:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12628:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAttr_specAccess().getIdentifierIDTerminalRuleCall_0_2_0()); 
             }
-            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Attr_spec__IdentifierAssignment_0_225605); if (state.failed) return ;
+            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Attr_spec__IdentifierAssignment_0_225601); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getAttr_specAccess().getIdentifierIDTerminalRuleCall_0_2_0()); 
             }
@@ -36497,28 +36517,28 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Attr_spec__GetRaisesAssignment_0_3_0_2"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12641:1: rule__Attr_spec__GetRaisesAssignment_0_3_0_2 : ( ( RULE_ID ) ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12637:1: rule__Attr_spec__GetRaisesAssignment_0_3_0_2 : ( ( RULE_ID ) ) ;
     public final void rule__Attr_spec__GetRaisesAssignment_0_3_0_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12645:1: ( ( ( RULE_ID ) ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12646:1: ( ( RULE_ID ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12641:1: ( ( ( RULE_ID ) ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12642:1: ( ( RULE_ID ) )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12646:1: ( ( RULE_ID ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12647:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12642:1: ( ( RULE_ID ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12643:1: ( RULE_ID )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAttr_specAccess().getGetRaisesExceptionDefCrossReference_0_3_0_2_0()); 
             }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12648:1: ( RULE_ID )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12649:1: RULE_ID
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12644:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12645:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAttr_specAccess().getGetRaisesExceptionDefIDTerminalRuleCall_0_3_0_2_0_1()); 
             }
-            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Attr_spec__GetRaisesAssignment_0_3_0_225640); if (state.failed) return ;
+            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Attr_spec__GetRaisesAssignment_0_3_0_225636); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getAttr_specAccess().getGetRaisesExceptionDefIDTerminalRuleCall_0_3_0_2_0_1()); 
             }
@@ -36550,28 +36570,28 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Attr_spec__GetRaisesAssignment_0_3_0_3_1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12660:1: rule__Attr_spec__GetRaisesAssignment_0_3_0_3_1 : ( ( RULE_ID ) ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12656:1: rule__Attr_spec__GetRaisesAssignment_0_3_0_3_1 : ( ( RULE_ID ) ) ;
     public final void rule__Attr_spec__GetRaisesAssignment_0_3_0_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12664:1: ( ( ( RULE_ID ) ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12665:1: ( ( RULE_ID ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12660:1: ( ( ( RULE_ID ) ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12661:1: ( ( RULE_ID ) )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12665:1: ( ( RULE_ID ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12666:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12661:1: ( ( RULE_ID ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12662:1: ( RULE_ID )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAttr_specAccess().getGetRaisesExceptionDefCrossReference_0_3_0_3_1_0()); 
             }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12667:1: ( RULE_ID )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12668:1: RULE_ID
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12663:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12664:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAttr_specAccess().getGetRaisesExceptionDefIDTerminalRuleCall_0_3_0_3_1_0_1()); 
             }
-            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Attr_spec__GetRaisesAssignment_0_3_0_3_125679); if (state.failed) return ;
+            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Attr_spec__GetRaisesAssignment_0_3_0_3_125675); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getAttr_specAccess().getGetRaisesExceptionDefIDTerminalRuleCall_0_3_0_3_1_0_1()); 
             }
@@ -36603,28 +36623,28 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Attr_spec__SetRaisesAssignment_0_3_0_5_2"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12679:1: rule__Attr_spec__SetRaisesAssignment_0_3_0_5_2 : ( ( RULE_ID ) ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12675:1: rule__Attr_spec__SetRaisesAssignment_0_3_0_5_2 : ( ( RULE_ID ) ) ;
     public final void rule__Attr_spec__SetRaisesAssignment_0_3_0_5_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12683:1: ( ( ( RULE_ID ) ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12684:1: ( ( RULE_ID ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12679:1: ( ( ( RULE_ID ) ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12680:1: ( ( RULE_ID ) )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12684:1: ( ( RULE_ID ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12685:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12680:1: ( ( RULE_ID ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12681:1: ( RULE_ID )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAttr_specAccess().getSetRaisesExceptionDefCrossReference_0_3_0_5_2_0()); 
             }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12686:1: ( RULE_ID )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12687:1: RULE_ID
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12682:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12683:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAttr_specAccess().getSetRaisesExceptionDefIDTerminalRuleCall_0_3_0_5_2_0_1()); 
             }
-            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Attr_spec__SetRaisesAssignment_0_3_0_5_225718); if (state.failed) return ;
+            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Attr_spec__SetRaisesAssignment_0_3_0_5_225714); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getAttr_specAccess().getSetRaisesExceptionDefIDTerminalRuleCall_0_3_0_5_2_0_1()); 
             }
@@ -36656,28 +36676,28 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Attr_spec__SetRaisesAssignment_0_3_0_5_3_1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12698:1: rule__Attr_spec__SetRaisesAssignment_0_3_0_5_3_1 : ( ( RULE_ID ) ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12694:1: rule__Attr_spec__SetRaisesAssignment_0_3_0_5_3_1 : ( ( RULE_ID ) ) ;
     public final void rule__Attr_spec__SetRaisesAssignment_0_3_0_5_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12702:1: ( ( ( RULE_ID ) ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12703:1: ( ( RULE_ID ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12698:1: ( ( ( RULE_ID ) ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12699:1: ( ( RULE_ID ) )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12703:1: ( ( RULE_ID ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12704:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12699:1: ( ( RULE_ID ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12700:1: ( RULE_ID )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAttr_specAccess().getSetRaisesExceptionDefCrossReference_0_3_0_5_3_1_0()); 
             }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12705:1: ( RULE_ID )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12706:1: RULE_ID
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12701:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12702:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAttr_specAccess().getSetRaisesExceptionDefIDTerminalRuleCall_0_3_0_5_3_1_0_1()); 
             }
-            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Attr_spec__SetRaisesAssignment_0_3_0_5_3_125757); if (state.failed) return ;
+            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Attr_spec__SetRaisesAssignment_0_3_0_5_3_125753); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getAttr_specAccess().getSetRaisesExceptionDefIDTerminalRuleCall_0_3_0_5_3_1_0_1()); 
             }
@@ -36709,28 +36729,28 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Attr_spec__SetRaisesAssignment_0_3_1_2"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12717:1: rule__Attr_spec__SetRaisesAssignment_0_3_1_2 : ( ( RULE_ID ) ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12713:1: rule__Attr_spec__SetRaisesAssignment_0_3_1_2 : ( ( RULE_ID ) ) ;
     public final void rule__Attr_spec__SetRaisesAssignment_0_3_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12721:1: ( ( ( RULE_ID ) ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12722:1: ( ( RULE_ID ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12717:1: ( ( ( RULE_ID ) ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12718:1: ( ( RULE_ID ) )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12722:1: ( ( RULE_ID ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12723:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12718:1: ( ( RULE_ID ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12719:1: ( RULE_ID )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAttr_specAccess().getSetRaisesExceptionDefCrossReference_0_3_1_2_0()); 
             }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12724:1: ( RULE_ID )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12725:1: RULE_ID
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12720:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12721:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAttr_specAccess().getSetRaisesExceptionDefIDTerminalRuleCall_0_3_1_2_0_1()); 
             }
-            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Attr_spec__SetRaisesAssignment_0_3_1_225796); if (state.failed) return ;
+            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Attr_spec__SetRaisesAssignment_0_3_1_225792); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getAttr_specAccess().getSetRaisesExceptionDefIDTerminalRuleCall_0_3_1_2_0_1()); 
             }
@@ -36762,28 +36782,28 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Attr_spec__SetRaisesAssignment_0_3_1_3_1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12736:1: rule__Attr_spec__SetRaisesAssignment_0_3_1_3_1 : ( ( RULE_ID ) ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12732:1: rule__Attr_spec__SetRaisesAssignment_0_3_1_3_1 : ( ( RULE_ID ) ) ;
     public final void rule__Attr_spec__SetRaisesAssignment_0_3_1_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12740:1: ( ( ( RULE_ID ) ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12741:1: ( ( RULE_ID ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12736:1: ( ( ( RULE_ID ) ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12737:1: ( ( RULE_ID ) )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12741:1: ( ( RULE_ID ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12742:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12737:1: ( ( RULE_ID ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12738:1: ( RULE_ID )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAttr_specAccess().getSetRaisesExceptionDefCrossReference_0_3_1_3_1_0()); 
             }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12743:1: ( RULE_ID )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12744:1: RULE_ID
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12739:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12740:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAttr_specAccess().getSetRaisesExceptionDefIDTerminalRuleCall_0_3_1_3_1_0_1()); 
             }
-            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Attr_spec__SetRaisesAssignment_0_3_1_3_125835); if (state.failed) return ;
+            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Attr_spec__SetRaisesAssignment_0_3_1_3_125831); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getAttr_specAccess().getSetRaisesExceptionDefIDTerminalRuleCall_0_3_1_3_1_0_1()); 
             }
@@ -36815,22 +36835,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Attr_spec__ContainedTypeAssignment_1_1_0"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12755:1: rule__Attr_spec__ContainedTypeAssignment_1_1_0 : ( rulebase_type_spec ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12751:1: rule__Attr_spec__ContainedTypeAssignment_1_1_0 : ( rulebase_type_spec ) ;
     public final void rule__Attr_spec__ContainedTypeAssignment_1_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12759:1: ( ( rulebase_type_spec ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12760:1: ( rulebase_type_spec )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12755:1: ( ( rulebase_type_spec ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12756:1: ( rulebase_type_spec )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12760:1: ( rulebase_type_spec )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12761:1: rulebase_type_spec
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12756:1: ( rulebase_type_spec )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12757:1: rulebase_type_spec
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAttr_specAccess().getContainedTypeBase_type_specParserRuleCall_1_1_0_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_rulebase_type_spec_in_rule__Attr_spec__ContainedTypeAssignment_1_1_025870);
+            pushFollow(FollowSets001.FOLLOW_rulebase_type_spec_in_rule__Attr_spec__ContainedTypeAssignment_1_1_025866);
             rulebase_type_spec();
 
             state._fsp--;
@@ -36860,28 +36880,28 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Attr_spec__SharedTypeAssignment_1_1_1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12770:1: rule__Attr_spec__SharedTypeAssignment_1_1_1 : ( ( RULE_ID ) ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12766:1: rule__Attr_spec__SharedTypeAssignment_1_1_1 : ( ( RULE_ID ) ) ;
     public final void rule__Attr_spec__SharedTypeAssignment_1_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12774:1: ( ( ( RULE_ID ) ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12775:1: ( ( RULE_ID ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12770:1: ( ( ( RULE_ID ) ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12771:1: ( ( RULE_ID ) )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12775:1: ( ( RULE_ID ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12776:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12771:1: ( ( RULE_ID ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12772:1: ( RULE_ID )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAttr_specAccess().getSharedTypeTypedefDefCrossReference_1_1_1_0()); 
             }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12777:1: ( RULE_ID )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12778:1: RULE_ID
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12773:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12774:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAttr_specAccess().getSharedTypeTypedefDefIDTerminalRuleCall_1_1_1_0_1()); 
             }
-            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Attr_spec__SharedTypeAssignment_1_1_125905); if (state.failed) return ;
+            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Attr_spec__SharedTypeAssignment_1_1_125901); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getAttr_specAccess().getSharedTypeTypedefDefIDTerminalRuleCall_1_1_1_0_1()); 
             }
@@ -36913,22 +36933,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Attr_spec__IdentifierAssignment_1_2"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12789:1: rule__Attr_spec__IdentifierAssignment_1_2 : ( RULE_ID ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12785:1: rule__Attr_spec__IdentifierAssignment_1_2 : ( RULE_ID ) ;
     public final void rule__Attr_spec__IdentifierAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12793:1: ( ( RULE_ID ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12794:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12789:1: ( ( RULE_ID ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12790:1: ( RULE_ID )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12794:1: ( RULE_ID )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12795:1: RULE_ID
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12790:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12791:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAttr_specAccess().getIdentifierIDTerminalRuleCall_1_2_0()); 
             }
-            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Attr_spec__IdentifierAssignment_1_225940); if (state.failed) return ;
+            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Attr_spec__IdentifierAssignment_1_225936); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getAttr_specAccess().getIdentifierIDTerminalRuleCall_1_2_0()); 
             }
@@ -36954,22 +36974,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Except_decl__IdentifierAssignment_1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12804:1: rule__Except_decl__IdentifierAssignment_1 : ( RULE_ID ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12800:1: rule__Except_decl__IdentifierAssignment_1 : ( RULE_ID ) ;
     public final void rule__Except_decl__IdentifierAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12808:1: ( ( RULE_ID ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12809:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12804:1: ( ( RULE_ID ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12805:1: ( RULE_ID )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12809:1: ( RULE_ID )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12810:1: RULE_ID
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12805:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12806:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExcept_declAccess().getIdentifierIDTerminalRuleCall_1_0()); 
             }
-            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Except_decl__IdentifierAssignment_125971); if (state.failed) return ;
+            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Except_decl__IdentifierAssignment_125967); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getExcept_declAccess().getIdentifierIDTerminalRuleCall_1_0()); 
             }
@@ -36995,22 +37015,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Except_decl__MembersAssignment_3"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12819:1: rule__Except_decl__MembersAssignment_3 : ( rulemember ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12815:1: rule__Except_decl__MembersAssignment_3 : ( rulemember ) ;
     public final void rule__Except_decl__MembersAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12823:1: ( ( rulemember ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12824:1: ( rulemember )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12819:1: ( ( rulemember ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12820:1: ( rulemember )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12824:1: ( rulemember )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12825:1: rulemember
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12820:1: ( rulemember )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12821:1: rulemember
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExcept_declAccess().getMembersMemberParserRuleCall_3_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_rulemember_in_rule__Except_decl__MembersAssignment_326002);
+            pushFollow(FollowSets001.FOLLOW_rulemember_in_rule__Except_decl__MembersAssignment_325998);
             rulemember();
 
             state._fsp--;
@@ -37040,22 +37060,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Alias_type__ContainedTypeAssignment_0_1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12834:1: rule__Alias_type__ContainedTypeAssignment_0_1 : ( rulearray_type_spec ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12830:1: rule__Alias_type__ContainedTypeAssignment_0_1 : ( rulearray_type_spec ) ;
     public final void rule__Alias_type__ContainedTypeAssignment_0_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12838:1: ( ( rulearray_type_spec ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12839:1: ( rulearray_type_spec )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12834:1: ( ( rulearray_type_spec ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12835:1: ( rulearray_type_spec )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12839:1: ( rulearray_type_spec )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12840:1: rulearray_type_spec
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12835:1: ( rulearray_type_spec )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12836:1: rulearray_type_spec
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAlias_typeAccess().getContainedTypeArray_type_specParserRuleCall_0_1_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_rulearray_type_spec_in_rule__Alias_type__ContainedTypeAssignment_0_126033);
+            pushFollow(FollowSets001.FOLLOW_rulearray_type_spec_in_rule__Alias_type__ContainedTypeAssignment_0_126029);
             rulearray_type_spec();
 
             state._fsp--;
@@ -37085,22 +37105,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Alias_type__ContainedTypeAssignment_1_1_0"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12849:1: rule__Alias_type__ContainedTypeAssignment_1_1_0 : ( rulesimple_type_spec ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12845:1: rule__Alias_type__ContainedTypeAssignment_1_1_0 : ( rulesimple_type_spec ) ;
     public final void rule__Alias_type__ContainedTypeAssignment_1_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12853:1: ( ( rulesimple_type_spec ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12854:1: ( rulesimple_type_spec )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12849:1: ( ( rulesimple_type_spec ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12850:1: ( rulesimple_type_spec )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12854:1: ( rulesimple_type_spec )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12855:1: rulesimple_type_spec
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12850:1: ( rulesimple_type_spec )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12851:1: rulesimple_type_spec
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAlias_typeAccess().getContainedTypeSimple_type_specParserRuleCall_1_1_0_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_rulesimple_type_spec_in_rule__Alias_type__ContainedTypeAssignment_1_1_026064);
+            pushFollow(FollowSets001.FOLLOW_rulesimple_type_spec_in_rule__Alias_type__ContainedTypeAssignment_1_1_026060);
             rulesimple_type_spec();
 
             state._fsp--;
@@ -37130,28 +37150,28 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Alias_type__SharedTypeAssignment_1_1_1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12864:1: rule__Alias_type__SharedTypeAssignment_1_1_1 : ( ( RULE_ID ) ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12860:1: rule__Alias_type__SharedTypeAssignment_1_1_1 : ( ( RULE_ID ) ) ;
     public final void rule__Alias_type__SharedTypeAssignment_1_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12868:1: ( ( ( RULE_ID ) ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12869:1: ( ( RULE_ID ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12864:1: ( ( ( RULE_ID ) ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12865:1: ( ( RULE_ID ) )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12869:1: ( ( RULE_ID ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12870:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12865:1: ( ( RULE_ID ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12866:1: ( RULE_ID )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAlias_typeAccess().getSharedTypeTypedefDefCrossReference_1_1_1_0()); 
             }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12871:1: ( RULE_ID )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12872:1: RULE_ID
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12867:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12868:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAlias_typeAccess().getSharedTypeTypedefDefIDTerminalRuleCall_1_1_1_0_1()); 
             }
-            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Alias_type__SharedTypeAssignment_1_1_126099); if (state.failed) return ;
+            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Alias_type__SharedTypeAssignment_1_1_126095); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getAlias_typeAccess().getSharedTypeTypedefDefIDTerminalRuleCall_1_1_1_0_1()); 
             }
@@ -37183,22 +37203,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Alias_type__IdentifierAssignment_1_2"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12883:1: rule__Alias_type__IdentifierAssignment_1_2 : ( RULE_ID ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12879:1: rule__Alias_type__IdentifierAssignment_1_2 : ( RULE_ID ) ;
     public final void rule__Alias_type__IdentifierAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12887:1: ( ( RULE_ID ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12888:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12883:1: ( ( RULE_ID ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12884:1: ( RULE_ID )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12888:1: ( RULE_ID )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12889:1: RULE_ID
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12884:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12885:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAlias_typeAccess().getIdentifierIDTerminalRuleCall_1_2_0()); 
             }
-            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Alias_type__IdentifierAssignment_1_226134); if (state.failed) return ;
+            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Alias_type__IdentifierAssignment_1_226130); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getAlias_typeAccess().getIdentifierIDTerminalRuleCall_1_2_0()); 
             }
@@ -37224,22 +37244,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Array_type_spec__ContainedTypeAssignment_0_0"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12898:1: rule__Array_type_spec__ContainedTypeAssignment_0_0 : ( rulesimple_type_spec ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12894:1: rule__Array_type_spec__ContainedTypeAssignment_0_0 : ( rulesimple_type_spec ) ;
     public final void rule__Array_type_spec__ContainedTypeAssignment_0_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12902:1: ( ( rulesimple_type_spec ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12903:1: ( rulesimple_type_spec )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12898:1: ( ( rulesimple_type_spec ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12899:1: ( rulesimple_type_spec )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12903:1: ( rulesimple_type_spec )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12904:1: rulesimple_type_spec
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12899:1: ( rulesimple_type_spec )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12900:1: rulesimple_type_spec
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getArray_type_specAccess().getContainedTypeSimple_type_specParserRuleCall_0_0_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_rulesimple_type_spec_in_rule__Array_type_spec__ContainedTypeAssignment_0_026165);
+            pushFollow(FollowSets001.FOLLOW_rulesimple_type_spec_in_rule__Array_type_spec__ContainedTypeAssignment_0_026161);
             rulesimple_type_spec();
 
             state._fsp--;
@@ -37269,28 +37289,28 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Array_type_spec__SharedTypeAssignment_0_1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12913:1: rule__Array_type_spec__SharedTypeAssignment_0_1 : ( ( RULE_ID ) ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12909:1: rule__Array_type_spec__SharedTypeAssignment_0_1 : ( ( RULE_ID ) ) ;
     public final void rule__Array_type_spec__SharedTypeAssignment_0_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12917:1: ( ( ( RULE_ID ) ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12918:1: ( ( RULE_ID ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12913:1: ( ( ( RULE_ID ) ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12914:1: ( ( RULE_ID ) )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12918:1: ( ( RULE_ID ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12919:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12914:1: ( ( RULE_ID ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12915:1: ( RULE_ID )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getArray_type_specAccess().getSharedTypeTypedefDefCrossReference_0_1_0()); 
             }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12920:1: ( RULE_ID )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12921:1: RULE_ID
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12916:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12917:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getArray_type_specAccess().getSharedTypeTypedefDefIDTerminalRuleCall_0_1_0_1()); 
             }
-            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Array_type_spec__SharedTypeAssignment_0_126200); if (state.failed) return ;
+            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Array_type_spec__SharedTypeAssignment_0_126196); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getArray_type_specAccess().getSharedTypeTypedefDefIDTerminalRuleCall_0_1_0_1()); 
             }
@@ -37322,22 +37342,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Array_type_spec__NameAssignment_1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12932:1: rule__Array_type_spec__NameAssignment_1 : ( RULE_ID ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12928:1: rule__Array_type_spec__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__Array_type_spec__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12936:1: ( ( RULE_ID ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12937:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12932:1: ( ( RULE_ID ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12933:1: ( RULE_ID )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12937:1: ( RULE_ID )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12938:1: RULE_ID
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12933:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12934:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getArray_type_specAccess().getNameIDTerminalRuleCall_1_0()); 
             }
-            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Array_type_spec__NameAssignment_126235); if (state.failed) return ;
+            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Array_type_spec__NameAssignment_126231); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getArray_type_specAccess().getNameIDTerminalRuleCall_1_0()); 
             }
@@ -37363,22 +37383,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Array_type_spec__BoundsAssignment_2_1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12947:1: rule__Array_type_spec__BoundsAssignment_2_1 : ( ruleconst_exp ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12943:1: rule__Array_type_spec__BoundsAssignment_2_1 : ( ruleconst_exp ) ;
     public final void rule__Array_type_spec__BoundsAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12951:1: ( ( ruleconst_exp ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12952:1: ( ruleconst_exp )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12947:1: ( ( ruleconst_exp ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12948:1: ( ruleconst_exp )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12952:1: ( ruleconst_exp )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12953:1: ruleconst_exp
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12948:1: ( ruleconst_exp )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12949:1: ruleconst_exp
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getArray_type_specAccess().getBoundsConst_expParserRuleCall_2_1_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleconst_exp_in_rule__Array_type_spec__BoundsAssignment_2_126266);
+            pushFollow(FollowSets001.FOLLOW_ruleconst_exp_in_rule__Array_type_spec__BoundsAssignment_2_126262);
             ruleconst_exp();
 
             state._fsp--;
@@ -37408,22 +37428,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Base_type_spec__KindAssignment_1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12962:1: rule__Base_type_spec__KindAssignment_1 : ( ruleobject_type ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12958:1: rule__Base_type_spec__KindAssignment_1 : ( ruleobject_type ) ;
     public final void rule__Base_type_spec__KindAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12966:1: ( ( ruleobject_type ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12967:1: ( ruleobject_type )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12962:1: ( ( ruleobject_type ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12963:1: ( ruleobject_type )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12967:1: ( ruleobject_type )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12968:1: ruleobject_type
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12963:1: ( ruleobject_type )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12964:1: ruleobject_type
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBase_type_specAccess().getKindObject_typeEnumRuleCall_1_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleobject_type_in_rule__Base_type_spec__KindAssignment_126297);
+            pushFollow(FollowSets001.FOLLOW_ruleobject_type_in_rule__Base_type_spec__KindAssignment_126293);
             ruleobject_type();
 
             state._fsp--;
@@ -37453,22 +37473,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Struct_type__IdentifierAssignment_1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12977:1: rule__Struct_type__IdentifierAssignment_1 : ( RULE_ID ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12973:1: rule__Struct_type__IdentifierAssignment_1 : ( RULE_ID ) ;
     public final void rule__Struct_type__IdentifierAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12981:1: ( ( RULE_ID ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12982:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12977:1: ( ( RULE_ID ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12978:1: ( RULE_ID )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12982:1: ( RULE_ID )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12983:1: RULE_ID
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12978:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12979:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getStruct_typeAccess().getIdentifierIDTerminalRuleCall_1_0()); 
             }
-            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Struct_type__IdentifierAssignment_126328); if (state.failed) return ;
+            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Struct_type__IdentifierAssignment_126324); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getStruct_typeAccess().getIdentifierIDTerminalRuleCall_1_0()); 
             }
@@ -37494,22 +37514,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Struct_type__MembersAssignment_3"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12992:1: rule__Struct_type__MembersAssignment_3 : ( rulemember ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12988:1: rule__Struct_type__MembersAssignment_3 : ( rulemember ) ;
     public final void rule__Struct_type__MembersAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12996:1: ( ( rulemember ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12997:1: ( rulemember )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12992:1: ( ( rulemember ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12993:1: ( rulemember )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12997:1: ( rulemember )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12998:1: rulemember
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12993:1: ( rulemember )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:12994:1: rulemember
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getStruct_typeAccess().getMembersMemberParserRuleCall_3_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_rulemember_in_rule__Struct_type__MembersAssignment_326359);
+            pushFollow(FollowSets001.FOLLOW_rulemember_in_rule__Struct_type__MembersAssignment_326355);
             rulemember();
 
             state._fsp--;
@@ -37539,22 +37559,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Member__ContainedTypeAssignment_0_0"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13007:1: rule__Member__ContainedTypeAssignment_0_0 : ( rulearray_type_spec ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13003:1: rule__Member__ContainedTypeAssignment_0_0 : ( rulearray_type_spec ) ;
     public final void rule__Member__ContainedTypeAssignment_0_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13011:1: ( ( rulearray_type_spec ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13012:1: ( rulearray_type_spec )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13007:1: ( ( rulearray_type_spec ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13008:1: ( rulearray_type_spec )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13012:1: ( rulearray_type_spec )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13013:1: rulearray_type_spec
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13008:1: ( rulearray_type_spec )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13009:1: rulearray_type_spec
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMemberAccess().getContainedTypeArray_type_specParserRuleCall_0_0_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_rulearray_type_spec_in_rule__Member__ContainedTypeAssignment_0_026390);
+            pushFollow(FollowSets001.FOLLOW_rulearray_type_spec_in_rule__Member__ContainedTypeAssignment_0_026386);
             rulearray_type_spec();
 
             state._fsp--;
@@ -37584,22 +37604,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Member__ContainedTypeAssignment_1_0"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13022:1: rule__Member__ContainedTypeAssignment_1_0 : ( rulesimple_type_spec ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13018:1: rule__Member__ContainedTypeAssignment_1_0 : ( rulesimple_type_spec ) ;
     public final void rule__Member__ContainedTypeAssignment_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13026:1: ( ( rulesimple_type_spec ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13027:1: ( rulesimple_type_spec )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13022:1: ( ( rulesimple_type_spec ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13023:1: ( rulesimple_type_spec )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13027:1: ( rulesimple_type_spec )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13028:1: rulesimple_type_spec
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13023:1: ( rulesimple_type_spec )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13024:1: rulesimple_type_spec
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMemberAccess().getContainedTypeSimple_type_specParserRuleCall_1_0_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_rulesimple_type_spec_in_rule__Member__ContainedTypeAssignment_1_026421);
+            pushFollow(FollowSets001.FOLLOW_rulesimple_type_spec_in_rule__Member__ContainedTypeAssignment_1_026417);
             rulesimple_type_spec();
 
             state._fsp--;
@@ -37629,22 +37649,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Member__IdentifierAssignment_1_1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13037:1: rule__Member__IdentifierAssignment_1_1 : ( RULE_ID ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13033:1: rule__Member__IdentifierAssignment_1_1 : ( RULE_ID ) ;
     public final void rule__Member__IdentifierAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13041:1: ( ( RULE_ID ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13042:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13037:1: ( ( RULE_ID ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13038:1: ( RULE_ID )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13042:1: ( RULE_ID )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13043:1: RULE_ID
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13038:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13039:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMemberAccess().getIdentifierIDTerminalRuleCall_1_1_0()); 
             }
-            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Member__IdentifierAssignment_1_126452); if (state.failed) return ;
+            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Member__IdentifierAssignment_1_126448); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getMemberAccess().getIdentifierIDTerminalRuleCall_1_1_0()); 
             }
@@ -37670,22 +37690,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Member__ContainedTypeAssignment_2_0"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13052:1: rule__Member__ContainedTypeAssignment_2_0 : ( rulestruct_type ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13048:1: rule__Member__ContainedTypeAssignment_2_0 : ( rulestruct_type ) ;
     public final void rule__Member__ContainedTypeAssignment_2_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13056:1: ( ( rulestruct_type ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13057:1: ( rulestruct_type )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13052:1: ( ( rulestruct_type ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13053:1: ( rulestruct_type )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13057:1: ( rulestruct_type )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13058:1: rulestruct_type
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13053:1: ( rulestruct_type )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13054:1: rulestruct_type
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMemberAccess().getContainedTypeStruct_typeParserRuleCall_2_0_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_rulestruct_type_in_rule__Member__ContainedTypeAssignment_2_026483);
+            pushFollow(FollowSets001.FOLLOW_rulestruct_type_in_rule__Member__ContainedTypeAssignment_2_026479);
             rulestruct_type();
 
             state._fsp--;
@@ -37715,22 +37735,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Member__IdentifierAssignment_2_1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13067:1: rule__Member__IdentifierAssignment_2_1 : ( RULE_ID ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13063:1: rule__Member__IdentifierAssignment_2_1 : ( RULE_ID ) ;
     public final void rule__Member__IdentifierAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13071:1: ( ( RULE_ID ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13072:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13067:1: ( ( RULE_ID ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13068:1: ( RULE_ID )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13072:1: ( RULE_ID )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13073:1: RULE_ID
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13068:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13069:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMemberAccess().getIdentifierIDTerminalRuleCall_2_1_0()); 
             }
-            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Member__IdentifierAssignment_2_126514); if (state.failed) return ;
+            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Member__IdentifierAssignment_2_126510); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getMemberAccess().getIdentifierIDTerminalRuleCall_2_1_0()); 
             }
@@ -37756,28 +37776,28 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Member__SharedTypeAssignment_3_0"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13082:1: rule__Member__SharedTypeAssignment_3_0 : ( ( RULE_ID ) ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13078:1: rule__Member__SharedTypeAssignment_3_0 : ( ( RULE_ID ) ) ;
     public final void rule__Member__SharedTypeAssignment_3_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13086:1: ( ( ( RULE_ID ) ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13087:1: ( ( RULE_ID ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13082:1: ( ( ( RULE_ID ) ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13083:1: ( ( RULE_ID ) )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13087:1: ( ( RULE_ID ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13088:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13083:1: ( ( RULE_ID ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13084:1: ( RULE_ID )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMemberAccess().getSharedTypeTypedefDefCrossReference_3_0_0()); 
             }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13089:1: ( RULE_ID )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13090:1: RULE_ID
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13085:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13086:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMemberAccess().getSharedTypeTypedefDefIDTerminalRuleCall_3_0_0_1()); 
             }
-            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Member__SharedTypeAssignment_3_026549); if (state.failed) return ;
+            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Member__SharedTypeAssignment_3_026545); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getMemberAccess().getSharedTypeTypedefDefIDTerminalRuleCall_3_0_0_1()); 
             }
@@ -37809,22 +37829,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Member__IdentifierAssignment_3_1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13101:1: rule__Member__IdentifierAssignment_3_1 : ( RULE_ID ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13097:1: rule__Member__IdentifierAssignment_3_1 : ( RULE_ID ) ;
     public final void rule__Member__IdentifierAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13105:1: ( ( RULE_ID ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13106:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13101:1: ( ( RULE_ID ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13102:1: ( RULE_ID )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13106:1: ( RULE_ID )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13107:1: RULE_ID
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13102:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13103:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMemberAccess().getIdentifierIDTerminalRuleCall_3_1_0()); 
             }
-            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Member__IdentifierAssignment_3_126584); if (state.failed) return ;
+            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Member__IdentifierAssignment_3_126580); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getMemberAccess().getIdentifierIDTerminalRuleCall_3_1_0()); 
             }
@@ -37850,22 +37870,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Union_type__IdentifierAssignment_1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13116:1: rule__Union_type__IdentifierAssignment_1 : ( RULE_ID ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13112:1: rule__Union_type__IdentifierAssignment_1 : ( RULE_ID ) ;
     public final void rule__Union_type__IdentifierAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13120:1: ( ( RULE_ID ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13121:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13116:1: ( ( RULE_ID ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13117:1: ( RULE_ID )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13121:1: ( RULE_ID )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13122:1: RULE_ID
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13117:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13118:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnion_typeAccess().getIdentifierIDTerminalRuleCall_1_0()); 
             }
-            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Union_type__IdentifierAssignment_126615); if (state.failed) return ;
+            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Union_type__IdentifierAssignment_126611); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getUnion_typeAccess().getIdentifierIDTerminalRuleCall_1_0()); 
             }
@@ -37891,22 +37911,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Union_type__ContainedDiscrimAssignment_4_0"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13131:1: rule__Union_type__ContainedDiscrimAssignment_4_0 : ( ruleswitch_type_spec_cont ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13127:1: rule__Union_type__ContainedDiscrimAssignment_4_0 : ( ruleswitch_type_spec_cont ) ;
     public final void rule__Union_type__ContainedDiscrimAssignment_4_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13135:1: ( ( ruleswitch_type_spec_cont ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13136:1: ( ruleswitch_type_spec_cont )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13131:1: ( ( ruleswitch_type_spec_cont ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13132:1: ( ruleswitch_type_spec_cont )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13136:1: ( ruleswitch_type_spec_cont )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13137:1: ruleswitch_type_spec_cont
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13132:1: ( ruleswitch_type_spec_cont )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13133:1: ruleswitch_type_spec_cont
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnion_typeAccess().getContainedDiscrimSwitch_type_spec_contParserRuleCall_4_0_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleswitch_type_spec_cont_in_rule__Union_type__ContainedDiscrimAssignment_4_026646);
+            pushFollow(FollowSets001.FOLLOW_ruleswitch_type_spec_cont_in_rule__Union_type__ContainedDiscrimAssignment_4_026642);
             ruleswitch_type_spec_cont();
 
             state._fsp--;
@@ -37936,28 +37956,28 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Union_type__SharedDiscrimAssignment_4_1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13146:1: rule__Union_type__SharedDiscrimAssignment_4_1 : ( ( RULE_ID ) ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13142:1: rule__Union_type__SharedDiscrimAssignment_4_1 : ( ( RULE_ID ) ) ;
     public final void rule__Union_type__SharedDiscrimAssignment_4_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13150:1: ( ( ( RULE_ID ) ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13151:1: ( ( RULE_ID ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13146:1: ( ( ( RULE_ID ) ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13147:1: ( ( RULE_ID ) )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13151:1: ( ( RULE_ID ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13152:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13147:1: ( ( RULE_ID ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13148:1: ( RULE_ID )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnion_typeAccess().getSharedDiscrimEnumDefCrossReference_4_1_0()); 
             }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13153:1: ( RULE_ID )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13154:1: RULE_ID
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13149:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13150:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnion_typeAccess().getSharedDiscrimEnumDefIDTerminalRuleCall_4_1_0_1()); 
             }
-            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Union_type__SharedDiscrimAssignment_4_126681); if (state.failed) return ;
+            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Union_type__SharedDiscrimAssignment_4_126677); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getUnion_typeAccess().getSharedDiscrimEnumDefIDTerminalRuleCall_4_1_0_1()); 
             }
@@ -37989,22 +38009,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Union_type__UnionMembersAssignment_7"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13165:1: rule__Union_type__UnionMembersAssignment_7 : ( rulecase_stmt ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13161:1: rule__Union_type__UnionMembersAssignment_7 : ( rulecase_stmt ) ;
     public final void rule__Union_type__UnionMembersAssignment_7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13169:1: ( ( rulecase_stmt ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13170:1: ( rulecase_stmt )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13165:1: ( ( rulecase_stmt ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13166:1: ( rulecase_stmt )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13170:1: ( rulecase_stmt )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13171:1: rulecase_stmt
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13166:1: ( rulecase_stmt )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13167:1: rulecase_stmt
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnion_typeAccess().getUnionMembersCase_stmtParserRuleCall_7_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_rulecase_stmt_in_rule__Union_type__UnionMembersAssignment_726716);
+            pushFollow(FollowSets001.FOLLOW_rulecase_stmt_in_rule__Union_type__UnionMembersAssignment_726712);
             rulecase_stmt();
 
             state._fsp--;
@@ -38034,22 +38054,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Switch_type_spec_cont__KindAssignment_1_1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13180:1: rule__Switch_type_spec_cont__KindAssignment_1_1 : ( rulechar_type ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13176:1: rule__Switch_type_spec_cont__KindAssignment_1_1 : ( rulechar_type ) ;
     public final void rule__Switch_type_spec_cont__KindAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13184:1: ( ( rulechar_type ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13185:1: ( rulechar_type )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13180:1: ( ( rulechar_type ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13181:1: ( rulechar_type )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13185:1: ( rulechar_type )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13186:1: rulechar_type
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13181:1: ( rulechar_type )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13182:1: rulechar_type
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSwitch_type_spec_contAccess().getKindChar_typeEnumRuleCall_1_1_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_rulechar_type_in_rule__Switch_type_spec_cont__KindAssignment_1_126747);
+            pushFollow(FollowSets001.FOLLOW_rulechar_type_in_rule__Switch_type_spec_cont__KindAssignment_1_126743);
             rulechar_type();
 
             state._fsp--;
@@ -38079,22 +38099,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Switch_type_spec_cont__KindAssignment_2_1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13195:1: rule__Switch_type_spec_cont__KindAssignment_2_1 : ( ruleboolean_type ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13191:1: rule__Switch_type_spec_cont__KindAssignment_2_1 : ( ruleboolean_type ) ;
     public final void rule__Switch_type_spec_cont__KindAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13199:1: ( ( ruleboolean_type ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13200:1: ( ruleboolean_type )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13195:1: ( ( ruleboolean_type ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13196:1: ( ruleboolean_type )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13200:1: ( ruleboolean_type )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13201:1: ruleboolean_type
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13196:1: ( ruleboolean_type )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13197:1: ruleboolean_type
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSwitch_type_spec_contAccess().getKindBoolean_typeEnumRuleCall_2_1_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleboolean_type_in_rule__Switch_type_spec_cont__KindAssignment_2_126778);
+            pushFollow(FollowSets001.FOLLOW_ruleboolean_type_in_rule__Switch_type_spec_cont__KindAssignment_2_126774);
             ruleboolean_type();
 
             state._fsp--;
@@ -38124,22 +38144,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Case_stmt__LabelAssignment_0_0_0_1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13210:1: rule__Case_stmt__LabelAssignment_0_0_0_1 : ( ruleconst_exp ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13206:1: rule__Case_stmt__LabelAssignment_0_0_0_1 : ( ruleconst_exp ) ;
     public final void rule__Case_stmt__LabelAssignment_0_0_0_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13214:1: ( ( ruleconst_exp ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13215:1: ( ruleconst_exp )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13210:1: ( ( ruleconst_exp ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13211:1: ( ruleconst_exp )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13215:1: ( ruleconst_exp )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13216:1: ruleconst_exp
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13211:1: ( ruleconst_exp )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13212:1: ruleconst_exp
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCase_stmtAccess().getLabelConst_expParserRuleCall_0_0_0_1_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleconst_exp_in_rule__Case_stmt__LabelAssignment_0_0_0_126809);
+            pushFollow(FollowSets001.FOLLOW_ruleconst_exp_in_rule__Case_stmt__LabelAssignment_0_0_0_126805);
             ruleconst_exp();
 
             state._fsp--;
@@ -38168,23 +38188,76 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Case_stmt__LabelAssignment_0_0_0_1"
 
 
+    // $ANTLR start "rule__Case_stmt__IsDefaultAssignment_0_0_1_0"
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13221:1: rule__Case_stmt__IsDefaultAssignment_0_0_1_0 : ( ( 'default' ) ) ;
+    public final void rule__Case_stmt__IsDefaultAssignment_0_0_1_0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13225:1: ( ( ( 'default' ) ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13226:1: ( ( 'default' ) )
+            {
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13226:1: ( ( 'default' ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13227:1: ( 'default' )
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getCase_stmtAccess().getIsDefaultDefaultKeyword_0_0_1_0_0()); 
+            }
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13228:1: ( 'default' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13229:1: 'default'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getCase_stmtAccess().getIsDefaultDefaultKeyword_0_0_1_0_0()); 
+            }
+            match(input,76,FollowSets001.FOLLOW_76_in_rule__Case_stmt__IsDefaultAssignment_0_0_1_026841); if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getCase_stmtAccess().getIsDefaultDefaultKeyword_0_0_1_0_0()); 
+            }
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getCase_stmtAccess().getIsDefaultDefaultKeyword_0_0_1_0_0()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Case_stmt__IsDefaultAssignment_0_0_1_0"
+
+
     // $ANTLR start "rule__Case_stmt__ContainedTypeAssignment_0_1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13225:1: rule__Case_stmt__ContainedTypeAssignment_0_1 : ( rulearray_type_spec ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13244:1: rule__Case_stmt__ContainedTypeAssignment_0_1 : ( rulearray_type_spec ) ;
     public final void rule__Case_stmt__ContainedTypeAssignment_0_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13229:1: ( ( rulearray_type_spec ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13230:1: ( rulearray_type_spec )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13248:1: ( ( rulearray_type_spec ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13249:1: ( rulearray_type_spec )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13230:1: ( rulearray_type_spec )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13231:1: rulearray_type_spec
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13249:1: ( rulearray_type_spec )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13250:1: rulearray_type_spec
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCase_stmtAccess().getContainedTypeArray_type_specParserRuleCall_0_1_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_rulearray_type_spec_in_rule__Case_stmt__ContainedTypeAssignment_0_126840);
+            pushFollow(FollowSets001.FOLLOW_rulearray_type_spec_in_rule__Case_stmt__ContainedTypeAssignment_0_126880);
             rulearray_type_spec();
 
             state._fsp--;
@@ -38214,22 +38287,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Case_stmt__LabelAssignment_1_0_0_1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13240:1: rule__Case_stmt__LabelAssignment_1_0_0_1 : ( ruleconst_exp ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13259:1: rule__Case_stmt__LabelAssignment_1_0_0_1 : ( ruleconst_exp ) ;
     public final void rule__Case_stmt__LabelAssignment_1_0_0_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13244:1: ( ( ruleconst_exp ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13245:1: ( ruleconst_exp )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13263:1: ( ( ruleconst_exp ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13264:1: ( ruleconst_exp )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13245:1: ( ruleconst_exp )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13246:1: ruleconst_exp
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13264:1: ( ruleconst_exp )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13265:1: ruleconst_exp
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCase_stmtAccess().getLabelConst_expParserRuleCall_1_0_0_1_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleconst_exp_in_rule__Case_stmt__LabelAssignment_1_0_0_126871);
+            pushFollow(FollowSets001.FOLLOW_ruleconst_exp_in_rule__Case_stmt__LabelAssignment_1_0_0_126911);
             ruleconst_exp();
 
             state._fsp--;
@@ -38258,23 +38331,76 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Case_stmt__LabelAssignment_1_0_0_1"
 
 
+    // $ANTLR start "rule__Case_stmt__IsDefaultAssignment_1_0_1_0"
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13274:1: rule__Case_stmt__IsDefaultAssignment_1_0_1_0 : ( ( 'default' ) ) ;
+    public final void rule__Case_stmt__IsDefaultAssignment_1_0_1_0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13278:1: ( ( ( 'default' ) ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13279:1: ( ( 'default' ) )
+            {
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13279:1: ( ( 'default' ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13280:1: ( 'default' )
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getCase_stmtAccess().getIsDefaultDefaultKeyword_1_0_1_0_0()); 
+            }
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13281:1: ( 'default' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13282:1: 'default'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getCase_stmtAccess().getIsDefaultDefaultKeyword_1_0_1_0_0()); 
+            }
+            match(input,76,FollowSets001.FOLLOW_76_in_rule__Case_stmt__IsDefaultAssignment_1_0_1_026947); if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getCase_stmtAccess().getIsDefaultDefaultKeyword_1_0_1_0_0()); 
+            }
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getCase_stmtAccess().getIsDefaultDefaultKeyword_1_0_1_0_0()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Case_stmt__IsDefaultAssignment_1_0_1_0"
+
+
     // $ANTLR start "rule__Case_stmt__ContainedTypeAssignment_1_1_0"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13255:1: rule__Case_stmt__ContainedTypeAssignment_1_1_0 : ( rulesimple_type_spec ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13297:1: rule__Case_stmt__ContainedTypeAssignment_1_1_0 : ( rulesimple_type_spec ) ;
     public final void rule__Case_stmt__ContainedTypeAssignment_1_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13259:1: ( ( rulesimple_type_spec ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13260:1: ( rulesimple_type_spec )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13301:1: ( ( rulesimple_type_spec ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13302:1: ( rulesimple_type_spec )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13260:1: ( rulesimple_type_spec )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13261:1: rulesimple_type_spec
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13302:1: ( rulesimple_type_spec )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13303:1: rulesimple_type_spec
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCase_stmtAccess().getContainedTypeSimple_type_specParserRuleCall_1_1_0_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_rulesimple_type_spec_in_rule__Case_stmt__ContainedTypeAssignment_1_1_026902);
+            pushFollow(FollowSets001.FOLLOW_rulesimple_type_spec_in_rule__Case_stmt__ContainedTypeAssignment_1_1_026986);
             rulesimple_type_spec();
 
             state._fsp--;
@@ -38304,28 +38430,28 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Case_stmt__SharedTypeAssignment_1_1_1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13270:1: rule__Case_stmt__SharedTypeAssignment_1_1_1 : ( ( RULE_ID ) ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13312:1: rule__Case_stmt__SharedTypeAssignment_1_1_1 : ( ( RULE_ID ) ) ;
     public final void rule__Case_stmt__SharedTypeAssignment_1_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13274:1: ( ( ( RULE_ID ) ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13275:1: ( ( RULE_ID ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13316:1: ( ( ( RULE_ID ) ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13317:1: ( ( RULE_ID ) )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13275:1: ( ( RULE_ID ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13276:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13317:1: ( ( RULE_ID ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13318:1: ( RULE_ID )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCase_stmtAccess().getSharedTypeTypedefDefCrossReference_1_1_1_0()); 
             }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13277:1: ( RULE_ID )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13278:1: RULE_ID
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13319:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13320:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCase_stmtAccess().getSharedTypeTypedefDefIDTerminalRuleCall_1_1_1_0_1()); 
             }
-            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Case_stmt__SharedTypeAssignment_1_1_126937); if (state.failed) return ;
+            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Case_stmt__SharedTypeAssignment_1_1_127021); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getCase_stmtAccess().getSharedTypeTypedefDefIDTerminalRuleCall_1_1_1_0_1()); 
             }
@@ -38357,22 +38483,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Case_stmt__IdentifierAssignment_1_2"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13289:1: rule__Case_stmt__IdentifierAssignment_1_2 : ( RULE_ID ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13331:1: rule__Case_stmt__IdentifierAssignment_1_2 : ( RULE_ID ) ;
     public final void rule__Case_stmt__IdentifierAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13293:1: ( ( RULE_ID ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13294:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13335:1: ( ( RULE_ID ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13336:1: ( RULE_ID )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13294:1: ( RULE_ID )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13295:1: RULE_ID
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13336:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13337:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCase_stmtAccess().getIdentifierIDTerminalRuleCall_1_2_0()); 
             }
-            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Case_stmt__IdentifierAssignment_1_226972); if (state.failed) return ;
+            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Case_stmt__IdentifierAssignment_1_227056); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getCase_stmtAccess().getIdentifierIDTerminalRuleCall_1_2_0()); 
             }
@@ -38398,22 +38524,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Enum_type__IdentifierAssignment_1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13304:1: rule__Enum_type__IdentifierAssignment_1 : ( RULE_ID ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13346:1: rule__Enum_type__IdentifierAssignment_1 : ( RULE_ID ) ;
     public final void rule__Enum_type__IdentifierAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13308:1: ( ( RULE_ID ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13309:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13350:1: ( ( RULE_ID ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13351:1: ( RULE_ID )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13309:1: ( RULE_ID )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13310:1: RULE_ID
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13351:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13352:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getEnum_typeAccess().getIdentifierIDTerminalRuleCall_1_0()); 
             }
-            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Enum_type__IdentifierAssignment_127003); if (state.failed) return ;
+            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Enum_type__IdentifierAssignment_127087); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getEnum_typeAccess().getIdentifierIDTerminalRuleCall_1_0()); 
             }
@@ -38439,22 +38565,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Enum_type__MembersAssignment_3"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13319:1: rule__Enum_type__MembersAssignment_3 : ( ruleenum_member ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13361:1: rule__Enum_type__MembersAssignment_3 : ( ruleenum_member ) ;
     public final void rule__Enum_type__MembersAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13323:1: ( ( ruleenum_member ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13324:1: ( ruleenum_member )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13365:1: ( ( ruleenum_member ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13366:1: ( ruleenum_member )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13324:1: ( ruleenum_member )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13325:1: ruleenum_member
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13366:1: ( ruleenum_member )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13367:1: ruleenum_member
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getEnum_typeAccess().getMembersEnum_memberParserRuleCall_3_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleenum_member_in_rule__Enum_type__MembersAssignment_327034);
+            pushFollow(FollowSets001.FOLLOW_ruleenum_member_in_rule__Enum_type__MembersAssignment_327118);
             ruleenum_member();
 
             state._fsp--;
@@ -38484,22 +38610,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Enum_type__MembersAssignment_4_1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13334:1: rule__Enum_type__MembersAssignment_4_1 : ( ruleenum_member ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13376:1: rule__Enum_type__MembersAssignment_4_1 : ( ruleenum_member ) ;
     public final void rule__Enum_type__MembersAssignment_4_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13338:1: ( ( ruleenum_member ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13339:1: ( ruleenum_member )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13380:1: ( ( ruleenum_member ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13381:1: ( ruleenum_member )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13339:1: ( ruleenum_member )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13340:1: ruleenum_member
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13381:1: ( ruleenum_member )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13382:1: ruleenum_member
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getEnum_typeAccess().getMembersEnum_memberParserRuleCall_4_1_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleenum_member_in_rule__Enum_type__MembersAssignment_4_127065);
+            pushFollow(FollowSets001.FOLLOW_ruleenum_member_in_rule__Enum_type__MembersAssignment_4_127149);
             ruleenum_member();
 
             state._fsp--;
@@ -38529,22 +38655,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Enum_member__IdentifierAssignment"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13349:1: rule__Enum_member__IdentifierAssignment : ( RULE_ID ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13391:1: rule__Enum_member__IdentifierAssignment : ( RULE_ID ) ;
     public final void rule__Enum_member__IdentifierAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13353:1: ( ( RULE_ID ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13354:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13395:1: ( ( RULE_ID ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13396:1: ( RULE_ID )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13354:1: ( RULE_ID )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13355:1: RULE_ID
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13396:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13397:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getEnum_memberAccess().getIdentifierIDTerminalRuleCall_0()); 
             }
-            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Enum_member__IdentifierAssignment27096); if (state.failed) return ;
+            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Enum_member__IdentifierAssignment27180); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getEnum_memberAccess().getIdentifierIDTerminalRuleCall_0()); 
             }
@@ -38570,22 +38696,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Const_decl__ContainedTypeAssignment_1_0"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13364:1: rule__Const_decl__ContainedTypeAssignment_1_0 : ( ruleconst_type ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13406:1: rule__Const_decl__ContainedTypeAssignment_1_0 : ( ruleconst_type ) ;
     public final void rule__Const_decl__ContainedTypeAssignment_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13368:1: ( ( ruleconst_type ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13369:1: ( ruleconst_type )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13410:1: ( ( ruleconst_type ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13411:1: ( ruleconst_type )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13369:1: ( ruleconst_type )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13370:1: ruleconst_type
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13411:1: ( ruleconst_type )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13412:1: ruleconst_type
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getConst_declAccess().getContainedTypeConst_typeParserRuleCall_1_0_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleconst_type_in_rule__Const_decl__ContainedTypeAssignment_1_027127);
+            pushFollow(FollowSets001.FOLLOW_ruleconst_type_in_rule__Const_decl__ContainedTypeAssignment_1_027211);
             ruleconst_type();
 
             state._fsp--;
@@ -38615,28 +38741,28 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Const_decl__SharedTypeAssignment_1_1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13379:1: rule__Const_decl__SharedTypeAssignment_1_1 : ( ( RULE_ID ) ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13421:1: rule__Const_decl__SharedTypeAssignment_1_1 : ( ( RULE_ID ) ) ;
     public final void rule__Const_decl__SharedTypeAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13383:1: ( ( ( RULE_ID ) ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13384:1: ( ( RULE_ID ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13425:1: ( ( ( RULE_ID ) ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13426:1: ( ( RULE_ID ) )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13384:1: ( ( RULE_ID ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13385:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13426:1: ( ( RULE_ID ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13427:1: ( RULE_ID )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getConst_declAccess().getSharedTypeAliasDefCrossReference_1_1_0()); 
             }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13386:1: ( RULE_ID )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13387:1: RULE_ID
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13428:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13429:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getConst_declAccess().getSharedTypeAliasDefIDTerminalRuleCall_1_1_0_1()); 
             }
-            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Const_decl__SharedTypeAssignment_1_127162); if (state.failed) return ;
+            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Const_decl__SharedTypeAssignment_1_127246); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getConst_declAccess().getSharedTypeAliasDefIDTerminalRuleCall_1_1_0_1()); 
             }
@@ -38668,22 +38794,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Const_decl__IdentifierAssignment_2"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13398:1: rule__Const_decl__IdentifierAssignment_2 : ( RULE_ID ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13440:1: rule__Const_decl__IdentifierAssignment_2 : ( RULE_ID ) ;
     public final void rule__Const_decl__IdentifierAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13402:1: ( ( RULE_ID ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13403:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13444:1: ( ( RULE_ID ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13445:1: ( RULE_ID )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13403:1: ( RULE_ID )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13404:1: RULE_ID
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13445:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13446:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getConst_declAccess().getIdentifierIDTerminalRuleCall_2_0()); 
             }
-            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Const_decl__IdentifierAssignment_227197); if (state.failed) return ;
+            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Const_decl__IdentifierAssignment_227281); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getConst_declAccess().getIdentifierIDTerminalRuleCall_2_0()); 
             }
@@ -38709,22 +38835,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Const_decl__ConstValueAssignment_4"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13413:1: rule__Const_decl__ConstValueAssignment_4 : ( ruleconst_exp ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13455:1: rule__Const_decl__ConstValueAssignment_4 : ( ruleconst_exp ) ;
     public final void rule__Const_decl__ConstValueAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13417:1: ( ( ruleconst_exp ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13418:1: ( ruleconst_exp )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13459:1: ( ( ruleconst_exp ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13460:1: ( ruleconst_exp )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13418:1: ( ruleconst_exp )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13419:1: ruleconst_exp
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13460:1: ( ruleconst_exp )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13461:1: ruleconst_exp
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getConst_declAccess().getConstValueConst_expParserRuleCall_4_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleconst_exp_in_rule__Const_decl__ConstValueAssignment_427228);
+            pushFollow(FollowSets001.FOLLOW_ruleconst_exp_in_rule__Const_decl__ConstValueAssignment_427312);
             ruleconst_exp();
 
             state._fsp--;
@@ -38754,22 +38880,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Sequence_type__ContainedTypeAssignment_2_0"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13428:1: rule__Sequence_type__ContainedTypeAssignment_2_0 : ( rulesimple_type_spec ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13470:1: rule__Sequence_type__ContainedTypeAssignment_2_0 : ( rulesimple_type_spec ) ;
     public final void rule__Sequence_type__ContainedTypeAssignment_2_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13432:1: ( ( rulesimple_type_spec ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13433:1: ( rulesimple_type_spec )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13474:1: ( ( rulesimple_type_spec ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13475:1: ( rulesimple_type_spec )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13433:1: ( rulesimple_type_spec )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13434:1: rulesimple_type_spec
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13475:1: ( rulesimple_type_spec )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13476:1: rulesimple_type_spec
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSequence_typeAccess().getContainedTypeSimple_type_specParserRuleCall_2_0_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_rulesimple_type_spec_in_rule__Sequence_type__ContainedTypeAssignment_2_027259);
+            pushFollow(FollowSets001.FOLLOW_rulesimple_type_spec_in_rule__Sequence_type__ContainedTypeAssignment_2_027343);
             rulesimple_type_spec();
 
             state._fsp--;
@@ -38799,28 +38925,28 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Sequence_type__SharedTypeAssignment_2_1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13443:1: rule__Sequence_type__SharedTypeAssignment_2_1 : ( ( RULE_ID ) ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13485:1: rule__Sequence_type__SharedTypeAssignment_2_1 : ( ( RULE_ID ) ) ;
     public final void rule__Sequence_type__SharedTypeAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13447:1: ( ( ( RULE_ID ) ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13448:1: ( ( RULE_ID ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13489:1: ( ( ( RULE_ID ) ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13490:1: ( ( RULE_ID ) )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13448:1: ( ( RULE_ID ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13449:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13490:1: ( ( RULE_ID ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13491:1: ( RULE_ID )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSequence_typeAccess().getSharedTypeTypedefDefCrossReference_2_1_0()); 
             }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13450:1: ( RULE_ID )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13451:1: RULE_ID
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13492:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13493:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSequence_typeAccess().getSharedTypeTypedefDefIDTerminalRuleCall_2_1_0_1()); 
             }
-            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Sequence_type__SharedTypeAssignment_2_127294); if (state.failed) return ;
+            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__Sequence_type__SharedTypeAssignment_2_127378); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getSequence_typeAccess().getSharedTypeTypedefDefIDTerminalRuleCall_2_1_0_1()); 
             }
@@ -38852,22 +38978,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Sequence_type__BoundAssignment_3_1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13462:1: rule__Sequence_type__BoundAssignment_3_1 : ( ruleconst_exp ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13504:1: rule__Sequence_type__BoundAssignment_3_1 : ( ruleconst_exp ) ;
     public final void rule__Sequence_type__BoundAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13466:1: ( ( ruleconst_exp ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13467:1: ( ruleconst_exp )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13508:1: ( ( ruleconst_exp ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13509:1: ( ruleconst_exp )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13467:1: ( ruleconst_exp )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13468:1: ruleconst_exp
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13509:1: ( ruleconst_exp )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13510:1: ruleconst_exp
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSequence_typeAccess().getBoundConst_expParserRuleCall_3_1_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleconst_exp_in_rule__Sequence_type__BoundAssignment_3_127329);
+            pushFollow(FollowSets001.FOLLOW_ruleconst_exp_in_rule__Sequence_type__BoundAssignment_3_127413);
             ruleconst_exp();
 
             state._fsp--;
@@ -38897,22 +39023,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Stringdef_type__BoundAssignment_2"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13477:1: rule__Stringdef_type__BoundAssignment_2 : ( ruleconst_exp ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13519:1: rule__Stringdef_type__BoundAssignment_2 : ( ruleconst_exp ) ;
     public final void rule__Stringdef_type__BoundAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13481:1: ( ( ruleconst_exp ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13482:1: ( ruleconst_exp )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13523:1: ( ( ruleconst_exp ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13524:1: ( ruleconst_exp )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13482:1: ( ruleconst_exp )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13483:1: ruleconst_exp
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13524:1: ( ruleconst_exp )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13525:1: ruleconst_exp
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getStringdef_typeAccess().getBoundConst_expParserRuleCall_2_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleconst_exp_in_rule__Stringdef_type__BoundAssignment_227360);
+            pushFollow(FollowSets001.FOLLOW_ruleconst_exp_in_rule__Stringdef_type__BoundAssignment_227444);
             ruleconst_exp();
 
             state._fsp--;
@@ -38942,22 +39068,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Wide_stringdef_type__BoundAssignment_2"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13492:1: rule__Wide_stringdef_type__BoundAssignment_2 : ( ruleconst_exp ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13534:1: rule__Wide_stringdef_type__BoundAssignment_2 : ( ruleconst_exp ) ;
     public final void rule__Wide_stringdef_type__BoundAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13496:1: ( ( ruleconst_exp ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13497:1: ( ruleconst_exp )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13538:1: ( ( ruleconst_exp ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13539:1: ( ruleconst_exp )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13497:1: ( ruleconst_exp )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13498:1: ruleconst_exp
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13539:1: ( ruleconst_exp )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13540:1: ruleconst_exp
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getWide_stringdef_typeAccess().getBoundConst_expParserRuleCall_2_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleconst_exp_in_rule__Wide_stringdef_type__BoundAssignment_227391);
+            pushFollow(FollowSets001.FOLLOW_ruleconst_exp_in_rule__Wide_stringdef_type__BoundAssignment_227475);
             ruleconst_exp();
 
             state._fsp--;
@@ -38987,22 +39113,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Fixed_pt_type__DigitsAssignment_2"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13507:1: rule__Fixed_pt_type__DigitsAssignment_2 : ( ruleconst_exp ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13549:1: rule__Fixed_pt_type__DigitsAssignment_2 : ( ruleconst_exp ) ;
     public final void rule__Fixed_pt_type__DigitsAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13511:1: ( ( ruleconst_exp ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13512:1: ( ruleconst_exp )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13553:1: ( ( ruleconst_exp ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13554:1: ( ruleconst_exp )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13512:1: ( ruleconst_exp )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13513:1: ruleconst_exp
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13554:1: ( ruleconst_exp )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13555:1: ruleconst_exp
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFixed_pt_typeAccess().getDigitsConst_expParserRuleCall_2_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleconst_exp_in_rule__Fixed_pt_type__DigitsAssignment_227422);
+            pushFollow(FollowSets001.FOLLOW_ruleconst_exp_in_rule__Fixed_pt_type__DigitsAssignment_227506);
             ruleconst_exp();
 
             state._fsp--;
@@ -39032,22 +39158,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Fixed_pt_type__ScaleAssignment_4"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13522:1: rule__Fixed_pt_type__ScaleAssignment_4 : ( ruleconst_exp ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13564:1: rule__Fixed_pt_type__ScaleAssignment_4 : ( ruleconst_exp ) ;
     public final void rule__Fixed_pt_type__ScaleAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13526:1: ( ( ruleconst_exp ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13527:1: ( ruleconst_exp )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13568:1: ( ( ruleconst_exp ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13569:1: ( ruleconst_exp )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13527:1: ( ruleconst_exp )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13528:1: ruleconst_exp
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13569:1: ( ruleconst_exp )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13570:1: ruleconst_exp
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFixed_pt_typeAccess().getScaleConst_expParserRuleCall_4_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleconst_exp_in_rule__Fixed_pt_type__ScaleAssignment_427453);
+            pushFollow(FollowSets001.FOLLOW_ruleconst_exp_in_rule__Fixed_pt_type__ScaleAssignment_427537);
             ruleconst_exp();
 
             state._fsp--;
@@ -39077,22 +39203,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Floating_pt_type__KindAssignment_0"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13537:1: rule__Floating_pt_type__KindAssignment_0 : ( rulefloat_type ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13579:1: rule__Floating_pt_type__KindAssignment_0 : ( rulefloat_type ) ;
     public final void rule__Floating_pt_type__KindAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13541:1: ( ( rulefloat_type ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13542:1: ( rulefloat_type )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13583:1: ( ( rulefloat_type ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13584:1: ( rulefloat_type )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13542:1: ( rulefloat_type )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13543:1: rulefloat_type
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13584:1: ( rulefloat_type )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13585:1: rulefloat_type
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFloating_pt_typeAccess().getKindFloat_typeEnumRuleCall_0_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_rulefloat_type_in_rule__Floating_pt_type__KindAssignment_027484);
+            pushFollow(FollowSets001.FOLLOW_rulefloat_type_in_rule__Floating_pt_type__KindAssignment_027568);
             rulefloat_type();
 
             state._fsp--;
@@ -39122,22 +39248,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Floating_pt_type__KindAssignment_1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13552:1: rule__Floating_pt_type__KindAssignment_1 : ( ruledouble_type ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13594:1: rule__Floating_pt_type__KindAssignment_1 : ( ruledouble_type ) ;
     public final void rule__Floating_pt_type__KindAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13556:1: ( ( ruledouble_type ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13557:1: ( ruledouble_type )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13598:1: ( ( ruledouble_type ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13599:1: ( ruledouble_type )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13557:1: ( ruledouble_type )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13558:1: ruledouble_type
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13599:1: ( ruledouble_type )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13600:1: ruledouble_type
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFloating_pt_typeAccess().getKindDouble_typeEnumRuleCall_1_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruledouble_type_in_rule__Floating_pt_type__KindAssignment_127515);
+            pushFollow(FollowSets001.FOLLOW_ruledouble_type_in_rule__Floating_pt_type__KindAssignment_127599);
             ruledouble_type();
 
             state._fsp--;
@@ -39167,22 +39293,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Floating_pt_type__KindAssignment_2"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13567:1: rule__Floating_pt_type__KindAssignment_2 : ( rulelongdouble_type ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13609:1: rule__Floating_pt_type__KindAssignment_2 : ( rulelongdouble_type ) ;
     public final void rule__Floating_pt_type__KindAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13571:1: ( ( rulelongdouble_type ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13572:1: ( rulelongdouble_type )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13613:1: ( ( rulelongdouble_type ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13614:1: ( rulelongdouble_type )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13572:1: ( rulelongdouble_type )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13573:1: rulelongdouble_type
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13614:1: ( rulelongdouble_type )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13615:1: rulelongdouble_type
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFloating_pt_typeAccess().getKindLongdouble_typeParserRuleCall_2_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_rulelongdouble_type_in_rule__Floating_pt_type__KindAssignment_227546);
+            pushFollow(FollowSets001.FOLLOW_rulelongdouble_type_in_rule__Floating_pt_type__KindAssignment_227630);
             rulelongdouble_type();
 
             state._fsp--;
@@ -39212,22 +39338,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Integer_type__KindAssignment_0"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13582:1: rule__Integer_type__KindAssignment_0 : ( ruleshort_type ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13624:1: rule__Integer_type__KindAssignment_0 : ( ruleshort_type ) ;
     public final void rule__Integer_type__KindAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13586:1: ( ( ruleshort_type ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13587:1: ( ruleshort_type )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13628:1: ( ( ruleshort_type ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13629:1: ( ruleshort_type )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13587:1: ( ruleshort_type )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13588:1: ruleshort_type
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13629:1: ( ruleshort_type )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13630:1: ruleshort_type
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getInteger_typeAccess().getKindShort_typeEnumRuleCall_0_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleshort_type_in_rule__Integer_type__KindAssignment_027577);
+            pushFollow(FollowSets001.FOLLOW_ruleshort_type_in_rule__Integer_type__KindAssignment_027661);
             ruleshort_type();
 
             state._fsp--;
@@ -39257,22 +39383,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Integer_type__KindAssignment_1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13597:1: rule__Integer_type__KindAssignment_1 : ( rulelong_type ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13639:1: rule__Integer_type__KindAssignment_1 : ( rulelong_type ) ;
     public final void rule__Integer_type__KindAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13601:1: ( ( rulelong_type ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13602:1: ( rulelong_type )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13643:1: ( ( rulelong_type ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13644:1: ( rulelong_type )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13602:1: ( rulelong_type )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13603:1: rulelong_type
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13644:1: ( rulelong_type )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13645:1: rulelong_type
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getInteger_typeAccess().getKindLong_typeEnumRuleCall_1_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_rulelong_type_in_rule__Integer_type__KindAssignment_127608);
+            pushFollow(FollowSets001.FOLLOW_rulelong_type_in_rule__Integer_type__KindAssignment_127692);
             rulelong_type();
 
             state._fsp--;
@@ -39302,22 +39428,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Integer_type__KindAssignment_2"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13612:1: rule__Integer_type__KindAssignment_2 : ( rulelonglong_type ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13654:1: rule__Integer_type__KindAssignment_2 : ( rulelonglong_type ) ;
     public final void rule__Integer_type__KindAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13616:1: ( ( rulelonglong_type ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13617:1: ( rulelonglong_type )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13658:1: ( ( rulelonglong_type ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13659:1: ( rulelonglong_type )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13617:1: ( rulelonglong_type )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13618:1: rulelonglong_type
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13659:1: ( rulelonglong_type )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13660:1: rulelonglong_type
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getInteger_typeAccess().getKindLonglong_typeParserRuleCall_2_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_rulelonglong_type_in_rule__Integer_type__KindAssignment_227639);
+            pushFollow(FollowSets001.FOLLOW_rulelonglong_type_in_rule__Integer_type__KindAssignment_227723);
             rulelonglong_type();
 
             state._fsp--;
@@ -39347,22 +39473,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Integer_type__KindAssignment_3"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13627:1: rule__Integer_type__KindAssignment_3 : ( ruleushort_type ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13669:1: rule__Integer_type__KindAssignment_3 : ( ruleushort_type ) ;
     public final void rule__Integer_type__KindAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13631:1: ( ( ruleushort_type ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13632:1: ( ruleushort_type )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13673:1: ( ( ruleushort_type ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13674:1: ( ruleushort_type )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13632:1: ( ruleushort_type )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13633:1: ruleushort_type
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13674:1: ( ruleushort_type )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13675:1: ruleushort_type
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getInteger_typeAccess().getKindUshort_typeParserRuleCall_3_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleushort_type_in_rule__Integer_type__KindAssignment_327670);
+            pushFollow(FollowSets001.FOLLOW_ruleushort_type_in_rule__Integer_type__KindAssignment_327754);
             ruleushort_type();
 
             state._fsp--;
@@ -39392,22 +39518,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Integer_type__KindAssignment_4"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13642:1: rule__Integer_type__KindAssignment_4 : ( ruleulong_type ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13684:1: rule__Integer_type__KindAssignment_4 : ( ruleulong_type ) ;
     public final void rule__Integer_type__KindAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13646:1: ( ( ruleulong_type ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13647:1: ( ruleulong_type )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13688:1: ( ( ruleulong_type ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13689:1: ( ruleulong_type )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13647:1: ( ruleulong_type )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13648:1: ruleulong_type
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13689:1: ( ruleulong_type )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13690:1: ruleulong_type
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getInteger_typeAccess().getKindUlong_typeParserRuleCall_4_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleulong_type_in_rule__Integer_type__KindAssignment_427701);
+            pushFollow(FollowSets001.FOLLOW_ruleulong_type_in_rule__Integer_type__KindAssignment_427785);
             ruleulong_type();
 
             state._fsp--;
@@ -39437,22 +39563,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Integer_type__KindAssignment_5"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13657:1: rule__Integer_type__KindAssignment_5 : ( ruleulonglong_type ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13699:1: rule__Integer_type__KindAssignment_5 : ( ruleulonglong_type ) ;
     public final void rule__Integer_type__KindAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13661:1: ( ( ruleulonglong_type ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13662:1: ( ruleulonglong_type )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13703:1: ( ( ruleulonglong_type ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13704:1: ( ruleulonglong_type )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13662:1: ( ruleulonglong_type )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13663:1: ruleulonglong_type
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13704:1: ( ruleulonglong_type )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13705:1: ruleulonglong_type
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getInteger_typeAccess().getKindUlonglong_typeParserRuleCall_5_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleulonglong_type_in_rule__Integer_type__KindAssignment_527732);
+            pushFollow(FollowSets001.FOLLOW_ruleulonglong_type_in_rule__Integer_type__KindAssignment_527816);
             ruleulonglong_type();
 
             state._fsp--;
@@ -39482,22 +39608,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Charstr_type__KindAssignment_0"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13672:1: rule__Charstr_type__KindAssignment_0 : ( rulechar_type ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13714:1: rule__Charstr_type__KindAssignment_0 : ( rulechar_type ) ;
     public final void rule__Charstr_type__KindAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13676:1: ( ( rulechar_type ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13677:1: ( rulechar_type )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13718:1: ( ( rulechar_type ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13719:1: ( rulechar_type )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13677:1: ( rulechar_type )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13678:1: rulechar_type
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13719:1: ( rulechar_type )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13720:1: rulechar_type
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCharstr_typeAccess().getKindChar_typeEnumRuleCall_0_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_rulechar_type_in_rule__Charstr_type__KindAssignment_027763);
+            pushFollow(FollowSets001.FOLLOW_rulechar_type_in_rule__Charstr_type__KindAssignment_027847);
             rulechar_type();
 
             state._fsp--;
@@ -39527,22 +39653,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Charstr_type__KindAssignment_1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13687:1: rule__Charstr_type__KindAssignment_1 : ( rulewide_char_type ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13729:1: rule__Charstr_type__KindAssignment_1 : ( rulewide_char_type ) ;
     public final void rule__Charstr_type__KindAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13691:1: ( ( rulewide_char_type ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13692:1: ( rulewide_char_type )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13733:1: ( ( rulewide_char_type ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13734:1: ( rulewide_char_type )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13692:1: ( rulewide_char_type )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13693:1: rulewide_char_type
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13734:1: ( rulewide_char_type )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13735:1: rulewide_char_type
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCharstr_typeAccess().getKindWide_char_typeEnumRuleCall_1_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_rulewide_char_type_in_rule__Charstr_type__KindAssignment_127794);
+            pushFollow(FollowSets001.FOLLOW_rulewide_char_type_in_rule__Charstr_type__KindAssignment_127878);
             rulewide_char_type();
 
             state._fsp--;
@@ -39572,22 +39698,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Charstr_type__KindAssignment_2"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13702:1: rule__Charstr_type__KindAssignment_2 : ( rulestring_type ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13744:1: rule__Charstr_type__KindAssignment_2 : ( rulestring_type ) ;
     public final void rule__Charstr_type__KindAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13706:1: ( ( rulestring_type ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13707:1: ( rulestring_type )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13748:1: ( ( rulestring_type ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13749:1: ( rulestring_type )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13707:1: ( rulestring_type )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13708:1: rulestring_type
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13749:1: ( rulestring_type )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13750:1: rulestring_type
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCharstr_typeAccess().getKindString_typeEnumRuleCall_2_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_rulestring_type_in_rule__Charstr_type__KindAssignment_227825);
+            pushFollow(FollowSets001.FOLLOW_rulestring_type_in_rule__Charstr_type__KindAssignment_227909);
             rulestring_type();
 
             state._fsp--;
@@ -39617,22 +39743,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Charstr_type__KindAssignment_3"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13717:1: rule__Charstr_type__KindAssignment_3 : ( rulewide_string_type ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13759:1: rule__Charstr_type__KindAssignment_3 : ( rulewide_string_type ) ;
     public final void rule__Charstr_type__KindAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13721:1: ( ( rulewide_string_type ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13722:1: ( rulewide_string_type )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13763:1: ( ( rulewide_string_type ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13764:1: ( rulewide_string_type )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13722:1: ( rulewide_string_type )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13723:1: rulewide_string_type
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13764:1: ( rulewide_string_type )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13765:1: rulewide_string_type
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCharstr_typeAccess().getKindWide_string_typeEnumRuleCall_3_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_rulewide_string_type_in_rule__Charstr_type__KindAssignment_327856);
+            pushFollow(FollowSets001.FOLLOW_rulewide_string_type_in_rule__Charstr_type__KindAssignment_327940);
             rulewide_string_type();
 
             state._fsp--;
@@ -39662,22 +39788,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Other_type__KindAssignment_0"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13732:1: rule__Other_type__KindAssignment_0 : ( ruleboolean_type ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13774:1: rule__Other_type__KindAssignment_0 : ( ruleboolean_type ) ;
     public final void rule__Other_type__KindAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13736:1: ( ( ruleboolean_type ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13737:1: ( ruleboolean_type )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13778:1: ( ( ruleboolean_type ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13779:1: ( ruleboolean_type )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13737:1: ( ruleboolean_type )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13738:1: ruleboolean_type
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13779:1: ( ruleboolean_type )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13780:1: ruleboolean_type
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getOther_typeAccess().getKindBoolean_typeEnumRuleCall_0_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleboolean_type_in_rule__Other_type__KindAssignment_027887);
+            pushFollow(FollowSets001.FOLLOW_ruleboolean_type_in_rule__Other_type__KindAssignment_027971);
             ruleboolean_type();
 
             state._fsp--;
@@ -39707,22 +39833,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Other_type__KindAssignment_1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13747:1: rule__Other_type__KindAssignment_1 : ( ruleoctet_type ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13789:1: rule__Other_type__KindAssignment_1 : ( ruleoctet_type ) ;
     public final void rule__Other_type__KindAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13751:1: ( ( ruleoctet_type ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13752:1: ( ruleoctet_type )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13793:1: ( ( ruleoctet_type ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13794:1: ( ruleoctet_type )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13752:1: ( ruleoctet_type )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13753:1: ruleoctet_type
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13794:1: ( ruleoctet_type )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13795:1: ruleoctet_type
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getOther_typeAccess().getKindOctet_typeEnumRuleCall_1_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleoctet_type_in_rule__Other_type__KindAssignment_127918);
+            pushFollow(FollowSets001.FOLLOW_ruleoctet_type_in_rule__Other_type__KindAssignment_128002);
             ruleoctet_type();
 
             state._fsp--;
@@ -39752,22 +39878,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Other_type__KindAssignment_2"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13762:1: rule__Other_type__KindAssignment_2 : ( ruleany_type ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13804:1: rule__Other_type__KindAssignment_2 : ( ruleany_type ) ;
     public final void rule__Other_type__KindAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13766:1: ( ( ruleany_type ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13767:1: ( ruleany_type )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13808:1: ( ( ruleany_type ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13809:1: ( ruleany_type )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13767:1: ( ruleany_type )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13768:1: ruleany_type
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13809:1: ( ruleany_type )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13810:1: ruleany_type
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getOther_typeAccess().getKindAny_typeEnumRuleCall_2_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleany_type_in_rule__Other_type__KindAssignment_227949);
+            pushFollow(FollowSets001.FOLLOW_ruleany_type_in_rule__Other_type__KindAssignment_228033);
             ruleany_type();
 
             state._fsp--;
@@ -39797,28 +39923,28 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Or_expr__OperatorAssignment_1_1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13777:1: rule__Or_expr__OperatorAssignment_1_1 : ( ( '|' ) ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13819:1: rule__Or_expr__OperatorAssignment_1_1 : ( ( '|' ) ) ;
     public final void rule__Or_expr__OperatorAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13781:1: ( ( ( '|' ) ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13782:1: ( ( '|' ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13823:1: ( ( ( '|' ) ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13824:1: ( ( '|' ) )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13782:1: ( ( '|' ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13783:1: ( '|' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getOr_exprAccess().getOperatorVerticalLineKeyword_1_1_0()); 
-            }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13784:1: ( '|' )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13785:1: '|'
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13824:1: ( ( '|' ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13825:1: ( '|' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getOr_exprAccess().getOperatorVerticalLineKeyword_1_1_0()); 
             }
-            match(input,77,FollowSets001.FOLLOW_77_in_rule__Or_expr__OperatorAssignment_1_127985); if (state.failed) return ;
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13826:1: ( '|' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13827:1: '|'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getOr_exprAccess().getOperatorVerticalLineKeyword_1_1_0()); 
+            }
+            match(input,77,FollowSets001.FOLLOW_77_in_rule__Or_expr__OperatorAssignment_1_128069); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getOr_exprAccess().getOperatorVerticalLineKeyword_1_1_0()); 
             }
@@ -39850,22 +39976,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Or_expr__RightAssignment_1_2"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13800:1: rule__Or_expr__RightAssignment_1_2 : ( rulexor_expr ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13842:1: rule__Or_expr__RightAssignment_1_2 : ( rulexor_expr ) ;
     public final void rule__Or_expr__RightAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13804:1: ( ( rulexor_expr ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13805:1: ( rulexor_expr )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13846:1: ( ( rulexor_expr ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13847:1: ( rulexor_expr )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13805:1: ( rulexor_expr )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13806:1: rulexor_expr
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13847:1: ( rulexor_expr )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13848:1: rulexor_expr
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getOr_exprAccess().getRightXor_exprParserRuleCall_1_2_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_rulexor_expr_in_rule__Or_expr__RightAssignment_1_228024);
+            pushFollow(FollowSets001.FOLLOW_rulexor_expr_in_rule__Or_expr__RightAssignment_1_228108);
             rulexor_expr();
 
             state._fsp--;
@@ -39895,28 +40021,28 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Xor_expr__OperatorAssignment_1_1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13815:1: rule__Xor_expr__OperatorAssignment_1_1 : ( ( '^' ) ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13857:1: rule__Xor_expr__OperatorAssignment_1_1 : ( ( '^' ) ) ;
     public final void rule__Xor_expr__OperatorAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13819:1: ( ( ( '^' ) ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13820:1: ( ( '^' ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13861:1: ( ( ( '^' ) ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13862:1: ( ( '^' ) )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13820:1: ( ( '^' ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13821:1: ( '^' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getXor_exprAccess().getOperatorCircumflexAccentKeyword_1_1_0()); 
-            }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13822:1: ( '^' )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13823:1: '^'
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13862:1: ( ( '^' ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13863:1: ( '^' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getXor_exprAccess().getOperatorCircumflexAccentKeyword_1_1_0()); 
             }
-            match(input,78,FollowSets001.FOLLOW_78_in_rule__Xor_expr__OperatorAssignment_1_128060); if (state.failed) return ;
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13864:1: ( '^' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13865:1: '^'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getXor_exprAccess().getOperatorCircumflexAccentKeyword_1_1_0()); 
+            }
+            match(input,78,FollowSets001.FOLLOW_78_in_rule__Xor_expr__OperatorAssignment_1_128144); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getXor_exprAccess().getOperatorCircumflexAccentKeyword_1_1_0()); 
             }
@@ -39948,22 +40074,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Xor_expr__RightAssignment_1_2"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13838:1: rule__Xor_expr__RightAssignment_1_2 : ( ruleand_expr ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13880:1: rule__Xor_expr__RightAssignment_1_2 : ( ruleand_expr ) ;
     public final void rule__Xor_expr__RightAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13842:1: ( ( ruleand_expr ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13843:1: ( ruleand_expr )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13884:1: ( ( ruleand_expr ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13885:1: ( ruleand_expr )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13843:1: ( ruleand_expr )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13844:1: ruleand_expr
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13885:1: ( ruleand_expr )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13886:1: ruleand_expr
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getXor_exprAccess().getRightAnd_exprParserRuleCall_1_2_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleand_expr_in_rule__Xor_expr__RightAssignment_1_228099);
+            pushFollow(FollowSets001.FOLLOW_ruleand_expr_in_rule__Xor_expr__RightAssignment_1_228183);
             ruleand_expr();
 
             state._fsp--;
@@ -39993,28 +40119,28 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__And_expr__OperatorAssignment_1_1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13853:1: rule__And_expr__OperatorAssignment_1_1 : ( ( '&' ) ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13895:1: rule__And_expr__OperatorAssignment_1_1 : ( ( '&' ) ) ;
     public final void rule__And_expr__OperatorAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13857:1: ( ( ( '&' ) ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13858:1: ( ( '&' ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13899:1: ( ( ( '&' ) ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13900:1: ( ( '&' ) )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13858:1: ( ( '&' ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13859:1: ( '&' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getAnd_exprAccess().getOperatorAmpersandKeyword_1_1_0()); 
-            }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13860:1: ( '&' )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13861:1: '&'
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13900:1: ( ( '&' ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13901:1: ( '&' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAnd_exprAccess().getOperatorAmpersandKeyword_1_1_0()); 
             }
-            match(input,79,FollowSets001.FOLLOW_79_in_rule__And_expr__OperatorAssignment_1_128135); if (state.failed) return ;
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13902:1: ( '&' )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13903:1: '&'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getAnd_exprAccess().getOperatorAmpersandKeyword_1_1_0()); 
+            }
+            match(input,79,FollowSets001.FOLLOW_79_in_rule__And_expr__OperatorAssignment_1_128219); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getAnd_exprAccess().getOperatorAmpersandKeyword_1_1_0()); 
             }
@@ -40046,22 +40172,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__And_expr__RightAssignment_1_2"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13876:1: rule__And_expr__RightAssignment_1_2 : ( ruleshift_expr ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13918:1: rule__And_expr__RightAssignment_1_2 : ( ruleshift_expr ) ;
     public final void rule__And_expr__RightAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13880:1: ( ( ruleshift_expr ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13881:1: ( ruleshift_expr )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13922:1: ( ( ruleshift_expr ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13923:1: ( ruleshift_expr )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13881:1: ( ruleshift_expr )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13882:1: ruleshift_expr
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13923:1: ( ruleshift_expr )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13924:1: ruleshift_expr
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAnd_exprAccess().getRightShift_exprParserRuleCall_1_2_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleshift_expr_in_rule__And_expr__RightAssignment_1_228174);
+            pushFollow(FollowSets001.FOLLOW_ruleshift_expr_in_rule__And_expr__RightAssignment_1_228258);
             ruleshift_expr();
 
             state._fsp--;
@@ -40091,25 +40217,25 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Shift_expr__OperatorAssignment_1_1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13891:1: rule__Shift_expr__OperatorAssignment_1_1 : ( ( rule__Shift_expr__OperatorAlternatives_1_1_0 ) ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13933:1: rule__Shift_expr__OperatorAssignment_1_1 : ( ( rule__Shift_expr__OperatorAlternatives_1_1_0 ) ) ;
     public final void rule__Shift_expr__OperatorAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13895:1: ( ( ( rule__Shift_expr__OperatorAlternatives_1_1_0 ) ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13896:1: ( ( rule__Shift_expr__OperatorAlternatives_1_1_0 ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13937:1: ( ( ( rule__Shift_expr__OperatorAlternatives_1_1_0 ) ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13938:1: ( ( rule__Shift_expr__OperatorAlternatives_1_1_0 ) )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13896:1: ( ( rule__Shift_expr__OperatorAlternatives_1_1_0 ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13897:1: ( rule__Shift_expr__OperatorAlternatives_1_1_0 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13938:1: ( ( rule__Shift_expr__OperatorAlternatives_1_1_0 ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13939:1: ( rule__Shift_expr__OperatorAlternatives_1_1_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getShift_exprAccess().getOperatorAlternatives_1_1_0()); 
             }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13898:1: ( rule__Shift_expr__OperatorAlternatives_1_1_0 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13898:2: rule__Shift_expr__OperatorAlternatives_1_1_0
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13940:1: ( rule__Shift_expr__OperatorAlternatives_1_1_0 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13940:2: rule__Shift_expr__OperatorAlternatives_1_1_0
             {
-            pushFollow(FollowSets001.FOLLOW_rule__Shift_expr__OperatorAlternatives_1_1_0_in_rule__Shift_expr__OperatorAssignment_1_128205);
+            pushFollow(FollowSets001.FOLLOW_rule__Shift_expr__OperatorAlternatives_1_1_0_in_rule__Shift_expr__OperatorAssignment_1_128289);
             rule__Shift_expr__OperatorAlternatives_1_1_0();
 
             state._fsp--;
@@ -40142,22 +40268,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Shift_expr__RightAssignment_1_2"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13907:1: rule__Shift_expr__RightAssignment_1_2 : ( ruleadd_expr ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13949:1: rule__Shift_expr__RightAssignment_1_2 : ( ruleadd_expr ) ;
     public final void rule__Shift_expr__RightAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13911:1: ( ( ruleadd_expr ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13912:1: ( ruleadd_expr )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13953:1: ( ( ruleadd_expr ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13954:1: ( ruleadd_expr )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13912:1: ( ruleadd_expr )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13913:1: ruleadd_expr
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13954:1: ( ruleadd_expr )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13955:1: ruleadd_expr
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getShift_exprAccess().getRightAdd_exprParserRuleCall_1_2_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleadd_expr_in_rule__Shift_expr__RightAssignment_1_228238);
+            pushFollow(FollowSets001.FOLLOW_ruleadd_expr_in_rule__Shift_expr__RightAssignment_1_228322);
             ruleadd_expr();
 
             state._fsp--;
@@ -40187,25 +40313,25 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Add_expr__OperatorAssignment_1_1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13922:1: rule__Add_expr__OperatorAssignment_1_1 : ( ( rule__Add_expr__OperatorAlternatives_1_1_0 ) ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13964:1: rule__Add_expr__OperatorAssignment_1_1 : ( ( rule__Add_expr__OperatorAlternatives_1_1_0 ) ) ;
     public final void rule__Add_expr__OperatorAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13926:1: ( ( ( rule__Add_expr__OperatorAlternatives_1_1_0 ) ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13927:1: ( ( rule__Add_expr__OperatorAlternatives_1_1_0 ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13968:1: ( ( ( rule__Add_expr__OperatorAlternatives_1_1_0 ) ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13969:1: ( ( rule__Add_expr__OperatorAlternatives_1_1_0 ) )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13927:1: ( ( rule__Add_expr__OperatorAlternatives_1_1_0 ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13928:1: ( rule__Add_expr__OperatorAlternatives_1_1_0 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13969:1: ( ( rule__Add_expr__OperatorAlternatives_1_1_0 ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13970:1: ( rule__Add_expr__OperatorAlternatives_1_1_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAdd_exprAccess().getOperatorAlternatives_1_1_0()); 
             }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13929:1: ( rule__Add_expr__OperatorAlternatives_1_1_0 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13929:2: rule__Add_expr__OperatorAlternatives_1_1_0
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13971:1: ( rule__Add_expr__OperatorAlternatives_1_1_0 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13971:2: rule__Add_expr__OperatorAlternatives_1_1_0
             {
-            pushFollow(FollowSets001.FOLLOW_rule__Add_expr__OperatorAlternatives_1_1_0_in_rule__Add_expr__OperatorAssignment_1_128269);
+            pushFollow(FollowSets001.FOLLOW_rule__Add_expr__OperatorAlternatives_1_1_0_in_rule__Add_expr__OperatorAssignment_1_128353);
             rule__Add_expr__OperatorAlternatives_1_1_0();
 
             state._fsp--;
@@ -40238,22 +40364,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Add_expr__RightAssignment_1_2"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13938:1: rule__Add_expr__RightAssignment_1_2 : ( rulemult_expr ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13980:1: rule__Add_expr__RightAssignment_1_2 : ( rulemult_expr ) ;
     public final void rule__Add_expr__RightAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13942:1: ( ( rulemult_expr ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13943:1: ( rulemult_expr )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13984:1: ( ( rulemult_expr ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13985:1: ( rulemult_expr )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13943:1: ( rulemult_expr )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13944:1: rulemult_expr
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13985:1: ( rulemult_expr )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13986:1: rulemult_expr
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAdd_exprAccess().getRightMult_exprParserRuleCall_1_2_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_rulemult_expr_in_rule__Add_expr__RightAssignment_1_228302);
+            pushFollow(FollowSets001.FOLLOW_rulemult_expr_in_rule__Add_expr__RightAssignment_1_228386);
             rulemult_expr();
 
             state._fsp--;
@@ -40283,25 +40409,25 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Mult_expr__OperatorAssignment_1_1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13953:1: rule__Mult_expr__OperatorAssignment_1_1 : ( ( rule__Mult_expr__OperatorAlternatives_1_1_0 ) ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13995:1: rule__Mult_expr__OperatorAssignment_1_1 : ( ( rule__Mult_expr__OperatorAlternatives_1_1_0 ) ) ;
     public final void rule__Mult_expr__OperatorAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13957:1: ( ( ( rule__Mult_expr__OperatorAlternatives_1_1_0 ) ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13958:1: ( ( rule__Mult_expr__OperatorAlternatives_1_1_0 ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13999:1: ( ( ( rule__Mult_expr__OperatorAlternatives_1_1_0 ) ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14000:1: ( ( rule__Mult_expr__OperatorAlternatives_1_1_0 ) )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13958:1: ( ( rule__Mult_expr__OperatorAlternatives_1_1_0 ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13959:1: ( rule__Mult_expr__OperatorAlternatives_1_1_0 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14000:1: ( ( rule__Mult_expr__OperatorAlternatives_1_1_0 ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14001:1: ( rule__Mult_expr__OperatorAlternatives_1_1_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMult_exprAccess().getOperatorAlternatives_1_1_0()); 
             }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13960:1: ( rule__Mult_expr__OperatorAlternatives_1_1_0 )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13960:2: rule__Mult_expr__OperatorAlternatives_1_1_0
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14002:1: ( rule__Mult_expr__OperatorAlternatives_1_1_0 )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14002:2: rule__Mult_expr__OperatorAlternatives_1_1_0
             {
-            pushFollow(FollowSets001.FOLLOW_rule__Mult_expr__OperatorAlternatives_1_1_0_in_rule__Mult_expr__OperatorAssignment_1_128333);
+            pushFollow(FollowSets001.FOLLOW_rule__Mult_expr__OperatorAlternatives_1_1_0_in_rule__Mult_expr__OperatorAssignment_1_128417);
             rule__Mult_expr__OperatorAlternatives_1_1_0();
 
             state._fsp--;
@@ -40334,22 +40460,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Mult_expr__RightAssignment_1_2"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13969:1: rule__Mult_expr__RightAssignment_1_2 : ( ruleunary_expr ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14011:1: rule__Mult_expr__RightAssignment_1_2 : ( ruleunary_expr ) ;
     public final void rule__Mult_expr__RightAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13973:1: ( ( ruleunary_expr ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13974:1: ( ruleunary_expr )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14015:1: ( ( ruleunary_expr ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14016:1: ( ruleunary_expr )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13974:1: ( ruleunary_expr )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13975:1: ruleunary_expr
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14016:1: ( ruleunary_expr )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14017:1: ruleunary_expr
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMult_exprAccess().getRightUnary_exprParserRuleCall_1_2_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleunary_expr_in_rule__Mult_expr__RightAssignment_1_228366);
+            pushFollow(FollowSets001.FOLLOW_ruleunary_expr_in_rule__Mult_expr__RightAssignment_1_228450);
             ruleunary_expr();
 
             state._fsp--;
@@ -40379,22 +40505,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Unary_expr__OperatorAssignment_0_1"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13984:1: rule__Unary_expr__OperatorAssignment_0_1 : ( ruleunary_operator ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14026:1: rule__Unary_expr__OperatorAssignment_0_1 : ( ruleunary_operator ) ;
     public final void rule__Unary_expr__OperatorAssignment_0_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13988:1: ( ( ruleunary_operator ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13989:1: ( ruleunary_operator )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14030:1: ( ( ruleunary_operator ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14031:1: ( ruleunary_operator )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13989:1: ( ruleunary_operator )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13990:1: ruleunary_operator
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14031:1: ( ruleunary_operator )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14032:1: ruleunary_operator
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnary_exprAccess().getOperatorUnary_operatorParserRuleCall_0_1_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleunary_operator_in_rule__Unary_expr__OperatorAssignment_0_128397);
+            pushFollow(FollowSets001.FOLLOW_ruleunary_operator_in_rule__Unary_expr__OperatorAssignment_0_128481);
             ruleunary_operator();
 
             state._fsp--;
@@ -40424,22 +40550,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Unary_expr__ExpressionAssignment_0_2"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:13999:1: rule__Unary_expr__ExpressionAssignment_0_2 : ( ruleprimary_expr ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14041:1: rule__Unary_expr__ExpressionAssignment_0_2 : ( ruleprimary_expr ) ;
     public final void rule__Unary_expr__ExpressionAssignment_0_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14003:1: ( ( ruleprimary_expr ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14004:1: ( ruleprimary_expr )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14045:1: ( ( ruleprimary_expr ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14046:1: ( ruleprimary_expr )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14004:1: ( ruleprimary_expr )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14005:1: ruleprimary_expr
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14046:1: ( ruleprimary_expr )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14047:1: ruleprimary_expr
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnary_exprAccess().getExpressionPrimary_exprParserRuleCall_0_2_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleprimary_expr_in_rule__Unary_expr__ExpressionAssignment_0_228428);
+            pushFollow(FollowSets001.FOLLOW_ruleprimary_expr_in_rule__Unary_expr__ExpressionAssignment_0_228512);
             ruleprimary_expr();
 
             state._fsp--;
@@ -40469,28 +40595,28 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ConstantDefRef__ConstantAssignment"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14014:1: rule__ConstantDefRef__ConstantAssignment : ( ( RULE_ID ) ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14056:1: rule__ConstantDefRef__ConstantAssignment : ( ( RULE_ID ) ) ;
     public final void rule__ConstantDefRef__ConstantAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14018:1: ( ( ( RULE_ID ) ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14019:1: ( ( RULE_ID ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14060:1: ( ( ( RULE_ID ) ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14061:1: ( ( RULE_ID ) )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14019:1: ( ( RULE_ID ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14020:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14061:1: ( ( RULE_ID ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14062:1: ( RULE_ID )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getConstantDefRefAccess().getConstantConstantCrossReference_0()); 
             }
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14021:1: ( RULE_ID )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14022:1: RULE_ID
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14063:1: ( RULE_ID )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14064:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getConstantDefRefAccess().getConstantConstantIDTerminalRuleCall_0_1()); 
             }
-            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__ConstantDefRef__ConstantAssignment28463); if (state.failed) return ;
+            match(input,RULE_ID,FollowSets001.FOLLOW_RULE_ID_in_rule__ConstantDefRef__ConstantAssignment28547); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getConstantDefRefAccess().getConstantConstantIDTerminalRuleCall_0_1()); 
             }
@@ -40522,22 +40648,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ValueExpression__ValueAssignment"
-    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14033:1: rule__ValueExpression__ValueAssignment : ( ruleliteral ) ;
+    // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14075:1: rule__ValueExpression__ValueAssignment : ( ruleliteral ) ;
     public final void rule__ValueExpression__ValueAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14037:1: ( ( ruleliteral ) )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14038:1: ( ruleliteral )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14079:1: ( ( ruleliteral ) )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14080:1: ( ruleliteral )
             {
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14038:1: ( ruleliteral )
-            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14039:1: ruleliteral
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14080:1: ( ruleliteral )
+            // ../org.csu.idl.xtext.ui/src-gen/org/csu/idl/xtext/ui/contentassist/antlr/internal/InternalIDL.g:14081:1: ruleliteral
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getValueExpressionAccess().getValueLiteralParserRuleCall_0()); 
             }
-            pushFollow(FollowSets001.FOLLOW_ruleliteral_in_rule__ValueExpression__ValueAssignment28498);
+            pushFollow(FollowSets001.FOLLOW_ruleliteral_in_rule__ValueExpression__ValueAssignment28582);
             ruleliteral();
 
             state._fsp--;
@@ -40687,11 +40813,11 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
 
     // Delegated rules
 
-    public final boolean synpred39_InternalIDL() {
+    public final boolean synpred30_InternalIDL() {
         state.backtracking++;
         int start = input.mark();
         try {
-            synpred39_InternalIDL_fragment(); // can never throw exception
+            synpred30_InternalIDL_fragment(); // can never throw exception
         } catch (RecognitionException re) {
             System.err.println("impossible: "+re);
         }
@@ -40715,11 +40841,11 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
         state.failed=false;
         return success;
     }
-    public final boolean synpred30_InternalIDL() {
+    public final boolean synpred38_InternalIDL() {
         state.backtracking++;
         int start = input.mark();
         try {
-            synpred30_InternalIDL_fragment(); // can never throw exception
+            synpred38_InternalIDL_fragment(); // can never throw exception
         } catch (RecognitionException re) {
             System.err.println("impossible: "+re);
         }
@@ -40729,11 +40855,11 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
         state.failed=false;
         return success;
     }
-    public final boolean synpred38_InternalIDL() {
+    public final boolean synpred39_InternalIDL() {
         state.backtracking++;
         int start = input.mark();
         try {
-            synpred38_InternalIDL_fragment(); // can never throw exception
+            synpred39_InternalIDL_fragment(); // can never throw exception
         } catch (RecognitionException re) {
             System.err.println("impossible: "+re);
         }
@@ -40758,13 +40884,13 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
     static final String DFA1_minS =
         "\1\36\3\uffff\2\57\1\13\1\uffff\1\35\2\uffff";
     static final String DFA1_maxS =
-        "\1\104\3\uffff\2\57\1\13\1\uffff\1\60\2\uffff";
+        "\1\103\3\uffff\2\57\1\13\1\uffff\1\60\2\uffff";
     static final String DFA1_acceptS =
         "\1\uffff\1\1\1\2\1\3\3\uffff\1\6\1\uffff\1\5\1\4";
     static final String DFA1_specialS =
         "\13\uffff}>";
     static final String[] DFA1_transitionS = {
-            "\1\4\1\5\14\uffff\1\7\2\uffff\1\6\11\uffff\1\3\2\1\2\uffff\2\1\3\uffff\1\1\1\2",
+            "\1\4\1\5\14\uffff\1\7\2\uffff\1\6\11\uffff\1\3\2\1\2\uffff\2\1\2\uffff\1\1\1\2",
             "",
             "",
             "",
@@ -40813,22 +40939,22 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
     static final String DFA11_eotS =
         "\31\uffff";
     static final String DFA11_eofS =
-        "\21\uffff\1\26\7\uffff";
+        "\21\uffff\1\27\7\uffff";
     static final String DFA11_minS =
-        "\1\114\1\66\3\13\1\22\13\13\1\35\4\13\2\uffff\1\13";
+        "\1\113\1\66\3\13\1\22\13\13\1\35\4\13\2\uffff\1\13";
     static final String DFA11_maxS =
-        "\1\114\1\66\1\112\1\13\2\23\13\13\1\64\2\13\1\23\1\13\2\uffff\1\13";
+        "\1\113\1\66\1\111\1\13\2\23\13\13\1\64\3\13\1\23\2\uffff\1\13";
     static final String DFA11_acceptS =
-        "\26\uffff\1\2\1\1\1\uffff";
+        "\26\uffff\1\1\1\2\1\uffff";
     static final String DFA11_specialS =
         "\31\uffff}>";
     static final String[] DFA11_transitionS = {
             "\1\1",
             "\1\2",
-            "\1\20\4\uffff\1\6\1\7\1\3\1\4\1\10\1\11\1\12\1\13\1\14\1\15\1\16\1\17\56\uffff\1\5",
+            "\1\20\4\uffff\1\6\1\7\1\3\1\4\1\10\1\11\1\12\1\13\1\14\1\15\1\16\1\17\55\uffff\1\5",
             "\1\21",
             "\1\21\5\uffff\1\23\1\uffff\1\22",
-            "\1\25\1\24",
+            "\1\24\1\25",
             "\1\21",
             "\1\21",
             "\1\21",
@@ -40840,11 +40966,11 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
             "\1\21",
             "\1\21",
             "\1\21",
-            "\1\26\26\uffff\1\27",
+            "\1\27\26\uffff\1\26",
+            "\1\21",
             "\1\21",
             "\1\21",
             "\1\21\7\uffff\1\30",
-            "\1\21",
             "",
             "",
             "\1\21"
@@ -40890,17 +41016,17 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
     static final String DFA14_minS =
         "\1\66\3\13\1\22\13\13\1\35\4\13\2\uffff\1\13";
     static final String DFA14_maxS =
-        "\1\66\1\112\1\13\2\23\13\13\1\70\3\13\1\23\2\uffff\1\13";
+        "\1\66\1\111\1\13\2\23\13\13\1\70\2\13\1\23\1\13\2\uffff\1\13";
     static final String DFA14_acceptS =
         "\25\uffff\1\1\1\2\1\uffff";
     static final String DFA14_specialS =
         "\30\uffff}>";
     static final String[] DFA14_transitionS = {
             "\1\1",
-            "\1\17\4\uffff\1\5\1\6\1\2\1\3\1\7\1\10\1\11\1\12\1\13\1\14\1\15\1\16\56\uffff\1\4",
+            "\1\17\4\uffff\1\5\1\6\1\2\1\3\1\7\1\10\1\11\1\12\1\13\1\14\1\15\1\16\55\uffff\1\4",
             "\1\20",
             "\1\20\5\uffff\1\22\1\uffff\1\21",
-            "\1\23\1\24",
+            "\1\24\1\23",
             "\1\20",
             "\1\20",
             "\1\20",
@@ -40915,8 +41041,8 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
             "\1\26\31\uffff\2\25",
             "\1\20",
             "\1\20",
-            "\1\20",
             "\1\20\7\uffff\1\27",
+            "\1\20",
             "",
             "",
             "\1\20"
@@ -40962,13 +41088,13 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
     static final String DFA18_minS =
         "\1\72\1\uffff\2\13\2\uffff\2\35\3\uffff";
     static final String DFA18_maxS =
-        "\1\103\1\uffff\2\13\2\uffff\1\55\1\100\3\uffff";
+        "\1\102\1\uffff\2\13\2\uffff\1\55\1\100\3\uffff";
     static final String DFA18_acceptS =
         "\1\uffff\1\1\2\uffff\1\4\1\5\2\uffff\1\6\1\2\1\3";
     static final String DFA18_specialS =
         "\13\uffff}>";
     static final String[] DFA18_transitionS = {
-            "\1\5\1\1\2\uffff\1\2\1\3\3\uffff\1\4",
+            "\1\5\1\1\2\uffff\1\2\1\3\2\uffff\1\4",
             "",
             "\1\6",
             "\1\7",
@@ -41021,13 +41147,13 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
     static final String DFA25_minS =
         "\1\13\20\0\4\uffff";
     static final String DFA25_maxS =
-        "\1\112\20\0\4\uffff";
+        "\1\111\20\0\4\uffff";
     static final String DFA25_acceptS =
         "\21\uffff\1\3\1\1\1\2\1\4";
     static final String DFA25_specialS =
         "\1\uffff\1\0\1\1\1\2\1\3\1\4\1\5\1\6\1\7\1\10\1\11\1\12\1\13\1\14\1\15\1\16\1\17\4\uffff}>";
     static final String[] DFA25_transitionS = {
-            "\1\20\4\uffff\1\4\1\5\1\1\1\2\1\6\1\7\1\10\1\11\1\12\1\13\1\14\1\15\42\uffff\1\21\7\uffff\1\16\2\uffff\1\17\1\3",
+            "\1\20\4\uffff\1\4\1\5\1\1\1\2\1\6\1\7\1\10\1\11\1\12\1\13\1\14\1\15\42\uffff\1\21\6\uffff\1\16\2\uffff\1\17\1\3",
             "\1\uffff",
             "\1\uffff",
             "\1\uffff",
@@ -41337,23 +41463,23 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
     static final String DFA38_eotS =
         "\12\uffff";
     static final String DFA38_eofS =
-        "\2\uffff\1\5\3\uffff\1\11\3\uffff";
+        "\2\uffff\1\4\3\uffff\1\11\3\uffff";
     static final String DFA38_minS =
         "\1\22\1\uffff\1\13\1\22\2\uffff\1\13\3\uffff";
     static final String DFA38_maxS =
-        "\1\112\1\uffff\1\110\1\23\2\uffff\1\110\3\uffff";
+        "\1\111\1\uffff\1\107\1\23\2\uffff\1\107\3\uffff";
     static final String DFA38_acceptS =
-        "\1\uffff\1\1\2\uffff\1\3\1\2\1\uffff\1\4\1\6\1\5";
+        "\1\uffff\1\1\2\uffff\1\2\1\3\1\uffff\1\4\1\6\1\5";
     static final String DFA38_specialS =
         "\12\uffff}>";
     static final String[] DFA38_transitionS = {
-            "\1\1\1\2\66\uffff\1\3",
+            "\1\1\1\2\65\uffff\1\3",
             "",
-            "\1\5\7\uffff\1\4\35\uffff\1\5\1\uffff\1\5\24\uffff\1\5",
+            "\1\4\7\uffff\1\5\35\uffff\1\4\1\uffff\1\4\23\uffff\1\4",
             "\1\7\1\6",
             "",
             "",
-            "\1\11\7\uffff\1\10\35\uffff\1\11\1\uffff\1\11\24\uffff\1\11",
+            "\1\11\7\uffff\1\10\35\uffff\1\11\1\uffff\1\11\23\uffff\1\11",
             "",
             "",
             ""
@@ -41718,13 +41844,13 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
         public static final BitSet FOLLOW_40_in_rule__Param_attribute__Alternatives7158 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_41_in_rule__Param_attribute__Alternatives7179 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_42_in_rule__Param_attribute__Alternatives7200 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Specification__Group__0__Impl_in_rule__Specification__Group__07233 = new BitSet(new long[]{0xCE009800C0000000L,0x0000000000000018L});
+        public static final BitSet FOLLOW_rule__Specification__Group__0__Impl_in_rule__Specification__Group__07233 = new BitSet(new long[]{0xCE009800C0000000L,0x000000000000000CL});
         public static final BitSet FOLLOW_rule__Specification__Group__1_in_rule__Specification__Group__07236 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Specification__Group__1__Impl_in_rule__Specification__Group__17294 = new BitSet(new long[]{0xCE009800C0000000L,0x0000000000000018L});
+        public static final BitSet FOLLOW_rule__Specification__Group__1__Impl_in_rule__Specification__Group__17294 = new BitSet(new long[]{0xCE009800C0000000L,0x000000000000000CL});
         public static final BitSet FOLLOW_rule__Specification__Group__2_in_rule__Specification__Group__17297 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Specification__IncludesAssignment_1_in_rule__Specification__Group__1__Impl7324 = new BitSet(new long[]{0x0000080000000002L});
         public static final BitSet FOLLOW_rule__Specification__Group__2__Impl_in_rule__Specification__Group__27355 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Specification__ContainsAssignment_2_in_rule__Specification__Group__2__Impl7382 = new BitSet(new long[]{0xCE009000C0000002L,0x0000000000000018L});
+        public static final BitSet FOLLOW_rule__Specification__ContainsAssignment_2_in_rule__Specification__Group__2__Impl7382 = new BitSet(new long[]{0xCE009000C0000002L,0x000000000000000CL});
         public static final BitSet FOLLOW_rule__Include_decl__Group__0__Impl_in_rule__Include_decl__Group__07419 = new BitSet(new long[]{0x0000000000000020L});
         public static final BitSet FOLLOW_rule__Include_decl__Group__1_in_rule__Include_decl__Group__07422 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_43_in_rule__Include_decl__Group__0__Impl7450 = new BitSet(new long[]{0x0000000000000002L});
@@ -41766,12 +41892,12 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
         public static final BitSet FOLLOW_rule__Module__Group__1__Impl_in_rule__Module__Group__18336 = new BitSet(new long[]{0x0000200000000000L});
         public static final BitSet FOLLOW_rule__Module__Group__2_in_rule__Module__Group__18339 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Module__IdentifierAssignment_1_in_rule__Module__Group__1__Impl8366 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Module__Group__2__Impl_in_rule__Module__Group__28396 = new BitSet(new long[]{0xCE00D000E0000000L,0x0000000000000018L});
+        public static final BitSet FOLLOW_rule__Module__Group__2__Impl_in_rule__Module__Group__28396 = new BitSet(new long[]{0xCE00D000E0000000L,0x000000000000000CL});
         public static final BitSet FOLLOW_rule__Module__Group__3_in_rule__Module__Group__28399 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_45_in_rule__Module__Group__2__Impl8427 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Module__Group__3__Impl_in_rule__Module__Group__38458 = new BitSet(new long[]{0xCE00D000E0000000L,0x0000000000000018L});
+        public static final BitSet FOLLOW_rule__Module__Group__3__Impl_in_rule__Module__Group__38458 = new BitSet(new long[]{0xCE00D000E0000000L,0x000000000000000CL});
         public static final BitSet FOLLOW_rule__Module__Group__4_in_rule__Module__Group__38461 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Module__Alternatives_3_in_rule__Module__Group__3__Impl8488 = new BitSet(new long[]{0xCE009000E0000002L,0x0000000000000018L});
+        public static final BitSet FOLLOW_rule__Module__Alternatives_3_in_rule__Module__Group__3__Impl8488 = new BitSet(new long[]{0xCE009000E0000002L,0x000000000000000CL});
         public static final BitSet FOLLOW_rule__Module__Group__4__Impl_in_rule__Module__Group__48519 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_46_in_rule__Module__Group__4__Impl8547 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Interface_decl__Group__0__Impl_in_rule__Interface_decl__Group__08588 = new BitSet(new long[]{0x00008000C0000000L});
@@ -41786,12 +41912,12 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
         public static final BitSet FOLLOW_rule__Interface_decl__Group__3__Impl_in_rule__Interface_decl__Group__38771 = new BitSet(new long[]{0x0001200000000000L});
         public static final BitSet FOLLOW_rule__Interface_decl__Group__4_in_rule__Interface_decl__Group__38774 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Interface_decl__Group_3__0_in_rule__Interface_decl__Group__3__Impl8801 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Interface_decl__Group__4__Impl_in_rule__Interface_decl__Group__48832 = new BitSet(new long[]{0xCE4040003FFF0800L,0x0000000000001C18L});
+        public static final BitSet FOLLOW_rule__Interface_decl__Group__4__Impl_in_rule__Interface_decl__Group__48832 = new BitSet(new long[]{0xCE4040003FFF0800L,0x0000000000000E0CL});
         public static final BitSet FOLLOW_rule__Interface_decl__Group__5_in_rule__Interface_decl__Group__48835 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_45_in_rule__Interface_decl__Group__4__Impl8863 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Interface_decl__Group__5__Impl_in_rule__Interface_decl__Group__58894 = new BitSet(new long[]{0xCE4040003FFF0800L,0x0000000000001C18L});
+        public static final BitSet FOLLOW_rule__Interface_decl__Group__5__Impl_in_rule__Interface_decl__Group__58894 = new BitSet(new long[]{0xCE4040003FFF0800L,0x0000000000000E0CL});
         public static final BitSet FOLLOW_rule__Interface_decl__Group__6_in_rule__Interface_decl__Group__58897 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Interface_decl__Alternatives_5_in_rule__Interface_decl__Group__5__Impl8924 = new BitSet(new long[]{0xCE4000003FFF0802L,0x0000000000001C18L});
+        public static final BitSet FOLLOW_rule__Interface_decl__Alternatives_5_in_rule__Interface_decl__Group__5__Impl8924 = new BitSet(new long[]{0xCE4000003FFF0802L,0x0000000000000E0CL});
         public static final BitSet FOLLOW_rule__Interface_decl__Group__6__Impl_in_rule__Interface_decl__Group__68955 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_46_in_rule__Interface_decl__Group__6__Impl8983 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Interface_decl__Group_3__0__Impl_in_rule__Interface_decl__Group_3__09028 = new BitSet(new long[]{0x0000000000000800L});
@@ -41840,7 +41966,7 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
         public static final BitSet FOLLOW_ruleop_decl_in_rule__Export__Group_4__0__Impl10041 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Export__Group_4__1__Impl_in_rule__Export__Group_4__110070 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_29_in_rule__Export__Group_4__1__Impl10098 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Op_decl__Group__0__Impl_in_rule__Op_decl__Group__010133 = new BitSet(new long[]{0xCE4000001FFF0800L,0x0000000000001C18L});
+        public static final BitSet FOLLOW_rule__Op_decl__Group__0__Impl_in_rule__Op_decl__Group__010133 = new BitSet(new long[]{0xCE4000001FFF0800L,0x0000000000000E0CL});
         public static final BitSet FOLLOW_rule__Op_decl__Group__1_in_rule__Op_decl__Group__010136 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Op_decl__IsOnewayAssignment_0_in_rule__Op_decl__Group__0__Impl10163 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Op_decl__Group__1__Impl_in_rule__Op_decl__Group__110194 = new BitSet(new long[]{0x0000000000000800L});
@@ -41911,11 +42037,11 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
         public static final BitSet FOLLOW_49_in_rule__Op_decl__Group_7_3__0__Impl11661 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Op_decl__Group_7_3__1__Impl_in_rule__Op_decl__Group_7_3__111692 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Op_decl__ContextsAssignment_7_3_1_in_rule__Op_decl__Group_7_3__1__Impl11719 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Op_type_spec__Group_1__0__Impl_in_rule__Op_type_spec__Group_1__011753 = new BitSet(new long[]{0x000000001FFF0000L,0x0000000000000400L});
+        public static final BitSet FOLLOW_rule__Op_type_spec__Group_1__0__Impl_in_rule__Op_type_spec__Group_1__011753 = new BitSet(new long[]{0x000000001FFF0000L,0x0000000000000200L});
         public static final BitSet FOLLOW_rule__Op_type_spec__Group_1__1_in_rule__Op_type_spec__Group_1__011756 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Op_type_spec__Group_1__1__Impl_in_rule__Op_type_spec__Group_1__111814 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Op_type_spec__KindAssignment_1_1_in_rule__Op_type_spec__Group_1__1__Impl11841 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Param_decl__Group__0__Impl_in_rule__Param_decl__Group__011875 = new BitSet(new long[]{0x000000000FFF0800L,0x0000000000000400L});
+        public static final BitSet FOLLOW_rule__Param_decl__Group__0__Impl_in_rule__Param_decl__Group__011875 = new BitSet(new long[]{0x000000000FFF0800L,0x0000000000000200L});
         public static final BitSet FOLLOW_rule__Param_decl__Group__1_in_rule__Param_decl__Group__011878 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Param_decl__DirectionAssignment_0_in_rule__Param_decl__Group__0__Impl11905 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Param_decl__Group__1__Impl_in_rule__Param_decl__Group__111935 = new BitSet(new long[]{0x0000000000000800L});
@@ -41926,7 +42052,7 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
         public static final BitSet FOLLOW_rule__Readonly_attr_spec__Group_0__0__Impl_in_rule__Readonly_attr_spec__Group_0__012058 = new BitSet(new long[]{0x0040000000000000L});
         public static final BitSet FOLLOW_rule__Readonly_attr_spec__Group_0__1_in_rule__Readonly_attr_spec__Group_0__012061 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Readonly_attr_spec__IsReadonlyAssignment_0_0_in_rule__Readonly_attr_spec__Group_0__0__Impl12088 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Readonly_attr_spec__Group_0__1__Impl_in_rule__Readonly_attr_spec__Group_0__112118 = new BitSet(new long[]{0x000000000FFF0800L,0x0000000000000400L});
+        public static final BitSet FOLLOW_rule__Readonly_attr_spec__Group_0__1__Impl_in_rule__Readonly_attr_spec__Group_0__112118 = new BitSet(new long[]{0x000000000FFF0800L,0x0000000000000200L});
         public static final BitSet FOLLOW_rule__Readonly_attr_spec__Group_0__2_in_rule__Readonly_attr_spec__Group_0__112121 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_54_in_rule__Readonly_attr_spec__Group_0__1__Impl12149 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Readonly_attr_spec__Group_0__2__Impl_in_rule__Readonly_attr_spec__Group_0__212180 = new BitSet(new long[]{0x0000000000000800L});
@@ -41957,7 +42083,7 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
         public static final BitSet FOLLOW_rule__Readonly_attr_spec__Group_1__0__Impl_in_rule__Readonly_attr_spec__Group_1__012745 = new BitSet(new long[]{0x0040000000000000L});
         public static final BitSet FOLLOW_rule__Readonly_attr_spec__Group_1__1_in_rule__Readonly_attr_spec__Group_1__012748 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Readonly_attr_spec__IsReadonlyAssignment_1_0_in_rule__Readonly_attr_spec__Group_1__0__Impl12775 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Readonly_attr_spec__Group_1__1__Impl_in_rule__Readonly_attr_spec__Group_1__112805 = new BitSet(new long[]{0x000000000FFF0800L,0x0000000000000400L});
+        public static final BitSet FOLLOW_rule__Readonly_attr_spec__Group_1__1__Impl_in_rule__Readonly_attr_spec__Group_1__112805 = new BitSet(new long[]{0x000000000FFF0800L,0x0000000000000200L});
         public static final BitSet FOLLOW_rule__Readonly_attr_spec__Group_1__2_in_rule__Readonly_attr_spec__Group_1__112808 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_54_in_rule__Readonly_attr_spec__Group_1__1__Impl12836 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Readonly_attr_spec__Group_1__2__Impl_in_rule__Readonly_attr_spec__Group_1__212867 = new BitSet(new long[]{0x0000000000000800L});
@@ -41965,7 +42091,7 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
         public static final BitSet FOLLOW_rule__Readonly_attr_spec__Alternatives_1_2_in_rule__Readonly_attr_spec__Group_1__2__Impl12897 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Readonly_attr_spec__Group_1__3__Impl_in_rule__Readonly_attr_spec__Group_1__312927 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Readonly_attr_spec__IdentifierAssignment_1_3_in_rule__Readonly_attr_spec__Group_1__3__Impl12954 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Attr_spec__Group_0__0__Impl_in_rule__Attr_spec__Group_0__012992 = new BitSet(new long[]{0x000000000FFF0800L,0x0000000000000400L});
+        public static final BitSet FOLLOW_rule__Attr_spec__Group_0__0__Impl_in_rule__Attr_spec__Group_0__012992 = new BitSet(new long[]{0x000000000FFF0800L,0x0000000000000200L});
         public static final BitSet FOLLOW_rule__Attr_spec__Group_0__1_in_rule__Attr_spec__Group_0__012995 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_54_in_rule__Attr_spec__Group_0__0__Impl13023 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Attr_spec__Group_0__1__Impl_in_rule__Attr_spec__Group_0__113054 = new BitSet(new long[]{0x0000000000000800L});
@@ -42036,7 +42162,7 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
         public static final BitSet FOLLOW_49_in_rule__Attr_spec__Group_0_3_1_3__0__Impl14521 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Attr_spec__Group_0_3_1_3__1__Impl_in_rule__Attr_spec__Group_0_3_1_3__114552 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Attr_spec__SetRaisesAssignment_0_3_1_3_1_in_rule__Attr_spec__Group_0_3_1_3__1__Impl14579 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Attr_spec__Group_1__0__Impl_in_rule__Attr_spec__Group_1__014613 = new BitSet(new long[]{0x000000000FFF0800L,0x0000000000000400L});
+        public static final BitSet FOLLOW_rule__Attr_spec__Group_1__0__Impl_in_rule__Attr_spec__Group_1__014613 = new BitSet(new long[]{0x000000000FFF0800L,0x0000000000000200L});
         public static final BitSet FOLLOW_rule__Attr_spec__Group_1__1_in_rule__Attr_spec__Group_1__014616 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_54_in_rule__Attr_spec__Group_1__0__Impl14644 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Attr_spec__Group_1__1__Impl_in_rule__Attr_spec__Group_1__114675 = new BitSet(new long[]{0x0000000000000800L});
@@ -42050,12 +42176,12 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
         public static final BitSet FOLLOW_rule__Except_decl__Group__1__Impl_in_rule__Except_decl__Group__114860 = new BitSet(new long[]{0x0000200000000000L});
         public static final BitSet FOLLOW_rule__Except_decl__Group__2_in_rule__Except_decl__Group__114863 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Except_decl__IdentifierAssignment_1_in_rule__Except_decl__Group__1__Impl14890 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Except_decl__Group__2__Impl_in_rule__Except_decl__Group__214920 = new BitSet(new long[]{0x400040000FFF0800L,0x0000000000000640L});
+        public static final BitSet FOLLOW_rule__Except_decl__Group__2__Impl_in_rule__Except_decl__Group__214920 = new BitSet(new long[]{0x400040000FFF0800L,0x0000000000000320L});
         public static final BitSet FOLLOW_rule__Except_decl__Group__3_in_rule__Except_decl__Group__214923 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_45_in_rule__Except_decl__Group__2__Impl14951 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Except_decl__Group__3__Impl_in_rule__Except_decl__Group__314982 = new BitSet(new long[]{0x400040000FFF0800L,0x0000000000000640L});
+        public static final BitSet FOLLOW_rule__Except_decl__Group__3__Impl_in_rule__Except_decl__Group__314982 = new BitSet(new long[]{0x400040000FFF0800L,0x0000000000000320L});
         public static final BitSet FOLLOW_rule__Except_decl__Group__4_in_rule__Except_decl__Group__314985 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Except_decl__MembersAssignment_3_in_rule__Except_decl__Group__3__Impl15012 = new BitSet(new long[]{0x400000000FFF0802L,0x0000000000000640L});
+        public static final BitSet FOLLOW_rule__Except_decl__MembersAssignment_3_in_rule__Except_decl__Group__3__Impl15012 = new BitSet(new long[]{0x400000000FFF0802L,0x0000000000000320L});
         public static final BitSet FOLLOW_rule__Except_decl__Group__4__Impl_in_rule__Except_decl__Group__415043 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_46_in_rule__Except_decl__Group__4__Impl15071 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Type_decl__Group_4__0__Impl_in_rule__Type_decl__Group_4__015112 = new BitSet(new long[]{0x0000000000000800L});
@@ -42063,12 +42189,12 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
         public static final BitSet FOLLOW_58_in_rule__Type_decl__Group_4__0__Impl15143 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Type_decl__Group_4__1__Impl_in_rule__Type_decl__Group_4__115174 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_RULE_ID_in_rule__Type_decl__Group_4__1__Impl15201 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Alias_type__Group_0__0__Impl_in_rule__Alias_type__Group_0__015234 = new BitSet(new long[]{0x000000000FFF0800L,0x0000000000000640L});
+        public static final BitSet FOLLOW_rule__Alias_type__Group_0__0__Impl_in_rule__Alias_type__Group_0__015234 = new BitSet(new long[]{0x000000000FFF0800L,0x0000000000000320L});
         public static final BitSet FOLLOW_rule__Alias_type__Group_0__1_in_rule__Alias_type__Group_0__015237 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_59_in_rule__Alias_type__Group_0__0__Impl15265 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Alias_type__Group_0__1__Impl_in_rule__Alias_type__Group_0__115296 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Alias_type__ContainedTypeAssignment_0_1_in_rule__Alias_type__Group_0__1__Impl15323 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Alias_type__Group_1__0__Impl_in_rule__Alias_type__Group_1__015357 = new BitSet(new long[]{0x000000000FFF0800L,0x0000000000000640L});
+        public static final BitSet FOLLOW_rule__Alias_type__Group_1__0__Impl_in_rule__Alias_type__Group_1__015357 = new BitSet(new long[]{0x000000000FFF0800L,0x0000000000000320L});
         public static final BitSet FOLLOW_rule__Alias_type__Group_1__1_in_rule__Alias_type__Group_1__015360 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_59_in_rule__Alias_type__Group_1__0__Impl15388 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Alias_type__Group_1__1__Impl_in_rule__Alias_type__Group_1__115419 = new BitSet(new long[]{0x0000000000000800L});
@@ -42099,13 +42225,13 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
         public static final BitSet FOLLOW_rule__Struct_type__Group__1__Impl_in_rule__Struct_type__Group__115991 = new BitSet(new long[]{0x0000200000000000L});
         public static final BitSet FOLLOW_rule__Struct_type__Group__2_in_rule__Struct_type__Group__115994 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Struct_type__IdentifierAssignment_1_in_rule__Struct_type__Group__1__Impl16021 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Struct_type__Group__2__Impl_in_rule__Struct_type__Group__216051 = new BitSet(new long[]{0x400000000FFF0800L,0x0000000000000640L});
+        public static final BitSet FOLLOW_rule__Struct_type__Group__2__Impl_in_rule__Struct_type__Group__216051 = new BitSet(new long[]{0x400000000FFF0800L,0x0000000000000320L});
         public static final BitSet FOLLOW_rule__Struct_type__Group__3_in_rule__Struct_type__Group__216054 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_45_in_rule__Struct_type__Group__2__Impl16082 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Struct_type__Group__3__Impl_in_rule__Struct_type__Group__316113 = new BitSet(new long[]{0x0000400000000000L});
         public static final BitSet FOLLOW_rule__Struct_type__Group__4_in_rule__Struct_type__Group__316116 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Struct_type__MembersAssignment_3_in_rule__Struct_type__Group__3__Impl16145 = new BitSet(new long[]{0x400000000FFF0802L,0x0000000000000640L});
-        public static final BitSet FOLLOW_rule__Struct_type__MembersAssignment_3_in_rule__Struct_type__Group__3__Impl16157 = new BitSet(new long[]{0x400000000FFF0802L,0x0000000000000640L});
+        public static final BitSet FOLLOW_rule__Struct_type__MembersAssignment_3_in_rule__Struct_type__Group__3__Impl16145 = new BitSet(new long[]{0x400000000FFF0802L,0x0000000000000320L});
+        public static final BitSet FOLLOW_rule__Struct_type__MembersAssignment_3_in_rule__Struct_type__Group__3__Impl16157 = new BitSet(new long[]{0x400000000FFF0802L,0x0000000000000320L});
         public static final BitSet FOLLOW_rule__Struct_type__Group__4__Impl_in_rule__Struct_type__Group__416190 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_46_in_rule__Struct_type__Group__4__Impl16218 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Member__Group_0__0__Impl_in_rule__Member__Group_0__016259 = new BitSet(new long[]{0x0000000020000000L});
@@ -42146,7 +42272,7 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
         public static final BitSet FOLLOW_rule__Union_type__Group__2__Impl_in_rule__Union_type__Group__217059 = new BitSet(new long[]{0x0004000000000000L});
         public static final BitSet FOLLOW_rule__Union_type__Group__3_in_rule__Union_type__Group__217062 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_64_in_rule__Union_type__Group__2__Impl17090 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Union_type__Group__3__Impl_in_rule__Union_type__Group__317121 = new BitSet(new long[]{0x00000000011C0800L,0x0000000000000408L});
+        public static final BitSet FOLLOW_rule__Union_type__Group__3__Impl_in_rule__Union_type__Group__317121 = new BitSet(new long[]{0x00000000011C0800L,0x0000000000000204L});
         public static final BitSet FOLLOW_rule__Union_type__Group__4_in_rule__Union_type__Group__317124 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_50_in_rule__Union_type__Group__3__Impl17152 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Union_type__Group__4__Impl_in_rule__Union_type__Group__417183 = new BitSet(new long[]{0x0008000000000000L});
@@ -42155,13 +42281,13 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
         public static final BitSet FOLLOW_rule__Union_type__Group__5__Impl_in_rule__Union_type__Group__517243 = new BitSet(new long[]{0x0000200000000000L});
         public static final BitSet FOLLOW_rule__Union_type__Group__6_in_rule__Union_type__Group__517246 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_51_in_rule__Union_type__Group__5__Impl17274 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Union_type__Group__6__Impl_in_rule__Union_type__Group__617305 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000006L});
+        public static final BitSet FOLLOW_rule__Union_type__Group__6__Impl_in_rule__Union_type__Group__617305 = new BitSet(new long[]{0x0000000000000000L,0x0000000000001002L});
         public static final BitSet FOLLOW_rule__Union_type__Group__7_in_rule__Union_type__Group__617308 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_45_in_rule__Union_type__Group__6__Impl17336 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Union_type__Group__7__Impl_in_rule__Union_type__Group__717367 = new BitSet(new long[]{0x0000400000000000L});
         public static final BitSet FOLLOW_rule__Union_type__Group__8_in_rule__Union_type__Group__717370 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Union_type__UnionMembersAssignment_7_in_rule__Union_type__Group__7__Impl17399 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000006L});
-        public static final BitSet FOLLOW_rule__Union_type__UnionMembersAssignment_7_in_rule__Union_type__Group__7__Impl17411 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000006L});
+        public static final BitSet FOLLOW_rule__Union_type__UnionMembersAssignment_7_in_rule__Union_type__Group__7__Impl17399 = new BitSet(new long[]{0x0000000000000002L,0x0000000000001002L});
+        public static final BitSet FOLLOW_rule__Union_type__UnionMembersAssignment_7_in_rule__Union_type__Group__7__Impl17411 = new BitSet(new long[]{0x0000000000000002L,0x0000000000001002L});
         public static final BitSet FOLLOW_rule__Union_type__Group__8__Impl_in_rule__Union_type__Group__817444 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_46_in_rule__Union_type__Group__8__Impl17472 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Switch_type_spec_cont__Group_1__0__Impl_in_rule__Switch_type_spec_cont__Group_1__017521 = new BitSet(new long[]{0x0000000000100000L});
@@ -42172,10 +42298,10 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
         public static final BitSet FOLLOW_rule__Switch_type_spec_cont__Group_2__1_in_rule__Switch_type_spec_cont__Group_2__017646 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Switch_type_spec_cont__Group_2__1__Impl_in_rule__Switch_type_spec_cont__Group_2__117704 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Switch_type_spec_cont__KindAssignment_2_1_in_rule__Switch_type_spec_cont__Group_2__1__Impl17731 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Case_stmt__Group_0__0__Impl_in_rule__Case_stmt__Group_0__017765 = new BitSet(new long[]{0x000000000FFF0800L,0x0000000000000640L});
+        public static final BitSet FOLLOW_rule__Case_stmt__Group_0__0__Impl_in_rule__Case_stmt__Group_0__017765 = new BitSet(new long[]{0x000000000FFF0800L,0x0000000000000320L});
         public static final BitSet FOLLOW_rule__Case_stmt__Group_0__1_in_rule__Case_stmt__Group_0__017768 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Case_stmt__Alternatives_0_0_in_rule__Case_stmt__Group_0__0__Impl17797 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000006L});
-        public static final BitSet FOLLOW_rule__Case_stmt__Alternatives_0_0_in_rule__Case_stmt__Group_0__0__Impl17809 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000006L});
+        public static final BitSet FOLLOW_rule__Case_stmt__Alternatives_0_0_in_rule__Case_stmt__Group_0__0__Impl17797 = new BitSet(new long[]{0x0000000000000002L,0x0000000000001002L});
+        public static final BitSet FOLLOW_rule__Case_stmt__Alternatives_0_0_in_rule__Case_stmt__Group_0__0__Impl17809 = new BitSet(new long[]{0x0000000000000002L,0x0000000000001002L});
         public static final BitSet FOLLOW_rule__Case_stmt__Group_0__1__Impl_in_rule__Case_stmt__Group_0__117842 = new BitSet(new long[]{0x0000000020000000L});
         public static final BitSet FOLLOW_rule__Case_stmt__Group_0__2_in_rule__Case_stmt__Group_0__117845 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Case_stmt__ContainedTypeAssignment_0_1_in_rule__Case_stmt__Group_0__1__Impl17872 = new BitSet(new long[]{0x0000000000000002L});
@@ -42191,388 +42317,390 @@ public class InternalIDLParser extends AbstractInternalContentAssistParser {
         public static final BitSet FOLLOW_48_in_rule__Case_stmt__Group_0_0_0__2__Impl18117 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Case_stmt__Group_0_0_1__0__Impl_in_rule__Case_stmt__Group_0_0_1__018154 = new BitSet(new long[]{0x0001000000000000L});
         public static final BitSet FOLLOW_rule__Case_stmt__Group_0_0_1__1_in_rule__Case_stmt__Group_0_0_1__018157 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_66_in_rule__Case_stmt__Group_0_0_1__0__Impl18185 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Case_stmt__Group_0_0_1__1__Impl_in_rule__Case_stmt__Group_0_0_1__118216 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_48_in_rule__Case_stmt__Group_0_0_1__1__Impl18244 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Case_stmt__Group_1__0__Impl_in_rule__Case_stmt__Group_1__018279 = new BitSet(new long[]{0x000000000FFF0800L,0x0000000000000640L});
-        public static final BitSet FOLLOW_rule__Case_stmt__Group_1__1_in_rule__Case_stmt__Group_1__018282 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Case_stmt__Alternatives_1_0_in_rule__Case_stmt__Group_1__0__Impl18311 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000006L});
-        public static final BitSet FOLLOW_rule__Case_stmt__Alternatives_1_0_in_rule__Case_stmt__Group_1__0__Impl18323 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000006L});
-        public static final BitSet FOLLOW_rule__Case_stmt__Group_1__1__Impl_in_rule__Case_stmt__Group_1__118356 = new BitSet(new long[]{0x0000000000000800L});
-        public static final BitSet FOLLOW_rule__Case_stmt__Group_1__2_in_rule__Case_stmt__Group_1__118359 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Case_stmt__Alternatives_1_1_in_rule__Case_stmt__Group_1__1__Impl18386 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Case_stmt__Group_1__2__Impl_in_rule__Case_stmt__Group_1__218416 = new BitSet(new long[]{0x0000000020000000L});
-        public static final BitSet FOLLOW_rule__Case_stmt__Group_1__3_in_rule__Case_stmt__Group_1__218419 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Case_stmt__IdentifierAssignment_1_2_in_rule__Case_stmt__Group_1__2__Impl18446 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Case_stmt__Group_1__3__Impl_in_rule__Case_stmt__Group_1__318476 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_29_in_rule__Case_stmt__Group_1__3__Impl18504 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Case_stmt__Group_1_0_0__0__Impl_in_rule__Case_stmt__Group_1_0_0__018543 = new BitSet(new long[]{0x0004008C00000FF0L});
-        public static final BitSet FOLLOW_rule__Case_stmt__Group_1_0_0__1_in_rule__Case_stmt__Group_1_0_0__018546 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_65_in_rule__Case_stmt__Group_1_0_0__0__Impl18574 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Case_stmt__Group_1_0_0__1__Impl_in_rule__Case_stmt__Group_1_0_0__118605 = new BitSet(new long[]{0x0001000000000000L});
-        public static final BitSet FOLLOW_rule__Case_stmt__Group_1_0_0__2_in_rule__Case_stmt__Group_1_0_0__118608 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Case_stmt__LabelAssignment_1_0_0_1_in_rule__Case_stmt__Group_1_0_0__1__Impl18635 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Case_stmt__Group_1_0_0__2__Impl_in_rule__Case_stmt__Group_1_0_0__218665 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_48_in_rule__Case_stmt__Group_1_0_0__2__Impl18693 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Case_stmt__Group_1_0_1__0__Impl_in_rule__Case_stmt__Group_1_0_1__018730 = new BitSet(new long[]{0x0001000000000000L});
-        public static final BitSet FOLLOW_rule__Case_stmt__Group_1_0_1__1_in_rule__Case_stmt__Group_1_0_1__018733 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_66_in_rule__Case_stmt__Group_1_0_1__0__Impl18761 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Case_stmt__Group_1_0_1__1__Impl_in_rule__Case_stmt__Group_1_0_1__118792 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_48_in_rule__Case_stmt__Group_1_0_1__1__Impl18820 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Enum_type__Group__0__Impl_in_rule__Enum_type__Group__018855 = new BitSet(new long[]{0x0000000000000800L});
-        public static final BitSet FOLLOW_rule__Enum_type__Group__1_in_rule__Enum_type__Group__018858 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_67_in_rule__Enum_type__Group__0__Impl18886 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Enum_type__Group__1__Impl_in_rule__Enum_type__Group__118917 = new BitSet(new long[]{0x0000200000000000L});
-        public static final BitSet FOLLOW_rule__Enum_type__Group__2_in_rule__Enum_type__Group__118920 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Enum_type__IdentifierAssignment_1_in_rule__Enum_type__Group__1__Impl18947 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Enum_type__Group__2__Impl_in_rule__Enum_type__Group__218977 = new BitSet(new long[]{0x0000000000000800L});
-        public static final BitSet FOLLOW_rule__Enum_type__Group__3_in_rule__Enum_type__Group__218980 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_45_in_rule__Enum_type__Group__2__Impl19008 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Enum_type__Group__3__Impl_in_rule__Enum_type__Group__319039 = new BitSet(new long[]{0x0002400000000000L});
-        public static final BitSet FOLLOW_rule__Enum_type__Group__4_in_rule__Enum_type__Group__319042 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Enum_type__MembersAssignment_3_in_rule__Enum_type__Group__3__Impl19069 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Enum_type__Group__4__Impl_in_rule__Enum_type__Group__419099 = new BitSet(new long[]{0x0002400000000000L});
-        public static final BitSet FOLLOW_rule__Enum_type__Group__5_in_rule__Enum_type__Group__419102 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Enum_type__Group_4__0_in_rule__Enum_type__Group__4__Impl19129 = new BitSet(new long[]{0x0002000000000002L});
-        public static final BitSet FOLLOW_rule__Enum_type__Group__5__Impl_in_rule__Enum_type__Group__519160 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_46_in_rule__Enum_type__Group__5__Impl19188 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Enum_type__Group_4__0__Impl_in_rule__Enum_type__Group_4__019231 = new BitSet(new long[]{0x0000000000000800L});
-        public static final BitSet FOLLOW_rule__Enum_type__Group_4__1_in_rule__Enum_type__Group_4__019234 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_49_in_rule__Enum_type__Group_4__0__Impl19262 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Enum_type__Group_4__1__Impl_in_rule__Enum_type__Group_4__119293 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Enum_type__MembersAssignment_4_1_in_rule__Enum_type__Group_4__1__Impl19320 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Constr_forward_decl__Group_0__0__Impl_in_rule__Constr_forward_decl__Group_0__019354 = new BitSet(new long[]{0x0000000000000800L});
-        public static final BitSet FOLLOW_rule__Constr_forward_decl__Group_0__1_in_rule__Constr_forward_decl__Group_0__019357 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_62_in_rule__Constr_forward_decl__Group_0__0__Impl19385 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Constr_forward_decl__Group_0__1__Impl_in_rule__Constr_forward_decl__Group_0__119416 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__Constr_forward_decl__Group_0__1__Impl19443 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Constr_forward_decl__Group_1__0__Impl_in_rule__Constr_forward_decl__Group_1__019476 = new BitSet(new long[]{0x0000000000000800L});
-        public static final BitSet FOLLOW_rule__Constr_forward_decl__Group_1__1_in_rule__Constr_forward_decl__Group_1__019479 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_63_in_rule__Constr_forward_decl__Group_1__0__Impl19507 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Constr_forward_decl__Group_1__1__Impl_in_rule__Constr_forward_decl__Group_1__119538 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__Constr_forward_decl__Group_1__1__Impl19565 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Const_decl__Group__0__Impl_in_rule__Const_decl__Group__019598 = new BitSet(new long[]{0x0000000007FF0800L,0x0000000000000600L});
-        public static final BitSet FOLLOW_rule__Const_decl__Group__1_in_rule__Const_decl__Group__019601 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_68_in_rule__Const_decl__Group__0__Impl19629 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Const_decl__Group__1__Impl_in_rule__Const_decl__Group__119660 = new BitSet(new long[]{0x0000000000000800L});
-        public static final BitSet FOLLOW_rule__Const_decl__Group__2_in_rule__Const_decl__Group__119663 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Const_decl__Alternatives_1_in_rule__Const_decl__Group__1__Impl19690 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Const_decl__Group__2__Impl_in_rule__Const_decl__Group__219720 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000020L});
-        public static final BitSet FOLLOW_rule__Const_decl__Group__3_in_rule__Const_decl__Group__219723 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Const_decl__IdentifierAssignment_2_in_rule__Const_decl__Group__2__Impl19750 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Const_decl__Group__3__Impl_in_rule__Const_decl__Group__319780 = new BitSet(new long[]{0x0004008C00000FF0L});
-        public static final BitSet FOLLOW_rule__Const_decl__Group__4_in_rule__Const_decl__Group__319783 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_69_in_rule__Const_decl__Group__3__Impl19811 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Const_decl__Group__4__Impl_in_rule__Const_decl__Group__419842 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Const_decl__ConstValueAssignment_4_in_rule__Const_decl__Group__4__Impl19869 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Sequence_type__Group__0__Impl_in_rule__Sequence_type__Group__019909 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000080L});
-        public static final BitSet FOLLOW_rule__Sequence_type__Group__1_in_rule__Sequence_type__Group__019912 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_70_in_rule__Sequence_type__Group__0__Impl19940 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Sequence_type__Group__1__Impl_in_rule__Sequence_type__Group__119971 = new BitSet(new long[]{0x000000000FFF0800L,0x0000000000000640L});
-        public static final BitSet FOLLOW_rule__Sequence_type__Group__2_in_rule__Sequence_type__Group__119974 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_71_in_rule__Sequence_type__Group__1__Impl20002 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Sequence_type__Group__2__Impl_in_rule__Sequence_type__Group__220033 = new BitSet(new long[]{0x0002000000000000L,0x0000000000000100L});
-        public static final BitSet FOLLOW_rule__Sequence_type__Group__3_in_rule__Sequence_type__Group__220036 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Sequence_type__Alternatives_2_in_rule__Sequence_type__Group__2__Impl20063 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Sequence_type__Group__3__Impl_in_rule__Sequence_type__Group__320093 = new BitSet(new long[]{0x0002000000000000L,0x0000000000000100L});
-        public static final BitSet FOLLOW_rule__Sequence_type__Group__4_in_rule__Sequence_type__Group__320096 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Sequence_type__Group_3__0_in_rule__Sequence_type__Group__3__Impl20123 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Sequence_type__Group__4__Impl_in_rule__Sequence_type__Group__420154 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_72_in_rule__Sequence_type__Group__4__Impl20182 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Sequence_type__Group_3__0__Impl_in_rule__Sequence_type__Group_3__020223 = new BitSet(new long[]{0x0004008C00000FF0L});
-        public static final BitSet FOLLOW_rule__Sequence_type__Group_3__1_in_rule__Sequence_type__Group_3__020226 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_49_in_rule__Sequence_type__Group_3__0__Impl20254 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Sequence_type__Group_3__1__Impl_in_rule__Sequence_type__Group_3__120285 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Sequence_type__BoundAssignment_3_1_in_rule__Sequence_type__Group_3__1__Impl20312 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Stringdef_type__Group__0__Impl_in_rule__Stringdef_type__Group__020346 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000080L});
-        public static final BitSet FOLLOW_rule__Stringdef_type__Group__1_in_rule__Stringdef_type__Group__020349 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_22_in_rule__Stringdef_type__Group__0__Impl20377 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Stringdef_type__Group__1__Impl_in_rule__Stringdef_type__Group__120408 = new BitSet(new long[]{0x0004008C00000FF0L});
-        public static final BitSet FOLLOW_rule__Stringdef_type__Group__2_in_rule__Stringdef_type__Group__120411 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_71_in_rule__Stringdef_type__Group__1__Impl20439 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Stringdef_type__Group__2__Impl_in_rule__Stringdef_type__Group__220470 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000100L});
-        public static final BitSet FOLLOW_rule__Stringdef_type__Group__3_in_rule__Stringdef_type__Group__220473 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Stringdef_type__BoundAssignment_2_in_rule__Stringdef_type__Group__2__Impl20500 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Stringdef_type__Group__3__Impl_in_rule__Stringdef_type__Group__320530 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_72_in_rule__Stringdef_type__Group__3__Impl20558 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Wide_stringdef_type__Group__0__Impl_in_rule__Wide_stringdef_type__Group__020597 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000080L});
-        public static final BitSet FOLLOW_rule__Wide_stringdef_type__Group__1_in_rule__Wide_stringdef_type__Group__020600 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_23_in_rule__Wide_stringdef_type__Group__0__Impl20628 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Wide_stringdef_type__Group__1__Impl_in_rule__Wide_stringdef_type__Group__120659 = new BitSet(new long[]{0x0004008C00000FF0L});
-        public static final BitSet FOLLOW_rule__Wide_stringdef_type__Group__2_in_rule__Wide_stringdef_type__Group__120662 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_71_in_rule__Wide_stringdef_type__Group__1__Impl20690 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Wide_stringdef_type__Group__2__Impl_in_rule__Wide_stringdef_type__Group__220721 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000100L});
-        public static final BitSet FOLLOW_rule__Wide_stringdef_type__Group__3_in_rule__Wide_stringdef_type__Group__220724 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Wide_stringdef_type__BoundAssignment_2_in_rule__Wide_stringdef_type__Group__2__Impl20751 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Wide_stringdef_type__Group__3__Impl_in_rule__Wide_stringdef_type__Group__320781 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_72_in_rule__Wide_stringdef_type__Group__3__Impl20809 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Fixed_pt_type__Group__0__Impl_in_rule__Fixed_pt_type__Group__020848 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000080L});
-        public static final BitSet FOLLOW_rule__Fixed_pt_type__Group__1_in_rule__Fixed_pt_type__Group__020851 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_73_in_rule__Fixed_pt_type__Group__0__Impl20879 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Fixed_pt_type__Group__1__Impl_in_rule__Fixed_pt_type__Group__120910 = new BitSet(new long[]{0x0004008C00000FF0L});
-        public static final BitSet FOLLOW_rule__Fixed_pt_type__Group__2_in_rule__Fixed_pt_type__Group__120913 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_71_in_rule__Fixed_pt_type__Group__1__Impl20941 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Fixed_pt_type__Group__2__Impl_in_rule__Fixed_pt_type__Group__220972 = new BitSet(new long[]{0x0002000000000000L});
-        public static final BitSet FOLLOW_rule__Fixed_pt_type__Group__3_in_rule__Fixed_pt_type__Group__220975 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Fixed_pt_type__DigitsAssignment_2_in_rule__Fixed_pt_type__Group__2__Impl21002 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Fixed_pt_type__Group__3__Impl_in_rule__Fixed_pt_type__Group__321032 = new BitSet(new long[]{0x0004008C00000FF0L});
-        public static final BitSet FOLLOW_rule__Fixed_pt_type__Group__4_in_rule__Fixed_pt_type__Group__321035 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_49_in_rule__Fixed_pt_type__Group__3__Impl21063 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Fixed_pt_type__Group__4__Impl_in_rule__Fixed_pt_type__Group__421094 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000100L});
-        public static final BitSet FOLLOW_rule__Fixed_pt_type__Group__5_in_rule__Fixed_pt_type__Group__421097 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Fixed_pt_type__ScaleAssignment_4_in_rule__Fixed_pt_type__Group__4__Impl21124 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Fixed_pt_type__Group__5__Impl_in_rule__Fixed_pt_type__Group__521154 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_72_in_rule__Fixed_pt_type__Group__5__Impl21182 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Longdouble_type__Group__0__Impl_in_rule__Longdouble_type__Group__021225 = new BitSet(new long[]{0x0000000000020000L});
-        public static final BitSet FOLLOW_rule__Longdouble_type__Group__1_in_rule__Longdouble_type__Group__021228 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_19_in_rule__Longdouble_type__Group__0__Impl21256 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Longdouble_type__Group__1__Impl_in_rule__Longdouble_type__Group__121287 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_17_in_rule__Longdouble_type__Group__1__Impl21315 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Longlong_type__Group__0__Impl_in_rule__Longlong_type__Group__021350 = new BitSet(new long[]{0x0000000000080000L});
-        public static final BitSet FOLLOW_rule__Longlong_type__Group__1_in_rule__Longlong_type__Group__021353 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_19_in_rule__Longlong_type__Group__0__Impl21381 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Longlong_type__Group__1__Impl_in_rule__Longlong_type__Group__121412 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_19_in_rule__Longlong_type__Group__1__Impl21440 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Ushort_type__Group__0__Impl_in_rule__Ushort_type__Group__021475 = new BitSet(new long[]{0x0000000000040000L});
-        public static final BitSet FOLLOW_rule__Ushort_type__Group__1_in_rule__Ushort_type__Group__021478 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_74_in_rule__Ushort_type__Group__0__Impl21506 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Ushort_type__Group__1__Impl_in_rule__Ushort_type__Group__121537 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_18_in_rule__Ushort_type__Group__1__Impl21565 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Ulong_type__Group__0__Impl_in_rule__Ulong_type__Group__021600 = new BitSet(new long[]{0x0000000000080000L});
-        public static final BitSet FOLLOW_rule__Ulong_type__Group__1_in_rule__Ulong_type__Group__021603 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_74_in_rule__Ulong_type__Group__0__Impl21631 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Ulong_type__Group__1__Impl_in_rule__Ulong_type__Group__121662 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_19_in_rule__Ulong_type__Group__1__Impl21690 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Ulonglong_type__Group__0__Impl_in_rule__Ulonglong_type__Group__021725 = new BitSet(new long[]{0x0000000000080000L});
-        public static final BitSet FOLLOW_rule__Ulonglong_type__Group__1_in_rule__Ulonglong_type__Group__021728 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_74_in_rule__Ulonglong_type__Group__0__Impl21756 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Ulonglong_type__Group__1__Impl_in_rule__Ulonglong_type__Group__121787 = new BitSet(new long[]{0x0000000000080000L});
-        public static final BitSet FOLLOW_rule__Ulonglong_type__Group__2_in_rule__Ulonglong_type__Group__121790 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_19_in_rule__Ulonglong_type__Group__1__Impl21818 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Ulonglong_type__Group__2__Impl_in_rule__Ulonglong_type__Group__221849 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_19_in_rule__Ulonglong_type__Group__2__Impl21877 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Fixed_pt_const_type__Group__0__Impl_in_rule__Fixed_pt_const_type__Group__021914 = new BitSet(new long[]{0x0000000007FF0000L,0x0000000000000600L});
-        public static final BitSet FOLLOW_rule__Fixed_pt_const_type__Group__1_in_rule__Fixed_pt_const_type__Group__021917 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Fixed_pt_const_type__Group__1__Impl_in_rule__Fixed_pt_const_type__Group__121975 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_73_in_rule__Fixed_pt_const_type__Group__1__Impl22003 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Or_expr__Group__0__Impl_in_rule__Or_expr__Group__022038 = new BitSet(new long[]{0x0000000000000000L,0x0000000000002000L});
-        public static final BitSet FOLLOW_rule__Or_expr__Group__1_in_rule__Or_expr__Group__022041 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rulexor_expr_in_rule__Or_expr__Group__0__Impl22068 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Or_expr__Group__1__Impl_in_rule__Or_expr__Group__122097 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Or_expr__Group_1__0_in_rule__Or_expr__Group__1__Impl22124 = new BitSet(new long[]{0x0000000000000002L,0x0000000000002000L});
-        public static final BitSet FOLLOW_rule__Or_expr__Group_1__0__Impl_in_rule__Or_expr__Group_1__022159 = new BitSet(new long[]{0x0000000000000000L,0x0000000000002000L});
-        public static final BitSet FOLLOW_rule__Or_expr__Group_1__1_in_rule__Or_expr__Group_1__022162 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Or_expr__Group_1__1__Impl_in_rule__Or_expr__Group_1__122220 = new BitSet(new long[]{0x0004008C00000FF0L});
-        public static final BitSet FOLLOW_rule__Or_expr__Group_1__2_in_rule__Or_expr__Group_1__122223 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Or_expr__OperatorAssignment_1_1_in_rule__Or_expr__Group_1__1__Impl22250 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Or_expr__Group_1__2__Impl_in_rule__Or_expr__Group_1__222280 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Or_expr__RightAssignment_1_2_in_rule__Or_expr__Group_1__2__Impl22307 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Xor_expr__Group__0__Impl_in_rule__Xor_expr__Group__022343 = new BitSet(new long[]{0x0000000000000000L,0x0000000000004000L});
-        public static final BitSet FOLLOW_rule__Xor_expr__Group__1_in_rule__Xor_expr__Group__022346 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleand_expr_in_rule__Xor_expr__Group__0__Impl22373 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Xor_expr__Group__1__Impl_in_rule__Xor_expr__Group__122402 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Xor_expr__Group_1__0_in_rule__Xor_expr__Group__1__Impl22429 = new BitSet(new long[]{0x0000000000000002L,0x0000000000004000L});
-        public static final BitSet FOLLOW_rule__Xor_expr__Group_1__0__Impl_in_rule__Xor_expr__Group_1__022464 = new BitSet(new long[]{0x0000000000000000L,0x0000000000004000L});
-        public static final BitSet FOLLOW_rule__Xor_expr__Group_1__1_in_rule__Xor_expr__Group_1__022467 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Xor_expr__Group_1__1__Impl_in_rule__Xor_expr__Group_1__122525 = new BitSet(new long[]{0x0004008C00000FF0L});
-        public static final BitSet FOLLOW_rule__Xor_expr__Group_1__2_in_rule__Xor_expr__Group_1__122528 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Xor_expr__OperatorAssignment_1_1_in_rule__Xor_expr__Group_1__1__Impl22555 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Xor_expr__Group_1__2__Impl_in_rule__Xor_expr__Group_1__222585 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Xor_expr__RightAssignment_1_2_in_rule__Xor_expr__Group_1__2__Impl22612 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__And_expr__Group__0__Impl_in_rule__And_expr__Group__022648 = new BitSet(new long[]{0x0000000000000000L,0x0000000000008000L});
-        public static final BitSet FOLLOW_rule__And_expr__Group__1_in_rule__And_expr__Group__022651 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleshift_expr_in_rule__And_expr__Group__0__Impl22678 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__And_expr__Group__1__Impl_in_rule__And_expr__Group__122707 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__And_expr__Group_1__0_in_rule__And_expr__Group__1__Impl22734 = new BitSet(new long[]{0x0000000000000002L,0x0000000000008000L});
-        public static final BitSet FOLLOW_rule__And_expr__Group_1__0__Impl_in_rule__And_expr__Group_1__022769 = new BitSet(new long[]{0x0000000000000000L,0x0000000000008000L});
-        public static final BitSet FOLLOW_rule__And_expr__Group_1__1_in_rule__And_expr__Group_1__022772 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__And_expr__Group_1__1__Impl_in_rule__And_expr__Group_1__122830 = new BitSet(new long[]{0x0004008C00000FF0L});
-        public static final BitSet FOLLOW_rule__And_expr__Group_1__2_in_rule__And_expr__Group_1__122833 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__And_expr__OperatorAssignment_1_1_in_rule__And_expr__Group_1__1__Impl22860 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__And_expr__Group_1__2__Impl_in_rule__And_expr__Group_1__222890 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__And_expr__RightAssignment_1_2_in_rule__And_expr__Group_1__2__Impl22917 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Shift_expr__Group__0__Impl_in_rule__Shift_expr__Group__022953 = new BitSet(new long[]{0x0000000300000000L});
-        public static final BitSet FOLLOW_rule__Shift_expr__Group__1_in_rule__Shift_expr__Group__022956 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleadd_expr_in_rule__Shift_expr__Group__0__Impl22983 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Shift_expr__Group__1__Impl_in_rule__Shift_expr__Group__123012 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Shift_expr__Group_1__0_in_rule__Shift_expr__Group__1__Impl23039 = new BitSet(new long[]{0x0000000300000002L});
+        public static final BitSet FOLLOW_rule__Case_stmt__IsDefaultAssignment_0_0_1_0_in_rule__Case_stmt__Group_0_0_1__0__Impl18184 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Case_stmt__Group_0_0_1__1__Impl_in_rule__Case_stmt__Group_0_0_1__118214 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_48_in_rule__Case_stmt__Group_0_0_1__1__Impl18242 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Case_stmt__Group_1__0__Impl_in_rule__Case_stmt__Group_1__018277 = new BitSet(new long[]{0x000000000FFF0800L,0x0000000000000320L});
+        public static final BitSet FOLLOW_rule__Case_stmt__Group_1__1_in_rule__Case_stmt__Group_1__018280 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Case_stmt__Alternatives_1_0_in_rule__Case_stmt__Group_1__0__Impl18309 = new BitSet(new long[]{0x0000000000000002L,0x0000000000001002L});
+        public static final BitSet FOLLOW_rule__Case_stmt__Alternatives_1_0_in_rule__Case_stmt__Group_1__0__Impl18321 = new BitSet(new long[]{0x0000000000000002L,0x0000000000001002L});
+        public static final BitSet FOLLOW_rule__Case_stmt__Group_1__1__Impl_in_rule__Case_stmt__Group_1__118354 = new BitSet(new long[]{0x0000000000000800L});
+        public static final BitSet FOLLOW_rule__Case_stmt__Group_1__2_in_rule__Case_stmt__Group_1__118357 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Case_stmt__Alternatives_1_1_in_rule__Case_stmt__Group_1__1__Impl18384 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Case_stmt__Group_1__2__Impl_in_rule__Case_stmt__Group_1__218414 = new BitSet(new long[]{0x0000000020000000L});
+        public static final BitSet FOLLOW_rule__Case_stmt__Group_1__3_in_rule__Case_stmt__Group_1__218417 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Case_stmt__IdentifierAssignment_1_2_in_rule__Case_stmt__Group_1__2__Impl18444 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Case_stmt__Group_1__3__Impl_in_rule__Case_stmt__Group_1__318474 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_29_in_rule__Case_stmt__Group_1__3__Impl18502 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Case_stmt__Group_1_0_0__0__Impl_in_rule__Case_stmt__Group_1_0_0__018541 = new BitSet(new long[]{0x0004008C00000FF0L});
+        public static final BitSet FOLLOW_rule__Case_stmt__Group_1_0_0__1_in_rule__Case_stmt__Group_1_0_0__018544 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_65_in_rule__Case_stmt__Group_1_0_0__0__Impl18572 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Case_stmt__Group_1_0_0__1__Impl_in_rule__Case_stmt__Group_1_0_0__118603 = new BitSet(new long[]{0x0001000000000000L});
+        public static final BitSet FOLLOW_rule__Case_stmt__Group_1_0_0__2_in_rule__Case_stmt__Group_1_0_0__118606 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Case_stmt__LabelAssignment_1_0_0_1_in_rule__Case_stmt__Group_1_0_0__1__Impl18633 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Case_stmt__Group_1_0_0__2__Impl_in_rule__Case_stmt__Group_1_0_0__218663 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_48_in_rule__Case_stmt__Group_1_0_0__2__Impl18691 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Case_stmt__Group_1_0_1__0__Impl_in_rule__Case_stmt__Group_1_0_1__018728 = new BitSet(new long[]{0x0001000000000000L});
+        public static final BitSet FOLLOW_rule__Case_stmt__Group_1_0_1__1_in_rule__Case_stmt__Group_1_0_1__018731 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Case_stmt__IsDefaultAssignment_1_0_1_0_in_rule__Case_stmt__Group_1_0_1__0__Impl18758 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Case_stmt__Group_1_0_1__1__Impl_in_rule__Case_stmt__Group_1_0_1__118788 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_48_in_rule__Case_stmt__Group_1_0_1__1__Impl18816 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Enum_type__Group__0__Impl_in_rule__Enum_type__Group__018851 = new BitSet(new long[]{0x0000000000000800L});
+        public static final BitSet FOLLOW_rule__Enum_type__Group__1_in_rule__Enum_type__Group__018854 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_66_in_rule__Enum_type__Group__0__Impl18882 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Enum_type__Group__1__Impl_in_rule__Enum_type__Group__118913 = new BitSet(new long[]{0x0000200000000000L});
+        public static final BitSet FOLLOW_rule__Enum_type__Group__2_in_rule__Enum_type__Group__118916 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Enum_type__IdentifierAssignment_1_in_rule__Enum_type__Group__1__Impl18943 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Enum_type__Group__2__Impl_in_rule__Enum_type__Group__218973 = new BitSet(new long[]{0x0000000000000800L});
+        public static final BitSet FOLLOW_rule__Enum_type__Group__3_in_rule__Enum_type__Group__218976 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_45_in_rule__Enum_type__Group__2__Impl19004 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Enum_type__Group__3__Impl_in_rule__Enum_type__Group__319035 = new BitSet(new long[]{0x0002400000000000L});
+        public static final BitSet FOLLOW_rule__Enum_type__Group__4_in_rule__Enum_type__Group__319038 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Enum_type__MembersAssignment_3_in_rule__Enum_type__Group__3__Impl19065 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Enum_type__Group__4__Impl_in_rule__Enum_type__Group__419095 = new BitSet(new long[]{0x0002400000000000L});
+        public static final BitSet FOLLOW_rule__Enum_type__Group__5_in_rule__Enum_type__Group__419098 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Enum_type__Group_4__0_in_rule__Enum_type__Group__4__Impl19125 = new BitSet(new long[]{0x0002000000000002L});
+        public static final BitSet FOLLOW_rule__Enum_type__Group__5__Impl_in_rule__Enum_type__Group__519156 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_46_in_rule__Enum_type__Group__5__Impl19184 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Enum_type__Group_4__0__Impl_in_rule__Enum_type__Group_4__019227 = new BitSet(new long[]{0x0000000000000800L});
+        public static final BitSet FOLLOW_rule__Enum_type__Group_4__1_in_rule__Enum_type__Group_4__019230 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_49_in_rule__Enum_type__Group_4__0__Impl19258 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Enum_type__Group_4__1__Impl_in_rule__Enum_type__Group_4__119289 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Enum_type__MembersAssignment_4_1_in_rule__Enum_type__Group_4__1__Impl19316 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Constr_forward_decl__Group_0__0__Impl_in_rule__Constr_forward_decl__Group_0__019350 = new BitSet(new long[]{0x0000000000000800L});
+        public static final BitSet FOLLOW_rule__Constr_forward_decl__Group_0__1_in_rule__Constr_forward_decl__Group_0__019353 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_62_in_rule__Constr_forward_decl__Group_0__0__Impl19381 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Constr_forward_decl__Group_0__1__Impl_in_rule__Constr_forward_decl__Group_0__119412 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__Constr_forward_decl__Group_0__1__Impl19439 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Constr_forward_decl__Group_1__0__Impl_in_rule__Constr_forward_decl__Group_1__019472 = new BitSet(new long[]{0x0000000000000800L});
+        public static final BitSet FOLLOW_rule__Constr_forward_decl__Group_1__1_in_rule__Constr_forward_decl__Group_1__019475 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_63_in_rule__Constr_forward_decl__Group_1__0__Impl19503 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Constr_forward_decl__Group_1__1__Impl_in_rule__Constr_forward_decl__Group_1__119534 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__Constr_forward_decl__Group_1__1__Impl19561 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Const_decl__Group__0__Impl_in_rule__Const_decl__Group__019594 = new BitSet(new long[]{0x0000000007FF0800L,0x0000000000000300L});
+        public static final BitSet FOLLOW_rule__Const_decl__Group__1_in_rule__Const_decl__Group__019597 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_67_in_rule__Const_decl__Group__0__Impl19625 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Const_decl__Group__1__Impl_in_rule__Const_decl__Group__119656 = new BitSet(new long[]{0x0000000000000800L});
+        public static final BitSet FOLLOW_rule__Const_decl__Group__2_in_rule__Const_decl__Group__119659 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Const_decl__Alternatives_1_in_rule__Const_decl__Group__1__Impl19686 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Const_decl__Group__2__Impl_in_rule__Const_decl__Group__219716 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000010L});
+        public static final BitSet FOLLOW_rule__Const_decl__Group__3_in_rule__Const_decl__Group__219719 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Const_decl__IdentifierAssignment_2_in_rule__Const_decl__Group__2__Impl19746 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Const_decl__Group__3__Impl_in_rule__Const_decl__Group__319776 = new BitSet(new long[]{0x0004008C00000FF0L});
+        public static final BitSet FOLLOW_rule__Const_decl__Group__4_in_rule__Const_decl__Group__319779 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_68_in_rule__Const_decl__Group__3__Impl19807 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Const_decl__Group__4__Impl_in_rule__Const_decl__Group__419838 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Const_decl__ConstValueAssignment_4_in_rule__Const_decl__Group__4__Impl19865 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Sequence_type__Group__0__Impl_in_rule__Sequence_type__Group__019905 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000040L});
+        public static final BitSet FOLLOW_rule__Sequence_type__Group__1_in_rule__Sequence_type__Group__019908 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_69_in_rule__Sequence_type__Group__0__Impl19936 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Sequence_type__Group__1__Impl_in_rule__Sequence_type__Group__119967 = new BitSet(new long[]{0x000000000FFF0800L,0x0000000000000320L});
+        public static final BitSet FOLLOW_rule__Sequence_type__Group__2_in_rule__Sequence_type__Group__119970 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_70_in_rule__Sequence_type__Group__1__Impl19998 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Sequence_type__Group__2__Impl_in_rule__Sequence_type__Group__220029 = new BitSet(new long[]{0x0002000000000000L,0x0000000000000080L});
+        public static final BitSet FOLLOW_rule__Sequence_type__Group__3_in_rule__Sequence_type__Group__220032 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Sequence_type__Alternatives_2_in_rule__Sequence_type__Group__2__Impl20059 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Sequence_type__Group__3__Impl_in_rule__Sequence_type__Group__320089 = new BitSet(new long[]{0x0002000000000000L,0x0000000000000080L});
+        public static final BitSet FOLLOW_rule__Sequence_type__Group__4_in_rule__Sequence_type__Group__320092 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Sequence_type__Group_3__0_in_rule__Sequence_type__Group__3__Impl20119 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Sequence_type__Group__4__Impl_in_rule__Sequence_type__Group__420150 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_71_in_rule__Sequence_type__Group__4__Impl20178 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Sequence_type__Group_3__0__Impl_in_rule__Sequence_type__Group_3__020219 = new BitSet(new long[]{0x0004008C00000FF0L});
+        public static final BitSet FOLLOW_rule__Sequence_type__Group_3__1_in_rule__Sequence_type__Group_3__020222 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_49_in_rule__Sequence_type__Group_3__0__Impl20250 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Sequence_type__Group_3__1__Impl_in_rule__Sequence_type__Group_3__120281 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Sequence_type__BoundAssignment_3_1_in_rule__Sequence_type__Group_3__1__Impl20308 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Stringdef_type__Group__0__Impl_in_rule__Stringdef_type__Group__020342 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000040L});
+        public static final BitSet FOLLOW_rule__Stringdef_type__Group__1_in_rule__Stringdef_type__Group__020345 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_22_in_rule__Stringdef_type__Group__0__Impl20373 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Stringdef_type__Group__1__Impl_in_rule__Stringdef_type__Group__120404 = new BitSet(new long[]{0x0004008C00000FF0L});
+        public static final BitSet FOLLOW_rule__Stringdef_type__Group__2_in_rule__Stringdef_type__Group__120407 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_70_in_rule__Stringdef_type__Group__1__Impl20435 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Stringdef_type__Group__2__Impl_in_rule__Stringdef_type__Group__220466 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000080L});
+        public static final BitSet FOLLOW_rule__Stringdef_type__Group__3_in_rule__Stringdef_type__Group__220469 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Stringdef_type__BoundAssignment_2_in_rule__Stringdef_type__Group__2__Impl20496 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Stringdef_type__Group__3__Impl_in_rule__Stringdef_type__Group__320526 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_71_in_rule__Stringdef_type__Group__3__Impl20554 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Wide_stringdef_type__Group__0__Impl_in_rule__Wide_stringdef_type__Group__020593 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000040L});
+        public static final BitSet FOLLOW_rule__Wide_stringdef_type__Group__1_in_rule__Wide_stringdef_type__Group__020596 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_23_in_rule__Wide_stringdef_type__Group__0__Impl20624 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Wide_stringdef_type__Group__1__Impl_in_rule__Wide_stringdef_type__Group__120655 = new BitSet(new long[]{0x0004008C00000FF0L});
+        public static final BitSet FOLLOW_rule__Wide_stringdef_type__Group__2_in_rule__Wide_stringdef_type__Group__120658 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_70_in_rule__Wide_stringdef_type__Group__1__Impl20686 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Wide_stringdef_type__Group__2__Impl_in_rule__Wide_stringdef_type__Group__220717 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000080L});
+        public static final BitSet FOLLOW_rule__Wide_stringdef_type__Group__3_in_rule__Wide_stringdef_type__Group__220720 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Wide_stringdef_type__BoundAssignment_2_in_rule__Wide_stringdef_type__Group__2__Impl20747 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Wide_stringdef_type__Group__3__Impl_in_rule__Wide_stringdef_type__Group__320777 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_71_in_rule__Wide_stringdef_type__Group__3__Impl20805 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Fixed_pt_type__Group__0__Impl_in_rule__Fixed_pt_type__Group__020844 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000040L});
+        public static final BitSet FOLLOW_rule__Fixed_pt_type__Group__1_in_rule__Fixed_pt_type__Group__020847 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_72_in_rule__Fixed_pt_type__Group__0__Impl20875 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Fixed_pt_type__Group__1__Impl_in_rule__Fixed_pt_type__Group__120906 = new BitSet(new long[]{0x0004008C00000FF0L});
+        public static final BitSet FOLLOW_rule__Fixed_pt_type__Group__2_in_rule__Fixed_pt_type__Group__120909 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_70_in_rule__Fixed_pt_type__Group__1__Impl20937 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Fixed_pt_type__Group__2__Impl_in_rule__Fixed_pt_type__Group__220968 = new BitSet(new long[]{0x0002000000000000L});
+        public static final BitSet FOLLOW_rule__Fixed_pt_type__Group__3_in_rule__Fixed_pt_type__Group__220971 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Fixed_pt_type__DigitsAssignment_2_in_rule__Fixed_pt_type__Group__2__Impl20998 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Fixed_pt_type__Group__3__Impl_in_rule__Fixed_pt_type__Group__321028 = new BitSet(new long[]{0x0004008C00000FF0L});
+        public static final BitSet FOLLOW_rule__Fixed_pt_type__Group__4_in_rule__Fixed_pt_type__Group__321031 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_49_in_rule__Fixed_pt_type__Group__3__Impl21059 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Fixed_pt_type__Group__4__Impl_in_rule__Fixed_pt_type__Group__421090 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000080L});
+        public static final BitSet FOLLOW_rule__Fixed_pt_type__Group__5_in_rule__Fixed_pt_type__Group__421093 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Fixed_pt_type__ScaleAssignment_4_in_rule__Fixed_pt_type__Group__4__Impl21120 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Fixed_pt_type__Group__5__Impl_in_rule__Fixed_pt_type__Group__521150 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_71_in_rule__Fixed_pt_type__Group__5__Impl21178 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Longdouble_type__Group__0__Impl_in_rule__Longdouble_type__Group__021221 = new BitSet(new long[]{0x0000000000020000L});
+        public static final BitSet FOLLOW_rule__Longdouble_type__Group__1_in_rule__Longdouble_type__Group__021224 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_19_in_rule__Longdouble_type__Group__0__Impl21252 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Longdouble_type__Group__1__Impl_in_rule__Longdouble_type__Group__121283 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_17_in_rule__Longdouble_type__Group__1__Impl21311 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Longlong_type__Group__0__Impl_in_rule__Longlong_type__Group__021346 = new BitSet(new long[]{0x0000000000080000L});
+        public static final BitSet FOLLOW_rule__Longlong_type__Group__1_in_rule__Longlong_type__Group__021349 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_19_in_rule__Longlong_type__Group__0__Impl21377 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Longlong_type__Group__1__Impl_in_rule__Longlong_type__Group__121408 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_19_in_rule__Longlong_type__Group__1__Impl21436 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Ushort_type__Group__0__Impl_in_rule__Ushort_type__Group__021471 = new BitSet(new long[]{0x0000000000040000L});
+        public static final BitSet FOLLOW_rule__Ushort_type__Group__1_in_rule__Ushort_type__Group__021474 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_73_in_rule__Ushort_type__Group__0__Impl21502 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Ushort_type__Group__1__Impl_in_rule__Ushort_type__Group__121533 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_18_in_rule__Ushort_type__Group__1__Impl21561 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Ulong_type__Group__0__Impl_in_rule__Ulong_type__Group__021596 = new BitSet(new long[]{0x0000000000080000L});
+        public static final BitSet FOLLOW_rule__Ulong_type__Group__1_in_rule__Ulong_type__Group__021599 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_73_in_rule__Ulong_type__Group__0__Impl21627 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Ulong_type__Group__1__Impl_in_rule__Ulong_type__Group__121658 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_19_in_rule__Ulong_type__Group__1__Impl21686 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Ulonglong_type__Group__0__Impl_in_rule__Ulonglong_type__Group__021721 = new BitSet(new long[]{0x0000000000080000L});
+        public static final BitSet FOLLOW_rule__Ulonglong_type__Group__1_in_rule__Ulonglong_type__Group__021724 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_73_in_rule__Ulonglong_type__Group__0__Impl21752 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Ulonglong_type__Group__1__Impl_in_rule__Ulonglong_type__Group__121783 = new BitSet(new long[]{0x0000000000080000L});
+        public static final BitSet FOLLOW_rule__Ulonglong_type__Group__2_in_rule__Ulonglong_type__Group__121786 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_19_in_rule__Ulonglong_type__Group__1__Impl21814 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Ulonglong_type__Group__2__Impl_in_rule__Ulonglong_type__Group__221845 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_19_in_rule__Ulonglong_type__Group__2__Impl21873 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Fixed_pt_const_type__Group__0__Impl_in_rule__Fixed_pt_const_type__Group__021910 = new BitSet(new long[]{0x0000000007FF0000L,0x0000000000000300L});
+        public static final BitSet FOLLOW_rule__Fixed_pt_const_type__Group__1_in_rule__Fixed_pt_const_type__Group__021913 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Fixed_pt_const_type__Group__1__Impl_in_rule__Fixed_pt_const_type__Group__121971 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_72_in_rule__Fixed_pt_const_type__Group__1__Impl21999 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Or_expr__Group__0__Impl_in_rule__Or_expr__Group__022034 = new BitSet(new long[]{0x0000000000000000L,0x0000000000002000L});
+        public static final BitSet FOLLOW_rule__Or_expr__Group__1_in_rule__Or_expr__Group__022037 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rulexor_expr_in_rule__Or_expr__Group__0__Impl22064 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Or_expr__Group__1__Impl_in_rule__Or_expr__Group__122093 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Or_expr__Group_1__0_in_rule__Or_expr__Group__1__Impl22120 = new BitSet(new long[]{0x0000000000000002L,0x0000000000002000L});
+        public static final BitSet FOLLOW_rule__Or_expr__Group_1__0__Impl_in_rule__Or_expr__Group_1__022155 = new BitSet(new long[]{0x0000000000000000L,0x0000000000002000L});
+        public static final BitSet FOLLOW_rule__Or_expr__Group_1__1_in_rule__Or_expr__Group_1__022158 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Or_expr__Group_1__1__Impl_in_rule__Or_expr__Group_1__122216 = new BitSet(new long[]{0x0004008C00000FF0L});
+        public static final BitSet FOLLOW_rule__Or_expr__Group_1__2_in_rule__Or_expr__Group_1__122219 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Or_expr__OperatorAssignment_1_1_in_rule__Or_expr__Group_1__1__Impl22246 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Or_expr__Group_1__2__Impl_in_rule__Or_expr__Group_1__222276 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Or_expr__RightAssignment_1_2_in_rule__Or_expr__Group_1__2__Impl22303 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Xor_expr__Group__0__Impl_in_rule__Xor_expr__Group__022339 = new BitSet(new long[]{0x0000000000000000L,0x0000000000004000L});
+        public static final BitSet FOLLOW_rule__Xor_expr__Group__1_in_rule__Xor_expr__Group__022342 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleand_expr_in_rule__Xor_expr__Group__0__Impl22369 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Xor_expr__Group__1__Impl_in_rule__Xor_expr__Group__122398 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Xor_expr__Group_1__0_in_rule__Xor_expr__Group__1__Impl22425 = new BitSet(new long[]{0x0000000000000002L,0x0000000000004000L});
+        public static final BitSet FOLLOW_rule__Xor_expr__Group_1__0__Impl_in_rule__Xor_expr__Group_1__022460 = new BitSet(new long[]{0x0000000000000000L,0x0000000000004000L});
+        public static final BitSet FOLLOW_rule__Xor_expr__Group_1__1_in_rule__Xor_expr__Group_1__022463 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Xor_expr__Group_1__1__Impl_in_rule__Xor_expr__Group_1__122521 = new BitSet(new long[]{0x0004008C00000FF0L});
+        public static final BitSet FOLLOW_rule__Xor_expr__Group_1__2_in_rule__Xor_expr__Group_1__122524 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Xor_expr__OperatorAssignment_1_1_in_rule__Xor_expr__Group_1__1__Impl22551 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Xor_expr__Group_1__2__Impl_in_rule__Xor_expr__Group_1__222581 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Xor_expr__RightAssignment_1_2_in_rule__Xor_expr__Group_1__2__Impl22608 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__And_expr__Group__0__Impl_in_rule__And_expr__Group__022644 = new BitSet(new long[]{0x0000000000000000L,0x0000000000008000L});
+        public static final BitSet FOLLOW_rule__And_expr__Group__1_in_rule__And_expr__Group__022647 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleshift_expr_in_rule__And_expr__Group__0__Impl22674 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__And_expr__Group__1__Impl_in_rule__And_expr__Group__122703 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__And_expr__Group_1__0_in_rule__And_expr__Group__1__Impl22730 = new BitSet(new long[]{0x0000000000000002L,0x0000000000008000L});
+        public static final BitSet FOLLOW_rule__And_expr__Group_1__0__Impl_in_rule__And_expr__Group_1__022765 = new BitSet(new long[]{0x0000000000000000L,0x0000000000008000L});
+        public static final BitSet FOLLOW_rule__And_expr__Group_1__1_in_rule__And_expr__Group_1__022768 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__And_expr__Group_1__1__Impl_in_rule__And_expr__Group_1__122826 = new BitSet(new long[]{0x0004008C00000FF0L});
+        public static final BitSet FOLLOW_rule__And_expr__Group_1__2_in_rule__And_expr__Group_1__122829 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__And_expr__OperatorAssignment_1_1_in_rule__And_expr__Group_1__1__Impl22856 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__And_expr__Group_1__2__Impl_in_rule__And_expr__Group_1__222886 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__And_expr__RightAssignment_1_2_in_rule__And_expr__Group_1__2__Impl22913 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Shift_expr__Group__0__Impl_in_rule__Shift_expr__Group__022949 = new BitSet(new long[]{0x0000000300000000L});
+        public static final BitSet FOLLOW_rule__Shift_expr__Group__1_in_rule__Shift_expr__Group__022952 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleadd_expr_in_rule__Shift_expr__Group__0__Impl22979 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Shift_expr__Group__1__Impl_in_rule__Shift_expr__Group__123008 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Shift_expr__Group_1__0_in_rule__Shift_expr__Group__1__Impl23035 = new BitSet(new long[]{0x0000000300000002L});
     }
 
     private static class FollowSets001 {
-        public static final BitSet FOLLOW_rule__Shift_expr__Group_1__0__Impl_in_rule__Shift_expr__Group_1__023074 = new BitSet(new long[]{0x0000000300000000L});
-        public static final BitSet FOLLOW_rule__Shift_expr__Group_1__1_in_rule__Shift_expr__Group_1__023077 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Shift_expr__Group_1__1__Impl_in_rule__Shift_expr__Group_1__123135 = new BitSet(new long[]{0x0004008C00000FF0L});
-        public static final BitSet FOLLOW_rule__Shift_expr__Group_1__2_in_rule__Shift_expr__Group_1__123138 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Shift_expr__OperatorAssignment_1_1_in_rule__Shift_expr__Group_1__1__Impl23165 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Shift_expr__Group_1__2__Impl_in_rule__Shift_expr__Group_1__223195 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Shift_expr__RightAssignment_1_2_in_rule__Shift_expr__Group_1__2__Impl23222 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Add_expr__Group__0__Impl_in_rule__Add_expr__Group__023258 = new BitSet(new long[]{0x0000000C00000000L});
-        public static final BitSet FOLLOW_rule__Add_expr__Group__1_in_rule__Add_expr__Group__023261 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rulemult_expr_in_rule__Add_expr__Group__0__Impl23288 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Add_expr__Group__1__Impl_in_rule__Add_expr__Group__123317 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Add_expr__Group_1__0_in_rule__Add_expr__Group__1__Impl23344 = new BitSet(new long[]{0x0000000C00000002L});
-        public static final BitSet FOLLOW_rule__Add_expr__Group_1__0__Impl_in_rule__Add_expr__Group_1__023379 = new BitSet(new long[]{0x0000000C00000000L});
-        public static final BitSet FOLLOW_rule__Add_expr__Group_1__1_in_rule__Add_expr__Group_1__023382 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Add_expr__Group_1__1__Impl_in_rule__Add_expr__Group_1__123440 = new BitSet(new long[]{0x0004008C00000FF0L});
-        public static final BitSet FOLLOW_rule__Add_expr__Group_1__2_in_rule__Add_expr__Group_1__123443 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Add_expr__OperatorAssignment_1_1_in_rule__Add_expr__Group_1__1__Impl23470 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Add_expr__Group_1__2__Impl_in_rule__Add_expr__Group_1__223500 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Add_expr__RightAssignment_1_2_in_rule__Add_expr__Group_1__2__Impl23527 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Mult_expr__Group__0__Impl_in_rule__Mult_expr__Group__023563 = new BitSet(new long[]{0x0000007000000000L});
-        public static final BitSet FOLLOW_rule__Mult_expr__Group__1_in_rule__Mult_expr__Group__023566 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleunary_expr_in_rule__Mult_expr__Group__0__Impl23593 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Mult_expr__Group__1__Impl_in_rule__Mult_expr__Group__123622 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Mult_expr__Group_1__0_in_rule__Mult_expr__Group__1__Impl23649 = new BitSet(new long[]{0x0000007000000002L});
-        public static final BitSet FOLLOW_rule__Mult_expr__Group_1__0__Impl_in_rule__Mult_expr__Group_1__023684 = new BitSet(new long[]{0x0000007000000000L});
-        public static final BitSet FOLLOW_rule__Mult_expr__Group_1__1_in_rule__Mult_expr__Group_1__023687 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Mult_expr__Group_1__1__Impl_in_rule__Mult_expr__Group_1__123745 = new BitSet(new long[]{0x0004008C00000FF0L});
-        public static final BitSet FOLLOW_rule__Mult_expr__Group_1__2_in_rule__Mult_expr__Group_1__123748 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Mult_expr__OperatorAssignment_1_1_in_rule__Mult_expr__Group_1__1__Impl23775 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Mult_expr__Group_1__2__Impl_in_rule__Mult_expr__Group_1__223805 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Mult_expr__RightAssignment_1_2_in_rule__Mult_expr__Group_1__2__Impl23832 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Unary_expr__Group_0__0__Impl_in_rule__Unary_expr__Group_0__023868 = new BitSet(new long[]{0x0000008C00000000L});
-        public static final BitSet FOLLOW_rule__Unary_expr__Group_0__1_in_rule__Unary_expr__Group_0__023871 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Unary_expr__Group_0__1__Impl_in_rule__Unary_expr__Group_0__123929 = new BitSet(new long[]{0x0004008C00000FF0L});
-        public static final BitSet FOLLOW_rule__Unary_expr__Group_0__2_in_rule__Unary_expr__Group_0__123932 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Unary_expr__OperatorAssignment_0_1_in_rule__Unary_expr__Group_0__1__Impl23959 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Unary_expr__Group_0__2__Impl_in_rule__Unary_expr__Group_0__223989 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Unary_expr__ExpressionAssignment_0_2_in_rule__Unary_expr__Group_0__2__Impl24016 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Primary_expr__Group_2__0__Impl_in_rule__Primary_expr__Group_2__024052 = new BitSet(new long[]{0x0004008C00000FF0L});
-        public static final BitSet FOLLOW_rule__Primary_expr__Group_2__1_in_rule__Primary_expr__Group_2__024055 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_50_in_rule__Primary_expr__Group_2__0__Impl24083 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Primary_expr__Group_2__1__Impl_in_rule__Primary_expr__Group_2__124114 = new BitSet(new long[]{0x0008000000000000L});
-        public static final BitSet FOLLOW_rule__Primary_expr__Group_2__2_in_rule__Primary_expr__Group_2__124117 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleconst_exp_in_rule__Primary_expr__Group_2__1__Impl24144 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Primary_expr__Group_2__2__Impl_in_rule__Primary_expr__Group_2__224173 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_51_in_rule__Primary_expr__Group_2__2__Impl24201 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleinclude_decl_in_rule__Specification__IncludesAssignment_124243 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruledefinition_in_rule__Specification__ContainsAssignment_224274 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_STRING_in_rule__Include_decl__ImportURIAssignment_124305 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__Module__IdentifierAssignment_124336 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruledefinition_in_rule__Module__ContainsAssignment_3_024367 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_30_in_rule__Interface_decl__IsAbstractAssignment_0_024403 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_31_in_rule__Interface_decl__IsCustomAssignment_0_124447 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__Interface_decl__IdentifierAssignment_224486 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__Interface_decl__DerivesFromAssignment_3_124521 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__Interface_decl__DerivesFromAssignment_3_2_124560 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleexport_in_rule__Interface_decl__ContainsAssignment_5_024595 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__Interface_fwd__IdentifierAssignment_224626 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_75_in_rule__Op_decl__IsOnewayAssignment_024662 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleop_type_spec_in_rule__Op_decl__ContainedTypeAssignment_1_024701 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__Op_decl__SharedTypeAssignment_1_124736 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__Op_decl__IdentifierAssignment_224771 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleparam_decl_in_rule__Op_decl__ParametersAssignment_4_024802 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleparam_decl_in_rule__Op_decl__ParametersAssignment_4_1_124833 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__Op_decl__CanRaiseAssignment_6_224868 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__Op_decl__CanRaiseAssignment_6_3_124907 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_STRING_in_rule__Op_decl__ContextsAssignment_7_224942 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_STRING_in_rule__Op_decl__ContextsAssignment_7_3_124973 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rulevoid_type_in_rule__Op_type_spec__KindAssignment_1_125004 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleparam_attribute_in_rule__Param_decl__DirectionAssignment_025035 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rulebase_type_spec_in_rule__Param_decl__ContainedTypeAssignment_1_025066 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__Param_decl__SharedTypeAssignment_1_125101 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__Param_decl__IdentifierAssignment_225136 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_76_in_rule__Readonly_attr_spec__IsReadonlyAssignment_0_025172 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rulebase_type_spec_in_rule__Readonly_attr_spec__ContainedTypeAssignment_0_2_025211 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__Readonly_attr_spec__SharedTypeAssignment_0_2_125246 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__Readonly_attr_spec__IdentifierAssignment_0_325281 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__Readonly_attr_spec__GetRaisesAssignment_0_625316 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__Readonly_attr_spec__GetRaisesAssignment_0_7_125355 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_76_in_rule__Readonly_attr_spec__IsReadonlyAssignment_1_025395 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rulebase_type_spec_in_rule__Readonly_attr_spec__ContainedTypeAssignment_1_2_025434 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__Readonly_attr_spec__SharedTypeAssignment_1_2_125469 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__Readonly_attr_spec__IdentifierAssignment_1_325504 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rulebase_type_spec_in_rule__Attr_spec__ContainedTypeAssignment_0_1_025535 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__Attr_spec__SharedTypeAssignment_0_1_125570 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__Attr_spec__IdentifierAssignment_0_225605 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__Attr_spec__GetRaisesAssignment_0_3_0_225640 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__Attr_spec__GetRaisesAssignment_0_3_0_3_125679 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__Attr_spec__SetRaisesAssignment_0_3_0_5_225718 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__Attr_spec__SetRaisesAssignment_0_3_0_5_3_125757 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__Attr_spec__SetRaisesAssignment_0_3_1_225796 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__Attr_spec__SetRaisesAssignment_0_3_1_3_125835 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rulebase_type_spec_in_rule__Attr_spec__ContainedTypeAssignment_1_1_025870 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__Attr_spec__SharedTypeAssignment_1_1_125905 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__Attr_spec__IdentifierAssignment_1_225940 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__Except_decl__IdentifierAssignment_125971 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rulemember_in_rule__Except_decl__MembersAssignment_326002 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rulearray_type_spec_in_rule__Alias_type__ContainedTypeAssignment_0_126033 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rulesimple_type_spec_in_rule__Alias_type__ContainedTypeAssignment_1_1_026064 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__Alias_type__SharedTypeAssignment_1_1_126099 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__Alias_type__IdentifierAssignment_1_226134 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rulesimple_type_spec_in_rule__Array_type_spec__ContainedTypeAssignment_0_026165 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__Array_type_spec__SharedTypeAssignment_0_126200 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__Array_type_spec__NameAssignment_126235 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleconst_exp_in_rule__Array_type_spec__BoundsAssignment_2_126266 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleobject_type_in_rule__Base_type_spec__KindAssignment_126297 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__Struct_type__IdentifierAssignment_126328 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rulemember_in_rule__Struct_type__MembersAssignment_326359 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rulearray_type_spec_in_rule__Member__ContainedTypeAssignment_0_026390 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rulesimple_type_spec_in_rule__Member__ContainedTypeAssignment_1_026421 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__Member__IdentifierAssignment_1_126452 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rulestruct_type_in_rule__Member__ContainedTypeAssignment_2_026483 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__Member__IdentifierAssignment_2_126514 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__Member__SharedTypeAssignment_3_026549 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__Member__IdentifierAssignment_3_126584 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__Union_type__IdentifierAssignment_126615 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleswitch_type_spec_cont_in_rule__Union_type__ContainedDiscrimAssignment_4_026646 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__Union_type__SharedDiscrimAssignment_4_126681 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rulecase_stmt_in_rule__Union_type__UnionMembersAssignment_726716 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rulechar_type_in_rule__Switch_type_spec_cont__KindAssignment_1_126747 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleboolean_type_in_rule__Switch_type_spec_cont__KindAssignment_2_126778 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleconst_exp_in_rule__Case_stmt__LabelAssignment_0_0_0_126809 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rulearray_type_spec_in_rule__Case_stmt__ContainedTypeAssignment_0_126840 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleconst_exp_in_rule__Case_stmt__LabelAssignment_1_0_0_126871 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rulesimple_type_spec_in_rule__Case_stmt__ContainedTypeAssignment_1_1_026902 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__Case_stmt__SharedTypeAssignment_1_1_126937 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__Case_stmt__IdentifierAssignment_1_226972 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__Enum_type__IdentifierAssignment_127003 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleenum_member_in_rule__Enum_type__MembersAssignment_327034 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleenum_member_in_rule__Enum_type__MembersAssignment_4_127065 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__Enum_member__IdentifierAssignment27096 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleconst_type_in_rule__Const_decl__ContainedTypeAssignment_1_027127 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__Const_decl__SharedTypeAssignment_1_127162 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__Const_decl__IdentifierAssignment_227197 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleconst_exp_in_rule__Const_decl__ConstValueAssignment_427228 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rulesimple_type_spec_in_rule__Sequence_type__ContainedTypeAssignment_2_027259 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__Sequence_type__SharedTypeAssignment_2_127294 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleconst_exp_in_rule__Sequence_type__BoundAssignment_3_127329 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleconst_exp_in_rule__Stringdef_type__BoundAssignment_227360 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleconst_exp_in_rule__Wide_stringdef_type__BoundAssignment_227391 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleconst_exp_in_rule__Fixed_pt_type__DigitsAssignment_227422 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleconst_exp_in_rule__Fixed_pt_type__ScaleAssignment_427453 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rulefloat_type_in_rule__Floating_pt_type__KindAssignment_027484 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruledouble_type_in_rule__Floating_pt_type__KindAssignment_127515 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rulelongdouble_type_in_rule__Floating_pt_type__KindAssignment_227546 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleshort_type_in_rule__Integer_type__KindAssignment_027577 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rulelong_type_in_rule__Integer_type__KindAssignment_127608 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rulelonglong_type_in_rule__Integer_type__KindAssignment_227639 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleushort_type_in_rule__Integer_type__KindAssignment_327670 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleulong_type_in_rule__Integer_type__KindAssignment_427701 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleulonglong_type_in_rule__Integer_type__KindAssignment_527732 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rulechar_type_in_rule__Charstr_type__KindAssignment_027763 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rulewide_char_type_in_rule__Charstr_type__KindAssignment_127794 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rulestring_type_in_rule__Charstr_type__KindAssignment_227825 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rulewide_string_type_in_rule__Charstr_type__KindAssignment_327856 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleboolean_type_in_rule__Other_type__KindAssignment_027887 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleoctet_type_in_rule__Other_type__KindAssignment_127918 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleany_type_in_rule__Other_type__KindAssignment_227949 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_77_in_rule__Or_expr__OperatorAssignment_1_127985 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rulexor_expr_in_rule__Or_expr__RightAssignment_1_228024 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_78_in_rule__Xor_expr__OperatorAssignment_1_128060 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleand_expr_in_rule__Xor_expr__RightAssignment_1_228099 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_79_in_rule__And_expr__OperatorAssignment_1_128135 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleshift_expr_in_rule__And_expr__RightAssignment_1_228174 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Shift_expr__OperatorAlternatives_1_1_0_in_rule__Shift_expr__OperatorAssignment_1_128205 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleadd_expr_in_rule__Shift_expr__RightAssignment_1_228238 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Add_expr__OperatorAlternatives_1_1_0_in_rule__Add_expr__OperatorAssignment_1_128269 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rulemult_expr_in_rule__Add_expr__RightAssignment_1_228302 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Mult_expr__OperatorAlternatives_1_1_0_in_rule__Mult_expr__OperatorAssignment_1_128333 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleunary_expr_in_rule__Mult_expr__RightAssignment_1_228366 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleunary_operator_in_rule__Unary_expr__OperatorAssignment_0_128397 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleprimary_expr_in_rule__Unary_expr__ExpressionAssignment_0_228428 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__ConstantDefRef__ConstantAssignment28463 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleliteral_in_rule__ValueExpression__ValueAssignment28498 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Shift_expr__Group_1__0__Impl_in_rule__Shift_expr__Group_1__023070 = new BitSet(new long[]{0x0000000300000000L});
+        public static final BitSet FOLLOW_rule__Shift_expr__Group_1__1_in_rule__Shift_expr__Group_1__023073 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Shift_expr__Group_1__1__Impl_in_rule__Shift_expr__Group_1__123131 = new BitSet(new long[]{0x0004008C00000FF0L});
+        public static final BitSet FOLLOW_rule__Shift_expr__Group_1__2_in_rule__Shift_expr__Group_1__123134 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Shift_expr__OperatorAssignment_1_1_in_rule__Shift_expr__Group_1__1__Impl23161 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Shift_expr__Group_1__2__Impl_in_rule__Shift_expr__Group_1__223191 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Shift_expr__RightAssignment_1_2_in_rule__Shift_expr__Group_1__2__Impl23218 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Add_expr__Group__0__Impl_in_rule__Add_expr__Group__023254 = new BitSet(new long[]{0x0000000C00000000L});
+        public static final BitSet FOLLOW_rule__Add_expr__Group__1_in_rule__Add_expr__Group__023257 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rulemult_expr_in_rule__Add_expr__Group__0__Impl23284 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Add_expr__Group__1__Impl_in_rule__Add_expr__Group__123313 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Add_expr__Group_1__0_in_rule__Add_expr__Group__1__Impl23340 = new BitSet(new long[]{0x0000000C00000002L});
+        public static final BitSet FOLLOW_rule__Add_expr__Group_1__0__Impl_in_rule__Add_expr__Group_1__023375 = new BitSet(new long[]{0x0000000C00000000L});
+        public static final BitSet FOLLOW_rule__Add_expr__Group_1__1_in_rule__Add_expr__Group_1__023378 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Add_expr__Group_1__1__Impl_in_rule__Add_expr__Group_1__123436 = new BitSet(new long[]{0x0004008C00000FF0L});
+        public static final BitSet FOLLOW_rule__Add_expr__Group_1__2_in_rule__Add_expr__Group_1__123439 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Add_expr__OperatorAssignment_1_1_in_rule__Add_expr__Group_1__1__Impl23466 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Add_expr__Group_1__2__Impl_in_rule__Add_expr__Group_1__223496 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Add_expr__RightAssignment_1_2_in_rule__Add_expr__Group_1__2__Impl23523 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Mult_expr__Group__0__Impl_in_rule__Mult_expr__Group__023559 = new BitSet(new long[]{0x0000007000000000L});
+        public static final BitSet FOLLOW_rule__Mult_expr__Group__1_in_rule__Mult_expr__Group__023562 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleunary_expr_in_rule__Mult_expr__Group__0__Impl23589 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Mult_expr__Group__1__Impl_in_rule__Mult_expr__Group__123618 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Mult_expr__Group_1__0_in_rule__Mult_expr__Group__1__Impl23645 = new BitSet(new long[]{0x0000007000000002L});
+        public static final BitSet FOLLOW_rule__Mult_expr__Group_1__0__Impl_in_rule__Mult_expr__Group_1__023680 = new BitSet(new long[]{0x0000007000000000L});
+        public static final BitSet FOLLOW_rule__Mult_expr__Group_1__1_in_rule__Mult_expr__Group_1__023683 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Mult_expr__Group_1__1__Impl_in_rule__Mult_expr__Group_1__123741 = new BitSet(new long[]{0x0004008C00000FF0L});
+        public static final BitSet FOLLOW_rule__Mult_expr__Group_1__2_in_rule__Mult_expr__Group_1__123744 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Mult_expr__OperatorAssignment_1_1_in_rule__Mult_expr__Group_1__1__Impl23771 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Mult_expr__Group_1__2__Impl_in_rule__Mult_expr__Group_1__223801 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Mult_expr__RightAssignment_1_2_in_rule__Mult_expr__Group_1__2__Impl23828 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Unary_expr__Group_0__0__Impl_in_rule__Unary_expr__Group_0__023864 = new BitSet(new long[]{0x0000008C00000000L});
+        public static final BitSet FOLLOW_rule__Unary_expr__Group_0__1_in_rule__Unary_expr__Group_0__023867 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Unary_expr__Group_0__1__Impl_in_rule__Unary_expr__Group_0__123925 = new BitSet(new long[]{0x0004008C00000FF0L});
+        public static final BitSet FOLLOW_rule__Unary_expr__Group_0__2_in_rule__Unary_expr__Group_0__123928 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Unary_expr__OperatorAssignment_0_1_in_rule__Unary_expr__Group_0__1__Impl23955 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Unary_expr__Group_0__2__Impl_in_rule__Unary_expr__Group_0__223985 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Unary_expr__ExpressionAssignment_0_2_in_rule__Unary_expr__Group_0__2__Impl24012 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Primary_expr__Group_2__0__Impl_in_rule__Primary_expr__Group_2__024048 = new BitSet(new long[]{0x0004008C00000FF0L});
+        public static final BitSet FOLLOW_rule__Primary_expr__Group_2__1_in_rule__Primary_expr__Group_2__024051 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_50_in_rule__Primary_expr__Group_2__0__Impl24079 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Primary_expr__Group_2__1__Impl_in_rule__Primary_expr__Group_2__124110 = new BitSet(new long[]{0x0008000000000000L});
+        public static final BitSet FOLLOW_rule__Primary_expr__Group_2__2_in_rule__Primary_expr__Group_2__124113 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleconst_exp_in_rule__Primary_expr__Group_2__1__Impl24140 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Primary_expr__Group_2__2__Impl_in_rule__Primary_expr__Group_2__224169 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_51_in_rule__Primary_expr__Group_2__2__Impl24197 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleinclude_decl_in_rule__Specification__IncludesAssignment_124239 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruledefinition_in_rule__Specification__ContainsAssignment_224270 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_STRING_in_rule__Include_decl__ImportURIAssignment_124301 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__Module__IdentifierAssignment_124332 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruledefinition_in_rule__Module__ContainsAssignment_3_024363 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_30_in_rule__Interface_decl__IsAbstractAssignment_0_024399 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_31_in_rule__Interface_decl__IsCustomAssignment_0_124443 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__Interface_decl__IdentifierAssignment_224482 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__Interface_decl__DerivesFromAssignment_3_124517 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__Interface_decl__DerivesFromAssignment_3_2_124556 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleexport_in_rule__Interface_decl__ContainsAssignment_5_024591 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__Interface_fwd__IdentifierAssignment_224622 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_74_in_rule__Op_decl__IsOnewayAssignment_024658 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleop_type_spec_in_rule__Op_decl__ContainedTypeAssignment_1_024697 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__Op_decl__SharedTypeAssignment_1_124732 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__Op_decl__IdentifierAssignment_224767 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleparam_decl_in_rule__Op_decl__ParametersAssignment_4_024798 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleparam_decl_in_rule__Op_decl__ParametersAssignment_4_1_124829 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__Op_decl__CanRaiseAssignment_6_224864 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__Op_decl__CanRaiseAssignment_6_3_124903 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_STRING_in_rule__Op_decl__ContextsAssignment_7_224938 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_STRING_in_rule__Op_decl__ContextsAssignment_7_3_124969 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rulevoid_type_in_rule__Op_type_spec__KindAssignment_1_125000 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleparam_attribute_in_rule__Param_decl__DirectionAssignment_025031 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rulebase_type_spec_in_rule__Param_decl__ContainedTypeAssignment_1_025062 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__Param_decl__SharedTypeAssignment_1_125097 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__Param_decl__IdentifierAssignment_225132 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_75_in_rule__Readonly_attr_spec__IsReadonlyAssignment_0_025168 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rulebase_type_spec_in_rule__Readonly_attr_spec__ContainedTypeAssignment_0_2_025207 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__Readonly_attr_spec__SharedTypeAssignment_0_2_125242 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__Readonly_attr_spec__IdentifierAssignment_0_325277 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__Readonly_attr_spec__GetRaisesAssignment_0_625312 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__Readonly_attr_spec__GetRaisesAssignment_0_7_125351 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_75_in_rule__Readonly_attr_spec__IsReadonlyAssignment_1_025391 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rulebase_type_spec_in_rule__Readonly_attr_spec__ContainedTypeAssignment_1_2_025430 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__Readonly_attr_spec__SharedTypeAssignment_1_2_125465 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__Readonly_attr_spec__IdentifierAssignment_1_325500 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rulebase_type_spec_in_rule__Attr_spec__ContainedTypeAssignment_0_1_025531 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__Attr_spec__SharedTypeAssignment_0_1_125566 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__Attr_spec__IdentifierAssignment_0_225601 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__Attr_spec__GetRaisesAssignment_0_3_0_225636 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__Attr_spec__GetRaisesAssignment_0_3_0_3_125675 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__Attr_spec__SetRaisesAssignment_0_3_0_5_225714 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__Attr_spec__SetRaisesAssignment_0_3_0_5_3_125753 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__Attr_spec__SetRaisesAssignment_0_3_1_225792 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__Attr_spec__SetRaisesAssignment_0_3_1_3_125831 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rulebase_type_spec_in_rule__Attr_spec__ContainedTypeAssignment_1_1_025866 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__Attr_spec__SharedTypeAssignment_1_1_125901 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__Attr_spec__IdentifierAssignment_1_225936 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__Except_decl__IdentifierAssignment_125967 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rulemember_in_rule__Except_decl__MembersAssignment_325998 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rulearray_type_spec_in_rule__Alias_type__ContainedTypeAssignment_0_126029 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rulesimple_type_spec_in_rule__Alias_type__ContainedTypeAssignment_1_1_026060 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__Alias_type__SharedTypeAssignment_1_1_126095 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__Alias_type__IdentifierAssignment_1_226130 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rulesimple_type_spec_in_rule__Array_type_spec__ContainedTypeAssignment_0_026161 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__Array_type_spec__SharedTypeAssignment_0_126196 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__Array_type_spec__NameAssignment_126231 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleconst_exp_in_rule__Array_type_spec__BoundsAssignment_2_126262 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleobject_type_in_rule__Base_type_spec__KindAssignment_126293 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__Struct_type__IdentifierAssignment_126324 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rulemember_in_rule__Struct_type__MembersAssignment_326355 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rulearray_type_spec_in_rule__Member__ContainedTypeAssignment_0_026386 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rulesimple_type_spec_in_rule__Member__ContainedTypeAssignment_1_026417 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__Member__IdentifierAssignment_1_126448 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rulestruct_type_in_rule__Member__ContainedTypeAssignment_2_026479 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__Member__IdentifierAssignment_2_126510 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__Member__SharedTypeAssignment_3_026545 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__Member__IdentifierAssignment_3_126580 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__Union_type__IdentifierAssignment_126611 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleswitch_type_spec_cont_in_rule__Union_type__ContainedDiscrimAssignment_4_026642 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__Union_type__SharedDiscrimAssignment_4_126677 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rulecase_stmt_in_rule__Union_type__UnionMembersAssignment_726712 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rulechar_type_in_rule__Switch_type_spec_cont__KindAssignment_1_126743 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleboolean_type_in_rule__Switch_type_spec_cont__KindAssignment_2_126774 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleconst_exp_in_rule__Case_stmt__LabelAssignment_0_0_0_126805 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_76_in_rule__Case_stmt__IsDefaultAssignment_0_0_1_026841 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rulearray_type_spec_in_rule__Case_stmt__ContainedTypeAssignment_0_126880 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleconst_exp_in_rule__Case_stmt__LabelAssignment_1_0_0_126911 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_76_in_rule__Case_stmt__IsDefaultAssignment_1_0_1_026947 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rulesimple_type_spec_in_rule__Case_stmt__ContainedTypeAssignment_1_1_026986 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__Case_stmt__SharedTypeAssignment_1_1_127021 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__Case_stmt__IdentifierAssignment_1_227056 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__Enum_type__IdentifierAssignment_127087 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleenum_member_in_rule__Enum_type__MembersAssignment_327118 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleenum_member_in_rule__Enum_type__MembersAssignment_4_127149 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__Enum_member__IdentifierAssignment27180 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleconst_type_in_rule__Const_decl__ContainedTypeAssignment_1_027211 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__Const_decl__SharedTypeAssignment_1_127246 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__Const_decl__IdentifierAssignment_227281 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleconst_exp_in_rule__Const_decl__ConstValueAssignment_427312 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rulesimple_type_spec_in_rule__Sequence_type__ContainedTypeAssignment_2_027343 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__Sequence_type__SharedTypeAssignment_2_127378 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleconst_exp_in_rule__Sequence_type__BoundAssignment_3_127413 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleconst_exp_in_rule__Stringdef_type__BoundAssignment_227444 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleconst_exp_in_rule__Wide_stringdef_type__BoundAssignment_227475 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleconst_exp_in_rule__Fixed_pt_type__DigitsAssignment_227506 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleconst_exp_in_rule__Fixed_pt_type__ScaleAssignment_427537 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rulefloat_type_in_rule__Floating_pt_type__KindAssignment_027568 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruledouble_type_in_rule__Floating_pt_type__KindAssignment_127599 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rulelongdouble_type_in_rule__Floating_pt_type__KindAssignment_227630 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleshort_type_in_rule__Integer_type__KindAssignment_027661 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rulelong_type_in_rule__Integer_type__KindAssignment_127692 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rulelonglong_type_in_rule__Integer_type__KindAssignment_227723 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleushort_type_in_rule__Integer_type__KindAssignment_327754 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleulong_type_in_rule__Integer_type__KindAssignment_427785 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleulonglong_type_in_rule__Integer_type__KindAssignment_527816 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rulechar_type_in_rule__Charstr_type__KindAssignment_027847 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rulewide_char_type_in_rule__Charstr_type__KindAssignment_127878 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rulestring_type_in_rule__Charstr_type__KindAssignment_227909 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rulewide_string_type_in_rule__Charstr_type__KindAssignment_327940 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleboolean_type_in_rule__Other_type__KindAssignment_027971 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleoctet_type_in_rule__Other_type__KindAssignment_128002 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleany_type_in_rule__Other_type__KindAssignment_228033 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_77_in_rule__Or_expr__OperatorAssignment_1_128069 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rulexor_expr_in_rule__Or_expr__RightAssignment_1_228108 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_78_in_rule__Xor_expr__OperatorAssignment_1_128144 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleand_expr_in_rule__Xor_expr__RightAssignment_1_228183 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_79_in_rule__And_expr__OperatorAssignment_1_128219 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleshift_expr_in_rule__And_expr__RightAssignment_1_228258 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Shift_expr__OperatorAlternatives_1_1_0_in_rule__Shift_expr__OperatorAssignment_1_128289 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleadd_expr_in_rule__Shift_expr__RightAssignment_1_228322 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Add_expr__OperatorAlternatives_1_1_0_in_rule__Add_expr__OperatorAssignment_1_128353 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rulemult_expr_in_rule__Add_expr__RightAssignment_1_228386 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Mult_expr__OperatorAlternatives_1_1_0_in_rule__Mult_expr__OperatorAssignment_1_128417 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleunary_expr_in_rule__Mult_expr__RightAssignment_1_228450 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleunary_operator_in_rule__Unary_expr__OperatorAssignment_0_128481 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleprimary_expr_in_rule__Unary_expr__ExpressionAssignment_0_228512 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__ConstantDefRef__ConstantAssignment28547 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleliteral_in_rule__ValueExpression__ValueAssignment28582 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Alias_type__Group_0__0_in_synpred30_InternalIDL5216 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Member__Group_0__0_in_synpred38_InternalIDL5552 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Member__Group_1__0_in_synpred39_InternalIDL5570 = new BitSet(new long[]{0x0000000000000002L});

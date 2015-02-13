@@ -34,6 +34,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link org.csu.idl.idlmm.impl.UnionFieldImpl#getIdentifier <em>Identifier</em>}</li>
  *   <li>{@link org.csu.idl.idlmm.impl.UnionFieldImpl#getLabel <em>Label</em>}</li>
+ *   <li>{@link org.csu.idl.idlmm.impl.UnionFieldImpl#isIsDefault <em>Is Default</em>}</li>
  * </ul>
  * </p>
  *
@@ -69,6 +70,26 @@ public class UnionFieldImpl extends TypedImpl implements UnionField {
 	 * @ordered
 	 */
 	protected EList<Expression> label;
+
+	/**
+	 * The default value of the '{@link #isIsDefault() <em>Is Default</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isIsDefault()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean IS_DEFAULT_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isIsDefault() <em>Is Default</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isIsDefault()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean isDefault = IS_DEFAULT_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -127,6 +148,27 @@ public class UnionFieldImpl extends TypedImpl implements UnionField {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean isIsDefault() {
+		return isDefault;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setIsDefault(boolean newIsDefault) {
+		boolean oldIsDefault = isDefault;
+		isDefault = newIsDefault;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, IdlmmPackage.UNION_FIELD__IS_DEFAULT, oldIsDefault, isDefault));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -148,6 +190,8 @@ public class UnionFieldImpl extends TypedImpl implements UnionField {
 				return getIdentifier();
 			case IdlmmPackage.UNION_FIELD__LABEL:
 				return getLabel();
+			case IdlmmPackage.UNION_FIELD__IS_DEFAULT:
+				return isIsDefault();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -168,6 +212,9 @@ public class UnionFieldImpl extends TypedImpl implements UnionField {
 				getLabel().clear();
 				getLabel().addAll((Collection<? extends Expression>)newValue);
 				return;
+			case IdlmmPackage.UNION_FIELD__IS_DEFAULT:
+				setIsDefault((Boolean)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -186,6 +233,9 @@ public class UnionFieldImpl extends TypedImpl implements UnionField {
 			case IdlmmPackage.UNION_FIELD__LABEL:
 				getLabel().clear();
 				return;
+			case IdlmmPackage.UNION_FIELD__IS_DEFAULT:
+				setIsDefault(IS_DEFAULT_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -202,6 +252,8 @@ public class UnionFieldImpl extends TypedImpl implements UnionField {
 				return IDENTIFIER_EDEFAULT == null ? identifier != null : !IDENTIFIER_EDEFAULT.equals(identifier);
 			case IdlmmPackage.UNION_FIELD__LABEL:
 				return label != null && !label.isEmpty();
+			case IdlmmPackage.UNION_FIELD__IS_DEFAULT:
+				return isDefault != IS_DEFAULT_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -218,6 +270,8 @@ public class UnionFieldImpl extends TypedImpl implements UnionField {
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (identifier: ");
 		result.append(identifier);
+		result.append(", isDefault: ");
+		result.append(isDefault);
 		result.append(')');
 		return result.toString();
 	}

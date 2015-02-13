@@ -250,8 +250,10 @@ public class IDLParser extends AbstractContentAssistParser {
 					put(grammarAccess.getSwitch_type_spec_contAccess().getKindAssignment_1_1(), "rule__Switch_type_spec_cont__KindAssignment_1_1");
 					put(grammarAccess.getSwitch_type_spec_contAccess().getKindAssignment_2_1(), "rule__Switch_type_spec_cont__KindAssignment_2_1");
 					put(grammarAccess.getCase_stmtAccess().getLabelAssignment_0_0_0_1(), "rule__Case_stmt__LabelAssignment_0_0_0_1");
+					put(grammarAccess.getCase_stmtAccess().getIsDefaultAssignment_0_0_1_0(), "rule__Case_stmt__IsDefaultAssignment_0_0_1_0");
 					put(grammarAccess.getCase_stmtAccess().getContainedTypeAssignment_0_1(), "rule__Case_stmt__ContainedTypeAssignment_0_1");
 					put(grammarAccess.getCase_stmtAccess().getLabelAssignment_1_0_0_1(), "rule__Case_stmt__LabelAssignment_1_0_0_1");
+					put(grammarAccess.getCase_stmtAccess().getIsDefaultAssignment_1_0_1_0(), "rule__Case_stmt__IsDefaultAssignment_1_0_1_0");
 					put(grammarAccess.getCase_stmtAccess().getContainedTypeAssignment_1_1_0(), "rule__Case_stmt__ContainedTypeAssignment_1_1_0");
 					put(grammarAccess.getCase_stmtAccess().getSharedTypeAssignment_1_1_1(), "rule__Case_stmt__SharedTypeAssignment_1_1_1");
 					put(grammarAccess.getCase_stmtAccess().getIdentifierAssignment_1_2(), "rule__Case_stmt__IdentifierAssignment_1_2");

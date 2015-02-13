@@ -187,7 +187,7 @@ public abstract class ContainedImpl extends NamedElementImpl implements Containe
 	 */
 	public Container getDefinedIn() {
 		if (eContainerFeatureID() != IdlmmPackage.CONTAINED__DEFINED_IN) return null;
-		return (Container)eContainer();
+		return (Container)eInternalContainer();
 	}
 
 	/**
