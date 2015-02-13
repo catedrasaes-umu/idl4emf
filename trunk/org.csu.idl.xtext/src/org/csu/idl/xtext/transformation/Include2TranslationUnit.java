@@ -18,12 +18,9 @@
 
 package org.csu.idl.xtext.transformation;
 
-import java.util.Iterator;
-
 import org.csu.idl.idlmm.Include;
 import org.csu.idl.idlmm.TranslationUnit;
 import org.csu.idl.xtext.scoping.IDLScopingHelper;
-import org.eclipse.emf.ecore.resource.*;
 
 public class Include2TranslationUnit {
 	

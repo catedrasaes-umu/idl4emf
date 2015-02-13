@@ -25,7 +25,6 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Map;
 
-import org.apache.log4j.Category;
 import org.apache.log4j.Logger;
 import org.csu.idl.idlmm.AliasDef;
 import org.csu.idl.idlmm.ArrayDef;
@@ -55,13 +54,16 @@ import org.eclipse.xtext.scoping.impl.*;
 
 public class IDLScopingHelper {
 	// implementar relativeName, OK
-	// Obsoleto: public static final SimpleAttributeResolver<EObject, String> resolver = SimpleAttributeResolver.newResolver(String.class, "identifier");
+	// Obsoleto: public static final SimpleAttributeResolver<EObject, String>
+	// resolver = SimpleAttributeResolver.newResolver(String.class,
+	// "identifier");
 
 	private static Logger logger = Logger.getLogger(IDLScopingHelper.class);
 
 	private static Map<Pair<EObject, EClass>, IScope> scopecache = new HashMap<Pair<EObject, EClass>, IScope>();
 
-	public static IScope getScope(Container context, EClass type) throws Exception {
+	public static IScope getScope(Container context, EClass type)
+			throws Exception {
 		// try to resolve from cache
 		Pair<EObject, EClass> clave = new Pair<EObject, EClass>(context, type);
 		if (scopecache.containsKey(clave))
@@ -88,9 +90,10 @@ public class IDLScopingHelper {
 	 * @param trunit
 	 * @param type
 	 * @return
-	 * @throws IOException 
+	 * @throws IOException
 	 */
-	public static IScope getFullScope(TranslationUnit trunit, EClass type) throws Exception {
+	public static IScope getFullScope(TranslationUnit trunit, EClass type)
+			throws Exception {
 
 		IScope outer = IScope.NULLSCOPE;
 
@@ -122,9 +125,10 @@ public class IDLScopingHelper {
 	 * @param trunit
 	 * @param type
 	 * @return
-	 * @throws IOException 
+	 * @throws IOException
 	 */
-	public static IScope getScope(TranslationUnit trunit, EClass type) throws Exception {
+	public static IScope getScope(TranslationUnit trunit, EClass type)
+			throws Exception {
 		// try to resolve from cache
 		Pair<EObject, EClass> clave = new Pair<EObject, EClass>(trunit, type);
 		if (scopecache.containsKey(clave))
@@ -154,9 +158,10 @@ public class IDLScopingHelper {
 	 * @param type
 	 * @param iterator
 	 * @return
-	 * @throws IOException 
+	 * @throws IOException
 	 */
-	private static IScope depthTraverse(EClass type, Iterator<TranslationUnit> iterator) throws Exception {
+	private static IScope depthTraverse(EClass type,
+			Iterator<TranslationUnit> iterator) throws Exception {
 		IScope outer = IScope.NULLSCOPE;
 
 		if (iterator.hasNext()) {
@@ -186,8 +191,10 @@ public class IDLScopingHelper {
 		if (container == cont)
 			return true;
 
-		if (container instanceof ModuleDef && cont instanceof ModuleDef
-				&& IDLUtil.getFQN((ModuleDef) container).equals(IDLUtil.getFQN((ModuleDef) cont)))
+		if (container instanceof ModuleDef
+				&& cont instanceof ModuleDef
+				&& IDLUtil.getFQN((ModuleDef) container).equals(
+						IDLUtil.getFQN((ModuleDef) cont)))
 			return true;
 
 		return false;
@@ -196,37 +203,41 @@ public class IDLScopingHelper {
 	protected static QualifiedName relativeName(Contained elem, Container cont) {
 		String identifier = elem.getIdentifier();
 
-		if (identifier == null && elem instanceof AliasDef && ((AliasDef) elem).getContainedType() instanceof ArrayDef) {
-			identifier = ((ArrayDef) ((AliasDef) elem).getContainedType()).getName();
+		if (identifier == null && elem instanceof AliasDef
+				&& ((AliasDef) elem).getContainedType() instanceof ArrayDef) {
+			identifier = ((ArrayDef) ((AliasDef) elem).getContainedType())
+					.getName();
 		}
 
 		if (isVisible(elem, cont))
 			return QualifiedName.create(identifier);
-		
+
 		EObject econtainer = elem.eContainer();
-		
+
 		if (econtainer instanceof Field)
-			return  QualifiedName.create(relativeName((Contained) econtainer.eContainer(), cont) + "::" + identifier);
-		
+			return QualifiedName.create(relativeName(
+					(Contained) econtainer.eContainer(), cont)
+					+ "::" + identifier);
+
 		// Saltamos el EnumDef
 		/**
-		 * module m { enum e {OP1, OP2}; }; 
+		 * module m { enum e {OP1, OP2}; };
 		 * 
-		 * es
-		 *   m::OP1 y m::OP2
-		 * y no
-		 *   m::e::OP1 y m::e::OP2
+		 * es m::OP1 y m::OP2 y no m::e::OP1 y m::e::OP2
 		 */
-		if (econtainer instanceof EnumDef)
-		{
+		if (econtainer instanceof EnumDef) {
 			EObject econtainercontainer = econtainer.eContainer();
-			if (econtainercontainer instanceof Contained && !equivalentContexts(econtainercontainer).contains(cont))
-				return QualifiedName.create(relativeName((Contained) econtainercontainer, cont).toString() + "::" + identifier);
+			if (econtainercontainer instanceof Contained
+					&& !equivalentContexts(econtainercontainer).contains(cont))
+				return QualifiedName.create(relativeName(
+						(Contained) econtainercontainer, cont).toString()
+						+ "::" + identifier);
 			else
 				return QualifiedName.create(identifier);
 		}
 
-		return QualifiedName.create(relativeName((Contained) econtainer, cont).toString() + "::" + identifier);
+		return QualifiedName.create(relativeName((Contained) econtainer, cont)
+				.toString() + "::" + identifier);
 	}
 
 	/**
@@ -262,14 +273,16 @@ public class IDLScopingHelper {
 	 *         "outer scope" concept
 	 * @throws IOException
 	 */
-	private static Collection<TranslationUnit> getIncludes(TranslationUnit tu, boolean recursive) throws Exception {
+	private static Collection<TranslationUnit> getIncludes(TranslationUnit tu,
+			boolean recursive) throws Exception {
 		Collection<Include> includes = tu.getIncludes();
 		LinkedList<TranslationUnit> result = new LinkedList<TranslationUnit>();
 
 		for (Include incl : includes) {
 			Resource resource = currentLoader.loadInclude(incl);
 
-			TranslationUnit obj = (TranslationUnit) resource.getContents().get(0);
+			TranslationUnit obj = (TranslationUnit) resource.getContents().get(
+					0);
 
 			// extract the list of includes ordered by "outer" for
 			// using with depthTraverse
@@ -294,7 +307,9 @@ public class IDLScopingHelper {
 		IScope result = outer;
 
 		if (inner != IScope.NULLSCOPE)
-			result = new SimpleScope(concatenate(outer, ((AbstractScope) inner).getParent()), inner.getAllElements());
+			result = new SimpleScope(concatenate(outer,
+					((AbstractScope) inner).getParent()),
+					inner.getAllElements());
 
 		return result;
 	}
@@ -311,8 +326,9 @@ public class IDLScopingHelper {
 	 *            IScopedElement
 	 * @return List of the resulting IScopedElement
 	 */
-	private static Iterable<IEObjectDescription> getScopedElements(EObject context, EClass type) {
-		
+	private static Iterable<IEObjectDescription> getScopedElements(
+			EObject context, EClass type) {
+
 		// if the elements we want to retrieve aren't subclases of Contained,
 		// return null
 		if (!IdlmmPackage.eINSTANCE.getContained().isSuperTypeOf(type))
@@ -323,19 +339,25 @@ public class IDLScopingHelper {
 		// create the scopedElements from the EObjets in the scopeList
 		LinkedList<IEObjectDescription> scopedElements = new LinkedList<IEObjectDescription>();
 
-		Container base = (context instanceof Container ? (Container) context : null);
+		Container base = (context instanceof Container ? (Container) context
+				: null);
 
-		final IDLAttributeResolver resolver = IDLAttributeResolver.newResolver(base);
-		for (IEObjectDescription elm : Scopes.scopeFor(scopeList, resolver, IScope.NULLSCOPE).getAllElements()) {
+		final IDLAttributeResolver resolver = IDLAttributeResolver
+				.newResolver(base);
+		for (IEObjectDescription elm : Scopes.scopeFor(scopeList, resolver,
+				IScope.NULLSCOPE).getAllElements()) {
 			scopedElements.add(elm);
 		}
 
 		// in case the context is an InterfaceDef, we also add
 		// recursively the elements defined in it's inheritance father
 		if (context instanceof InterfaceDef) {
-			EList<InterfaceDef> fathers = ((InterfaceDef) context).getDerivesFrom();
+			EList<InterfaceDef> fathers = ((InterfaceDef) context)
+					.getDerivesFrom();
 			for (InterfaceDef id : fathers)
-				scopedElements.addAll((LinkedList<IEObjectDescription>) getScopedElements(id, type));
+				scopedElements
+						.addAll((LinkedList<IEObjectDescription>) getScopedElements(
+								id, type));
 		}
 
 		return scopedElements;
@@ -349,7 +371,8 @@ public class IDLScopingHelper {
 	 * @param type
 	 * @return
 	 */
-	private static Collection<EObject> getFilteredContents(EObject context, EClass type) {
+	private static Collection<EObject> getFilteredContents(EObject context,
+			EClass type) {
 
 		Collection<EObject> scopeList = new LinkedList<EObject>();
 
@@ -387,7 +410,8 @@ public class IDLScopingHelper {
 				while (it.hasNext()) {
 					EObject eobj = it.next();
 
-					if (eobj != context && eobj instanceof ModuleDef && IDLUtil.getFQN((ModuleDef) eobj).equals(myFQN))
+					if (eobj != context && eobj instanceof ModuleDef
+							&& IDLUtil.getFQN((ModuleDef) eobj).equals(myFQN))
 						contexts.add(eobj);
 				}
 			}
@@ -402,7 +426,7 @@ public class IDLScopingHelper {
 	public static void setCurrentLoader(IDLLoader loader) {
 		currentLoader = loader;
 	}
-	
+
 	public static IDLLoader getCurrentLoader() {
 		return currentLoader;
 	}

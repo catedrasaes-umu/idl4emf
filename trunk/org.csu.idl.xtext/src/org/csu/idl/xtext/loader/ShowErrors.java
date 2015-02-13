@@ -25,11 +25,7 @@ public class ShowErrors {
 
 	private static final Logger log = Logger.getLogger(ShowErrors.class);
 
-	private int level = -1;
-
 	protected void show(Diagnostic diagnostic) {
-		++level;
-
 		switch (diagnostic.getSeverity()) {
 		case Diagnostic.ERROR:
 			log.error(diagnostic.getMessage(), diagnostic.getException());
@@ -46,7 +42,5 @@ public class ShowErrors {
 		for (Diagnostic ch : diagnostic.getChildren()) {
 			show(ch);
 		}
-
-		--level;
 	}
 }
