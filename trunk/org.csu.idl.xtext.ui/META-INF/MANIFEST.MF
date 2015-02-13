@@ -12,8 +12,15 @@ Require-Bundle: org.csu.idl.xtext;visibility:=reexport,
  org.eclipse.xtext.ui.shared,
  org.eclipse.ui,
  org.antlr.runtime,
- org.eclipse.xtext.builder
+ org.eclipse.xtext.builder,
+ org.eclipse.xtext.xbase.lib,
+ org.eclipse.xtext.common.types.ui,
+ org.eclipse.xtext.ui.codetemplates.ui,
+ org.eclipse.compare
 Import-Package: org.apache.log4j
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
-Export-Package: org.csu.idl.xtext.ui.contentassist.antlr
+Export-Package: org.csu.idl.xtext.ui.contentassist.antlr,
+ org.csu.idl.xtext.ui.quickfix,
+ org.csu.idl.xtext.ui.contentassist,
+ org.csu.idl.xtext.ui.internal
 Bundle-Activator: org.csu.idl.xtext.ui.internal.IDLActivator

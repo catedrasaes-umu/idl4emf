@@ -25,6 +25,7 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Map;
 
+import org.apache.log4j.Category;
 import org.apache.log4j.Logger;
 import org.csu.idl.idlmm.AliasDef;
 import org.csu.idl.idlmm.ArrayDef;
@@ -46,10 +47,11 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.internal.xtend.util.Pair;
+import org.eclipse.xtext.naming.QualifiedName;
 import org.eclipse.xtext.resource.IEObjectDescription;
 import org.eclipse.xtext.scoping.IScope;
 import org.eclipse.xtext.scoping.Scopes;
-import org.eclipse.xtext.scoping.impl.SimpleScope;
+import org.eclipse.xtext.scoping.impl.*;
 
 public class IDLScopingHelper {
 	// implementar relativeName, OK
@@ -109,9 +111,9 @@ public class IDLScopingHelper {
 
 		IScope scope = getScope(trunit, type);
 
-		outer = concatenate(outer, scope.getOuterScope());
+		outer = concatenate(outer, ((AbstractScope) scope).getParent());
 
-		return new SimpleScope(outer, scope.getContents());
+		return new SimpleScope(outer, scope.getAllElements());
 	}
 
 	/**
@@ -191,7 +193,7 @@ public class IDLScopingHelper {
 		return false;
 	}
 
-	protected static String relativeName(Contained elem, Container cont) {
+	protected static QualifiedName relativeName(Contained elem, Container cont) {
 		String identifier = elem.getIdentifier();
 
 		if (identifier == null && elem instanceof AliasDef && ((AliasDef) elem).getContainedType() instanceof ArrayDef) {
@@ -199,12 +201,12 @@ public class IDLScopingHelper {
 		}
 
 		if (isVisible(elem, cont))
-			return identifier;
+			return QualifiedName.create(identifier);
 		
 		EObject econtainer = elem.eContainer();
 		
 		if (econtainer instanceof Field)
-			return   relativeName((Contained) econtainer.eContainer(), cont) + "::" + identifier;
+			return  QualifiedName.create(relativeName((Contained) econtainer.eContainer(), cont) + "::" + identifier);
 		
 		// Saltamos el EnumDef
 		/**
@@ -219,12 +221,12 @@ public class IDLScopingHelper {
 		{
 			EObject econtainercontainer = econtainer.eContainer();
 			if (econtainercontainer instanceof Contained && !equivalentContexts(econtainercontainer).contains(cont))
-				return relativeName((Contained) econtainercontainer, cont) + "::" + identifier;
+				return QualifiedName.create(relativeName((Contained) econtainercontainer, cont).toString() + "::" + identifier);
 			else
-				return identifier;
+				return QualifiedName.create(identifier);
 		}
 
-		return relativeName((Contained) econtainer, cont) + "::" + identifier;
+		return QualifiedName.create(relativeName((Contained) econtainer, cont).toString() + "::" + identifier);
 	}
 
 	/**
@@ -292,7 +294,7 @@ public class IDLScopingHelper {
 		IScope result = outer;
 
 		if (inner != IScope.NULLSCOPE)
-			result = new SimpleScope(concatenate(outer, inner.getOuterScope()), inner.getContents());
+			result = new SimpleScope(concatenate(outer, ((AbstractScope) inner).getParent()), inner.getAllElements());
 
 		return result;
 	}
@@ -324,7 +326,7 @@ public class IDLScopingHelper {
 		Container base = (context instanceof Container ? (Container) context : null);
 
 		final IDLAttributeResolver resolver = IDLAttributeResolver.newResolver(base);
-		for (IEObjectDescription elm : Scopes.scopeFor(scopeList, resolver, IScope.NULLSCOPE).getContents()) {
+		for (IEObjectDescription elm : Scopes.scopeFor(scopeList, resolver, IScope.NULLSCOPE).getAllElements()) {
 			scopedElements.add(elm);
 		}
 

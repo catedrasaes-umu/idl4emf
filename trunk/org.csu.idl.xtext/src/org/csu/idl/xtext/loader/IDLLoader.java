@@ -34,7 +34,7 @@ import org.csu.idl.xtext.scoping.IDLScopingHelper;
 import org.csu.idl.xtext.transformation.ArrayExpander;
 import org.csu.idl.xtext.transformation.ExpressionEvaluator;
 import org.csu.idl.xtext.transformation.Include2TranslationUnit;
-import org.csu.idl.xtext.validation.IDLJavaValidator;
+import org.csu.idl.xtext.validation.IDLValidator;
 import org.eclipse.emf.common.util.BasicDiagnostic;
 import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.common.util.URI;
@@ -90,7 +90,7 @@ public class IDLLoader {
 		TranslationUnit trunit = (TranslationUnit) model.getContents().get(0);
 				
 		BasicDiagnostic bd = new BasicDiagnostic();
-		IDLJavaValidator idlValidator = new IDLJavaValidator();
+		IDLValidator idlValidator = new IDLValidator();
 		idlValidator.validate(trunit, bd, new HashMap<Object,Object>());
 		new ShowErrors().show(bd);
 		

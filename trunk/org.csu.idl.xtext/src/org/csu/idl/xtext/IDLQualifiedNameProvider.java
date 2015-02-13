@@ -2,12 +2,13 @@ package org.csu.idl.xtext;
 
 import org.csu.idl.idlmm.TranslationUnit;
 import org.eclipse.xtext.naming.DefaultDeclarativeQualifiedNameProvider;
+import org.eclipse.xtext.naming.QualifiedName;
 
 public class IDLQualifiedNameProvider extends
 		DefaultDeclarativeQualifiedNameProvider {
 	
-	public String qualifiedName(TranslationUnit g) {
-		return g.toString();
+	public QualifiedName qualifiedName(TranslationUnit g) {
+		return QualifiedName.create(g.toString());
 	}
 
 }
