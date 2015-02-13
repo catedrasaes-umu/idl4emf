@@ -19,10 +19,6 @@ import org.eclipse.xtext.serializer.sequencer.AbstractSyntacticSequencer;
 public abstract class AbstractIDLSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected IDLGrammarAccess grammarAccess;
-	protected AbstractElementAlias match_case_stmt___DefaultKeyword_0_0_1_0_ColonKeyword_0_0_1_1__a;
-	protected AbstractElementAlias match_case_stmt___DefaultKeyword_0_0_1_0_ColonKeyword_0_0_1_1__p;
-	protected AbstractElementAlias match_case_stmt___DefaultKeyword_1_0_1_0_ColonKeyword_1_0_1_1__a;
-	protected AbstractElementAlias match_case_stmt___DefaultKeyword_1_0_1_0_ColonKeyword_1_0_1_1__p;
 	protected AbstractElementAlias match_interface_decl_SemicolonKeyword_5_1_a;
 	protected AbstractElementAlias match_interface_fwd___AbstractKeyword_0_0_or_LocalKeyword_0_1__q;
 	protected AbstractElementAlias match_module_SemicolonKeyword_3_1_a;
@@ -33,10 +29,6 @@ public abstract class AbstractIDLSyntacticSequencer extends AbstractSyntacticSeq
 	@Inject
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (IDLGrammarAccess) access;
-		match_case_stmt___DefaultKeyword_0_0_1_0_ColonKeyword_0_0_1_1__a = new GroupAlias(true, true, new TokenAlias(false, false, grammarAccess.getCase_stmtAccess().getDefaultKeyword_0_0_1_0()), new TokenAlias(false, false, grammarAccess.getCase_stmtAccess().getColonKeyword_0_0_1_1()));
-		match_case_stmt___DefaultKeyword_0_0_1_0_ColonKeyword_0_0_1_1__p = new GroupAlias(true, false, new TokenAlias(false, false, grammarAccess.getCase_stmtAccess().getDefaultKeyword_0_0_1_0()), new TokenAlias(false, false, grammarAccess.getCase_stmtAccess().getColonKeyword_0_0_1_1()));
-		match_case_stmt___DefaultKeyword_1_0_1_0_ColonKeyword_1_0_1_1__a = new GroupAlias(true, true, new TokenAlias(false, false, grammarAccess.getCase_stmtAccess().getDefaultKeyword_1_0_1_0()), new TokenAlias(false, false, grammarAccess.getCase_stmtAccess().getColonKeyword_1_0_1_1()));
-		match_case_stmt___DefaultKeyword_1_0_1_0_ColonKeyword_1_0_1_1__p = new GroupAlias(true, false, new TokenAlias(false, false, grammarAccess.getCase_stmtAccess().getDefaultKeyword_1_0_1_0()), new TokenAlias(false, false, grammarAccess.getCase_stmtAccess().getColonKeyword_1_0_1_1()));
 		match_interface_decl_SemicolonKeyword_5_1_a = new TokenAlias(true, true, grammarAccess.getInterface_declAccess().getSemicolonKeyword_5_1());
 		match_interface_fwd___AbstractKeyword_0_0_or_LocalKeyword_0_1__q = new AlternativeAlias(false, true, new TokenAlias(false, false, grammarAccess.getInterface_fwdAccess().getAbstractKeyword_0_0()), new TokenAlias(false, false, grammarAccess.getInterface_fwdAccess().getLocalKeyword_0_1()));
 		match_module_SemicolonKeyword_3_1_a = new TokenAlias(true, true, grammarAccess.getModuleAccess().getSemicolonKeyword_3_1());
@@ -82,15 +74,7 @@ public abstract class AbstractIDLSyntacticSequencer extends AbstractSyntacticSeq
 		List<INode> transitionNodes = collectNodes(fromNode, toNode);
 		for (AbstractElementAlias syntax : transition.getAmbiguousSyntaxes()) {
 			List<INode> syntaxNodes = getNodesFor(transitionNodes, syntax);
-			if(match_case_stmt___DefaultKeyword_0_0_1_0_ColonKeyword_0_0_1_1__a.equals(syntax))
-				emit_case_stmt___DefaultKeyword_0_0_1_0_ColonKeyword_0_0_1_1__a(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_case_stmt___DefaultKeyword_0_0_1_0_ColonKeyword_0_0_1_1__p.equals(syntax))
-				emit_case_stmt___DefaultKeyword_0_0_1_0_ColonKeyword_0_0_1_1__p(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_case_stmt___DefaultKeyword_1_0_1_0_ColonKeyword_1_0_1_1__a.equals(syntax))
-				emit_case_stmt___DefaultKeyword_1_0_1_0_ColonKeyword_1_0_1_1__a(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_case_stmt___DefaultKeyword_1_0_1_0_ColonKeyword_1_0_1_1__p.equals(syntax))
-				emit_case_stmt___DefaultKeyword_1_0_1_0_ColonKeyword_1_0_1_1__p(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_interface_decl_SemicolonKeyword_5_1_a.equals(syntax))
+			if(match_interface_decl_SemicolonKeyword_5_1_a.equals(syntax))
 				emit_interface_decl_SemicolonKeyword_5_1_a(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_interface_fwd___AbstractKeyword_0_0_or_LocalKeyword_0_1__q.equals(syntax))
 				emit_interface_fwd___AbstractKeyword_0_0_or_LocalKeyword_0_1__q(semanticObject, getLastNavigableState(), syntaxNodes);
@@ -106,38 +90,6 @@ public abstract class AbstractIDLSyntacticSequencer extends AbstractSyntacticSeq
 		}
 	}
 
-	/**
-	 * Syntax:
-	 *     ('default' ':')*
-	 */
-	protected void emit_case_stmt___DefaultKeyword_0_0_1_0_ColonKeyword_0_0_1_1__a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Syntax:
-	 *     ('default' ':')+
-	 */
-	protected void emit_case_stmt___DefaultKeyword_0_0_1_0_ColonKeyword_0_0_1_1__p(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Syntax:
-	 *     ('default' ':')*
-	 */
-	protected void emit_case_stmt___DefaultKeyword_1_0_1_0_ColonKeyword_1_0_1_1__a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Syntax:
-	 *     ('default' ':')+
-	 */
-	protected void emit_case_stmt___DefaultKeyword_1_0_1_0_ColonKeyword_1_0_1_1__p(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
 	/**
 	 * Syntax:
 	 *     ';'*

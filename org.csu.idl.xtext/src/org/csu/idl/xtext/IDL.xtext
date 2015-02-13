@@ -191,10 +191,10 @@ switch_type_spec_cont returns IDL::IDLType
 	;
 
 case_stmt returns IDL::UnionField
-	:	('case' label+=const_exp ':' | /*label+=*/'default' ':')+
+	:	('case' label+=const_exp ':' | isDefault?='default' ':')+
 		containedType = array_type_spec
 		/*identifier= id_array*/ ';'
-	|	('case' label+=const_exp ':' | /*label+=*/'default' ':')+
+	|	('case' label+=const_exp ':' | isDefault?='default' ':')+
 		(containedType = simple_type_spec | sharedType = [IDL::TypedefDef])
 		identifier=ID ';'
 	;

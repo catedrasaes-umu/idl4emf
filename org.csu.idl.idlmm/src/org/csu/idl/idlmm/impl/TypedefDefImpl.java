@@ -230,7 +230,7 @@ public abstract class TypedefDefImpl extends IDLTypeImpl implements TypedefDef {
 	 */
 	public Container getDefinedIn() {
 		if (eContainerFeatureID() != IdlmmPackage.TYPEDEF_DEF__DEFINED_IN) return null;
-		return (Container)eContainer();
+		return (Container)eInternalContainer();
 	}
 
 	/**

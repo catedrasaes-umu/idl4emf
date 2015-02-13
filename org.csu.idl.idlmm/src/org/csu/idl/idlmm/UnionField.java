@@ -18,6 +18,7 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link org.csu.idl.idlmm.UnionField#getIdentifier <em>Identifier</em>}</li>
  *   <li>{@link org.csu.idl.idlmm.UnionField#getLabel <em>Label</em>}</li>
+ *   <li>{@link org.csu.idl.idlmm.UnionField#isIsDefault <em>Is Default</em>}</li>
  * </ul>
  * </p>
  *
@@ -67,5 +68,32 @@ public interface UnionField extends Typed {
 	 * @generated
 	 */
 	EList<Expression> getLabel();
+
+	/**
+	 * Returns the value of the '<em><b>Is Default</b></em>' attribute.
+	 * The default value is <code>"false"</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Is Default</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Is Default</em>' attribute.
+	 * @see #setIsDefault(boolean)
+	 * @see org.csu.idl.idlmm.IdlmmPackage#getUnionField_IsDefault()
+	 * @model default="false"
+	 * @generated
+	 */
+	boolean isIsDefault();
+
+	/**
+	 * Sets the value of the '{@link org.csu.idl.idlmm.UnionField#isIsDefault <em>Is Default</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Is Default</em>' attribute.
+	 * @see #isIsDefault()
+	 * @generated
+	 */
+	void setIsDefault(boolean value);
 
 } // UnionField

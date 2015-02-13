@@ -2635,11 +2635,22 @@ rulecase_stmt returns [EObject current=null]
     	newLeafNode(otherlv_2, grammarAccess.getCase_stmtAccess().getColonKeyword_0_0_0_2());
     }
 )
-    |(	otherlv_3='default' 
+    |((
+(
+		lv_isDefault_3_0=	'default' 
     {
-    	newLeafNode(otherlv_3, grammarAccess.getCase_stmtAccess().getDefaultKeyword_0_0_1_0());
+        newLeafNode(lv_isDefault_3_0, grammarAccess.getCase_stmtAccess().getIsDefaultDefaultKeyword_0_0_1_0_0());
     }
-	otherlv_4=':' 
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getCase_stmtRule());
+	        }
+       		setWithLastConsumed($current, "isDefault", true, "default");
+	    }
+
+)
+)	otherlv_4=':' 
     {
     	newLeafNode(otherlv_4, grammarAccess.getCase_stmtAccess().getColonKeyword_0_0_1_1());
     }
@@ -2693,11 +2704,22 @@ rulecase_stmt returns [EObject current=null]
     	newLeafNode(otherlv_9, grammarAccess.getCase_stmtAccess().getColonKeyword_1_0_0_2());
     }
 )
-    |(	otherlv_10='default' 
+    |((
+(
+		lv_isDefault_10_0=	'default' 
     {
-    	newLeafNode(otherlv_10, grammarAccess.getCase_stmtAccess().getDefaultKeyword_1_0_1_0());
+        newLeafNode(lv_isDefault_10_0, grammarAccess.getCase_stmtAccess().getIsDefaultDefaultKeyword_1_0_1_0_0());
     }
-	otherlv_11=':' 
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getCase_stmtRule());
+	        }
+       		setWithLastConsumed($current, "isDefault", true, "default");
+	    }
+
+)
+)	otherlv_11=':' 
     {
     	newLeafNode(otherlv_11, grammarAccess.getCase_stmtAccess().getColonKeyword_1_0_1_1());
     }

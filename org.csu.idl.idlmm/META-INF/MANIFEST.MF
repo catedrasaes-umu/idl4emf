@@ -1,11 +1,12 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: org.csu.idl.idlmm;singleton:=true
+Bundle-SymbolicName: org.csu.udl.idlmm;singleton:=true
 Bundle-Version: 1.0.0
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Export-Package: org.csu.idl.idlmm,
  org.csu.idl.idlmm.impl,
  org.csu.idl.idlmm.util

@@ -921,6 +921,15 @@ public class IdlmmPackageImpl extends EPackageImpl implements IdlmmPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getUnionField_IsDefault() {
+		return (EAttribute)unionFieldEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getTypedefDef() {
 		return typedefDefEClass;
 	}
@@ -1380,6 +1389,7 @@ public class IdlmmPackageImpl extends EPackageImpl implements IdlmmPackage {
 		unionFieldEClass = createEClass(UNION_FIELD);
 		createEAttribute(unionFieldEClass, UNION_FIELD__IDENTIFIER);
 		createEReference(unionFieldEClass, UNION_FIELD__LABEL);
+		createEAttribute(unionFieldEClass, UNION_FIELD__IS_DEFAULT);
 
 		typedefDefEClass = createEClass(TYPEDEF_DEF);
 
@@ -1587,6 +1597,7 @@ public class IdlmmPackageImpl extends EPackageImpl implements IdlmmPackage {
 		initEClass(unionFieldEClass, UnionField.class, "UnionField", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getUnionField_Identifier(), ecorePackage.getEString(), "identifier", null, 0, 1, UnionField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getUnionField_Label(), this.getExpression(), null, "label", null, 0, -1, UnionField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUnionField_IsDefault(), ecorePackage.getEBoolean(), "isDefault", "false", 0, 1, UnionField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(typedefDefEClass, TypedefDef.class, "TypedefDef", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1688,7 +1699,7 @@ public class IdlmmPackageImpl extends EPackageImpl implements IdlmmPackage {
 	 * @generated
 	 */
 	protected void createExtendedMetaDataAnnotations() {
-		String source = "http:///org/eclipse/emf/ecore/util/ExtendedMetaData";		
+		String source = "http:///org/eclipse/emf/ecore/util/ExtendedMetaData";	
 		addAnnotation
 		  (getNamedElement_Identifier(), 
 		   source, 
