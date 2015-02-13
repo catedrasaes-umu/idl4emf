@@ -10,7 +10,6 @@ import org.csu.idl.idlmm.TranslationUnit;
 import org.csu.idl.idlmm.UnionDef;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EReference;
-import org.eclipse.xtext.resource.IEObjectDescription;
 import org.eclipse.xtext.scoping.IScope;
 import org.eclipse.xtext.scoping.impl.AbstractDeclarativeScopeProvider;
 

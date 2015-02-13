@@ -36,8 +36,7 @@ public class Reader implements IWorkflowComponent {
 	public void addIncludePath(String includePath) {
 		this.includePath.add(includePath);
 	}
-	
-	
+
 	public String getModelSlot() {
 		return modelSlot;
 	}
@@ -54,31 +53,28 @@ public class Reader implements IWorkflowComponent {
 		return idlFile;
 	}
 
-	@Override
 	public void invoke(IWorkflowContext ctx) {
 		IDLLoader loader = new IDLLoader();
 		Preprocessor preprocessor = loader.getPreprocessor();
-		
-		for(String include : includePath) {
+
+		for (String include : includePath) {
 			preprocessor.addIncludePath(include);
 		}
-		
+
 		try {
 			loader.load(idlFile);
 		} catch (Exception e) {
 			throw new WrappedException(e);
 		}
-		
+
 		ctx.put(modelSlot, loader.getResource().getContents());
 	}
 
-	@Override
 	public void postInvoke() {
 		// TODO Auto-generated method stub
 
 	}
 
-	@Override
 	public void preInvoke() {
 		// TODO Auto-generated method stub
 

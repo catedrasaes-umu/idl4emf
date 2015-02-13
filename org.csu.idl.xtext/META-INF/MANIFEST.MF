@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: org.csu.idl.xtext
 Bundle-Vendor: Cátedra SAES-UMU
-Bundle-Version: 1.0.0
+Bundle-Version: 1.1.0
 Bundle-SymbolicName: org.csu.idl.xtext; singleton:=true
 Bundle-ActivationPolicy: lazy
 Require-Bundle: org.eclipse.xtext,
@@ -12,14 +12,13 @@ Require-Bundle: org.eclipse.xtext,
  org.eclipse.emf.mwe.utils;resolution:=optional,
  org.eclipse.emf.mwe2.launch;resolution:=optional,
  com.ibm.icu;resolution:=optional,
- org.eclipse.xtext.xtend;resolution:=optional,
  org.eclipse.xtext.util,
  org.antlr.runtime,
  org.eclipse.cdt.core,
  org.eclipse.xtext.xbase.lib,
  org.eclipse.xtext.common.types,
  org.objectweb.asm;bundle-version="[5.0.1,6.0.0)";resolution:=optional,
- org.csu.udl.idlmm;bundle-version="1.0.0"
+ org.csu.idl.idlmm;bundle-version="1.1.0"
 Import-Package: org.apache.log4j,
  org.eclipse.cdt.core,
  org.eclipse.jface.text,

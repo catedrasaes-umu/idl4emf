@@ -8,7 +8,7 @@ import org.eclipse.xtext.naming.QualifiedName;
 import com.google.common.base.Function;
 
 public class IDLAttributeResolver implements Function<EObject, QualifiedName> {
-	
+
 	private Container container;
 
 	private IDLAttributeResolver(Container container) {
@@ -18,13 +18,11 @@ public class IDLAttributeResolver implements Function<EObject, QualifiedName> {
 	public static IDLAttributeResolver newResolver(Container container) {
 		return new IDLAttributeResolver(container);
 	}
-	
-	@Override
+
 	public QualifiedName apply(EObject from) {
 		return IDLScopingHelper.relativeName((Contained) from, container);
 	}
 
-	@Override
 	public boolean equals(Object obj) {
 		// TODO Auto-generated method stub
 		return false;
